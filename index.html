@@ -22,6 +22,8 @@
         .recent-btn:hover { background: var(--accent-blue); color: white; box-shadow: 0 0 20px var(--accent-blue); }
         .help-btn { background: rgba(0, 200, 83, 0.2); border: 2px solid #00c853; color: #00c853; padding: 10px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; text-decoration: none; display: inline-block;}
         .help-btn:hover { background: #00c853; color: white; box-shadow: 0 0 20px #00c853; }
+        .drive-btn { background: rgba(255, 215, 0, 0.1); border: 2px solid #ffd700; color: #ffd700; padding: 8px 20px; border-radius: 20px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px; transition: 0.3s; font-size: 0.9rem; }
+        .drive-btn:hover { background: #ffd700; color: black; box-shadow: 0 0 15px #ffd700; }
         .grid { display: grid; gap: 30px; }
         .subjects-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
         .weeks-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
@@ -47,6 +49,10 @@
         .recent-sub { color: #ccc; font-size: 0.95rem; line-height: 1.5; }
         .recent-icons { font-size: 1.5rem; letter-spacing: 5px; margin-top: 5px; }
         .recent-time { font-size: 0.8rem; color: var(--accent-pink); font-weight: bold; white-space: nowrap; margin-left: 10px; }
+        .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
+        .filter-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 8px 16px; border-radius: 20px; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
+        .filter-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+        .filter-btn.active { background: var(--accent-pink); color: white; border-color: var(--accent-pink); box-shadow: 0 0 15px rgba(233,30,140,0.4); font-weight: bold; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
     </style>
     <script src="course_data.js"></script>
@@ -60,7 +66,7 @@
             <p class="subtitle">Select a subject to begin</p>
         </header>
         <div class="header-actions">
-            <button class="recent-btn" onclick="showRecent()">🔔 Recent Updates</button>
+            <button class="recent-btn" onclick="showRecent()">📜 History</button>
             <a id="help-btn" href="#" target="_blank" class="help-btn">🤝 Help Us</a>
         </div>
         <div class="grid subjects-grid" id="subjects-grid"></div>
@@ -68,13 +74,17 @@
 
     <div id="recent-page" class="page">
         <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
-        <h1 style="color:var(--accent-blue)">RECENT UPDATES</h1>
+        <h1 style="color:var(--accent-blue)">HISTORY</h1>
         <div class="grid recent-grid" id="recent-list"></div>
     </div>
 
     <div id="weeks-page" class="page">
         <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
-        <h1 id="subject-title"></h1>
+        <div style="text-align:center;">
+            <h1 id="subject-title" style="margin-bottom:5px;"></h1>
+            <div id="drive-container" style="margin-bottom:20px;"></div>
+        </div>
+        <div id="filter-bar" class="filter-bar"></div>
         <div class="grid weeks-grid" id="weeks-grid"></div>
     </div>
 
@@ -143,7 +153,6 @@
         window.COURSE_DATA.forEach(sub => {
             if(!sub.weeks) return;
             sub.weeks.forEach(wk => {
-                // Whole Week Update
                 if(wk.isRecent) {
                     items.push({
                         type: 'week',
@@ -154,11 +163,10 @@
                         timestamp: parseDate(wk.recentDate)
                     });
                 }
-                // Individual Resource Update
                 if(wk.resources) {
                     Object.keys(wk.resources).forEach(k => {
                         const res = wk.resources[k];
-                        if(res.isRecent && res.vis && !wk.isRecent) {
+                        if(res.isRecent && res.vis) {
                             items.push({
                                 type: 'res',
                                 subName: sub.name,
@@ -174,11 +182,10 @@
             });
         });
 
-        // Sort by Date Descending
         items.sort((a, b) => b.timestamp - a.timestamp);
 
         if(items.length === 0) {
-            list.innerHTML = `<div style="text-align:center; color:#666; margin-top:50px">No recent updates found.</div>`;
+            list.innerHTML = `<div style="text-align:center; color:#666; margin-top:50px">No history found.</div>`;
         } else {
             items.forEach(item => {
                 const el = document.createElement('div');
@@ -186,12 +193,9 @@
                 el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj); };
 
                 if(item.type === 'week') {
-                    // Full List of Resource Names & Icons
                     let resList = "";
                     if(item.wkObj.resources) {
-                        // We use the global config order if available, or just object keys
                         const keys = window.CONFIG && window.CONFIG.resources ? window.CONFIG.resources.map(r=>r.name) : Object.keys(item.wkObj.resources);
-                        
                         keys.forEach(k => {
                             if(item.wkObj.resources[k] && item.wkObj.resources[k].vis) {
                                 resList += `<div style="margin-top:4px;">${iconMap[k]||'📂'} ${k}</div>`;
@@ -207,7 +211,6 @@
                         <div class="recent-sub">${resList}</div>
                     `;
                 } else {
-                    // Single Resource
                     el.innerHTML = `
                         <div class="recent-header">
                             <span>${item.subName} - ${item.wkObj.title}</span>
@@ -228,25 +231,99 @@
     function showWeeks(sub) {
         currSub = sub;
         document.getElementById('subject-title').innerText = `${sub.code} - ${sub.name}`;
+        
+        // Drive Link
+        const dContainer = document.getElementById('drive-container');
+        dContainer.innerHTML = '';
+        if(sub.driveLink && sub.driveLink.trim() !== "") {
+            const a = document.createElement('a');
+            a.className = 'drive-btn';
+            a.href = sub.driveLink;
+            a.target = "_blank";
+            a.innerHTML = "📂 Course Drive";
+            dContainer.appendChild(a);
+        }
+
+        renderFilterBar();
+        renderWeekGrid('ALL');
+        nav('weeks');
+    }
+
+    function renderFilterBar() {
+        const bar = document.getElementById('filter-bar');
+        bar.innerHTML = '';
+        const btnAll = document.createElement('button');
+        btnAll.className = 'filter-btn active';
+        btnAll.innerText = 'ALL';
+        btnAll.onclick = () => { setActiveFilter(btnAll); renderWeekGrid('ALL'); };
+        bar.appendChild(btnAll);
+
+        if(window.CONFIG && window.CONFIG.resources) {
+            window.CONFIG.resources.forEach(res => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.innerText = res.name;
+                btn.onclick = () => { setActiveFilter(btn); renderWeekGrid(res.name); };
+                bar.appendChild(btn);
+            });
+        }
+    }
+
+    function setActiveFilter(btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    function renderWeekGrid(filterType) {
         const grid = document.getElementById('weeks-grid');
         grid.innerHTML = '';
-        if(!sub.weeks) sub.weeks = [];
+        if(!currSub.weeks) currSub.weeks = [];
 
-        sub.weeks.forEach((w, i) => {
-            const el = document.createElement('div');
-            el.className = 'card' + (w.locked ? ' locked' : '');
-            const lockIcon = w.locked ? '<div style="font-size:2rem; margin-bottom:10px">🔒</div>' : '';
-            const status = w.locked ? 'UNAVAILABLE' : 'CLICK TO VIEW';
-            const badge = w.isNew ? '<span class="badge-new">NEW!</span>' : '';
-            let customBadge = '';
-            if(w.showBadge && w.badgeText) {
-                customBadge = `<div class="custom-badge" style="background:${w.badgeColor || '#e91e8c'}">${w.badgeText}</div>`;
+        if(filterType === 'ALL') {
+            currSub.weeks.forEach((w, i) => {
+                const el = document.createElement('div');
+                el.className = 'card' + (w.locked ? ' locked' : '');
+                const lockIcon = w.locked ? '<div style="font-size:2rem; margin-bottom:10px">🔒</div>' : '';
+                const status = w.locked ? 'UNAVAILABLE' : 'CLICK TO VIEW';
+                const badge = w.isNew ? '<span class="badge-new">NEW!</span>' : '';
+                let customBadge = '';
+                if(w.showBadge && w.badgeText) {
+                    customBadge = `<div class="custom-badge" style="background:${w.badgeColor || '#e91e8c'}">${w.badgeText}</div>`;
+                }
+                el.innerHTML = `${customBadge}${lockIcon}<div style="font-family:'Orbitron'; font-size:1.5rem; color:var(--accent-purple); margin-bottom:5px; padding-top:10px;">${w.title}${badge}</div><div style="color:#888; font-size:0.8rem">${status}</div>`;
+                if(!w.locked) el.onclick = () => showContent(i);
+                grid.appendChild(el);
+            });
+        } else {
+            let found = false;
+            currSub.weeks.forEach((w, i) => {
+                if(w.resources && w.resources[filterType]) {
+                    const res = w.resources[filterType];
+                    if(res.vis) {
+                        found = true;
+                        const el = document.createElement('div');
+                        const isLocked = w.locked || res.lock;
+                        el.className = 'card' + (isLocked ? ' locked' : '');
+                        const badgeText = (w.showBadge && w.badgeText) ? ` • <span style="color:${w.badgeColor}">${w.badgeText}</span>` : '';
+                        
+                        el.innerHTML = `
+                            <div style="font-size:2.5rem; margin-bottom:10px">${iconMap[filterType] || '📂'}</div>
+                            <div style="font-weight:bold; text-transform:uppercase; margin-bottom:5px;">${filterType}</div>
+                            <div style="color:#aaa; font-size:0.9rem;">${w.title}${badgeText}</div>
+                        `;
+                        el.onclick = () => {
+                            if(isLocked) return alert("Locked");
+                            if(res.link && res.link !== "#") window.open(res.link, "_blank");
+                            else alert("No link set.");
+                        };
+                        grid.appendChild(el);
+                    }
+                }
+            });
+            if(!found) {
+                grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px;">No ${filterType} found in this subject.</div>`;
             }
-            el.innerHTML = `${customBadge}${lockIcon}<div style="font-family:'Orbitron'; font-size:1.5rem; color:var(--accent-purple); margin-bottom:5px; padding-top:10px;">${w.title}${badge}</div><div style="color:#888; font-size:0.8rem">${status}</div>`;
-            if(!w.locked) el.onclick = () => showContent(i);
-            grid.appendChild(el);
-        });
-        nav('weeks');
+        }
     }
 
     function showContent(i) { showContentByObj(currSub.weeks[i]); }

@@ -6,12 +6,12 @@ window.CONFIG = {
             "defaultDesc": ""
         },
         {
-            "name": "Alt 1",
+            "name": "Alternative",
             "icon": "▶️",
             "defaultDesc": ""
         },
         {
-            "name": "Alt 2",
+            "name": "Another Alt.",
             "icon": "▶️",
             "defaultDesc": ""
         },
@@ -59,6 +59,16 @@ window.CONFIG = {
             "name": "Topic Related Questions ",
             "icon": "❓",
             "defaultDesc": ""
+        },
+        {
+            "name": "Pre-Requisite",
+            "icon": "☝️",
+            "defaultDesc": ""
+        },
+        {
+            "name": "Another Pre-Requisite",
+            "icon": "☝️",
+            "defaultDesc": ""
         }
     ],
     "helpLink": "https://forms.gle/gtLTmKoJDYVo6yLV6"
@@ -101,8 +111,8 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/watch?v=whMHiWSqorQ",
-                        "desc": "Lecture content",
-                        "isNew": true
+                        "desc": "An introduction to the course and networking in general.",
+                        "isNew": false
                     },
                     "Section": {
                         "vis": false,
@@ -116,14 +126,14 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1zbeHMRxfssvH6Q3u7rso69Z6RoebcAIt/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true
+                        "isNew": false
                     },
                     "Slides": {
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1HzSOSGbPPdM1nPIXeEPeH0APbb4lglpn/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true
+                        "isNew": false
                     },
                     "Sheet": {
                         "vis": false,
@@ -175,12 +185,41 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGDRE6bS-RZ_A9at2zb7mtZ-&si=0hH9HOFxiO9L174r",
+                        "desc": "An alternative to the lecture content.",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
             }
-        ]
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/13EVTnrmkFV2XtWVyerUkdcD8s-vkZ34C?usp=drive_link"
     },
     {
         "code": "DSA",
@@ -211,8 +250,8 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1rppVzttlaFWIyfY8GtqPbhRmzPhUS9PV/view?usp=drive_link",
-                        "desc": "Lecture recording",
-                        "isNew": true
+                        "desc": "An audio recording of the lecture.",
+                        "isNew": false
                     },
                     "Lecture": {
                         "vis": false,
@@ -239,8 +278,8 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1TW3f4-74y-iM16gIWxD-cnaaa3k3QJy0/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": true
+                        "desc": "Slides [0:31] -> [66:76] -> [32:42] in that order!",
+                        "isNew": false
                     },
                     "Sheet": {
                         "vis": false,
@@ -292,12 +331,41 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGDC4cHK003suEApmqnI859i&si=cIz8wefVfUwh85Vv",
+                        "desc": "An alternative to the lecture.",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
             }
-        ]
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link"
     },
     {
         "code": "DB",
@@ -329,14 +397,14 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1fBSHfogDkfHaCvjLuP0QKtESWdc0IXBK/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true
+                        "isNew": false
                     },
                     "Lecture": {
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/watch?v=J4nsPdXCY-A&list=PLQV8O8EJjjePHlm2mKixQgCtAB9CEd8Ob&index=1",
-                        "desc": "Lecture content",
-                        "isNew": true
+                        "desc": "Introduction to Databases and Database Users",
+                        "isNew": false
                     },
                     "Section": {
                         "vis": false,
@@ -356,8 +424,8 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1hduxz7SAX1w4fBR6qoaJ3NyS4mM3IA3B/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": true
+                        "desc": "Lecture 1, Chapter 1.",
+                        "isNew": false
                     },
                     "Sheet": {
                         "vis": false,
@@ -409,12 +477,41 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/yLc0Yp5QZlU?si=Ka3TtBTLBNlg6vMf",
+                        "desc": "An alternative to the lecture content from the same reference by Mohamed El-Desouki",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
             }
-        ]
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link"
     },
     {
         "code": "CA",
@@ -452,8 +549,8 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/rUUTBRqwT6c?si=_3Ubw_x6s6Xwn8bb",
-                        "desc": "Lecture content",
-                        "isNew": true
+                        "desc": "Introduction to Buses and I/O techniques.",
+                        "isNew": false
                     },
                     "Section": {
                         "vis": false,
@@ -465,16 +562,16 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1YupwfgsRKeUlptVPJPvTHrqxD--Dq7EA/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1jaqLkf17_GuxUP5jWizeeGgzgQ4LvJy6/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true
+                        "isNew": false
                     },
                     "Notes": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1cTVz4S6L4QcbU0O-h5j3uLQaW7NZrG5L/view?usp=drive_link",
+                        "link": "https://drive.google.com/drive/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5?usp=drive_link",
                         "desc": "",
-                        "isNew": true
+                        "isNew": false
                     },
                     "Sheet": {
                         "vis": false,
@@ -526,12 +623,41 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
             }
-        ]
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1wkMAWai1tW55j42gsDKRh0-PPUCOKdFk?usp=drive_link"
     },
     {
         "code": "OS",
@@ -569,8 +695,8 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/St1faZ2ZS-g?si=s6A68f9d5dP2zIA5",
-                        "desc": "Lecture content",
-                        "isNew": true
+                        "desc": "Introduction to the course and Operating Systems in general.",
+                        "isNew": false
                     },
                     "Section": {
                         "vis": false,
@@ -584,14 +710,14 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1CO1JA37yTH2VfJZQVe5O7BKm5Oz1NMPT/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true
+                        "isNew": false
                     },
                     "Slides": {
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1NkROm76XIwx4tPyWfayeUmtgXNG-EN9U/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true
+                        "isNew": false
                     },
                     "Sheet": {
                         "vis": false,
@@ -643,12 +769,41 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PL6KMWPQP_DM-7tMNjUa7X2zGrc8jipPeI&si=VdFV2ELrA3a38v9M",
+                        "desc": "The first 7 videos in this playlist (By Ghassan Shobaki).",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "https://youtu.be/4WgHFM6ISNI?si=-1nMjZCQjJeg3nvb",
+                        "desc": "Do note that there are some minor differences between this and our content.",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
             }
-        ]
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1CIqmEG3hlHCfabTtADnfT_NgpCbs2kR1?usp=drive_link"
     },
     {
         "code": "AI",
@@ -686,15 +841,15 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/_tDTJtfDs6E?si=hVQEPbNkUz0XgN2C",
-                        "desc": "Lecture content",
-                        "isNew": true
+                        "desc": "An introduction to Artificial Intelligence and Intelligent Agents. ",
+                        "isNew": false
                     },
                     "Slides": {
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1THlTtGAKIhlb3Ot4tmNOUB70IzcAEQDN/view?usp=drive_link",
-                        "desc": "till slide 41 ",
-                        "isNew": true
+                        "desc": "Slides [0:31]",
+                        "isNew": false
                     },
                     "Section": {
                         "vis": false,
@@ -760,26 +915,316 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
             }
-        ]
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1Qa5n273x25nYmBfi_UzulawXih-GpRsp?usp=drive_link"
     },
     {
         "code": "ML",
         "name": "Machine Learning",
         "credits": "2 Credits",
         "semester": "Spring 2026",
-        "weeks": []
+        "weeks": [
+            {
+                "title": "WEEK 0",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alt 1": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alt 2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Linear Algebra": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Python": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_&si=8AeTXdqIeE0N4Gri",
+                        "desc": "⚠️ Linear Algebra. A foundational core of ML that can't be skipped.",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCYQmuXrRpFu_hr8Ujul-ek&si=1sFxIU2Ck2U6FVZX",
+                        "desc": "⚠️ Python + Important libraries! Python (alongside the listed libraries) will be used extensively throughout the course.",
+                        "isNew": false
+                    }
+                },
+                "badgeText": "Prerequisites! Don't Skip!",
+                "showBadge": true,
+                "isRecent": true,
+                "recentDate": "13/2/2026 3:45 PM",
+                "badgeColor": "#0a9900",
+                "isNew": true
+            },
+            {
+                "title": "WEEK 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/SbyQe6_LBwc?si=thyuctSEQXgqx5Iq",
+                        "desc": "An intro to the course, alongside the first lecture.",
+                        "isNew": false
+                    },
+                    "Alt 1": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alt 2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/folders/1FfyIZxcSJMsOCbjuvhllUQNiCaMAgV1a?usp=drive_link",
+                        "desc": "ML Intro + Data.",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "13/2/2026 3:45 PM",
+                "isNew": true
+            }
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link"
     },
     {
         "code": "SW",
         "name": "Software Testing",
         "credits": "2 Credits",
         "semester": "Spring 2026",
-        "weeks": []
+        "weeks": [],
+        "driveLink": "https://drive.google.com/drive/folders/1-DGr621UC2zPt5y3phF1SRJE-86eiYyK?usp=drive_link"
     },
     {
         "code": "QC",
@@ -793,6 +1238,7 @@ window.COURSE_DATA = [
         "name": "Robotics",
         "credits": "2 Credits",
         "semester": "Spring 2026",
-        "weeks": []
+        "weeks": [],
+        "driveLink": "https://drive.google.com/drive/folders/1_-XsOXQOgNauxPsRg0WPOtQDXBWsDq4X?usp=drive_link"
     }
 ];
