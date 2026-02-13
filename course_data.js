@@ -1183,10 +1183,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcZUQ6jqmtPt5F4DHUOfeL6J&si=NRPZorKzOlc1AEBe",
+                        "desc": "An alternative playlist we made for the week's content ",
                         "isNew": false
                     },
                     "Another Alt.": {

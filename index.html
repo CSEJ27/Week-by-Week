@@ -127,6 +127,29 @@
             el.onclick = () => showWeeks(s);
             grid.appendChild(el);
         });
+        
+        // Handle Back Button
+        window.onpopstate = function(event) {
+            if(event.state) {
+                // If moving back to weeks/content, ensure currSub is valid
+                if(event.state.page === 'weeks' || event.state.page === 'content') {
+                    if(!currSub && event.state.subCode) {
+                        currSub = window.COURSE_DATA.find(s => s.code === event.state.subCode);
+                    }
+                    if(!currSub) { nav('home', false); return; } // Safety fallback
+                }
+                
+                // Route
+                if(event.state.page === 'home') nav('home', false);
+                else if(event.state.page === 'recent') nav('recent', false);
+                else if(event.state.page === 'weeks') showWeeks(currSub, false);
+                else if(event.state.page === 'content') showContentByObj(event.state.wkObj, false);
+            } else {
+                nav('home', false);
+            }
+        };
+        // Set initial state
+        history.replaceState({page: 'home'}, null, "");
     }
 
     function parseDate(str) {
@@ -228,11 +251,10 @@
         nav('recent');
     }
 
-    function showWeeks(sub) {
+    function showWeeks(sub, push = true) {
         currSub = sub;
         document.getElementById('subject-title').innerText = `${sub.code} - ${sub.name}`;
         
-        // Drive Link
         const dContainer = document.getElementById('drive-container');
         dContainer.innerHTML = '';
         if(sub.driveLink && sub.driveLink.trim() !== "") {
@@ -246,7 +268,7 @@
 
         renderFilterBar();
         renderWeekGrid('ALL');
-        nav('weeks');
+        nav('weeks', push, { subCode: sub.code });
     }
 
     function renderFilterBar() {
@@ -328,7 +350,7 @@
 
     function showContent(i) { showContentByObj(currSub.weeks[i]); }
 
-    function showContentByObj(week) {
+    function showContentByObj(week, push = true) {
         const badgeTitle = week.isNew ? '<span class="badge-new">NEW!</span>' : '';
         document.getElementById('week-display-title').innerHTML = `${currSub.code} - ${week.title} ${badgeTitle}`;
         const details = document.getElementById('week-details');
@@ -362,10 +384,19 @@
                 }
             });
         }
-        nav('content');
+        nav('content', push, { subCode: currSub.code, wkObj: week });
     }
 
-    function nav(id) { document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); document.getElementById(id+'-page').classList.add('active'); window.scrollTo(0,0); }
+    function nav(id, push = true, stateData = {}) { 
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); 
+        document.getElementById(id+'-page').classList.add('active'); 
+        window.scrollTo(0,0);
+        
+        if(push) {
+            history.pushState({page: id, ...stateData}, null, "#" + id);
+        }
+    }
+    
     window.onload = init;
 </script>
 </body>
