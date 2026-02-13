@@ -128,18 +128,15 @@
             grid.appendChild(el);
         });
         
-        // Handle Back Button
         window.onpopstate = function(event) {
             if(event.state) {
-                // If moving back to weeks/content, ensure currSub is valid
                 if(event.state.page === 'weeks' || event.state.page === 'content') {
                     if(!currSub && event.state.subCode) {
                         currSub = window.COURSE_DATA.find(s => s.code === event.state.subCode);
                     }
-                    if(!currSub) { nav('home', false); return; } // Safety fallback
+                    if(!currSub) { nav('home', false); return; } 
                 }
                 
-                // Route
                 if(event.state.page === 'home') nav('home', false);
                 else if(event.state.page === 'recent') nav('recent', false);
                 else if(event.state.page === 'weeks') showWeeks(currSub, false);
@@ -148,7 +145,6 @@
                 nav('home', false);
             }
         };
-        // Set initial state
         history.replaceState({page: 'home'}, null, "");
     }
 
@@ -274,6 +270,21 @@
     function renderFilterBar() {
         const bar = document.getElementById('filter-bar');
         bar.innerHTML = '';
+        
+        // Smart Check: Find what resources actually exist
+        const availableTypes = new Set();
+        if(currSub.weeks) {
+            currSub.weeks.forEach(w => {
+                if(w.resources) {
+                    Object.keys(w.resources).forEach(key => {
+                        if(w.resources[key].vis) {
+                            availableTypes.add(key);
+                        }
+                    });
+                }
+            });
+        }
+
         const btnAll = document.createElement('button');
         btnAll.className = 'filter-btn active';
         btnAll.innerText = 'ALL';
@@ -282,11 +293,14 @@
 
         if(window.CONFIG && window.CONFIG.resources) {
             window.CONFIG.resources.forEach(res => {
-                const btn = document.createElement('button');
-                btn.className = 'filter-btn';
-                btn.innerText = res.name;
-                btn.onclick = () => { setActiveFilter(btn); renderWeekGrid(res.name); };
-                bar.appendChild(btn);
+                // Only create button if type exists in this subject
+                if(availableTypes.has(res.name)) {
+                    const btn = document.createElement('button');
+                    btn.className = 'filter-btn';
+                    btn.innerText = res.name;
+                    btn.onclick = () => { setActiveFilter(btn); renderWeekGrid(res.name); };
+                    bar.appendChild(btn);
+                }
             });
         }
     }
