@@ -771,18 +771,22 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PL6KMWPQP_DM-7tMNjUa7X2zGrc8jipPeI&si=VdFV2ELrA3a38v9M",
                         "desc": "The first 7 videos in this playlist (By Ghassan Shobaki).",
-                        "isNew": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/2/2026 5:08 PM"
                     },
                     "Another Alt.": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/4WgHFM6ISNI?si=-1nMjZCQjJeg3nvb",
                         "desc": "Do note that there are some minor differences between this and our content.",
-                        "isNew": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/2/2026 5:08 PM"
                     },
                     "Pre-Requisite": {
                         "vis": false,
