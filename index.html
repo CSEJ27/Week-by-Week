@@ -216,7 +216,8 @@
                     if(item.wkObj.resources) {
                         const keys = window.CONFIG && window.CONFIG.resources ? window.CONFIG.resources.map(r=>r.name) : Object.keys(item.wkObj.resources);
                         keys.forEach(k => {
-                            if(item.wkObj.resources[k] && item.wkObj.resources[k].vis) {
+                            // FIX: Only add resource to Week list if it DOES NOT have its own history entry
+                            if(item.wkObj.resources[k] && item.wkObj.resources[k].vis && !item.wkObj.resources[k].isRecent) {
                                 resList += `<div style="margin-top:4px;">${iconMap[k]||'📂'} ${k}</div>`;
                             }
                         });
@@ -271,7 +272,6 @@
         const bar = document.getElementById('filter-bar');
         bar.innerHTML = '';
         
-        // Smart Check: Find what resources actually exist
         const availableTypes = new Set();
         if(currSub.weeks) {
             currSub.weeks.forEach(w => {
@@ -293,7 +293,6 @@
 
         if(window.CONFIG && window.CONFIG.resources) {
             window.CONFIG.resources.forEach(res => {
-                // Only create button if type exists in this subject
                 if(availableTypes.has(res.name)) {
                     const btn = document.createElement('button');
                     btn.className = 'filter-btn';
