@@ -554,7 +554,7 @@ window.COURSE_DATA = [
             {
                 "title": "WEEK 1",
                 "locked": false,
-                "isNew": true,
+                "isNew": false,
                 "resources": {
                     "Guide (Explanation)": {
                         "vis": false,
@@ -589,7 +589,9 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
                         "desc": "An equivalent recorded section from Fall 24.",
-                        "isNew": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:50 PM"
                     },
                     "Slides": {
                         "vis": true,
@@ -689,11 +691,134 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1YBS5PV4NxEADu31KUQvSxzGgcnv0yUJW/view?usp=drive_link",
                         "desc": "Applications on lecture.",
-                        "isNew": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:50 PM"
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
+            },
+            {
+                "title": "WEEK 2",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=yT7WUBwyDyntpNbv",
+                        "desc": "From minute 30 onwards in lecture 2, alongside the first 15 minutes of lecture 3.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:56 PM"
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gTRWpOTq_udNfUTxi0Oxo&si=_1ej-QfeBOxR0TEI",
+                        "desc": "The third and fourth video in the playlist [I/O + Programmed + Interrupt, DMA].",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:59 PM"
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1eKAKGa9ITP29ubzTXQpTwsUpk-kXp3is/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "16/2/2026 12:09 AM"
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/folders/1a0agxCiexOvfLbi5Z75s9dnWBA0_nQWq?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "recentDate": "16/2/2026 12:09 AM",
+                        "isRecent": true
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "15/2/2026 11:56 PM",
+                "isNew": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1wkMAWai1tW55j42gsDKRh0-PPUCOKdFk?usp=drive_link"
