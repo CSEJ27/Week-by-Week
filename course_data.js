@@ -740,7 +740,7 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/file/d/1eKAKGa9ITP29ubzTXQpTwsUpk-kXp3is/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": true,
+                        "isRecent": false,
                         "recentDate": ""
                     },
                     "Guide (Explanation)": {
@@ -778,7 +778,7 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "recentDate": "",
-                        "isRecent": true
+                        "isRecent": false
                     },
                     "Sheet": {
                         "vis": false,
