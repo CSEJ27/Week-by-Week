@@ -708,8 +708,8 @@ window.COURSE_DATA = [
                         "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=yT7WUBwyDyntpNbv",
                         "desc": "From minute 30 onwards in lecture 2, alongside the first 15 minutes of lecture 3.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "15/2/2026 11:56 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Alternative": {
                         "vis": true,
@@ -717,8 +717,8 @@ window.COURSE_DATA = [
                         "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gTRWpOTq_udNfUTxi0Oxo&si=_1ej-QfeBOxR0TEI",
                         "desc": "The third and fourth video in the playlist [I/O + Programmed + Interrupt, DMA].",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "15/2/2026 11:59 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -741,7 +741,7 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": true,
-                        "recentDate": "16/2/2026 12:09 AM"
+                        "recentDate": ""
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -777,7 +777,7 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/drive/folders/1a0agxCiexOvfLbi5Z75s9dnWBA0_nQWq?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "recentDate": "16/2/2026 12:09 AM",
+                        "recentDate": "",
                         "isRecent": true
                     },
                     "Sheet": {
