@@ -395,8 +395,8 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1G08zt08iTo6OwT1ljsr6N9n9l6hnn47W/view?usp=drivesdk",
                         "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
+                        "isNew": false,
+                        "isRecent": false,
                         "recentDate": "18/2/2026 3:20 PM"
                     },
                     "Alternative": {
@@ -404,9 +404,9 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt&si=c-IE1Kmjsu-FAoTI",
                         "desc": "Videos 5&6",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "18/2/2026 3:20 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -427,9 +427,9 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1wlBc8ajgOwLUdZSTeDbzRPJAN5XyDL1f/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "18/2/2026 3:21 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -676,9 +676,9 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PL37D52B7714788190&si=tCrAAlncggb1RDmC",
                         "desc": "Ch2 and Ch3 videos",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "18/2/2026 3:09 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -692,18 +692,18 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/drive/folders/1y7JPRrZHVkd8PnFbKn2XoOv5ValFrI-e?usp=drive_link",
                         "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "18/2/2026 3:09 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Slides": {
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/drive/folders/1pELg-uRUZqqb4z_-gN4_86lJGuoABMuG?usp=drive_link",
                         "desc": "Lec 2 slides",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "18/2/2026 3:12 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -717,7 +717,9 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "#",
                         "desc": "",
-                        "isNew": false
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section": {
                         "vis": false,
@@ -946,8 +948,8 @@ window.COURSE_DATA = [
                         "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=yT7WUBwyDyntpNbv",
                         "desc": "From minute 30 onwards in lecture 2, alongside the first 15 minutes of lecture 3.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "15/2/2026 11:56 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Alternative": {
                         "vis": true,
@@ -955,8 +957,8 @@ window.COURSE_DATA = [
                         "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gTRWpOTq_udNfUTxi0Oxo&si=_1ej-QfeBOxR0TEI",
                         "desc": "The third and fourth video in the playlist [I/O + Programmed + Interrupt, DMA].",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "15/2/2026 11:59 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -978,8 +980,8 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/file/d/1eKAKGa9ITP29ubzTXQpTwsUpk-kXp3is/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "16/2/2026 12:09 AM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -1015,8 +1017,8 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/drive/folders/1a0agxCiexOvfLbi5Z75s9dnWBA0_nQWq?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "recentDate": "16/2/2026 12:09 AM",
-                        "isRecent": true
+                        "recentDate": "",
+                        "isRecent": false
                     },
                     "Sheet": {
                         "vis": false,
