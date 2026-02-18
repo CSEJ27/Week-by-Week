@@ -708,8 +708,8 @@ window.COURSE_DATA = [
                         "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=yT7WUBwyDyntpNbv",
                         "desc": "From minute 30 onwards in lecture 2, alongside the first 15 minutes of lecture 3.",
                         "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:56 PM"
                     },
                     "Alternative": {
                         "vis": true,
@@ -717,8 +717,8 @@ window.COURSE_DATA = [
                         "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gTRWpOTq_udNfUTxi0Oxo&si=_1ej-QfeBOxR0TEI",
                         "desc": "The third and fourth video in the playlist [I/O + Programmed + Interrupt, DMA].",
                         "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:59 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -740,8 +740,8 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/file/d/1eKAKGa9ITP29ubzTXQpTwsUpk-kXp3is/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "isRecent": true,
+                        "recentDate": "16/2/2026 12:09 AM"
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -777,8 +777,8 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/drive/folders/1a0agxCiexOvfLbi5Z75s9dnWBA0_nQWq?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "recentDate": "",
-                        "isRecent": false
+                        "recentDate": "16/2/2026 12:09 AM",
+                        "isRecent": true
                     },
                     "Sheet": {
                         "vis": false,
