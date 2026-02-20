@@ -61,6 +61,11 @@ window.CONFIG = {
             "defaultDesc": ""
         },
         {
+            "name": "Lab Slides",
+            "icon": "🧪",
+            "defaultDesc": ""
+        },
+        {
             "name": "Topic Related Questions ",
             "icon": "❓",
             "defaultDesc": ""
@@ -89,7 +94,7 @@ window.COURSE_DATA = [
             {
                 "title": "WEEK 1",
                 "locked": false,
-                "isNew": true,
+                "isNew": false,
                 "resources": {
                     "Guide (Explanation)": {
                         "vis": false,
@@ -116,7 +121,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/watch?v=whMHiWSqorQ",
-                        "desc": "An introduction to the course and networking in general.",
+                        "desc": "An introduction to the course and networking in general [Not recommended].",
                         "isNew": false
                     },
                     "Section": {
@@ -220,17 +225,144 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1wBrlq-qoNIGPgJtiYzkuLCKdnxqLp-9j/view?usp=drive_link",
+                        "desc": "Applications on lecture.",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lab Slides": {
                         "vis": false,
                         "lock": false,
                         "link": "#",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM"
+            },
+            {
+                "title": "WEEK 2",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/LHOSF3lG0ps?si=7rk0GGM0PCoIDIKu",
+                        "desc": "Not recommended.",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCEx90cJbc3NkNjQ3rkc_7J&si=QGRvwnvN7ri_Q9Wk",
+                        "desc": "An alternative to the lecture content.",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1vKf2_o_36iPrOYHs7r-HjuezfEYBQ3OO/view?usp=drive_link",
+                        "desc": "The physical layer.",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1hth754lDk-AwIcMMv4XgRpl3mKcWR2ll/view?usp=drive_link",
+                        "desc": "Applications on lecture.",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "20/2/2026 10:23 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/13EVTnrmkFV2XtWVyerUkdcD8s-vkZ34C?usp=drive_link"
@@ -244,7 +376,7 @@ window.COURSE_DATA = [
             {
                 "title": "WEEK 1",
                 "locked": false,
-                "isNew": true,
+                "isNew": false,
                 "resources": {
                     "Guide (Explanation)": {
                         "vis": false,
@@ -291,7 +423,7 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1TW3f4-74y-iM16gIWxD-cnaaa3k3QJy0/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1fXu6fztpGgEPpQlPbwlXdkipYHjTFKid/view?usp=drive_link",
                         "desc": "Slides [0:31] -> [66:76] -> [32:42] in that order!",
                         "isNew": false
                     },
@@ -303,11 +435,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Lab": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "Lab work",
-                        "isNew": false
+                        "link": "https://youtu.be/ka0bvTqgDKM",
+                        "desc": "Transitioning from Java back onto C++, and a revision on C++ concepts.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/2/2026 9:47 PM"
                     },
                     "Quiz": {
                         "vis": false,
@@ -382,10 +516,19 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lab Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1fb74OacrZkq2ZPZAhA6terCwPHwVtGws/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/2/2026 9:47 PM"
                     }
                 },
                 "isRecent": true,
-                "recentDate": "13/2/2026 5:48 AM"
+                "recentDate": "15/2/2026 10:23 PM"
             },
             {
                 "title": "WEEK 2",
@@ -393,8 +536,8 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1G08zt08iTo6OwT1ljsr6N9n9l6hnn47W/view?usp=drivesdk",
-                        "desc": "",
+                        "link": "https://drive.google.com/drive/folders/1jsI4gy6DgnJaQ726IlYjykVBQo9vTLdb",
+                        "desc": "\"Lec 2-1\" alongside \"Lec 2-2\" in this folder.",
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": "18/2/2026 3:20 PM"
@@ -403,7 +546,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt&si=c-IE1Kmjsu-FAoTI",
-                        "desc": "Videos 5&6",
+                        "desc": "Videos 5&6 [Array as a data structure] in this playlist.",
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
@@ -500,11 +643,18 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "18/2/2026 3:19 PM"
+                "recentDate": "20/2/2026 10:23 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link"
@@ -518,7 +668,7 @@ window.COURSE_DATA = [
             {
                 "title": "WEEK 1",
                 "locked": false,
-                "isNew": true,
+                "isNew": false,
                 "resources": {
                     "Guide (Explanation)": {
                         "vis": false,
@@ -549,10 +699,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "Section content",
+                        "link": "https://youtu.be/vOJW8q1A2TM",
+                        "desc": "Applications on lecture.",
                         "isNew": false
                     },
                     "Notes": {
@@ -565,7 +715,7 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1hduxz7SAX1w4fBR6qoaJ3NyS4mM3IA3B/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1UkgTfv3KFCBiygjjb8L9WEkZ_ttlDRA1/view?usp=drive_link",
                         "desc": "Lecture 1, Chapter 1.",
                         "isNew": false
                     },
@@ -649,13 +799,20 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1hvEehTo-x0GYlU2VsOTXcBu-20TxZcfg/view?usp=drive_link",
+                        "desc": "Spring 2025 Slides, should be largely identical.",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lab Slides": {
                         "vis": false,
                         "lock": false,
                         "link": "#",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
@@ -665,17 +822,17 @@ window.COURSE_DATA = [
                 "title": "WEEK 2",
                 "resources": {
                     "Lecture": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtu.be/zBOZ_7IaD_0?si=dD19JqTPqQUGiZDx",
+                        "desc": "ER Diagrams.",
                         "isNew": false
                     },
                     "Alternative": {
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PL37D52B7714788190&si=tCrAAlncggb1RDmC",
-                        "desc": "Ch2 and Ch3 videos",
+                        "desc": "CH. 2 and CH. 3 videos",
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
@@ -699,8 +856,8 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1pELg-uRUZqqb4z_-gN4_86lJGuoABMuG?usp=drive_link",
-                        "desc": "Lec 2 slides",
+                        "link": "https://drive.google.com/file/d/1mWp0Zg2-nrzNMm32gGz-g_o09lne7-mI/view?usp=drive_link",
+                        "desc": "Database System Concepts and ERD.",
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
@@ -722,17 +879,17 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtu.be/eJhLMm5O-bs?si=gtA0qYaayPi1JOez",
+                        "desc": "An equivalent section from Spring 2025.",
                         "isNew": false
                     },
                     "Section Slides": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://drive.google.com/file/d/1boUviDl_gWoUIWDORda5eI544rahyJjp/view?usp=drive_link",
+                        "desc": "An equivalent section from Spring 2025.",
                         "isNew": false
                     },
                     "Notes": {
@@ -776,11 +933,18 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "18/2/2026 3:08 PM"
+                "recentDate": "20/2/2026 10:23 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link"
@@ -934,6 +1098,13 @@ window.COURSE_DATA = [
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "15/2/2026 11:50 PM"
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
@@ -998,23 +1169,23 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
+                        "desc": "An equivalent recorded section from Fall 24.",
                         "isNew": false
                     },
                     "Section Slides": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://drive.google.com/file/d/1FA9yB8Dd0oZrMyvQlzTqUGc14c6Sj3Gw/view?usp=drive_link",
+                        "desc": "Spring 2025 slides, should be largely identical.",
                         "isNew": false
                     },
                     "Notes": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1a0agxCiexOvfLbi5Z75s9dnWBA0_nQWq?usp=drive_link",
+                        "link": "https://drive.google.com/drive/u/2/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5",
                         "desc": "",
                         "isNew": false,
                         "recentDate": "",
@@ -1054,10 +1225,17 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
-                "recentDate": "15/2/2026 11:56 PM",
+                "recentDate": "20/2/2026 10:23 PM",
                 "isNew": true
             }
         ],
@@ -1072,7 +1250,7 @@ window.COURSE_DATA = [
             {
                 "title": "WEEK 1",
                 "locked": false,
-                "isNew": true,
+                "isNew": false,
                 "resources": {
                     "Guide (Explanation)": {
                         "vis": false,
@@ -1103,10 +1281,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "Section content",
+                        "link": "https://youtube.com/playlist?list=PLBiOoMs77rROrZakdz7c5r7ArJPklYUP7&si=ly_PdcfoIUs7oMWA",
+                        "desc": "Tutorial 1 in this playlist.",
                         "isNew": false
                     },
                     "Notes": {
@@ -1212,6 +1390,13 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
@@ -1224,14 +1409,14 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/xzhpyaR0e4c?si=8XY_n9F1FYSaFRO6",
-                        "desc": "",
+                        "desc": "Operating-System Structures, and an intro to Processes.",
                         "isNew": false
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1&si=mKik42W-yMfowWeM",
+                        "desc": "Lec 5 P.1 + Lec 5 P.2 [up until the 15:00 mark] + Lec 6 P.2 [CH.3: END] + Lec 7 P.1 [START: the 11th minute mark].",
                         "isNew": false
                     },
                     "Another Alt.": {
@@ -1252,7 +1437,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/drive/folders/1Im88NwjJS85Y1DK41QNu7-JMKtmCIYgy?usp=drive_link",
-                        "desc": "Ch2 slides and Ch3 slides from 1 till 13 ",
+                        "desc": "CH. 2 slides and CH. 3 slides [1: 13]. ",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
@@ -1270,10 +1455,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtube.com/playlist?list=PLBiOoMs77rROrZakdz7c5r7ArJPklYUP7&si=ly_PdcfoIUs7oMWA",
+                        "desc": "Tutorial 2 in this playlist.",
                         "isNew": false
                     },
                     "Section Slides": {
@@ -1324,10 +1509,17 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isNew": true,
-                "recentDate": "19/2/2026 7:00 PM",
+                "recentDate": "20/2/2026 10:23 PM",
                 "isRecent": true
             }
         ],
@@ -1342,7 +1534,7 @@ window.COURSE_DATA = [
             {
                 "title": "WEEK 1",
                 "locked": false,
-                "isNew": true,
+                "isNew": false,
                 "resources": {
                     "Guide (Explanation)": {
                         "vis": false,
@@ -1376,14 +1568,14 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1THlTtGAKIhlb3Ot4tmNOUB70IzcAEQDN/view?usp=drive_link",
-                        "desc": "Slides [0:31]",
+                        "desc": "Slides [0:31].",
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "Section content",
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=o66OCM_Zi9V6j9QP",
+                        "desc": "Section 1 [Fall 2023]",
                         "isNew": false
                     },
                     "Notes": {
@@ -1473,13 +1665,20 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1-a4ET-cUGED-jan_5OkSF1f6hFX3IpWO/view?usp=drive_link",
+                        "desc": "[Fall 2023] Slides*",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lab Slides": {
                         "vis": false,
                         "lock": false,
                         "link": "#",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
@@ -1538,17 +1737,17 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=o66OCM_Zi9V6j9QP",
+                        "desc": "Section 2 [Fall 2023].",
                         "isNew": false
                     },
                     "Section Slides": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://drive.google.com/file/d/1sEqbDWgaYF9Zyccl6MAg925bePU4bHiU/view?usp=drive_link",
+                        "desc": "[Fall 2023] Slides*",
                         "isNew": false
                     },
                     "Notes": {
@@ -1592,11 +1791,18 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "19/2/2026 6:48 PM"
+                "recentDate": "20/2/2026 10:23 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1Qa5n273x25nYmBfi_UzulawXih-GpRsp?usp=drive_link"
@@ -1745,6 +1951,13 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "badgeText": "Prerequisites! Don't Skip!",
@@ -1752,7 +1965,7 @@ window.COURSE_DATA = [
                 "isRecent": true,
                 "recentDate": "13/2/2026 3:45 PM",
                 "badgeColor": "#0a9900",
-                "isNew": true
+                "isNew": false
             },
             {
                 "title": "WEEK 1",
@@ -1807,10 +2020,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtu.be/NgmJYxxLWUY?si=GS_myuk0MCZDKX0c",
+                        "desc": "Do note that its incomplete*",
                         "isNew": false
                     },
                     "Notes": {
@@ -1877,11 +2090,18 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 3:45 PM",
-                "isNew": true
+                "isNew": false
             },
             {
                 "title": "WEEK 2",
@@ -1890,7 +2110,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/sStNIQzdEMw?si=ARvExv12yyICMurI",
-                        "desc": "",
+                        "desc": "Simple Linear Regression",
                         "isNew": false
                     },
                     "Alternative": {
@@ -1915,10 +2135,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Slides": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://drive.google.com/file/d/1SkbT83CAko8Z2_O3i5MR6PUwubxlpj5t/view?usp=drive_link",
+                        "desc": "Simple Linear Regression",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
@@ -1936,10 +2156,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
+                        "link": "https://youtu.be/Li2vhCv26GA?si=6i2X0O74nTVWnED9",
+                        "desc": "An equivalent tutorial from Fall 2023.",
                         "isNew": false
                     },
                     "Section Slides": {
@@ -1990,11 +2210,18 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
                     }
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "19/2/2026 6:50 PM"
+                "recentDate": "20/2/2026 10:23 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link"
@@ -2115,6 +2342,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
                         "vis": false,
                         "lock": false,
                         "link": "#",
