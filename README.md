@@ -1,2 +1,2 @@
 # CSE27's Week-by-Week 📅
-"The Hero we need".
+"The hero we need".
