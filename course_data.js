@@ -395,7 +395,7 @@ window.COURSE_DATA = [
                     "Voice Recording": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1rppVzttlaFWIyfY8GtqPbhRmzPhUS9PV/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1ihz5sd0EXsHbL6qBovwEzQ67HvyXR26-/view?usp=drive_link",
                         "desc": "An audio recording of the lecture.",
                         "isNew": false
                     },
@@ -687,7 +687,7 @@ window.COURSE_DATA = [
                     "Voice Recording": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1fBSHfogDkfHaCvjLuP0QKtESWdc0IXBK/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1GAqTY-DqxDXjtlggYDlgwDHY6OJm9uQc/view?usp=drive_link",
                         "desc": "",
                         "isNew": false
                     },
@@ -847,7 +847,7 @@ window.COURSE_DATA = [
                     "Voice Recording": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1y7JPRrZHVkd8PnFbKn2XoOv5ValFrI-e?usp=drive_link",
+                        "link": "https://drive.google.com/drive/folders/1PDIRVhGb2DmM93x2Hh3GI8GnuDpY4enW?usp=drive_link",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false,
@@ -2001,7 +2001,7 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1FfyIZxcSJMsOCbjuvhllUQNiCaMAgV1a?usp=drive_link",
+                        "link": "https://drive.google.com/drive/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf?usp=drive_link",
                         "desc": "ML Intro + Data.",
                         "isNew": false
                     },
@@ -2468,6 +2468,15 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
