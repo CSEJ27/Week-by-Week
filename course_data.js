@@ -772,9 +772,129 @@ window.COURSE_DATA = [
                         "isNew": false
                     }
                 },
-                "isNew": true,
+                "isNew": false,
                 "isRecent": true,
                 "recentDate": "20/2/2026 10:23 PM"
+            },
+            {
+                "title": "WEEK 3",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/0/folders/1jsI4gy6DgnJaQ726IlYjykVBQo9vTLdb",
+                        "desc": "Lec 2-3 and 2-4 ",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/0/folders/1Wiv0rgkbWyszlkNTyt03wgTObWQsGbJO",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/0/folders/1ma9pXd8Q-v7c6-PXMLUsClLRTnQ81iGl",
+                        "desc": "CH2-lists-DynamicsArrays",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "28/2/2026 12:25 AM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link"
