@@ -17,22 +17,28 @@
         .page.active { display: block; }
         .back-btn { background: rgba(0,0,0,0.3); border: 2px solid var(--accent-pink); color: white; padding: 10px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-bottom: 20px; transition: 0.3s; box-shadow: 0 0 15px rgba(233, 30, 140, 0.1); }
         .back-btn:hover { background: var(--accent-pink); box-shadow: 0 0 25px rgba(233, 30, 140, 0.4); }
-        .header-actions { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
-        .recent-btn { background: rgba(74, 144, 226, 0.2); border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 10px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .header-actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
+        
+        /* Header Buttons */
+        .recent-btn { background: rgba(74, 144, 226, 0.2); border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .recent-btn:hover { background: var(--accent-blue); color: white; box-shadow: 0 0 20px var(--accent-blue); }
-        .help-btn { background: rgba(0, 200, 83, 0.2); border: 2px solid #00c853; color: #00c853; padding: 10px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; text-decoration: none; display: inline-block;}
+        .schedule-btn { background: rgba(255, 149, 0, 0.2); border: 2px solid #ff9500; color: #ff9500; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .schedule-btn:hover { background: #ff9500; color: black; box-shadow: 0 0 20px #ff9500; }
+        .help-btn { background: rgba(0, 200, 83, 0.2); border: 2px solid #00c853; color: #00c853; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; text-decoration: none; display: inline-block;}
         .help-btn:hover { background: #00c853; color: white; box-shadow: 0 0 20px #00c853; }
+        
         .drive-btn { background: rgba(255, 215, 0, 0.1); border: 2px solid #ffd700; color: #ffd700; padding: 8px 20px; border-radius: 20px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px; transition: 0.3s; font-size: 0.9rem; }
         .drive-btn:hover { background: #ffd700; color: black; box-shadow: 0 0 15px #ffd700; }
         .grid { display: grid; gap: 30px; }
         .subjects-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-        .weeks-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+        .weeks-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
         .resources-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
         .recent-grid { grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; }
-        .card { background: var(--card-bg); backdrop-filter: blur(12px); border: 2px solid rgba(233, 30, 140, 0.2); border-radius: 20px; padding: 30px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .card { background: var(--card-bg); backdrop-filter: blur(12px); border: 2px solid rgba(233, 30, 140, 0.2); border-radius: 20px; padding: 30px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-8px); border-color: var(--accent-pink); box-shadow: 0 15px 40px rgba(233, 30, 140, 0.25); }
         .card.locked { opacity: 0.5; filter: grayscale(1); cursor: not-allowed; border-color: #555; }
         .card.locked:hover { transform: none; box-shadow: none; }
+        
         .info-box { background: rgba(20, 10, 30, 0.8); border: 2px solid var(--accent-pink); border-radius: 20px; padding: 35px; margin-bottom: 40px; box-shadow: 0 0 50px rgba(233, 30, 140, 0.15); }
         .info-title { font-family: 'Orbitron'; font-size: 2.2rem; color: var(--accent-pink); margin-bottom: 25px; }
         .detail-row { display: flex; gap: 20px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -43,16 +49,36 @@
         .badge-new { background: var(--accent-pink); color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 10px; margin-left: 10px; font-weight: 900; letter-spacing: 1px; box-shadow: 0 0 10px var(--accent-pink); vertical-align: middle; animation: pulse 1.5s infinite alternate; display: inline-block; }
         @keyframes pulse { from { opacity: 1; transform: scale(1); } to { opacity: 0.8; transform: scale(1.05); } }
         .custom-badge { position: absolute; top: 0; right: 0; background: #333; color: white; font-size: 0.8rem; padding: 5px 15px; border-bottom-left-radius: 15px; font-weight: bold; box-shadow: -2px 2px 10px rgba(0,0,0,0.5); max-width: 80%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        
         .recent-card { background: rgba(74, 144, 226, 0.1); border: 1px solid var(--accent-blue); padding: 20px; border-radius: 15px; margin-bottom: 15px; display: flex; flex-direction: column; gap: 10px; cursor: pointer; transition: 0.3s; }
         .recent-card:hover { transform: translateX(10px); background: rgba(74, 144, 226, 0.2); }
         .recent-header { font-family: 'Orbitron'; font-size: 1.2rem; color: var(--accent-blue); display:flex; justify-content:space-between; align-items:center; }
         .recent-sub { color: #ccc; font-size: 0.95rem; line-height: 1.5; }
         .recent-icons { font-size: 1.5rem; letter-spacing: 5px; margin-top: 5px; }
         .recent-time { font-size: 0.8rem; color: var(--accent-pink); font-weight: bold; white-space: nowrap; margin-left: 10px; }
+        
         .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
         .filter-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 8px 16px; border-radius: 20px; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
         .filter-btn:hover { background: rgba(255,255,255,0.15); color: white; }
         .filter-btn.active { background: var(--accent-pink); color: white; border-color: var(--accent-pink); box-shadow: 0 0 15px rgba(233,30,140,0.4); font-weight: bold; }
+        
+        /* Schedule/Submissions Styles */
+        .total-badge { background: rgba(20, 10, 30, 0.8); border: 1px solid var(--accent-blue); color: var(--accent-blue); padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 0 10px rgba(74, 144, 226, 0.2); }
+        .total-badge.high-load { border-color: #ff3b30; color: #ff3b30; box-shadow: 0 0 15px rgba(255, 59, 48, 0.3); animation: pulse 2s infinite alternate; }
+        .task-list { display: flex; flex-direction: column; gap: 12px; flex-grow: 1; margin-top: 15px; }
+        .task-item { background: rgba(0, 0, 0, 0.2); padding: 12px 15px; border-radius: 12px; display: flex; align-items: center; gap: 15px; font-size: 0.95rem; border-left: 4px solid #555; transition: 0.2s; }
+        .task-item:hover { background: rgba(0, 0, 0, 0.4); transform: translateX(5px); }
+        .empty-state { color: #666; font-style: italic; text-align: center; padding: 20px 0; font-size: 1rem; }
+        .sub-CA { border-left-color: #ff9500; } .bg-CA { background: rgba(255, 149, 0, 0.2); color: #ff9500; }
+        .sub-DSA { border-left-color: #34c759; } .bg-DSA { background: rgba(52, 199, 89, 0.2); color: #34c759; }
+        .sub-DB { border-left-color: #007aff; } .bg-DB { background: rgba(0, 122, 255, 0.2); color: #007aff; }
+        .sub-OS { border-left-color: #ff2d55; } .bg-OS { background: rgba(255, 45, 85, 0.2); color: #ff2d55; }
+        .sub-CN { border-left-color: #af52de; } .bg-CN { background: rgba(175, 82, 222, 0.2); color: #af52de; }
+        .sub-AI { border-left-color: #ffcc00; } .bg-AI { background: rgba(255, 204, 0, 0.2); color: #ffcc00; }
+        .sub-badge { font-weight: bold; font-size: 0.8rem; padding: 3px 8px; border-radius: 6px; color: #fff; min-width: 45px; text-align: center; }
+        .task-icon { font-size: 1.2rem; }
+        .task-name { color: var(--text-main); font-weight: 500; }
+
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
     </style>
     <script src="course_data.js"></script>
@@ -67,6 +93,7 @@
         </header>
         <div class="header-actions">
             <button class="recent-btn" onclick="showRecent()">📜 History</button>
+            <button class="schedule-btn" onclick="showSchedule()">📅 Schedule</button>
             <a id="help-btn" href="#" target="_blank" class="help-btn">🤝 Help Us</a>
         </div>
         <div class="grid subjects-grid" id="subjects-grid"></div>
@@ -76,6 +103,13 @@
         <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
         <h1 style="color:var(--accent-blue)">HISTORY</h1>
         <div class="grid recent-grid" id="recent-list"></div>
+    </div>
+
+    <div id="schedule-page" class="page">
+        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <h1 style="color:#ff9500">SEMESTER MAP</h1>
+        <p class="subtitle" style="margin-bottom: 30px;">Your overview of assignments, quizzes, and projects</p>
+        <div class="grid weeks-grid" id="deliverables-grid"></div>
     </div>
 
     <div id="weeks-page" class="page">
@@ -110,6 +144,25 @@
     
     let currSub = null;
 
+    // Hardcoded Submissions Data
+    const scheduleData = [
+        { week: 1, tasks: [] },
+        { week: 2, tasks: [] },
+        { week: 3, tasks: [] },
+        { week: 4, tasks: [] },
+        { week: 5, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
+        { week: 6, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
+        { week: 7, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' } ] },
+        { week: 8, tasks: [] }, 
+        { week: 9, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' } ] },
+        { week: 10, tasks: [ { sub: 'OS', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Assignment', icon: '📝' } ] },
+        { week: 11, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'OS', name: 'Report Presentation', icon: '📊' } ] },
+        { week: 12, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
+        { week: 13, tasks: [ { sub: 'DSA', name: 'Mini Project', icon: '🚀' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'OS', name: 'Assignment', icon: '📝' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
+        { week: 14, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Mini Project', icon: '🚀' } ] },
+        { week: 15, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'CN', name: 'Mini Project', icon: '🚀' } ] }
+    ];
+
     function init() {
         const grid = document.getElementById('subjects-grid');
         grid.innerHTML = '';
@@ -139,6 +192,7 @@
                 
                 if(event.state.page === 'home') nav('home', false);
                 else if(event.state.page === 'recent') nav('recent', false);
+                else if(event.state.page === 'schedule') showSchedule(false);
                 else if(event.state.page === 'weeks') showWeeks(currSub, false);
                 else if(event.state.page === 'content') showContentByObj(event.state.wkObj, false);
             } else {
@@ -148,19 +202,26 @@
         history.replaceState({page: 'home'}, null, "");
     }
 
+    // FIX: Highly robust date parsing to prevent sorting breaks
     function parseDate(str) {
         if(!str) return 0;
         try {
-            const parts = str.split(' ');
+            const parts = str.trim().split(/\s+/);
             if(parts.length < 2) return 0;
             const dParts = parts[0].split('/');
             const tParts = parts[1].split(':');
-            const ampm = parts[2];
-            let h = parseInt(tParts[0]);
-            const m = parseInt(tParts[1]);
+            const ampm = parts[2] ? parts[2].toUpperCase() : '';
+            let h = parseInt(tParts[0], 10);
+            const m = parseInt(tParts[1], 10);
             if(ampm === 'PM' && h < 12) h += 12;
             if(ampm === 'AM' && h === 12) h = 0;
-            return new Date(dParts[2], dParts[1]-1, dParts[0], h, m).getTime();
+            
+            const yr = parseInt(dParts[2], 10);
+            const mo = parseInt(dParts[1], 10) - 1;
+            const da = parseInt(dParts[0], 10);
+            
+            const timestamp = new Date(yr, mo, da, h, m).getTime();
+            return isNaN(timestamp) ? 0 : timestamp;
         } catch(e) { return 0; }
     }
 
@@ -216,7 +277,6 @@
                     if(item.wkObj.resources) {
                         const keys = window.CONFIG && window.CONFIG.resources ? window.CONFIG.resources.map(r=>r.name) : Object.keys(item.wkObj.resources);
                         keys.forEach(k => {
-                            // FIX: Only add resource to Week list if it DOES NOT have its own history entry
                             if(item.wkObj.resources[k] && item.wkObj.resources[k].vis && !item.wkObj.resources[k].isRecent) {
                                 resList += `<div style="margin-top:4px;">${iconMap[k]||'📂'} ${k}</div>`;
                             }
@@ -246,6 +306,55 @@
             });
         }
         nav('recent');
+    }
+
+    function showSchedule(push = true) {
+        const grid = document.getElementById('deliverables-grid');
+        grid.innerHTML = '';
+        
+        scheduleData.forEach(data => {
+            const card = document.createElement('div');
+            const isEmpty = data.tasks.length === 0;
+            const isHighLoad = data.tasks.length >= 4;
+            
+            card.className = `card ${isEmpty ? 'locked' : ''}`;
+            
+            let tasksHtml = '';
+            if (isEmpty) {
+                tasksHtml = `<div class="empty-state">No deliverables scheduled</div>`;
+            } else {
+                data.tasks.forEach(task => {
+                    tasksHtml += `
+                        <div class="task-item sub-${task.sub}">
+                            <span class="sub-badge bg-${task.sub}">${task.sub}</span>
+                            <span class="task-icon">${task.icon}</span>
+                            <span class="task-name">${task.name}</span>
+                        </div>
+                    `;
+                });
+            }
+
+            let badgeHtml = '';
+            if (!isEmpty) {
+                const badgeClass = isHighLoad ? 'total-badge high-load' : 'total-badge';
+                const plural = data.tasks.length > 1 ? 'Tasks' : 'Task';
+                badgeHtml = `<div class="${badgeClass}">${data.tasks.length} ${plural}</div>`;
+            } else {
+                badgeHtml = `<div class="total-badge" style="border-color:#555; color:#888;">0 Tasks</div>`;
+            }
+
+            card.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
+                    <h2 style="font-family:'Orbitron'; color:var(--accent-purple); font-size:1.5rem; margin:0;">WEEK ${data.week}</h2>
+                    ${badgeHtml}
+                </div>
+                <div class="task-list">
+                    ${tasksHtml}
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+        nav('schedule', push);
     }
 
     function showWeeks(sub, push = true) {
@@ -341,10 +450,16 @@
                         el.className = 'card' + (isLocked ? ' locked' : '');
                         const badgeText = (w.showBadge && w.badgeText) ? ` • <span style="color:${w.badgeColor}">${w.badgeText}</span>` : '';
                         
+                        // FIX: Wrapped badge in a div so it doesn't stretch in the flex column
+                        const resBadgeCard = res.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
+                        const notesHtml = (res.desc && res.desc.trim()) ? `<div style="margin-top:15px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.1); color:var(--text-sub); font-size:0.9rem; line-height:1.4; white-space:pre-wrap;">${res.desc}</div>` : '';
+                        
                         el.innerHTML = `
                             <div style="font-size:2.5rem; margin-bottom:10px">${iconMap[filterType] || '📂'}</div>
-                            <div style="font-weight:bold; text-transform:uppercase; margin-bottom:5px;">${filterType}</div>
-                            <div style="color:#aaa; font-size:0.9rem;">${w.title}${badgeText}</div>
+                            <div style="font-weight:bold; text-transform:uppercase;">${filterType}</div>
+                            ${resBadgeCard}
+                            <div style="color:#aaa; font-size:0.9rem; margin-top:5px;">${w.title}${badgeText}</div>
+                            ${notesHtml}
                         `;
                         el.onclick = () => {
                             if(isLocked) return alert("Locked");
@@ -378,16 +493,22 @@
                 const val = week.resources[key];
                 const icon = iconMap[key] || '📂';
                 if(val && val.vis) {
-                    const resBadge = val.isNew ? '<span class="badge-new">NEW!</span>' : '';
+                    
+                    // Inline badge for the info box list
+                    const resBadgeInline = val.isNew ? '<span class="badge-new">NEW!</span>' : '';
                     if(val.desc && val.desc.trim()) {
                         const row = document.createElement('div');
                         row.className = 'detail-row';
-                        row.innerHTML = `<div class=\"detail-icon\">${icon}</div><div class=\"detail-content\"><h3>${key} ${resBadge}</h3><p>${val.desc}</p></div>`;
+                        row.innerHTML = `<div class=\"detail-icon\">${icon}</div><div class=\"detail-content\"><h3>${key} ${resBadgeInline}</h3><p>${val.desc}</p></div>`;
                         details.appendChild(row);
                     }
+                    
+                    // FIX: Wrapped badge in a div so it doesn't stretch in the flex column
+                    const resBadgeCard = val.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
+                    
                     const el = document.createElement('div');
                     el.className = 'card' + (val.lock ? ' locked' : '');
-                    el.innerHTML = `<div style=\"font-size:2.5rem; margin-bottom:10px\">${icon}</div><div style=\"font-weight:bold; text-transform:uppercase\">${key}</div>${resBadge}`;
+                    el.innerHTML = `<div style=\"font-size:2.5rem; margin-bottom:10px\">${icon}</div><div style=\"font-weight:bold; text-transform:uppercase\">${key}</div>${resBadgeCard}`;
                     el.onclick = () => {
                         if(val.lock) return alert("Locked");
                         if(val.link && val.link !== "#") window.open(val.link, "_blank");
