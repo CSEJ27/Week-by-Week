@@ -378,7 +378,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/playlist?list=PLwTK_kzdGnGClKi-u1ePqDkFiyUekLmlC",
-                        "desc": "2nd video till 23:00 only ",
+                        "desc": "2nd video till the 23rd minute mark.",
                         "isNew": false
                     },
                     "Another Alt.": {
@@ -392,7 +392,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/161GIYpYQZNtEMa_jv9Gn05phv7EpVhH9/view?usp=drive_link",
-                        "desc": "includes important questions",
+                        "desc": "Includes important questions*",
                         "isNew": false
                     },
                     "Slides": {
@@ -424,11 +424,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section Slides": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://drive.google.com/file/d/1hth754lDk-AwIcMMv4XgRpl3mKcWR2ll/view?usp=drive_link",
+                        "desc": "Applications on lecture.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "28/2/2026 5:24 AM"
                     },
                     "Notes": {
                         "vis": false,
@@ -737,11 +739,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Lab": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://drive.google.com/file/d/1bVzKp_t1TYPmhgRkVrSbLYpBM5lz_2IW/view?usp=drive_link",
+                        "desc": "Applications on the first \"actual\" lecture.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "28/2/2026 5:25 AM"
                     },
                     "Topic Related Questions ": {
                         "vis": false,
@@ -811,7 +815,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/drive/u/0/folders/1ma9pXd8Q-v7c6-PXMLUsClLRTnQ81iGl",
-                        "desc": "CH2-lists-DynamicsArrays",
+                        "desc": "CH.2, Dynamic Arrays.",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
@@ -1200,7 +1204,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PL37D52B7714788190&si=5vf7DsedTeBsK3a1",
-                        "desc": "till the 9th video in the playlist ",
+                        "desc": "Till the 9th video in the playlist ",
                         "isNew": false
                     },
                     "Another Alt.": {
@@ -1214,14 +1218,14 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/drive/folders/1PDIRVhGb2DmM93x2Hh3GI8GnuDpY4enW?usp=drive_link",
-                        "desc": "Lecture 3 recording",
+                        "desc": "Lecture 3 recording.",
                         "isNew": false
                     },
                     "Slides": {
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1Z9yVKT_IWiiJxtCesjjkNKLRoOAYNKLd/view?usp=drive_link",
-                        "desc": "",
+                        "desc": "ERD - Continued.",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
