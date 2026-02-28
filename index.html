@@ -66,18 +66,25 @@
         .total-badge { background: rgba(20, 10, 30, 0.8); border: 1px solid var(--accent-blue); color: var(--accent-blue); padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 0 10px rgba(74, 144, 226, 0.2); }
         .total-badge.high-load { border-color: #ff3b30; color: #ff3b30; box-shadow: 0 0 15px rgba(255, 59, 48, 0.3); animation: pulse 2s infinite alternate; }
         .task-list { display: flex; flex-direction: column; gap: 12px; flex-grow: 1; margin-top: 15px; }
-        .task-item { background: rgba(0, 0, 0, 0.2); padding: 12px 15px; border-radius: 12px; display: flex; align-items: center; gap: 15px; font-size: 0.95rem; border-left: 4px solid #555; transition: 0.2s; }
-        .task-item:hover { background: rgba(0, 0, 0, 0.4); transform: translateX(5px); }
+        .task-item { background: rgba(0, 0, 0, 0.2); padding: 12px 15px; border-radius: 12px; display: flex; align-items: center; gap: 15px; font-size: 0.95rem; border-left: 4px solid #555; transition: 0.2s; cursor: pointer; }
+        .task-item:hover { background: rgba(0, 0, 0, 0.4); transform: translateX(5px); box-shadow: 0 0 15px rgba(255,255,255,0.05); }
         .empty-state { color: #666; font-style: italic; text-align: center; padding: 20px 0; font-size: 1rem; }
-        .sub-CA { border-left-color: #ff9500; } .bg-CA { background: rgba(255, 149, 0, 0.2); color: #ff9500; }
-        .sub-DSA { border-left-color: #34c759; } .bg-DSA { background: rgba(52, 199, 89, 0.2); color: #34c759; }
-        .sub-DB { border-left-color: #007aff; } .bg-DB { background: rgba(0, 122, 255, 0.2); color: #007aff; }
-        .sub-OS { border-left-color: #ff2d55; } .bg-OS { background: rgba(255, 45, 85, 0.2); color: #ff2d55; }
-        .sub-CN { border-left-color: #af52de; } .bg-CN { background: rgba(175, 82, 222, 0.2); color: #af52de; }
-        .sub-AI { border-left-color: #ffcc00; } .bg-AI { background: rgba(255, 204, 0, 0.2); color: #ffcc00; }
+        
         .sub-badge { font-weight: bold; font-size: 0.8rem; padding: 3px 8px; border-radius: 6px; color: #fff; min-width: 45px; text-align: center; }
         .task-icon { font-size: 1.2rem; }
         .task-name { color: var(--text-main); font-weight: 500; }
+
+        /* Task Modal Styles */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
+        .modal-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
+        .modal-content { background: #1a0d2e; border: 2px solid var(--accent-pink); border-radius: 20px; padding: 30px; width: 90%; max-width: 450px; position: relative; box-shadow: 0 10px 40px rgba(233, 30, 140, 0.3); }
+        .modal-close { position: absolute; top: 15px; right: 20px; color: #ccc; cursor: pointer; font-size: 1.8rem; font-weight: bold; transition: 0.2s; }
+        .modal-close:hover { color: white; transform: scale(1.1); }
+        .modal-title { font-family: 'Orbitron'; color: white; font-size: 1.8rem; margin-bottom: 5px; display:flex; align-items:center; gap:10px; }
+        .modal-subtitle { color: var(--accent-pink); font-weight: bold; margin-bottom: 25px; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+        .modal-field { margin-bottom: 15px; display: flex; flex-direction: column; gap: 5px; }
+        .modal-label { color: #888; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
+        .modal-value { color: white; font-size: 1.1rem; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid var(--accent-blue); line-height: 1.4; white-space: pre-wrap; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
     </style>
@@ -133,6 +140,16 @@
     </div>
 </div>
 
+<div id="task-modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-close" onclick="closeModal(null, true)">✕</div>
+        <div class="modal-title" id="m-title">🧠 Quiz</div>
+        <div class="modal-subtitle" id="m-sub">Computer Networks - Week 5</div>
+        <div id="m-fields-container">
+            </div>
+    </div>
+</div>
+
 <script>
     let iconMap = {};
     if(window.CONFIG && window.CONFIG.resources) {
@@ -141,27 +158,26 @@
     if(window.CONFIG && window.CONFIG.helpLink) {
         document.getElementById('help-btn').href = window.CONFIG.helpLink;
     }
+
+    // Backup hardcoded data just in case course_data.js hasn't been updated yet
+    if(typeof window.SCHEDULE_DATA === 'undefined') {
+        window.SCHEDULE_DATA = [
+            { week: 1, tasks: [] }, { week: 2, tasks: [] }, { week: 3, tasks: [] }, { week: 4, tasks: [] },
+            { week: 5, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
+            { week: 6, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
+            { week: 7, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' } ] },
+            { week: 8, tasks: [] }, 
+            { week: 9, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' } ] },
+            { week: 10, tasks: [ { sub: 'OS', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Assignment', icon: '📝' } ] },
+            { week: 11, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'OS', name: 'Report Presentation', icon: '📊' } ] },
+            { week: 12, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
+            { week: 13, tasks: [ { sub: 'DSA', name: 'Mini Project', icon: '🚀' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'OS', name: 'Assignment', icon: '📝' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
+            { week: 14, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Mini Project', icon: '🚀' } ] },
+            { week: 15, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'CN', name: 'Mini Project', icon: '🚀' } ] }
+        ];
+    }
     
     let currSub = null;
-
-    // Hardcoded Submissions Data
-    const scheduleData = [
-        { week: 1, tasks: [] },
-        { week: 2, tasks: [] },
-        { week: 3, tasks: [] },
-        { week: 4, tasks: [] },
-        { week: 5, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
-        { week: 6, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
-        { week: 7, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' } ] },
-        { week: 8, tasks: [] }, 
-        { week: 9, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' } ] },
-        { week: 10, tasks: [ { sub: 'OS', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Assignment', icon: '📝' } ] },
-        { week: 11, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'OS', name: 'Report Presentation', icon: '📊' } ] },
-        { week: 12, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
-        { week: 13, tasks: [ { sub: 'DSA', name: 'Mini Project', icon: '🚀' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'OS', name: 'Assignment', icon: '📝' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
-        { week: 14, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Mini Project', icon: '🚀' } ] },
-        { week: 15, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'CN', name: 'Mini Project', icon: '🚀' } ] }
-    ];
 
     function init() {
         const grid = document.getElementById('subjects-grid');
@@ -182,6 +198,7 @@
         });
         
         window.onpopstate = function(event) {
+            closeModal(null, true); // ensure modal closes on back
             if(event.state) {
                 if(event.state.page === 'weeks' || event.state.page === 'content') {
                     if(!currSub && event.state.subCode) {
@@ -202,7 +219,6 @@
         history.replaceState({page: 'home'}, null, "");
     }
 
-    // FIX: Highly robust date parsing to prevent sorting breaks
     function parseDate(str) {
         if(!str) return 0;
         try {
@@ -308,14 +324,36 @@
         nav('recent');
     }
 
+    // --- SCHEDULE LOGIC ---
+    function getSubjectColor(code) { 
+        if(window.COURSE_DATA) {
+            const s = window.COURSE_DATA.find(x => x.code === code);
+            if(s && s.color) return s.color;
+        }
+        const fallback = { 'CA': '#ff9500', 'DSA': '#34c759', 'DB': '#007aff', 'OS': '#ff2d55', 'CN': '#af52de', 'AI': '#ffcc00' };
+        return fallback[code] || '#e91e8c'; 
+    }
+    
+    function getSubjectBg(code) { 
+        const hex = getSubjectColor(code);
+        let c; 
+        if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){ 
+            c = hex.substring(1).split(''); 
+            if(c.length === 3) c = [c[0], c[0], c[1], c[1], c[2], c[2]]; 
+            c = '0x'+c.join(''); 
+            return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.2)'; 
+        } 
+        return 'rgba(233,30,140,0.2)';
+    }
+
     function showSchedule(push = true) {
         const grid = document.getElementById('deliverables-grid');
         grid.innerHTML = '';
         
-        scheduleData.forEach(data => {
+        window.SCHEDULE_DATA.forEach((data, wIndex) => {
             const card = document.createElement('div');
-            const isEmpty = data.tasks.length === 0;
-            const isHighLoad = data.tasks.length >= 4;
+            const isEmpty = !data.tasks || data.tasks.length === 0;
+            const isHighLoad = !isEmpty && data.tasks.length >= 4;
             
             card.className = `card ${isEmpty ? 'locked' : ''}`;
             
@@ -323,10 +361,10 @@
             if (isEmpty) {
                 tasksHtml = `<div class="empty-state">No deliverables scheduled</div>`;
             } else {
-                data.tasks.forEach(task => {
+                data.tasks.forEach((task, tIndex) => {
                     tasksHtml += `
-                        <div class="task-item sub-${task.sub}">
-                            <span class="sub-badge bg-${task.sub}">${task.sub}</span>
+                        <div class="task-item" style="border-left-color: ${getSubjectColor(task.sub)}" onclick="openModal(${wIndex}, ${tIndex})">
+                            <span class="sub-badge" style="background: ${getSubjectBg(task.sub)}; color: ${getSubjectColor(task.sub)}">${task.sub}</span>
                             <span class="task-icon">${task.icon}</span>
                             <span class="task-name">${task.name}</span>
                         </div>
@@ -356,6 +394,57 @@
         });
         nav('schedule', push);
     }
+
+    function openModal(wIndex, tIndex) {
+        const weekData = window.SCHEDULE_DATA[wIndex];
+        const task = weekData.tasks[tIndex];
+        
+        let subName = task.sub;
+        if(window.COURSE_DATA) {
+            const sObj = window.COURSE_DATA.find(s => s.code === task.sub);
+            if(sObj) subName = sObj.name;
+        }
+
+        document.getElementById('m-title').innerHTML = `${task.icon} ${task.name}`;
+        document.getElementById('m-sub').innerText = `${subName} - Week ${weekData.week}`;
+        
+        const container = document.getElementById('m-fields-container');
+        container.innerHTML = '';
+        
+        let hasContent = false;
+
+        const fields = [
+            { label: '🕒 When', val: task.when },
+            { label: '📍 Where', val: task.where },
+            { label: '📚 Coverage', val: task.coverage },
+            { label: '📝 Extra Notes', val: task.note }
+        ];
+
+        fields.forEach(f => {
+            if(f.val && f.val.trim() !== '') {
+                hasContent = true;
+                container.innerHTML += `
+                    <div class="modal-field">
+                        <div class="modal-label">${f.label}</div>
+                        <div class="modal-value">${f.val}</div>
+                    </div>
+                `;
+            }
+        });
+
+        if(!hasContent) {
+            container.innerHTML = `<div style="text-align:center; color:#666; font-style:italic; padding:20px 0;">No extra details provided.</div>`;
+        }
+
+        document.getElementById('task-modal').classList.add('active');
+    }
+
+    function closeModal(e, force = false) {
+        if(force || e.target.id === 'task-modal') {
+            document.getElementById('task-modal').classList.remove('active');
+        }
+    }
+    // --- END SCHEDULE LOGIC ---
 
     function showWeeks(sub, push = true) {
         currSub = sub;
@@ -450,7 +539,6 @@
                         el.className = 'card' + (isLocked ? ' locked' : '');
                         const badgeText = (w.showBadge && w.badgeText) ? ` • <span style="color:${w.badgeColor}">${w.badgeText}</span>` : '';
                         
-                        // FIX: Wrapped badge in a div so it doesn't stretch in the flex column
                         const resBadgeCard = res.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
                         const notesHtml = (res.desc && res.desc.trim()) ? `<div style="margin-top:15px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.1); color:var(--text-sub); font-size:0.9rem; line-height:1.4; white-space:pre-wrap;">${res.desc}</div>` : '';
                         
@@ -487,6 +575,7 @@
 
         if(!week.resources) week.resources = {};
 
+        // 1. Load Resource Notes
         if(window.CONFIG && window.CONFIG.resources) {
             window.CONFIG.resources.forEach(conf => {
                 const key = conf.name;
@@ -494,7 +583,6 @@
                 const icon = iconMap[key] || '📂';
                 if(val && val.vis) {
                     
-                    // Inline badge for the info box list
                     const resBadgeInline = val.isNew ? '<span class="badge-new">NEW!</span>' : '';
                     if(val.desc && val.desc.trim()) {
                         const row = document.createElement('div');
@@ -503,7 +591,6 @@
                         details.appendChild(row);
                     }
                     
-                    // FIX: Wrapped badge in a div so it doesn't stretch in the flex column
                     const resBadgeCard = val.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
                     
                     const el = document.createElement('div');
@@ -518,6 +605,7 @@
                 }
             });
         }
+        
         nav('content', push, { subCode: currSub.code, wkObj: week });
     }
 
