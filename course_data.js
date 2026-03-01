@@ -1841,7 +1841,7 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Alternative": {
-                        "vis": true,
+                        "vis": false,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCRyq3r_Xe2WHOL3q3UyD2s&si=jEjz0KkkhsrRP1l9",
                         "desc": "First 30 minutes from the second video.",
