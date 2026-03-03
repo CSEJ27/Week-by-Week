@@ -1212,7 +1212,9 @@ window.COURSE_DATA = [
                     }
                 },
                 "isRecent": true,
-                "recentDate": "13/2/2026 5:48 AM"
+                "recentDate": "13/2/2026 5:48 AM",
+                "badgeText": "Start of quiz 1",
+                "showBadge": true
             },
             {
                 "title": "WEEK 2",
@@ -1634,7 +1636,9 @@ window.COURSE_DATA = [
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "3/3/2026 11:09 PM"
+                "recentDate": "3/3/2026 11:09 PM",
+                "badgeText": "Quiz 1 till here",
+                "showBadge": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link"
