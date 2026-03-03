@@ -645,7 +645,7 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtu.be/ka0bvTqgDKM",
                         "desc": "Transitioning from Java back onto C++, and a revision on C++ concepts.",
-                        "isNew": true,
+                        "isNew": false,
                         "isRecent": true,
                         "recentDate": "20/2/2026 9:47 PM"
                     },
@@ -728,7 +728,7 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1fb74OacrZkq2ZPZAhA6terCwPHwVtGws/view?usp=drive_link",
                         "desc": "",
-                        "isNew": true,
+                        "isNew": false,
                         "isRecent": true,
                         "recentDate": "20/2/2026 9:47 PM"
                     },
@@ -1498,9 +1498,143 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     }
                 },
-                "isNew": true,
+                "isNew": false,
                 "isRecent": true,
                 "recentDate": "25/2/2026 4:08 PM"
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://www.youtube.com/watch?v=kKCNvVQ6PGk&list=PLQV8O8EJjjePHlm2mKixQgCtAB9CEd8Ob&index=6&t=3632s",
+                        "desc": "from the beginning till 56:30",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PL37D52B7714788190&si=qxUxzA8O6a86Vqgr",
+                        "desc": "videos from 11 to 13 ",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1XDCsbH_eQgfeRgU8svj51yBJYZXMGnjp/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "3/3/2026 11:09 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link"
@@ -1549,7 +1683,7 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
                         "desc": "An equivalent recorded section from Fall 24.",
-                        "isNew": true,
+                        "isNew": false,
                         "isRecent": true,
                         "recentDate": "15/2/2026 11:50 PM"
                     },
@@ -1651,7 +1785,7 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://drive.google.com/file/d/1YBS5PV4NxEADu31KUQvSxzGgcnv0yUJW/view?usp=drive_link",
                         "desc": "Applications on lecture.",
-                        "isNew": true,
+                        "isNew": false,
                         "isRecent": true,
                         "recentDate": "15/2/2026 11:50 PM"
                     },
@@ -2084,7 +2218,7 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PL6KMWPQP_DM-7tMNjUa7X2zGrc8jipPeI&si=VdFV2ELrA3a38v9M",
                         "desc": "The first 7 videos in this playlist (By Ghassan Shobaki).",
-                        "isNew": true,
+                        "isNew": false,
                         "isRecent": true,
                         "recentDate": "14/2/2026 5:08 PM"
                     },
@@ -2093,7 +2227,7 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtu.be/4WgHFM6ISNI?si=-1nMjZCQjJeg3nvb",
                         "desc": "Do note that there are some minor differences between this and our content.",
-                        "isNew": true,
+                        "isNew": false,
                         "isRecent": true,
                         "recentDate": "14/2/2026 5:08 PM"
                     },
@@ -3624,7 +3758,7 @@ window.COURSE_DATA = [
                     }
                 },
                 "locked": false,
-                "isNew": true,
+                "isNew": false,
                 "isRecent": true,
                 "recentDate": "20/2/2026 5:16 PM"
             },
@@ -3764,7 +3898,7 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     }
                 },
-                "isNew": true,
+                "isNew": false,
                 "isRecent": true,
                 "recentDate": "20/2/2026 5:23 PM"
             }
@@ -4196,5 +4330,312 @@ window.COURSE_DATA = [
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1_-XsOXQOgNauxPsRg0WPOtQDXBWsDq4X?usp=drive_link"
+    }
+];
+
+window.SCHEDULE_DATA = [
+    {
+        "week": 1,
+        "tasks": []
+    },
+    {
+        "week": 2,
+        "tasks": []
+    },
+    {
+        "week": 3,
+        "tasks": []
+    },
+    {
+        "week": 4,
+        "tasks": []
+    },
+    {
+        "week": 5,
+        "tasks": [
+            {
+                "sub": "DSA",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "DB",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "OS",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 6,
+        "tasks": [
+            {
+                "sub": "CA",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "AI",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 7,
+        "tasks": [
+            {
+                "sub": "CA",
+                "name": "Assignment",
+                "icon": "📝",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "DB",
+                "name": "Mini Project",
+                "icon": "🚀",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "CN",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 8,
+        "tasks": []
+    },
+    {
+        "week": 9,
+        "tasks": [
+            {
+                "sub": "DSA",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "DB",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 10,
+        "tasks": [
+            {
+                "sub": "OS",
+                "name": "Mini Project",
+                "icon": "🚀",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "CN",
+                "name": "Assignment",
+                "icon": "📝",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 11,
+        "tasks": [
+            {
+                "sub": "CA",
+                "name": "Assignment",
+                "icon": "📝",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "OS",
+                "name": "Report Presentation",
+                "icon": "📊",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 12,
+        "tasks": [
+            {
+                "sub": "DSA",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "OS",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 13,
+        "tasks": [
+            {
+                "sub": "DSA",
+                "name": "Mini Project",
+                "icon": "🚀",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "DB",
+                "name": "Mini Project",
+                "icon": "🚀",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "OS",
+                "name": "Assignment",
+                "icon": "📝",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "AI",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 14,
+        "tasks": [
+            {
+                "sub": "CA",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "DB",
+                "name": "Mini Project",
+                "icon": "🚀",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "CN",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "AI",
+                "name": "Mini Project",
+                "icon": "🚀",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "week": 15,
+        "tasks": [
+            {
+                "sub": "CA",
+                "name": "Assignment",
+                "icon": "📝",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            },
+            {
+                "sub": "CN",
+                "name": "Mini Project",
+                "icon": "🚀",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": ""
+            }
+        ]
     }
 ];
