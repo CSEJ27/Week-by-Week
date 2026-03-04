@@ -106,7 +106,7 @@ window.CONFIG = {
             "icon": "🚀"
         },
         {
-            "name": "Report",
+            "name": "Lab Report",
             "icon": "📊"
         },
         {
@@ -3611,7 +3611,8 @@ window.COURSE_DATA = [
                 "recentDate": "1/3/2026 6:24 AM"
             }
         ],
-        "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link"
+        "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link",
+        "color": "#123f28"
     },
     {
         "code": "SW",
@@ -4358,25 +4359,25 @@ window.SCHEDULE_DATA = [
         "week": 5,
         "tasks": [
             {
-                "sub": "DSA",
-                "name": "Quiz",
-                "icon": "🧠",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
                 "sub": "DB",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
+                "when": "Monday (9/3) during the lecture",
+                "where": "Hall A",
+                "coverage": "up till week 4",
+                "note": "The quiz will be written"
             },
             {
                 "sub": "OS",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "Wednesday (11/3) at 10:40 AM",
+                "where": "Online",
+                "coverage": "up till week 4",
+                "note": ""
+            },
+            {
+                "sub": "ML",
                 "name": "Quiz",
                 "icon": "🧠",
                 "when": "",
@@ -4406,6 +4407,24 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": ""
+            },
+            {
+                "sub": "DSA",
+                "name": "Quiz",
+                "icon": "🧠",
+                "when": "Monday (16/3) at 12:30 PM",
+                "where": "Hall C",
+                "coverage": "up till linked lists (Week 4)",
+                "note": "The quiz will be written"
+            },
+            {
+                "sub": "CN",
+                "name": "Lab Report",
+                "icon": "📊",
+                "when": "Monday (23/3) at 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it."
             }
         ]
     },
@@ -4465,6 +4484,15 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": ""
+            },
+            {
+                "sub": "CN",
+                "name": "Lab Report",
+                "icon": "📊",
+                "when": "Tuesday (6/4) at 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it."
             }
         ]
     },
