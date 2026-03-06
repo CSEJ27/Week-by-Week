@@ -4380,10 +4380,10 @@ window.SCHEDULE_DATA = [
                 "sub": "ML",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "",
+                "when": "Monday (9/3)",
                 "where": "",
-                "coverage": "",
-                "note": ""
+                "coverage": "Up till week 3 (linear regressions & multi linear regression)",
+                "note": "Online on SEB browser (make sure you download it)"
             }
         ]
     },
@@ -4419,7 +4419,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "CN",
-                "name": "Lab Report",
+                "name": "Lab Report 1",
                 "icon": "📊",
                 "when": "Monday (23/3) at 11:59 PM",
                 "where": "",
@@ -4487,7 +4487,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "CN",
-                "name": "Lab Report",
+                "name": "Lab Report 2",
                 "icon": "📊",
                 "when": "Tuesday (6/4) at 11:59 PM",
                 "where": "",
