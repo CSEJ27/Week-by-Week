@@ -583,11 +583,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
+                        "link": "https://youtu.be/kbCs9Zku1_A?si=XMY04Px7Uejd70nB",
                         "desc": "",
-                        "isNew": false
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "8/3/2026 8:16 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -4307,11 +4309,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
+                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcYgJOC_zAlasVbKGDtK5UTI&si=dneiqDsNNTSs0ubb",
                         "desc": "",
-                        "isNew": false
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "8/3/2026 8:19 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
