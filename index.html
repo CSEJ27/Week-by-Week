@@ -127,7 +127,7 @@
     </div>
 
     <div id="schedule-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button id="schedule-back-btn" class="back-btn" onclick="nav('home')">← Back to Subjects</button>
         <h1 style="color:#ff9500">SEMESTER MAP</h1>
         <p class="subtitle" style="margin-bottom: 30px;">Your overview of assignments, quizzes, and projects</p>
         <div class="grid weeks-grid" id="deliverables-grid"></div>
@@ -238,7 +238,7 @@
                 
                 if(event.state.page === 'home') nav('home', false);
                 else if(event.state.page === 'recent') nav('recent', false);
-                else if(event.state.page === 'schedule') showSchedule(false);
+                else if(event.state.page === 'schedule') showSchedule(false, event.state.from || 'home');
                 else if(event.state.page === 'deadlines') showDeadlines(false);
                 else if(event.state.page === 'midterm') showMidterms(false, event.state.from || 'home');
                 else if(event.state.page === 'weeks') {
@@ -435,14 +435,24 @@
     }
 
     function goToScheduleTask(wIndex, tIndex) {
-        showSchedule(true);
+        // Pass 'deadlines' as the 'from' parameter so the schedule page knows where to return
+        showSchedule(true, 'deadlines');
         setTimeout(() => {
             openModal(wIndex, tIndex);
         }, 150);
     }
 
     // --- SCHEDULE LOGIC ---
-    function showSchedule(push = true) {
+    function showSchedule(push = true, from = 'home') {
+        const backBtn = document.getElementById('schedule-back-btn');
+        if (from === 'deadlines') {
+            backBtn.onclick = () => showDeadlines();
+            backBtn.innerText = "← Back to Deadlines";
+        } else {
+            backBtn.onclick = () => nav('home');
+            backBtn.innerText = "← Back to Subjects";
+        }
+
         const grid = document.getElementById('deliverables-grid');
         grid.innerHTML = '';
         
@@ -509,7 +519,7 @@
             `;
             grid.appendChild(card);
         });
-        nav('schedule', push);
+        nav('schedule', push, { from: from });
     }
     
     function showMidterms(push = true, from = 'home') {
@@ -871,9 +881,10 @@
                     }
                     const resBadgeCard = val.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
                     const el = document.createElement('div');
-                    el.className = 'card';
+                    el.className = 'card'; // Lock styling removed from individual resource cards
                     el.innerHTML = `<div style=\"font-size:2.5rem; margin-bottom:10px\">${icon}</div><div style=\"font-weight:bold; text-transform:uppercase\">${key}</div>${resBadgeCard}`;
                     el.onclick = () => {
+                        // Resource specific lock check removed
                         if(val.link && val.link !== "#") window.open(val.link, "_blank");
                         else alert("No link set.");
                     };
