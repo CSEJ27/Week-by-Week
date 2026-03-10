@@ -178,6 +178,10 @@
             .nav-dropdown::before { display: none; }
             .dd-item { min-height: 44px; padding: 12px 12px; }
             .dd-footer .dd-item { min-height: 40px; }
+
+            h1 { font-size: 2rem; }
+            .container { padding: 25px 12px; }
+            .custom-badge { white-space: normal; max-width: 85%; word-break: break-word; }
         }
     </style>
 </head>
@@ -1301,18 +1305,16 @@
 
     function navFromBar(id) {
         if (isMobile()) {
-            const navItem = document.querySelector('.nav-link[data-nav="' + id + '"]');
-            if (navItem && navItem.querySelector('.nav-chevron')) {
-                const item = navItem.closest('.nav-item');
+            const navLink = document.querySelector('.nav-link[data-nav="' + id + '"]');
+            if (navLink && navLink.querySelector('.nav-chevron')) {
+                const item = navLink.closest('.nav-item');
                 const wasOpen = item.classList.contains('dd-open');
                 closeAllDropdowns();
                 if (!wasOpen) item.classList.add('dd-open');
-                return; // Do not navigate, just open accordion
             }
         }
         
         closeMobileMenu();
-        closeAllDropdowns();
         
         if(id === 'home') nav('home');
         else if(id === 'recent') showRecent();
