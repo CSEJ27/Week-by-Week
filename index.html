@@ -18,6 +18,11 @@
         .back-btn { background: rgba(0,0,0,0.3); border: 2px solid var(--accent-pink); color: white; padding: 10px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-bottom: 20px; transition: 0.3s; box-shadow: 0 0 15px rgba(233, 30, 140, 0.1); }
         .back-btn:hover { background: var(--accent-pink); box-shadow: 0 0 25px rgba(233, 30, 140, 0.4); }
         
+        .week-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; gap: 15px; }
+        .week-nav-btn { background: rgba(0,0,0,0.3); border: 2px solid var(--accent-purple); color: white; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; box-shadow: 0 0 15px rgba(181, 25, 214, 0.1); font-size: 0.9rem; max-width: 45%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .week-nav-btn:hover { background: var(--accent-purple); box-shadow: 0 0 25px rgba(181, 25, 214, 0.4); }
+        .week-nav-spacer { flex: 1; }
+        
         .header-actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         .recent-btn { background: rgba(74, 144, 226, 0.2); border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .recent-btn:hover { background: var(--accent-blue); color: white; box-shadow: 0 0 20px var(--accent-blue); }
@@ -315,6 +320,7 @@
         </div>
         <h2 style="font-family:'Orbitron'; color:white; margin-bottom:20px; border-bottom: 2px solid var(--accent-blue); display:inline-block; padding-bottom:5px">RESOURCES</h2>
         <div class="grid resources-grid" id="resources-grid"></div>
+        <div class="week-nav" id="week-nav"></div>
     </div>
 </div>
 
@@ -355,13 +361,40 @@
     let currentSubjectView = 'weeks'; 
     let currentUsefulFilter = 'All Links';
     let currentUsefulSubject = 'All Subjects';
+    let weekNavPrev = null, weekNavNext = null, weekNavFrom = 'weeks';
+
+    function getSubjectUrgency(subCode) {
+        const now = Date.now();
+        let score = Infinity; // lower = more urgent, Infinity = no upcoming tasks
+        const typeWeight = { 'quiz': 0.4, 'midterm': 0.3, 'final': 0.3, 'lab exam': 0.5 };
+
+        window.SCHEDULE_DATA.forEach(wk => {
+            if(!wk.tasks) return;
+            wk.tasks.forEach(t => {
+                if(t.sub !== subCode) return;
+                if(t.isCompleted) return;
+                if(!t.deadlineDate || t.deadlineDate.trim() === '') return;
+                const ts = parseDate(t.deadlineDate);
+                if(ts === 0 || ts < now) return;
+
+                const daysLeft = (ts - now) / (1000 * 60 * 60 * 24);
+                const name = (t.name || '').toLowerCase();
+                const weight = typeWeight[name] || 1;
+                const taskScore = daysLeft * weight;
+                if(taskScore < score) score = taskScore;
+            });
+        });
+        return score;
+    }
 
     function init() {
         const grid = document.getElementById('subjects-grid');
         if(grid) grid.innerHTML = '';
         if(typeof window.COURSE_DATA === 'undefined') window.COURSE_DATA = [];
 
-        window.COURSE_DATA.forEach(s => {
+        const sorted = [...window.COURSE_DATA].sort((a, b) => getSubjectUrgency(a.code) - getSubjectUrgency(b.code));
+
+        sorted.forEach(s => {
             if(!s.weeks) s.weeks = [];
             if(!s.events) s.events = [];
             if(!s.playlists) s.playlists = [];
@@ -1282,7 +1315,45 @@
             });
         }
         nav('content', push, { subCode: currSub.code, wkObj: weekOrEvent, from: from });
+
+        // Prev/Next navigation
+        const weekNav = document.getElementById('week-nav');
+        weekNav.innerHTML = '';
+        weekNavPrev = null; weekNavNext = null; weekNavFrom = from;
+        const sourceArr = (currSub.events || []).includes(weekOrEvent) ? currSub.events : currSub.weeks;
+        if (sourceArr && from !== 'recent' && from !== 'midterm') {
+            const idx = sourceArr.indexOf(weekOrEvent);
+            for (let i = idx - 1; i >= 0; i--) { if (!sourceArr[i].locked) { weekNavPrev = sourceArr[i]; break; } }
+            for (let i = idx + 1; i < sourceArr.length; i++) { if (!sourceArr[i].locked) { weekNavNext = sourceArr[i]; break; } }
+
+            if (weekNavPrev) {
+                const btn = document.createElement('button');
+                btn.className = 'week-nav-btn';
+                btn.innerHTML = `← ${weekNavPrev.title}`;
+                btn.onclick = () => showContentByObj(weekNavPrev, true, from);
+                weekNav.appendChild(btn);
+            } else {
+                const spacer = document.createElement('div');
+                spacer.className = 'week-nav-spacer';
+                weekNav.appendChild(spacer);
+            }
+
+            if (weekNavNext) {
+                const btn = document.createElement('button');
+                btn.className = 'week-nav-btn';
+                btn.innerHTML = `${weekNavNext.title} →`;
+                btn.onclick = () => showContentByObj(weekNavNext, true, from);
+                weekNav.appendChild(btn);
+            }
+        }
     }
+
+    document.addEventListener('keydown', function(e) {
+        if (document.querySelector('#content-page.active') && !document.querySelector('.modal-overlay.active')) {
+            if (e.key === 'ArrowLeft' && weekNavPrev) { e.preventDefault(); showContentByObj(weekNavPrev, true, weekNavFrom); }
+            else if (e.key === 'ArrowRight' && weekNavNext) { e.preventDefault(); showContentByObj(weekNavNext, true, weekNavFrom); }
+        }
+    });
 
     function nav(id, push = true, stateData = {}) { 
         closeMobileMenu();
