@@ -70,7 +70,6 @@
     <div onclick="toggleRecents()" class="btn-recents">📜 MANAGE HISTORY</div>
     <div onclick="toggleSchedule()" class="btn-schedule">📅 MANAGE SCHEDULE</div>
     <div onclick="toggleMidterms()" class="btn-midterms">📝 MANAGE MIDTERMS</div>
-    <div onclick="updateDeadlines()" class="btn-deadlines">⏳ UPDATE DEADLINES</div>
     <div onclick="autoExpireBadges()" class="btn-expire">⏳ AUTO-EXPIRE NEW</div>
     
     <div class="panel-header">SUBJECTS</div>
@@ -133,16 +132,7 @@
 
         if(typeof window.MIDTERM_DATA === 'undefined') {
             window.MIDTERM_DATA = [
-                { dateLabel: 'Friday · 27 March', sub: 'DSA', examCode: 'CSE-XXX', time: '2:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Saturday · 28 March', sub: 'CA', examCode: 'CSE-XXX', time: '4:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Sunday · 29 March', sub: 'SW', examCode: 'CSE-XXX', time: '12:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Monday · 30 March', sub: 'AI', examCode: 'CSE-XXX', time: '2:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Monday · 30 March', sub: 'QC', examCode: 'CSE-XXX', time: '4:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Monday · 30 March', sub: 'RB', examCode: 'CSE-XXX', time: '4:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Tuesday · 31 March', sub: 'ML', examCode: 'CSE-XXX', time: '4:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Wednesday · 1 April', sub: 'CN', examCode: 'CSE-XXX', time: '2:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Thursday · 2 April', sub: 'OS', examCode: 'CSE-XXX', time: '12:30 PM', note: '', coverage: '', where: '', whereLink: '' },
-                { dateLabel: 'Friday · 3 April', sub: 'DB', examCode: 'CSE-XXX', time: '4:30 PM', note: '', coverage: '', where: '', whereLink: '' }
+                { dateLabel: 'Friday · 27 March', sub: 'DSA', examCode: 'CSE-XXX', time: '2:30 PM', note: '', coverage: '', where: '', whereLink: '' }
             ];
         }
         if(typeof window.SCHEDULE_DATA === 'undefined') {
@@ -237,7 +227,7 @@
                 <select class="view-select" onchange="subViewMode=this.value; wIdx=0; eIdx=0; pIdx=0; renderMiddleColumn(); renderEditor();">
                     <option value="weeks" ${subViewMode==='weeks'?'selected':''}>📚 WEEKS</option>
                     <option value="events" ${subViewMode==='events'?'selected':''}>🎯 EXAM MATERIALS</option>
-                    <option value="playlists" ${subViewMode==='playlists'?'selected':''}>▶️ PLAYLISTS</option>
+                    <option value="playlists" ${subViewMode==='playlists'?'selected':''}>🔗 USEFUL LINKS</option>
                 </select>
             </div>
             ${bulkToolbar}
@@ -284,18 +274,18 @@
                 el.addEventListener('dragstart', (e) => handleDragStart(e, i, 'playlist'));
                 el.addEventListener('dragover', handleDragOver);
                 el.addEventListener('drop', (e) => handleDrop(e, i, 'playlist'));
-                el.innerHTML = `<span class="drag-handle">☰</span><div style="flex:1">${pl.title || 'Playlist'}</div><button class="btn-move" onclick="moveItem(event, 'playlist', ${i}, -1)">▲</button><button class="btn-move" onclick="moveItem(event, 'playlist', ${i}, 1)">▼</button><button class="btn btn-del" onclick="delMiddleItem(event, 'playlist', ${i})">✕</button>`;
+                el.innerHTML = `<span class="drag-handle">☰</span><div style="flex:1">${pl.title || 'Link'}</div><button class="btn-move" onclick="moveItem(event, 'playlist', ${i}, -1)">▲</button><button class="btn-move" onclick="moveItem(event, 'playlist', ${i}, 1)">▼</button><button class="btn btn-del" onclick="delMiddleItem(event, 'playlist', ${i})">✕</button>`;
                 el.onclick = (e) => { if(e.target.tagName !== 'BUTTON') { pIdx = i; renderMiddleColumn(); renderEditor(); } };
                 listContainer.appendChild(el);
             });
-            btnContainer.innerHTML = `<button class="btn btn-add" onclick="addMiddleItem('playlist')">+ Add Playlist</button>`;
+            btnContainer.innerHTML = `<button class="btn btn-add" onclick="addMiddleItem('playlist')">+ Add Useful Link</button>`;
         }
     }
 
     function addMiddleItem(type) {
         if(type === 'week') { window.COURSE_DATA[cIdx].weeks.push({title:`WEEK ${window.COURSE_DATA[cIdx].weeks.length+1}`, resources:{}}); wIdx=window.COURSE_DATA[cIdx].weeks.length-1; }
         else if(type === 'event') { window.COURSE_DATA[cIdx].events.push({title:`Quiz ${window.COURSE_DATA[cIdx].events.length+1}`, resources:{}}); eIdx=window.COURSE_DATA[cIdx].events.length-1; }
-        else if(type === 'playlist') { window.COURSE_DATA[cIdx].playlists.push({title:`New Playlist`, link:"#", icon:"▶️", note:"", badgeText:"", badgeColor:"#e91e8c"}); pIdx=window.COURSE_DATA[cIdx].playlists.length-1; }
+        else if(type === 'playlist') { window.COURSE_DATA[cIdx].playlists.push({title:`New Link`, link:"#", icon:"🔗", note:"", badgeText:"", badgeColor:"#e91e8c"}); pIdx=window.COURSE_DATA[cIdx].playlists.length-1; }
         renderMiddleColumn(); renderEditor();
     }
     
@@ -379,13 +369,13 @@
             if(p) {
                 html += `
                 <div class="form-section" style="border-color:#4a90e2;">
-                    <h3 style="color:#4a90e2;">Playlist Details</h3>
+                    <h3 style="color:#4a90e2;">Link Details</h3>
                     <div style="display:grid; grid-template-columns: 60px 1fr; gap:10px;">
-                        <div><label>Icon</label><input type="text" style="text-align:center;" value="${p.icon || '▶️'}" oninput="updateData('playlists', 'icon', this.value); renderMiddleColumn()"></div>
+                        <div><label>Icon</label><input type="text" style="text-align:center;" value="${p.icon || '🔗'}" oninput="updateData('playlists', 'icon', this.value); renderMiddleColumn()"></div>
                         <div><label>Title</label><input type="text" value="${p.title || ''}" oninput="updateData('playlists', 'title', this.value); renderMiddleColumn()"></div>
                     </div>
-                    <label>Link (URL)</label><input type="text" placeholder="https://youtube.com/..." value="${p.link || ''}" oninput="updateData('playlists', 'link', this.value)">
-                    <label>Description / Note</label><textarea rows="2" placeholder="Notes about this playlist..." oninput="updateData('playlists', 'note', this.value)">${p.note || ''}</textarea>
+                    <label>Link (URL)</label><input type="text" placeholder="https://..." value="${p.link || ''}" oninput="updateData('playlists', 'link', this.value)">
+                    <label>Description / Note</label><textarea rows="2" placeholder="Notes about this link..." oninput="updateData('playlists', 'note', this.value)">${p.note || ''}</textarea>
                     
                     <div style="background:#150a25; padding:10px; border-radius:8px; margin-top:10px;">
                         <label style="font-weight:bold; color:var(--accent);">Custom Badge (Top Right):</label>
@@ -397,7 +387,7 @@
                 </div>`;
                 container.innerHTML = html;
             } else {
-                container.innerHTML = html + `<p style="text-align:center;">No playlists found.</p>`;
+                container.innerHTML = html + `<p style="text-align:center;">No useful links found.</p>`;
             }
         }
     }

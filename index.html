@@ -8,7 +8,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --bg-dark: #0a0012; --card-bg: rgba(39, 18, 68, 0.6); --accent-pink: #e91e8c; --accent-purple: #b519d6; --accent-blue: #4a90e2; --text-main: #ffffff; --text-sub: #c4b5db; }
-        body { font-family: 'Work Sans', sans-serif; background: linear-gradient(135deg, var(--bg-dark), #1a0d2e, #240b3b); background-attachment: fixed; color: var(--text-main); min-height: 100vh; overflow-x: hidden; }
+        body { font-family: 'Work Sans', sans-serif; background: linear-gradient(135deg, var(--bg-dark), #1a0d2e, #240b3b); background-attachment: fixed; color: var(--text-main); min-height: 100vh; overflow-x: hidden; padding-top: 60px; }
         body::before { content: ''; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(233, 30, 140, 0.1) 0%, transparent 60%); z-index: -1; pointer-events: none; }
         .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
         h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; text-align: center; margin-bottom: 10px; background: linear-gradient(to right, var(--accent-pink), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3); }
@@ -17,8 +17,8 @@
         .page.active { display: block; }
         .back-btn { background: rgba(0,0,0,0.3); border: 2px solid var(--accent-pink); color: white; padding: 10px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-bottom: 20px; transition: 0.3s; box-shadow: 0 0 15px rgba(233, 30, 140, 0.1); }
         .back-btn:hover { background: var(--accent-pink); box-shadow: 0 0 25px rgba(233, 30, 140, 0.4); }
-        .header-actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         
+        .header-actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         .recent-btn { background: rgba(74, 144, 226, 0.2); border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .recent-btn:hover { background: var(--accent-blue); color: white; box-shadow: 0 0 20px var(--accent-blue); }
         .schedule-btn { background: rgba(255, 149, 0, 0.2); border: 2px solid #ff9500; color: #ff9500; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
@@ -27,6 +27,8 @@
         .midterm-btn:hover { background: #007aff; color: white; box-shadow: 0 0 20px #007aff; }
         .deadline-btn { background: rgba(0, 229, 255, 0.2); border: 2px solid #00E5FF; color: #00E5FF; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .deadline-btn:hover { background: #00E5FF; color: black; box-shadow: 0 0 20px #00E5FF; }
+        .useful-btn { background: rgba(181, 25, 214, 0.2); border: 2px solid var(--accent-purple); color: var(--accent-purple); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .useful-btn:hover { background: var(--accent-purple); color: white; box-shadow: 0 0 20px var(--accent-purple); }
         
         .drive-btn { background: rgba(255, 215, 0, 0.1); border: 2px solid #ffd700; color: #ffd700; padding: 8px 20px; border-radius: 20px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px; transition: 0.3s; font-size: 0.9rem; }
         .drive-btn:hover { background: #ffd700; color: black; box-shadow: 0 0 15px #ffd700; }
@@ -44,7 +46,9 @@
         
         .card { background: var(--card-bg); backdrop-filter: blur(12px); border: 2px solid rgba(233, 30, 140, 0.2); border-radius: 20px; padding: 30px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-8px); border-color: var(--accent-pink); box-shadow: 0 15px 40px rgba(233, 30, 140, 0.25); }
-        .card.locked { opacity: 0.5; filter: grayscale(1); cursor: not-allowed; border-color: #555; }
+        .card.locked { cursor: not-allowed; border-color: #555; background: rgba(40, 40, 40, 0.4); }
+        .card.locked > * { opacity: 0.5; filter: grayscale(1); }
+        .card.locked > .custom-badge { opacity: 1 !important; filter: none !important; }
         .card.locked:hover { transform: none; box-shadow: none; }
         
         .info-box { background: rgba(20, 10, 30, 0.8); border: 2px solid var(--accent-pink); border-radius: 20px; padding: 35px; margin-bottom: 40px; box-shadow: 0 0 50px rgba(233, 30, 140, 0.15); }
@@ -65,11 +69,15 @@
         .recent-icons { font-size: 1.5rem; letter-spacing: 5px; margin-top: 5px; }
         .recent-time { font-size: 0.8rem; color: var(--accent-pink); font-weight: bold; white-space: nowrap; margin-left: 10px; }
         
-        .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
+        .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; justify-content: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; align-items: center; }
         .filter-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 8px 16px; border-radius: 20px; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
         .filter-btn:hover { background: rgba(255,255,255,0.15); color: white; }
         .filter-btn.active { background: var(--accent-pink); color: white; border-color: var(--accent-pink); box-shadow: 0 0 15px rgba(233,30,140,0.4); font-weight: bold; }
         
+        .useful-select { background: rgba(181, 25, 214, 0.15); border: 1px solid rgba(181, 25, 214, 0.4); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; cursor: pointer; outline: none; font-weight: bold; font-family: 'Work Sans', sans-serif; transition: 0.3s; }
+        .useful-select:hover { background: rgba(181, 25, 214, 0.3); }
+        .useful-select option { background: #1a0d2e; color: white; }
+
         /* Schedule/Submissions Styles */
         .total-badge { background: rgba(20, 10, 30, 0.8); border: 1px solid var(--accent-blue); color: var(--accent-blue); padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; box-shadow: 0 0 10px rgba(74, 144, 226, 0.2); }
         .total-badge.high-load { border-color: #ff3b30; color: #ff3b30; box-shadow: 0 0 15px rgba(255, 59, 48, 0.3); animation: pulse 2s infinite alternate; }
@@ -97,13 +105,127 @@
         .modal-field { margin-bottom: 15px; display: flex; flex-direction: column; gap: 5px; }
         .modal-label { color: #888; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
         .modal-value { color: white; font-size: 1.1rem; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid var(--accent-blue); line-height: 1.4; white-space: pre-wrap; word-break: break-word;}
-        .modal-value a:hover { color: var(--accent-pink) !important; }
+        .modal-value a { color: var(--accent-blue); text-decoration: underline; }
+        .modal-value a:hover { color: var(--accent-pink); }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ===== SMART NAVBAR ===== */
+        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(10, 0, 18, 0.92); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(233, 30, 140, 0.25); padding: 0 24px; display: flex; align-items: center; height: 60px; transition: box-shadow 0.3s; }
+        .navbar.scrolled { box-shadow: 0 4px 30px rgba(233, 30, 140, 0.15); }
+        
+        .nav-brand { font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 900; background: linear-gradient(to right, var(--accent-pink), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; cursor: pointer; white-space: nowrap; margin-right: 30px; letter-spacing: -0.5px; transform: scaleX(0.85); transform-origin: left center; flex-shrink: 0; }
+        
+        .nav-links { display: flex; align-items: center; gap: 4px; flex: 1; }
+        .nav-item { position: relative; }
+        .nav-link { position: relative; display: flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 10px; color: var(--text-sub); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: all 0.25s; white-space: nowrap; text-decoration: none; border: 1px solid transparent; letter-spacing: 0.5px; user-select: none; }
+        .nav-link:hover { color: #fff; background: rgba(255,255,255,0.06); }
+        .nav-link.active { color: #fff; background: rgba(233, 30, 140, 0.15); border-color: rgba(233, 30, 140, 0.4); }
+        .nav-link .nav-icon { font-size: 1rem; }
+        .nav-link .nav-chevron { font-size: 0.55rem; margin-left: 2px; transition: transform 0.25s; opacity: 0.5; }
+        .nav-item:hover .nav-chevron, .nav-item.dd-open .nav-chevron { transform: rotate(180deg); opacity: 1; }
+        
+        .nav-link-history.active { background: rgba(74, 144, 226, 0.15); border-color: rgba(74, 144, 226, 0.4); color: var(--accent-blue); }
+        .nav-link-schedule.active { background: rgba(255, 149, 0, 0.15); border-color: rgba(255, 149, 0, 0.4); color: #ff9500; }
+        .nav-link-deadlines.active { background: rgba(0, 229, 255, 0.15); border-color: rgba(0, 229, 255, 0.4); color: #00E5FF; }
+        .nav-link-midterms.active { background: rgba(0, 122, 255, 0.15); border-color: rgba(0, 122, 255, 0.4); color: #007aff; }
+        .nav-link-useful.active { background: rgba(181, 25, 214, 0.15); border-color: rgba(181, 25, 214, 0.4); color: var(--accent-purple); }
+        
+        .nav-divider { width: 1px; height: 24px; background: rgba(255,255,255,0.1); margin: 0 6px; flex-shrink: 0; }
+        .nav-hamburger { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 6px; margin-left: auto; border-radius: 8px; transition: background 0.2s; }
+        .nav-hamburger:hover { background: rgba(255,255,255,0.1); }
+
+        /* Dropdowns */
+        .nav-dropdown { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(6px); min-width: 260px; background: rgba(16, 4, 30, 0.97); backdrop-filter: blur(24px); border: 1px solid rgba(233, 30, 140, 0.2); border-radius: 16px; padding: 10px; box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 30px rgba(233, 30, 140, 0.08); opacity: 0; pointer-events: none; transition: opacity 0.22s ease, transform 0.22s ease; z-index: 950; }
+        .nav-item:hover > .nav-dropdown, .nav-item.dd-open > .nav-dropdown { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+        .nav-dropdown::before { content: ''; position: absolute; top: -8px; left: 0; right: 0; height: 8px; }
+
+        .dd-header { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; color: #888; letter-spacing: 2px; text-transform: uppercase; padding: 6px 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 4px; }
+        .dd-item { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 10px; cursor: pointer; transition: all 0.2s; color: var(--text-sub); font-size: 0.85rem; font-weight: 500; }
+        .dd-item:hover { background: rgba(255,255,255,0.07); color: #fff; }
+        .dd-item .dd-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .dd-item .dd-label { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .dd-item .dd-meta { font-size: 0.72rem; color: #888; white-space: nowrap; flex-shrink: 0; }
+        .dd-item .dd-icon { font-size: 0.95rem; flex-shrink: 0; width: 22px; text-align: center; }
+        .dd-empty { text-align: center; color: #555; font-size: 0.82rem; padding: 14px 10px; font-style: italic; }
+        .dd-footer { border-top: 1px solid rgba(255,255,255,0.06); margin-top: 4px; padding-top: 4px; }
+        .dd-footer .dd-item { color: var(--accent-pink); font-weight: 600; font-size: 0.8rem; justify-content: center; }
+        .dd-footer .dd-item:hover { color: #fff; }
+        
+        .dd-badge { font-size: 0.65rem; font-weight: 800; padding: 2px 7px; border-radius: 8px; letter-spacing: 0.5px; line-height: 1.3; flex-shrink: 0; }
+        .dd-deadline-urgent { border-left: 3px solid #ff3b30; }
+        .dd-deadline-soon { border-left: 3px solid #ff9500; }
+        .dd-deadline-ok { border-left: 3px solid #00E5FF; }
+
+        /* OVERLAY FOR MOBILE NAV */
+        .nav-overlay { display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 899; }
+        .nav-overlay.active { display: block; }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 0 16px; overflow: visible; }
+            .nav-links { position: absolute; top: 100%; left: 0; right: 0; background: rgba(10, 0, 18, 0.97); backdrop-filter: blur(18px); flex-direction: column; padding: 10px 16px 16px; gap: 4px; border-bottom: 1px solid rgba(233, 30, 140, 0.2); transform: translateY(-110%); opacity: 0; transition: transform 0.18s ease, opacity 0.15s ease; pointer-events: none; height: calc(100vh - 60px); overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 910; }
+            .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+            .nav-item { width: 100%; }
+            .nav-link { width: 100%; padding: 14px 16px; font-size: 1rem; border-radius: 12px; min-height: 48px; }
+            .nav-link .nav-chevron { font-size: 0.7rem; margin-left: auto; padding: 4px; opacity: 0.6; }
+            .nav-divider { display: none; }
+            .nav-hamburger { display: block; }
+            
+            .nav-dropdown { position: static !important; transform: none !important; left: auto !important; width: 100%; max-height: 0; overflow: hidden; opacity: 0; pointer-events: none; padding: 0 10px; transition: max-height 0.18s ease, opacity 0.12s ease, padding 0.18s ease; box-shadow: none; border: none; margin: 0; }
+            .nav-item.dd-open > .nav-dropdown { max-height: 600px; opacity: 1; pointer-events: auto; padding: 8px 10px; }
+            .nav-item:hover > .nav-dropdown { max-height: 0; opacity: 0; pointer-events: none; padding: 0 10px; }
+            .nav-item.dd-open:hover > .nav-dropdown { max-height: 600px; opacity: 1; pointer-events: auto; padding: 8px 10px; }
+            .nav-dropdown::before { display: none; }
+            .dd-item { min-height: 44px; padding: 12px 12px; }
+            .dd-footer .dd-item { min-height: 40px; }
+        }
     </style>
-    <script src="course_data.js"></script>
 </head>
 <body>
+
+<nav class="navbar" id="main-navbar">
+    <div class="nav-brand" onclick="nav('home')">WEEK BY WEEK</div>
+    <div class="nav-links" id="nav-links">
+        <div class="nav-item" id="nav-item-home">
+            <div class="nav-link active" data-nav="home" onclick="navFromBar('home')">
+                <span class="nav-icon">🏠</span> Subjects <span class="nav-chevron">▼</span>
+            </div>
+            <div class="nav-dropdown" id="dd-subjects"></div>
+        </div>
+        <div class="nav-item">
+            <div class="nav-link nav-link-history" data-nav="recent" onclick="navFromBar('recent')">
+                <span class="nav-icon">📜</span> History
+            </div>
+        </div>
+        <div class="nav-item" id="nav-item-schedule">
+            <div class="nav-link nav-link-schedule" data-nav="schedule" onclick="navFromBar('schedule')">
+                <span class="nav-icon">📅</span> Schedule <span class="nav-chevron">▼</span>
+            </div>
+            <div class="nav-dropdown" id="dd-schedule"></div>
+        </div>
+        <div class="nav-item" id="nav-item-deadlines">
+            <div class="nav-link nav-link-deadlines" data-nav="deadlines" onclick="navFromBar('deadlines')">
+                <span class="nav-icon">⏳</span> Deadlines <span class="dd-badge" id="dd-deadline-count" style="background:rgba(0,229,255,0.2); color:#00E5FF; display:none;"></span> <span class="nav-chevron">▼</span>
+            </div>
+            <div class="nav-dropdown" id="dd-deadlines"></div>
+        </div>
+        <div class="nav-item" id="nav-item-midterms">
+            <div class="nav-link nav-link-midterms" data-nav="midterm" onclick="navFromBar('midterm')">
+                <span class="nav-icon">📝</span> Midterms <span class="nav-chevron">▼</span>
+            </div>
+            <div class="nav-dropdown" id="dd-midterms"></div>
+        </div>
+        <div class="nav-item" id="nav-item-useful-links">
+            <div class="nav-link nav-link-useful" data-nav="useful-links" onclick="navFromBar('useful-links')">
+                <span class="nav-icon">🔗</span> Useful Links <span class="nav-chevron">▼</span>
+            </div>
+            <div class="nav-dropdown" id="dd-useful"></div>
+        </div>
+    </div>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNavMenu()" aria-label="Toggle navigation">☰</button>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay" onclick="closeNavOverlay()"></div>
 
 <div class="container">
     <div id="home-page" class="page active">
@@ -115,7 +237,8 @@
             <button class="recent-btn" onclick="showRecent()">📜 History</button>
             <button class="schedule-btn" onclick="showSchedule()">📅 Schedule</button>
             <button class="deadline-btn" onclick="showDeadlines()">⏳ Deadlines</button>
-            <button class="midterm-btn" onclick="showMidterms(true, 'home')">📝 Midterms</button>
+            <button class="midterm-btn" onclick="showMidterms()">📝 Midterms</button>
+            <button class="useful-btn" onclick="showUsefulLinks()">🔗 Useful Links</button>
         </div>
         <div class="grid subjects-grid" id="subjects-grid"></div>
     </div>
@@ -154,6 +277,14 @@
         <div id="midterm-list" style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column;"></div>
     </div>
 
+    <div id="useful-links-page" class="page">
+        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <h1 style="color:var(--accent-purple)">USEFUL LINKS</h1>
+        <p class="subtitle" style="margin-bottom: 30px;">Important resources across all subjects</p>
+        <div id="useful-links-filter-bar" class="filter-bar"></div>
+        <div class="grid weeks-grid" id="all-links-list"></div>
+    </div>
+
     <div id="weeks-page" class="page">
         <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
         <div style="text-align:center;">
@@ -164,7 +295,7 @@
         <div id="subject-tabs" class="subject-tabs">
             <button id="tab-weeks" class="sub-tab active" onclick="renderSubjectView('weeks')">📚 Weeks</button>
             <button id="tab-events" class="sub-tab" onclick="renderSubjectView('events')">🎯 Exam Materials</button>
-            <button id="tab-playlists" class="sub-tab" onclick="renderSubjectView('playlists')">▶️ Playlists</button>
+            <button id="tab-playlists" class="sub-tab" onclick="renderSubjectView('playlists')">🔗 Useful Links</button>
         </div>
 
         <div id="filter-bar" class="filter-bar"></div>
@@ -192,9 +323,24 @@
     </div>
 </div>
 
+<script src="course_data.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        if(typeof window.COURSE_DATA === 'undefined') {
+            document.getElementById('home-page').innerHTML = `
+                <h1 style="color:#ff3b30; margin-top:50px; text-align:center;">DATA ERROR</h1>
+                <p style="text-align:center; color:#ccc;">Could not load data. Please check your <b>course_data.js</b> file for a missing comma, unclosed quote, or bracket.</p>
+            `;
+        }
+    });
+</script>
+
 <script>
     let iconMap = {};
-    if(window.CONFIG && window.CONFIG.resources) {
+    
+    // Safety check in case CONFIG is missing in JS
+    if(typeof window.CONFIG !== 'undefined' && window.CONFIG.resources) {
         window.CONFIG.resources.forEach(r => iconMap[r.name] = r.icon);
     }
 
@@ -203,11 +349,13 @@
     
     let currSub = null;
     let currentSubjectView = 'weeks'; 
+    let currentUsefulFilter = 'All Links';
+    let currentUsefulSubject = 'All Subjects';
 
     function init() {
         const grid = document.getElementById('subjects-grid');
-        grid.innerHTML = '';
-        if(!window.COURSE_DATA) window.COURSE_DATA = [];
+        if(grid) grid.innerHTML = '';
+        if(typeof window.COURSE_DATA === 'undefined') window.COURSE_DATA = [];
 
         window.COURSE_DATA.forEach(s => {
             if(!s.weeks) s.weeks = [];
@@ -223,7 +371,7 @@
                     <span>${s.credits}</span><span>${s.semester}</span>
                 </div>`;
             el.onclick = () => showWeeks(s);
-            grid.appendChild(el);
+            if(grid) grid.appendChild(el);
         });
         
         window.onpopstate = function(event) {
@@ -241,6 +389,7 @@
                 else if(event.state.page === 'schedule') showSchedule(false, event.state.from || 'home');
                 else if(event.state.page === 'deadlines') showDeadlines(false);
                 else if(event.state.page === 'midterm') showMidterms(false, event.state.from || 'home');
+                else if(event.state.page === 'useful-links') showUsefulLinks(false, event.state.filter || 'All Links', event.state.subject || 'All Subjects');
                 else if(event.state.page === 'weeks') {
                     currentSubjectView = event.state.subView || 'weeks';
                     showWeeks(currSub, false);
@@ -251,6 +400,9 @@
             }
         };
         history.replaceState({page: 'home'}, null, "");
+        
+        populateAllDropdowns();
+        setInterval(populateDeadlinesDropdown, 60000); 
     }
 
     function parseDate(str) {
@@ -357,6 +509,7 @@
 
         let upcoming = [];
         let completed = [];
+        const now = Date.now();
 
         window.SCHEDULE_DATA.forEach((wk, wIndex) => {
             if(wk.tasks) {
@@ -366,8 +519,9 @@
                     const ts = parseDate(t.deadlineDate);
                     if(ts === 0) return;
                     
+                    const isPast = ts < now;
                     const item = { wIndex, tIndex, task: t, week: wk.week, timestamp: ts };
-                    if(t.isCompleted) completed.push(item);
+                    if(t.isCompleted || isPast) completed.push(item);
                     else upcoming.push(item);
                 });
             }
@@ -381,6 +535,7 @@
             
             let html = '';
             let lastDate = '';
+            const now = Date.now();
             
             arr.forEach(item => {
                 const d = new Date(item.timestamp);
@@ -404,13 +559,33 @@
                 }
 
                 if (groupLabel !== lastDate) {
-                    html += `<div style="font-family: 'Orbitron', sans-serif; font-size: 1rem; letter-spacing: 2px; color: ${isComp ? '#888' : 'var(--accent-blue)'}; text-transform: uppercase; margin-bottom: 10px; margin-top: ${lastDate===''?'10px':'30px'}; padding-left: 2px; font-weight: bold;">${groupLabel}</div>`;
+                    html += `<div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; letter-spacing: 2px; color: ${isComp ? '#888' : 'var(--accent-blue)'}; text-transform: uppercase; margin-bottom: 10px; margin-top: ${lastDate===''?'10px':'30px'}; padding-left: 2px; font-weight: bold;">${groupLabel}</div>`;
                     lastDate = groupLabel;
                 }
 
                 const accentColor = isComp ? '#555' : getSubjectColor(item.task.sub);
                 const bgColor = isComp ? '#333' : getSubjectBg(item.task.sub);
                 const badgeTextColor = isComp ? '#aaa' : getSubjectColor(item.task.sub);
+
+                let countdownHtml = '';
+                if (!isComp) {
+                    const diffMs = item.timestamp - now;
+                    if (diffMs > 0) {
+                        const dd = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                        const hh = Math.floor((diffMs / (1000 * 60 * 60)) % 24);
+                        const mm = Math.floor((diffMs / 1000 / 60) % 60);
+
+                        let timeRemaining = '';
+                        if (dd > 0) {
+                            timeRemaining = `${dd} day${dd !== 1 ? 's' : ''} ${hh} hr${hh !== 1 ? 's' : ''}`;
+                        } else {
+                            timeRemaining = `${hh} hr${hh !== 1 ? 's' : ''} ${mm} min`;
+                        }
+                        countdownHtml = `<div style="font-size: 0.75rem; color: #00E5FF; font-weight: bold; background: rgba(0, 229, 255, 0.1); padding: 4px 8px; border-radius: 6px; display: inline-block; margin-top: 6px; border: 1px solid rgba(0, 229, 255, 0.2);">⏳ ${timeRemaining} left</div>`;
+                    } else {
+                        countdownHtml = `<div style="font-size: 0.75rem; color: #ff3b30; font-weight: bold; background: rgba(255, 59, 48, 0.1); padding: 4px 8px; border-radius: 6px; display: inline-block; margin-top: 6px; border: 1px solid rgba(255, 59, 48, 0.2);">⚠️ Overdue</div>`;
+                    }
+                }
 
                 html += `
                     <div class="card ${isComp ? 'completed' : ''}" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center;" onclick="goToScheduleTask(${item.wIndex}, ${item.tIndex})">
@@ -419,9 +594,9 @@
                             <div class="dl-text" style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${item.task.icon} ${item.task.name}</div>
                             <div class="dl-text" style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName} • Week ${item.week}</div>
                         </div>
-                        <div style="display:flex; align-items:center; gap:15px;">
-                            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${isComp ? '#888' : 'white'}; white-space: nowrap; flex-shrink: 0;">${timeStr}</div>
-                            <div style="font-size:1.3rem; opacity:0.8;">${isComp ? '✅' : '⏳'}</div>
+                        <div style="display:flex; flex-direction:column; align-items:flex-end;">
+                            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${isComp ? '#888' : 'white'}; white-space: nowrap;">${timeStr}</div>
+                            ${countdownHtml}
                         </div>
                     </div>
                 `;
@@ -435,11 +610,200 @@
     }
 
     function goToScheduleTask(wIndex, tIndex) {
-        // Pass 'deadlines' as the 'from' parameter so the schedule page knows where to return
         showSchedule(true, 'deadlines');
         setTimeout(() => {
             openModal(wIndex, tIndex);
         }, 150);
+    }
+
+    // --- USEFUL LINKS GLOBAL PAGE ---
+    function showUsefulLinks(push = true, filterType = 'All Links', subjectFilter = 'All Subjects') {
+        currentUsefulFilter = filterType;
+        currentUsefulSubject = subjectFilter;
+
+        const filterBar = document.getElementById('useful-links-filter-bar');
+        const list = document.getElementById('all-links-list');
+        list.innerHTML = '';
+        filterBar.innerHTML = '';
+
+        let hasLinksAnywhere = false;
+        let activeSubjects = [];
+        let catCounts = { 'Lectures':0, 'Sections':0, 'Tutorials':0, 'Labs':0, 'Projects':0, 'Presentations':0 };
+
+        window.COURSE_DATA.forEach(sub => {
+            if (sub.playlists && sub.playlists.length > 0) {
+                hasLinksAnywhere = true;
+                activeSubjects.push(sub);
+
+                if (subjectFilter === 'All Subjects' || subjectFilter === sub.code) {
+                    sub.playlists.forEach(p => {
+                        const t = (p.title || '').toLowerCase();
+                        const n = (p.note || '').toLowerCase();
+                        if(t.includes('lecture') || n.includes('lecture')) catCounts['Lectures']++;
+                        if(t.includes('section') || n.includes('section')) catCounts['Sections']++;
+                        if(t.includes('tutorial') || n.includes('tutorial')) catCounts['Tutorials']++;
+                        if(t.includes('lab') || n.includes('lab')) catCounts['Labs']++;
+                        if(t.includes('project') || n.includes('project')) catCounts['Projects']++;
+                        if(t.includes('presentation') || n.includes('presentation')) catCounts['Presentations']++;
+                    });
+                }
+            }
+        });
+
+        if (!hasLinksAnywhere) {
+            list.innerHTML = `<div class="empty-state" style="grid-column:1/-1;">No useful links found.</div>`;
+            nav('useful-links', push);
+            return;
+        }
+
+        let selectHtml = `<select class="useful-select" onchange="showUsefulLinks(false, currentUsefulFilter, this.value)">`;
+        selectHtml += `<option value="All Subjects" ${subjectFilter === 'All Subjects' ? 'selected' : ''}>All Subjects</option>`;
+        activeSubjects.forEach(s => {
+            selectHtml += `<option value="${s.code}" ${subjectFilter === s.code ? 'selected' : ''}>${s.code} - ${s.name}</option>`;
+        });
+        selectHtml += `</select>`;
+        
+        const selectWrapper = document.createElement('div');
+        selectWrapper.innerHTML = selectHtml;
+        filterBar.appendChild(selectWrapper.firstChild);
+
+        const btnAll = document.createElement('button');
+        btnAll.className = `filter-btn ${filterType === 'All Links' ? 'active' : ''}`;
+        btnAll.innerText = 'All Links';
+        btnAll.onclick = () => showUsefulLinks(false, 'All Links', currentUsefulSubject);
+        filterBar.appendChild(btnAll);
+
+        Object.keys(catCounts).forEach(cat => {
+            if (catCounts[cat] > 0) {
+                const btn = document.createElement('button');
+                btn.className = `filter-btn ${filterType === cat ? 'active' : ''}`;
+                btn.innerText = cat;
+                btn.onclick = () => showUsefulLinks(false, cat, currentUsefulSubject);
+                filterBar.appendChild(btn);
+            }
+        });
+
+        let renderedCount = 0;
+        const isListView = (subjectFilter === 'All Subjects' && filterType === 'All Links');
+
+        if (isListView) {
+            list.style.display = 'flex';
+            list.style.flexDirection = 'column';
+            list.style.maxWidth = '900px';
+            list.style.margin = '0 auto';
+            list.style.gap = '0';
+        } else {
+            list.style.display = '';
+            list.style.flexDirection = '';
+            list.style.maxWidth = '';
+            list.style.margin = '';
+            list.style.gap = '';
+        }
+
+        window.COURSE_DATA.forEach(sub => {
+            if (subjectFilter !== 'All Subjects' && subjectFilter !== sub.code) return;
+            
+            if (sub.playlists && sub.playlists.length > 0) {
+                let filteredPlaylists = sub.playlists.filter(p => {
+                    if (filterType === 'All Links') return true;
+                    const t = (p.title || '').toLowerCase();
+                    const n = (p.note || '').toLowerCase();
+                    const kw = filterType.toLowerCase();
+                    if(kw === 'lectures' && (t.includes('lecture') || n.includes('lecture'))) return true;
+                    if(kw === 'sections' && (t.includes('section') || n.includes('section'))) return true;
+                    if(kw === 'tutorials' && (t.includes('tutorial') || n.includes('tutorial'))) return true;
+                    if(kw === 'labs' && (t.includes('lab') || n.includes('lab'))) return true;
+                    if(kw === 'projects' && (t.includes('project') || n.includes('project'))) return true;
+                    if(kw === 'presentations' && (t.includes('presentation') || n.includes('presentation'))) return true;
+                    return false;
+                });
+
+                if (filteredPlaylists.length > 0) {
+                    if (isListView) {
+                        // --- LIST VIEW: subject section with link rows ---
+                        const color = getSubjectColor(sub.code);
+                        const section = document.createElement('div');
+                        section.style.cssText = 'margin-bottom:30px;';
+
+                        const header = document.createElement('div');
+                        header.style.cssText = `font-family:'Orbitron',sans-serif; font-size:1.3rem; color:${color}; border-bottom:2px solid ${color}; padding-bottom:10px; margin-bottom:12px; margin-top:10px; display:flex; align-items:center; gap:10px;`;
+                        header.innerHTML = `<span style="font-size:1.5rem;">${sub.playlists[0] && sub.playlists[0].icon ? '' : ''}</span>${sub.code} — ${sub.name}`;
+                        section.appendChild(header);
+
+                        filteredPlaylists.forEach(p => {
+                            renderedCount++;
+                            const row = document.createElement('div');
+                            row.style.cssText = `display:flex; align-items:center; gap:14px; padding:12px 16px; border-radius:12px; cursor:pointer; transition:all 0.2s; border-left:3px solid ${color}; margin-bottom:8px; background:rgba(0,0,0,0.2);`;
+                            row.onmouseenter = () => { row.style.background = 'rgba(255,255,255,0.06)'; row.style.transform = 'translateX(6px)'; };
+                            row.onmouseleave = () => { row.style.background = 'rgba(0,0,0,0.2)'; row.style.transform = 'translateX(0)'; };
+
+                            const badgeHtml = p.badgeText ? `<span style="background:${p.badgeColor || '#e91e8c'}; color:#fff; font-size:0.65rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px; flex-shrink:0;">${p.badgeText}</span>` : '';
+                            const noteHtml = p.note ? `<div style="color:var(--text-sub); font-size:0.8rem; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:500px;">${p.note.split('\n')[0]}</div>` : '';
+
+                            row.innerHTML = `
+                                <span style="font-size:1.5rem; flex-shrink:0;">${p.icon || '🔗'}</span>
+                                <div style="flex:1; min-width:0;">
+                                    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                                        <span style="font-weight:600; color:white; font-size:0.95rem;">${p.title || 'Link'}</span>
+                                        ${badgeHtml}
+                                    </div>
+                                    ${noteHtml}
+                                </div>
+                                <span style="color:${color}; font-size:1rem; flex-shrink:0; opacity:0.6;">→</span>
+                            `;
+                            row.onclick = () => {
+                                if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
+                                else alert("No link assigned.");
+                            };
+                            section.appendChild(row);
+                        });
+
+                        list.appendChild(section);
+                    } else {
+                        // --- CARD GRID VIEW (filtered or single subject) ---
+                        if (subjectFilter === 'All Subjects') {
+                            const header = document.createElement('div');
+                            header.style.gridColumn = '1 / -1';
+                            header.style.fontFamily = "'Orbitron', sans-serif";
+                            header.style.fontSize = '1.3rem';
+                            header.style.color = getSubjectColor(sub.code);
+                            header.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+                            header.style.paddingBottom = '10px';
+                            header.style.marginTop = '20px';
+                            header.innerText = `${sub.code} - ${sub.name}`;
+                            list.appendChild(header);
+                        }
+
+                        filteredPlaylists.forEach(p => {
+                            renderedCount++;
+                            const el = document.createElement('div');
+                            el.className = 'card';
+                            const badgeHtml = (p.badgeText) ? `<div class="custom-badge" style="background:${p.badgeColor || '#e91e8c'}">${p.badgeText}</div>` : '';
+                            const noteHtml = (p.note) ? `<div style="color:var(--text-sub); margin-top:15px; font-size:0.9rem; line-height:1.4; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px; white-space:pre-wrap;">${p.note}</div>` : '';
+                            
+                            el.innerHTML = `
+                                ${badgeHtml}
+                                <span class="sub-badge" style="position:absolute; top:15px; left:15px; background:${getSubjectBg(sub.code)}; color:${getSubjectColor(sub.code)}; padding:4px 8px; border-radius:6px; font-size:0.7rem; border-left: 2px solid ${getSubjectColor(sub.code)};">${sub.code}</span>
+                                <div style="font-size:2.5rem; margin-bottom:10px; margin-top:20px;">${p.icon || '🔗'}</div>
+                                <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>
+                                ${noteHtml}
+                            `;
+                            el.onclick = () => {
+                                if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
+                                else alert("No link assigned.");
+                            };
+                            list.appendChild(el);
+                        });
+                    }
+                }
+            }
+        });
+
+        if (renderedCount === 0) {
+            list.innerHTML = `<div class="empty-state" style="grid-column:1/-1;">No links match your selected filters.</div>`;
+        }
+        
+        nav('useful-links', push, { filter: filterType, subject: subjectFilter });
     }
 
     // --- SCHEDULE LOGIC ---
@@ -480,9 +844,9 @@
                 tasksHtml = `<div class="empty-state" style="color: ${isMidtermWk ? '#fff' : '#666'}">${isMidtermWk ? 'Click here to view exams' : 'No deliverables scheduled'}</div>`;
             } else {
                 data.tasks.forEach((task, tIndex) => {
-                    const isTaskDone = task.isCompleted ? 'opacity:0.4; text-decoration:line-through;' : '';
+                    // Fully Reverted: No strikethrough or dimming for completed tasks. 
                     tasksHtml += `
-                        <div class="task-item" style="border-left-color: ${getSubjectColor(task.sub)}; ${isMidtermWk ? 'background:rgba(0,0,0,0.4);' : ''} ${isTaskDone}" onclick="event.stopPropagation(); openModal(${wIndex}, ${tIndex})">
+                        <div class="task-item" style="border-left-color: ${getSubjectColor(task.sub)}; ${isMidtermWk ? 'background:rgba(0,0,0,0.4);' : ''}" onclick="event.stopPropagation(); openModal(${wIndex}, ${tIndex})">
                             <span class="sub-badge" style="background: ${getSubjectBg(task.sub)}; color: ${getSubjectColor(task.sub)}">${task.sub}</span>
                             <span class="task-icon">${task.icon}</span>
                             <span class="task-name" style="${isMidtermWk ? 'color:#fff;' : ''}">${task.name}</span>
@@ -616,9 +980,16 @@
     function openMidtermModal(idx) {
         const exam = window.MIDTERM_DATA[idx];
         let subName = exam.sub;
+        let targetEvent = null;
+
         if(window.COURSE_DATA) {
             const sObj = window.COURSE_DATA.find(s => s.code === exam.sub);
-            if(sObj) subName = sObj.name;
+            if(sObj) {
+                subName = sObj.name;
+                if (sObj.events) {
+                    targetEvent = sObj.events.find(ev => ev.title.toLowerCase().includes('midterm'));
+                }
+            }
         }
 
         document.getElementById('m-title').innerHTML = `🎓 Midterm Exam`;
@@ -646,6 +1017,21 @@
                 container.innerHTML += `<div class="modal-field"><div class="modal-label" style="color:#007aff;">${f.label}</div><div class="modal-value" style="border-left-color:#007aff;">${f.val}</div></div>`;
             }
         });
+        
+        // Midterm Material Link
+        if (targetEvent) {
+            hasContent = true;
+            const sObj = window.COURSE_DATA.find(s => s.code === exam.sub);
+            const evIdx = sObj.events.indexOf(targetEvent);
+            container.innerHTML += `
+                <button style="width:100%; padding:12px; margin-top:15px; border-radius:8px; background:rgba(0,122,255,0.2); color:#007aff; font-weight:bold; cursor:pointer; border:1px solid #007aff; font-family:'Orbitron'; transition:0.3s;" 
+                onmouseover="this.style.background='#007aff'; this.style.color='white';" 
+                onmouseout="this.style.background='rgba(0,122,255,0.2)'; this.style.color='#007aff';"
+                onclick="closeModal(null, true); currSub = window.COURSE_DATA.find(s => s.code === '${exam.sub}'); renderSubjectView('events', false); showContentByObj(currSub.events[${evIdx}], true, 'midterm');">
+                    📚 GO TO MIDTERM MATERIAL
+                </button>
+            `;
+        }
 
         if(!hasContent) {
             container.innerHTML = `<div style="text-align:center; color:#666; font-style:italic; padding:20px 0;">No extra details provided.</div>`;
@@ -659,7 +1045,6 @@
         }
     }
 
-    // --- WEEKS, PLAYLISTS & EXAM MATERIALS LOGIC ---
     function showWeeks(sub, push = true) {
         currSub = sub;
         document.getElementById('subject-title').innerText = `${sub.code} - ${sub.name}`;
@@ -713,7 +1098,7 @@
         const grid = document.getElementById('playlists-grid');
         grid.innerHTML = '';
         if(!currSub.playlists || currSub.playlists.length === 0) {
-            grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px; font-style:italic;">No playlists found for this subject.</div>`;
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px; font-style:italic;">No useful links found for this subject.</div>`;
             return;
         }
 
@@ -726,13 +1111,13 @@
             
             el.innerHTML = `
                 ${badgeHtml}
-                <div style="font-size:2.5rem; margin-bottom:10px">${p.icon || '▶️'}</div>
-                <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Playlist'}</div>
+                <div style="font-size:2.5rem; margin-bottom:10px">${p.icon || '🔗'}</div>
+                <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>
                 ${noteHtml}
             `;
             el.onclick = () => {
                 if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
-                else alert("No link assigned to this playlist.");
+                else alert("No link assigned.");
             };
             grid.appendChild(el);
         });
@@ -851,8 +1236,11 @@
     function showContentByObj(weekOrEvent, push = true, from = 'weeks') {
         const backBtn = document.getElementById('content-back-btn');
         if (from === 'recent') {
-            backBtn.onclick = () => showRecent();
+            backBtn.onclick = () => nav('recent');
             backBtn.innerText = "← Back to History";
+        } else if (from === 'midterm') {
+            backBtn.onclick = () => nav('midterm');
+            backBtn.innerText = "← Back to Midterms";
         } else {
             backBtn.onclick = () => nav('weeks');
             backBtn.innerText = "← Back to Material";
@@ -881,10 +1269,9 @@
                     }
                     const resBadgeCard = val.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
                     const el = document.createElement('div');
-                    el.className = 'card'; // Lock styling removed from individual resource cards
+                    el.className = 'card';
                     el.innerHTML = `<div style=\"font-size:2.5rem; margin-bottom:10px\">${icon}</div><div style=\"font-weight:bold; text-transform:uppercase\">${key}</div>${resBadgeCard}`;
                     el.onclick = () => {
-                        // Resource specific lock check removed
                         if(val.link && val.link !== "#") window.open(val.link, "_blank");
                         else alert("No link set.");
                     };
@@ -896,13 +1283,275 @@
     }
 
     function nav(id, push = true, stateData = {}) { 
+        closeMobileMenu();
+        closeAllDropdowns();
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); 
         document.getElementById(id+'-page').classList.add('active'); 
         window.scrollTo(0,0);
         if(push) history.pushState({page: id, ...stateData}, null, "#" + id);
+        updateNavActive(id);
     }
-    
+
+    // ===== NAVBAR LOGIC =====
+    function updateNavActive(pageId) {
+        document.querySelectorAll('.nav-link[data-nav]').forEach(el => el.classList.remove('active'));
+        let navId = pageId;
+        if(navId === 'content' || navId === 'weeks') navId = 'home';
+        const activeLink = document.querySelector('.nav-link[data-nav="' + navId + '"]');
+        if(activeLink) activeLink.classList.add('active');
+    }
+
+    function navFromBar(id) {
+        if (isMobile()) {
+            const navItem = document.querySelector('.nav-link[data-nav="' + id + '"]');
+            if (navItem && navItem.querySelector('.nav-chevron')) {
+                const item = navItem.closest('.nav-item');
+                const wasOpen = item.classList.contains('dd-open');
+                closeAllDropdowns();
+                if (!wasOpen) item.classList.add('dd-open');
+                return; // Do not navigate, just open accordion
+            }
+        }
+        
+        closeMobileMenu();
+        closeAllDropdowns();
+        
+        if(id === 'home') nav('home');
+        else if(id === 'recent') showRecent();
+        else if(id === 'schedule') showSchedule();
+        else if(id === 'deadlines') showDeadlines();
+        else if(id === 'midterm') showMidterms(true, 'home');
+        else if(id === 'useful-links') showUsefulLinks(true, 'All Links', 'All Subjects'); 
+    }
+
+    function toggleNavMenu() {
+        const links = document.getElementById('nav-links');
+        const btn = document.getElementById('nav-hamburger');
+        const overlay = document.getElementById('nav-overlay');
+        links.classList.toggle('open');
+        const isOpen = links.classList.contains('open');
+        btn.innerHTML = isOpen ? '✕' : '☰';
+        if (overlay) overlay.classList.toggle('active', isOpen);
+        if (!isOpen) closeAllDropdowns();
+    }
+
+    function closeMobileMenu() {
+        const links = document.getElementById('nav-links');
+        if (links) links.classList.remove('open');
+        const btn = document.getElementById('nav-hamburger');
+        if (btn) btn.innerHTML = '☰';
+        const overlay = document.getElementById('nav-overlay');
+        if (overlay) overlay.classList.remove('active');
+    }
+
+    function closeNavOverlay() {
+        closeMobileMenu();
+        closeAllDropdowns();
+    }
+
+    function closeAllDropdowns() {
+        document.querySelectorAll('.nav-item.dd-open').forEach(el => el.classList.remove('dd-open'));
+    }
+
+    function isMobile() { return window.innerWidth <= 768; }
+
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar') && !e.target.closest('.nav-overlay')) closeAllDropdowns();
+    });
+
+    function populateSubjectsDropdown() {
+        const dd = document.getElementById('dd-subjects');
+        if(!dd || !window.COURSE_DATA) return;
+        let html = '<div class="dd-header">Jump to subject</div>';
+        window.COURSE_DATA.forEach(s => {
+            const color = getSubjectColor(s.code);
+            const weekCount = (s.weeks || []).filter(w => !w.locked).length;
+            html += `<div class="dd-item" onclick="event.stopPropagation(); closeAllDropdowns(); ddGoSubject('${s.code}')">`;
+            html += `<span class="dd-dot" style="background:${color}"></span>`;
+            html += `<span class="dd-label">${s.name}</span>`;
+            html += `<span class="dd-meta">${weekCount} wk</span>`;
+            html += `</div>`;
+        });
+        dd.innerHTML = html;
+    }
+
+    function ddGoSubject(code) {
+        const sub = window.COURSE_DATA.find(s => s.code === code);
+        if(sub) { showWeeks(sub); }
+        closeMobileMenu();
+    }
+
+    function populateScheduleDropdown() {
+        const dd = document.getElementById('dd-schedule');
+        if(!dd || !window.SCHEDULE_DATA) return;
+        let targetWeek = null;
+        for(let i = 0; i < window.SCHEDULE_DATA.length; i++) {
+            const wk = window.SCHEDULE_DATA[i];
+            if(wk.tasks && wk.tasks.some(t => !t.isCompleted)) { targetWeek = wk; break; }
+        }
+        let html = '<div class="dd-header">This period</div>';
+        if(!targetWeek || !targetWeek.tasks || targetWeek.tasks.length === 0) {
+            html += '<div class="dd-empty">No tasks right now</div>';
+        } else {
+            targetWeek.tasks.slice(0, 5).forEach((t, ti) => {
+                const color = getSubjectColor(t.sub);
+                html += `<div class="dd-item" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showSchedule(); setTimeout(()=>openModal(${window.SCHEDULE_DATA.indexOf(targetWeek)},${ti}),150);">`;
+                html += `<span class="dd-icon">${t.icon}</span>`;
+                html += `<span class="dd-dot" style="background:${color}; width:6px; height:6px;"></span>`;
+                html += `<span class="dd-label">${t.name}</span>`;
+                html += `<span class="dd-meta">${t.sub}</span>`;
+                html += `</div>`;
+            });
+            if(targetWeek.tasks.length > 5) {
+                html += `<div class="dd-footer"><div class="dd-item" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showSchedule();">View all (Week ${targetWeek.week}) →</div></div>`;
+            }
+        }
+        html += `<div class="dd-footer"><div class="dd-item" style="color:#ff9500;" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showSchedule();">Open full schedule →</div></div>`;
+        dd.innerHTML = html;
+    }
+
+    function populateDeadlinesDropdown() {
+        const dd = document.getElementById('dd-deadlines');
+        const badge = document.getElementById('dd-deadline-count');
+        if(!dd || !window.SCHEDULE_DATA) return;
+
+        let upcoming = [];
+        const now = Date.now();
+        window.SCHEDULE_DATA.forEach((wk, wIndex) => {
+            if(wk.tasks) wk.tasks.forEach((t, tIndex) => {
+                if(!t.deadlineDate || t.isCompleted) return;
+                const ts = parseDate(t.deadlineDate);
+                if(ts > now) upcoming.push({ task: t, ts, wIndex, tIndex, week: wk.week }); 
+            });
+        });
+        upcoming.sort((a,b) => a.ts - b.ts);
+
+        if(badge) {
+            if(upcoming.length > 0) {
+                const closestMs = upcoming[0].ts - now;
+                const d = Math.floor(closestMs / (1000 * 60 * 60 * 24));
+                const h = Math.floor((closestMs / (1000 * 60 * 60)) % 24);
+                
+                let badgeText = '';
+                if(d > 0) badgeText = d + 'd';
+                else if (h > 0) badgeText = h + 'h';
+                else badgeText = '<1h';
+
+                badge.textContent = badgeText;
+                badge.style.display = 'inline-block';
+                
+                if (d <= 1) {
+                     badge.style.background = 'rgba(255, 59, 48, 0.2)';
+                     badge.style.color = '#ff3b30';
+                } else {
+                     badge.style.background = 'rgba(0, 229, 255, 0.2)';
+                     badge.style.color = '#00E5FF';
+                }
+            } else { 
+                badge.style.display = 'none'; 
+            }
+        }
+
+        let html = '<div class="dd-header">Upcoming deadlines</div>';
+        if(upcoming.length === 0) {
+            html += '<div class="dd-empty">🎉 All clear!</div>';
+        } else {
+            upcoming.slice(0, 4).forEach(item => {
+                const d = new Date(item.ts);
+                const diff = item.ts - now;
+                const daysLeft = Math.ceil(diff / (1000*60*60*24));
+                let urgency = 'dd-deadline-ok';
+                let timeLabel = daysLeft + 'd';
+                if(daysLeft <= 0) { urgency = 'dd-deadline-urgent'; timeLabel = 'TODAY'; }
+                else if(daysLeft === 1) { urgency = 'dd-deadline-urgent'; timeLabel = 'TOMORROW'; }
+                else if(daysLeft <= 3) { urgency = 'dd-deadline-soon'; }
+
+                const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                const dateStr = d.getDate() + ' ' + months[d.getMonth()];
+                html += `<div class="dd-item ${urgency}" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); goToScheduleTask(${item.wIndex},${item.tIndex});">`;
+                html += `<span class="dd-icon">${item.task.icon}</span>`;
+                html += `<span class="dd-label">${item.task.name} <span style='color:#888; font-size:0.75rem;'>${item.task.sub}</span></span>`;
+                html += `<span class="dd-meta" style="${daysLeft<=1?'color:#ff3b30; font-weight:700;':daysLeft<=3?'color:#ff9500;':''}">${timeLabel}</span>`;
+                html += `</div>`;
+            });
+            if(upcoming.length > 4) {
+                html += `<div class="dd-footer"><div class="dd-item" style="color:#00E5FF;" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showDeadlines();">See all ${upcoming.length} deadlines →</div></div>`;
+            }
+        }
+        dd.innerHTML = html;
+    }
+
+    function populateMidtermsDropdown() {
+        const dd = document.getElementById('dd-midterms');
+        if(!dd || !window.MIDTERM_DATA) return;
+        let html = '<div class="dd-header">Exam schedule</div>';
+        if(window.MIDTERM_DATA.length === 0) {
+            html += '<div class="dd-empty">No exams configured</div>';
+        } else {
+            let lastDate = '';
+            window.MIDTERM_DATA.slice(0, 6).forEach((exam, idx) => {
+                let subName = exam.sub;
+                const sObj = window.COURSE_DATA ? window.COURSE_DATA.find(s => s.code === exam.sub) : null;
+                if(sObj) subName = sObj.name;
+                const color = getSubjectColor(exam.sub);
+
+                if(exam.dateLabel !== lastDate) {
+                    html += `<div style="font-size:0.65rem; color:#666; letter-spacing:1.5px; text-transform:uppercase; padding:8px 12px 2px; font-weight:bold;">${exam.dateLabel}</div>`;
+                    lastDate = exam.dateLabel;
+                }
+                html += `<div class="dd-item" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showMidterms(true,'home'); setTimeout(()=>openMidtermModal(${idx}),150);">`;
+                html += `<span class="dd-dot" style="background:${color}"></span>`;
+                html += `<span class="dd-label">${subName}</span>`;
+                html += `<span class="dd-meta" style="font-family:'Orbitron',sans-serif; font-size:0.7rem; color:#007aff;">${exam.time}</span>`;
+                html += `</div>`;
+            });
+            if(window.MIDTERM_DATA.length > 6) {
+                html += `<div class="dd-footer"><div class="dd-item" style="color:#007aff;" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showMidterms(true,'home');">View all ${window.MIDTERM_DATA.length} exams →</div></div>`;
+            }
+        }
+        dd.innerHTML = html;
+    }
+
+    function populateUsefulDropdown() {
+        const dd = document.getElementById('dd-useful');
+        if(!dd || !window.COURSE_DATA) return;
+        let html = '<div class="dd-header">Filter by Subject</div>';
+        
+        let count = 0;
+        window.COURSE_DATA.forEach(s => {
+            if (s.playlists && s.playlists.length > 0) {
+                const color = getSubjectColor(s.code);
+                html += `<div class="dd-item" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showUsefulLinks(true, 'All Links', '${s.code}');">`;
+                html += `<span class="dd-dot" style="background:${color}"></span>`;
+                html += `<span class="dd-label">${s.name}</span>`;
+                html += `<span class="dd-meta">${s.playlists.length} links</span>`;
+                html += `</div>`;
+                count++;
+            }
+        });
+
+        if (count === 0) {
+            html += '<div class="dd-empty">No links added yet</div>';
+        } else {
+            html += `<div class="dd-footer"><div class="dd-item" style="color:var(--accent-purple);" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showUsefulLinks(true, 'All Links', 'All Subjects');">View all subjects →</div></div>`;
+        }
+        dd.innerHTML = html;
+    }
+
+    function populateAllDropdowns() {
+        populateSubjectsDropdown();
+        populateScheduleDropdown();
+        populateDeadlinesDropdown();
+        populateMidtermsDropdown();
+        populateUsefulDropdown();
+    }
+
+    window.addEventListener('scroll', function() {
+        document.getElementById('main-navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
     window.onload = init;
+    
 </script>
 </body>
 </html>
