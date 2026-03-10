@@ -61,6 +61,11 @@ window.CONFIG = {
             "defaultDesc": ""
         },
         {
+            "name": "Sheet Answer",
+            "icon": "✅",
+            "defaultDesc": ""
+        },
+        {
             "name": "Lab",
             "icon": "🧪",
             "defaultDesc": ""
@@ -2813,11 +2818,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Sheet": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
+                        "link": "https://drive.google.com/file/d/1tIUWFRV9d_0d2FBcy44P1frc-HdbMDXL/view?usp=drive_link",
                         "desc": "",
-                        "isNew": false
+                        "isNew": true,
+                        "recentDate": "10/3/2026 11:03 PM",
+                        "isRecent": true
                     },
                     "Lab": {
                         "vis": false,
@@ -2913,7 +2920,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1",
-                        "desc": "Lec.2 part 1 + Lec.2 part 2 in this playlist",
+                        "desc": "From 2nd to 7th vide, use the slides to filter videos, skipping the extra material the instructor added.",
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "10/3/2026 5:03 PM"
@@ -2924,6 +2931,14 @@ window.COURSE_DATA = [
                         "link": "",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1mWDN4NXBxT64jGiYityYLoI8XkS5q0eH/view?usp=drive_link",
+                        "desc": "It's also the section slides.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/3/2026 11:06 PM"
                     }
                 },
                 "isRecent": true,
@@ -3005,11 +3020,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Sheet": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
+                        "link": "https://drive.google.com/file/d/1cpjoHZxrCkdIb56dejEtBUTq_h2FGRdE/view?usp=drive_link",
                         "desc": "",
-                        "isNew": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/3/2026 11:05 PM"
                     },
                     "Lab": {
                         "vis": false,
@@ -3059,6 +3076,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1RtEXsAz0Xxgl0flfmQLQso9Lu8UpM_ij/view?usp=drive_link",
+                        "desc": "It's also the section slides.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/3/2026 11:06 PM"
                     }
                 },
                 "isNew": false,
@@ -3196,6 +3221,14 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/file/d/1W5M2gTL1ltHcoE9PkR_npgh8xd1uunKV/view?usp=drive_link",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1nUMIFWyq4iq5e3gVndxUNgcvxs6y1m4K/view?usp=drive_link",
+                        "desc": "It's also the section slides.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/3/2026 11:07 PM"
                     }
                 },
                 "isNew": true,
@@ -3348,6 +3381,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/18B6rb2mXR8MbRy_6xhK9noHtLJMdDIKG/view?usp=drive_link",
+                        "desc": "It's also the section slides.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/3/2026 11:07 PM"
                     }
                 },
                 "isRecent": true,
