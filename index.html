@@ -19,20 +19,18 @@
         .back-btn:hover { background: var(--accent-pink); box-shadow: 0 0 25px rgba(233, 30, 140, 0.4); }
         .header-actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         
-        /* Header Buttons */
         .recent-btn { background: rgba(74, 144, 226, 0.2); border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .recent-btn:hover { background: var(--accent-blue); color: white; box-shadow: 0 0 20px var(--accent-blue); }
         .schedule-btn { background: rgba(255, 149, 0, 0.2); border: 2px solid #ff9500; color: #ff9500; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .schedule-btn:hover { background: #ff9500; color: black; box-shadow: 0 0 20px #ff9500; }
         .midterm-btn { background: rgba(0, 122, 255, 0.2); border: 2px solid #007aff; color: #007aff; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .midterm-btn:hover { background: #007aff; color: white; box-shadow: 0 0 20px #007aff; }
-        .help-btn { background: rgba(0, 200, 83, 0.2); border: 2px solid #00c853; color: #00c853; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; text-decoration: none; display: inline-block;}
-        .help-btn:hover { background: #00c853; color: white; box-shadow: 0 0 20px #00c853; }
+        .deadline-btn { background: rgba(0, 229, 255, 0.2); border: 2px solid #00E5FF; color: #00E5FF; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .deadline-btn:hover { background: #00E5FF; color: black; box-shadow: 0 0 20px #00E5FF; }
         
         .drive-btn { background: rgba(255, 215, 0, 0.1); border: 2px solid #ffd700; color: #ffd700; padding: 8px 20px; border-radius: 20px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px; transition: 0.3s; font-size: 0.9rem; }
         .drive-btn:hover { background: #ffd700; color: black; box-shadow: 0 0 15px #ffd700; }
         
-        /* Subject Sub-Tabs */
         .subject-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
         .sub-tab { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; transition: 0.3s; letter-spacing: 1px; text-transform: uppercase; }
         .sub-tab:hover { background: rgba(255,255,255,0.1); color: white; }
@@ -43,6 +41,7 @@
         .weeks-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
         .resources-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
         .recent-grid { grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; }
+        
         .card { background: var(--card-bg); backdrop-filter: blur(12px); border: 2px solid rgba(233, 30, 140, 0.2); border-radius: 20px; padding: 30px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-8px); border-color: var(--accent-pink); box-shadow: 0 15px 40px rgba(233, 30, 140, 0.25); }
         .card.locked { opacity: 0.5; filter: grayscale(1); cursor: not-allowed; border-color: #555; }
@@ -83,6 +82,10 @@
         .task-icon { font-size: 1.2rem; }
         .task-name { color: var(--text-main); font-weight: 500; }
 
+        /* Deadlines Page Styles */
+        .deadline-section { margin-top: 30px; margin-bottom: 20px; font-family: 'Orbitron'; color: white; font-size: 1.5rem; border-bottom: 2px solid; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .completed .dl-text { text-decoration: line-through; color: #888 !important; }
+
         /* Task Modal Styles */
         .modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
         .modal-overlay.active { display: flex; animation: fadeIn 0.3s ease; }
@@ -111,8 +114,8 @@
         <div class="header-actions">
             <button class="recent-btn" onclick="showRecent()">📜 History</button>
             <button class="schedule-btn" onclick="showSchedule()">📅 Schedule</button>
+            <button class="deadline-btn" onclick="showDeadlines()">⏳ Deadlines</button>
             <button class="midterm-btn" onclick="showMidterms(true, 'home')">📝 Midterms</button>
-            <a id="help-btn" href="#" target="_blank" class="help-btn">🤝 Help Us</a>
         </div>
         <div class="grid subjects-grid" id="subjects-grid"></div>
     </div>
@@ -128,6 +131,20 @@
         <h1 style="color:#ff9500">SEMESTER MAP</h1>
         <p class="subtitle" style="margin-bottom: 30px;">Your overview of assignments, quizzes, and projects</p>
         <div class="grid weeks-grid" id="deliverables-grid"></div>
+    </div>
+
+    <div id="deadlines-page" class="page">
+        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <h1 style="color:#00E5FF">DEADLINES</h1>
+        <p class="subtitle" style="margin-bottom: 30px;">Track your upcoming tasks and quizzes</p>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="deadline-section" style="border-color:#00E5FF; color:#00E5FF;">🚨 UPCOMING</div>
+            <div id="upcoming-list"></div>
+
+            <div class="deadline-section" style="border-color:#555; color:#888; margin-top:50px;">✅ COMPLETED</div>
+            <div id="completed-list"></div>
+        </div>
     </div>
 
     <div id="midterm-page" class="page">
@@ -171,8 +188,7 @@
         <div class="modal-close" onclick="closeModal(null, true)">✕</div>
         <div class="modal-title" id="m-title">🧠 Quiz</div>
         <div class="modal-subtitle" id="m-sub">Computer Networks - Week 5</div>
-        <div id="m-fields-container">
-            </div>
+        <div id="m-fields-container"></div>
     </div>
 </div>
 
@@ -180,9 +196,6 @@
     let iconMap = {};
     if(window.CONFIG && window.CONFIG.resources) {
         window.CONFIG.resources.forEach(r => iconMap[r.name] = r.icon);
-    }
-    if(window.CONFIG && window.CONFIG.helpLink) {
-        document.getElementById('help-btn').href = window.CONFIG.helpLink;
     }
 
     if(typeof window.MIDTERM_DATA === 'undefined') window.MIDTERM_DATA = [];
@@ -226,6 +239,7 @@
                 if(event.state.page === 'home') nav('home', false);
                 else if(event.state.page === 'recent') nav('recent', false);
                 else if(event.state.page === 'schedule') showSchedule(false);
+                else if(event.state.page === 'deadlines') showDeadlines(false);
                 else if(event.state.page === 'midterm') showMidterms(false, event.state.from || 'home');
                 else if(event.state.page === 'weeks') {
                     currentSubjectView = event.state.subView || 'weeks';
@@ -289,7 +303,6 @@
             items.forEach(item => {
                 const el = document.createElement('div');
                 el.className = 'recent-card';
-                // Pass 'recent' as the 'from' parameter so back button works correctly
                 el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj, true, 'recent'); };
 
                 if(item.type === 'week') {
@@ -322,7 +335,7 @@
 
     function getSubjectColor(code) { 
         if(window.COURSE_DATA) { const s = window.COURSE_DATA.find(x => x.code === code); if(s && s.color) return s.color; }
-        const fallback = { 'CA': '#ff9500', 'DSA': '#34c759', 'DB': '#007aff', 'OS': '#ff2d55', 'CN': '#af52de', 'AI': '#ffcc00' };
+        const fallback = { 'CA': '#ff9500', 'DSA': '#34c759', 'DB': '#007aff', 'OS': '#ff2d55', 'CN': '#af52de', 'AI': '#B388FF' };
         return fallback[code] || '#e91e8c'; 
     }
     
@@ -335,6 +348,100 @@
         return 'rgba(233,30,140,0.2)';
     }
 
+    // --- DEADLINES LOGIC ---
+    function showDeadlines(push = true) {
+        const upList = document.getElementById('upcoming-list');
+        const compList = document.getElementById('completed-list');
+        upList.innerHTML = '';
+        compList.innerHTML = '';
+
+        let upcoming = [];
+        let completed = [];
+
+        window.SCHEDULE_DATA.forEach((wk, wIndex) => {
+            if(wk.tasks) {
+                wk.tasks.forEach((t, tIndex) => {
+                    if(!t.deadlineDate || t.deadlineDate.trim() === '') return; 
+                    
+                    const ts = parseDate(t.deadlineDate);
+                    if(ts === 0) return;
+                    
+                    const item = { wIndex, tIndex, task: t, week: wk.week, timestamp: ts };
+                    if(t.isCompleted) completed.push(item);
+                    else upcoming.push(item);
+                });
+            }
+        });
+
+        upcoming.sort((a, b) => a.timestamp - b.timestamp);
+        completed.sort((a, b) => b.timestamp - a.timestamp);
+
+        function getGroupedHtml(arr, isComp) {
+            if (arr.length === 0) return `<div class="empty-state">${isComp ? 'No completed tasks yet.' : 'Hooray! No upcoming deadlines.'}</div>`;
+            
+            let html = '';
+            let lastDate = '';
+            
+            arr.forEach(item => {
+                const d = new Date(item.timestamp);
+                const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                
+                const dayStr = days[d.getDay()];
+                const dateStr = `${d.getDate()} ${months[d.getMonth()]}`;
+                const groupLabel = `${dayStr} · ${dateStr}`;
+                
+                let h = d.getHours();
+                const m = d.getMinutes().toString().padStart(2, '0');
+                const ampm = h >= 12 ? 'PM' : 'AM';
+                h = h % 12 || 12;
+                const timeStr = `${h}:${m} ${ampm}`;
+
+                let subName = item.task.sub;
+                if(window.COURSE_DATA) {
+                    const sObj = window.COURSE_DATA.find(s => s.code === item.task.sub);
+                    if(sObj) subName = sObj.name;
+                }
+
+                if (groupLabel !== lastDate) {
+                    html += `<div style="font-family: 'Orbitron', sans-serif; font-size: 1rem; letter-spacing: 2px; color: ${isComp ? '#888' : 'var(--accent-blue)'}; text-transform: uppercase; margin-bottom: 10px; margin-top: ${lastDate===''?'10px':'30px'}; padding-left: 2px; font-weight: bold;">${groupLabel}</div>`;
+                    lastDate = groupLabel;
+                }
+
+                const accentColor = isComp ? '#555' : getSubjectColor(item.task.sub);
+                const bgColor = isComp ? '#333' : getSubjectBg(item.task.sub);
+                const badgeTextColor = isComp ? '#aaa' : getSubjectColor(item.task.sub);
+
+                html += `
+                    <div class="card ${isComp ? 'completed' : ''}" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center;" onclick="goToScheduleTask(${item.wIndex}, ${item.tIndex})">
+                        <span class="sub-badge" style="background: ${bgColor}; color: ${badgeTextColor}; min-width: 52px; font-size: 0.72rem; padding: 5px 10px; border-radius:8px;">${item.task.sub}</span>
+                        <div style="flex: 1; margin-left: 15px;">
+                            <div class="dl-text" style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${item.task.icon} ${item.task.name}</div>
+                            <div class="dl-text" style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName} • Week ${item.week}</div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:15px;">
+                            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${isComp ? '#888' : 'white'}; white-space: nowrap; flex-shrink: 0;">${timeStr}</div>
+                            <div style="font-size:1.3rem; opacity:0.8;">${isComp ? '✅' : '⏳'}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            return html;
+        }
+
+        upList.innerHTML = getGroupedHtml(upcoming, false);
+        compList.innerHTML = getGroupedHtml(completed, true);
+        nav('deadlines', push);
+    }
+
+    function goToScheduleTask(wIndex, tIndex) {
+        showSchedule(true);
+        setTimeout(() => {
+            openModal(wIndex, tIndex);
+        }, 150);
+    }
+
+    // --- SCHEDULE LOGIC ---
     function showSchedule(push = true) {
         const grid = document.getElementById('deliverables-grid');
         grid.innerHTML = '';
@@ -363,8 +470,9 @@
                 tasksHtml = `<div class="empty-state" style="color: ${isMidtermWk ? '#fff' : '#666'}">${isMidtermWk ? 'Click here to view exams' : 'No deliverables scheduled'}</div>`;
             } else {
                 data.tasks.forEach((task, tIndex) => {
+                    const isTaskDone = task.isCompleted ? 'opacity:0.4; text-decoration:line-through;' : '';
                     tasksHtml += `
-                        <div class="task-item" style="border-left-color: ${getSubjectColor(task.sub)}; ${isMidtermWk ? 'background:rgba(0,0,0,0.4);' : ''}" onclick="event.stopPropagation(); openModal(${wIndex}, ${tIndex})">
+                        <div class="task-item" style="border-left-color: ${getSubjectColor(task.sub)}; ${isMidtermWk ? 'background:rgba(0,0,0,0.4);' : ''} ${isTaskDone}" onclick="event.stopPropagation(); openModal(${wIndex}, ${tIndex})">
                             <span class="sub-badge" style="background: ${getSubjectBg(task.sub)}; color: ${getSubjectColor(task.sub)}">${task.sub}</span>
                             <span class="task-icon">${task.icon}</span>
                             <span class="task-name" style="${isMidtermWk ? 'color:#fff;' : ''}">${task.name}</span>
@@ -456,15 +564,15 @@
             if(sObj) subName = sObj.name;
         }
 
-        document.getElementById('m-title').innerHTML = `${task.icon} ${task.name}`;
+        const titlePrefix = task.isCompleted ? '✅ ' : '';
+        document.getElementById('m-title').innerHTML = `${titlePrefix}${task.icon} ${task.name}`;
         document.getElementById('m-sub').innerText = `${subName} - Week ${weekData.week}`;
         
         const container = document.getElementById('m-fields-container');
         container.innerHTML = '';
         
         let hasContent = false;
-        
-        // Handle optional links for When and Where
+
         let whenHtml = task.when;
         if(task.whenLink && task.whenLink.trim() !== '') {
             whenHtml = `<a href="${task.whenLink}" target="_blank" style="color:var(--accent-blue); text-decoration:underline;">${task.when || 'Link'}</a>`;
@@ -698,7 +806,9 @@
                     if(res.vis) {
                         found = true;
                         const el = document.createElement('div');
-                        const isLocked = w.locked || res.lock;
+                        
+                        const isLocked = w.locked;
+                        
                         el.className = 'card' + (isLocked ? ' locked' : '');
                         if(isEvent) el.style.borderLeft = `4px solid var(--accent-blue)`;
 
@@ -761,10 +871,9 @@
                     }
                     const resBadgeCard = val.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
                     const el = document.createElement('div');
-                    el.className = 'card' + (val.lock ? ' locked' : '');
+                    el.className = 'card';
                     el.innerHTML = `<div style=\"font-size:2.5rem; margin-bottom:10px\">${icon}</div><div style=\"font-weight:bold; text-transform:uppercase\">${key}</div>${resBadgeCard}`;
                     el.onclick = () => {
-                        if(val.lock) return alert("Locked");
                         if(val.link && val.link !== "#") window.open(val.link, "_blank");
                         else alert("No link set.");
                     };

@@ -28,6 +28,7 @@
         .btn-recents { width: 100%; background: #4a90e2; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; }
         .btn-schedule { width: 100%; background: #ff9500; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: black; cursor: pointer; }
         .btn-midterms { width: 100%; background: #007aff; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; }
+        .btn-deadlines { width: 100%; background: #00E5FF; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: black; cursor: pointer; }
         .btn-expire { width: 100%; background: #673ab7; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; }
         .btn-move { background: transparent; color: #aaa; font-size: 0.8rem; padding: 2px 5px; border: 1px solid #444; border-radius: 3px; }
         .btn-move:hover { background: #444; color: white; }
@@ -54,7 +55,6 @@
         
         .recent-manager-item { display: flex; justify-content: space-between; align-items: center; background: #150a25; padding: 10px; margin-bottom: 5px; border-bottom: 1px solid #333; font-size: 0.9rem; }
         
-        /* Middle Column Select */
         .view-select { width: 100%; background: #0a0012; color: white; border: 1px solid var(--accent-pink); padding: 10px; font-size: 1rem; font-weight: bold; font-family: 'Orbitron'; border-radius: 8px; outline: none; cursor: pointer; text-transform: uppercase; }
         .view-select option { background: #0a0012; color: white; font-family: 'Segoe UI'; font-weight: normal; }
 
@@ -66,10 +66,11 @@
 <body>
 
 <div class="sidebar">
-    <div onclick="toggleConfig()" class="btn-config">⚙️ CONFIG & HELP LINK</div>
+    <div onclick="toggleConfig()" class="btn-config">⚙️ CONFIG</div>
     <div onclick="toggleRecents()" class="btn-recents">📜 MANAGE HISTORY</div>
     <div onclick="toggleSchedule()" class="btn-schedule">📅 MANAGE SCHEDULE</div>
     <div onclick="toggleMidterms()" class="btn-midterms">📝 MANAGE MIDTERMS</div>
+    <div onclick="updateDeadlines()" class="btn-deadlines">⏳ UPDATE DEADLINES</div>
     <div onclick="autoExpireBadges()" class="btn-expire">⏳ AUTO-EXPIRE NEW</div>
     
     <div class="panel-header">SUBJECTS</div>
@@ -92,11 +93,11 @@
 <script>
     let cIdx = 0; let wIdx = 0; let eIdx = 0; let pIdx = 0; let schWIdx = 0; 
     let dragSrcIndex = null; 
-    let viewMode = 'editor'; // 'editor' | 'config' | 'recents' | 'schedule' | 'midterms'
-    let subViewMode = 'weeks'; // 'weeks' | 'events' | 'playlists'
+    let viewMode = 'editor'; 
+    let subViewMode = 'weeks'; 
 
     function getSubjectColorFallback(code) {
-        const colors = { 'CA': '#ff9500', 'DSA': '#34c759', 'DB': '#007aff', 'OS': '#ff2d55', 'CN': '#af52de', 'AI': '#ffcc00' };
+        const colors = { 'CA': '#ff9500', 'DSA': '#34c759', 'DB': '#007aff', 'OS': '#ff2d55', 'CN': '#af52de', 'AI': '#B388FF' };
         return colors[code] || '#e91e8c';
     }
 
@@ -108,9 +109,20 @@
         return getSubjectColorFallback(code);
     }
 
+    function pDate(str) {
+        if(!str) return null;
+        try {
+            const parts = str.trim().split(/\s+/); if(parts.length < 2) return null;
+            const dParts = parts[0].split('/'); const tParts = parts[1].split(':'); const ampm = parts[2] ? parts[2].toUpperCase() : '';
+            let h = parseInt(tParts[0], 10); const m = parseInt(tParts[1], 10);
+            if(ampm === 'PM' && h < 12) h += 12; if(ampm === 'AM' && h === 12) h = 0;
+            return new Date(dParts[2], dParts[1]-1, dParts[0], h, m);
+        } catch(e) { return null; }
+    }
+
     function init() {
         if(typeof window.COURSE_DATA === 'undefined') window.COURSE_DATA = [];
-        if(typeof window.CONFIG === 'undefined') window.CONFIG = { resources: [], helpLink: "#", taskPresets: [] };
+        if(typeof window.CONFIG === 'undefined') window.CONFIG = { resources: [], taskPresets: [] };
         
         if(!window.CONFIG.taskPresets || window.CONFIG.taskPresets.length === 0) {
             window.CONFIG.taskPresets = [
@@ -152,7 +164,7 @@
                     if(!item.resources) item.resources = {};
                     window.CONFIG.resources.forEach(conf => {
                         if(!item.resources[conf.name]) { 
-                            item.resources[conf.name] = { vis:false, lock:false, link:"#", desc:conf.defaultDesc, isNew:false, isRecent:false, recentDate:"" }; 
+                            item.resources[conf.name] = { vis:false, link:"#", desc:conf.defaultDesc, isNew:false, isRecent:false, recentDate:"" }; 
                         }
                     });
                 });
@@ -353,12 +365,6 @@
                 <div class="form-section">
                     <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #444; padding-bottom:10px; margin-bottom:15px;">
                         <h3 style="border:none; margin:0; padding:0;">Resources</h3>
-                        <div class="bulk-toolbar" style="border:none; background:transparent; padding:0;">
-                            <button class="btn-bulk" onclick="bulkRes('vis', true)">Show All</button>
-                            <button class="btn-bulk" onclick="bulkRes('vis', false)">Hide All</button>
-                            <button class="btn-bulk" onclick="bulkRes('lock', true)">Lock All</button>
-                            <button class="btn-bulk" onclick="bulkRes('lock', false)">Unlock</button>
-                        </div>
                     </div>
                     <div id="res-list-container"></div>
                 </div>`;
@@ -400,7 +406,7 @@
         const container = document.getElementById('res-list-container');
         window.CONFIG.resources.forEach((conf, i) => {
             const key = conf.name;
-            if(!itemObj.resources[key]) itemObj.resources[key] = { vis:false, lock:false, link:"#", desc:conf.defaultDesc, isNew:false, isRecent:false };
+            if(!itemObj.resources[key]) itemObj.resources[key] = { vis:false, link:"#", desc:conf.defaultDesc, isNew:false, isRecent:false };
             const val = itemObj.resources[key];
 
             const el = document.createElement('div');
@@ -414,7 +420,6 @@
                         <strong>${key}</strong>
                         <div class="checkbox-row" style="margin:0; gap:10px;">
                             <label class="checkbox-label"><input type="checkbox" ${val.vis ? 'checked' : ''} onchange="updateRes('${key}', 'vis', this.checked)"> Show</label>
-                            <label class="checkbox-label"><input type="checkbox" ${val.lock ? 'checked' : ''} onchange="updateRes('${key}', 'lock', this.checked)"> Lock</label>
                             <label class="checkbox-label"><input type="checkbox" ${val.isNew ? 'checked' : ''} onchange="updateRes('${key}', 'isNew', this.checked)"> New</label>
                             
                             <div style="display:flex; align-items:center; gap:5px; background:#2a1b3d; padding:2px 8px; border-radius:4px; border:1px solid #444;">
@@ -488,12 +493,6 @@
         else if(['week','event','playlist'].includes(type)) renderMiddleColumn(); 
         else renderConfigEditor();
     }
-
-    function bulkRes(f, v) { 
-        const item = subViewMode === 'events' ? window.COURSE_DATA[cIdx].events[eIdx] : window.COURSE_DATA[cIdx].weeks[wIdx];
-        window.CONFIG.resources.forEach(c => { if(item.resources[c.name]) item.resources[c.name][f] = v; }); 
-        renderEditor(); 
-    }
     
     function bulkResGlobal(f, v) {
         const list = subViewMode === 'events' ? window.COURSE_DATA[cIdx].events : window.COURSE_DATA[cIdx].weeks;
@@ -520,6 +519,39 @@
             el.onclick = (e) => { if(e.target.tagName !== 'BUTTON') { schWIdx = i; renderScheduleWeeks(); renderScheduleEditor(); } };
             list.appendChild(el);
         });
+    }
+
+    function autoExtractDeadline(tIdx) {
+        const task = window.SCHEDULE_DATA[schWIdx].tasks[tIdx];
+        const whenStr = task.when || '';
+        
+        const dateMatch = whenStr.match(/[\(\[](\d{1,2})[\/\-](\d{1,2})[\)\]]/);
+        let datePart = "";
+        if (dateMatch) {
+            const day = dateMatch[1].padStart(2, '0');
+            const month = dateMatch[2].padStart(2, '0');
+            datePart = `${day}/${month}/2026`;
+        }
+        
+        const timeMatch = whenStr.match(/(\d{1,2}:\d{2})\s*(AM|PM)/i);
+        let timePart = "";
+        if (timeMatch) {
+            timePart = `${timeMatch[1]} ${timeMatch[2].toUpperCase()}`;
+        }
+        
+        if (datePart && timePart) {
+            task.deadlineDate = `${datePart} ${timePart}`;
+        } else if (datePart) {
+            task.deadlineDate = `${datePart} 11:59 PM`;
+            alert("Found the date, but couldn't find a time (e.g., 10:00 AM). Defaulted to 11:59 PM.");
+        } else if (timePart) {
+            alert("Found the time, but couldn't find a date inside brackets like (25/03) or [25/03]. Please type the date in the 'When?' field.");
+            return;
+        } else {
+            alert("Couldn't find a date in brackets like (25/03) or a time like 10:00 AM in the 'When?' field.");
+            return;
+        }
+        renderScheduleEditor();
     }
 
     function renderScheduleEditor() {
@@ -568,20 +600,42 @@
                     <input type="text" placeholder="Task Name" value="${task.name}" style="flex:1; margin:0;" oninput="updateSchTask(${tIdx}, 'name', this.value)">
                     <button class="btn btn-del" onclick="delScheduleTask(${tIdx})">✕ Remove</button>
                 </div>
+                
                 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; width:100%;">
                     <div>
-                        <label>When?</label>
-                        <input type="text" placeholder="e.g. Monday 10:00 AM" value="${task.when || ''}" oninput="updateSchTask(${tIdx}, 'when', this.value)">
+                        <label style="height:40px; display:flex; align-items:flex-end; padding-bottom:5px; box-sizing:border-box;">
+                            <span style="line-height:1.2;">When? <span style="font-size:0.7rem; color:#888; font-weight:normal; display:block;">(Date in brackets like (25/03))</span></span>
+                        </label>
+                        <input type="text" placeholder="e.g. Mon (25/03) 10:00 AM" value="${task.when || ''}" oninput="updateSchTask(${tIdx}, 'when', this.value)">
                         <input type="text" placeholder="URL (Optional)" value="${task.whenLink || ''}" style="font-size:0.8rem; margin-top:-5px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'whenLink', this.value)">
                     </div>
                     <div>
-                        <label>Where?</label>
-                        <input type="text" placeholder="e.g. Hall 3" value="${task.where || ''}" oninput="updateSchTask(${tIdx}, 'where', this.value)">
+                        <label style="height:40px; display:flex; align-items:flex-end; padding-bottom:5px; box-sizing:border-box;">Where?</label>
+                        <input type="text" placeholder="e.g. Online / Hall 3" value="${task.where || ''}" oninput="updateSchTask(${tIdx}, 'where', this.value)">
                         <input type="text" placeholder="URL (Optional)" value="${task.whereLink || ''}" style="font-size:0.8rem; margin-top:-5px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'whereLink', this.value)">
                     </div>
-                    <div><label>Coverage?</label><input type="text" placeholder="e.g. Weeks 1 to 4" value="${task.coverage || ''}" oninput="updateSchTask(${tIdx}, 'coverage', this.value)"></div>
+                    <div>
+                        <label style="height:40px; display:flex; align-items:flex-end; padding-bottom:5px; box-sizing:border-box;">Coverage?</label>
+                        <input type="text" placeholder="e.g. Weeks 1 to 4" value="${task.coverage || ''}" oninput="updateSchTask(${tIdx}, 'coverage', this.value)">
+                    </div>
                 </div>
                 <label>Extra Notes:</label><textarea rows="2" placeholder="e.g. Bring calculators" oninput="updateSchTask(${tIdx}, 'note', this.value)">${task.note || ''}</textarea>
+                
+                <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px; width:100%; margin-top:10px; background:rgba(0,0,0,0.3); padding:10px; border-radius:8px; border:1px solid rgba(0, 229, 255, 0.3);">
+                    <div>
+                        <label style="color:#00E5FF;">⏳ Deadline Tracker (Format: DD/MM/YYYY hh:mm AM/PM)</label>
+                        <div style="display:flex; align-items:center; gap:5px;">
+                            <input type="text" placeholder="e.g. 25/03/2026 10:00 AM" value="${task.deadlineDate || ''}" style="margin:0; flex:1;" oninput="updateSchTask(${tIdx}, 'deadlineDate', this.value)">
+                            <button class="btn-time" style="background:#00E5FF; color:black; font-weight:bold; border:none; padding:8px 12px; font-size:0.9rem;" onclick="autoExtractDeadline(${tIdx})" title="Auto-Extract from 'When?' field">🪄 Auto</button>
+                        </div>
+                        <div style="font-size:0.7rem; color:#888; margin-top:4px;">Used strictly to sort the student "Deadlines" tab.</div>
+                    </div>
+                    <div style="display:flex; align-items:center;">
+                        <label class="checkbox-label" style="margin-top:10px;">
+                            <input type="checkbox" ${task.isCompleted ? 'checked' : ''} onchange="updateSchTask(${tIdx}, 'isCompleted', this.checked)"> Mark Completed
+                        </label>
+                    </div>
+                </div>
             `;
             list.appendChild(el);
         });
@@ -590,8 +644,28 @@
     function updateSchTask(tIdx, field, val) { window.SCHEDULE_DATA[schWIdx].tasks[tIdx][field] = val; }
     function addScheduleWeek() { window.SCHEDULE_DATA.push({ week: window.SCHEDULE_DATA.length + 1, tasks: [] }); schWIdx = window.SCHEDULE_DATA.length - 1; renderScheduleWeeks(); renderScheduleEditor(); }
     function delScheduleWeek(e, i) { e.stopPropagation(); if(confirm("Delete this week?")) { window.SCHEDULE_DATA.splice(i, 1); schWIdx = 0; renderScheduleWeeks(); renderScheduleEditor(); } }
-    function addScheduleTask() { window.SCHEDULE_DATA[schWIdx].tasks.push({ sub: window.COURSE_DATA.length > 0 ? window.COURSE_DATA[0].code : "UNK", name: "New Task", icon: "📝", when: "", where: "", coverage: "", note: "", whenLink: "", whereLink: "" }); renderScheduleWeeks(); renderScheduleEditor(); }
+    function addScheduleTask() { window.SCHEDULE_DATA[schWIdx].tasks.push({ sub: window.COURSE_DATA.length > 0 ? window.COURSE_DATA[0].code : "UNK", name: "New Task", icon: "📝", when: "", where: "", coverage: "", note: "", whenLink: "", whereLink: "", deadlineDate: "", isCompleted: false }); renderScheduleWeeks(); renderScheduleEditor(); }
     function delScheduleTask(tIdx) { if(confirm("Remove this task?")) { window.SCHEDULE_DATA[schWIdx].tasks.splice(tIdx, 1); renderScheduleWeeks(); renderScheduleEditor(); } }
+
+    function updateDeadlines() {
+        let count = 0;
+        const now = new Date().getTime();
+        window.SCHEDULE_DATA.forEach(wk => {
+            if(wk.tasks) {
+                wk.tasks.forEach(t => {
+                    if(!t.isCompleted && t.deadlineDate && t.deadlineDate.trim() !== '') {
+                        const ts = pDate(t.deadlineDate); 
+                        if(ts && now > ts.getTime()) {
+                            t.isCompleted = true;
+                            count++;
+                        }
+                    }
+                });
+            }
+        });
+        if(viewMode === 'schedule') { renderScheduleEditor(); }
+        alert(`Updated and automatically marked ${count} past tasks as completed!`);
+    }
 
     // --- MIDTERMS EDITOR ---
     function renderMidtermsManager() {
@@ -637,14 +711,8 @@
     // --- CONFIG & HELPERS ---
     function renderConfigEditor() {
         const container = document.getElementById('editor-area');
-        let helpLink = window.CONFIG.helpLink || "#";
         
         let html = `
-            <div class="form-section">
-                <h3>Global Settings</h3>
-                <label><strong>"Help Us" Form Link</strong></label>
-                <input type="text" value="${helpLink}" oninput="window.CONFIG.helpLink = this.value">
-            </div>
             <div class="form-section">
                 <h3>Manage Resources</h3>
                 <div id="config-list"></div>
@@ -739,17 +807,7 @@
     function autoExpireBadges() {
         const DAYS_LIMIT = 7;
         const now = new Date(); let count = 0;
-        function pDate(str) {
-            if(!str) return null;
-            try {
-                const parts = str.trim().split(/\s+/); if(parts.length < 2) return null;
-                const dParts = parts[0].split('/'); const tParts = parts[1].split(':'); const ampm = parts[2] ? parts[2].toUpperCase() : '';
-                let h = parseInt(tParts[0], 10); const m = parseInt(tParts[1], 10);
-                if(ampm === 'PM' && h < 12) h += 12; if(ampm === 'AM' && h === 12) h = 0;
-                return new Date(dParts[2], dParts[1]-1, dParts[0], h, m);
-            } catch(e) { return null; }
-        }
-
+        
         window.COURSE_DATA.forEach(sub => {
             const combinedLists = [...(sub.weeks || []), ...(sub.events || [])];
             combinedLists.forEach(wk => {

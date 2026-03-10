@@ -5527,11 +5527,39 @@ window.SCHEDULE_DATA = [
     },
     {
         "week": 3,
-        "tasks": []
+        "tasks": [
+            {
+                "sub": "CA",
+                "name": "Assignment 1",
+                "icon": "📝",
+                "when": "Wednesday (25/2) 8:29 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "25/2/2026 8:29 PM",
+                "isCompleted": true
+            }
+        ]
     },
     {
         "week": 4,
-        "tasks": []
+        "tasks": [
+            {
+                "sub": "DSA",
+                "name": "Lab 2 Bonus",
+                "icon": "🧪",
+                "when": "Thursday (4/3) 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "4/3/2026 11:59 PM",
+                "isCompleted": true
+            }
+        ]
     },
     {
         "week": 5,
@@ -5543,7 +5571,9 @@ window.SCHEDULE_DATA = [
                 "when": "Monday (9/3) 8:45 to 9:15 AM",
                 "where": "Hall A",
                 "coverage": "Up till week 4",
-                "note": "The quiz will be written"
+                "note": "The quiz will be written",
+                "deadlineDate": "09/03/2026 9:15 AM",
+                "isCompleted": true
             },
             {
                 "sub": "OS",
@@ -5552,7 +5582,8 @@ window.SCHEDULE_DATA = [
                 "when": "Wednesday (11/3) at 10:40 AM",
                 "where": "Online",
                 "coverage": "Up till week 4",
-                "note": ""
+                "note": "",
+                "deadlineDate": "11/03/2026 10:40 AM"
             },
             {
                 "sub": "DB",
@@ -5561,7 +5592,8 @@ window.SCHEDULE_DATA = [
                 "when": "Friday (12/3) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "",
+                "deadlineDate": "12/03/2026 11:59 PM"
             },
             {
                 "sub": "DSA",
@@ -5570,7 +5602,21 @@ window.SCHEDULE_DATA = [
                 "when": "Wednesday (11/3) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "",
+                "deadlineDate": "11/03/2026 11:59 PM"
+            },
+            {
+                "sub": "CN",
+                "name": "Lab Report 1",
+                "icon": "📊",
+                "when": "Monday (9/3) 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it.",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "09/03/2026 11:59 PM",
+                "isCompleted": true
             }
         ]
     },
@@ -5602,7 +5648,8 @@ window.SCHEDULE_DATA = [
                 "when": "Monday (16/3) at 12:30 PM",
                 "where": "Hall C",
                 "coverage": "up till linked lists (Week 4)",
-                "note": "The quiz will be written"
+                "note": "The quiz will be written",
+                "deadlineDate": "16/03/2026 12:30 PM"
             },
             {
                 "sub": "ML",
@@ -5620,7 +5667,8 @@ window.SCHEDULE_DATA = [
                 "when": "Tuesday (17/3) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "It must be done with hand on paper, WORD document is not allowed.",
+                "deadlineDate": "17/03/2026 11:59 PM"
             },
             {
                 "sub": "CA",
@@ -5629,7 +5677,8 @@ window.SCHEDULE_DATA = [
                 "when": "Friday (20/3) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "",
+                "deadlineDate": "20/03/2026 11:59 PM"
             }
         ]
     },
@@ -5670,7 +5719,8 @@ window.SCHEDULE_DATA = [
                 "when": "Monday (23/3) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it.",
+                "deadlineDate": "23/03/2026 11:59 PM"
             }
         ]
     },
@@ -5708,7 +5758,8 @@ window.SCHEDULE_DATA = [
                 "when": "Tuesday (6/4) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it."
+                "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it.",
+                "deadlineDate": "06/04/2026 11:59 PM"
             }
         ]
     },
