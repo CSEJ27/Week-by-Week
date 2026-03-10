@@ -1310,11 +1310,16 @@
                 const item = navLink.closest('.nav-item');
                 const wasOpen = item.classList.contains('dd-open');
                 closeAllDropdowns();
-                if (!wasOpen) item.classList.add('dd-open');
+                if (!wasOpen) {
+                    item.classList.add('dd-open');
+                    return; // keep menu open to show dropdown
+                }
+                // dropdown was open, user tapped again — navigate to the page
             }
         }
         
         closeMobileMenu();
+        closeAllDropdowns();
         
         if(id === 'home') nav('home');
         else if(id === 'recent') showRecent();
