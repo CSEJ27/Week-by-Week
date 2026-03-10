@@ -628,7 +628,7 @@
 
         let hasLinksAnywhere = false;
         let activeSubjects = [];
-        let catCounts = { 'Lectures':0, 'Sections':0, 'Tutorials':0, 'Labs':0, 'Projects':0, 'Presentations':0 };
+        let catCounts = { 'Lectures':0, 'Tutorials':0, 'Labs':0, 'Projects':0, 'Presentations':0 };
 
         window.COURSE_DATA.forEach(sub => {
             if (sub.playlists && sub.playlists.length > 0) {
@@ -640,8 +640,7 @@
                         const t = (p.title || '').toLowerCase();
                         const n = (p.note || '').toLowerCase();
                         if(t.includes('lecture') || n.includes('lecture')) catCounts['Lectures']++;
-                        if(t.includes('section') || n.includes('section')) catCounts['Sections']++;
-                        if(t.includes('tutorial') || n.includes('tutorial')) catCounts['Tutorials']++;
+                        if(t.includes('section') || n.includes('section') || t.includes('tutorial') || n.includes('tutorial')) catCounts['Tutorials']++;
                         if(t.includes('lab') || n.includes('lab')) catCounts['Labs']++;
                         if(t.includes('project') || n.includes('project')) catCounts['Projects']++;
                         if(t.includes('presentation') || n.includes('presentation')) catCounts['Presentations']++;
@@ -710,8 +709,7 @@
                     const n = (p.note || '').toLowerCase();
                     const kw = filterType.toLowerCase();
                     if(kw === 'lectures' && (t.includes('lecture') || n.includes('lecture'))) return true;
-                    if(kw === 'sections' && (t.includes('section') || n.includes('section'))) return true;
-                    if(kw === 'tutorials' && (t.includes('tutorial') || n.includes('tutorial'))) return true;
+                    if(kw === 'tutorials' && (t.includes('section') || n.includes('section') || t.includes('tutorial') || n.includes('tutorial'))) return true;
                     if(kw === 'labs' && (t.includes('lab') || n.includes('lab'))) return true;
                     if(kw === 'projects' && (t.includes('project') || n.includes('project'))) return true;
                     if(kw === 'presentations' && (t.includes('presentation') || n.includes('presentation'))) return true;

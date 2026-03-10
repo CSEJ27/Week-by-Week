@@ -3356,10 +3356,50 @@ window.COURSE_DATA = [
         "events": [],
         "playlists": [
             {
-                "title": "Spring 2026 Lectures",
+                "title": "Dr. Sahar Hagag - Spring 2026 Lectures ",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmwj6lAV9P-4-st3gCCu_AV&si=NTCBflhZlKziQabG",
                 "icon": "▶️",
                 "note": "",
+                "badgeText": "",
+                "badgeColor": "#e91e8c"
+            },
+            {
+                "title": "Dr. Khaled Tawfik - Fall 2021 Lectures",
+                "link": "https://www.youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1",
+                "icon": "▶️",
+                "note": "It's not the same content exactly so make sure to follow our timestamps from the site or compare the slides yourself while watching!.",
+                "badgeText": "",
+                "badgeColor": "#e91e8c"
+            },
+            {
+                "title": "Eng. Habiba - Spring 2024 Tutorials",
+                "link": "https://youtube.com/playlist?list=PLBiOoMs77rROrZakdz7c5r7ArJPklYUP7&si=B0qcL-Lthqw6_0Lw",
+                "icon": "👥",
+                "note": "Very useful as she solves the sheets and explains everything briefly and in a good way!.",
+                "badgeText": "",
+                "badgeColor": "#e91e8c"
+            },
+            {
+                "title": "Zero One - Spring 2024 Lectures",
+                "link": "https://www.youtube.com/playlist?list=PLcwCIYKT3kR1gEkuFnfO9p3IIV0Oxw8j7",
+                "icon": "▶️",
+                "note": "It's not the same content exactly so make sure to follow our timestamps from the site or compare the slides yourself while watching!.",
+                "badgeText": "",
+                "badgeColor": "#e91e8c"
+            },
+            {
+                "title": "Dr. Ahmed Salah Eldin - Fall 2024 Lectures",
+                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPyavmKP24AhTtdzD2OZ-qgk&si=E6J95KeRz9TgYtY7",
+                "icon": "▶️",
+                "note": "It's not the same content exactly so make sure to follow our timestamps from the site or compare the slides yourself while watching!.",
+                "badgeText": "",
+                "badgeColor": "#e91e8c"
+            },
+            {
+                "title": "Prof. Ghassan Shobaki - Spring 2021 Lectures",
+                "link": "https://youtube.com/playlist?list=PL6KMWPQP_DM-7tMNjUa7X2zGrc8jipPeI&si=nuSgh5NE8UJHiHHp",
+                "icon": "▶️",
+                "note": "He explained more chapters than the chapters we took, so make sure to use the slides to compare while watching.",
                 "badgeText": "",
                 "badgeColor": "#e91e8c"
             }
