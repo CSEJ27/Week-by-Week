@@ -119,12 +119,16 @@ window.CONFIG = {
             "icon": "🧪"
         },
         {
-            "name": "Midterm",
-            "icon": "🎓"
+            "name": "Project Discussion ",
+            "icon": "💬"
         },
         {
-            "name": "Final",
-            "icon": "🏁"
+            "name": "Project Presentation",
+            "icon": "📽️"
+        },
+        {
+            "name": "Project Submission",
+            "icon": "✔️"
         }
     ]
 };
@@ -298,6 +302,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -435,10 +447,18 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
-                "isRecent": false,
+                "isRecent": true,
                 "recentDate": "20/2/2026 10:23 PM"
             },
             {
@@ -571,6 +591,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -723,6 +751,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -920,6 +956,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -1065,6 +1109,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -1203,6 +1255,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -1396,6 +1456,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -1547,6 +1615,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -1689,6 +1765,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -1823,6 +1907,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -1959,6 +2051,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeColor": "#ff0000",
@@ -2115,6 +2215,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 }
             }
@@ -2305,6 +2413,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -2450,6 +2566,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -2584,6 +2708,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -2736,6 +2868,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -3232,7 +3372,8 @@ window.COURSE_DATA = [
                     }
                 },
                 "isNew": true,
-                "isRecent": true
+                "isRecent": true,
+                "recentDate": "01/03/2026 12:48 AM"
             },
             {
                 "title": "WEEK 4",
@@ -3528,6 +3669,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -3759,6 +3908,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -3891,6 +4048,14 @@ window.COURSE_DATA = [
                     "Formative Assignment": {
                         "vis": false,
                         "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
                         "link": "#",
                         "desc": "",
                         "isNew": false,
@@ -4030,6 +4195,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -4182,6 +4355,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -4210,7 +4391,7 @@ window.COURSE_DATA = [
         "semester": "Spring 2026",
         "weeks": [
             {
-                "title": "WEEK 0",
+                "title": "WEEK 0 - PREREQUISITES ",
                 "resources": {
                     "Lecture": {
                         "vis": false,
@@ -4329,7 +4510,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_&si=8AeTXdqIeE0N4Gri",
-                        "desc": "⚠️ Linear Algebra. A foundational core of ML that can't be skipped.",
+                        "desc": "⚠️ Linear Algebra. A foundational core of ML that can't be skipped.\nSince we've learned most of this, skip the examples and use AI to quickly summarize each video.",
                         "isNew": false
                     },
                     "Another Pre-Requisite": {
@@ -4372,9 +4553,17 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
-                "badgeText": "Prerequisites! Don't Skip!",
+                "badgeText": "Optional for lectures, required later.",
                 "showBadge": true,
                 "isRecent": true,
                 "recentDate": "13/2/2026 3:45 PM",
@@ -4529,6 +4718,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -4671,6 +4868,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -4807,6 +5012,14 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -4960,6 +5173,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -5116,6 +5337,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false
@@ -5281,6 +5510,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "locked": false,
@@ -5422,6 +5659,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -5485,8 +5730,8 @@ window.COURSE_DATA = [
                         "link": "https://lms.eng.asu.edu.eg/pluginfile.php/674730/mod_resource/content/0/Lecture%2001.pdf",
                         "desc": "",
                         "isNew": false,
-                        "recentDate": "26/2/2026 10:24 AM",
-                        "isRecent": true
+                        "recentDate": "",
+                        "isRecent": false
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -5529,8 +5774,8 @@ window.COURSE_DATA = [
                         "link": "https://lms.eng.asu.edu.eg/pluginfile.php/676319/mod_resource/content/1/MCT344-MCT342%20Sheet%2001-%20Review.pdf",
                         "desc": "solved questions in section: 1, 2, 3, 4, 5, 6, 7, 8, 9",
                         "isNew": false,
-                        "recentDate": "26/2/2026 10:24 AM",
-                        "isRecent": true
+                        "recentDate": "",
+                        "isRecent": false
                     },
                     "Lab": {
                         "vis": false,
@@ -5584,8 +5829,18 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
-                }
+                },
+                "isRecent": true,
+                "recentDate": "26/2/2026 10:24 AM"
             },
             {
                 "title": "WEEK 2",
@@ -5624,7 +5879,7 @@ window.COURSE_DATA = [
                         "link": "https://lms.eng.asu.edu.eg/pluginfile.php/674725/mod_resource/content/0/Lecture%202_%20Rigid%20Motions.pdf",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": true
+                        "isRecent": false
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -5667,8 +5922,8 @@ window.COURSE_DATA = [
                         "link": "https://lms.eng.asu.edu.eg/pluginfile.php/676319/mod_resource/content/1/MCT344-MCT342%20Sheet%2001-%20Review.pdf",
                         "desc": "solved questions in section: 23, 24, 15, 16, 17",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "26/2/2026 10:24 AM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Lab": {
                         "vis": false,
@@ -5722,8 +5977,18 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
-                }
+                },
+                "isRecent": true,
+                "recentDate": "26/2/2026 10:26 AM"
             },
             {
                 "title": "WEEK 3",
@@ -5762,8 +6027,8 @@ window.COURSE_DATA = [
                         "link": "https://lms.eng.asu.edu.eg/pluginfile.php/676459/mod_resource/content/0/Lecture%203_%20Forward%20Kinematics.pdf",
                         "desc": "",
                         "isNew": false,
-                        "recentDate": "26/2/2026 10:22 AM",
-                        "isRecent": true
+                        "recentDate": "",
+                        "isRecent": false
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -5771,7 +6036,7 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false,
-                        "recentDate": "26/2/2026 10:22 AM",
+                        "recentDate": "",
                         "isRecent": false
                     },
                     "Guide (Solving)": {
@@ -5808,8 +6073,8 @@ window.COURSE_DATA = [
                         "link": "https://lms.eng.asu.edu.eg/pluginfile.php/676318/mod_resource/content/1/MCT344-MCT342%20Sheet%2002%20-%20Rigid%20Motions.pdf",
                         "desc": "",
                         "isNew": false,
-                        "recentDate": "26/2/2026 10:23 AM",
-                        "isRecent": true
+                        "recentDate": "",
+                        "isRecent": false
                     },
                     "Lab": {
                         "vis": false,
@@ -5863,8 +6128,18 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
-                }
+                },
+                "isRecent": true,
+                "recentDate": "26/2/2026 10:28 AM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1_-XsOXQOgNauxPsRg0WPOtQDXBWsDq4X?usp=drive_link",
@@ -6141,6 +6416,19 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": ""
+            },
+            {
+                "sub": "ML",
+                "name": "Project Phase 1 Submission",
+                "icon": "✔️",
+                "when": "Thursday (16/4)",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "",
+                "isCompleted": false
             }
         ]
     },
@@ -6164,6 +6452,19 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": ""
+            },
+            {
+                "sub": "ML",
+                "name": "Quiz 2",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "Bayes Theorem and class Metrics",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "",
+                "isCompleted": false
             }
         ]
     },
@@ -6228,6 +6529,32 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": ""
+            },
+            {
+                "sub": "ML",
+                "name": "Quiz 3",
+                "icon": "🧠",
+                "when": "",
+                "where": "",
+                "coverage": "SVM1 and logistic regression",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "ML",
+                "name": "Project Phase 2 Submission",
+                "icon": "✔️",
+                "when": "Monday (8/5)",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "",
+                "isCompleted": false
             }
         ]
     },
@@ -6269,6 +6596,19 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": ""
+            },
+            {
+                "sub": "ML",
+                "name": "Project Presentation",
+                "icon": "📽️",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "deadlineDate": "",
+                "isCompleted": false
             }
         ]
     },

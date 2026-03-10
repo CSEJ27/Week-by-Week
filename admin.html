@@ -515,32 +515,52 @@
         const task = window.SCHEDULE_DATA[schWIdx].tasks[tIdx];
         const whenStr = task.when || '';
         
-        const dateMatch = whenStr.match(/[\(\[](\d{1,2})[\/\-](\d{1,2})[\)\]]/);
-        let datePart = "";
-        if (dateMatch) {
-            const day = dateMatch[1].padStart(2, '0');
-            const month = dateMatch[2].padStart(2, '0');
-            datePart = `${day}/${month}/2026`;
-        }
-        
-        const timeMatch = whenStr.match(/(\d{1,2}:\d{2})\s*(AM|PM)/i);
-        let timePart = "";
-        if (timeMatch) {
-            timePart = `${timeMatch[1]} ${timeMatch[2].toUpperCase()}`;
-        }
-        
-        if (datePart && timePart) {
-            task.deadlineDate = `${datePart} ${timePart}`;
-        } else if (datePart) {
-            task.deadlineDate = `${datePart} 11:59 PM`;
-            alert("Found the date, but couldn't find a time (e.g., 10:00 AM). Defaulted to 11:59 PM.");
-        } else if (timePart) {
-            alert("Found the time, but couldn't find a date inside brackets like (25/03) or [25/03]. Please type the date in the 'When?' field.");
+        // Extract ALL dates in brackets: (25/03) or [25/03]
+        const dateMatches = [...whenStr.matchAll(/[\(\[](\d{1,2})[\/ \-](\d{1,2})[\)\]]/g)];
+        // Extract ALL times: 10:00 AM, 2:00 PM
+        const timeMatches = [...whenStr.matchAll(/(\d{1,2}:\d{2})\s*(AM|PM)/gi)];
+
+        function fmtDate(m) { return m[1].padStart(2,'0') + '/' + m[2].padStart(2,'0') + '/2026'; }
+        function fmtTime(m) { return m[1] + ' ' + m[2].toUpperCase(); }
+
+        let startStr = '';
+        let endStr = '';
+
+        if (dateMatches.length >= 2 && timeMatches.length >= 2) {
+            // Two dates + two times: (23/03) 10:00 AM to (25/03) 2:00 PM
+            startStr = fmtDate(dateMatches[0]) + ' ' + fmtTime(timeMatches[0]);
+            endStr = fmtDate(dateMatches[1]) + ' ' + fmtTime(timeMatches[1]);
+        } else if (dateMatches.length >= 2 && timeMatches.length === 1) {
+            // Two dates + one time
+            startStr = fmtDate(dateMatches[0]) + ' ' + fmtTime(timeMatches[0]);
+            endStr = fmtDate(dateMatches[1]) + ' 11:59 PM';
+        } else if (dateMatches.length >= 2 && timeMatches.length === 0) {
+            // Two dates, no times
+            startStr = fmtDate(dateMatches[0]) + ' 12:00 AM';
+            endStr = fmtDate(dateMatches[1]) + ' 11:59 PM';
+        } else if (dateMatches.length === 1 && timeMatches.length >= 2) {
+            // One date + two times: (25/03) 10:00 AM to 2:00 PM
+            const d = fmtDate(dateMatches[0]);
+            startStr = d + ' ' + fmtTime(timeMatches[0]);
+            endStr = d + ' ' + fmtTime(timeMatches[1]);
+        } else if (dateMatches.length === 1 && timeMatches.length === 1) {
+            // One date + one time (simple case)
+            startStr = fmtDate(dateMatches[0]) + ' ' + fmtTime(timeMatches[0]);
+            endStr = '';
+        } else if (dateMatches.length === 1 && timeMatches.length === 0) {
+            startStr = fmtDate(dateMatches[0]) + ' 11:59 PM';
+            endStr = '';
+            alert("Found the date, but no time (e.g., 10:00 AM). Defaulted to 11:59 PM.");
+        } else if (dateMatches.length === 0 && timeMatches.length >= 1) {
+            alert("Found time(s) but no date in brackets like (25/03). Please add a date.");
             return;
         } else {
-            alert("Couldn't find a date in brackets like (25/03) or a time like 10:00 AM in the 'When?' field.");
+            alert("Couldn't find a date in brackets like (25/03) or a time like 10:00 AM.");
             return;
         }
+
+        task.deadlineDate = startStr;
+        task.deadlineEndDate = endStr;
         renderScheduleEditor();
     }
 
@@ -611,20 +631,23 @@
                 </div>
                 <label>Extra Notes:</label><textarea rows="2" placeholder="e.g. Bring calculators" oninput="updateSchTask(${tIdx}, 'note', this.value)">${task.note || ''}</textarea>
                 
-                <div style="display:grid; grid-template-columns: 2fr 1fr; gap:10px; width:100%; margin-top:10px; background:rgba(0,0,0,0.3); padding:10px; border-radius:8px; border:1px solid rgba(0, 229, 255, 0.3);">
-                    <div>
-                        <label style="color:#00E5FF;">⏳ Deadline Tracker (Format: DD/MM/YYYY hh:mm AM/PM)</label>
-                        <div style="display:flex; align-items:center; gap:5px;">
-                            <input type="text" placeholder="e.g. 25/03/2026 10:00 AM" value="${task.deadlineDate || ''}" style="margin:0; flex:1;" oninput="updateSchTask(${tIdx}, 'deadlineDate', this.value)">
-                            <button class="btn-time" style="background:#00E5FF; color:black; font-weight:bold; border:none; padding:8px 12px; font-size:0.9rem;" onclick="autoExtractDeadline(${tIdx})" title="Auto-Extract from 'When?' field">🪄 Auto</button>
+                <div style="width:100%; margin-top:10px; background:rgba(0,0,0,0.3); padding:10px; border-radius:8px; border:1px solid rgba(0, 229, 255, 0.3);">
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+                        <label style="color:#00E5FF; margin:0;">⏳ Deadline Tracker</label>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <label class="checkbox-label" style="margin:0;"><input type="checkbox" ${task.isCompleted ? 'checked' : ''} onchange="updateSchTask(${tIdx}, 'isCompleted', this.checked)"> Mark Completed</label>
                         </div>
-                        <div style="font-size:0.7rem; color:#888; margin-top:4px;">Used strictly to sort the student "Deadlines" tab.</div>
                     </div>
-                    <div style="display:flex; align-items:center;">
-                        <label class="checkbox-label" style="margin-top:10px;">
-                            <input type="checkbox" ${task.isCompleted ? 'checked' : ''} onchange="updateSchTask(${tIdx}, 'isCompleted', this.checked)"> Mark Completed
-                        </label>
+                    <div style="display:flex; align-items:center; gap:5px; margin-bottom:6px;">
+                        <input type="text" placeholder="e.g. 25/03/2026 10:00 AM" value="${task.deadlineDate || ''}" style="margin:0; flex:1;" oninput="updateSchTask(${tIdx}, 'deadlineDate', this.value)">
+                        <button class="btn-time" style="background:#00E5FF; color:black; font-weight:bold; border:none; padding:8px 12px; font-size:0.9rem;" onclick="autoExtractDeadline(${tIdx})" title="Auto-Extract from 'When?' field">🪄 Auto</button>
                     </div>
+                    ${task.deadlineEndDate ? `<div style="display:flex; align-items:center; gap:8px; margin-top:4px; background:rgba(175,82,222,0.1); padding:6px 10px; border-radius:6px; border:1px solid rgba(175,82,222,0.25);">
+                        <span style="color:#af52de; font-size:0.8rem; font-weight:bold; white-space:nowrap;">🔄 Ends:</span>
+                        <input type="text" value="${task.deadlineEndDate}" style="margin:0; flex:1; font-size:0.85rem;" oninput="updateSchTask(${tIdx}, 'deadlineEndDate', this.value)">
+                        <button class="btn btn-del" style="font-size:0.7rem; padding:2px 8px;" onclick="updateSchTask(${tIdx}, 'deadlineEndDate', ''); renderScheduleEditor();">Clear</button>
+                    </div>` : ''}
+                    <div style="font-size:0.7rem; color:#888; margin-top:4px;">Click 🪄 Auto to extract from the "When?" field. Ranges like "10:00 AM to 2:00 PM" or two dates are auto-detected.</div>
                 </div>
             `;
             list.appendChild(el);
@@ -634,7 +657,7 @@
     function updateSchTask(tIdx, field, val) { window.SCHEDULE_DATA[schWIdx].tasks[tIdx][field] = val; }
     function addScheduleWeek() { window.SCHEDULE_DATA.push({ week: window.SCHEDULE_DATA.length + 1, tasks: [] }); schWIdx = window.SCHEDULE_DATA.length - 1; renderScheduleWeeks(); renderScheduleEditor(); }
     function delScheduleWeek(e, i) { e.stopPropagation(); if(confirm("Delete this week?")) { window.SCHEDULE_DATA.splice(i, 1); schWIdx = 0; renderScheduleWeeks(); renderScheduleEditor(); } }
-    function addScheduleTask() { window.SCHEDULE_DATA[schWIdx].tasks.push({ sub: window.COURSE_DATA.length > 0 ? window.COURSE_DATA[0].code : "UNK", name: "New Task", icon: "📝", when: "", where: "", coverage: "", note: "", whenLink: "", whereLink: "", deadlineDate: "", isCompleted: false }); renderScheduleWeeks(); renderScheduleEditor(); }
+    function addScheduleTask() { window.SCHEDULE_DATA[schWIdx].tasks.push({ sub: window.COURSE_DATA.length > 0 ? window.COURSE_DATA[0].code : "UNK", name: "New Task", icon: "📝", when: "", where: "", coverage: "", note: "", whenLink: "", whereLink: "", deadlineDate: "", deadlineEndDate: "", isCompleted: false }); renderScheduleWeeks(); renderScheduleEditor(); }
     function delScheduleTask(tIdx) { if(confirm("Remove this task?")) { window.SCHEDULE_DATA[schWIdx].tasks.splice(tIdx, 1); renderScheduleWeeks(); renderScheduleEditor(); } }
 
     function updateDeadlines() {
@@ -644,7 +667,8 @@
             if(wk.tasks) {
                 wk.tasks.forEach(t => {
                     if(!t.isCompleted && t.deadlineDate && t.deadlineDate.trim() !== '') {
-                        const ts = pDate(t.deadlineDate); 
+                        const endStr = (t.deadlineEndDate && t.deadlineEndDate.trim() !== '') ? t.deadlineEndDate : t.deadlineDate;
+                        const ts = pDate(endStr); 
                         if(ts && now > ts.getTime()) {
                             t.isCompleted = true;
                             count++;

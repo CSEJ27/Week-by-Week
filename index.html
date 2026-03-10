@@ -275,8 +275,19 @@
         <p class="subtitle" style="margin-bottom: 30px;">Track your upcoming tasks and quizzes</p>
         
         <div style="max-width: 800px; margin: 0 auto;">
+            <div id="ongoing-container" style="display:none; margin-bottom:35px;">
+                <div class="deadline-section" style="border-color:#af52de; color:#af52de;">🔄 ONGOING</div>
+                <div id="ongoing-list"></div>
+            </div>
+
             <div class="deadline-section" style="border-color:#00E5FF; color:#00E5FF;">🚨 UPCOMING</div>
             <div id="upcoming-list"></div>
+
+            <div id="unscheduled-container" style="margin-top:40px; display:none;">
+                <div style="height:1px; background:rgba(255,149,0,0.3); margin-bottom:20px;"></div>
+                <div style="font-family:'Orbitron',sans-serif; font-size:0.85rem; letter-spacing:2px; color:#ff9500; text-transform:uppercase; margin-bottom:12px; padding-left:2px; opacity:0.8;">🕐 Date TBD</div>
+                <div id="unscheduled-list"></div>
+            </div>
 
             <div class="deadline-section" style="border-color:#555; color:#888; margin-top:50px;">✅ COMPLETED</div>
             <div id="completed-list"></div>
@@ -470,36 +481,68 @@
     function showRecent() {
         const list = document.getElementById('recent-list');
         list.innerHTML = '';
-        let items = [];
+        let weekItems = [];
+        let resItems = [];
 
         window.COURSE_DATA.forEach(sub => {
             const combinedLists = [...(sub.weeks || []), ...(sub.events || [])];
             combinedLists.forEach(wk => {
                 if(wk.isRecent) {
-                    items.push({ type: 'week', subName: sub.name, subCode: sub.code, wkObj: wk, dateStr: wk.recentDate || "", timestamp: parseDate(wk.recentDate) });
+                    weekItems.push({ type: 'week', subName: sub.name, subCode: sub.code, wkObj: wk, dateStr: wk.recentDate || "", timestamp: parseDate(wk.recentDate) });
                 }
                 if(wk.resources) {
                     Object.keys(wk.resources).forEach(k => {
                         const res = wk.resources[k];
                         if(res.isRecent && res.vis) {
-                            items.push({ type: 'res', subName: sub.name, subCode: sub.code, wkObj: wk, resName: k, dateStr: res.recentDate || "", timestamp: parseDate(res.recentDate) });
+                            resItems.push({ type: 'res', subName: sub.name, subCode: sub.code, wkObj: wk, wkTitle: wk.title, resName: k, dateStr: res.recentDate || "", timestamp: parseDate(res.recentDate) });
                         }
                     });
                 }
             });
         });
 
-        items.sort((a, b) => b.timestamp - a.timestamp);
+        // Group resource items that are within the same day of each other
+        resItems.sort((a, b) => b.timestamp - a.timestamp);
+        const BATCH_GAP_MS = 24 * 60 * 60 * 1000; // 24 hours
+        let resGroups = [];
+        resItems.forEach(item => {
+            if(resGroups.length === 0) {
+                resGroups.push([item]);
+            } else {
+                const lastGroup = resGroups[resGroups.length - 1];
+                const lastItem = lastGroup[lastGroup.length - 1];
+                // Items are sorted newest-first, so lastItem.timestamp <= item before it
+                if(lastItem.timestamp - item.timestamp <= BATCH_GAP_MS) {
+                    lastGroup.push(item);
+                } else {
+                    resGroups.push([item]);
+                }
+            }
+        });
 
-        if(items.length === 0) {
+        // Build final display items: weeks stay individual, resource groups become single entries
+        let displayItems = [];
+        weekItems.forEach(w => displayItems.push({ type: 'week', item: w, timestamp: w.timestamp }));
+        resGroups.forEach(group => {
+            const newest = group[0];
+            if(group.length === 1) {
+                displayItems.push({ type: 'res-single', item: newest, timestamp: newest.timestamp });
+            } else {
+                displayItems.push({ type: 'res-batch', items: group, timestamp: newest.timestamp, dateStr: newest.dateStr });
+            }
+        });
+        displayItems.sort((a, b) => b.timestamp - a.timestamp);
+
+        if(displayItems.length === 0) {
             list.innerHTML = `<div style="text-align:center; color:#666; margin-top:50px">No history found.</div>`;
         } else {
-            items.forEach(item => {
+            displayItems.forEach(entry => {
                 const el = document.createElement('div');
                 el.className = 'recent-card';
-                el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj, true, 'recent'); };
 
-                if(item.type === 'week') {
+                if(entry.type === 'week') {
+                    const item = entry.item;
+                    el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj, true, 'recent'); };
                     let resList = "";
                     if(item.wkObj.resources) {
                         const keys = window.CONFIG && window.CONFIG.resources ? window.CONFIG.resources.map(r=>r.name) : Object.keys(item.wkObj.resources);
@@ -514,12 +557,43 @@
                         <div style="margin-top:5px; color:#888; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Full Update Includes:</div>
                         <div class="recent-sub">${resList}</div>
                     `;
-                } else {
+                } else if(entry.type === 'res-single') {
+                    const item = entry.item;
+                    el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj, true, 'recent'); };
                     el.innerHTML = `
                         <div class="recent-header"><span>${item.subName} - ${item.wkObj.title}</span><span class="recent-time">${item.dateStr}</span></div>
                         <div class="recent-sub" style="margin-top:10px;">New Upload: <strong style="color:white">${item.resName}</strong></div>
                         <div class="recent-icons">${iconMap[item.resName] || "📂"}</div>
                     `;
+                } else if(entry.type === 'res-batch') {
+                    const items = entry.items;
+                    el.style.cursor = 'default';
+                    const header = document.createElement('div');
+                    header.innerHTML = `
+                        <div class="recent-header"><span>📦 Batch Update — ${items.length} Resources</span><span class="recent-time">${entry.dateStr}</span></div>
+                        <div style="margin-top:8px; color:#888; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Includes:</div>
+                    `;
+                    el.appendChild(header);
+                    items.forEach(r => {
+                        const subColor = getSubjectColor(r.subCode);
+                        const subBg = getSubjectBg(r.subCode);
+                        const row = document.createElement('div');
+                        row.style.cssText = `display:flex; align-items:center; gap:10px; margin-top:8px; padding:8px 12px; border-radius:10px; background:rgba(0,0,0,0.2); cursor:pointer; transition:0.2s; border-left:3px solid ${subColor};`;
+                        row.innerHTML = `
+                            <span style="font-size:1.2rem;">${iconMap[r.resName] || '📂'}</span>
+                            <span style="background:${subBg}; color:${subColor}; font-size:0.7rem; font-weight:bold; padding:2px 8px; border-radius:6px;">${r.subCode}</span>
+                            <span style="color:#aaa; font-size:0.85rem;">${r.wkTitle}</span>
+                            <span style="color:white; font-weight:600; font-size:0.9rem;">${r.resName}</span>
+                        `;
+                        row.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            currSub = window.COURSE_DATA.find(s => s.code === r.subCode);
+                            showContentByObj(r.wkObj, true, 'recent');
+                        });
+                        row.addEventListener('mouseenter', () => { row.style.background = 'rgba(255,255,255,0.06)'; row.style.transform = 'translateX(4px)'; });
+                        row.addEventListener('mouseleave', () => { row.style.background = 'rgba(0,0,0,0.2)'; row.style.transform = 'translateX(0)'; });
+                        el.appendChild(row);
+                    });
                 }
                 list.appendChild(el);
             });
@@ -544,31 +618,62 @@
 
     // --- DEADLINES LOGIC ---
     function showDeadlines(push = true) {
+        const ongoingContainer = document.getElementById('ongoing-container');
+        const ongoingList = document.getElementById('ongoing-list');
         const upList = document.getElementById('upcoming-list');
         const compList = document.getElementById('completed-list');
+        const unschContainer = document.getElementById('unscheduled-container');
+        const unschList = document.getElementById('unscheduled-list');
+        ongoingList.innerHTML = '';
+        ongoingContainer.style.display = 'none';
         upList.innerHTML = '';
         compList.innerHTML = '';
+        unschList.innerHTML = '';
+        unschContainer.style.display = 'none';
 
+        let ongoing = [];
         let upcoming = [];
         let completed = [];
+        let unscheduled = [];
         const now = Date.now();
 
         window.SCHEDULE_DATA.forEach((wk, wIndex) => {
             if(wk.tasks) {
                 wk.tasks.forEach((t, tIndex) => {
-                    if(!t.deadlineDate || t.deadlineDate.trim() === '') return; 
-                    
-                    const ts = parseDate(t.deadlineDate);
-                    if(ts === 0) return;
-                    
-                    const isPast = ts < now;
-                    const item = { wIndex, tIndex, task: t, week: wk.week, timestamp: ts };
-                    if(t.isCompleted || isPast) completed.push(item);
+                    if(t.isCompleted) {
+                        const ts = parseDate(t.deadlineDate);
+                        if(ts !== 0) completed.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: ts });
+                        return;
+                    }
+                    if(!t.deadlineDate || t.deadlineDate.trim() === '') {
+                        unscheduled.push({ wIndex, tIndex, task: t, week: wk.week });
+                        return;
+                    }
+                    const tsStart = parseDate(t.deadlineDate);
+                    if(tsStart === 0) { unscheduled.push({ wIndex, tIndex, task: t, week: wk.week }); return; }
+
+                    if(t.deadlineEndDate && t.deadlineEndDate.trim() !== '') {
+                        const tsEnd = parseDate(t.deadlineEndDate);
+                        if(tsEnd !== 0) {
+                            if(now >= tsStart && now <= tsEnd) {
+                                ongoing.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: tsStart, endTimestamp: tsEnd });
+                                return;
+                            } else if(now > tsEnd) {
+                                completed.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: tsEnd });
+                                return;
+                            }
+                        }
+                    }
+
+                    const isPast = tsStart < now;
+                    const item = { wIndex, tIndex, task: t, week: wk.week, timestamp: tsStart };
+                    if(isPast) completed.push(item);
                     else upcoming.push(item);
                 });
             }
         });
 
+        ongoing.sort((a, b) => a.timestamp - b.timestamp);
         upcoming.sort((a, b) => a.timestamp - b.timestamp);
         completed.sort((a, b) => b.timestamp - a.timestamp);
 
@@ -646,8 +751,73 @@
             return html;
         }
 
+        // Render ongoing tasks
+        if(ongoing.length > 0) {
+            ongoingContainer.style.display = 'block';
+            let ongoingHtml = '';
+            ongoing.forEach(item => {
+                let subName = item.task.sub;
+                if(window.COURSE_DATA) {
+                    const sObj = window.COURSE_DATA.find(s => s.code === item.task.sub);
+                    if(sObj) subName = sObj.name;
+                }
+                const accentColor = getSubjectColor(item.task.sub);
+                const bgColor = getSubjectBg(item.task.sub);
+
+                const endD = new Date(item.endTimestamp);
+                const endDays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+                const endMonths = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                const endsStr = `${endDays[endD.getDay()]} ${endD.getDate()} ${endMonths[endD.getMonth()]}`;
+
+                const remainMs = item.endTimestamp - now;
+                const daysLeft = Math.ceil(remainMs / (1000 * 60 * 60 * 24));
+                const daysLabel = daysLeft === 1 ? '1 day left' : daysLeft + ' days left';
+
+                ongoingHtml += `
+                    <div class="card" style="border-left: 4px solid #af52de; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center; background: linear-gradient(135deg, rgba(175,82,222,0.15), var(--card-bg)); box-shadow: 0 0 20px rgba(175,82,222,0.1);" onclick="goToScheduleTask(${item.wIndex}, ${item.tIndex})">
+                        <span class="sub-badge" style="background: ${bgColor}; color: ${accentColor}; min-width: 52px; font-size: 0.72rem; padding: 5px 10px; border-radius:8px;">${item.task.sub}</span>
+                        <div style="flex: 1; margin-left: 15px;">
+                            <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${item.task.icon} ${item.task.name}</div>
+                            <div style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName} • Week ${item.week}</div>
+                        </div>
+                        <div style="display:flex; flex-direction:column; align-items:flex-end;">
+                            <div style="font-size: 0.75rem; color: #af52de; font-weight: bold; background: rgba(175,82,222,0.15); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(175,82,222,0.3); white-space:nowrap;">🔄 ONGOING</div>
+                            <div style="font-size: 0.7rem; color: #aaa; margin-top: 4px; white-space:nowrap;">Until ${endsStr} · ${daysLabel}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            ongoingList.innerHTML = ongoingHtml;
+        }
+
         upList.innerHTML = getGroupedHtml(upcoming, false);
         compList.innerHTML = getGroupedHtml(completed, true);
+
+        if(unscheduled.length > 0) {
+            unschContainer.style.display = 'block';
+            let unschHtml = '';
+            unscheduled.forEach(item => {
+                let subName = item.task.sub;
+                if(window.COURSE_DATA) {
+                    const sObj = window.COURSE_DATA.find(s => s.code === item.task.sub);
+                    if(sObj) subName = sObj.name;
+                }
+                const accentColor = getSubjectColor(item.task.sub);
+                const bgColor = getSubjectBg(item.task.sub);
+                unschHtml += `
+                    <div class="card" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center; opacity:0.75;" onclick="goToScheduleTask(${item.wIndex}, ${item.tIndex})">
+                        <span class="sub-badge" style="background: ${bgColor}; color: ${accentColor}; min-width: 52px; font-size: 0.72rem; padding: 5px 10px; border-radius:8px;">${item.task.sub}</span>
+                        <div style="flex: 1; margin-left: 15px;">
+                            <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${item.task.icon} ${item.task.name}</div>
+                            <div style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName} • Week ${item.week}</div>
+                        </div>
+                        <div style="font-size: 0.75rem; color: #ff9500; font-weight: bold; background: rgba(255,149,0,0.1); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,149,0,0.25); white-space:nowrap;">TBD</div>
+                    </div>
+                `;
+            });
+            unschList.innerHTML = unschHtml;
+        }
+
         nav('deadlines', push);
     }
 
@@ -1509,10 +1679,18 @@
             if(wk.tasks) wk.tasks.forEach((t, tIndex) => {
                 if(!t.deadlineDate || t.isCompleted) return;
                 const ts = parseDate(t.deadlineDate);
-                if(ts > now) upcoming.push({ task: t, ts, wIndex, tIndex, week: wk.week }); 
+                if(ts === 0 || ts <= now) {
+                    // For tasks with an end date currently ongoing, show them specially
+                    if(t.deadlineEndDate && ts <= now) {
+                        const tsEnd = parseDate(t.deadlineEndDate);
+                        if(tsEnd > now) upcoming.unshift({ task: t, ts, wIndex, tIndex, week: wk.week, isOngoing: true });
+                    }
+                    return;
+                }
+                upcoming.push({ task: t, ts, wIndex, tIndex, week: wk.week }); 
             });
         });
-        upcoming.sort((a,b) => a.ts - b.ts);
+        upcoming.sort((a,b) => { if(a.isOngoing && !b.isOngoing) return -1; if(!a.isOngoing && b.isOngoing) return 1; return a.ts - b.ts; });
 
         if(badge) {
             if(upcoming.length > 0) {
@@ -1550,7 +1728,8 @@
                 const daysLeft = Math.ceil(diff / (1000*60*60*24));
                 let urgency = 'dd-deadline-ok';
                 let timeLabel = daysLeft + 'd';
-                if(daysLeft <= 0) { urgency = 'dd-deadline-urgent'; timeLabel = 'TODAY'; }
+                if(item.isOngoing) { urgency = ''; timeLabel = 'NOW'; }
+                else if(daysLeft <= 0) { urgency = 'dd-deadline-urgent'; timeLabel = 'TODAY'; }
                 else if(daysLeft === 1) { urgency = 'dd-deadline-urgent'; timeLabel = 'TOMORROW'; }
                 else if(daysLeft <= 3) { urgency = 'dd-deadline-soon'; }
 
@@ -1640,9 +1819,9 @@
 
     window.onload = init;
 
-    // --- Visitor Counter (CounterAPI v1, 1hr cooldown) ---
+    // --- Visitor Counter (CounterAPI v1, 6hr cooldown) ---
     (function() {
-        var COOLDOWN_MS = 60 * 60 * 1000;
+        var COOLDOWN_MS = 6 * 60 * 60 * 1000;
         var lastHit = parseInt(localStorage.getItem('visit_ts') || '0', 10);
         var shouldCount = Date.now() - lastHit > COOLDOWN_MS;
         var url = shouldCount
