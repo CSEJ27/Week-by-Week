@@ -2910,11 +2910,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Another Alt.2": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://www.youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1",
+                        "desc": "Lec.2 part 1 + Lec.2 part 2 in this playlist",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/3/2026 5:03 PM"
                     },
                     "Formative Assignment": {
                         "vis": false,
@@ -2941,7 +2943,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1&si=mKik42W-yMfowWeM",
-                        "desc": "Lec 5 P.1 + Lec 5 P.2 [up until the 15:00 mark] + Lec 6 P.2 [CH.3: END] + Lec 7 P.1 [START: the 11th minute mark].",
+                        "desc": "Lec 5 P.1 + Lec 5 P.2 [up until the 15:00 mark] + Lec 6 P.2 [6:00 until the END] + Lec 7 P.1 [START until the 11th minute mark].",
                         "isNew": false
                     },
                     "Another Alt.": {
