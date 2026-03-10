@@ -22,6 +22,9 @@
         .week-nav-btn { background: rgba(0,0,0,0.3); border: 2px solid var(--accent-purple); color: white; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; box-shadow: 0 0 15px rgba(181, 25, 214, 0.1); font-size: 0.9rem; max-width: 45%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .week-nav-btn:hover { background: var(--accent-purple); box-shadow: 0 0 25px rgba(181, 25, 214, 0.4); }
         .week-nav-spacer { flex: 1; }
+        .visit-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(74, 144, 226, 0.1); border: 1px solid rgba(74, 144, 226, 0.25); padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; color: var(--text-sub); margin-left: 10px; vertical-align: middle; }
+        .visit-badge .vb-dot { width: 6px; height: 6px; background: #34c759; border-radius: 50%; box-shadow: 0 0 6px #34c759; animation: pulse 2s infinite alternate; flex-shrink: 0; }
+        .visit-badge .vb-num { font-family: 'Orbitron', sans-serif; font-weight: 700; color: var(--accent-blue); font-size: 0.8rem; }
         
         .header-actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         .recent-btn { background: rgba(74, 144, 226, 0.2); border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
@@ -240,7 +243,7 @@
     <div id="home-page" class="page active">
         <header>
             <h1>WEEK BY WEEK MATERIAL</h1>
-            <p class="subtitle">Select a subject to begin</p>
+            <p class="subtitle">Select a subject to begin <span class="visit-badge"><span class="vb-dot"></span> 👁️ <span class="vb-num" id="visit-count">...</span> visits</span></p>
         </header>
         <div class="header-actions">
             <button class="recent-btn" onclick="showRecent()">📜 History</button>
@@ -1627,6 +1630,31 @@
     });
 
     window.onload = init;
+
+    // --- Visitor Counter (CounterAPI v1, 1hr cooldown) ---
+    (function() {
+        var COOLDOWN_MS = 60 * 60 * 1000;
+        var lastHit = parseInt(localStorage.getItem('visit_ts') || '0', 10);
+        var shouldCount = Date.now() - lastHit > COOLDOWN_MS;
+        var url = shouldCount
+            ? 'https://api.counterapi.dev/v1/free-bobuxs-team/page-views/up'
+            : 'https://api.counterapi.dev/v1/free-bobuxs-team/page-views/';
+        fetch(url)
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (shouldCount) localStorage.setItem('visit_ts', String(Date.now()));
+                var el = document.getElementById('visit-count');
+                if (el && data && typeof data.count === 'number') {
+                    el.textContent = data.count.toLocaleString();
+                } else if (el) {
+                    el.textContent = '\u2014';
+                }
+            })
+            .catch(function() {
+                var el = document.getElementById('visit-count');
+                if (el) el.textContent = '\u2014';
+            });
+    })();
     
 </script>
 </body>
