@@ -24,11 +24,20 @@
         .recent-btn:hover { background: var(--accent-blue); color: white; box-shadow: 0 0 20px var(--accent-blue); }
         .schedule-btn { background: rgba(255, 149, 0, 0.2); border: 2px solid #ff9500; color: #ff9500; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .schedule-btn:hover { background: #ff9500; color: black; box-shadow: 0 0 20px #ff9500; }
+        .midterm-btn { background: rgba(0, 122, 255, 0.2); border: 2px solid #007aff; color: #007aff; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .midterm-btn:hover { background: #007aff; color: white; box-shadow: 0 0 20px #007aff; }
         .help-btn { background: rgba(0, 200, 83, 0.2); border: 2px solid #00c853; color: #00c853; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; text-decoration: none; display: inline-block;}
         .help-btn:hover { background: #00c853; color: white; box-shadow: 0 0 20px #00c853; }
         
         .drive-btn { background: rgba(255, 215, 0, 0.1); border: 2px solid #ffd700; color: #ffd700; padding: 8px 20px; border-radius: 20px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 10px; transition: 0.3s; font-size: 0.9rem; }
         .drive-btn:hover { background: #ffd700; color: black; box-shadow: 0 0 15px #ffd700; }
+        
+        /* Subject Sub-Tabs */
+        .subject-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .sub-tab { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; transition: 0.3s; letter-spacing: 1px; text-transform: uppercase; }
+        .sub-tab:hover { background: rgba(255,255,255,0.1); color: white; }
+        .sub-tab.active { background: var(--accent-purple); color: white; border-color: var(--accent-purple); box-shadow: 0 0 15px rgba(181, 25, 214, 0.4); }
+
         .grid { display: grid; gap: 30px; }
         .subjects-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
         .weeks-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
@@ -84,7 +93,8 @@
         .modal-subtitle { color: var(--accent-pink); font-weight: bold; margin-bottom: 25px; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
         .modal-field { margin-bottom: 15px; display: flex; flex-direction: column; gap: 5px; }
         .modal-label { color: #888; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
-        .modal-value { color: white; font-size: 1.1rem; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid var(--accent-blue); line-height: 1.4; white-space: pre-wrap; }
+        .modal-value { color: white; font-size: 1.1rem; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 8px; border-left: 3px solid var(--accent-blue); line-height: 1.4; white-space: pre-wrap; word-break: break-word;}
+        .modal-value a:hover { color: var(--accent-pink) !important; }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
     </style>
@@ -101,6 +111,7 @@
         <div class="header-actions">
             <button class="recent-btn" onclick="showRecent()">📜 History</button>
             <button class="schedule-btn" onclick="showSchedule()">📅 Schedule</button>
+            <button class="midterm-btn" onclick="showMidterms(true, 'home')">📝 Midterms</button>
             <a id="help-btn" href="#" target="_blank" class="help-btn">🤝 Help Us</a>
         </div>
         <div class="grid subjects-grid" id="subjects-grid"></div>
@@ -119,18 +130,33 @@
         <div class="grid weeks-grid" id="deliverables-grid"></div>
     </div>
 
+    <div id="midterm-page" class="page">
+        <button id="midterm-back-btn" class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <h1 style="color:#007aff">MIDTERM EXAMS</h1>
+        <p class="subtitle" style="margin-bottom: 30px;">27 March — 3 April 2026 &nbsp;·&nbsp; Spring 2026</p>
+        <div id="midterm-list" style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column;"></div>
+    </div>
+
     <div id="weeks-page" class="page">
         <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
         <div style="text-align:center;">
             <h1 id="subject-title" style="margin-bottom:5px;"></h1>
             <div id="drive-container" style="margin-bottom:20px;"></div>
         </div>
+        
+        <div id="subject-tabs" class="subject-tabs">
+            <button id="tab-weeks" class="sub-tab active" onclick="renderSubjectView('weeks')">📚 Weeks</button>
+            <button id="tab-events" class="sub-tab" onclick="renderSubjectView('events')">🎯 Exam Materials</button>
+            <button id="tab-playlists" class="sub-tab" onclick="renderSubjectView('playlists')">▶️ Playlists</button>
+        </div>
+
         <div id="filter-bar" class="filter-bar"></div>
         <div class="grid weeks-grid" id="weeks-grid"></div>
+        <div class="grid weeks-grid" id="playlists-grid" style="display:none;"></div>
     </div>
 
     <div id="content-page" class="page">
-        <button class="back-btn" onclick="nav('weeks')">← Back to Weeks</button>
+        <button id="content-back-btn" class="back-btn" onclick="nav('weeks')">← Back to Material</button>
         <div class="info-box">
             <div class="info-title" id="week-display-title"></div>
             <div id="week-details"></div>
@@ -159,25 +185,11 @@
         document.getElementById('help-btn').href = window.CONFIG.helpLink;
     }
 
-    // Backup hardcoded data just in case course_data.js hasn't been updated yet
-    if(typeof window.SCHEDULE_DATA === 'undefined') {
-        window.SCHEDULE_DATA = [
-            { week: 1, tasks: [] }, { week: 2, tasks: [] }, { week: 3, tasks: [] }, { week: 4, tasks: [] },
-            { week: 5, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
-            { week: 6, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
-            { week: 7, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' } ] },
-            { week: 8, tasks: [] }, 
-            { week: 9, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Quiz', icon: '🧠' } ] },
-            { week: 10, tasks: [ { sub: 'OS', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Assignment', icon: '📝' } ] },
-            { week: 11, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'OS', name: 'Report Presentation', icon: '📊' } ] },
-            { week: 12, tasks: [ { sub: 'DSA', name: 'Quiz', icon: '🧠' }, { sub: 'OS', name: 'Quiz', icon: '🧠' } ] },
-            { week: 13, tasks: [ { sub: 'DSA', name: 'Mini Project', icon: '🚀' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'OS', name: 'Assignment', icon: '📝' }, { sub: 'AI', name: 'Quiz', icon: '🧠' } ] },
-            { week: 14, tasks: [ { sub: 'CA', name: 'Quiz', icon: '🧠' }, { sub: 'DB', name: 'Mini Project', icon: '🚀' }, { sub: 'CN', name: 'Quiz', icon: '🧠' }, { sub: 'AI', name: 'Mini Project', icon: '🚀' } ] },
-            { week: 15, tasks: [ { sub: 'CA', name: 'Assignment', icon: '📝' }, { sub: 'CN', name: 'Mini Project', icon: '🚀' } ] }
-        ];
-    }
+    if(typeof window.MIDTERM_DATA === 'undefined') window.MIDTERM_DATA = [];
+    if(typeof window.SCHEDULE_DATA === 'undefined') window.SCHEDULE_DATA = [];
     
     let currSub = null;
+    let currentSubjectView = 'weeks'; 
 
     function init() {
         const grid = document.getElementById('subjects-grid');
@@ -185,6 +197,10 @@
         if(!window.COURSE_DATA) window.COURSE_DATA = [];
 
         window.COURSE_DATA.forEach(s => {
+            if(!s.weeks) s.weeks = [];
+            if(!s.events) s.events = [];
+            if(!s.playlists) s.playlists = [];
+            
             const el = document.createElement('div');
             el.className = 'card';
             el.innerHTML = `
@@ -198,7 +214,7 @@
         });
         
         window.onpopstate = function(event) {
-            closeModal(null, true); // ensure modal closes on back
+            closeModal(null, true);
             if(event.state) {
                 if(event.state.page === 'weeks' || event.state.page === 'content') {
                     if(!currSub && event.state.subCode) {
@@ -210,8 +226,12 @@
                 if(event.state.page === 'home') nav('home', false);
                 else if(event.state.page === 'recent') nav('recent', false);
                 else if(event.state.page === 'schedule') showSchedule(false);
-                else if(event.state.page === 'weeks') showWeeks(currSub, false);
-                else if(event.state.page === 'content') showContentByObj(event.state.wkObj, false);
+                else if(event.state.page === 'midterm') showMidterms(false, event.state.from || 'home');
+                else if(event.state.page === 'weeks') {
+                    currentSubjectView = event.state.subView || 'weeks';
+                    showWeeks(currSub, false);
+                }
+                else if(event.state.page === 'content') showContentByObj(event.state.wkObj, false, event.state.from || 'weeks');
             } else {
                 nav('home', false);
             }
@@ -231,11 +251,9 @@
             const m = parseInt(tParts[1], 10);
             if(ampm === 'PM' && h < 12) h += 12;
             if(ampm === 'AM' && h === 12) h = 0;
-            
             const yr = parseInt(dParts[2], 10);
             const mo = parseInt(dParts[1], 10) - 1;
             const da = parseInt(dParts[0], 10);
-            
             const timestamp = new Date(yr, mo, da, h, m).getTime();
             return isNaN(timestamp) ? 0 : timestamp;
         } catch(e) { return 0; }
@@ -247,31 +265,16 @@
         let items = [];
 
         window.COURSE_DATA.forEach(sub => {
-            if(!sub.weeks) return;
-            sub.weeks.forEach(wk => {
+            const combinedLists = [...(sub.weeks || []), ...(sub.events || [])];
+            combinedLists.forEach(wk => {
                 if(wk.isRecent) {
-                    items.push({
-                        type: 'week',
-                        subName: sub.name,
-                        subCode: sub.code,
-                        wkObj: wk,
-                        dateStr: wk.recentDate || "",
-                        timestamp: parseDate(wk.recentDate)
-                    });
+                    items.push({ type: 'week', subName: sub.name, subCode: sub.code, wkObj: wk, dateStr: wk.recentDate || "", timestamp: parseDate(wk.recentDate) });
                 }
                 if(wk.resources) {
                     Object.keys(wk.resources).forEach(k => {
                         const res = wk.resources[k];
                         if(res.isRecent && res.vis) {
-                            items.push({
-                                type: 'res',
-                                subName: sub.name,
-                                subCode: sub.code,
-                                wkObj: wk,
-                                resName: k,
-                                dateStr: res.recentDate || "",
-                                timestamp: parseDate(res.recentDate)
-                            });
+                            items.push({ type: 'res', subName: sub.name, subCode: sub.code, wkObj: wk, resName: k, dateStr: res.recentDate || "", timestamp: parseDate(res.recentDate) });
                         }
                     });
                 }
@@ -286,7 +289,8 @@
             items.forEach(item => {
                 const el = document.createElement('div');
                 el.className = 'recent-card';
-                el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj); };
+                // Pass 'recent' as the 'from' parameter so back button works correctly
+                el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj, true, 'recent'); };
 
                 if(item.type === 'week') {
                     let resList = "";
@@ -299,22 +303,14 @@
                         });
                     }
                     el.innerHTML = `
-                        <div class="recent-header">
-                            <span>${item.subName} - ${item.wkObj.title}</span>
-                            <span class="recent-time">${item.dateStr}</span>
-                        </div>
+                        <div class="recent-header"><span>${item.subName} - ${item.wkObj.title}</span><span class="recent-time">${item.dateStr}</span></div>
                         <div style="margin-top:5px; color:#888; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Full Update Includes:</div>
                         <div class="recent-sub">${resList}</div>
                     `;
                 } else {
                     el.innerHTML = `
-                        <div class="recent-header">
-                            <span>${item.subName} - ${item.wkObj.title}</span>
-                            <span class="recent-time">${item.dateStr}</span>
-                        </div>
-                        <div class="recent-sub" style="margin-top:10px;">
-                            New Upload: <strong style="color:white">${item.resName}</strong>
-                        </div>
+                        <div class="recent-header"><span>${item.subName} - ${item.wkObj.title}</span><span class="recent-time">${item.dateStr}</span></div>
+                        <div class="recent-sub" style="margin-top:10px;">New Upload: <strong style="color:white">${item.resName}</strong></div>
                         <div class="recent-icons">${iconMap[item.resName] || "📂"}</div>
                     `;
                 }
@@ -324,23 +320,16 @@
         nav('recent');
     }
 
-    // --- SCHEDULE LOGIC ---
     function getSubjectColor(code) { 
-        if(window.COURSE_DATA) {
-            const s = window.COURSE_DATA.find(x => x.code === code);
-            if(s && s.color) return s.color;
-        }
+        if(window.COURSE_DATA) { const s = window.COURSE_DATA.find(x => x.code === code); if(s && s.color) return s.color; }
         const fallback = { 'CA': '#ff9500', 'DSA': '#34c759', 'DB': '#007aff', 'OS': '#ff2d55', 'CN': '#af52de', 'AI': '#ffcc00' };
         return fallback[code] || '#e91e8c'; 
     }
     
     function getSubjectBg(code) { 
-        const hex = getSubjectColor(code);
-        let c; 
+        const hex = getSubjectColor(code); let c; 
         if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){ 
-            c = hex.substring(1).split(''); 
-            if(c.length === 3) c = [c[0], c[0], c[1], c[1], c[2], c[2]]; 
-            c = '0x'+c.join(''); 
+            c = hex.substring(1).split(''); if(c.length === 3) c = [c[0], c[0], c[1], c[1], c[2], c[2]]; c = '0x'+c.join(''); 
             return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.2)'; 
         } 
         return 'rgba(233,30,140,0.2)';
@@ -354,19 +343,31 @@
             const card = document.createElement('div');
             const isEmpty = !data.tasks || data.tasks.length === 0;
             const isHighLoad = !isEmpty && data.tasks.length >= 4;
+            const isMidtermWk = data.isMidterm || false;
             
-            card.className = `card ${isEmpty ? 'locked' : ''}`;
+            card.className = "card" + (isEmpty && !isMidtermWk ? " locked" : "");
+            
+            if (isMidtermWk) {
+                card.style.borderColor = '#007aff';
+                card.style.background = 'linear-gradient(135deg, rgba(0, 122, 255, 0.4), rgba(0, 60, 150, 0.6))';
+                card.style.boxShadow = '0 10px 30px rgba(0, 122, 255, 0.3)';
+                card.style.cursor = 'pointer';
+                card.onclick = () => showMidterms(true, 'schedule'); 
+            } else {
+                card.style.borderColor = 'rgba(233, 30, 140, 0.2)';
+                card.style.background = 'var(--card-bg)';
+            }
             
             let tasksHtml = '';
             if (isEmpty) {
-                tasksHtml = `<div class="empty-state">No deliverables scheduled</div>`;
+                tasksHtml = `<div class="empty-state" style="color: ${isMidtermWk ? '#fff' : '#666'}">${isMidtermWk ? 'Click here to view exams' : 'No deliverables scheduled'}</div>`;
             } else {
                 data.tasks.forEach((task, tIndex) => {
                     tasksHtml += `
-                        <div class="task-item" style="border-left-color: ${getSubjectColor(task.sub)}" onclick="openModal(${wIndex}, ${tIndex})">
+                        <div class="task-item" style="border-left-color: ${getSubjectColor(task.sub)}; ${isMidtermWk ? 'background:rgba(0,0,0,0.4);' : ''}" onclick="event.stopPropagation(); openModal(${wIndex}, ${tIndex})">
                             <span class="sub-badge" style="background: ${getSubjectBg(task.sub)}; color: ${getSubjectColor(task.sub)}">${task.sub}</span>
                             <span class="task-icon">${task.icon}</span>
-                            <span class="task-name">${task.name}</span>
+                            <span class="task-name" style="${isMidtermWk ? 'color:#fff;' : ''}">${task.name}</span>
                         </div>
                     `;
                 });
@@ -376,14 +377,22 @@
             if (!isEmpty) {
                 const badgeClass = isHighLoad ? 'total-badge high-load' : 'total-badge';
                 const plural = data.tasks.length > 1 ? 'Tasks' : 'Task';
-                badgeHtml = `<div class="${badgeClass}">${data.tasks.length} ${plural}</div>`;
+                badgeHtml = `<div class="${badgeClass}" style="${isMidtermWk ? 'border-color:#fff; color:#fff; background:rgba(0,0,0,0.3); box-shadow:none;' : ''}">${data.tasks.length} ${plural}</div>`;
             } else {
-                badgeHtml = `<div class="total-badge" style="border-color:#555; color:#888;">0 Tasks</div>`;
+                badgeHtml = `<div class="total-badge" style="border-color:${isMidtermWk?'#fff':'#555'}; color:${isMidtermWk?'#fff':'#888'}; ${isMidtermWk ? 'background:rgba(0,0,0,0.3);' : ''}">0 Tasks</div>`;
+            }
+            
+            let noteHtml = '';
+            if (data.note && data.note.trim() !== '') {
+                noteHtml = `<div style="font-size: 0.9rem; color: ${isMidtermWk ? '#fff' : 'var(--accent-pink)'}; font-weight: bold; margin-top: 5px;">${data.note}</div>`;
             }
 
             card.innerHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
-                    <h2 style="font-family:'Orbitron'; color:var(--accent-purple); font-size:1.5rem; margin:0;">WEEK ${data.week}</h2>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">
+                    <div>
+                        <h2 style="font-family:'Orbitron'; color: ${isMidtermWk ? '#fff' : 'var(--accent-purple)'}; font-size:1.5rem; margin:0;">WEEK ${data.week}</h2>
+                        ${noteHtml}
+                    </div>
                     ${badgeHtml}
                 </div>
                 <div class="task-list">
@@ -393,6 +402,48 @@
             grid.appendChild(card);
         });
         nav('schedule', push);
+    }
+    
+    function showMidterms(push = true, from = 'home') {
+        const backBtn = document.getElementById('midterm-back-btn');
+        if (from === 'schedule') {
+            backBtn.onclick = () => showSchedule();
+            backBtn.innerText = "← Back to Schedule";
+        } else {
+            backBtn.onclick = () => nav('home');
+            backBtn.innerText = "← Back to Subjects";
+        }
+
+        const container = document.getElementById('midterm-list');
+        container.innerHTML = '';
+        
+        let lastDate = '';
+        window.MIDTERM_DATA.forEach((exam, idx) => {
+            if (exam.dateLabel !== lastDate) {
+                container.innerHTML += `<div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; letter-spacing: 2px; color: var(--accent-blue); text-transform: uppercase; margin-bottom: 10px; margin-top: 30px; padding-left: 2px; font-weight: bold;">${exam.dateLabel}</div>`;
+                lastDate = exam.dateLabel;
+            }
+            
+            let subName = exam.sub;
+            if(window.COURSE_DATA) {
+                const sObj = window.COURSE_DATA.find(s => s.code === exam.sub);
+                if(sObj) subName = sObj.name;
+            }
+
+            container.innerHTML += `
+                <div class="card" style="border-left: 4px solid ${getSubjectColor(exam.sub)}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center;" onclick="openMidtermModal(${idx})">
+                    <span class="sub-badge" style="background: ${getSubjectBg(exam.sub)}; color: ${getSubjectColor(exam.sub)}; min-width: 52px; font-size: 0.72rem; padding: 5px 10px; border-radius:8px;">${exam.sub}</span>
+                    <div style="flex: 1; margin-left: 15px;">
+                        <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${subName}</div>
+                        <div style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${exam.examCode}</div>
+                    </div>
+                    <div style="font-family: 'Orbitron', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--accent-blue); white-space: nowrap; flex-shrink: 0;">${exam.time}</div>
+                </div>
+            `;
+        });
+        container.innerHTML += `<div style="text-align: center; margin-top: 52px; margin-bottom: 20px; font-size: 0.75rem; color: var(--text-sub); letter-spacing: 3px; opacity: 0.5;">GOOD LUCK &nbsp;✦&nbsp; SPRING 2026</div>`;
+        
+        nav('midterm', push, { from: from });
     }
 
     function openModal(wIndex, tIndex) {
@@ -412,10 +463,21 @@
         container.innerHTML = '';
         
         let hasContent = false;
+        
+        // Handle optional links for When and Where
+        let whenHtml = task.when;
+        if(task.whenLink && task.whenLink.trim() !== '') {
+            whenHtml = `<a href="${task.whenLink}" target="_blank" style="color:var(--accent-blue); text-decoration:underline;">${task.when || 'Link'}</a>`;
+        }
+        
+        let whereHtml = task.where;
+        if(task.whereLink && task.whereLink.trim() !== '') {
+            whereHtml = `<a href="${task.whereLink}" target="_blank" style="color:var(--accent-blue); text-decoration:underline;">${task.where || 'Link'}</a>`;
+        }
 
         const fields = [
-            { label: '🕒 When', val: task.when },
-            { label: '📍 Where', val: task.where },
+            { label: '🕒 When', val: whenHtml },
+            { label: '📍 Where', val: whereHtml },
             { label: '📚 Coverage', val: task.coverage },
             { label: '📝 Extra Notes', val: task.note }
         ];
@@ -423,19 +485,53 @@
         fields.forEach(f => {
             if(f.val && f.val.trim() !== '') {
                 hasContent = true;
-                container.innerHTML += `
-                    <div class="modal-field">
-                        <div class="modal-label">${f.label}</div>
-                        <div class="modal-value">${f.val}</div>
-                    </div>
-                `;
+                container.innerHTML += `<div class="modal-field"><div class="modal-label">${f.label}</div><div class="modal-value">${f.val}</div></div>`;
             }
         });
 
         if(!hasContent) {
             container.innerHTML = `<div style="text-align:center; color:#666; font-style:italic; padding:20px 0;">No extra details provided.</div>`;
         }
+        document.getElementById('task-modal').classList.add('active');
+    }
+    
+    function openMidtermModal(idx) {
+        const exam = window.MIDTERM_DATA[idx];
+        let subName = exam.sub;
+        if(window.COURSE_DATA) {
+            const sObj = window.COURSE_DATA.find(s => s.code === exam.sub);
+            if(sObj) subName = sObj.name;
+        }
 
+        document.getElementById('m-title').innerHTML = `🎓 Midterm Exam`;
+        document.getElementById('m-sub').innerText = `${subName} (${exam.examCode})`;
+        
+        const container = document.getElementById('m-fields-container');
+        container.innerHTML = '';
+        
+        let hasContent = false;
+        
+        let whereHtml = exam.where;
+        if(exam.whereLink && exam.whereLink.trim() !== '') {
+            whereHtml = `<a href="${exam.whereLink}" target="_blank" style="color:var(--accent-blue); text-decoration:underline;">${exam.where || 'Link'}</a>`;
+        }
+
+        const fields = [
+            { label: '📍 Where', val: whereHtml },
+            { label: '📚 Coverage', val: exam.coverage },
+            { label: '📝 Extra Notes', val: exam.note }
+        ];
+
+        fields.forEach(f => {
+            if(f.val && f.val.trim() !== '') {
+                hasContent = true;
+                container.innerHTML += `<div class="modal-field"><div class="modal-label" style="color:#007aff;">${f.label}</div><div class="modal-value" style="border-left-color:#007aff;">${f.val}</div></div>`;
+            }
+        });
+
+        if(!hasContent) {
+            container.innerHTML = `<div style="text-align:center; color:#666; font-style:italic; padding:20px 0;">No extra details provided.</div>`;
+        }
         document.getElementById('task-modal').classList.add('active');
     }
 
@@ -444,8 +540,8 @@
             document.getElementById('task-modal').classList.remove('active');
         }
     }
-    // --- END SCHEDULE LOGIC ---
 
+    // --- WEEKS, PLAYLISTS & EXAM MATERIALS LOGIC ---
     function showWeeks(sub, push = true) {
         currSub = sub;
         document.getElementById('subject-title').innerText = `${sub.code} - ${sub.name}`;
@@ -461,23 +557,81 @@
             dContainer.appendChild(a);
         }
 
-        renderFilterBar();
-        renderWeekGrid('ALL');
-        nav('weeks', push, { subCode: sub.code });
+        renderSubjectView(currentSubjectView, false); 
+        nav('weeks', push, { subCode: sub.code, subView: currentSubjectView });
     }
 
-    function renderFilterBar() {
+    function renderSubjectView(viewType, pushState = true) {
+        currentSubjectView = viewType;
+        
+        document.getElementById('tab-weeks').classList.remove('active');
+        document.getElementById('tab-events').classList.remove('active');
+        document.getElementById('tab-playlists').classList.remove('active');
+        document.getElementById(`tab-${viewType}`).classList.add('active');
+
+        const filterBar = document.getElementById('filter-bar');
+        const gridWeeks = document.getElementById('weeks-grid');
+        const gridPlaylists = document.getElementById('playlists-grid');
+
+        if (viewType === 'playlists') {
+            filterBar.style.display = 'none';
+            gridWeeks.style.display = 'none';
+            gridPlaylists.style.display = 'grid';
+            renderPlaylistGrid();
+        } else {
+            filterBar.style.display = 'flex';
+            gridPlaylists.style.display = 'none';
+            gridWeeks.style.display = 'grid';
+            renderFilterBar(viewType);
+            renderWeekGrid('ALL', viewType === 'events');
+        }
+        
+        if(pushState) {
+            history.pushState({page: 'weeks', subCode: currSub.code, subView: viewType}, null, "#weeks");
+        }
+    }
+
+    function renderPlaylistGrid() {
+        const grid = document.getElementById('playlists-grid');
+        grid.innerHTML = '';
+        if(!currSub.playlists || currSub.playlists.length === 0) {
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px; font-style:italic;">No playlists found for this subject.</div>`;
+            return;
+        }
+
+        currSub.playlists.forEach((p, i) => {
+            const el = document.createElement('div');
+            el.className = 'card';
+            
+            const badgeHtml = (p.badgeText) ? `<div class="custom-badge" style="background:${p.badgeColor || '#e91e8c'}">${p.badgeText}</div>` : '';
+            const noteHtml = (p.note) ? `<div style="color:var(--text-sub); margin-top:15px; font-size:0.9rem; line-height:1.4; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px; white-space:pre-wrap;">${p.note}</div>` : '';
+            
+            el.innerHTML = `
+                ${badgeHtml}
+                <div style="font-size:2.5rem; margin-bottom:10px">${p.icon || '▶️'}</div>
+                <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Playlist'}</div>
+                ${noteHtml}
+            `;
+            el.onclick = () => {
+                if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
+                else alert("No link assigned to this playlist.");
+            };
+            grid.appendChild(el);
+        });
+    }
+
+    function renderFilterBar(viewType) {
         const bar = document.getElementById('filter-bar');
         bar.innerHTML = '';
         
+        const sourceArr = viewType === 'events' ? currSub.events : currSub.weeks;
         const availableTypes = new Set();
-        if(currSub.weeks) {
-            currSub.weeks.forEach(w => {
+        
+        if(sourceArr) {
+            sourceArr.forEach(w => {
                 if(w.resources) {
                     Object.keys(w.resources).forEach(key => {
-                        if(w.resources[key].vis) {
-                            availableTypes.add(key);
-                        }
+                        if(w.resources[key].vis) availableTypes.add(key);
                     });
                 }
             });
@@ -486,7 +640,7 @@
         const btnAll = document.createElement('button');
         btnAll.className = 'filter-btn active';
         btnAll.innerText = 'ALL';
-        btnAll.onclick = () => { setActiveFilter(btnAll); renderWeekGrid('ALL'); };
+        btnAll.onclick = () => { setActiveFilter(btnAll); renderWeekGrid('ALL', viewType === 'events'); };
         bar.appendChild(btnAll);
 
         if(window.CONFIG && window.CONFIG.resources) {
@@ -495,7 +649,7 @@
                     const btn = document.createElement('button');
                     btn.className = 'filter-btn';
                     btn.innerText = res.name;
-                    btn.onclick = () => { setActiveFilter(btn); renderWeekGrid(res.name); };
+                    btn.onclick = () => { setActiveFilter(btn); renderWeekGrid(res.name, viewType === 'events'); };
                     bar.appendChild(btn);
                 }
             });
@@ -507,15 +661,24 @@
         btn.classList.add('active');
     }
 
-    function renderWeekGrid(filterType) {
+    function renderWeekGrid(filterType, isEvent = false) {
         const grid = document.getElementById('weeks-grid');
         grid.innerHTML = '';
-        if(!currSub.weeks) currSub.weeks = [];
+        
+        const sourceArr = isEvent ? currSub.events : currSub.weeks;
+        if(!sourceArr || sourceArr.length === 0) {
+            const emptyText = isEvent ? "No exam materials found." : "No weeks found.";
+            grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px; font-style:italic;">${emptyText}</div>`;
+            return;
+        }
 
         if(filterType === 'ALL') {
-            currSub.weeks.forEach((w, i) => {
+            sourceArr.forEach((w, i) => {
                 const el = document.createElement('div');
                 el.className = 'card' + (w.locked ? ' locked' : '');
+                
+                if(isEvent) el.style.borderLeft = `4px solid var(--accent-blue)`;
+
                 const lockIcon = w.locked ? '<div style="font-size:2rem; margin-bottom:10px">🔒</div>' : '';
                 const status = w.locked ? 'UNAVAILABLE' : 'CLICK TO VIEW';
                 const badge = w.isNew ? '<span class="badge-new">NEW!</span>' : '';
@@ -523,13 +686,13 @@
                 if(w.showBadge && w.badgeText) {
                     customBadge = `<div class="custom-badge" style="background:${w.badgeColor || '#e91e8c'}">${w.badgeText}</div>`;
                 }
-                el.innerHTML = `${customBadge}${lockIcon}<div style="font-family:'Orbitron'; font-size:1.5rem; color:var(--accent-purple); margin-bottom:5px; padding-top:10px;">${w.title}${badge}</div><div style="color:#888; font-size:0.8rem">${status}</div>`;
-                if(!w.locked) el.onclick = () => showContent(i);
+                el.innerHTML = `${customBadge}${lockIcon}<div style="font-family:'Orbitron'; font-size:1.5rem; color:${isEvent?'var(--accent-blue)':'var(--accent-purple)'}; margin-bottom:5px; padding-top:10px;">${w.title}${badge}</div><div style="color:#888; font-size:0.8rem">${status}</div>`;
+                if(!w.locked) el.onclick = () => showContentByObj(w);
                 grid.appendChild(el);
             });
         } else {
             let found = false;
-            currSub.weeks.forEach((w, i) => {
+            sourceArr.forEach((w, i) => {
                 if(w.resources && w.resources[filterType]) {
                     const res = w.resources[filterType];
                     if(res.vis) {
@@ -537,8 +700,9 @@
                         const el = document.createElement('div');
                         const isLocked = w.locked || res.lock;
                         el.className = 'card' + (isLocked ? ' locked' : '');
+                        if(isEvent) el.style.borderLeft = `4px solid var(--accent-blue)`;
+
                         const badgeText = (w.showBadge && w.badgeText) ? ` • <span style="color:${w.badgeColor}">${w.badgeText}</span>` : '';
-                        
                         const resBadgeCard = res.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
                         const notesHtml = (res.desc && res.desc.trim()) ? `<div style="margin-top:15px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.1); color:var(--text-sub); font-size:0.9rem; line-height:1.4; white-space:pre-wrap;">${res.desc}</div>` : '';
                         
@@ -559,30 +723,35 @@
                 }
             });
             if(!found) {
-                grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px;">No ${filterType} found in this subject.</div>`;
+                grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px;">No ${filterType} found.</div>`;
             }
         }
     }
 
-    function showContent(i) { showContentByObj(currSub.weeks[i]); }
+    function showContentByObj(weekOrEvent, push = true, from = 'weeks') {
+        const backBtn = document.getElementById('content-back-btn');
+        if (from === 'recent') {
+            backBtn.onclick = () => showRecent();
+            backBtn.innerText = "← Back to History";
+        } else {
+            backBtn.onclick = () => nav('weeks');
+            backBtn.innerText = "← Back to Material";
+        }
 
-    function showContentByObj(week, push = true) {
-        const badgeTitle = week.isNew ? '<span class="badge-new">NEW!</span>' : '';
-        document.getElementById('week-display-title').innerHTML = `${currSub.code} - ${week.title} ${badgeTitle}`;
+        const badgeTitle = weekOrEvent.isNew ? '<span class="badge-new">NEW!</span>' : '';
+        document.getElementById('week-display-title').innerHTML = `${currSub.code} - ${weekOrEvent.title} ${badgeTitle}`;
         const details = document.getElementById('week-details');
         const grid = document.getElementById('resources-grid');
         details.innerHTML = ''; grid.innerHTML = '';
 
-        if(!week.resources) week.resources = {};
+        if(!weekOrEvent.resources) weekOrEvent.resources = {};
 
-        // 1. Load Resource Notes
         if(window.CONFIG && window.CONFIG.resources) {
             window.CONFIG.resources.forEach(conf => {
                 const key = conf.name;
-                const val = week.resources[key];
+                const val = weekOrEvent.resources[key];
                 const icon = iconMap[key] || '📂';
                 if(val && val.vis) {
-                    
                     const resBadgeInline = val.isNew ? '<span class="badge-new">NEW!</span>' : '';
                     if(val.desc && val.desc.trim()) {
                         const row = document.createElement('div');
@@ -590,9 +759,7 @@
                         row.innerHTML = `<div class=\"detail-icon\">${icon}</div><div class=\"detail-content\"><h3>${key} ${resBadgeInline}</h3><p>${val.desc}</p></div>`;
                         details.appendChild(row);
                     }
-                    
                     const resBadgeCard = val.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
-                    
                     const el = document.createElement('div');
                     el.className = 'card' + (val.lock ? ' locked' : '');
                     el.innerHTML = `<div style=\"font-size:2.5rem; margin-bottom:10px\">${icon}</div><div style=\"font-weight:bold; text-transform:uppercase\">${key}</div>${resBadgeCard}`;
@@ -605,18 +772,14 @@
                 }
             });
         }
-        
-        nav('content', push, { subCode: currSub.code, wkObj: week });
+        nav('content', push, { subCode: currSub.code, wkObj: weekOrEvent, from: from });
     }
 
     function nav(id, push = true, stateData = {}) { 
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); 
         document.getElementById(id+'-page').classList.add('active'); 
         window.scrollTo(0,0);
-        
-        if(push) {
-            history.pushState({page: id, ...stateData}, null, "#" + id);
-        }
+        if(push) history.pushState({page: id, ...stateData}, null, "#" + id);
     }
     
     window.onload = init;
