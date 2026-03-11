@@ -7596,7 +7596,7 @@ window.UPDATES_DATA = [
     {
         "icon": "🗓️",
         "title": "Weekly Timetable",
-        "desc": "View your class timetable with section/timing support, alternating weeks, and Ramadan mode.",
+        "desc": "View your class timetable with section/timing support, alternating weeks, and Ramadan mode, go try it out and make your own combination of courses!.",
         "date": ""
     },
     {
