@@ -1597,10 +1597,16 @@
             let calHtml = `<div class="cal-grid">`;
             dayHeaders.forEach(d => { calHtml += `<div class="cal-day-header">${d}</div>`; });
 
+            const semStartDate = window.CONFIG && window.CONFIG.semesterStart ? new Date(window.CONFIG.semesterStart + 'T00:00:00') : null;
             for(let i = 0; i < firstDay; i++) {
                 calHtml += `<div class="cal-day empty"></div>`;
             }
             for(let d = 1; d <= daysInMonth; d++) {
+                const thisDate = new Date(yr, mo-1, d);
+                if(semStartDate && thisDate < semStartDate) {
+                    calHtml += `<div class="cal-day empty"></div>`;
+                    continue;
+                }
                 const dateKey = `${yr}-${String(mo).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
                 const isToday = dateKey === todayKey;
                 calHtml += `<div class="cal-day ${isToday?'today':''}">`;

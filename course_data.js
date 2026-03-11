@@ -1,5 +1,5 @@
 window.CONFIG = {
-    "semesterStart": "2026-02-08",
+    "semesterStart": "2026-02-14",
     "resources": [
         {
             "name": "Lecture",
