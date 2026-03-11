@@ -1,4 +1,5 @@
 window.CONFIG = {
+    "semesterStart": "2026-02-08",
     "resources": [
         {
             "name": "Lecture",
@@ -778,7 +779,8 @@ window.COURSE_DATA = [
                 "badgeColor": "#e91e8c"
             }
         ],
-        "color": "#ff2d55"
+        "color": "#ff2d55",
+        "subCode": "CSE351s"
     },
     {
         "code": "DSA",
@@ -1282,7 +1284,8 @@ window.COURSE_DATA = [
                 "badgeColor": "#e91e8c"
             }
         ],
-        "color": "#00e5ff"
+        "color": "#00e5ff",
+        "subCode": "CSE333s"
     },
     {
         "code": "DB",
@@ -2237,7 +2240,8 @@ window.COURSE_DATA = [
                 "badgeColor": "#e91e8c"
             }
         ],
-        "color": "#34c759"
+        "color": "#34c759",
+        "subCode": "CSE334s"
     },
     {
         "code": "CA",
@@ -2894,7 +2898,8 @@ window.COURSE_DATA = [
                 "badgeText": "",
                 "badgeColor": "#e91e8c"
             }
-        ]
+        ],
+        "subCode": "CSE313s"
     },
     {
         "code": "OS",
@@ -3734,7 +3739,8 @@ window.COURSE_DATA = [
                 "badgeColor": "#e91e8c"
             }
         ],
-        "color": "#ffd600"
+        "color": "#ffd600",
+        "subCode": "CSE335s"
     },
     {
         "code": "AI",
@@ -4382,7 +4388,8 @@ window.COURSE_DATA = [
                 "badgeColor": "#e91e8c"
             }
         ],
-        "color": "#b388ff"
+        "color": "#b388ff",
+        "subCode": "CSE471s"
     },
     {
         "code": "ML",
@@ -5359,7 +5366,8 @@ window.COURSE_DATA = [
                 "badgeText": "",
                 "badgeColor": "#e91e8c"
             }
-        ]
+        ],
+        "subCode": "CSE374s"
     },
     {
         "code": "SW",
@@ -5370,7 +5378,8 @@ window.COURSE_DATA = [
         "driveLink": "https://drive.google.com/drive/folders/1-DGr621UC2zPt5y3phF1SRJE-86eiYyK?usp=drive_link",
         "events": [],
         "playlists": [],
-        "color": "#2979ff"
+        "color": "#2979ff",
+        "subCode": "CSE337s"
     },
     {
         "code": "QC",
@@ -5685,7 +5694,8 @@ window.COURSE_DATA = [
                 "badgeColor": "#e91e8c"
             }
         ],
-        "color": "#00ff9d"
+        "color": "#00ff9d",
+        "subCode": "CSE418s"
     },
     {
         "code": "RB",
@@ -6145,7 +6155,8 @@ window.COURSE_DATA = [
         "driveLink": "https://drive.google.com/drive/folders/1_-XsOXQOgNauxPsRg0WPOtQDXBWsDq4X?usp=drive_link",
         "events": [],
         "playlists": [],
-        "color": "#ff8a65"
+        "color": "#ff8a65",
+        "subCode": "CSE373s"
     }
 ];
 
@@ -6172,7 +6183,10 @@ window.SCHEDULE_DATA = [
                 "whenLink": "",
                 "whereLink": "",
                 "deadlineDate": "25/2/2026 8:29 PM",
-                "isCompleted": true
+                "isCompleted": true,
+                "coverageNote": "Check the assignment details here!",
+                "coverageLink": "https://drive.google.com/file/d/1pizuDsEPggA4eDCmfayKvTvKZXtENAEx/view?usp=drive_link",
+                "submitText": "Outlook"
             }
         ]
     },
@@ -6190,7 +6204,11 @@ window.SCHEDULE_DATA = [
                 "whenLink": "",
                 "whereLink": "",
                 "deadlineDate": "4/3/2026 11:59 PM",
-                "isCompleted": true
+                "isCompleted": true,
+                "whenNote": "Check your times here!",
+                "coverageLink": "https://drive.google.com/drive/folders/1Hnjz6q4glALWv_r9nfig0d1twnDGk9cf?usp=drive_link",
+                "whereNote": "",
+                "coverageNote": "Check the assignment details here!"
             }
         ]
     },
@@ -6226,7 +6244,12 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": "",
-                "deadlineDate": "12/03/2026 11:59 PM"
+                "deadlineDate": "12/03/2026 11:59 PM",
+                "coverageLink": "https://drive.google.com/file/d/1KJwJuAiE31kXHMJcCGMemnjPNTjGaGSl/view?usp=drive_link",
+                "coverageNote": "Check the assignment details here!",
+                "submitNote": "Submit here now!",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=195509"
             },
             {
                 "sub": "DSA",
@@ -6236,7 +6259,12 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": "",
-                "deadlineDate": "11/03/2026 11:59 PM"
+                "deadlineDate": "11/03/2026 11:59 PM",
+                "coverageNote": "Check the assignment details here!",
+                "coverageLink": "https://drive.google.com/drive/folders/1yK9lHnqz1g4V00SR3lTHv-m3Ob5QtNlT?usp=drive_link",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=194701",
+                "submitNote": "Submit here now!"
             },
             {
                 "sub": "CN",
@@ -6249,7 +6277,12 @@ window.SCHEDULE_DATA = [
                 "whenLink": "",
                 "whereLink": "",
                 "deadlineDate": "09/03/2026 11:59 PM",
-                "isCompleted": true
+                "isCompleted": true,
+                "coverageNote": "Check the lab's photos here!",
+                "coverageLink": "https://drive.google.com/drive/folders/1KFpjIMs-KjldB91rKZSvsWCm8cjwudQg?usp=drive_link",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=190473",
+                "submitNote": "Submit here now!"
             }
         ]
     },
@@ -6301,7 +6334,12 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": "It must be done with hand on paper, WORD document is not allowed.",
-                "deadlineDate": "17/03/2026 11:59 PM"
+                "deadlineDate": "17/03/2026 11:59 PM",
+                "coverageLink": "https://drive.google.com/file/d/19M61Hi8KB2yiEEOlosaF0BoxN3xD1HWb/view?usp=drive_link",
+                "coverageNote": "Check the assignment details here!",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=195550",
+                "submitText": "LMS",
+                "submitNote": "Submit here now!"
             },
             {
                 "sub": "CA",
@@ -6311,7 +6349,10 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": "",
-                "deadlineDate": "20/03/2026 11:59 PM"
+                "deadlineDate": "20/03/2026 11:59 PM",
+                "coverageLink": "https://drive.google.com/file/d/1IuXtUh2Ft3ZymGa-kR3TKuBsZpk42gM9/view?usp=drive_link",
+                "coverageNote": "Check the assignment details here!",
+                "submitText": "LMS"
             }
         ]
     },
@@ -6353,7 +6394,12 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it.",
-                "deadlineDate": "23/03/2026 11:59 PM"
+                "deadlineDate": "23/03/2026 11:59 PM",
+                "coverageNote": "Check the lab's photos here!",
+                "coverageLink": "https://drive.google.com/drive/folders/1GZlLluK-uABftyrcvin7xZsMlyabFc__?usp=drive_link",
+                "submitText": "LMS",
+                "submitNote": "Submit here now!",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=190474"
             }
         ]
     },
@@ -6392,7 +6438,10 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": "Don't overdo it, just write what we saw in the lab and some photos and that's it.",
-                "deadlineDate": "06/04/2026 11:59 PM"
+                "deadlineDate": "06/04/2026 11:59 PM",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=194500",
+                "submitNote": "Submit here now!"
             }
         ]
     },
@@ -6727,5 +6776,881 @@ window.MIDTERM_DATA = [
         "note": "",
         "coverage": "",
         "where": ""
+    }
+];
+
+window.STAFF_DATA = [
+    {
+        "name": "Dr. Hossam Fahmy",
+        "role": "doctor",
+        "subjects": [
+            "CN"
+        ],
+        "teamsLink": "hossam_fahmy@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Youssra Elqattan",
+        "role": "doctor",
+        "subjects": [
+            "DSA"
+        ],
+        "teamsLink": "youssra.elqattan@eng.asu.edu.eg ",
+        "note": ""
+    },
+    {
+        "name": "Dr. Nivin Atef",
+        "role": "doctor",
+        "subjects": [
+            "DB"
+        ],
+        "teamsLink": "e07662@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Ashraf Salem",
+        "role": "doctor",
+        "subjects": [
+            "CA"
+        ],
+        "teamsLink": "ashraf.salem@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Sahar Hagag",
+        "role": "doctor",
+        "subjects": [
+            "OS"
+        ],
+        "teamsLink": "sahar.hagag@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Manal Zaki",
+        "role": "doctor",
+        "subjects": [
+            "AI"
+        ],
+        "teamsLink": "manal_zaki@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Nesma Rezk",
+        "role": "doctor",
+        "subjects": [
+            "ML"
+        ],
+        "teamsLink": "nesma.rezk@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Mona Ismail",
+        "role": "doctor",
+        "subjects": [
+            "SW"
+        ],
+        "teamsLink": "mona.ismail@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Khaled Kirah",
+        "role": "doctor",
+        "subjects": [
+            "QC"
+        ],
+        "teamsLink": "khaled.kirah@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Mohamed Awad",
+        "role": "doctor",
+        "subjects": [
+            "RB"
+        ],
+        "teamsLink": "mohammed.awad@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Noha Wahdan",
+        "role": "ta",
+        "subjects": [
+            "CN"
+        ],
+        "teamsLink": "noha.wahdan@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Sawsan Emad",
+        "role": "ta",
+        "subjects": [
+            "DSA"
+        ],
+        "teamsLink": "sawsan.emad@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Ahmed Selim",
+        "role": "ta",
+        "subjects": [
+            "DB"
+        ],
+        "teamsLink": "ahmed.selim@eng.asu.edu.eg",
+        "note": "Tut TA"
+    },
+    {
+        "name": "Eng. Moatsm Eldeeb",
+        "role": "ta",
+        "subjects": [
+            "CA"
+        ],
+        "teamsLink": "Moatsm.eldeeb@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Habiba Mounir",
+        "role": "ta",
+        "subjects": [
+            "OS"
+        ],
+        "teamsLink": "Habiba.Mounir@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Robeir Samir",
+        "role": "ta",
+        "subjects": [
+            "AI"
+        ],
+        "teamsLink": "robeir.samir@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Hala Shaheen",
+        "role": "ta",
+        "subjects": [
+            "ML"
+        ],
+        "teamsLink": "hala.shaheen@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Fady Faragallah",
+        "role": "ta",
+        "subjects": [
+            "SW"
+        ],
+        "teamsLink": "Fady.faragallah@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Nesma Rezk",
+        "role": "doctor",
+        "subjects": [
+            "DSA"
+        ],
+        "teamsLink": "nesma.rezk@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Asmaa Mahmoud",
+        "role": "ta",
+        "subjects": [
+            "DSA"
+        ],
+        "teamsLink": "Asmaa.Mahmoud@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Basem abdullah",
+        "role": "doctor",
+        "subjects": [
+            "CA"
+        ],
+        "teamsLink": "babdullah@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Mohamed Taher",
+        "role": "doctor",
+        "subjects": [
+            "CA"
+        ],
+        "teamsLink": "mohamed.taher@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Eng. Mohamed Musaad",
+        "role": "ta",
+        "subjects": [
+            "DB"
+        ],
+        "teamsLink": "mohamed.musaad@cis.asu.edu.eg",
+        "note": "Lab TA"
+    },
+    {
+        "name": "Eng. Hala Shaheen",
+        "role": "ta",
+        "subjects": [
+            "OS"
+        ],
+        "teamsLink": "hala.shaheen@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Hazem Abbas",
+        "role": "doctor",
+        "subjects": [
+            "ML"
+        ],
+        "teamsLink": "hazem.abbas@eng.asu.edu.eg",
+        "note": ""
+    },
+    {
+        "name": "Dr. Diaa Emad",
+        "role": "doctor",
+        "subjects": [
+            "RB"
+        ],
+        "teamsLink": "Diaa.Emad@eng.asu.edu.eg",
+        "note": ""
+    }
+];
+
+window.TIMETABLE_DATA = {
+    "timeSlots": {
+        "normal": [
+            "8:00 - 9:50",
+            "10:00 - 11:50",
+            "12:30 - 2:20",
+            "2:30 - 4:20",
+            "4:30 - 6:20",
+            "6:30 - 8:20"
+        ],
+        "ramadan": [
+            "8:00 - 9:25",
+            "9:30 - 10:55",
+            "11:00 - 12:25",
+            "1:00 - 2:25",
+            "2:30 - 3:55",
+            "4:00 - 5:25"
+        ]
+    },
+    "days": [
+        "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+    ],
+    "subjects": [
+        "Operating Systems",
+        "Computer Networks",
+        "Data Structures",
+        "Database Systems",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Computer Architecture",
+        "Quantum Computing",
+        "Robotics Engineering",
+        "Software Testing"
+    ],
+    "defaultSubjects": [
+        "Operating Systems",
+        "Computer Networks",
+        "Data Structures",
+        "Database Systems",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Computer Architecture"
+    ],
+    "sections": {
+        "1-2": [
+            {
+                "subject": "Computer Networks",
+                "type": "lec",
+                "day": 0,
+                "slot": 0,
+                "room": "Hall D",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Networks",
+                "type": "tut",
+                "day": 1,
+                "slot": 1,
+                "room": "291",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Networks",
+                "type": "lab",
+                "day": 2,
+                "slot": 3,
+                "room": "",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Architecture",
+                "type": "lec",
+                "day": 0,
+                "slot": 1,
+                "room": "Hall D",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Architecture",
+                "type": "tut",
+                "day": 0,
+                "slot": 2,
+                "room": "244",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Architecture",
+                "type": "lec",
+                "day": 4,
+                "slot": 5,
+                "room": "Online",
+                "alternating": false,
+                "backup": true,
+                "note": ""
+            },
+            {
+                "subject": "Database Systems",
+                "type": "lec",
+                "day": 2,
+                "slot": 0,
+                "room": "Hall A",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Database Systems",
+                "type": "tut",
+                "day": 4,
+                "slot": 3,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Database Systems",
+                "type": "lab",
+                "day": 0,
+                "slot": 5,
+                "room": "261",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Data Structures",
+                "type": "lec",
+                "day": 2,
+                "slot": 2,
+                "room": "Hall C",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Data Structures",
+                "type": "tut",
+                "day": 3,
+                "slot": 1,
+                "room": "319",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Operating Systems",
+                "type": "lec",
+                "day": 4,
+                "slot": 1,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Operating Systems",
+                "type": "tut",
+                "day": 0,
+                "slot": 3,
+                "room": "319",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Machine Learning",
+                "type": "lec",
+                "day": 5,
+                "slot": 1,
+                "room": "224",
+                "alternating": false,
+                "backup": false,
+                "note": "Dr. Nesma"
+            },
+            {
+                "subject": "Machine Learning",
+                "type": "lec",
+                "day": 1,
+                "slot": 4,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": "Dr. Hazem"
+            },
+            {
+                "subject": "Artificial Intelligence",
+                "type": "lec",
+                "day": 4,
+                "slot": 2,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Artificial Intelligence",
+                "type": "tut",
+                "day": 5,
+                "slot": 2,
+                "room": "224",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Quantum Computing",
+                "type": "lec",
+                "day": 0,
+                "slot": 2,
+                "room": "291",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Quantum Computing",
+                "type": "tut",
+                "day": 0,
+                "slot": 3,
+                "room": "291",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Robotics Engineering",
+                "type": "lec",
+                "day": 1,
+                "slot": 3,
+                "room": "Hall C",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Robotics Engineering",
+                "type": "tut",
+                "day": 1,
+                "slot": 4,
+                "room": "390",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Robotics Engineering",
+                "type": "lab",
+                "day": 5,
+                "slot": 3,
+                "room": "392",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Software Testing",
+                "type": "lec",
+                "day": 5,
+                "slot": 5,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Software Testing",
+                "type": "tut",
+                "day": 0,
+                "slot": 3,
+                "room": "261",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Machine Learning",
+                "type": "tut",
+                "day": 2,
+                "slot": 1,
+                "room": "319",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Data Structures",
+                "type": "lab",
+                "day": 5,
+                "slot": 0,
+                "room": "319",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            }
+        ],
+        "3-4": [
+            {
+                "subject": "Computer Networks",
+                "type": "lec",
+                "day": 0,
+                "slot": 0,
+                "room": "Hall D",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Networks",
+                "type": "tut",
+                "day": 1,
+                "slot": 1,
+                "room": "291",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Networks",
+                "type": "lab",
+                "day": 2,
+                "slot": 1,
+                "room": "",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Architecture",
+                "type": "lec",
+                "day": 0,
+                "slot": 1,
+                "room": "Hall D",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Architecture",
+                "type": "tut",
+                "day": 0,
+                "slot": 3,
+                "room": "244",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Computer Architecture",
+                "type": "lec",
+                "day": 4,
+                "slot": 5,
+                "room": "Online",
+                "alternating": false,
+                "backup": true,
+                "note": ""
+            },
+            {
+                "subject": "Database Systems",
+                "type": "lec",
+                "day": 2,
+                "slot": 0,
+                "room": "Hall A",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Database Systems",
+                "type": "tut",
+                "day": 4,
+                "slot": 3,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Database Systems",
+                "type": "lab",
+                "day": 0,
+                "slot": 4,
+                "room": "261",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Data Structures",
+                "type": "lec",
+                "day": 2,
+                "slot": 2,
+                "room": "Hall C",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Data Structures",
+                "type": "lab",
+                "day": 3,
+                "slot": 0,
+                "room": "319",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Data Structures",
+                "type": "tut",
+                "day": 3,
+                "slot": 1,
+                "room": "319",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Operating Systems",
+                "type": "lec",
+                "day": 4,
+                "slot": 1,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Operating Systems",
+                "type": "tut",
+                "day": 0,
+                "slot": 2,
+                "room": "319",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Machine Learning",
+                "type": "lec",
+                "day": 5,
+                "slot": 1,
+                "room": "224",
+                "alternating": false,
+                "backup": false,
+                "note": "Dr. Nesma"
+            },
+            {
+                "subject": "Machine Learning",
+                "type": "lec",
+                "day": 1,
+                "slot": 4,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": "Dr. Hazem"
+            },
+            {
+                "subject": "Machine Learning",
+                "type": "tut",
+                "day": 1,
+                "slot": 2,
+                "room": "390",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Artificial Intelligence",
+                "type": "lec",
+                "day": 4,
+                "slot": 2,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Artificial Intelligence",
+                "type": "tut",
+                "day": 5,
+                "slot": 2,
+                "room": "224",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Quantum Computing",
+                "type": "lec",
+                "day": 0,
+                "slot": 2,
+                "room": "291",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Quantum Computing",
+                "type": "tut",
+                "day": 0,
+                "slot": 3,
+                "room": "291",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Robotics Engineering",
+                "type": "lec",
+                "day": 1,
+                "slot": 3,
+                "room": "Hall C",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Robotics Engineering",
+                "type": "tut",
+                "day": 1,
+                "slot": 4,
+                "room": "390",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Robotics Engineering",
+                "type": "lab",
+                "day": 5,
+                "slot": 3,
+                "room": "392",
+                "alternating": true,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Software Testing",
+                "type": "lec",
+                "day": 5,
+                "slot": 5,
+                "room": "Online",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            },
+            {
+                "subject": "Software Testing",
+                "type": "tut",
+                "day": 0,
+                "slot": 3,
+                "room": "261",
+                "alternating": false,
+                "backup": false,
+                "note": ""
+            }
+        ]
+    }
+};
+
+window.UPDATES_DATA = [
+    {
+        "icon": "🗓️",
+        "title": "Weekly Timetable",
+        "desc": "View your class timetable with section/timing support, alternating weeks, and Ramadan mode.",
+        "date": ""
+    },
+    {
+        "icon": "👥",
+        "title": "Staff Contacts",
+        "desc": "Browse instructors and TAs grouped by subject with Teams links to talk to them directly.",
+        "date": ""
+    },
+    {
+        "icon": "📝",
+        "title": "Midterms Tracker",
+        "desc": "See all midterm exams, locations, coverage, and notes in one place.",
+        "date": ""
+    },
+    {
+        "icon": "🔗",
+        "title": "Useful Links",
+        "desc": "Playlists and resources for each subject — YouTube, Drive, and more.",
+        "date": ""
+    },
+    {
+        "icon": "📅",
+        "title": "Task Schedule",
+        "desc": "Semester map of all assignments, quizzes, and projects with week-by-week layout, and a month grid view.",
+        "date": ""
+    },
+    {
+        "icon": "⏳",
+        "title": "Deadlines",
+        "desc": "Upcoming deadlines with countdown timers, color-coded urgency, and ongoing tasks.",
+        "date": ""
+    },
+    {
+        "icon": "📜",
+        "title": "History",
+        "desc": "Track recently viewed materials and quickly jump back to where you left off.",
+        "date": ""
+    },
+    {
+        "icon": "⌨️",
+        "title": "Keyboard Shortcuts",
+        "desc": "Navigate the entire app with hotkeys — press the keyboard icon on the left bottom to see them all.",
+        "date": ""
+    },
+    {
+        "icon": "❓",
+        "title": "Exam Materials",
+        "desc": "Now you can access newly made materials for a specific event from the subject filtering (Weeks - Exam Materials - Useful Links).",
+        "date": ""
+    },
+    {
+        "icon": "📂",
+        "title": "Others Menu",
+        "desc": "Home page expandable 'Others' section groups extra pages neatly.",
+        "date": ""
     }
 ];

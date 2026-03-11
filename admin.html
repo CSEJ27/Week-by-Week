@@ -32,6 +32,10 @@
         .btn-expire { width: 100%; background: #673ab7; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; }
         .btn-move { background: transparent; color: #aaa; font-size: 0.8rem; padding: 2px 5px; border: 1px solid #444; border-radius: 3px; }
         .btn-move:hover { background: #444; color: white; }
+
+        .emoji-picker-dropdown { position: absolute; top: 100%; left: 0; z-index: 100; background: #1a0a2e; border: 1px solid #555; border-radius: 8px; padding: 8px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; width: 220px; max-height: 200px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0,0,0,0.6); }
+        .emoji-picker-dropdown .emoji-opt { font-size: 1.3rem; text-align: center; cursor: pointer; padding: 4px; border-radius: 6px; transition: 0.15s; border: none; background: none; }
+        .emoji-picker-dropdown .emoji-opt:hover { background: rgba(255,255,255,0.1); transform: scale(1.2); }
         
         .bulk-toolbar { padding: 8px; background: #240b3b; display: flex; gap: 5px; flex-wrap: wrap; border-bottom: 1px solid #444; }
         .btn-bulk { background: #444; font-size: 0.7rem; padding: 4px 8px; border-radius: 4px; color: #ddd; border: none; cursor: pointer; flex: 1; text-align: center; }
@@ -66,15 +70,24 @@
 <body>
 
 <div class="sidebar">
-    <div onclick="toggleConfig()" class="btn-config">⚙️ CONFIG</div>
-    <div onclick="toggleRecents()" class="btn-recents">📜 MANAGE HISTORY</div>
+    <div onclick="toggleSubjectsTab()" class="btn-config" id="btn-subjects-tab" style="background:#e91e8c; color:white;">📋 SUBJECTS</div>
     <div onclick="toggleSchedule()" class="btn-schedule">📅 MANAGE SCHEDULE</div>
-    <div onclick="toggleMidterms()" class="btn-midterms">📝 MANAGE MIDTERMS</div>
-    <div onclick="autoExpireBadges()" class="btn-expire">⏳ AUTO-EXPIRE NEW</div>
+    <div onclick="toggleUsefulLinks()" class="btn-expire" style="background:#b519d6;">🔗 MANAGE USEFUL LINKS</div>
+    <div onclick="toggleOthersGroup()" class="btn-config" id="btn-others" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;">📁 OTHERS <span id="others-arrow" style="font-size:0.8rem;">▸</span></div>
+    <div id="others-group" style="display:none;">
+        <div onclick="toggleConfig()" class="btn-config" style="padding-left:30px; font-size:0.85rem;">⚙️ CONFIG</div>
+        <div onclick="toggleRecents()" class="btn-recents" style="padding-left:30px; font-size:0.85rem;">📜 MANAGE HISTORY</div>
+        <div onclick="toggleMidterms()" class="btn-midterms" style="padding-left:30px; font-size:0.85rem;">📝 MANAGE MIDTERMS</div>
+        <div onclick="toggleStaffDirectory()" class="btn-expire" style="background:#34c759; color:black; padding-left:30px; font-size:0.85rem;">👥 MANAGE STAFF CONTACTS</div>
+        <div onclick="toggleTimetableManager()" class="btn-expire" style="background:#ff375f; color:white; padding-left:30px; font-size:0.85rem;">🗓️ MANAGE TIMETABLE</div>
+        <div onclick="toggleUpdatesManager()" class="btn-expire" style="background:#af52de; color:white; padding-left:30px; font-size:0.85rem;">🚀 MANAGE UPDATES</div>
+    </div>
     
-    <div class="panel-header">SUBJECTS</div>
-    <div id="subject-list" class="list-container"></div>
-    <button class="btn btn-add" onclick="addSubject()">+ Add Subject</button>
+    <div id="subjects-panel" style="display:flex; flex-direction:column; flex:1; overflow:hidden;">
+        <div class="panel-header">SUBJECTS</div>
+        <div id="subject-list" class="list-container"></div>
+        <button class="btn btn-add" onclick="addSubject()">+ Add Subject</button>
+    </div>
 </div>
 
 <div class="middle" id="middle-col">
@@ -138,6 +151,18 @@
         if(typeof window.SCHEDULE_DATA === 'undefined') {
             window.SCHEDULE_DATA = [{ week: 1, tasks: [] }];
         }
+        if(typeof window.STAFF_DATA === 'undefined') {
+            window.STAFF_DATA = [];
+        }
+        if(typeof window.TIMETABLE_DATA === 'undefined') {
+            window.TIMETABLE_DATA = {
+                timeSlots: { normal:["8:00 - 9:50","10:00 - 11:50","12:30 - 2:20","2:30 - 4:20","4:30 - 6:20","6:30 - 8:20"], ramadan:["8:00 - 9:25","9:30 - 10:55","11:00 - 12:25","1:00 - 2:25","2:30 - 3:55","4:00 - 5:25"] },
+                days: ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+                subjects: ["Operating Systems","Computer Networks","Data Structures","Database Systems","Machine Learning","Artificial Intelligence","Computer Architecture","Quantum Computing","Robotics Engineering","Software Testing"],
+                defaultSubjects: ["Operating Systems","Computer Networks","Data Structures","Database Systems","Machine Learning","Artificial Intelligence","Computer Architecture"],
+                sections: {"1-2":[],"3-4":[]}
+            };
+        }
 
         if(!window.CONFIG.resources || window.CONFIG.resources.length === 0) {
             window.CONFIG.resources = [ { name: "Lecture", icon: "▶️", defaultDesc: "" }, { name: "Notes", icon: "💡", defaultDesc: "" }, { name: "Lab", icon: "🧪", defaultDesc: "" } ];
@@ -169,12 +194,30 @@
     function toggleRecents() { setView('recents'); renderRecentsManager(); }
     function toggleSchedule() { setView('schedule'); renderScheduleWeeks(); renderScheduleEditor(); }
     function toggleMidterms() { setView('midterms'); renderMidtermsManager(); }
+    function toggleUsefulLinks() { setView('usefullinks'); renderUsefulLinksManager(); }
+    function toggleSubjectsTab() { exitView(); }
     function exitView() { setView('editor'); renderSubjects(); renderMiddleColumn(); renderEditor(); }
 
     function setView(mode) {
         viewMode = mode;
         const mid = document.getElementById('middle-col');
+        const subjectsPanel = document.getElementById('subjects-panel');
+        const subjectsBtn = document.getElementById('btn-subjects-tab');
+        
+        // Show/hide subjects panel
+        if (mode === 'editor') {
+            subjectsPanel.style.display = 'flex';
+            subjectsBtn.style.background = '#e91e8c';
+            subjectsBtn.style.color = 'white';
+        } else {
+            subjectsPanel.style.display = 'none';
+            subjectsBtn.style.background = '#333';
+            subjectsBtn.style.color = '#ccc';
+        }
+        
         if(mode === 'editor' || mode === 'schedule') {
+            mid.style.display = 'flex';
+        } else if(mode === 'usefullinks' || mode === 'timetable') {
             mid.style.display = 'flex';
         } else {
             mid.style.display = 'none';
@@ -225,6 +268,7 @@
         mid.innerHTML = `
             <div class="panel-header" style="padding:10px;">
                 <select class="view-select" onchange="subViewMode=this.value; wIdx=0; eIdx=0; pIdx=0; renderMiddleColumn(); renderEditor();">
+                    <option value="subject" ${subViewMode==='subject'?'selected':''}>📋 SUBJECT DETAILS</option>
                     <option value="weeks" ${subViewMode==='weeks'?'selected':''}>📚 WEEKS</option>
                     <option value="events" ${subViewMode==='events'?'selected':''}>🎯 EXAM MATERIALS</option>
                     <option value="playlists" ${subViewMode==='playlists'?'selected':''}>🔗 USEFUL LINKS</option>
@@ -238,7 +282,12 @@
         const listContainer = document.getElementById('middle-list-container');
         const btnContainer = document.getElementById('middle-btn-container');
 
-        if (subViewMode === 'weeks') {
+        if (subViewMode === 'subject') {
+            // No list needed for subject details view
+            listContainer.innerHTML = '<div style="text-align:center; color:#888; margin-top:20px; padding:10px;">Subject details are shown in the editor panel →</div>';
+            btnContainer.innerHTML = '';
+        }
+        else if (subViewMode === 'weeks') {
             sub.weeks.forEach((wk, i) => {
                 const el = document.createElement('div');
                 el.className = `list-item ${i === wIdx ? 'active' : ''}`;
@@ -305,20 +354,28 @@
         if(!window.COURSE_DATA[cIdx]) { container.innerHTML = ''; return; }
         const sub = window.COURSE_DATA[cIdx];
         
-        let html = `
+        let html = '';
+
+        if (subViewMode === 'subject') {
+            // Subject Details - its own dedicated view
+            html += `
             <div class="form-section">
                 <h3>Subject Details</h3>
                 <div style="display:grid; grid-template-columns: 1fr 3fr; gap:10px;">
                     <div><label>Code</label><input type="text" value="${sub.code}" oninput="updateData('sub', 'code', this.value)" onblur="renderSubjects()"></div>
                     <div><label>Name</label><input type="text" value="${sub.name}" oninput="updateData('sub', 'name', this.value)"></div>
                 </div>
-                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 2fr; gap:10px; margin-top:10px;">
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr 2fr; gap:10px; margin-top:10px;">
+                    <div><label>Subject Code</label><input type="text" placeholder="e.g. CSE331S" value="${sub.subCode || ''}" oninput="updateData('sub', 'subCode', this.value)"></div>
                     <div><label>Credits</label><input type="text" value="${sub.credits}" oninput="updateData('sub', 'credits', this.value)"></div>
                     <div><label>Semester</label><input type="text" value="${sub.semester}" oninput="updateData('sub', 'semester', this.value)"></div>
                     <div><label>Color</label><input type="color" value="${sub.color || getSubjectColorFallback(sub.code)}" oninput="updateData('sub', 'color', this.value)"></div>
                     <div><label>Drive Link</label><input type="text" placeholder="https://drive..." value="${sub.driveLink || ''}" oninput="updateData('sub', 'driveLink', this.value)"></div>
                 </div>
             </div>`;
+            container.innerHTML = html;
+            return;
+        }
 
         if (subViewMode === 'weeks' || subViewMode === 'events') {
             const isEvent = subViewMode === 'events';
@@ -335,7 +392,7 @@
                         <label class="checkbox-label"><input type="checkbox" ${item.isNew ? 'checked' : ''} onchange="updateData('${subViewMode}', 'isNew', this.checked); renderMiddleColumn()"> New!</label>
                         <div style="display:flex; align-items:center; gap:5px; background:#2a1b3d; padding:2px 8px; border-radius:4px; border:1px solid #444;">
                             <label class="checkbox-label"><input type="checkbox" ${item.isRecent ? 'checked' : ''} onchange="updateData('${subViewMode}', 'isRecent', this.checked)"> <span style="color:#4a90e2">History</span></label>
-                            <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${item.recentDate || ''}" oninput="updateData('${subViewMode}', 'recentDate', this.value)">
+                            <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${item.recentDate || ''}" oninput="updateData('${subViewMode}', 'recentDate', this.value); autoMarkNewContainer()">
                             <button class="btn-time" onclick="setNowContainer()">🕒</button>
                         </div>
                     </div>
@@ -371,7 +428,7 @@
                 <div class="form-section" style="border-color:#4a90e2;">
                     <h3 style="color:#4a90e2;">Link Details</h3>
                     <div style="display:grid; grid-template-columns: 60px 1fr; gap:10px;">
-                        <div><label>Icon</label><input type="text" style="text-align:center;" value="${p.icon || '🔗'}" oninput="updateData('playlists', 'icon', this.value); renderMiddleColumn()"></div>
+                        <div><label>Icon</label><div style="position:relative;"><input type="text" style="text-align:center;" value="${p.icon || '🔗'}" oninput="updateData('playlists', 'icon', this.value); renderMiddleColumn()" onfocus="showEmojiPicker(this)"><div class="emoji-picker-dropdown" style="display:none;"></div></div></div>
                         <div><label>Title</label><input type="text" value="${p.title || ''}" oninput="updateData('playlists', 'title', this.value); renderMiddleColumn()"></div>
                     </div>
                     <label>Link (URL)</label><input type="text" placeholder="https://..." value="${p.link || ''}" oninput="updateData('playlists', 'link', this.value)">
@@ -394,7 +451,34 @@
 
     function renderResources(itemObj) {
         const container = document.getElementById('res-list-container');
-        window.CONFIG.resources.forEach((conf, i) => {
+        const sub = window.COURSE_DATA[cIdx];
+        
+        // Count how many times each resource is used (vis:true) in this subject's weeks
+        const usageCount = {};
+        window.CONFIG.resources.forEach(conf => { usageCount[conf.name] = 0; });
+        const allItems = [...(sub.weeks || []), ...(sub.events || [])];
+        allItems.forEach(item => {
+            if(item.resources) {
+                Object.keys(item.resources).forEach(k => {
+                    if(item.resources[k] && item.resources[k].vis) {
+                        usageCount[k] = (usageCount[k] || 0) + 1;
+                    }
+                });
+            }
+        });
+
+        // Sort: frequently used in this subject first, then by global order
+        const sortedResources = [...window.CONFIG.resources].sort((a, b) => {
+            const aUsed = usageCount[a.name] > 0 ? 1 : 0;
+            const bUsed = usageCount[b.name] > 0 ? 1 : 0;
+            if(aUsed !== bUsed) return bUsed - aUsed; // used ones first
+            // Among used ones, sort by global order (original index)
+            const aGlobal = window.CONFIG.resources.indexOf(a);
+            const bGlobal = window.CONFIG.resources.indexOf(b);
+            return aGlobal - bGlobal;
+        });
+
+        sortedResources.forEach((conf, i) => {
             const key = conf.name;
             if(!itemObj.resources[key]) itemObj.resources[key] = { vis:false, link:"#", desc:conf.defaultDesc, isNew:false, isRecent:false };
             const val = itemObj.resources[key];
@@ -414,7 +498,7 @@
                             
                             <div style="display:flex; align-items:center; gap:5px; background:#2a1b3d; padding:2px 8px; border-radius:4px; border:1px solid #444;">
                                 <label class="checkbox-label"><input type="checkbox" ${val.isRecent ? 'checked' : ''} onchange="toggleRecentRes('${key}', this.checked)"> History</label>
-                                <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${val.recentDate || ''}" oninput="updateRes('${key}', 'recentDate', this.value)">
+                                <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${val.recentDate || ''}" oninput="updateRes('${key}', 'recentDate', this.value); autoMarkNewRes('${key}'); renderEditor()">
                                 <button class="btn-time" onclick="setNowRes('${key}')">🕒</button>
                             </div>
                         </div>
@@ -438,10 +522,31 @@
         const item = subViewMode === 'events' ? window.COURSE_DATA[cIdx].events[eIdx] : window.COURSE_DATA[cIdx].weeks[wIdx];
         item.resources[key][field] = val;
     }
-    function toggleRecentRes(key, checked) { updateRes(key, 'isRecent', checked); if(checked) { updateRes(key, 'vis', true); renderEditor(); } }
+    function toggleRecentRes(key, checked) { updateRes(key, 'isRecent', checked); if(checked) { updateRes(key, 'vis', true); autoMarkNewRes(key); renderEditor(); } }
     
-    function setNowContainer() { updateData(subViewMode, 'recentDate', getNowStr()); updateData(subViewMode, 'isRecent', true); renderEditor(); }
-    function setNowRes(key) { updateRes(key, 'recentDate', getNowStr()); toggleRecentRes(key, true); renderEditor(); }
+    function setNowContainer() { updateData(subViewMode, 'recentDate', getNowStr()); updateData(subViewMode, 'isRecent', true); updateData(subViewMode, 'isNew', true); renderEditor(); renderMiddleColumn(); }
+    function setNowRes(key) { updateRes(key, 'recentDate', getNowStr()); toggleRecentRes(key, true); updateRes(key, 'isNew', true); renderEditor(); }
+    
+    // Auto-mark isNew if recentDate is within 7 days of now
+    function isDateWithin7Days(dateStr) {
+        if (!dateStr) return false;
+        const d = pDate(dateStr);
+        if (!d) return false;
+        return Math.abs(new Date() - d) / 86400000 <= 7;
+    }
+    function autoMarkNewRes(key) {
+        const item = subViewMode === 'events' ? window.COURSE_DATA[cIdx].events[eIdx] : window.COURSE_DATA[cIdx].weeks[wIdx];
+        if (item && item.resources[key] && item.resources[key].recentDate) {
+            item.resources[key].isNew = isDateWithin7Days(item.resources[key].recentDate);
+        }
+    }
+    function autoMarkNewContainer() {
+        const item = subViewMode === 'events' ? window.COURSE_DATA[cIdx].events[eIdx] : window.COURSE_DATA[cIdx].weeks[wIdx];
+        if (item && item.recentDate) {
+            item.isNew = isDateWithin7Days(item.recentDate);
+            renderMiddleColumn();
+        }
+    }
     
     function getNowStr() {
         const now = new Date(); const d = `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`;
@@ -611,22 +716,32 @@
                     <button class="btn btn-del" onclick="delScheduleTask(${tIdx})">✕ Remove</button>
                 </div>
                 
-                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; width:100%;">
-                    <div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:12px; width:100%; overflow:hidden;">
+                    <div style="min-width:0;">
                         <label style="height:40px; display:flex; align-items:flex-end; padding-bottom:5px; box-sizing:border-box;">
                             <span style="line-height:1.2;">When? <span style="font-size:0.7rem; color:#888; font-weight:normal; display:block;">(Date in brackets like (25/03))</span></span>
                         </label>
-                        <input type="text" placeholder="e.g. Mon (25/03) 10:00 AM" value="${task.when || ''}" oninput="updateSchTask(${tIdx}, 'when', this.value)">
-                        <input type="text" placeholder="URL (Optional)" value="${task.whenLink || ''}" style="font-size:0.8rem; margin-top:-5px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'whenLink', this.value)">
+                        <input type="text" placeholder="e.g. Mon (25/03) 10:00 AM" value="${task.when || ''}" style="margin-bottom:4px;" oninput="updateSchTask(${tIdx}, 'when', this.value)">
+                        <input type="text" placeholder="URL (Optional)" value="${task.whenLink || ''}" style="font-size:0.8rem; margin-bottom:4px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'whenLink', this.value)">
+                        <input type="text" placeholder="Link note (e.g. Check your time here)" value="${task.whenNote || ''}" style="font-size:0.75rem; margin-bottom:4px; background:rgba(74,144,226,0.1); border-color:rgba(74,144,226,0.3); color:#4a90e2;" oninput="updateSchTask(${tIdx}, 'whenNote', this.value)">
                     </div>
-                    <div>
+                    <div style="min-width:0;">
                         <label style="height:40px; display:flex; align-items:flex-end; padding-bottom:5px; box-sizing:border-box;">Where?</label>
-                        <input type="text" placeholder="e.g. Online / Hall 3" value="${task.where || ''}" oninput="updateSchTask(${tIdx}, 'where', this.value)">
-                        <input type="text" placeholder="URL (Optional)" value="${task.whereLink || ''}" style="font-size:0.8rem; margin-top:-5px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'whereLink', this.value)">
+                        <input type="text" placeholder="e.g. Online / Hall 3" value="${task.where || ''}" style="margin-bottom:4px;" oninput="updateSchTask(${tIdx}, 'where', this.value)">
+                        <input type="text" placeholder="URL (Optional)" value="${task.whereLink || ''}" style="font-size:0.8rem; margin-bottom:4px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'whereLink', this.value)">
+                        <input type="text" placeholder="Link note (e.g. Check your place here)" value="${task.whereNote || ''}" style="font-size:0.75rem; margin-bottom:4px; background:rgba(74,144,226,0.1); border-color:rgba(74,144,226,0.3); color:#4a90e2;" oninput="updateSchTask(${tIdx}, 'whereNote', this.value)">
                     </div>
-                    <div>
+                    <div style="min-width:0;">
                         <label style="height:40px; display:flex; align-items:flex-end; padding-bottom:5px; box-sizing:border-box;">Coverage?</label>
-                        <input type="text" placeholder="e.g. Weeks 1 to 4" value="${task.coverage || ''}" oninput="updateSchTask(${tIdx}, 'coverage', this.value)">
+                        <input type="text" placeholder="e.g. Weeks 1 to 4" value="${task.coverage || ''}" style="margin-bottom:4px;" oninput="updateSchTask(${tIdx}, 'coverage', this.value)">
+                        <input type="text" placeholder="URL (Optional)" value="${task.coverageLink || ''}" style="font-size:0.8rem; margin-bottom:4px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'coverageLink', this.value)">
+                        <input type="text" placeholder="Link note (e.g. Check your coverage here)" value="${task.coverageNote || ''}" style="font-size:0.75rem; margin-bottom:4px; background:rgba(74,144,226,0.1); border-color:rgba(74,144,226,0.3); color:#4a90e2;" oninput="updateSchTask(${tIdx}, 'coverageNote', this.value)">
+                    </div>
+                    <div style="min-width:0;">
+                        <label style="height:40px; display:flex; align-items:flex-end; padding-bottom:5px; box-sizing:border-box;">📤 Submit?</label>
+                        <input type="text" placeholder="e.g. MS Teams / Moodle" value="${task.submitText || ''}" style="margin-bottom:4px;" oninput="updateSchTask(${tIdx}, 'submitText', this.value)">
+                        <input type="text" placeholder="URL (optional)" value="${task.submitLink || ''}" style="font-size:0.8rem; margin-bottom:4px; background:rgba(0,0,0,0.5);" oninput="updateSchTask(${tIdx}, 'submitLink', this.value)">
+                        <input type="text" placeholder="Link note (e.g. Submit here)" value="${task.submitNote || ''}" style="font-size:0.75rem; margin-bottom:4px; background:rgba(74,144,226,0.1); border-color:rgba(74,144,226,0.3); color:#4a90e2;" oninput="updateSchTask(${tIdx}, 'submitNote', this.value)">
                     </div>
                 </div>
                 <label>Extra Notes:</label><textarea rows="2" placeholder="e.g. Bring calculators" oninput="updateSchTask(${tIdx}, 'note', this.value)">${task.note || ''}</textarea>
@@ -657,7 +772,7 @@
     function updateSchTask(tIdx, field, val) { window.SCHEDULE_DATA[schWIdx].tasks[tIdx][field] = val; }
     function addScheduleWeek() { window.SCHEDULE_DATA.push({ week: window.SCHEDULE_DATA.length + 1, tasks: [] }); schWIdx = window.SCHEDULE_DATA.length - 1; renderScheduleWeeks(); renderScheduleEditor(); }
     function delScheduleWeek(e, i) { e.stopPropagation(); if(confirm("Delete this week?")) { window.SCHEDULE_DATA.splice(i, 1); schWIdx = 0; renderScheduleWeeks(); renderScheduleEditor(); } }
-    function addScheduleTask() { window.SCHEDULE_DATA[schWIdx].tasks.push({ sub: window.COURSE_DATA.length > 0 ? window.COURSE_DATA[0].code : "UNK", name: "New Task", icon: "📝", when: "", where: "", coverage: "", note: "", whenLink: "", whereLink: "", deadlineDate: "", deadlineEndDate: "", isCompleted: false }); renderScheduleWeeks(); renderScheduleEditor(); }
+    function addScheduleTask() { window.SCHEDULE_DATA[schWIdx].tasks.push({ sub: window.COURSE_DATA.length > 0 ? window.COURSE_DATA[0].code : "UNK", name: "New Task", icon: "📝", when: "", where: "", coverage: "", note: "", whenLink: "", whereLink: "", whenNote: "", whereNote: "", coverageLink: "", coverageNote: "", submitText: "", submitLink: "", submitNote: "", deadlineDate: "", deadlineEndDate: "", isCompleted: false }); renderScheduleWeeks(); renderScheduleEditor(); }
     function delScheduleTask(tIdx) { if(confirm("Remove this task?")) { window.SCHEDULE_DATA[schWIdx].tasks.splice(tIdx, 1); renderScheduleWeeks(); renderScheduleEditor(); } }
 
     function updateDeadlines() {
@@ -702,10 +817,7 @@
             el.innerHTML = `
                 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; width:100%;">
                     <strong style="color:white; font-size:1.1rem;">${m.sub} - ${m.dateLabel} @ ${m.time}</strong>
-                    <div style="display:flex; align-items:center; gap:10px;">
-                        <label style="margin:0; color:#fff;">Code:</label>
-                        <input type="text" placeholder="e.g. CSE-312" value="${m.examCode}" style="width:120px; margin:0;" oninput="window.MIDTERM_DATA[${i}].examCode = this.value">
-                    </div>
+                    <span style="color:#888; font-size:0.85rem;">${(function(){ const s = window.COURSE_DATA.find(c => c.code === m.sub); return s ? (s.subCode || s.code) : m.sub; })()}</span>
                 </div>
                 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; width:100%;">
                     <div>
@@ -727,6 +839,11 @@
         const container = document.getElementById('editor-area');
         
         let html = `
+            <div class="form-section" style="border-color:#34c759;">
+                <h3 style="color:#34c759;">📅 Semester Start Date</h3>
+                <p style="color:#888; font-size:0.8rem; margin-bottom:10px;">Used by the "Jump to Current Week" feature on the student view.</p>
+                <input type="date" value="${window.CONFIG.semesterStart || ''}" style="max-width:250px;" onchange="window.CONFIG.semesterStart = this.value;">
+            </div>
             <div class="form-section">
                 <h3>Manage Resources</h3>
                 <div id="config-list"></div>
@@ -786,17 +903,85 @@
     
     function renderRecentsManager() {
         const container = document.getElementById('editor-area');
-        container.innerHTML = '<h3>Manage History</h3><button class="btn btn-del" style="width:100%; margin-bottom:10px; background:#ff4444;" onclick="clearRecents()">Clear History</button><div id="recents-list"></div>';
+        container.innerHTML = `
+            <div class="form-section" style="border-color:#4a90e2;">
+                <h3 style="color:#4a90e2;">📜 Manage History</h3>
+                <p style="color:#888; font-size:0.85rem; margin-bottom:15px;">Items marked as "History" appear on the front-end History page, sorted by date.</p>
+                <button class="btn btn-del" style="width:100%; margin-bottom:15px; background:#ff4444; padding:10px;" onclick="clearRecents()">🗑️ Clear All History</button>
+                <div id="recents-list"></div>
+            </div>
+        `;
         const list = document.getElementById('recents-list');
-        let count = 0;
+        let items = [];
+        
         window.COURSE_DATA.forEach(sub => {
             const combinedLists = [...(sub.weeks || []), ...(sub.events || [])];
             combinedLists.forEach(wk => {
-                if(wk.isRecent) { list.appendChild(createRecRow(`${sub.code} - ${wk.title}`, () => { wk.isRecent = false; renderRecentsManager(); })); count++; }
-                if(wk.resources) { Object.entries(wk.resources).forEach(([key, r]) => { if(r.isRecent) { list.appendChild(createRecRow(`RES: ${sub.code} - ${wk.title} - ${key}`, () => { r.isRecent = false; renderRecentsManager(); })); count++; } }); }
+                if(wk.isRecent) {
+                    items.push({ type: 'week', subCode: sub.code, subName: sub.name, title: wk.title, date: wk.recentDate || '', ref: wk });
+                }
+                if(wk.resources) {
+                    Object.entries(wk.resources).forEach(([key, r]) => {
+                        if(r.isRecent) {
+                            items.push({ type: 'res', subCode: sub.code, subName: sub.name, wkTitle: wk.title, resName: key, date: r.recentDate || '', ref: r });
+                        }
+                    });
+                }
             });
         });
-        if(count === 0) list.innerHTML += '<div style="text-align:center; color:#666; margin-top:20px;">No history items.</div>';
+
+        // Sort by date, newest first
+        items.sort((a, b) => {
+            const tA = pDate(a.date); const tB = pDate(b.date);
+            return ((tB ? tB.getTime() : 0) - (tA ? tA.getTime() : 0));
+        });
+
+        if(items.length === 0) {
+            list.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px; font-style:italic;">No history items found. Mark items as "History" in the week/resource editor.</div>';
+            return;
+        }
+
+        items.forEach((item, idx) => {
+            const el = document.createElement('div');
+            el.className = 'res-item';
+            el.style.borderLeft = `4px solid ${getSubjectColor(item.subCode)}`;
+            el.style.padding = '12px 15px';
+
+            if(item.type === 'week') {
+                el.innerHTML = `
+                    <div style="flex:1;">
+                        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                            <span style="background:${getSubjectColorFallback(item.subCode)}22; color:${getSubjectColor(item.subCode)}; font-size:0.7rem; font-weight:bold; padding:2px 8px; border-radius:6px;">${item.subCode}</span>
+                            <strong style="color:white;">${item.title}</strong>
+                            <span style="font-size:0.65rem; background:rgba(233,30,140,0.15); color:var(--accent); padding:2px 6px; border-radius:4px; font-weight:bold;">WEEK</span>
+                        </div>
+                        <div style="font-size:0.8rem; color:#888; margin-top:4px;">${item.subName}</div>
+                        ${item.date ? `<div style="font-size:0.75rem; color:#4a90e2; margin-top:4px;">📅 ${item.date}</div>` : '<div style="font-size:0.75rem; color:#666; margin-top:4px; font-style:italic;">No date set</div>'}
+                    </div>
+                    <button class="btn btn-del">Remove</button>
+                `;
+            } else {
+                el.innerHTML = `
+                    <div style="flex:1;">
+                        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                            <span style="background:${getSubjectColorFallback(item.subCode)}22; color:${getSubjectColor(item.subCode)}; font-size:0.7rem; font-weight:bold; padding:2px 8px; border-radius:6px;">${item.subCode}</span>
+                            <strong style="color:white;">${item.resName}</strong>
+                            <span style="font-size:0.65rem; background:rgba(74,144,226,0.15); color:#4a90e2; padding:2px 6px; border-radius:4px; font-weight:bold;">RESOURCE</span>
+                        </div>
+                        <div style="font-size:0.8rem; color:#888; margin-top:4px;">${item.subName} — ${item.wkTitle}</div>
+                        ${item.date ? `<div style="font-size:0.75rem; color:#4a90e2; margin-top:4px;">📅 ${item.date}</div>` : '<div style="font-size:0.75rem; color:#666; margin-top:4px; font-style:italic;">No date set</div>'}
+                    </div>
+                    <button class="btn btn-del">Remove</button>
+                `;
+            }
+            el.querySelector('.btn-del').addEventListener('click', function() {
+                item.ref.isRecent = false;
+                renderRecentsManager();
+            });
+            list.appendChild(el);
+        });
+
+        list.insertAdjacentHTML('beforeend', `<div style="text-align:center; color:#666; margin-top:15px; font-size:0.8rem;">${items.length} history item${items.length !== 1 ? 's' : ''} total</div>`);
     }
 
     function createRecRow(txt, fn) { const div = document.createElement('div'); div.className='recent-manager-item'; div.innerHTML = `<span>${txt}</span><button class="btn btn-del" onclick="(${fn})()">Remove</button>`; return div; }
@@ -806,14 +991,17 @@
     function delConfigType(i) { if(confirm("Del?")) { window.CONFIG.resources.splice(i,1); renderConfigEditor(); } }
     function updateConfigName(i, name) { window.CONFIG.resources[i].name = name; }
     
-    function addSubject() { window.COURSE_DATA.push({code:"NEW", name:"New", credits:"3 Credits", semester:"Spring 2026", color: "#e91e8c", weeks:[], events:[], playlists:[]}); cIdx = window.COURSE_DATA.length-1; renderSubjects(); renderEditor(); }
+    function addSubject() { window.COURSE_DATA.push({code:"NEW", name:"New", credits:"3 Credits", semester:"Spring 2026", color: "#e91e8c", subCode: "", weeks:[], events:[], playlists:[]}); cIdx = window.COURSE_DATA.length-1; subViewMode = 'subject'; renderSubjects(); renderMiddleColumn(); renderEditor(); }
     function delSubject(e, i) { e.stopPropagation(); if(confirm("Del?")) { window.COURSE_DATA.splice(i,1); cIdx=0; renderSubjects(); renderEditor(); } }
 
     window.saveData = () => {
         let content = "window.CONFIG = " + JSON.stringify(window.CONFIG, null, 4) + ";\n\n";
         content += "window.COURSE_DATA = " + JSON.stringify(window.COURSE_DATA, null, 4) + ";\n\n";
         content += "window.SCHEDULE_DATA = " + JSON.stringify(window.SCHEDULE_DATA, null, 4) + ";\n\n";
-        content += "window.MIDTERM_DATA = " + JSON.stringify(window.MIDTERM_DATA, null, 4) + ";";
+        content += "window.MIDTERM_DATA = " + JSON.stringify(window.MIDTERM_DATA, null, 4) + ";\n\n";
+        content += "window.STAFF_DATA = " + JSON.stringify(window.STAFF_DATA, null, 4) + ";\n\n";
+        content += "window.TIMETABLE_DATA = " + JSON.stringify(window.TIMETABLE_DATA, null, 4) + ";\n\n";
+        content += "window.UPDATES_DATA = " + JSON.stringify(window.UPDATES_DATA || [], null, 4) + ";";
         const blob = new Blob([content], {type: "text/javascript"});
         const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "course_data.js"; a.click();
     };
@@ -833,7 +1021,538 @@
         alert(`Expired ${count} "New" badges older than ${DAYS_LIMIT} days.`);
     }
 
+    // --- USEFUL LINKS MANAGER ---
+    let ulSubIdx = 0; let ulLinkIdx = 0;
+
+    function renderUsefulLinksManager() {
+        const mid = document.getElementById('middle-col');
+        
+        // Subject selector in middle column
+        let subListHtml = `<div class="panel-header" style="background:#b519d6; color:white;">USEFUL LINKS</div>`;
+        subListHtml += `<div class="list-container" id="ul-sub-list" style="flex:1; overflow-y:auto;">`;
+        window.COURSE_DATA.forEach((sub, i) => {
+            const count = (sub.playlists || []).length;
+            subListHtml += `<div class="list-item ${i === ulSubIdx ? 'active' : ''}" onclick="ulSubIdx=${i}; ulLinkIdx=0; renderUsefulLinksManager(); renderUsefulLinksEditor();" style="${i === ulSubIdx ? 'border-left:5px solid #b519d6;' : ''}"><div style="flex:1">${sub.code} - ${sub.name}</div><span style="font-size:0.7rem; background:#333; padding:2px 5px; border-radius:4px;">${count} links</span></div>`;
+        });
+        subListHtml += `</div>`;
+        mid.innerHTML = subListHtml;
+        
+        renderUsefulLinksEditor();
+    }
+
+    function renderUsefulLinksEditor() {
+        const container = document.getElementById('editor-area');
+        if(!window.COURSE_DATA[ulSubIdx]) { container.innerHTML = ''; return; }
+        const sub = window.COURSE_DATA[ulSubIdx];
+        if(!sub.playlists) sub.playlists = [];
+
+        let html = `
+            <div class="form-section" style="border-color:#b519d6;">
+                <h3 style="color:#b519d6;">🔗 Useful Links for ${sub.code} - ${sub.name}</h3>
+                <div id="ul-links-list"></div>
+                <button class="btn btn-add" style="background:#b519d6; color:white; border-radius:4px; margin-top:10px;" onclick="addUsefulLink()">+ Add Useful Link to ${sub.code}</button>
+            </div>
+        `;
+        container.innerHTML = html;
+
+        const list = document.getElementById('ul-links-list');
+        sub.playlists.forEach((pl, i) => {
+            const el = document.createElement('div');
+            el.className = 'res-item';
+            el.style.flexDirection = 'column';
+            el.style.borderLeft = '4px solid #b519d6';
+            if(i === ulLinkIdx) el.style.background = 'rgba(181,25,214,0.15)';
+
+            el.innerHTML = `
+                <div style="display:flex; justify-content:space-between; width:100%; align-items:center; margin-bottom:10px;">
+                    <strong style="color:white;">${pl.icon || '🔗'} ${pl.title || 'New Link'}</strong>
+                    <button class="btn btn-del" onclick="delUsefulLink(${i})">✕ Remove</button>
+                </div>
+                <div style="display:grid; grid-template-columns: 60px 1fr; gap:10px; width:100%;">
+                    <div><label>Icon</label><div style="position:relative;"><input type="text" style="text-align:center;" value="${pl.icon || '🔗'}" oninput="window.COURSE_DATA[ulSubIdx].playlists[${i}].icon=this.value; markDirty();" onfocus="showEmojiPicker(this)"><div class="emoji-picker-dropdown" style="display:none;"></div></div></div>
+                    <div><label>Title</label><input type="text" value="${pl.title || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[${i}].title=this.value; markDirty();"></div>
+                </div>
+                <label>Link (URL)</label><input type="text" placeholder="https://..." value="${pl.link || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[${i}].link=this.value; markDirty();">
+                <label>Description / Note</label><textarea rows="2" placeholder="Notes about this link..." oninput="window.COURSE_DATA[ulSubIdx].playlists[${i}].note=this.value; markDirty();">${pl.note || ''}</textarea>
+                <div style="display:grid; grid-template-columns: 3fr 1fr; gap:10px; margin-top:5px;">
+                    <input type="text" placeholder="Badge Text (Optional)" value="${pl.badgeText || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[${i}].badgeText=this.value; markDirty();">
+                    <input type="color" value="${pl.badgeColor || '#e91e8c'}" oninput="window.COURSE_DATA[ulSubIdx].playlists[${i}].badgeColor=this.value; markDirty();">
+                </div>
+            `;
+            list.appendChild(el);
+        });
+    }
+
+    function addUsefulLink() {
+        window.COURSE_DATA[ulSubIdx].playlists.push({ title: "New Link", link: "#", icon: "🔗", note: "", badgeText: "", badgeColor: "#e91e8c" });
+        markDirty();
+        renderUsefulLinksEditor();
+    }
+
+    function delUsefulLink(i) {
+        if(confirm("Delete this link?")) {
+            window.COURSE_DATA[ulSubIdx].playlists.splice(i, 1);
+            markDirty();
+            renderUsefulLinksEditor();
+        }
+    }
+
+    // --- STAFF CONTACTS MANAGER ---
+    let staffAdminSubject = null;
+
+    function toggleStaffDirectory() { setView('staff'); renderStaffManager(); }
+
+    function renderStaffManager() {
+        const mid = document.getElementById('middle-col');
+        mid.style.display = 'flex';
+
+        if(typeof window.STAFF_DATA === 'undefined') window.STAFF_DATA = [];
+
+        // Middle column: list of subjects
+        let midHtml = `<div class="panel-header" style="background:#34c759; color:black;">👥 STAFF CONTACTS</div>`;
+        midHtml += `<div class="list-container">`;
+        midHtml += `<div class="list-item ${staffAdminSubject===null?'active':''}" style="${staffAdminSubject===null?'border-left:5px solid #34c759;':''}" onclick="staffAdminSubject=null; renderStaffManager(); renderStaffEditor();">
+            <div style="flex:1; ${staffAdminSubject===null?'':'color:#34c759'}">📋 All Staff</div>
+            <span style="font-size:0.7rem; background:#333; padding:2px 6px; border-radius:4px;">${window.STAFF_DATA.length}</span>
+        </div>`;
+        window.COURSE_DATA.forEach(sub => {
+            const count = window.STAFF_DATA.filter(p => (p.subjects || []).includes(sub.code)).length;
+            const active = staffAdminSubject === sub.code;
+            const color = sub.color || '#34c759';
+            midHtml += `<div class="list-item ${active?'active':''}" style="${active?'border-left:5px solid '+color+';':''}" onclick="staffAdminSubject='${sub.code}'; renderStaffManager(); renderStaffEditor();">
+                <div style="width:8px; height:8px; border-radius:50%; background:${color}; flex-shrink:0;"></div>
+                <div style="flex:1; ${active?'':'color:'+color}">${sub.code} - ${sub.name}</div>
+                <span style="font-size:0.7rem; background:#333; padding:2px 6px; border-radius:4px;">${count}</span>
+            </div>`;
+        });
+        midHtml += `</div>`;
+        mid.innerHTML = midHtml;
+
+        renderStaffEditor();
+    }
+
+    function renderStaffEditor() {
+        const container = document.getElementById('editor-area');
+        if(typeof window.STAFF_DATA === 'undefined') window.STAFF_DATA = [];
+
+        let filtered;
+        let title, color;
+        if (staffAdminSubject === null) {
+            filtered = window.STAFF_DATA.map((p,i) => ({...p, _idx:i}));
+            title = 'All Staff Members';
+            color = '#34c759';
+        } else {
+            filtered = window.STAFF_DATA.map((p,i) => ({...p, _idx:i})).filter(p => (p.subjects || []).includes(staffAdminSubject));
+            const sub = window.COURSE_DATA.find(s => s.code === staffAdminSubject);
+            title = sub ? sub.code + ' - ' + sub.name : staffAdminSubject;
+            color = sub ? (sub.color || '#34c759') : '#34c759';
+        }
+
+        let subOptions = '';
+        window.COURSE_DATA.forEach(sub => { subOptions += `<option value="${sub.code}">${sub.code} - ${sub.name}</option>`; });
+
+        let html = `
+            <div class="form-section" style="border-color:${color};">
+                <h3 style="color:${color};">👥 ${title}</h3>
+                <p style="color:#888; font-size:0.85rem; margin-bottom:15px;">${filtered.length} staff member${filtered.length !== 1 ? 's' : ''}${staffAdminSubject ? ' in this subject' : ' total'}.</p>
+                <div id="staff-list-admin"></div>
+                <button class="btn btn-add" style="background:${color}; color:${color==='#ffcc00'?'black':'white'}; border-radius:4px; margin-top:15px;" onclick="addStaffMember()">+ Add Staff Member</button>
+            </div>
+        `;
+        container.innerHTML = html;
+
+        const list = document.getElementById('staff-list-admin');
+        filtered.forEach(person => {
+            const i = person._idx;
+            const el = document.createElement('div');
+            el.className = 'res-item';
+            el.style.flexDirection = 'column';
+            const roleColor = person.role === 'doctor' ? '#007aff' : '#34c759';
+            el.style.borderLeft = `4px solid ${roleColor}`;
+
+            // Build subject checkboxes
+            let subCheckboxes = '';
+            window.COURSE_DATA.forEach(sub => {
+                const checked = (person.subjects || []).includes(sub.code) ? 'checked' : '';
+                subCheckboxes += `<label class="checkbox-label"><input type="checkbox" ${checked} onchange="toggleStaffSubject(${i}, '${sub.code}', this.checked)"> ${sub.code}</label>`;
+            });
+
+            el.innerHTML = `
+                <div style="display:flex; justify-content:space-between; width:100%; align-items:center; margin-bottom:10px;">
+                    <strong style="color:white;">${person.name || 'New Staff'}</strong>
+                    <button class="btn btn-del" onclick="delStaffMember(${i})">✕ Remove</button>
+                </div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; width:100%;">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" value="${person.name || ''}" oninput="window.STAFF_DATA[${i}].name=this.value; markDirty();">
+                    </div>
+                    <div>
+                        <label>Role</label>
+                        <select onchange="window.STAFF_DATA[${i}].role=this.value; markDirty(); renderStaffManager();">
+                            <option value="doctor" ${person.role === 'doctor' ? 'selected' : ''}>🎓 Doctor</option>
+                            <option value="ta" ${person.role === 'ta' ? 'selected' : ''}>👨‍🏫 TA</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="width:100%;">
+                    <label>Subjects</label>
+                    <div class="checkbox-row" style="background:#150a25; padding:8px; border-radius:6px;">${subCheckboxes}</div>
+                </div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; width:100%;">
+                    <div>
+                        <label>Teams Link (Optional)</label>
+                        <input type="text" placeholder="https://teams.microsoft.com/..." value="${person.teamsLink || ''}" oninput="window.STAFF_DATA[${i}].teamsLink=this.value; markDirty();">
+                    </div>
+                    <div>
+                        <label>Note (Optional)</label>
+                        <input type="text" placeholder="e.g. Office hours: Mon 2-4 PM" value="${person.note || ''}" oninput="window.STAFF_DATA[${i}].note=this.value; markDirty();">
+                    </div>
+                </div>
+            `;
+            list.appendChild(el);
+        });
+
+        if(filtered.length === 0) {
+            list.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px; font-style:italic;">No staff members' + (staffAdminSubject ? ' for this subject' : '') + ' yet.</div>';
+        }
+    }
+
+    function addStaffMember() {
+        const subs = staffAdminSubject ? [staffAdminSubject] : [];
+        window.STAFF_DATA.push({ name: "New Staff", role: "ta", subjects: subs, teamsLink: "", note: "" });
+        markDirty();
+        renderStaffManager();
+    }
+
+    function delStaffMember(i) {
+        if(confirm("Remove this staff member?")) {
+            window.STAFF_DATA.splice(i, 1);
+            markDirty();
+            renderStaffManager();
+        }
+    }
+
+    function toggleStaffSubject(staffIdx, subCode, checked) {
+        const person = window.STAFF_DATA[staffIdx];
+        if(!person.subjects) person.subjects = [];
+        if(checked && !person.subjects.includes(subCode)) {
+            person.subjects.push(subCode);
+        } else if(!checked) {
+            person.subjects = person.subjects.filter(s => s !== subCode);
+        }
+        markDirty();
+    }
+
+    // --- TIMETABLE MANAGER ---
+    let ttAdminSection = '3-4';
+    let ttAdminView = 'subject'; // 'subject' or 'day'
+    let ttAdminSubject = null;
+    let ttAdminDay = 0;
+
+    const TT_ADMIN_COLORS = {
+        'Operating Systems':'#00e5ff','Computer Networks':'#4a90e2','Data Structures':'#34c759','Database Systems':'#ff9500',
+        'Machine Learning':'#e91e8c','Artificial Intelligence':'#b519d6','Computer Architecture':'#ff375f',
+        'Quantum Computing':'#5e5ce6','Robotics Engineering':'#ffcc00','Software Testing':'#64d2ff'
+    };
+
+    function toggleOthersGroup() {
+        const group = document.getElementById('others-group');
+        const arrow = document.getElementById('others-arrow');
+        if (group.style.display === 'none') { group.style.display = 'block'; arrow.textContent = '▾'; }
+        else { group.style.display = 'none'; arrow.textContent = '▸'; }
+    }
+
+    function toggleTimetableManager() { setView('timetable'); renderTimetableManager(); }
+
+    function renderTimetableManager() {
+        const mid = document.getElementById('middle-col');
+        mid.style.display = 'flex';
+        const TD = window.TIMETABLE_DATA;
+        const entries = TD.sections[ttAdminSection] || [];
+        const days = TD.days;
+        const timeSlots = TD.timeSlots.normal;
+        const subjects = TD.subjects;
+
+        // Middle column: section + view mode + list of subjects or days
+        let midHtml = `<div class="panel-header" style="background:#ff375f; color:white; flex-direction:column; align-items:stretch; gap:8px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span>🗓️ TIMETABLE</span>
+                <div style="display:flex; gap:4px;">
+                    ${Object.keys(TD.sections).map(s => `<button class="btn" style="background:${ttAdminSection===s?'white':'rgba(255,255,255,0.2)'}; color:${ttAdminSection===s?'#ff375f':'white'}; padding:3px 12px; font-size:0.75rem;" onclick="ttAdminSection='${s}'; ttAdminDay=0; renderTimetableManager();">${s}</button>`).join('')}
+                </div>
+            </div>
+            <div style="display:flex; gap:4px;">
+                <button class="btn" style="flex:1; background:${ttAdminView==='subject'?'white':'rgba(255,255,255,0.2)'}; color:${ttAdminView==='subject'?'#ff375f':'white'}; padding:5px; font-size:0.75rem;" onclick="ttAdminView='subject'; renderTimetableManager();">By Subject</button>
+                <button class="btn" style="flex:1; background:${ttAdminView==='day'?'white':'rgba(255,255,255,0.2)'}; color:${ttAdminView==='day'?'#ff375f':'white'}; padding:5px; font-size:0.75rem;" onclick="ttAdminView='day'; ttAdminDay=0; renderTimetableManager();">By Day</button>
+            </div>
+        </div>`;
+        midHtml += `<div class="list-container">`;
+
+        if (ttAdminView === 'subject') {
+            subjects.forEach(sub => {
+                const count = entries.filter(e => e.subject === sub).length;
+                const color = TT_ADMIN_COLORS[sub] || '#aaa';
+                const active = ttAdminSubject === sub;
+                midHtml += `<div class="list-item ${active?'active':''}" style="${active ? 'border-left:5px solid '+color+';' : ''}" onclick="ttAdminSubject='${sub}'; renderTimetableManager(); renderTtEditor();">
+                    <div style="width:8px; height:8px; border-radius:50%; background:${color}; flex-shrink:0;"></div>
+                    <div style="flex:1; ${active?'':'color:'+color}">${sub}</div>
+                    <span style="font-size:0.7rem; background:#333; padding:2px 6px; border-radius:4px;">${count}</span>
+                </div>`;
+            });
+        } else {
+            days.forEach((day, di) => {
+                const count = entries.filter(e => e.day === di).length;
+                const active = ttAdminDay === di;
+                midHtml += `<div class="list-item ${active?'active':''}" onclick="ttAdminDay=${di}; renderTimetableManager(); renderTtEditor();">
+                    <div style="flex:1">${day}</div>
+                    <span style="font-size:0.7rem; background:#333; padding:2px 6px; border-radius:4px;">${count}</span>
+                </div>`;
+            });
+        }
+        midHtml += `</div>`;
+        mid.innerHTML = midHtml;
+
+        renderTtEditor();
+    }
+
+    function renderTtEditor() {
+        const TD = window.TIMETABLE_DATA;
+        const allEntries = TD.sections[ttAdminSection] || [];
+        const days = TD.days;
+        const timeSlots = TD.timeSlots.normal;
+        const subjects = TD.subjects;
+        const container = document.getElementById('editor-area');
+        container.scrollTo({top:0, behavior:'smooth'});
+
+        let filtered;
+        let title, color;
+        if (ttAdminView === 'subject') {
+            if (!ttAdminSubject) { container.innerHTML = '<div style="text-align:center; color:#666; margin-top:50px;">Select a subject from the list.</div>'; return; }
+            filtered = allEntries.map((e,i) => ({...e, _idx:i})).filter(e => e.subject === ttAdminSubject);
+            color = TT_ADMIN_COLORS[ttAdminSubject] || '#ff375f';
+            title = ttAdminSubject;
+        } else {
+            filtered = allEntries.map((e,i) => ({...e, _idx:i})).filter(e => e.day === ttAdminDay);
+            color = '#ff375f';
+            title = days[ttAdminDay];
+        }
+        // Sort by time slot so earliest periods appear first
+        filtered.sort((a, b) => a.slot - b.slot);
+
+        let html = `<div class="form-section" style="border-color:${color};">
+            <h3 style="color:${color};">🗓️ ${title} <span style="font-size:0.8rem; color:#888; font-weight:normal;">— Section ${ttAdminSection}</span></h3>`;
+
+        if (filtered.length === 0) {
+            html += '<div style="text-align:center; color:#666; margin:20px 0; font-style:italic;">No entries yet.</div>';
+        }
+
+        filtered.forEach(entry => {
+            const i = entry._idx;
+            const typeLabel = {lec:'Lecture', tut:'Tutorial', lab:'Lab'}[entry.type] || entry.type;
+            const typeColor = {lec:'#6ab4ff', tut:'#ffb347', lab:'#5cdb7f'}[entry.type] || '#aaa';
+            let subOpts = subjects.map(s => `<option value="${s}" ${entry.subject===s?'selected':''}>${s}</option>`).join('');
+            let dayOpts = days.map((d,di) => `<option value="${di}" ${entry.day===di?'selected':''}>${d}</option>`).join('');
+            let slotOpts = timeSlots.map((t,si) => `<option value="${si}" ${entry.slot===si?'selected':''}>${t}</option>`).join('');
+            html += `<div style="background:#150a25; padding:15px; margin-bottom:10px; border-radius:8px; border:1px solid #333; border-left:4px solid ${typeColor};">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                    <span style="font-weight:bold; color:${typeColor};">${typeLabel}${entry.room ? ' · '+entry.room : ''}</span>
+                    <button class="btn btn-del" onclick="delTtEntry(${i})">✕</button>
+                </div>
+                <div style="display:grid; grid-template-columns:${ttAdminView==='subject'?'1fr 1fr 1fr':'2fr 1fr 1fr'}; gap:10px;">
+                    ${ttAdminView==='subject' ?
+                        `<div><label>Type</label><select onchange="updateTtEntry(${i},'type',this.value); renderTtEditor();"><option value="lec" ${entry.type==='lec'?'selected':''}>Lecture</option><option value="tut" ${entry.type==='tut'?'selected':''}>Tutorial</option><option value="lab" ${entry.type==='lab'?'selected':''}>Lab</option></select></div>
+                         <div><label>Day</label><select onchange="updateTtEntry(${i},'day',parseInt(this.value)); renderTtEditor();">${dayOpts}</select></div>
+                         <div><label>Time Slot</label><select onchange="updateTtEntry(${i},'slot',parseInt(this.value)); renderTtEditor();">${slotOpts}</select></div>` :
+                        `<div><label>Subject</label><select onchange="updateTtEntry(${i},'subject',this.value); renderTtEditor();">${subOpts}</select></div>
+                         <div><label>Type</label><select onchange="updateTtEntry(${i},'type',this.value); renderTtEditor();"><option value="lec" ${entry.type==='lec'?'selected':''}>Lecture</option><option value="tut" ${entry.type==='tut'?'selected':''}>Tutorial</option><option value="lab" ${entry.type==='lab'?'selected':''}>Lab</option></select></div>
+                         <div><label>Time Slot</label><select onchange="updateTtEntry(${i},'slot',parseInt(this.value)); renderTtEditor();">${slotOpts}</select></div>`
+                    }
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;">
+                    <div><label>Room</label><input type="text" value="${entry.room||''}" oninput="updateTtEntry(${i},'room',this.value)"></div>
+                    <div><label>Note</label><input type="text" placeholder="e.g. Dr. Name" value="${entry.note||''}" oninput="updateTtEntry(${i},'note',this.value)"></div>
+                </div>
+                <div class="checkbox-row" style="margin-top:8px;">
+                    <label class="checkbox-label"><input type="checkbox" ${entry.alternating?'checked':''} onchange="updateTtEntry(${i},'alternating',this.checked)"> Alternating</label>
+                    <label class="checkbox-label"><input type="checkbox" ${entry.backup?'checked':''} onchange="updateTtEntry(${i},'backup',this.checked)"> Backup</label>
+                </div>
+            </div>`;
+        });
+
+        html += `<button class="btn btn-add" style="background:${color}; color:${color==='#ffcc00'?'black':'white'}; border-radius:4px; margin-top:10px;" onclick="addTtEntry()">+ Add Entry</button>`;
+        html += '</div>';
+        container.innerHTML = html;
+    }
+
+    function addTtEntry() {
+        const TD = window.TIMETABLE_DATA;
+        if(!TD.sections[ttAdminSection]) TD.sections[ttAdminSection] = [];
+        const newEntry = { subject: ttAdminSubject || TD.subjects[0], type:'lec', day: ttAdminView==='day' ? ttAdminDay : 0, slot:0, room:'', alternating:false, backup:false, note:'' };
+        TD.sections[ttAdminSection].push(newEntry);
+        markDirty(); renderTimetableManager();
+    }
+    function delTtEntry(i) {
+        if(confirm('Remove this entry?')) { window.TIMETABLE_DATA.sections[ttAdminSection].splice(i,1); markDirty(); renderTimetableManager(); }
+    }
+    function updateTtEntry(i, key, val) {
+        window.TIMETABLE_DATA.sections[ttAdminSection][i][key] = val; markDirty();
+    }
+
+    // --- UPDATES/CHANGELOG MANAGER ---
+    function toggleUpdatesManager() { setView('updates'); renderUpdatesManager(); }
+
+    function renderUpdatesManager() {
+        const mid = document.getElementById('middle-col');
+        mid.style.display = 'none';
+
+        if(typeof window.UPDATES_DATA === 'undefined') window.UPDATES_DATA = [];
+
+        const container = document.getElementById('editor-area');
+        let html = `
+            <div class="form-section" style="border-color:#af52de;">
+                <h3 style="color:#af52de;">🚀 Manage Updates / Changelog</h3>
+                <p style="color:#888; font-size:0.85rem; margin-bottom:15px;">Add, edit, or remove update entries shown on the Updates page.</p>
+                <div id="updates-list-admin"></div>
+                <button class="btn btn-add" style="background:#af52de; color:white; border-radius:4px; margin-top:15px;" onclick="addUpdateEntry()">+ Add Update</button>
+            </div>
+        `;
+        container.innerHTML = html;
+
+        const list = document.getElementById('updates-list-admin');
+        window.UPDATES_DATA.forEach((item, i) => {
+            const el = document.createElement('div');
+            el.className = 'res-item';
+            el.style.flexDirection = 'column';
+            el.style.borderLeft = '4px solid #af52de';
+            el.innerHTML = `
+                <div style="display:flex; justify-content:space-between; width:100%; align-items:center; margin-bottom:10px;">
+                    <strong style="color:white;">${item.icon || '🚀'} ${item.title || 'Update'}</strong>
+                    <button class="btn btn-del" onclick="delUpdateEntry(${i})">✕ Remove</button>
+                </div>
+                <div style="display:flex; gap:10px; width:100%; align-items:flex-end;">
+                    <div style="position:relative; flex:0 0 60px;">
+                        <label>Icon</label>
+                        <input type="text" value="${item.icon || ''}" style="width:100%; text-align:center; cursor:pointer; padding:8px 4px;" onfocus="showEmojiPicker(this)" oninput="window.UPDATES_DATA[${i}].icon=this.value; markDirty();">
+                        <div class="emoji-picker-dropdown" style="display:none;"></div>
+                    </div>
+                    <div style="flex:1;">
+                        <label>Title</label>
+                        <input type="text" value="${item.title || ''}" oninput="window.UPDATES_DATA[${i}].title=this.value; markDirty();">
+                    </div>
+                    <div style="flex:0 0 150px;">
+                        <label>Date</label>
+                        <input type="date" value="${item.date || ''}" style="padding:8px 10px; color-scheme:dark;" oninput="window.UPDATES_DATA[${i}].date=this.value; markDirty();">
+                    </div>
+                </div>
+                <div style="width:100%; margin-top:8px;">
+                    <label>Description</label>
+                    <textarea rows="2" oninput="window.UPDATES_DATA[${i}].desc=this.value; markDirty();">${item.desc || ''}</textarea>
+                </div>
+            `;
+            list.appendChild(el);
+        });
+
+        if(window.UPDATES_DATA.length === 0) {
+            list.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px; font-style:italic;">No updates added yet.</div>';
+        }
+    }
+
+    function addUpdateEntry() {
+        window.UPDATES_DATA.push({ icon: '🚀', title: 'New Update', desc: '', date: new Date().toISOString().split('T')[0] });
+        markDirty();
+        renderUpdatesManager();
+    }
+
+    function delUpdateEntry(i) {
+        if(confirm('Remove this update?')) {
+            window.UPDATES_DATA.splice(i, 1);
+            markDirty();
+            renderUpdatesManager();
+        }
+    }
+
+    // --- EMOJI PICKER ---
+    const SUGGESTED_EMOJIS = [
+        '📚','📖','📗','📘','📙','📝','📌','📎','🗂️','🗃️',
+        '🔗','🌐','💻','📱','🎬','🎧','🎵','📹','📷','🎨',
+        '🧠','💡','⭐','🔥','🚀','🎯','🛠️','⚙️','🔍','📧',
+        '📁','📅','📊','📈','✅','❌','⚠️','ℹ️','🏆','🎓',
+        '💬','💭','📢','📰','🧪','🤖','💾','💿'
+    ];
+
+    function showEmojiPicker(inputEl) {
+        // Close any other open picker
+        document.querySelectorAll('.emoji-picker-dropdown').forEach(d => d.style.display = 'none');
+        const dropdown = inputEl.parentElement.querySelector('.emoji-picker-dropdown');
+        if(!dropdown) return;
+        dropdown.innerHTML = SUGGESTED_EMOJIS.map(e =>
+            `<button class="emoji-opt" type="button" onmousedown="event.preventDefault(); pickEmoji(this, '${e}')">${e}</button>`
+        ).join('');
+        dropdown.style.display = 'grid';
+        // Close on outside click
+        setTimeout(() => {
+            const handler = (ev) => {
+                if(!dropdown.contains(ev.target) && ev.target !== inputEl) {
+                    dropdown.style.display = 'none';
+                    document.removeEventListener('click', handler);
+                }
+            };
+            document.addEventListener('click', handler);
+        }, 0);
+    }
+
+    function pickEmoji(btn, emoji) {
+        const dropdown = btn.closest('.emoji-picker-dropdown');
+        const input = dropdown.parentElement.querySelector('input');
+        input.value = emoji;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        dropdown.style.display = 'none';
+    }
+
+    // --- UNSAVED CHANGES WARNING ---
+    let isDirty = false;
+    let dataSnapshot = '';
+
+    function takeSnapshot() {
+        dataSnapshot = JSON.stringify({ c: window.COURSE_DATA, s: window.SCHEDULE_DATA, m: window.MIDTERM_DATA, st: window.STAFF_DATA, tt: window.TIMETABLE_DATA, cfg: window.CONFIG, u: window.UPDATES_DATA });
+    }
+
+    function markDirty() {
+        const current = JSON.stringify({ c: window.COURSE_DATA, s: window.SCHEDULE_DATA, m: window.MIDTERM_DATA, st: window.STAFF_DATA, tt: window.TIMETABLE_DATA, cfg: window.CONFIG, u: window.UPDATES_DATA });
+        isDirty = current !== dataSnapshot;
+    }
+
+    // Listen for changes on all inputs
+    document.addEventListener('input', function() { markDirty(); });
+    document.addEventListener('change', function() { markDirty(); });
+
+    window.addEventListener('beforeunload', function(e) {
+        if(isDirty) {
+            e.preventDefault();
+            e.returnValue = 'You have unsaved changes. Are you sure you want to leave?';
+            return e.returnValue;
+        }
+    });
+
+    // Override saveData to clear dirty flag
+    const _origSave = window.saveData;
+    window.saveData = function() {
+        _origSave();
+        takeSnapshot();
+        isDirty = false;
+    };
+
+    // Ctrl+S to save
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            window.saveData();
+        }
+    });
+
     init();
+    takeSnapshot();
 </script>
 </body>
 </html>
