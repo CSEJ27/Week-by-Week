@@ -771,12 +771,332 @@ window.COURSE_DATA = [
         "events": [],
         "playlists": [
             {
-                "title": "Spring 2021 Sections",
-                "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np&si=MLYAB9CVkxhbM4-0",
+                "title": "Jeremy's IT Lab – Free CCNA Course",
+                "link": "https://youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&si=hziL0XBUZ5qIAyou",
+                "icon": "🌟",
+                "note": "Highly recommended introductory course for networking fundamentals.",
+                "badges": [
+                    {
+                        "text": "Recommended",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "IT Dose – Network Fundamentals",
+                "link": "https://youtube.com/playlist?list=PL8s4OGp0649_e_Wbz5MlBgW5rBW-9hD0c&si=hcLbYbxInEcqExuI",
+                "icon": "☝️",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Intro",
+                        "color": "#8e8e93"
+                    }
+                ]
+            },
+            {
+                "title": "Sameh Ramadan Tech – CompTIA Network+",
+                "link": "https://youtube.com/playlist?list=PLH-n8YK76vIiuIZoWvHL7AvtrDV7hR3He&si=H3KAYUXFliXyEWRV",
+                "icon": "☝️",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Intro",
+                        "color": "#8e8e93"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Tamer Mostafa – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzq282is5uGheG9nDxmwBsTB&si=2pyngVS_TZ5h44Yk",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Tamer Mostafa",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Tamer Mostafa – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLtgWF1TGtFUGI87uXj4Ibf47tjuyQ9Hue&si=goM1WgbqsFbYhdgJ",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Tamer Mostafa",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Tamer Mostafa – Spring 2022",
+                "link": "https://youtube.com/playlist?list=PLffO0PKa_AqHm-8ndN4FMVYapZ6mU03ua&si=mETbkktU0RSrPvAi",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Tamer Mostafa",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hossam Fahmy – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaG1iKBYjw9jPsw8rgu0er8g&si=E-Mqo1gJ40CJDsDd",
+                "icon": "🎓",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Reham Shouman – Spring 2021",
+                "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np",
+                "icon": "👥",
+                "note": "Very recommended by seniors.",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Noha Wahdan – Fall 2025",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzq0CNRcXbjp4-OzJ0jB2dzJ&si=KX2lXBecjNd5SS_D",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Noha Wahdan",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Noha Wahdan – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMI_iieSZuyCus0lTS0zl1No&si=SkyWIKOdnH0_Wg6p",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Noha Wahdan",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Noha Wahdan – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaFIJJFgIXGDtVGd39Bca07A&si=lC1RsWstdGAv0Gal",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Noha Wahdan",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Noha Wahdan – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4fFmABIFU_xFP-Sp5DKW-b2&si=8mF_9vO62a6skt00",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Noha Wahdan",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Noha Wahdan – Fall 2021 (Part 2)",
+                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8m6c9keRyxL_YF8YNaHCSsK&si=SxQBBih2GeBfmfgU",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Noha Wahdan",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Youssra Elqattan – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLtgWF1TGtFUFcxfncroUJpGxsM5nzhJej&si=JbIKPun8FsDKDpbg",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Youssra Elqattan",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Youssra Elqattan – Spring 2022",
+                "link": "https://youtube.com/playlist?list=PLffO0PKa_AqGQD1XMYkE8imcfPZIw_qLN&si=tDYRRJ6H9RyF8kFv",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Youssra Elqattan",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Youssra Elqattan – Spring 2022 Labs",
+                "link": "https://youtube.com/playlist?list=PLffO0PKa_AqGyXTuL6rcIoFHv7HX5qJax&si=DFvFwYXJI2UdYeqD",
+                "icon": "💻",
+                "note": "",
+                "group": "Eng. Youssra Elqattan",
+                "badges": [
+                    {
+                        "text": "Labs",
+                        "color": "#ff3b30"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mohamed Tarek – Spring 2022 Labs",
+                "link": "https://youtube.com/playlist?list=PLffO0PKa_AqG18l5_vVKQMg6TwJlSyCpL&si=JBYdrfSyRJyuhgFI",
+                "icon": "💻",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Labs",
+                        "color": "#ff3b30"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Reham Shouman – Fall 2020 Labs (Drive)",
+                "link": "https://drive.google.com/drive/u/0/mobile/folders/1XxKff5EqfSzSTldIBa3xdJEpBZU2bkqj",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Labs",
+                        "color": "#ff3b30"
+                    }
+                ]
+            },
+            {
+                "title": "Hamming Code | Error Correction",
+                "link": "https://youtu.be/5mNe8d2R3gU?si=BhJRDt2-F_78-MF2",
                 "icon": "▶️",
-                "note": "Eng. Reeham Shouman section, it was very recommended by seniors.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Labs",
+                        "color": "#ff3b30"
+                    }
+                ]
+            },
+            {
+                "title": "Ch6 Exam Problems",
+                "link": "https://docs.google.com/document/d/1NNJBNbi2P-oBmnoVj2gPe6FKhbmxCMt0Y_iYc6BeiWs/edit?usp=sharing",
+                "icon": "📝",
+                "note": "",
+                "group": "Extra Problems",
+                "badges": [
+                    {
+                        "text": "Extra Problems",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Ch5 Problems",
+                "link": "https://docs.google.com/document/d/1IzBUmkF5oJHo66HMpKPTwFqTSCtvuFYc0B8mBrnAMQ0/edit?usp=sharing",
+                "icon": "📝",
+                "note": "",
+                "group": "Extra Problems",
+                "badges": [
+                    {
+                        "text": "Extra Problems",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Ch4 Problems",
+                "link": "https://docs.google.com/document/d/1LqOdIE9mASlhhvMVbMp0T9_d57mY1ZxqnWfRfSuvTx8/edit?usp=sharing",
+                "icon": "📝",
+                "note": "",
+                "group": "Extra Problems",
+                "badges": [
+                    {
+                        "text": "Extra Problems",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Ch3 Problems",
+                "link": "https://docs.google.com/document/d/1oSJVp_JK47JN6zpBUdl3-yFoW3Rkr9aQ3qT0KFnO93g/edit?usp=sharing",
+                "icon": "📝",
+                "note": "",
+                "group": "Extra Problems",
+                "badges": [
+                    {
+                        "text": "Extra Problems",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Ch2 Problems",
+                "link": "https://docs.google.com/document/d/1YtrUzzZDD_oBge9AUdp2XKKhOMrurhz7fqSma4yWeFc/edit?usp=sharing",
+                "icon": "📝",
+                "note": "",
+                "group": "Extra Problems",
+                "badges": [
+                    {
+                        "text": "Extra Problems",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "CISCO – IP Addressing Guide",
+                "link": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+                "icon": "📘",
+                "note": "Useful CISCO course on IP addressing.",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Prof. Ayman Bahaa – Full Playlist",
+                "link": "https://www.youtube.com/playlist?list=PLy_2fgXkPiZuMaG9Jmp8PAwimIumf19hp",
+                "icon": "🎓",
+                "note": "Covers Introduction, Application Layer, Physical Layer, Data Link Layer, Network Layer, Transport Layer. See the HTML doc for per-topic timestamps.",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             }
         ],
         "color": "#ff2d55",
@@ -1276,12 +1596,462 @@ window.COURSE_DATA = [
         "events": [],
         "playlists": [
             {
-                "title": "Spring 2026 Labs",
+                "title": "Eng. Sawsan Emad – Spring 2026",
                 "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVlMHXx-QQ6XWbm8SZrEylrQ",
-                "icon": "▶️",
+                "icon": "🧪",
                 "note": "It's not complete as we didn't take all labs online.",
+                "badges": [
+                    {
+                        "text": "Labs",
+                        "color": "#ff3b30"
+                    }
+                ]
+            },
+            {
+                "title": "GitHub Repo – Data Structures & Algorithms",
+                "link": "https://github.com/mostsfamahmoud/Data-Structures-and-Algorithms",
+                "icon": "💻",
+                "note": "",
                 "badgeText": "",
                 "badgeColor": "#e91e8c"
+            },
+            {
+                "title": "Michael Sambol – Quick Short Videos",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzqBGRR0bvxqWkg4PoKrFIsV&si=06twmUSy0rFAh7C1",
+                "icon": "🌟",
+                "note": "Short and visual explanations for each data structure.",
+                "badgeText": "Recommended",
+                "badgeColor": "#ff9500"
+            },
+            {
+                "title": "Dr. Ashraf Abdelraouf – Credit Lectures (Google Drive)",
+                "link": "https://drive.google.com/drive/folders/1jsI4gy6DgnJaQ726IlYjykVBQo9vTLdb",
+                "icon": "📘",
+                "note": "",
+                "group": "Dr. Ashraf Abdelraouf",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Ashraf Abdelraouf – Summer 2025",
+                "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVk5HoZaXKRpt53_PQ3bcA8z",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Abdelraouf",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Ashraf Abdelraouf – Spring 2025",
+                "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVk7t2dVgvOytmS7FRw3p7ic",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Abdelraouf",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Ashraf Abdelraouf – Fall 2024",
+                "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmnPW3bpOkkW2sg5FTcWbBj",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Abdelraouf",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Islam Ahmed – Fall 2025",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr4rFXctrb-N0uO2gIPaxuu&si=Q-rvNEnLxKwLJVFV",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Islam Ahmed",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Islam Ahmed – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKq93vIkEgr7z6ddoqQdZU8&si=sObBezTk0MRg_0Wl",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Islam Ahmed",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Islam Ahmed – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaELgPD82WGaMNIMUmvHVRcF&si=5YaWNjOlg032aEki",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Islam Ahmed",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Islam Ahmed – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4dXLl_fWfjfn-zoFlvWUIpv&si=lNtMmAMgX2aqnpZ9",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Islam Ahmed",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Islam Ahmed – Spring 2021",
+                "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa-dZVv3WEnFNGuPLWkgR5B5&si=QsS84VPbLLslM6tz",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Islam Ahmed",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Eng. Fady Faragallah – Fall 2023 (Tut. & Labs)",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMJOylXS7ykOx5kahwDeq_x6&si=znYNNouaSprr0EPD",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Fady Faragallah",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Fady Faragallah – Fall 2022 (Tut. & Labs)",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGDbYpq62drcxXSs0Yi953M&si=f99fsSuTe_iEysbM",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Fady Faragallah",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Fady Faragallah – Fall 2021 (Tut. & Labs)",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4fyKgDiRz2fP_5pC17sk2Kw&si=XwkXyHTH2d0M2pOL",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Fady Faragallah",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Amr Mohamed – Spring 2021",
+                "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa8yHjRC1XgU2EhSLHB41A1E&si=4bLGjvMxl7Kwh3yT",
+                "icon": "👥",
+                "note": "",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Qt – C++ GUI",
+                "link": "https://youtube.com/playlist?list=PLS1QulWo1RIZiBcTr5urECberTITj7gjA&si=mAUlwclr4qn_CNf9",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badgeText": "Qt / GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "Qt – Project Based",
+                "link": "https://youtube.com/playlist?list=PLyTS2HwHWGAwJ8uHhsl39dkVTuVHB8YT7&si=GbjUsvQjkZRN7zhN",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badgeText": "Qt / GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "Qt + QML",
+                "link": "https://youtube.com/playlist?list=PLP7UmEJ9z4mpi0JXcPS0VRK-7eFAfROZI&si=0cGwVp5FF3e8twhE",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badgeText": "Qt / GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "QML",
+                "link": "https://youtube.com/playlist?list=PLzLycD5DByy76JIUUkbj9D9ErbogstIUt&si=dkc7aOU_HjxE77vg",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badgeText": "Qt / GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "Abdul Bari – Data Structures (Udemy)",
+                "link": "https://www.udemy.com/course/datastructurescncpp",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Abdul Bari – Algorithms",
+                "link": "https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Jenny – Data Structures",
+                "link": "https://www.youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Neso Academy – Data Structures",
+                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y&si=5pKb_HVLUM1yrgAQ",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Neso Academy – Algorithms",
+                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRhoF3cPp0mgOZPuXeu84nAd&si=vGpQTFT0E2waEUlX",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Dr. Mostafa Saad – Data Structures",
+                "link": "https://youtube.com/playlist?list=PLPt2dINI2MIZX2EtY81WI-lDkvhKziLKM&si=rlngHu-lbsWZNhz_",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Mohamed El Desouki – Data Structures",
+                "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Adel Nasim – Data Structures",
+                "link": "https://www.youtube.com/playlist?list=PLCInYL3l2AajqOUW_2SwjWeMwf4vL4RSp",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Eyad Alsherif – Data Structures",
+                "link": "https://www.youtube.com/playlist?app=desktop&list=PLITnyKsguk5kQlezLby2KJn4yO2odVGgH",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Dr. Mohammed El-said – Data Structures",
+                "link": "https://youtube.com/playlist?list=PLfay0LLBd0wiNeOR_SGoYfC3w-NxFwd0D&si=mKGRlCFGgNhnzk-5",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Ghassan Shobaki – Algorithms",
+                "link": "https://youtube.com/playlist?list=PL6KMWPQP_DM8t5pQmuLlarpmVc47DVXWd&si=1UOPxIRluJe9JgB7",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "freeCodeCamp – Data Structures (10 hrs)",
+                "link": "https://www.youtube.com/watch?v=B31LgI4Y4DQ",
+                "icon": "▶️",
+                "note": "Full course in one video, approx 10 hours.",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "CodeWithHarry – Data Structures",
+                "link": "https://www.youtube.com/playlist?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "mycodeschool – Data Structures",
+                "link": "https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P",
+                "icon": "▶️",
+                "note": "",
+                "group": "mycodeschool",
+                "badgeText": "mycodeschool",
+                "badgeColor": "#ff3b30"
+            },
+            {
+                "title": "mycodeschool – Sorting Algorithms",
+                "link": "https://youtube.com/playlist?list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&si=IY8_E195e5kgHDZw",
+                "icon": "▶️",
+                "note": "",
+                "group": "mycodeschool",
+                "badgeText": "mycodeschool",
+                "badgeColor": "#ff3b30"
+            },
+            {
+                "title": "mycodeschool – Binary Search",
+                "link": "https://youtube.com/playlist?list=PL2_aWCzGMAwL3ldWlrii6YeLszojgH77j&si=tLb8o1DCdD1Fk-BP",
+                "icon": "▶️",
+                "note": "",
+                "group": "mycodeschool",
+                "badgeText": "mycodeschool",
+                "badgeColor": "#ff3b30"
+            },
+            {
+                "title": "mycodeschool – Recursion",
+                "link": "https://youtube.com/playlist?list=PL2_aWCzGMAwLz3g66WrxFGSXvSsvyfzCO&si=r0zF2W7ztRuHZGmv",
+                "icon": "▶️",
+                "note": "",
+                "group": "mycodeschool",
+                "badgeText": "mycodeschool",
+                "badgeColor": "#ff3b30"
+            },
+            {
+                "title": "mycodeschool – Time Complexity Analysis",
+                "link": "https://youtube.com/playlist?list=PL2_aWCzGMAwI9HK8YPVBjElbLbI3ufctn&si=_V0pVAEEO6l2z6Cp",
+                "icon": "▶️",
+                "note": "",
+                "group": "mycodeschool",
+                "badgeText": "mycodeschool",
+                "badgeColor": "#ff3b30"
+            },
+            {
+                "title": "mycodeschool – Pointers in C/C++",
+                "link": "https://www.youtube.com/playlist?list=PL2_aWCzGMAwLZp6LMUKI3cc7pgGsasm2_",
+                "icon": "▶️",
+                "note": "",
+                "group": "mycodeschool",
+                "badgeText": "mycodeschool",
+                "badgeColor": "#ff3b30"
+            },
+            {
+                "title": "Page Rank – Playlist",
+                "link": "https://youtube.com/playlist?list=PLH7W8KdUX6P2n4XwDiKsEU6sBhQj5cAqa&si=UvizteIeh9VhXWm2",
+                "icon": "▶️",
+                "note": "",
+                "group": "Page Rank",
+                "badgeText": "Page Rank",
+                "badgeColor": "#ff9500"
+            },
+            {
+                "title": "Page Rank – Video 1",
+                "link": "https://youtu.be/xJUwspSaR1E?si=34ixTr4WgVHjlFFg",
+                "icon": "▶️",
+                "note": "",
+                "group": "Page Rank",
+                "badgeText": "Page Rank",
+                "badgeColor": "#ff9500"
+            },
+            {
+                "title": "Page Rank – Video 2",
+                "link": "https://youtu.be/-52tjD9auQg?si=rrEZEoEvtdnG-8rI",
+                "icon": "▶️",
+                "note": "",
+                "group": "Page Rank",
+                "badgeText": "Page Rank",
+                "badgeColor": "#ff9500"
+            },
+            {
+                "title": "Betweenness Centrality",
+                "link": "https://youtu.be/ptqt2zr9ZRE?si=nbwlcu8jP3lfz4ep",
+                "icon": "▶️",
+                "note": "",
+                "group": "Page Rank",
+                "badgeText": "Page Rank",
+                "badgeColor": "#ff9500"
+            },
+            {
+                "title": "C++ Basics & OOP – Mohamed El Desouki",
+                "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6IUD9Gt5rZlQfbZyAWXd-oD",
+                "icon": "☝️",
+                "note": "",
+                "badgeText": "Prerequisites",
+                "badgeColor": "#8e8e93"
+            },
+            {
+                "title": "Ahmed Bakr – Advanced Programming (JavaFX)",
+                "link": "https://www.youtube.com/playlist?list=PLtAm40HOEEvXj40v7IWm9UVvwDseoE7E8",
+                "icon": "🔧",
+                "note": "",
+                "group": "GUI",
+                "badgeText": "GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "thenewboston – JavaFX",
+                "link": "https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBzfXLWLSYVy8EbTdpGbUIG",
+                "icon": "🔧",
+                "note": "",
+                "group": "GUI",
+                "badgeText": "GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "Scene Builder (JavaFX)",
+                "link": "https://youtube.com/playlist?list=PLrzWQu7Ajpi26jZvP8JhEJgFPFEj_fojO&si=tBZ0YCD_CP2gX3s",
+                "icon": "🔧",
+                "note": "",
+                "group": "GUI",
+                "badgeText": "GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "Tkinter – Python GUI",
+                "link": "https://youtube.com/playlist?list=PLS1QulWo1RIY6fmY_iTjEhCMsdtAjgbZM&feature=shared",
+                "icon": "🔧",
+                "note": "",
+                "group": "GUI",
+                "badgeText": "GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "Kivy – Python GUI",
+                "link": "https://youtube.com/playlist?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg&feature=shared",
+                "icon": "🔧",
+                "note": "",
+                "group": "GUI",
+                "badgeText": "GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "PyQt – Python GUI",
+                "link": "https://youtube.com/playlist?list=PLCC34OHNcOtpmCA8s_dpPMvQLyHbvxocY&si=_Og1eP5bkYNJothl",
+                "icon": "🔧",
+                "note": "",
+                "group": "GUI",
+                "badgeText": "GUI",
+                "badgeColor": "#af52de"
+            },
+            {
+                "title": "Electron JS – Desktop Apps",
+                "link": "https://www.youtube.com/playlist?list=PLC3y8-rFHvwiCJD3WrAFUrIMkGVDE0uqW",
+                "icon": "🔧",
+                "note": "",
+                "group": "GUI",
+                "badgeText": "GUI",
+                "badgeColor": "#af52de"
             }
         ],
         "color": "#00e5ff",
@@ -2232,12 +3002,205 @@ window.COURSE_DATA = [
         ],
         "playlists": [
             {
-                "title": "Spring 2026 Tutorials",
+                "title": "Eng. Ahmed Fawzi – Spring 2026",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmzQzHugpyMIubimKg_-Hdv&si=aDjee-Le_b9Yybhm",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Ahmed Fawzy",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Yomna – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PL0LvIAr-YxdRcxU2E6vetoWhfYl2v-jVh&si=TSz5XZd9dBTagWEC",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Yomna",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Hoda – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKEd7EkVEiHekPYrEOSrzb9&si=_SjR8I8w1mdbp8dy",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hoda",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Hoda – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGOX0Iy2PAMIQOYBsrV_lVO&si=deQD_3Ac1GpHDr0a",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hoda",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Dr. Yomna – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjePHlm2mKixQgCtAB9CEd8Ob&si=j1Ous0aWLaQZadnn",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Yomna",
+                "badgeText": "Lectures",
+                "badgeColor": "#007aff"
+            },
+            {
+                "title": "Eng. Ahmed Fawzy – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PL0LvIAr-YxdSI_Xp-4x1IEWuHsku8Chh8&si=WNNrV_hhJnKZUP5R",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Ahmed Fawzy",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Ahmed Fawzy – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKZbk4PMO5ZJDpOzKHprN0k&si=SdXvPzr8tEI7B66y",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Ahmed Fawzy",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Fady Faragallah – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHyw-QOicVPy0xE4dA7GGT1&si=4uMqzS3Zx5dn0K_h",
+                "icon": "👥",
+                "note": "",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Diana Nabil – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjeMYV99WnqRkYCV1itcZoPBE&si=mPyn1hva5z0Igir0",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Diana Nabil",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Diana Nabil – Summer 2022",
+                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8lDmCEP0frA-OfvPPmUUEYI&si=aEnTclz_djoQd_Dz",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Diana Nabil",
+                "badgeText": "Tutorials",
+                "badgeColor": "#34c759"
+            },
+            {
+                "title": "Eng. Mai AboZaid – Spring 2022 Revision",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4cxjYPl5CEYjbRFWKM3Lpvw&si=CdidMxb-4z6mCtAy",
+                "icon": "📝",
+                "note": "",
+                "group": "Revision",
+                "badgeText": "Revision",
+                "badgeColor": "#ff9500"
+            },
+            {
+                "title": "ERD + SQL Lab – Eng. Abrar",
+                "link": "https://youtu.be/mkAdd0TeGXk?si=j1i8dMYkESlE0XEo",
+                "icon": "🌟",
+                "note": "Very Useful",
+                "group": "Revision",
+                "badgeText": "Revision",
+                "badgeColor": "#ff9500"
+            },
+            {
+                "title": "CMU Intro to Database Systems (15-445/645 – Fall 2025)",
+                "link": "https://youtube.com/playlist?list=PLSE8ODhjZXjYMAgsGH-GtY5rJYZ6zjsd5&si=n7MfObWVvbqrEnvp",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Eng. Mahmoud Fawzy – Fall 2018",
+                "link": "https://youtube.com/playlist?list=PLAuF74dVvpM1R6ofdBQyti-O5dK3WmQJb&si=NDUyGEYuhmpAiTbt",
                 "icon": "▶️",
                 "note": "",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Mohamed El Desouki – Theoretical Part",
+                "link": "https://youtube.com/playlist?list=PL37D52B7714788190&si=jsLcbF3L6tVCEUoe",
+                "icon": "▶️",
+                "note": "",
+                "group": "Mohamed El Desouki",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Mohamed El Desouki – Lectures",
+                "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6IvvAfktWt3WQC_nTrcx6ey&si=WvO_PWnSekC2C_FL",
+                "icon": "▶️",
+                "note": "",
+                "group": "Mohamed El Desouki",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Mohamed El Desouki – Labs",
+                "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6LlqrAmazyqfH3WA9ezGcx9&si=6Lqaaj6CEkHjmbic",
+                "icon": "💻",
+                "note": "",
+                "group": "Mohamed El Desouki",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Mohamed El Desouki – MS SQL Server For Beginners",
+                "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6J6oDLTveTt4Z7E5qEfFluE&si=RcmPbW2vnOEbfFsa",
+                "icon": "💻",
+                "note": "",
+                "group": "Mohamed El Desouki",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Bess Gates (Eng. Ramy) – SQL ITI",
+                "link": "https://youtube.com/playlist?list=PLoRh0POuk1Rw-BZU-DPI6cA_c5W9_2uF_&si=RliPoU7EPaTGFTPL",
+                "icon": "💻",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Neso Academy – DBMS",
+                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRiyryTrbKHX1Sh9luYI0dhX&si=twhnp6zfwOdeC9bj",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "Mohsen",
+                "link": "https://youtube.com/playlist?list=PLQhTr3lsMLuiIlK44PcWvnpacYTOCZw6O&si=7w473GWEKB8_JAQf",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
+            },
+            {
+                "title": "CS50's Introduction to Databases with SQL",
+                "link": "https://youtube.com/playlist?list=PLhQjrBD2T382v1MBjNOhPu9SiJ1fsD4C0&si=w4qHGsNsk6AkO3i0",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badgeText": "External",
+                "badgeColor": "#5856d6"
             }
         ],
         "color": "#34c759",
@@ -2891,12 +3854,266 @@ window.COURSE_DATA = [
         "events": [],
         "playlists": [
             {
-                "title": "Spring 2026 (Lectures & Tutorials)",
+                "title": "Spring 2026",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlgvQg5Y6FTKBw_8OqmGLlb&si=ba-G4K-0bScdEcRa",
                 "icon": "▶️",
                 "note": "It's not complete as we didn't take all sections and lectures online.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "group": "Spring 2026",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    },
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Verilog – Eng. Mohammed Tarek Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHogTabE4GNsxDH8MRSC4R2&si=hJYKVl5klzjy81BD",
+                "icon": "💻",
+                "note": "",
+                "group": "Verilog",
+                "badges": [
+                    {
+                        "text": "Verilog",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "Digital Circuit Design Using Verilog",
+                "link": "https://youtube.com/playlist?list=PL-iIOnHwN7NXw01eBDR7wI8KzGK4mu8Sr&si=B1CDFPcCfwAuhZ0l",
+                "icon": "💻",
+                "note": "",
+                "group": "Verilog",
+                "badges": [
+                    {
+                        "text": "Verilog",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "HDLBits – Verilog Practice Problems",
+                "link": "https://hdlbits.01xz.net/wiki/Main_Page",
+                "icon": "📝",
+                "note": "Great for Verilog practice.",
+                "group": "Verilog",
+                "badges": [
+                    {
+                        "text": "Verilog",
+                        "color": "#af52de"
+                    },
+                    {
+                        "text": "Practice",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Zero One – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gTRWpOTq_udNfUTxi0Oxo&si=8mmByNNzziyFhQP1",
+                "icon": "▶️",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2025",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=dPoyg1nkoN8Nz574",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKBpnlmt1-6G2TLMst-JjHB&si=rcsyOf609B62RWCE",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaFSGXYZ7V-GoKjNZWsSVjOR&si=D1f6SpdFHmarFUrC",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4finp5v0TepvBOnijZtyqwN&si=EXeRN8hheesGcl9h",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Tamer Mostafa – Spring 2020",
+                "link": "https://youtube.com/playlist?list=PLbxswoh1SoPko-ilIS-PualpJABpg5ai4&si=naLqtIolKw-t5dgM",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Tamer Mostafa",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Abdulkareem Abotaleb – Fall 2024",
+                "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVl7OkAR36UqUv_51qDN2VvD",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ibraheem Hassan – Fall 2024",
+                "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Tasneem Adel Awad – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMIdZ2B7n18Ll68aduvlmIK4&si=rbrl4Mjcu6VAKHDP",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Tasneem Adel Awad",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Tasneem Adel Awad – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGGom1QQmduon_kBoXXfAIr&si=HSP3pzqbCGm00ady",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Tasneem Adel Awad",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Norhan Mohamed – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4deJPyZuLtKuKQiJE95Cfsc&si=rpr0foEkRKOG04hz",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Tasneem Adel Awad – Fall 2020",
+                "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa-KPDSbYl7aCUomy_enteCj&si=XBMNRhJMsbMevkRC",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Fathy – Fall 2018",
+                "link": "https://youtube.com/playlist?list=PLQkyODvJ8ywt5yn-JFuELcComMBWL83lG&si=5q3JvnWyMBNDjksj",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "ElhosseiniAcademy – Computer Architecture",
+                "link": "https://www.youtube.com/playlist?list=PL-cKUB-e2KiswAkwZLJYlTzI69FpSJa50",
+                "icon": "📘",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "ModelSim (Intel FPGA)",
+                "link": "https://www.intel.com/content/www/us/en/software-kit/750368/modelsim-intel-fpgas-standard-edition-software-version-18-1.html",
+                "icon": "🔧",
+                "note": "Simulation tool for Verilog.",
+                "group": "Tools",
+                "badges": [
+                    {
+                        "text": "Tool",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "EDA Playground (Online)",
+                "link": "https://edaplayground.com/",
+                "icon": "🔧",
+                "note": "Online Verilog simulator.",
+                "group": "Tools",
+                "badges": [
+                    {
+                        "text": "Tool",
+                        "color": "#ff9500"
+                    }
+                ]
             }
         ],
         "subCode": "CSE313s"
@@ -3691,52 +4908,395 @@ window.COURSE_DATA = [
         ],
         "playlists": [
             {
-                "title": "Dr. Sahar Hagag - Spring 2026 Lectures ",
+                "title": "Dr. Sahar Hagag – Spring 2026",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmwj6lAV9P-4-st3gCCu_AV&si=NTCBflhZlKziQabG",
-                "icon": "▶️",
+                "icon": "🎓",
                 "note": "",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "group": "Dr. Sahar Hagag",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
-                "title": "Dr. Khaled Tawfik - Fall 2021 Lectures",
+                "title": "Dr. Sahar Hagag – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PL0LvIAr-YxdQEn2BXJs0UnlzMeYUrHMIw&si=t-Or09r9gLENlWt_",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Sahar Hagag",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Sahar Hagag – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMLlSpb6jFkcqNaXHLMyTFL0&si=xB8X3BlyURMpGKVe",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Sahar Hagag",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Sahar Hagag – Spring 2023",
+                "link": "https://www.youtube.com/playlist?list=PLaL_BACw3AaFZFg4sq1t0V_JCyu5U-50Q",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Sahar Hagag",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Sahar Hagag – Spring 2021",
+                "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa-vw3pwapYzI6E4Zp5VP4D1&si=6-vL58ug2cxPD1H8",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Sahar Hagag",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Khaled Tawfik – Fall 2021",
                 "link": "https://www.youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1",
-                "icon": "▶️",
-                "note": "It's not the same content exactly so make sure to follow our timestamps from the site or compare the slides yourself while watching!.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "icon": "🎓",
+                "note": "Not the same content exactly — follow our timestamps or compare slides while watching.",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
-                "title": "Eng. Habiba - Spring 2024 Tutorials",
+                "title": "Zero One – Spring 2024",
+                "link": "https://www.youtube.com/playlist?list=PLcwCIYKT3kR1gEkuFnfO9p3IIV0Oxw8j7",
+                "icon": "🎓",
+                "note": "Not the same content exactly — follow our timestamps or compare slides while watching.",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Habiba – Spring 2024",
                 "link": "https://youtube.com/playlist?list=PLBiOoMs77rROrZakdz7c5r7ArJPklYUP7&si=B0qcL-Lthqw6_0Lw",
                 "icon": "👥",
-                "note": "Very useful as she solves the sheets and explains everything briefly and in a good way!.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "note": "Very useful — solves the sheets and explains everything briefly.",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
-                "title": "Zero One - Spring 2024 Lectures",
-                "link": "https://www.youtube.com/playlist?list=PLcwCIYKT3kR1gEkuFnfO9p3IIV0Oxw8j7",
-                "icon": "▶️",
-                "note": "It's not the same content exactly so make sure to follow our timestamps from the site or compare the slides yourself while watching!.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "title": "Eng. Mai Said – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGJP2PTKauPfJp_-GxvsPOA&si=7Dlr35pefMeA6wfB",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Mai Said",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
-                "title": "Dr. Ahmed Salah Eldin - Fall 2024 Lectures",
-                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPyavmKP24AhTtdzD2OZ-qgk&si=E6J95KeRz9TgYtY7",
-                "icon": "▶️",
-                "note": "It's not the same content exactly so make sure to follow our timestamps from the site or compare the slides yourself while watching!.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "title": "Eng. Mai Said – Spring 2020",
+                "link": "https://youtube.com/playlist?list=PLbxswoh1SoPkRCkWkgWtnlwzBQQdtwuDl&si=4JqQm-g3nMFDwXLJ",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Mai Said",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
-                "title": "Prof. Ghassan Shobaki - Spring 2021 Lectures",
+                "title": "Eng. Diana Nabil – Spring 2021",
+                "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa9HJbRw8IYxM8oI9IMwsXth&si=sNiYfqxcs8_NYqbc",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Salah ElDin – Fall 2024 Lectures",
+                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPyavmKP24AhTtdzD2OZ-qgk&si=VuuT0pRG_IF99FeF",
+                "icon": "🎓",
+                "note": "",
+                "group": "Ahmed Salah ElDin",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Salah ElDin – Fall 2024 Tutorials",
+                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPyqVD4VVw3HtdLb8DGBqIKb&si=YqkM9MZI6HqXzMn9",
+                "icon": "👥",
+                "note": "",
+                "group": "Ahmed Salah ElDin",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Salah ElDin – Fall 2022/2023 Lectures",
+                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPxl1sLi0KzHHg_BF3w6oYDy&si=4RrCvCFO3PEZmhNw",
+                "icon": "🎓",
+                "note": "",
+                "group": "Ahmed Salah ElDin",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Salah ElDin – Fall 2025 Project",
+                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPx3QaYzkvKBLoMblpsKxoNH&si=2bmgCTuCKeCpnI0g",
+                "icon": "💻",
+                "note": "",
+                "group": "Ahmed Salah ElDin",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Salah ElDin – Fall 2024 Project",
+                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPxcG4On42egRf8k-0IZEdqQ&si=HDS0cGPi2DqnMfWR",
+                "icon": "💻",
+                "note": "",
+                "group": "Ahmed Salah ElDin",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Salah ElDin – Revision 2021",
+                "link": "https://youtube.com/playlist?list=PLpfYfulQlEPzG9UYlnYITAOpW1ZEH2NUi&si=n3_8niTDHQEZ4txI",
+                "icon": "📝",
+                "note": "",
+                "group": "Ahmed Salah ElDin",
+                "badges": [
+                    {
+                        "text": "Revision",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "Qt – C++ GUI",
+                "link": "https://youtube.com/playlist?list=PLS1QulWo1RIZiBcTr5urECberTITj7gjA&si=mAUlwclr4qn_CNf9",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "Qt – Project Based",
+                "link": "https://youtube.com/playlist?list=PLyTS2HwHWGAwJ8uHhsl39dkVTuVHB8YT7&si=GbjUsvQjkZRN7zhN",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "Qt + QML",
+                "link": "https://youtube.com/playlist?list=PLP7UmEJ9z4mpi0JXcPS0VRK-7eFAfROZI&si=0cGwVp5FF3e8twhE",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "QML",
+                "link": "https://youtube.com/playlist?list=PLzLycD5DByy76JIUUkbj9D9ErbogstIUt&si=dkc7aOU_HjxE77vg",
+                "icon": "🔧",
+                "note": "",
+                "group": "Qt / GUI",
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "Prof. Ghassan Shobaki – Spring 2021",
                 "link": "https://youtube.com/playlist?list=PL6KMWPQP_DM-7tMNjUa7X2zGrc8jipPeI&si=nuSgh5NE8UJHiHHp",
-                "icon": "▶️",
-                "note": "He explained more chapters than the chapters we took, so make sure to use the slides to compare while watching.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "icon": "🎓",
+                "note": "Explained more chapters than we took — compare slides while watching.",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Youssef Shebl",
+                "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=GqdfCSl18KV8uDzD",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Neso Academy – OS",
+                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O&si=yyM6Q9TNoJk7juif",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Jenny – OS",
+                "link": "https://youtube.com/playlist?list=PLdo5W4Nhv31a5ucW_S1K3-x6ztBRD-PNa&si=wkJxcYAPpya5_8eo",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Elsaid",
+                "link": "https://youtube.com/playlist?list=PLfay0LLBd0wgvB2AjuB-cmdQm79JQ_W_o&si=4WbRHvFmMUo2UuvE",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Berkeley – OS",
+                "link": "https://www.youtube.com/playlist?list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM",
+                "icon": "🎓",
+                "note": "",
+                "group": "Berkeley",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Berkeley – OS (Playlist 2)",
+                "link": "https://youtube.com/playlist?list=PLF2K2xZjNEf97A_uBCwEl61sdxWVP7VWC&si=yEQsdLwtftSv03wp",
+                "icon": "🎓",
+                "note": "",
+                "group": "Berkeley",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "SoftwareTube (Ch 1–13)",
+                "link": "https://youtube.com/playlist?list=PLTr1xN4uMK5seRz6IO7Am9Zp2UKdnzO_n&si=xq-M0VFCTuv01UCI",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Hagag (First 7 Chapters)",
+                "link": "https://youtube.com/playlist?list=PLxIvc-MGOs6ib0oK1z9C46DeKd9rRcSMY&si=cax1RHxY5hNqe0nO",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hassan Alansary",
+                "link": "https://www.youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM",
+                "icon": "🎓",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             }
         ],
         "color": "#ffd600",
@@ -4380,12 +5940,282 @@ window.COURSE_DATA = [
         "events": [],
         "playlists": [
             {
-                "title": "Spring 2026 Lectures",
+                "title": "Dr. Manal Morad – Spring 2026",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY&si=jYT8otAyT_bWaGQ8",
-                "icon": "▶️",
+                "icon": "🎓",
                 "note": "",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Fall 2025",
+                "link": "https://youtube.com/playlist?list=PLJGF4x_DC9qwtb5AGZTi6t2l6g622QH3p&si=zC1s07iJtCU9Gc_b",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Fall 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMI6kGLyDb-JTIAdXIZWAiCy&si=6btvXDpdiVCs5vM_",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMK_ZRwcrtGHesNwHSg2KnFZ&si=Ot2UzMn1NizZEVik",
+                "icon": "🎓",
+                "note": "Only 1 lecture available.",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=TfAXmy4x-a5rIPk0",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjeNkuKsHHLXoCxlF6SmhUpYO&si=6HpC0BLMcuygB37K",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Spring 2022",
+                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8kZBMLu4dwz705o5eIL_0AK&si=vPdFfuRQect18gZD",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mahmoud Osama – Fall 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKdEi9KjCSNnWiK02eeMs6U&si=9jAfgMlV-6HtXf91",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Mahmoud Osama",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mahmoud Osama – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMIJ-qGZNL26XYYb_NY4gV59&si=94eUHfnItcXvzjZv",
+                "icon": "👥",
+                "note": "Only 1 tutorial available.",
+                "group": "Eng. Mahmoud Osama",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mahmoud Osama – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=oBOnovHMVlXMDD56",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Mahmoud Osama",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Mostafa – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjePDMxx5ye9M8V0YTGAcDiY4&si=p3fATb5hOUDof35y",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Ahmed Mostafa",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Mostafa – Spring 2022",
+                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8lNExFw_UTxPlDPKtEk0Xg0&si=-xuFlRhA7N46CPBI",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Ahmed Mostafa",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Fathy – AI Extras",
+                "link": "https://youtube.com/playlist?list=PLgHD1d9DOFEptumXzRjUog4QHOMbUIpp8&si=t5klWmQIiIcGHBv4",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – AI Playlist 1",
+                "link": "https://youtube.com/playlist?list=PLBiOoMs77rROb6Irpp2dt81F9v1KLxFOW&si=Q6qx4iyEC6W3Bb0v",
+                "icon": "📘",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – AI Playlist 2",
+                "link": "https://youtube.com/playlist?list=PLBiOoMs77rRPGaVLvVPwcwRceDDTvDubz&si=c8_HG9UUvnhJjV40",
+                "icon": "📘",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Fuzzy Logic – Machine Intelligence Lecture 17",
+                "link": "https://youtu.be/TReelsVxWxg?si=OozCLWbD4m9G5mWY",
+                "icon": "🎓",
+                "note": "Fuzzy Logic & Fuzzy Inference.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Fuzzy",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "GAs I – Machine Intelligence Lecture 18",
+                "link": "https://youtu.be/3-NiZPbkr7A?si=v0Q1PzBZK3CpuyZc",
+                "icon": "🎓",
+                "note": "Evolutionary Algorithms.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Genetic Algorithms",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "GAs II – Machine Intelligence Lecture 19",
+                "link": "https://youtu.be/inME9rm-IPs?si=cRkzZXVJKyVcfzgK",
+                "icon": "🎓",
+                "note": "Opposition-Based Learning, GAs, DE.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Genetic Algorithms",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "GA (Arabic Explanation)",
+                "link": "https://youtu.be/AQ9rxieL2nQ?si=yxZd-MxEinePXntD",
+                "icon": "🎓",
+                "note": "Genetic Algorithm explained in Arabic.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Genetic Algorithms",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "Lutfi Al Sharif – AI Resources",
+                "link": "https://www.youtube.com/@LutfiAlSharif/search?query=artificial",
+                "icon": "🌟",
+                "note": "Very very useful!",
+                "badges": [
+                    {
+                        "text": "Recommended",
+                        "color": "#34c759"
+                    },
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             }
         ],
         "color": "#b388ff",
@@ -5359,12 +7189,218 @@ window.COURSE_DATA = [
         ],
         "playlists": [
             {
-                "title": "Spring 2026 Lectures",
+                "title": "Dr. Hazem Abbas & Dr. Nesma Rezk – Spring 2026",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVkdIcNbT_aTTFs_uHNMnAQC&si=MH-l7mcncxKVOR9B",
-                "icon": "▶️",
+                "icon": "🎓",
                 "note": "It's not complete as we didn't take all lectures online.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Python Prerequisites – Bro Code",
+                "link": "https://youtube.com/playlist?list=PLZPZq0r_RZOO_wKfxdnAb9BgnffGtIHjR&si=Ge812TTb7n08SHPe",
+                "icon": "☝️",
+                "note": "Watch all 4 videos before starting the course.",
+                "group": "Prerequisites",
+                "badges": [
+                    {
+                        "text": "Prerequisites",
+                        "color": "#8e8e93"
+                    }
+                ]
+            },
+            {
+                "title": "Scikit-Learn Full Crash Course",
+                "link": "https://youtu.be/SIEaLBXr0rk",
+                "icon": "☝️",
+                "note": "Helpful prerequisite for understanding ML libraries.",
+                "group": "Prerequisites",
+                "badges": [
+                    {
+                        "text": "Prerequisites",
+                        "color": "#8e8e93"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMJEck8pODNV_WYe0Zv6FHv5&si=77sQ-VEG5nNBw4jU",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaH56g0O5I90h79eh0dxM3Pi&si=FLRuh9UB7Jix59nB",
+                "icon": "🎓",
+                "note": "Only 1 lecture available.",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4dwkwM5Od5RK7Gv4_X1J_-H&si=yxJQx_IxjqaGbOAT",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mohamed Yasser – Spring 2026",
+                "link": "https://www.youtube.com/playlist?list=PLhJlxlYCdv3R219Q29U2kM4Dn-mo2ROtE",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHZuR2ucXP12a95w4GhOgJr&si=sEp_UJ2E8QTq1hsB",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4eZjYA1eDuOZsVsBtTXcL9U&si=svzw-AOMIhpjbqza",
+                "icon": "👥",
+                "note": "",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Fathi – ML",
+                "link": "https://www.youtube.com/playlist?list=PLQkyODvJ8ywv_L3yBwhBPNOiZAR4LyCLZ",
+                "icon": "📘",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Yousry – ML",
+                "link": "https://www.youtube.com/playlist?list=PLPBnj6azlABbaGuOzR40nvlzPWAKMv_qA",
+                "icon": "📘",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – Solving Exam Questions",
+                "link": "https://www.youtube.com/playlist?list=PLBiOoMs77rRO2_BqXLVVWW25i-rceCp9y",
+                "icon": "📝",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Practice",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – ML As a Field",
+                "link": "https://www.youtube.com/playlist?list=PLBiOoMs77rRN9TrvU-cxsBU47ypGIaRfk",
+                "icon": "📘",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Andrew Ng – Machine Learning",
+                "link": "https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI",
+                "icon": "🌟",
+                "note": "World-renowned ML course by Andrew Ng.",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "Recommended",
+                        "color": "#34c759"
+                    },
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Elgouhary AI – ML",
+                "link": "https://www.youtube.com/playlist?list=PLtsZ69x5q-X9j44MdSX-NGuOhGXOY0aqH",
+                "icon": "📘",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Matrix Calculus for ML – MIT OCW",
+                "link": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/download/",
+                "icon": "📄",
+                "note": "Extra math resource for deeper understanding.",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             }
         ],
         "subCode": "CSE374s"
@@ -5377,7 +7413,102 @@ window.COURSE_DATA = [
         "weeks": [],
         "driveLink": "https://drive.google.com/drive/folders/1-DGr621UC2zPt5y3phF1SRJE-86eiYyK?usp=drive_link",
         "events": [],
-        "playlists": [],
+        "playlists": [
+            {
+                "title": "ISTQB Foundation Level 2018 – Nezam",
+                "link": "https://www.youtube.com/playlist?list=PLbJF4g421wqnHTxbGDgm-vqgl3wfj5mMg",
+                "icon": "📘",
+                "note": "ISTQB certification material, very helpful for understanding testing concepts.",
+                "group": "ISTQB Foundation",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "ISTQB Foundation Level 2018 – Software Quality Academy",
+                "link": "https://youtube.com/playlist?list=PLQUxWr2rTswlHvRSphLEB0KU72w6dZzbq&feature=shared",
+                "icon": "📘",
+                "note": "",
+                "group": "ISTQB Foundation",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Mona Ismail – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMJIlAnVgsFLLkJ0FYnSA3lg&si=__OBXbBudlgR7mjz",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Mona Ismail",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Mona Ismail – Fall 2025",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzrzZVzQ2SWwFzmyzm-7PUOg&si=G0ZaQrUEEC2PD71k",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Mona Ismail",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Mona Ismail – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMJ_OfQPJsVUyeqiGfYSG-8z&si=gJZ5LRDDc8iI4iwl",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Mona Ismail",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Fady – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaFaiRC4I_KO-Ope2J6mvoLF&si=EwLKHuam9TFayiBh",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    },
+                    {
+                        "text": "Labs",
+                        "color": "#ff3b30"
+                    }
+                ]
+            },
+            {
+                "title": "Fall 2025 Presentations",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzoKrYalQHRs5FzRWHc8WIZK&si=xpGAkzpwPolydJwM",
+                "icon": "📽️",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            }
+        ],
         "color": "#2979ff",
         "subCode": "CSE337s"
     },
@@ -5686,12 +7817,92 @@ window.COURSE_DATA = [
         "events": [],
         "playlists": [
             {
-                "title": "Spring 2026 Tutorials ",
+                "title": "Dr. Khaled Kirah – Spring 2026",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmoeJszweLQjVIY8zs7F-Ef&si=D5fljVFmivqhT4cD",
-                "icon": "▶️",
+                "icon": "🎓",
                 "note": "It's not complete as we didn't take all sections online.",
-                "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Abdelrahman (Salby) – Quantum Computing",
+                "link": "https://youtube.com/playlist?list=PLaG8-dtlJi633gjZ9ouNY9xxbKQ4Ld5zW&si=mNlqe_h10yIa6PAM",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ahmed Younes – Intro to Quantum Computing",
+                "link": "https://youtube.com/playlist?list=PLkpYqKNqc_Cud5sLg896FsnbkoQiHlkpZ&feature=shared",
+                "icon": "🎓",
+                "note": "Alex University course.",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Qiskit Fall Fest 2024 @ GUC",
+                "link": "https://youtube.com/playlist?list=PLwAyV0vurS6HaWeJgb3F0y8MNvYVyMaBo&feature=shared",
+                "icon": "🔬",
+                "note": "Student-led events centered on quantum computing, organized with IBM Quantum.",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Alexandria Quantum Computing Winter School 2021",
+                "link": "https://youtube.com/playlist?list=PLvze0dsHroGNo6zCYwDq-EGC_GyHLtoPl&feature=shared",
+                "icon": "🎓",
+                "note": "In Arabic.",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Quantum Summer School 2025 – Nile University",
+                "link": "https://youtube.com/playlist?list=PLmdZI9p6ifrRDzD4nmEyLknx_fPm_G3j3&feature=shared",
+                "icon": "🎓",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Khaled Kirah – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PLRPGm56Nmo2Zjj8uenZ8wVo-2lCT793n0&si=GouxCaQM_GN0i7px",
+                "icon": "🎓",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             }
         ],
         "color": "#00ff9d",
@@ -6154,7 +8365,44 @@ window.COURSE_DATA = [
         ],
         "driveLink": "https://drive.google.com/drive/folders/1_-XsOXQOgNauxPsRg0WPOtQDXBWsDq4X?usp=drive_link",
         "events": [],
-        "playlists": [],
+        "playlists": [
+            {
+                "title": "Dr. Wahid Ali – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHyJe6DcHW02NJ-xA2vd-Nt&si=JZKthHth4RcVXfas",
+                "icon": "🎓",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Shady A. Maged – Summer 2021",
+                "link": "https://www.youtube.com/playlist?list=PLJY6IpXCY9VIa9zZz4CT3ssCr4bX_1bzN",
+                "icon": "🎓",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Sheets Solution – Spring 2024",
+                "link": "https://www.youtube.com/playlist?list=PLB-FVbkjJl4StynXfn0mjJ8eFQ4sBiGo1",
+                "icon": "📝",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Practice",
+                        "color": "#e91e8c"
+                    }
+                ]
+            }
+        ],
         "color": "#ff8a65",
         "subCode": "CSE373s"
     }
@@ -6293,9 +8541,9 @@ window.SCHEDULE_DATA = [
                 "sub": "CA",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "",
+                "when": "Wednesday (18/3)",
                 "where": "",
-                "coverage": "",
+                "coverage": "Up till just before PCIe",
                 "note": ""
             },
             {
@@ -6321,10 +8569,12 @@ window.SCHEDULE_DATA = [
                 "sub": "ML",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "",
+                "when": "Sunday (15/3) at 12:30 PM",
                 "where": "",
                 "coverage": "Up till week 3 (linear regressions & multi linear regression)",
-                "note": "Online on SEB browser (make sure you download it)"
+                "note": "Online on SEB browser (make sure you download it)",
+                "deadlineDate": "15/03/2026 12:30 PM",
+                "deadlineEndDate": ""
             },
             {
                 "sub": "DB",
@@ -7652,5 +9902,78 @@ window.UPDATES_DATA = [
         "title": "Others Menu",
         "desc": "Home page expandable 'Others' section groups extra pages neatly.",
         "date": ""
+    },
+    {
+        "icon": "📬",
+        "title": "News & Announcements",
+        "desc": "Added a floating announcements inbox with unread counter, time stamps, subject labels, optional deadline chips, and admin-managed news entries.",
+        "date": "2026-03-13"
+    },
+    {
+        "icon": "📤",
+        "title": "Export Utilities",
+        "desc": "Added compact utilities actions for Word, screenshots, and share with page-specific availability instead of cluttering every screen.",
+        "date": "2026-03-13"
+    },
+    {
+        "icon": "📸",
+        "title": "Cleaner Screenshots",
+        "desc": "Improved schedule, midterm, and timetable screenshot capture so they focus on the useful content instead of grabbing extra page chrome.",
+        "date": "2026-03-13"
+    },
+    {
+        "icon": "🔁",
+        "title": "Navigation & Subject Flow",
+        "desc": "Refined subject tab history so back navigation returns to Subjects correctly, reduced dropdown clutter, and improved the subject filters workflow.",
+        "date": "2026-03-13"
+    },
+    {
+        "icon": "👥",
+        "title": "Staff Sharing",
+        "desc": "Staff contacts can now be shared with resolved Teams chat links instead of only copying raw email identifiers.",
+        "date": "2026-03-13"
+    }
+];
+
+window.NEWS_DATA = [
+    {
+        "emoji": "🎉",
+        "title": "Eid El Fitr Vacation",
+        "body": "We have no tutorials or lectures from Thursday (19/3) until Monday (23/3) as it's Eid El Fitr vacation!",
+        "publishedAt": "2026-03-13T17:31:37",
+        "sub": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "OS attendance",
+        "body": "Eng. Habiba will not take attendance tomorrow.",
+        "publishedAt": "2026-03-13T17:30:53",
+        "sub": "OS",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "CA Lecture",
+        "body": "Next's week lecture got moved to Tuesday at 9 PM instead of Wednesday.",
+        "publishedAt": "2026-03-13T17:29:40",
+        "sub": "CA",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "🎉",
+        "title": "DB Form",
+        "body": "DB form's deadline got extended to Saturday 🎉!",
+        "publishedAt": "2026-03-13T17:15:29",
+        "sub": "DB",
+        "hasDeadline": true,
+        "deadlineDate": "2026-03-14",
+        "deadlineTime": "11:59 PM"
     }
 ];

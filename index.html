@@ -58,6 +58,7 @@
         .card.locked > * { opacity: 0.5; filter: grayscale(1); }
         .card.locked > .custom-badge { opacity: 1 !important; filter: none !important; }
         .card.locked:hover { transform: none; box-shadow: none; }
+        .group-link-row:hover { background: rgba(255,255,255,0.06) !important; transform: translateX(4px); }
         
         .info-box { background: rgba(20, 10, 30, 0.8); border: 2px solid var(--accent-pink); border-radius: 20px; padding: 35px; margin-bottom: 40px; box-shadow: 0 0 50px rgba(233, 30, 140, 0.15); position: relative; }
         .content-badge { display: inline-block; padding: 6px 14px; border-radius: 10px; font-size: 0.85rem; font-weight: bold; color: white; margin-top: 12px; margin-bottom: 20px; letter-spacing: 0.5px; line-height: 1.4; word-break: break-word; }
@@ -191,6 +192,27 @@
         .back-to-top { bottom: 20px; }
         .scroll-to-bottom { bottom: 66px; }
 
+        /* Compact quick actions */
+        .quick-actions { position: fixed; right: 20px; top: 72px; z-index: 980; display: none; flex-direction: column; gap: 8px; }
+        .quick-actions.visible { display: flex; }
+        .qa-btn { width: 34px; height: 34px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: rgba(26, 13, 46, 0.9); color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.95rem; transition: 0.2s; box-shadow: 0 3px 14px rgba(0,0,0,0.35); }
+        .qa-btn:hover { transform: translateY(-1px); border-color: var(--accent-pink); box-shadow: 0 0 14px rgba(233,30,140,0.35); }
+        .qa-utils-wrap { position: relative; }
+        .qa-submenu { display: none; position: absolute; right: 42px; top: 0; background: rgba(18,8,36,0.97); border: 1px solid rgba(233,30,140,0.4); border-radius: 10px; padding: 6px; flex-direction: column; gap: 3px; white-space: nowrap; z-index: 995; min-width: 160px; box-shadow: 0 8px 28px rgba(0,0,0,0.55); }
+        .qa-submenu.open { display: flex; }
+        .qa-submenu-btn { background: none; border: none; color: #f0ebff; cursor: pointer; padding: 8px 12px; border-radius: 7px; text-align: left; font-size: 13px; font-family: 'Work Sans', Arial, sans-serif; transition: background 0.15s; width: 100%; }
+        .qa-submenu-btn:hover { background: rgba(233,30,140,0.2); color: #fff; }
+
+        .share-sheet { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 1100; align-items: center; justify-content: center; backdrop-filter: blur(6px); }
+        .share-sheet.active { display: flex; }
+        .share-sheet-card { width: min(460px, 92vw); background: #1a0d2e; border: 1px solid rgba(233, 30, 140, 0.35); border-radius: 16px; padding: 18px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .share-sheet-title { font-family: 'Orbitron', sans-serif; font-size: 1rem; color: white; margin-bottom: 10px; }
+        .share-sheet-sub { color: var(--text-sub); font-size: 0.82rem; margin-bottom: 14px; }
+        .share-sheet-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+        .share-sheet-btn { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.05); color: white; border-radius: 10px; padding: 10px; cursor: pointer; font-weight: 600; font-size: 0.85rem; }
+        .share-sheet-btn:hover { background: rgba(255,255,255,0.12); }
+        .share-sheet-close { margin-top: 10px; width: 100%; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.04); color: #ddd; border-radius: 10px; padding: 9px; cursor: pointer; }
+
         /* URL icon in modal */
         .modal-url-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(74, 144, 226, 0.15); border: 1px solid rgba(74, 144, 226, 0.3); padding: 4px 10px; border-radius: 8px; margin-left: 8px; cursor: pointer; text-decoration: none; transition: 0.2s; font-size: 0.8rem; color: var(--accent-blue); }
         .modal-url-badge:hover { background: rgba(74, 144, 226, 0.3); color: white; }
@@ -323,7 +345,33 @@
         .tt-legend-swatch { width:16px; height:16px; border-radius:4px; }
         @media (max-width: 768px) {
             .hotkeys-fab, .hotkeys-panel { display: none !important; }
+            .news-fab { left: 30px !important; }
         }
+
+        /* News FAB */
+        .news-fab { position: fixed; bottom: 30px; left: 84px; z-index: 999; width: 44px; height: 44px; border-radius: 50%; background: rgba(39,18,68,0.9); backdrop-filter: blur(12px); border: 1px solid rgba(233,30,140,0.3); cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); flex-shrink: 0; }
+        .news-fab:hover { border-color: var(--accent-pink); box-shadow: 0 4px 20px rgba(233,30,140,0.3); }
+        .news-fab-badge { position: absolute; top: -5px; right: -5px; background: #e91e8c; color: white; font-size: 0.6rem; font-weight: 800; min-width: 17px; height: 17px; border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 0 3px; box-shadow: 0 0 8px rgba(233,30,140,0.7); pointer-events: none; line-height: 1; }
+        /* News Panel */
+        .news-panel { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 1100; align-items: flex-end; backdrop-filter: blur(6px); }
+        .news-panel.active { display: flex; }
+        .news-panel-card { width: min(480px, 100vw); max-height: 80vh; background: #13062a; border: 1px solid rgba(233,30,140,0.3); border-radius: 18px 18px 0 0; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 -8px 40px rgba(0,0,0,0.55); }
+        .news-panel-header { padding: 16px 18px 12px; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; background: #13062a; }
+        .news-panel-title { font-family: 'Orbitron', sans-serif; font-size: 0.88rem; color: white; letter-spacing: 1px; }
+        .news-panel-close { background: none; border: none; color: #888; cursor: pointer; font-size: 1.05rem; padding: 4px 8px; border-radius: 6px; transition: 0.15s; }
+        .news-panel-close:hover { color: white; background: rgba(255,255,255,0.09); }
+        .news-items-list { overflow-y: auto; flex: 1; }
+        .news-item { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .news-item.news-unread { background: rgba(233,30,140,0.07); border-left: 3px solid #e91e8c; padding-left: 13px; }
+        .ni-inner { display: flex; gap: 10px; align-items: flex-start; }
+        .ni-emoji { font-size: 1.55rem; flex-shrink: 0; line-height: 1.1; margin-top: 1px; }
+        .ni-body { flex: 1; min-width: 0; }
+        .ni-title { color: #fff; font-weight: 600; font-size: 0.9rem; margin-bottom: 3px; }
+        .ni-note { color: #b8a8d6; font-size: 0.8rem; line-height: 1.5; margin-bottom: 6px; white-space: pre-wrap; }
+        .ni-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+        .ni-time { color: #555; font-size: 0.71rem; }
+        .ni-dl { background: rgba(255,100,50,0.12); border: 1px solid rgba(255,100,50,0.35); color: #ff8a65; font-size: 0.7rem; font-weight: 600; padding: 2px 7px; border-radius: 5px; }
+        .ni-sub { background: rgba(74,144,226,0.1); border: 1px solid rgba(74,144,226,0.3); color: #4a90e2; font-size: 0.7rem; padding: 2px 7px; border-radius: 5px; }
     </style>
 </head>
 <body>
@@ -412,13 +460,13 @@
     </div>
 
     <div id="recent-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button class="back-btn" onclick="smartBack()">← Back</button>
         <h1 style="color:var(--accent-blue)">HISTORY</h1>
         <div class="grid recent-grid" id="recent-list"></div>
     </div>
 
     <div id="schedule-page" class="page">
-        <button id="schedule-back-btn" class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button id="schedule-back-btn" class="back-btn" onclick="smartBack()">← Back</button>
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
             <h1 style="color:#ff9500">SEMESTER MAP</h1>
         </div>
@@ -427,7 +475,7 @@
     </div>
 
     <div id="deadlines-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button class="back-btn" onclick="smartBack()">← Back</button>
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
             <h1 style="color:#00E5FF">DEADLINES</h1>
         </div>
@@ -454,7 +502,7 @@
     </div>
 
     <div id="midterm-page" class="page">
-        <button id="midterm-back-btn" class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button id="midterm-back-btn" class="back-btn" onclick="smartBack()">← Back</button>
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
             <h1 style="color:#007aff">MIDTERM EXAMS</h1>
         </div>
@@ -463,7 +511,7 @@
     </div>
 
     <div id="useful-links-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button class="back-btn" onclick="smartBack()">← Back</button>
         <h1 style="color:var(--accent-purple)">USEFUL LINKS</h1>
         <p class="subtitle" style="margin-bottom: 30px;">Important resources across all subjects</p>
         <div id="useful-links-filter-bar" class="filter-bar"></div>
@@ -471,7 +519,7 @@
     </div>
 
     <div id="timetable-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button class="back-btn" onclick="smartBack()">← Back</button>
         <h1 style="color:#ff375f">TIMETABLE</h1>
         <p class="subtitle" style="margin-bottom: 20px;">Your weekly class schedule</p>
         <div id="timetable-controls"></div>
@@ -480,7 +528,7 @@
     </div>
 
     <div id="directory-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button class="back-btn" onclick="smartBack()">← Back</button>
         <h1 style="color:#34c759">STAFF CONTACTS</h1>
         <p class="subtitle" style="margin-bottom: 30px;">Instructors &amp; Teaching Assistants</p>
         <div id="directory-filter-bar" class="filter-bar"></div>
@@ -488,22 +536,19 @@
     </div>
 
     <div id="updates-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button class="back-btn" onclick="smartBack()">← Back</button>
         <h1 style="color:#af52de">UPDATES &amp; CHANGELOG</h1>
         <p class="subtitle" style="margin-bottom: 30px;">All features and improvements</p>
         <div class="grid weeks-grid" id="updates-list" style="gap:15px;"></div>
     </div>
 
     <div id="weeks-page" class="page">
-        <button class="back-btn" onclick="nav('home')">← Back to Subjects</button>
+        <button class="back-btn" onclick="smartBack()">← Back</button>
         <div style="text-align:center;">
             <h1 id="subject-title" style="margin-bottom:5px;"></h1>
             <div id="drive-container" style="margin-bottom:20px;"></div>
         </div>
         
-        <div id="jump-week-bar" style="display:none; text-align:center; margin-bottom:12px;">
-            <button id="jump-week-btn" onclick="jumpToCurrentWeek()" style="background:linear-gradient(135deg, var(--accent-purple), var(--accent-pink)); color:white; border:none; padding:10px 24px; border-radius:12px; font-weight:700; font-size:0.9rem; cursor:pointer; letter-spacing:0.5px; box-shadow:0 4px 18px rgba(233,30,140,0.3); transition:all 0.25s;">⏬ Jump to Current Week</button>
-        </div>
         <div id="subject-tabs" class="subject-tabs">
             <button id="tab-weeks" class="sub-tab active" onclick="renderSubjectView('weeks')">📚 Weeks</button>
             <button id="tab-events" class="sub-tab" onclick="renderSubjectView('events')">🎯 Exam Materials</button>
@@ -516,7 +561,7 @@
     </div>
 
     <div id="content-page" class="page">
-        <button id="content-back-btn" class="back-btn" onclick="nav('weeks')">← Back to Material</button>
+        <button id="content-back-btn" class="back-btn" onclick="smartBack()">← Back</button>
         <div class="info-box">
             <div class="info-title" id="week-display-title"></div>
             <div id="content-badge-container"></div>
@@ -537,12 +582,41 @@
     </div>
 </div>
 
+<div id="share-sheet" class="share-sheet" onclick="closeShareSheet(event)">
+    <div class="share-sheet-card" onclick="event.stopPropagation()">
+        <div class="share-sheet-title">Share Content</div>
+        <div class="share-sheet-sub" id="share-sheet-sub">Choose how to share this content.</div>
+        <div class="share-sheet-actions">
+            <button class="share-sheet-btn" onclick="shareNative()">System Share</button>
+            <button class="share-sheet-btn" onclick="shareWhatsApp()">WhatsApp</button>
+            <button class="share-sheet-btn" onclick="copyShareText()">Copy Text</button>
+            <button class="share-sheet-btn" onclick="downloadShareText()">Download TXT</button>
+        </div>
+        <button class="share-sheet-close" onclick="closeShareSheet(null, true)">Close</button>
+    </div>
+</div>
+
 <!-- Toast Notifications -->
 <div id="toast-container"></div>
 
 <!-- Scroll Buttons -->
 <button class="scroll-btn scroll-to-bottom" id="scroll-to-bottom" onclick="window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})" title="Scroll to bottom">↓</button>
 <button class="scroll-btn back-to-top" id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+<div id="quick-actions" class="quick-actions"></div>
+
+<!-- News FAB -->
+<button class="news-fab" id="news-fab" onclick="openNewsPanel()" title="News & Announcements"></button>
+
+<!-- News Panel -->
+<div id="news-panel" class="news-panel" onclick="closeNewsPanel(event)">
+    <div class="news-panel-card" onclick="event.stopPropagation()">
+        <div class="news-panel-header">
+            <div class="news-panel-title">📢 ANNOUNCEMENTS</div>
+            <button class="news-panel-close" onclick="closeNewsPanel(null,true)">✕</button>
+        </div>
+        <div id="news-items-list" class="news-items-list"></div>
+    </div>
+</div>
 
 <!-- Hotkeys FAB -->
 <button class="hotkeys-fab" id="hotkeys-fab" onclick="toggleHotkeysPanel()" title="Keyboard shortcuts">⌨</button>
@@ -556,13 +630,13 @@
     <div class="hotkey-row"><span class="hotkey-key">H</span> History</div>
     <div class="hotkey-row"><span class="hotkey-key">Home</span> Scroll to top</div>
     <div class="hotkey-row"><span class="hotkey-key">End</span> Scroll to bottom</div>
-    <div class="hotkey-row"><span class="hotkey-key">←→</span> Navigate weeks / months</div>
+    <div class="hotkey-row"><span class="hotkey-key">←→</span> Weeks / months / nav tabs</div>
     <div class="hotkey-row"><span class="hotkey-key">⌫</span> Go back</div>
     <div class="hotkey-row"><span class="hotkey-key">⇧P</span> Open Course Drive</div>
-    <div class="hotkey-row"><span class="hotkey-key">1 2 3</span> Subject tab switch</div>
     <div class="hotkey-row"><span class="hotkey-key">Esc</span> Close modal / Go back</div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="course_data.js"></script>
 
 <script>
@@ -651,7 +725,62 @@
     let currentSubjectView = 'weeks'; 
     let currentUsefulFilter = 'All Links';
     let currentUsefulSubject = 'All Subjects';
+    let subjectViewFilters = {};
     let weekNavPrev = null, weekNavNext = null, weekNavFrom = 'weeks';
+    let currentContentObj = null;
+    let currentContentSourceArr = null;
+    let sharePayload = { title: '', text: '', fileBase: 'week-by-week' };
+    let currentPageId = 'home';
+    let previousPageId = 'home';
+
+    const NAV_TAB_ORDER = ['home', 'recent', 'schedule', 'deadlines', 'midterm', 'useful-links', 'timetable', 'directory', 'updates'];
+
+    function getPageLabel(pageId) {
+        const labels = {
+            'home': 'Subjects',
+            'recent': 'History',
+            'schedule': 'Task Schedule',
+            'deadlines': 'Deadlines',
+            'midterm': 'Midterms',
+            'useful-links': 'Useful Links',
+            'timetable': 'Timetable',
+            'directory': 'Staff Contacts',
+            'updates': 'Updates',
+            'weeks': (currSub ? `${currSub.code} Material` : 'Subject Material'),
+            'content': (currSub ? `${currSub.code}` : 'Material')
+        };
+        return labels[pageId] || 'Subjects';
+    }
+
+    function updateBackButtons() {
+        const activePage = document.querySelector('.page.active');
+        if (!activePage) return;
+        const backBtns = activePage.querySelectorAll('.back-btn');
+        if (!backBtns.length) return;
+        const label = getPageLabel(previousPageId);
+        backBtns.forEach(btn => { btn.textContent = `← Back to ${label}`; });
+    }
+
+    function smartBack() {
+        closeModal(null, true);
+        closeShareSheet(null, true);
+        if (document.getElementById('news-panel').classList.contains('active')) { closeNewsPanel(null, true); return; }
+        if (document.querySelector('#home-page.active')) return;
+        if (window.history.length > 1) history.back();
+        else nav('home', false);
+    }
+
+    function openTopLevelTab(tabId) {
+        if(tabId === 'home') nav('home');
+        else if(tabId === 'recent') showRecent();
+        else if(tabId === 'schedule') showSchedule();
+        else if(tabId === 'deadlines') showDeadlines();
+        else if(tabId === 'midterm') showMidterms(true, 'home');
+        else if(tabId === 'useful-links') showUsefulLinks(true, currentUsefulFilter, currentUsefulSubject);
+        else if(tabId === 'timetable') showTimetable();
+        else if(tabId === 'directory') showDirectory();
+        else if(tabId === 'updates') showUpdates();
+    }
 
     // Auto-expire "New" badges older than 7 days based on recentDate
     function autoExpireNewBadges() {
@@ -713,6 +842,7 @@
             if(!s.weeks) s.weeks = [];
             if(!s.events) s.events = [];
             if(!s.playlists) s.playlists = [];
+            s.playlists.forEach(p => { if(!p.badges) { p.badges = p.badgeText ? [{text:p.badgeText, color:p.badgeColor||'#e91e8c'}] : []; delete p.badgeText; delete p.badgeColor; } });
             
             const el = document.createElement('div');
             el.className = 'card';
@@ -730,9 +860,7 @@
             closeModal(null, true);
             if(event.state) {
                 if(event.state.page === 'weeks' || event.state.page === 'content') {
-                    if(!currSub && event.state.subCode) {
-                        currSub = window.COURSE_DATA.find(s => s.code === event.state.subCode);
-                    }
+                    if(event.state.subCode) currSub = window.COURSE_DATA.find(s => s.code === event.state.subCode) || null;
                     if(!currSub) { nav('home', false); return; } 
                 }
                 
@@ -741,7 +869,7 @@
                 else if(event.state.page === 'schedule') showSchedule(false, event.state.from || 'home');
                 else if(event.state.page === 'deadlines') showDeadlines(false);
                 else if(event.state.page === 'midterm') showMidterms(false, event.state.from || 'home');
-                else if(event.state.page === 'useful-links') showUsefulLinks(false, event.state.filter || 'All Links', event.state.subject || 'All Subjects');
+                else if(event.state.page === 'useful-links') showUsefulLinks(false, event.state.filter || currentUsefulFilter, event.state.subject || currentUsefulSubject);
                 else if(event.state.page === 'directory') showDirectory(false);
                 else if(event.state.page === 'timetable') showTimetable(false);
                 else if(event.state.page === 'updates') showUpdates(false);
@@ -758,6 +886,9 @@
         
         populateAllDropdowns();
         setInterval(populateDeadlinesDropdown, 60000); 
+        renderQuickActions();
+        if (typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
+        renderNewsBtn();
     }
 
     function parseDate(str) {
@@ -975,6 +1106,29 @@
             }
         });
 
+        (window.NEWS_DATA || []).forEach((n, newsIndex) => {
+            if (!n || !n.hasDeadline) return;
+            const ts = parseNewsDeadlineTs(n.deadlineDate, n.deadlineTime);
+            if (ts === 0) {
+                unscheduled.push({
+                    source: 'news',
+                    newsIndex,
+                    task: { icon: n.emoji || '📢', name: n.title || 'Announcement', sub: n.sub || 'NEWS' },
+                    week: 'News'
+                });
+                return;
+            }
+            const item = {
+                source: 'news',
+                newsIndex,
+                task: { icon: n.emoji || '📢', name: n.title || 'Announcement', sub: n.sub || 'NEWS' },
+                week: 'News',
+                timestamp: ts
+            };
+            if (ts < now) completed.push(item);
+            else upcoming.push(item);
+        });
+
         ongoing.sort((a, b) => a.timestamp - b.timestamp);
         upcoming.sort((a, b) => a.timestamp - b.timestamp);
         completed.sort((a, b) => b.timestamp - a.timestamp);
@@ -1001,8 +1155,8 @@
                 h = h % 12 || 12;
                 const timeStr = `${h}:${m} ${ampm}`;
 
-                let subName = item.task.sub;
-                if(window.COURSE_DATA) {
+                let subName = item.source === 'news' ? 'News Announcement' : item.task.sub;
+                if(window.COURSE_DATA && item.source !== 'news') {
                     const sObj = window.COURSE_DATA.find(s => s.code === item.task.sub);
                     if(sObj) subName = sObj.name;
                 }
@@ -1036,12 +1190,13 @@
                     }
                 }
 
+                const onClick = item.source === 'news' ? 'openNewsPanel()' : `goToScheduleTask(${item.wIndex}, ${item.tIndex})`;
                 html += `
-                    <div class="card ${isComp ? 'completed' : ''}" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center;" onclick="goToScheduleTask(${item.wIndex}, ${item.tIndex})">
+                    <div class="card ${isComp ? 'completed' : ''}" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center;" onclick="${onClick}">
                         <span class="sub-badge" style="background: ${bgColor}; color: ${badgeTextColor}; min-width: 52px; font-size: 0.72rem; padding: 5px 10px; border-radius:8px;">${item.task.sub}</span>
                         <div style="flex: 1; margin-left: 15px;">
                             <div class="dl-text" style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${item.task.icon} ${item.task.name}</div>
-                            <div class="dl-text" style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName} • Week ${item.week}</div>
+                            <div class="dl-text" style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName}${item.source === 'news' ? '' : ` • Week ${item.week}`}</div>
                         </div>
                         <div style="display:flex; flex-direction:column; align-items:flex-end;">
                             <div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${isComp ? '#888' : 'white'}; white-space: nowrap;">${timeStr}</div>
@@ -1099,19 +1254,20 @@
             unschContainer.style.display = 'block';
             let unschHtml = '';
             unscheduled.forEach(item => {
-                let subName = item.task.sub;
-                if(window.COURSE_DATA) {
+                let subName = item.source === 'news' ? 'News Announcement' : item.task.sub;
+                if(window.COURSE_DATA && item.source !== 'news') {
                     const sObj = window.COURSE_DATA.find(s => s.code === item.task.sub);
                     if(sObj) subName = sObj.name;
                 }
                 const accentColor = getSubjectColor(item.task.sub);
                 const bgColor = getSubjectBg(item.task.sub);
+                const onClick = item.source === 'news' ? 'openNewsPanel()' : `goToScheduleTask(${item.wIndex}, ${item.tIndex})`;
                 unschHtml += `
-                    <div class="card" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center; opacity:0.75;" onclick="goToScheduleTask(${item.wIndex}, ${item.tIndex})">
+                    <div class="card" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center; opacity:0.75;" onclick="${onClick}">
                         <span class="sub-badge" style="background: ${bgColor}; color: ${accentColor}; min-width: 52px; font-size: 0.72rem; padding: 5px 10px; border-radius:8px;">${item.task.sub}</span>
                         <div style="flex: 1; margin-left: 15px;">
                             <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${item.task.icon} ${item.task.name}</div>
-                            <div style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName} • Week ${item.week}</div>
+                            <div style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName}${item.source === 'news' ? '' : ` • Week ${item.week}`}</div>
                         </div>
                         <div style="font-size: 0.75rem; color: #ff9500; font-weight: bold; background: rgba(255,149,0,0.1); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,149,0,0.25); white-space:nowrap;">TBD</div>
                     </div>
@@ -1153,11 +1309,13 @@
                     sub.playlists.forEach(p => {
                         const t = (p.title || '').toLowerCase();
                         const n = (p.note || '').toLowerCase();
-                        if(t.includes('lecture') || n.includes('lecture')) catCounts['Lectures']++;
-                        if(t.includes('section') || n.includes('section') || t.includes('tutorial') || n.includes('tutorial')) catCounts['Tutorials']++;
-                        if(t.includes('lab') || n.includes('lab')) catCounts['Labs']++;
-                        if(t.includes('project') || n.includes('project')) catCounts['Projects']++;
-                        if(t.includes('presentation') || n.includes('presentation')) catCounts['Presentations']++;
+                        const btext = (p.badges||[]).map(b=>(b.text||'').toLowerCase()).join(' ');
+                        const all = t + ' ' + n + ' ' + btext;
+                        if(all.includes('lecture')) catCounts['Lectures']++;
+                        if(all.includes('section') || all.includes('tutorial')) catCounts['Tutorials']++;
+                        if(all.includes('lab')) catCounts['Labs']++;
+                        if(all.includes('project')) catCounts['Projects']++;
+                        if(all.includes('presentation')) catCounts['Presentations']++;
                     });
                 }
             }
@@ -1197,7 +1355,7 @@
         });
 
         let renderedCount = 0;
-        const isListView = (subjectFilter === 'All Subjects' && filterType === 'All Links');
+        const isListView = true;
 
         if (isListView) {
             list.style.display = 'flex';
@@ -1221,18 +1379,20 @@
                     if (filterType === 'All Links') return true;
                     const t = (p.title || '').toLowerCase();
                     const n = (p.note || '').toLowerCase();
+                    const btext = (p.badges||[]).map(b=>(b.text||'').toLowerCase()).join(' ');
+                    const all = t + ' ' + n + ' ' + btext;
                     const kw = filterType.toLowerCase();
-                    if(kw === 'lectures' && (t.includes('lecture') || n.includes('lecture'))) return true;
-                    if(kw === 'tutorials' && (t.includes('section') || n.includes('section') || t.includes('tutorial') || n.includes('tutorial'))) return true;
-                    if(kw === 'labs' && (t.includes('lab') || n.includes('lab'))) return true;
-                    if(kw === 'projects' && (t.includes('project') || n.includes('project'))) return true;
-                    if(kw === 'presentations' && (t.includes('presentation') || n.includes('presentation'))) return true;
+                    if(kw === 'lectures' && all.includes('lecture')) return true;
+                    if(kw === 'tutorials' && (all.includes('section') || all.includes('tutorial'))) return true;
+                    if(kw === 'labs' && all.includes('lab')) return true;
+                    if(kw === 'projects' && all.includes('project')) return true;
+                    if(kw === 'presentations' && all.includes('presentation')) return true;
                     return false;
                 });
 
                 if (filteredPlaylists.length > 0) {
                     if (isListView) {
-                        // --- LIST VIEW: subject section with link rows ---
+                        // --- LIST VIEW: subject section with link rows + compact grouping ---
                         const color = getSubjectColor(sub.code);
                         const section = document.createElement('div');
                         section.style.cssText = 'margin-bottom:30px;';
@@ -1242,32 +1402,72 @@
                         header.innerHTML = `<span style="font-size:1.5rem;"></span>${sub.code} — ${sub.name} <span style="font-size:0.6rem; color:${color}; opacity:0.7; font-family:'Segoe UI',sans-serif; font-weight:600; background:rgba(255,255,255,0.06); padding:2px 6px; border-radius:6px; margin-left:4px;">${filteredPlaylists.length}</span>`;
                         section.appendChild(header);
 
+                        // Build grouped + ungrouped render items
+                        const ulRenderItems = [];
+                        const ulProcessedGroups = new Set();
                         filteredPlaylists.forEach(p => {
-                            renderedCount++;
-                            const row = document.createElement('div');
-                            row.style.cssText = `display:flex; align-items:center; gap:14px; padding:12px 16px; border-radius:12px; cursor:pointer; transition:all 0.2s; border-left:3px solid ${color}; margin-bottom:8px; background:rgba(0,0,0,0.2);`;
-                            row.onmouseenter = () => { row.style.background = 'rgba(255,255,255,0.06)'; row.style.transform = 'translateX(6px)'; };
-                            row.onmouseleave = () => { row.style.background = 'rgba(0,0,0,0.2)'; row.style.transform = 'translateX(0)'; };
+                            const grp = (p.group || '').trim();
+                            if (grp) {
+                                if (!ulProcessedGroups.has(grp)) {
+                                    ulProcessedGroups.add(grp);
+                                    ulRenderItems.push({ type: 'group', name: grp, items: filteredPlaylists.filter(gp => (gp.group||'').trim() === grp) });
+                                }
+                            } else {
+                                ulRenderItems.push({ type: 'single', playlist: p });
+                            }
+                        });
 
-                            const badgeHtml = p.badgeText ? `<span style="background:${p.badgeColor || '#e91e8c'}; color:#fff; font-size:0.65rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px; flex-shrink:0;">${p.badgeText}</span>` : '';
-                            const noteHtml = p.note ? `<div style="color:var(--text-sub); font-size:0.8rem; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:500px;">${p.note.split('\n')[0]}</div>` : '';
-
-                            row.innerHTML = `
-                                <span style="font-size:1.5rem; flex-shrink:0;">${p.icon || '🔗'}</span>
-                                <div style="flex:1; min-width:0;">
-                                    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-                                        <span style="font-weight:600; color:white; font-size:0.95rem;">${p.title || 'Link'}</span>
-                                        ${badgeHtml}
-                                    </div>
-                                    ${noteHtml}
-                                </div>
-                                <span style="color:${color}; font-size:1rem; flex-shrink:0; opacity:0.6;">→</span>
-                            `;
-                            row.onclick = () => {
-                                if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
-                                else alert("No link assigned.");
-                            };
-                            section.appendChild(row);
+                        ulRenderItems.forEach(item => {
+                            if (item.type === 'single') {
+                                renderedCount++;
+                                const p = item.playlist;
+                                const row = document.createElement('div');
+                                row.style.cssText = `display:flex; align-items:center; gap:14px; padding:12px 16px; border-radius:12px; cursor:pointer; transition:all 0.2s; border-left:3px solid ${color}; margin-bottom:8px; background:rgba(0,0,0,0.2);`;
+                                row.onmouseenter = () => { row.style.background = 'rgba(255,255,255,0.06)'; row.style.transform = 'translateX(6px)'; };
+                                row.onmouseleave = () => { row.style.background = 'rgba(0,0,0,0.2)'; row.style.transform = 'translateX(0)'; };
+                                const lbadges = p.badges || (p.badgeText ? [{text:p.badgeText, color:p.badgeColor||'#e91e8c'}] : []);
+                                const badgeHtml = lbadges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.65rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px; flex-shrink:0;">${b.text}</span>`).join('');
+                                const noteHtml = p.note ? `<div style="color:var(--text-sub); font-size:0.8rem; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:500px;">${p.note.split('\n')[0]}</div>` : '';
+                                row.innerHTML = `<span style="font-size:1.5rem; flex-shrink:0;">${p.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.95rem;">${p.title || 'Link'}</span>${badgeHtml}</div>${noteHtml}</div><span style="color:${color}; font-size:1rem; flex-shrink:0; opacity:0.6;">→</span>`;
+                                row.onclick = () => { if(p.link && p.link !== '#' && p.link.trim() !== '') window.open(p.link, '_blank'); else alert('No link assigned.'); };
+                                section.appendChild(row);
+                            } else {
+                                // Compact group: collapsible row with count badge
+                                const gWrap = document.createElement('div');
+                                gWrap.style.cssText = `border-left:3px solid ${color}; margin-bottom:8px; border-radius:12px; background:rgba(0,0,0,0.15); overflow:hidden;`;
+                                const firstBadges = (item.items[0].badges || []).filter(b=>b.text);
+                                const gBadgeHtml = firstBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
+                                const gHeader = document.createElement('div');
+                                gHeader.style.cssText = `display:flex; align-items:center; gap:10px; padding:10px 16px; cursor:pointer; transition:background 0.2s;`;
+                                gHeader.onmouseenter = () => { gHeader.style.background = 'rgba(255,255,255,0.04)'; };
+                                gHeader.onmouseleave = () => { gHeader.style.background = 'transparent'; };
+                                gHeader.innerHTML = `<span style="font-size:1.3rem;">${item.items[0].icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;"><span style="font-weight:700; color:white; font-size:0.95rem;">${item.name}</span>${gBadgeHtml}<span style="font-size:0.65rem; color:#888; background:rgba(255,255,255,0.08); padding:2px 8px; border-radius:10px;">${item.items.length} links</span></div></div><span class="ul-group-arrow" style="color:${color}; font-size:0.8rem; transition:transform 0.2s;">▼</span>`;
+                                gWrap.appendChild(gHeader);
+                                
+                                const gBody = document.createElement('div');
+                                gBody.style.cssText = 'padding:0 8px 8px 8px; display:none;';
+                                item.items.forEach(p => {
+                                    renderedCount++;
+                                    const subRow = document.createElement('div');
+                                    subRow.style.cssText = 'display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; cursor:pointer; transition:all 0.15s; margin-bottom:2px;';
+                                    subRow.onmouseenter = () => { subRow.style.background = 'rgba(255,255,255,0.05)'; subRow.style.transform = 'translateX(4px)'; };
+                                    subRow.onmouseleave = () => { subRow.style.background = 'transparent'; subRow.style.transform = 'translateX(0)'; };
+                                    const pBadges = (p.badges||[]).filter(b=>b.text);
+                                    const pBadgeHtml = pBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.55rem; padding:1px 6px; border-radius:6px; font-weight:800;">${b.text}</span>`).join('');
+                                    const noteSnip = p.note ? `<div style="color:var(--text-sub); font-size:0.75rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.note.split('\n')[0]}</div>` : '';
+                                    subRow.innerHTML = `<span style="font-size:1rem;">${p.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.85rem;">${p.title || 'Link'}</span>${pBadgeHtml}</div>${noteSnip}</div><span style="color:${color}; opacity:0.4; font-size:0.8rem;">→</span>`;
+                                    subRow.onclick = () => { if(p.link && p.link !== '#' && p.link.trim() !== '') window.open(p.link, '_blank'); else alert('No link assigned.'); };
+                                    gBody.appendChild(subRow);
+                                });
+                                gWrap.appendChild(gBody);
+                                
+                                gHeader.onclick = () => {
+                                    const isOpen = gBody.style.display !== 'none';
+                                    gBody.style.display = isOpen ? 'none' : 'block';
+                                    gHeader.querySelector('.ul-group-arrow').style.transform = isOpen ? '' : 'rotate(180deg)';
+                                };
+                                section.appendChild(gWrap);
+                            }
                         });
 
                         list.appendChild(section);
@@ -1290,11 +1490,13 @@
                             renderedCount++;
                             const el = document.createElement('div');
                             el.className = 'card';
-                            const badgeHtml = (p.badgeText) ? `<div class="custom-badge" style="background:${p.badgeColor || '#e91e8c'}">${p.badgeText}</div>` : '';
+                            const cbadges = p.badges || (p.badgeText ? [{text:p.badgeText, color:p.badgeColor||'#e91e8c'}] : []);
+                            const badgeHtml = cbadges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
+                            const badgeWrapHtml = badgeHtml ? `<div style="position:absolute; top:12px; right:12px; display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end; max-width:70%;">${badgeHtml}</div>` : '';
                             const noteHtml = (p.note) ? `<div style="color:var(--text-sub); margin-top:15px; font-size:0.9rem; line-height:1.4; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px; white-space:pre-wrap;">${p.note}</div>` : '';
                             
                             el.innerHTML = `
-                                ${badgeHtml}
+                                ${badgeWrapHtml}
                                 <span class="sub-badge" style="position:absolute; top:15px; left:15px; background:${getSubjectBg(sub.code)}; color:${getSubjectColor(sub.code)}; padding:4px 8px; border-radius:6px; font-size:0.7rem; border-left: 2px solid ${getSubjectColor(sub.code)};">${sub.code}</span>
                                 <div style="font-size:2.5rem; margin-bottom:10px; margin-top:20px;">${p.icon || '🔗'}</div>
                                 <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>
@@ -1316,6 +1518,16 @@
         }
         
         nav('useful-links', push, { filter: filterType, subject: subjectFilter });
+
+        // Keep current history entry in sync with live filter changes.
+        // This ensures browser Back returns to the same Useful Links filter state.
+        if (!push) {
+            history.replaceState(
+                { page: 'useful-links', filter: filterType, subject: subjectFilter },
+                null,
+                '#useful-links'
+            );
+        }
     }
 
     // --- SCHEDULE LOGIC ---
@@ -1374,15 +1586,6 @@
     }
 
     function showSchedule(push = true, from = 'home') {
-        const backBtn = document.getElementById('schedule-back-btn');
-        if (from === 'deadlines') {
-            backBtn.onclick = () => showDeadlines();
-            backBtn.innerText = "← Back to Deadlines";
-        } else {
-            backBtn.onclick = () => nav('home');
-            backBtn.innerText = "← Back to Subjects";
-        }
-
         renderScheduleContent();
         nav('schedule', push, { from: from });
     }
@@ -1680,15 +1883,6 @@
     });
     
     function showMidterms(push = true, from = 'home') {
-        const backBtn = document.getElementById('midterm-back-btn');
-        if (from === 'schedule') {
-            backBtn.onclick = () => showSchedule();
-            backBtn.innerText = "← Back to Schedule";
-        } else {
-            backBtn.onclick = () => nav('home');
-            backBtn.innerText = "← Back to Subjects";
-        }
-
         const container = document.getElementById('midterm-list');
         container.innerHTML = '';
         
@@ -1913,49 +2107,13 @@
             gridPlaylists.style.display = 'none';
             gridWeeks.style.display = 'grid';
             renderFilterBar(viewType);
-            renderWeekGrid('ALL', viewType === 'events');
         }
-        updateJumpButton(viewType);
-        
         if(pushState) {
-            history.pushState({page: 'weeks', subCode: currSub.code, subView: viewType}, null, "#weeks");
+            const nextState = {page: 'weeks', subCode: currSub.code, subView: viewType};
+            if (history.state && history.state.page === 'weeks') history.replaceState(nextState, null, "#weeks");
+            else history.pushState(nextState, null, "#weeks");
         }
-    }
-
-    function getCurrentWeekNumber() {
-        const cfg = window.CONFIG;
-        if (!cfg || !cfg.semesterStart) return -1;
-        const start = new Date(cfg.semesterStart);
-        if (isNaN(start)) return -1;
-        const now = new Date();
-        const diff = now - start;
-        if (diff < 0) return 0;
-        return Math.floor(diff / (7 * 24 * 60 * 60 * 1000)) + 1;
-    }
-
-    function updateJumpButton(viewType) {
-        const bar = document.getElementById('jump-week-bar');
-        if (!bar) return;
-        if (viewType !== 'weeks') { bar.style.display = 'none'; return; }
-        const weekNum = getCurrentWeekNumber();
-        const sourceArr = currSub && currSub.weeks ? currSub.weeks : [];
-        if (weekNum < 1 || weekNum > sourceArr.length) { bar.style.display = 'none'; return; }
-        const btn = document.getElementById('jump-week-btn');
-        btn.textContent = '⏬ Jump to Current Week (Week ' + weekNum + ')';
-        bar.style.display = 'block';
-    }
-
-    function jumpToCurrentWeek() {
-        const weekNum = getCurrentWeekNumber();
-        if (weekNum < 1) return;
-        const idx = weekNum - 1;
-        const card = document.querySelector('#weeks-grid .card[data-week-index="' + idx + '"]');
-        if (card) {
-            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            card.style.transition = 'box-shadow 0.3s';
-            card.style.boxShadow = '0 0 25px rgba(233,30,140,0.6), 0 0 50px rgba(233,30,140,0.2)';
-            setTimeout(() => { card.style.boxShadow = ''; }, 2000);
-        }
+        renderQuickActions();
     }
 
     function renderPlaylistGrid() {
@@ -1966,30 +2124,75 @@
             return;
         }
 
+        const renderItems = [];
+        const processedGroups = new Set();
         currSub.playlists.forEach((p, i) => {
-            const el = document.createElement('div');
-            el.className = 'card';
-            
-            const badgeHtml = (p.badgeText) ? `<div class="custom-badge" style="background:${p.badgeColor || '#e91e8c'}">${p.badgeText}</div>` : '';
-            const noteHtml = (p.note) ? `<div style="color:var(--text-sub); margin-top:15px; font-size:0.9rem; line-height:1.4; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px; white-space:pre-wrap;">${p.note}</div>` : '';
-            
-            el.innerHTML = `
-                ${badgeHtml}
-                <div style="font-size:2.5rem; margin-bottom:10px">${p.icon || '🔗'}</div>
-                <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>
-                ${noteHtml}
-            `;
-            el.onclick = () => {
-                if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
-                else alert("No link assigned.");
-            };
-            grid.appendChild(el);
+            const group = (p.group || '').trim();
+            if (group) {
+                if (!processedGroups.has(group)) {
+                    processedGroups.add(group);
+                    const groupItems = currSub.playlists.filter(gp => (gp.group || '').trim() === group);
+                    renderItems.push({ type: 'group', name: group, items: groupItems });
+                }
+            } else {
+                renderItems.push({ type: 'single', playlist: p });
+            }
+        });
+
+        renderItems.forEach(item => {
+            if (item.type === 'single') {
+                const p = item.playlist;
+                const el = document.createElement('div');
+                el.className = 'card';
+                const badges = p.badges || (p.badgeText ? [{text:p.badgeText, color:p.badgeColor||'#e91e8c'}] : []);
+                const badgeHtml = badges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
+                const badgeWrap = badgeHtml ? `<div style="position:absolute; top:12px; right:12px; display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end; max-width:70%;">${badgeHtml}</div>` : '';
+                const noteHtml = (p.note) ? `<div style="color:var(--text-sub); margin-top:15px; font-size:0.9rem; line-height:1.4; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px; white-space:pre-wrap;">${p.note}</div>` : '';
+                el.innerHTML = `
+                    ${badgeWrap}
+                    <div style="font-size:2.5rem; margin-bottom:10px">${p.icon || '🔗'}</div>
+                    <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>
+                    ${noteHtml}
+                `;
+                el.onclick = () => {
+                    if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
+                    else alert("No link assigned.");
+                };
+                grid.appendChild(el);
+            } else {
+                const groupEl = document.createElement('div');
+                groupEl.style.cssText = 'grid-column: 1 / -1; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px; margin: 5px 0;';
+                const firstItem = item.items[0];
+                const commonBadges = firstItem.badges || [];
+                const hBadgeHtml = commonBadges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
+                let innerHtml = `<div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.08);">
+                    <span style="font-size:1.8rem;">${firstItem.icon || '🔗'}</span>
+                    <div style="flex:1;"><div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${item.name}</div></div>
+                    <div style="display:flex; gap:4px; flex-wrap:wrap;">${hBadgeHtml}</div>
+                    <span style="color:var(--text-sub); font-size:0.8rem; white-space:nowrap;">${item.items.length} links</span>
+                </div>`;
+                item.items.forEach(p => {
+                    const pBadges = (p.badges || []).filter(b=>b.text);
+                    const pBadgeHtml = pBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.55rem; padding:1px 6px; border-radius:6px; font-weight:800;">${b.text}</span>`).join('');
+                    const noteSnippet = p.note ? `<div style="color:var(--text-sub); font-size:0.78rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.note.split('\n')[0]}</div>` : '';
+                    const safeLink = (p.link || '').replace(/'/g, "\\'");
+                    innerHtml += `<div class="group-link-row" onclick="window.open('${safeLink}','_blank')" style="display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; cursor:pointer; transition:all 0.2s; margin-bottom:4px;">
+                        <span style="font-size:1.2rem;">${p.icon || '🔗'}</span>
+                        <div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.9rem;">${p.title || 'Link'}</span>${pBadgeHtml}</div>${noteSnippet}</div>
+                        <span style="color:var(--accent); opacity:0.5; font-size:0.9rem;">→</span>
+                    </div>`;
+                });
+                groupEl.innerHTML = innerHtml;
+                grid.appendChild(groupEl);
+            }
         });
     }
 
     function renderFilterBar(viewType) {
         const bar = document.getElementById('filter-bar');
         bar.innerHTML = '';
+
+        const filterKey = `${currSub.code}:${viewType}`;
         
         const sourceArr = viewType === 'events' ? currSub.events : currSub.weeks;
         const availableTypes = new Set();
@@ -2005,9 +2208,13 @@
         }
 
         const btnAll = document.createElement('button');
-        btnAll.className = 'filter-btn active';
+        btnAll.className = 'filter-btn';
         btnAll.innerText = 'ALL';
-        btnAll.onclick = () => { setActiveFilter(btnAll); renderWeekGrid('ALL', viewType === 'events'); };
+        btnAll.onclick = () => {
+            subjectViewFilters[filterKey] = 'ALL';
+            setActiveFilter(btnAll, 'filter-bar');
+            renderWeekGrid('ALL', viewType === 'events');
+        };
         bar.appendChild(btnAll);
 
         if(window.CONFIG && window.CONFIG.resources) {
@@ -2016,15 +2223,35 @@
                     const btn = document.createElement('button');
                     btn.className = 'filter-btn';
                     btn.innerText = res.name;
-                    btn.onclick = () => { setActiveFilter(btn); renderWeekGrid(res.name, viewType === 'events'); };
+                    btn.onclick = () => {
+                        subjectViewFilters[filterKey] = res.name;
+                        setActiveFilter(btn, 'filter-bar');
+                        renderWeekGrid(res.name, viewType === 'events');
+                    };
                     bar.appendChild(btn);
                 }
             });
         }
+
+        const availableFilters = new Set(['ALL']);
+        if(window.CONFIG && window.CONFIG.resources) {
+            window.CONFIG.resources.forEach(res => {
+                if(availableTypes.has(res.name)) availableFilters.add(res.name);
+            });
+        }
+
+        let activeFilter = subjectViewFilters[filterKey] || 'ALL';
+        if (!availableFilters.has(activeFilter)) activeFilter = 'ALL';
+        subjectViewFilters[filterKey] = activeFilter;
+
+        const activeBtn = [...bar.querySelectorAll('.filter-btn')].find(b => b.innerText === activeFilter);
+        if (activeBtn) activeBtn.classList.add('active');
+
+        renderWeekGrid(activeFilter, viewType === 'events');
     }
 
-    function setActiveFilter(btn) {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    function setActiveFilter(btn, containerId = 'filter-bar') {
+        document.querySelectorAll(`#${containerId} .filter-btn`).forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
     }
 
@@ -2100,18 +2327,8 @@
     }
 
     function showContentByObj(weekOrEvent, push = true, from = 'weeks') {
-        const backBtn = document.getElementById('content-back-btn');
-        if (from === 'recent') {
-            backBtn.onclick = () => nav('recent');
-            backBtn.innerText = "← Back to History";
-        } else if (from === 'midterm') {
-            backBtn.onclick = () => nav('midterm');
-            backBtn.innerText = "← Back to Midterms";
-        } else {
-            backBtn.onclick = () => nav('weeks');
-            backBtn.innerText = "← Back to Material";
-        }
-
+        currentContentObj = weekOrEvent;
+        currentContentSourceArr = (currSub && (currSub.events || []).includes(weekOrEvent)) ? currSub.events : (currSub ? currSub.weeks : null);
         const badgeTitle = weekOrEvent.isNew ? '<span class="badge-new">NEW!</span>' : '';
         document.getElementById('week-display-title').innerHTML = `${currSub.code} - ${weekOrEvent.title} ${badgeTitle}`;
 
@@ -2168,7 +2385,7 @@
                 const btn = document.createElement('button');
                 btn.className = 'week-nav-btn';
                 btn.innerHTML = `← ${weekNavPrev.title}`;
-                btn.onclick = () => showContentByObj(weekNavPrev, true, from);
+                btn.onclick = () => showContentByObj(weekNavPrev, false, from);
                 weekNav.appendChild(btn);
             } else {
                 const spacer = document.createElement('div');
@@ -2180,16 +2397,17 @@
                 const btn = document.createElement('button');
                 btn.className = 'week-nav-btn';
                 btn.innerHTML = `${weekNavNext.title} →`;
-                btn.onclick = () => showContentByObj(weekNavNext, true, from);
+                btn.onclick = () => showContentByObj(weekNavNext, false, from);
                 weekNav.appendChild(btn);
             }
         }
+        renderQuickActions();
     }
 
     document.addEventListener('keydown', function(e) {
         if (document.querySelector('#content-page.active') && !document.querySelector('.modal-overlay.active')) {
-            if (e.key === 'ArrowLeft' && weekNavPrev) { e.preventDefault(); showContentByObj(weekNavPrev, true, weekNavFrom); }
-            else if (e.key === 'ArrowRight' && weekNavNext) { e.preventDefault(); showContentByObj(weekNavNext, true, weekNavFrom); }
+            if (e.key === 'ArrowLeft' && weekNavPrev) { e.preventDefault(); showContentByObj(weekNavPrev, false, weekNavFrom); }
+            else if (e.key === 'ArrowRight' && weekNavNext) { e.preventDefault(); showContentByObj(weekNavNext, false, weekNavFrom); }
         }
     });
 
@@ -2209,6 +2427,52 @@
         return window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     }
 
+    function getActivePageId() {
+        const active = document.querySelector('.page.active');
+        if (!active || !active.id) return 'home';
+        return active.id.replace('-page', '');
+    }
+
+    function getCurrentTabIndex() {
+        const activePageId = getActivePageId();
+        const mapped = (activePageId === 'weeks' || activePageId === 'content') ? 'home' : activePageId;
+        return NAV_TAB_ORDER.indexOf(mapped);
+    }
+
+    function handleArrowTabNavigation(e) {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return false;
+        const activePageId = getActivePageId();
+
+        // Inside a subject page, arrows switch between Weeks/Exam Materials/Useful Links.
+        if (activePageId === 'weeks' && currSub) {
+            const subjectTabs = ['weeks', 'events', 'playlists'];
+            const currentIdx = subjectTabs.indexOf(currentSubjectView);
+            if (currentIdx >= 0) {
+                const delta = (e.key === 'ArrowRight') ? 1 : -1;
+                const nextIdx = (currentIdx + delta + subjectTabs.length) % subjectTabs.length;
+                e.preventDefault();
+                renderSubjectView(subjectTabs[nextIdx]);
+                return true;
+            }
+        }
+
+        // Exception 1: inside a week content page, arrows stay for week navigation.
+        if (activePageId === 'content') return false;
+
+        // Exception 2: in schedule calendar view, arrows stay for month navigation.
+        if (activePageId === 'schedule' && scheduleViewMode === 'calendar') return false;
+
+        const idx = getCurrentTabIndex();
+        if (idx < 0) return false;
+
+        const delta = (e.key === 'ArrowRight') ? 1 : -1;
+        const nextIdx = (idx + delta + NAV_TAB_ORDER.length) % NAV_TAB_ORDER.length;
+        const nextTab = NAV_TAB_ORDER[nextIdx];
+        e.preventDefault();
+        openTopLevelTab(nextTab);
+        return true;
+    }
+
     document.addEventListener('keydown', function(e) {
         if (!isPC()) return;
         // Skip if user is typing in an input/textarea/select
@@ -2217,21 +2481,26 @@
         const modalOpen = document.querySelector('.modal-overlay.active');
 
         if (e.key === 'Escape') {
+            const newsOpen = document.getElementById('news-panel');
+            if (newsOpen && newsOpen.classList.contains('active')) { closeNewsPanel(null, true); e.preventDefault(); return; }
+            const shareOpen = document.querySelector('#share-sheet.active');
+            if (shareOpen) { closeShareSheet(null, true); e.preventDefault(); return; }
             if (modalOpen) { closeModal(null, true); e.preventDefault(); return; }
             const panel = document.getElementById('hotkeys-panel');
             if (panel && panel.classList.contains('visible')) { panel.classList.remove('visible'); e.preventDefault(); return; }
-            if (!document.querySelector('#home-page.active')) { nav('home'); e.preventDefault(); return; }
+            if (!document.querySelector('#home-page.active')) { smartBack(); e.preventDefault(); return; }
         }
 
         if (e.key === 'Backspace') {
-            if (modalOpen) return;
+            if (modalOpen) { closeModal(null, true); e.preventDefault(); return; }
             e.preventDefault();
-            if (document.querySelector('#content-page.active')) { nav('weeks'); }
-            else if (!document.querySelector('#home-page.active')) { nav('home'); }
+            smartBack();
             return;
         }
 
         if (modalOpen) return;
+
+        if (handleArrowTabNavigation(e)) return;
 
         // Shift+P — Open Course Drive
         if (e.shiftKey && e.key === 'P') {
@@ -2242,13 +2511,6 @@
             return;
         }
 
-        // 1/2/3 — Subject tab switching (only on weeks page)
-        if (document.querySelector('#weeks-page.active') && currSub) {
-            if (e.key === '1') { e.preventDefault(); renderSubjectView('weeks'); return; }
-            if (e.key === '2') { e.preventDefault(); renderSubjectView('events'); return; }
-            if (e.key === '3') { e.preventDefault(); renderSubjectView('playlists'); return; }
-        }
-
         if (e.key === 'Home') { e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); return; }
         if (e.key === 'End') { e.preventDefault(); window.scrollTo({top:document.documentElement.scrollHeight, behavior:'smooth'}); return; }
 
@@ -2257,18 +2519,22 @@
         else if (key === 't') { e.preventDefault(); showSchedule(); }
         else if (key === 'd') { e.preventDefault(); showDeadlines(); }
         else if (key === 'm') { e.preventDefault(); showMidterms(true, 'home'); }
-        else if (key === 'l') { e.preventDefault(); showUsefulLinks(true, 'All Links', 'All Subjects'); }
+        else if (key === 'l') { e.preventDefault(); showUsefulLinks(true, currentUsefulFilter, currentUsefulSubject); }
         else if (key === 'h') { e.preventDefault(); showRecent(); }
     });
 
     function nav(id, push = true, stateData = {}) { 
         closeMobileMenu();
         closeAllDropdowns();
+        if (currentPageId !== id) previousPageId = currentPageId;
+        currentPageId = id;
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active')); 
         document.getElementById(id+'-page').classList.add('active'); 
         window.scrollTo(0,0);
         if(push) history.pushState({page: id, ...stateData}, null, "#" + id);
         updateNavActive(id);
+        updateBackButtons();
+        renderQuickActions();
     }
 
     // ===== NAVBAR LOGIC =====
@@ -2303,7 +2569,7 @@
         else if(id === 'schedule') showSchedule();
         else if(id === 'deadlines') showDeadlines();
         else if(id === 'midterm') showMidterms(true, 'home');
-        else if(id === 'useful-links') showUsefulLinks(true, 'All Links', 'All Subjects');
+        else if(id === 'useful-links') showUsefulLinks(true, currentUsefulFilter, currentUsefulSubject);
         else if(id === 'timetable') showTimetable();
         else if(id === 'directory') showDirectory();
         else if(id === 'updates') showUpdates();
@@ -2437,6 +2703,18 @@
                 upcoming.push({ task: t, ts, wIndex, tIndex, week: wk.week }); 
             });
         });
+        (window.NEWS_DATA || []).forEach((n, newsIndex) => {
+            if (!n || !n.hasDeadline) return;
+            const ts = parseNewsDeadlineTs(n.deadlineDate, n.deadlineTime);
+            if (ts === 0 || ts <= now) return;
+            upcoming.push({
+                task: { icon: n.emoji || '📢', name: n.title || 'Announcement', sub: n.sub || 'NEWS' },
+                ts,
+                source: 'news',
+                newsIndex,
+                week: 'News'
+            });
+        });
         upcoming.sort((a,b) => { if(a.isOngoing && !b.isOngoing) return -1; if(!a.isOngoing && b.isOngoing) return 1; return a.ts - b.ts; });
 
         if(badge) {
@@ -2482,7 +2760,10 @@
 
                 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
                 const dateStr = d.getDate() + ' ' + months[d.getMonth()];
-                html += `<div class="dd-item ${urgency}" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); goToScheduleTask(${item.wIndex},${item.tIndex});">`;
+                const clickAction = item.source === 'news'
+                    ? `event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); openNewsPanel();`
+                    : `event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); goToScheduleTask(${item.wIndex},${item.tIndex});`;
+                html += `<div class="dd-item ${urgency}" onclick="${clickAction}">`;
                 html += `<span class="dd-icon">${item.task.icon}</span>`;
                 html += `<span class="dd-label">${item.task.name} <span style='color:#888; font-size:0.75rem;'>${item.task.sub}</span></span>`;
                 html += `<span class="dd-meta" style="${daysLeft<=1?'color:#ff3b30; font-weight:700;':daysLeft<=3?'color:#ff9500;':''}">${timeLabel}</span>`;
@@ -2530,21 +2811,18 @@
         const dd = document.getElementById('dd-useful');
         if(!dd || !window.COURSE_DATA) return;
         let html = '<div class="dd-header">Filter by Subject</div>';
-        
-        let count = 0;
-        window.COURSE_DATA.forEach(s => {
-            if (s.playlists && s.playlists.length > 0) {
+
+        const usefulSubjects = (window.COURSE_DATA || []).filter(s => s.playlists && s.playlists.length > 0);
+        usefulSubjects.slice(0, 5).forEach(s => {
                 const color = getSubjectColor(s.code);
                 html += `<div class="dd-item" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showUsefulLinks(true, 'All Links', '${s.code}');">`;
                 html += `<span class="dd-dot" style="background:${color}"></span>`;
                 html += `<span class="dd-label">${s.name}</span>`;
                 html += `<span class="dd-meta">${s.playlists.length} links</span>`;
                 html += `</div>`;
-                count++;
-            }
         });
 
-        if (count === 0) {
+        if (usefulSubjects.length === 0) {
             html += '<div class="dd-empty">No links added yet</div>';
         } else {
             html += `<div class="dd-footer"><div class="dd-item" style="color:var(--accent-purple);" onclick="event.stopPropagation(); closeAllDropdowns(); closeMobileMenu(); showUsefulLinks(true, 'All Links', 'All Subjects');">View all subjects →</div></div>`;
@@ -2557,9 +2835,17 @@
         if(!dd || !window.STAFF_DATA || !window.COURSE_DATA) return;
         let html = '<div class="dd-header">Staff by Subject</div>';
         let count = 0;
+        const staffSubjects = [];
         window.COURSE_DATA.forEach(s => {
             const staff = (window.STAFF_DATA || []).filter(p => (p.subjects || []).includes(s.code));
             if (staff.length > 0) {
+                staffSubjects.push({ s, staff });
+            }
+        });
+
+        staffSubjects.slice(0, 5).forEach(entry => {
+                const s = entry.s;
+                const staff = entry.staff;
                 const color = getSubjectColor(s.code);
                 const docs = staff.filter(p => p.role === 'doctor').length;
                 const tas = staff.filter(p => p.role === 'ta').length;
@@ -2572,7 +2858,6 @@
                 html += `<span class="dd-meta">${meta.join(', ')}</span>`;
                 html += `</div>`;
                 count++;
-            }
         });
         if (count === 0) {
             html += '<div class="dd-empty">No staff added yet</div>';
@@ -2614,6 +2899,667 @@
             toast.classList.remove('show');
             setTimeout(() => toast.remove(), 400);
         }, 3000);
+    }
+
+    function eHtml(str) {
+        return String(str || '').replace(/[&<>"']/g, ch => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[ch]));
+    }
+
+    function parseNewsDeadlineTs(dateStr, timeStr) {
+        if (!dateStr || String(dateStr).trim() === '') return 0;
+        const d = new Date(String(dateStr).trim() + 'T00:00:00');
+        if (isNaN(d.getTime())) return 0;
+        if (!timeStr || String(timeStr).trim() === '') return d.getTime();
+        const t = String(timeStr).trim().toUpperCase();
+        const m = t.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)?$/);
+        if (!m) return d.getTime();
+        let hh = parseInt(m[1], 10);
+        const mm = parseInt(m[2] || '0', 10);
+        const ampm = m[3] || '';
+        if (ampm === 'PM' && hh < 12) hh += 12;
+        if (ampm === 'AM' && hh === 12) hh = 0;
+        d.setHours(hh, mm, 0, 0);
+        return d.getTime();
+    }
+
+    function matchUsefulFilter(playlist, filterType) {
+        if (filterType === 'All Links') return true;
+        const t = (playlist.title || '').toLowerCase();
+        const n = (playlist.note || '').toLowerCase();
+        const btext = (playlist.badges || []).map(b => (b.text || '').toLowerCase()).join(' ');
+        const all = t + ' ' + n + ' ' + btext;
+        const kw = (filterType || '').toLowerCase();
+        if (kw === 'lectures') return all.includes('lecture');
+        if (kw === 'tutorials') return all.includes('section') || all.includes('tutorial');
+        if (kw === 'labs') return all.includes('lab');
+        if (kw === 'projects') return all.includes('project');
+        if (kw === 'presentations') return all.includes('presentation');
+        return true;
+    }
+
+    function getVisibleResources(itemObj) {
+        const out = [];
+        const conf = (window.CONFIG && window.CONFIG.resources) ? window.CONFIG.resources : [];
+        conf.forEach(r => {
+            const val = itemObj && itemObj.resources ? itemObj.resources[r.name] : null;
+            if (val && val.vis) out.push({ name: r.name, desc: val.desc || '', link: val.link || '' });
+        });
+        return out;
+    }
+
+    function collectUsefulLinksSelection(subjectFilter, filterType) {
+        const groups = [];
+        (window.COURSE_DATA || []).forEach(sub => {
+            if (subjectFilter !== 'All Subjects' && subjectFilter !== sub.code) return;
+            const links = (sub.playlists || []).filter(p => matchUsefulFilter(p, filterType));
+            if (links.length) groups.push({ subCode: sub.code, subName: sub.name, links });
+        });
+        return groups;
+    }
+
+    function collectUpcomingDeadlinesData() {
+        const now = Date.now();
+        const out = [];
+        (window.SCHEDULE_DATA || []).forEach((wk, wIndex) => {
+            (wk.tasks || []).forEach((t, tIndex) => {
+                if (t.isCompleted) return;
+                if (!t.deadlineDate || t.deadlineDate.trim() === '') return;
+                const tsStart = parseDate(t.deadlineDate);
+                if (tsStart === 0) return;
+                if (t.deadlineEndDate && t.deadlineEndDate.trim() !== '') {
+                    const tsEnd = parseDate(t.deadlineEndDate);
+                    if (tsEnd > now && tsStart <= now) {
+                        out.push({ wIndex, tIndex, week: wk.week, task: t, ts: tsStart, isOngoing: true, endTs: tsEnd });
+                        return;
+                    }
+                }
+                if (tsStart >= now) out.push({ wIndex, tIndex, week: wk.week, task: t, ts: tsStart, isOngoing: false });
+            });
+        });
+        (window.NEWS_DATA || []).forEach((n, newsIndex) => {
+            if (!n || !n.hasDeadline) return;
+            const ts = parseNewsDeadlineTs(n.deadlineDate, n.deadlineTime);
+            if (ts === 0 || ts < now) return;
+            out.push({
+                source: 'news',
+                newsIndex,
+                week: 'News',
+                task: { icon: n.emoji || '📢', name: n.title || 'Announcement', sub: n.sub || 'NEWS' },
+                ts,
+                isOngoing: false
+            });
+        });
+        out.sort((a,b) => a.ts - b.ts);
+        return out;
+    }
+
+    function formatDateTs(ts) {
+        const d = new Date(ts);
+        if (isNaN(d.getTime())) return '';
+        return d.toLocaleString([], { year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' });
+    }
+
+    function getExportResources(itemObj) {
+        const out = [];
+        const conf = (window.CONFIG && window.CONFIG.resources) ? window.CONFIG.resources : [];
+        conf.forEach(r => {
+            const val = itemObj && itemObj.resources ? itemObj.resources[r.name] : null;
+            if (!val) return;
+            const hasLink = !!(val.link && val.link !== '#');
+            const hasDesc = !!(val.desc && String(val.desc).trim() !== '');
+            if (val.vis || hasLink || hasDesc) out.push({ name: r.name, desc: val.desc || '', link: val.link || '' });
+        });
+        return out;
+    }
+
+    function getResolvedTeamsLink(link) {
+        if (!link) return '';
+        const trimmed = String(link).trim();
+        if (!trimmed) return '';
+        if (/^https?:/i.test(trimmed)) return trimmed;
+        return 'https://teams.microsoft.com/l/chat/0/0?users=' + encodeURIComponent(trimmed);
+    }
+
+    function getActionPolicy(activePageId) {
+        const map = {
+            'deadlines': { word: false, screenshot: false, share: true },
+            'weeks':     { word: true,  screenshot: false, share: true },
+            'content':   { word: true,  screenshot: false, share: true },
+            'useful-links': { word: true, screenshot: false, share: true },
+            'schedule':  { word: false, screenshot: true,  share: false },
+            'midterm':   { word: false, screenshot: true,  share: false },
+            'timetable': { word: false, screenshot: true,  share: false },
+            'directory': { word: false, screenshot: false, share: true }
+        };
+        return map[activePageId] || { word: false, screenshot: false, share: false };
+    }
+
+    function buildExportContext() {
+        const active = getActivePageId();
+        const policy = getActionPolicy(active);
+        if (!policy.word && !policy.screenshot && !policy.share) return null;
+
+        if (active === 'deadlines') {
+            const items = collectUpcomingDeadlinesData();
+            // Collect TBD (no date) tasks
+            const tbdItems = [];
+            (window.SCHEDULE_DATA || []).forEach(wk => {
+                (wk.tasks || []).forEach(t => {
+                    if (t.isCompleted) return;
+                    if (!t.deadlineDate || t.deadlineDate.trim() === '' || parseDate(t.deadlineDate) === 0) {
+                        tbdItems.push({ week: wk.week, task: t });
+                    }
+                });
+            });
+            const rowsHtml = items.length ? items.map(it => `<li><b>${eHtml(it.task.sub)} - ${eHtml(it.task.name)}</b> (Week ${it.week})${it.isOngoing ? ' <em>ONGOING</em>' : ''}<br><small>${eHtml(formatDateTs(it.ts))}</small></li>`).join('') : '<li>No upcoming deadlines.</li>';
+            const rowsTxt = items.length ? items.map(it => `- ${it.task.sub} - ${it.task.name} (Week ${it.week})${it.isOngoing ? ' [ONGOING]' : ''} | ${formatDateTs(it.ts)}`).join('\n') : '- No upcoming deadlines.';
+            const tbdHtml = tbdItems.length ? `<h2>Date TBD</h2><ul>${tbdItems.map(it => `<li><b>${eHtml(it.task.sub)} - ${eHtml(it.task.name)}</b> (Week ${it.week})</li>`).join('')}</ul>` : '';
+            const tbdTxt = tbdItems.length ? `\n\n*Date TBD*\n${tbdItems.map(it => `- ${it.task.sub} - ${it.task.name} (Week ${it.week})`).join('\n')}` : '';
+            return {
+                title: 'Upcoming Deadlines',
+                fileBase: `deadlines-${new Date().toISOString().slice(0,10)}`,
+                bodyHtml: `<ul>${rowsHtml}</ul>${tbdHtml}`,
+                text: `*Upcoming Deadlines*\n\n${rowsTxt}${tbdTxt}`,
+                screenshotSelector: '#deadlines-page'
+            };
+        }
+
+        if (active === 'content' && currSub && currentContentObj) {
+            const res = getExportResources(currentContentObj);
+            const resHtml = res.length ? `<ul>${res.map(r => `<li><b>${eHtml(r.name)}</b>${r.desc ? ` - ${eHtml(r.desc)}` : ''}${r.link && r.link !== '#' ? ` <br><a href="${eHtml(r.link)}">${eHtml(r.link)}</a>` : ''}</li>`).join('')}</ul>` : '<p>No visible resources.</p>';
+            const resTxt = res.length ? res.map(r => `- ${r.name}${r.desc ? `: ${r.desc}` : ''}${r.link && r.link !== '#' ? ` | ${r.link}` : ''}`).join('\n') : '- No visible resources.';
+            return {
+                title: `${currSub.code} - ${currentContentObj.title}`,
+                fileBase: `${currSub.code}-${String(currentContentObj.title || 'week').replace(/\s+/g,'-').toLowerCase()}`,
+                bodyHtml: `<p>${eHtml(currentContentObj.note || '')}</p><h2>Resources</h2>${resHtml}`,
+                text: `*${currSub.code} - ${currentContentObj.title}*\n${currentContentObj.note ? `${currentContentObj.note}\n` : ''}\n*Resources*\n${resTxt}`,
+                screenshotSelector: '#content-page'
+            };
+        }
+
+        if (active === 'weeks' && currSub) {
+            const source = currentSubjectView === 'events' ? (currSub.events || []) : (currentSubjectView === 'playlists' ? (currSub.playlists || []) : (currSub.weeks || []));
+            if (currentSubjectView === 'playlists') {
+                const htmlRows = source.length ? `<ul>${source.map(p => `<li><b>${eHtml(p.title || 'Link')}</b>${p.note ? ` - ${eHtml(p.note.split('\n')[0])}` : ''}${p.link && p.link !== '#' ? ` <br><a href="${eHtml(p.link)}">${eHtml(p.link)}</a>` : ''}</li>`).join('')}</ul>` : '<p>No links.</p>';
+                const txtRows = source.length ? source.map(p => `- ${p.title || 'Link'}${p.note ? `: ${p.note.split('\n')[0]}` : ''}${p.link && p.link !== '#' ? ` | ${p.link}` : ''}`).join('\n') : '- No links.';
+                return {
+                    title: `${currSub.code} Useful Links`,
+                    fileBase: `${currSub.code}-useful-links`,
+                    bodyHtml: `${htmlRows}`,
+                    text: `*${currSub.code} - Useful Links*\n\n${txtRows}`,
+                    screenshotSelector: '#weeks-page'
+                };
+            }
+            const listHtml = source.length ? source.map(item => {
+                const vis = getExportResources(item);
+                return `<li><b>${eHtml(item.title || 'Untitled')}</b>${item.note ? ` - ${eHtml(item.note)}` : ''}${vis.length ? `<ul>${vis.map(r => `<li>${eHtml(r.name)}${r.desc ? `: ${eHtml(r.desc)}` : ''}${r.link && r.link !== '#' ? ` <br><a href="${eHtml(r.link)}">${eHtml(r.link)}</a>` : ''}</li>`).join('')}</ul>` : ''}</li>`;
+            }).join('') : '<li>No entries.</li>';
+            const listTxt = source.length ? source.map(item => {
+                const vis = getExportResources(item);
+                const visTxt = vis.length ? `\n  ${vis.map(r => `- ${r.name}${r.desc ? `: ${r.desc}` : ''}${r.link && r.link !== '#' ? ` | ${r.link}` : ''}`).join('\n  ')}` : '';
+                return `- ${item.title || 'Untitled'}${item.note ? `: ${item.note}` : ''}${visTxt}`;
+            }).join('\n\n') : '- No entries.';
+            const title = currentSubjectView === 'events' ? `${currSub.code} Exam Materials` : `${currSub.code} All Weeks`;
+            const base = currentSubjectView === 'events' ? `${currSub.code}-exam-materials` : `${currSub.code}-all-weeks`;
+            return {
+                title,
+                fileBase: base,
+                bodyHtml: `<ul>${listHtml}</ul>`,
+                text: `*${title}*\n\n${listTxt}`,
+                screenshotSelector: '#weeks-page'
+            };
+        }
+
+        if (active === 'useful-links') {
+            const groups = collectUsefulLinksSelection(currentUsefulSubject, currentUsefulFilter);
+            const htmlSections = groups.length ? groups.map(g => `<h2>${eHtml(g.subCode)} - ${eHtml(g.subName)}</h2><ul>${g.links.map(p => `<li><b>${eHtml(p.title || 'Link')}</b>${p.note ? ` - ${eHtml(p.note.split('\n')[0])}` : ''}${p.link && p.link !== '#' ? ` <br><a href="${eHtml(p.link)}">${eHtml(p.link)}</a>` : ''}</li>`).join('')}</ul>`).join('') : '<p>No matching links.</p>';
+            const txtSections = groups.length ? groups.map(g => [`${g.subCode} - ${g.subName}`, ...g.links.map(p => `- ${p.title || 'Link'}${p.link && p.link !== '#' ? ` | ${p.link}` : ''}`)].join('\n')).join('\n\n') : 'No matching links.';
+            const t = `${currentUsefulSubject === 'All Subjects' ? 'All Subjects' : currentUsefulSubject} - ${currentUsefulFilter}`;
+            return {
+                title: `Useful Links (${t})`,
+                fileBase: `useful-links-${String(currentUsefulSubject).toLowerCase()}-${String(currentUsefulFilter).toLowerCase().replace(/\s+/g,'-')}`,
+                bodyHtml: `${htmlSections}`,
+                text: `*Useful Links (${t})*\n\n${txtSections}`,
+                screenshotSelector: '#useful-links-page'
+            };
+        }
+
+        if (active === 'schedule') {
+            const modeText = scheduleViewMode === 'calendar' ? 'Calendar View' : 'List View';
+            return {
+                title: `Task Schedule (${modeText})`,
+                fileBase: `task-schedule-${scheduleViewMode}`,
+                bodyHtml: `<p>Screenshot export is recommended for exact table/calendar layout.</p>`,
+                text: `*Task Schedule (${modeText})*\n\nUse screenshot export for the exact table/calendar layout.`,
+                screenshotSelector: scheduleViewMode === 'calendar' ? '#deliverables-grid .calendar-container' : '#deliverables-grid'
+            };
+        }
+
+        if (active === 'midterm') {
+            const rows = (window.MIDTERM_DATA || []).map(m => `- ${m.sub} ${m.examCode ? `(${m.examCode})` : ''} | ${m.dateLabel || ''} ${m.time || ''}`);
+            return {
+                title: 'Midterm Exams',
+                fileBase: 'midterm-exams',
+                bodyHtml: `<ul>${rows.map(r => `<li>${eHtml(r.replace(/^-\s*/, ''))}</li>`).join('')}</ul>`,
+                text: `*Midterm Exams*\n\n${rows.join('\n') || '- No exams configured.'}`,
+                screenshotSelector: '#midterm-page'
+            };
+        }
+
+        if (active === 'timetable') {
+            return {
+                title: 'Timetable',
+                fileBase: 'timetable',
+                bodyHtml: `<p>Screenshot export preserves the exact table layout.</p>`,
+                text: '*Timetable*\n\nUse screenshot export for the exact timetable table layout.',
+                screenshotSelector: '#timetable-grid'
+            };
+        }
+
+        if (active === 'directory') {
+            const staffData = (window.STAFF_DATA || []).filter(person => {
+                if (directoryRoleFilter !== 'all' && person.role !== directoryRoleFilter) return false;
+                if (directorySubFilter !== 'all' && !(person.subjects || []).includes(directorySubFilter)) return false;
+                return true;
+            });
+            const title = directorySubFilter !== 'all' ? `Staff Contacts (${directorySubFilter})` : 'Staff Contacts';
+            const grouped = {};
+            staffData.forEach(person => {
+                (person.subjects || []).forEach(subCode => {
+                    if (directorySubFilter !== 'all' && subCode !== directorySubFilter) return;
+                    if (!grouped[subCode]) grouped[subCode] = [];
+                    if (!grouped[subCode].includes(person)) grouped[subCode].push(person);
+                });
+            });
+            const orderedSubjects = Object.keys(grouped).sort();
+            const text = orderedSubjects.length ? orderedSubjects.map(subCode => {
+                const sObj = (window.COURSE_DATA || []).find(s => s.code === subCode);
+                const subTitle = sObj ? `${subCode} - ${sObj.name}` : subCode;
+                const rows = grouped[subCode].map(person => {
+                    const roleLabel = person.role === 'doctor' ? 'Doctor' : 'TA';
+                    const teamsLink = getResolvedTeamsLink(person.teamsLink || '');
+                    return [
+                        `- ${person.name} [${roleLabel}]`,
+                        person.note ? `  Note: ${person.note}` : '',
+                        teamsLink ? `  Teams Chat: ${teamsLink}` : ''
+                    ].filter(Boolean).join('\n');
+                }).join('\n');
+                return `${subTitle}\n${rows}`;
+            }).join('\n\n') : '- No staff match this filter.';
+            return {
+                title,
+                fileBase: 'staff-contacts',
+                bodyHtml: '',
+                text: `*${title}*\n\n${text}`,
+                screenshotSelector: ''
+            };
+        }
+
+        return null;
+    }
+
+    function renderQuickActions() {
+        const qa = document.getElementById('quick-actions');
+        if (!qa) return;
+        const active = getActivePageId();
+        const policy = getActionPolicy(active);
+        const actions = [];
+        if (policy.word)       actions.push({ icon: '📝', label: '📝 Save Word',   fn: 'downloadContextWord()' });
+        if (policy.screenshot) actions.push({ icon: '📸', label: '📸 Screenshot',  fn: 'downloadContextScreenshot()' });
+        if (policy.share)      actions.push({ icon: '🔗', label: '🔗 Share',        fn: 'openShareMenu()' });
+
+        if (!actions.length) {
+            qa.innerHTML = '';
+            qa.classList.remove('visible');
+            return;
+        }
+
+        if (actions.length === 1) {
+            const a = actions[0];
+            const titleLabel = a.label.substring(a.label.indexOf(' ') + 1);
+            qa.innerHTML = `<button class="qa-btn" title="${titleLabel}" onclick="${a.fn}">${a.icon}</button>`;
+        } else {
+            const submenuItems = actions.map(a =>
+                `<button class="qa-submenu-btn" onclick="closeUtilsMenu();${a.fn}">${a.label}</button>`
+            ).join('');
+            qa.innerHTML = `<div class="qa-utils-wrap"><button class="qa-btn" title="Utilities" onclick="toggleUtilsMenu(event)">⚙️</button><div class="qa-submenu" id="qa-submenu-popup">${submenuItems}</div></div>`;
+        }
+        qa.classList.add('visible');
+    }
+
+    function toggleUtilsMenu(e) {
+        e.stopPropagation();
+        const popup = document.getElementById('qa-submenu-popup');
+        if (!popup) return;
+        popup.classList.toggle('open');
+    }
+
+    function closeUtilsMenu() {
+        const popup = document.getElementById('qa-submenu-popup');
+        if (popup) popup.classList.remove('open');
+    }
+
+    function buildWordDoc(title, bodyHtml) {
+        return `<!doctype html><html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>${eHtml(title)}</title><style>
+            body{font-family:'Segoe UI',Arial,sans-serif;color:#111;background:#fff;margin:36pt 48pt;mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;}
+            h1{font-size:18pt;color:#1a006a;border-bottom:2pt solid #b519d6;padding-bottom:6pt;margin-bottom:14pt;}
+            h2{font-size:13pt;color:#4a0080;margin:16pt 0 6pt;}
+            ul{margin:4pt 0 10pt 18pt;padding:0;}
+            li{margin-bottom:6pt;line-height:1.55;color:#1a1a2e;font-size:11pt;}
+            p{color:#333;font-size:11pt;line-height:1.5;}
+            a{color:#1a5cb5;text-decoration:underline;word-break:break-all;}
+            b{color:#000;font-weight:700;}
+            em{color:#c0006a;font-style:normal;font-weight:600;}
+            small{color:#555;font-size:9pt;}
+        </style></head><body><h1>${eHtml(title)}</h1>${bodyHtml || ''}</body></html>`;
+    }
+
+    function downloadBlob(blob, fileName) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 500);
+    }
+
+    function downloadContextWord() {
+        const ctx = buildExportContext();
+        if (!ctx) { showToast('Nothing to export from this page.'); return; }
+        const doc = buildWordDoc(ctx.title, ctx.bodyHtml || '');
+        downloadBlob(new Blob([doc], { type: 'application/msword' }), `${ctx.fileBase}.doc`);
+        showToast('Word document created.', 'locked');
+    }
+
+    function getScreenshotTargetElement() {
+        const ctx = buildExportContext();
+        if (!ctx || !ctx.screenshotSelector) return null;
+        return document.querySelector(ctx.screenshotSelector);
+    }
+
+    function downloadContextScreenshot() {
+        const ctx = buildExportContext();
+        if (!ctx) { showToast('No screenshot target on this page.'); return; }
+        if (!window.html2canvas) { showToast('Screenshot library not available.'); return; }
+
+        const active = getActivePageId();
+        const restoreList = []; // { el, prop, prev }
+        let target = null;
+        let shellEl = null; // temp DOM element to remove after shot
+
+        // --- Midterm: build a clean off-screen tile (no page chrome) ---
+        if (active === 'midterm') {
+            const shell = document.createElement('div');
+            shell.style.cssText = 'position:absolute;left:-9999px;top:0;padding:28px 32px;background:#0a0012;width:820px;font-family:Work Sans,Arial,sans-serif;box-sizing:border-box;';
+            const exams = window.MIDTERM_DATA || [];
+            let lastDate = '';
+            let innerHtml = `<div style="font-family:Orbitron,Arial,sans-serif;font-size:26px;font-weight:900;color:#007aff;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;">MIDTERM EXAMS</div>`;
+            innerHtml += `<div style="font-size:13px;color:#888;margin-bottom:28px;letter-spacing:1px;">27 March — 3 April 2026 &nbsp;·&nbsp; Spring 2026</div>`;
+            exams.forEach(exam => {
+                if (exam.dateLabel !== lastDate) {
+                    innerHtml += `<div style="font-family:Orbitron,Arial,sans-serif;font-size:11px;letter-spacing:2px;color:#4a90e2;text-transform:uppercase;margin-bottom:10px;margin-top:22px;font-weight:700;">${eHtml(exam.dateLabel)}</div>`;
+                    lastDate = exam.dateLabel;
+                }
+                let subName = exam.sub;
+                const sObj = (window.COURSE_DATA || []).find(s => s.code === exam.sub);
+                if (sObj) subName = sObj.name;
+                innerHtml += `<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(0,122,255,0.1);border:1px solid rgba(0,122,255,0.3);border-radius:10px;margin-bottom:8px;">
+                    <span style="font-size:18px;min-width:22px;">🎓</span>
+                    <div style="flex:1;">
+                        <div style="color:#fff;font-weight:600;font-size:15px;">${eHtml(subName)}</div>
+                        <div style="color:#888;font-size:12px;margin-top:2px;">${eHtml(exam.examCode || '')}</div>
+                    </div>
+                    <div style="text-align:right;flex-shrink:0;">
+                        <div style="color:#4a90e2;font-weight:700;font-size:14px;font-family:Orbitron,sans-serif;">${eHtml(exam.time || '')}</div>
+                    </div>
+                </div>`;
+            });
+            innerHtml += `<div style="text-align:center;margin-top:28px;font-size:11px;color:#555;letter-spacing:3px;">GOOD LUCK &nbsp;✦&nbsp; SPRING 2026</div>`;
+            shell.innerHTML = innerHtml;
+            document.body.appendChild(shell);
+            shellEl = shell;
+            target = shell;
+        } else if (active === 'schedule' || active === 'timetable') {
+            const liveTarget = getScreenshotTargetElement();
+            if (!liveTarget) { showToast('No screenshot target on this page.'); return; }
+            const liveRect = liveTarget.getBoundingClientRect();
+            const targetWidth = Math.ceil(liveTarget.scrollWidth || liveRect.width || 800);
+            const shell = document.createElement('div');
+            shell.style.cssText = 'position:absolute;left:-9999px;top:0;padding:24px 28px;background:#0a0012;box-sizing:border-box;display:inline-block;';
+            const clone = liveTarget.cloneNode(true);
+            clone.style.margin = '0';
+            clone.style.maxWidth = 'none';
+            clone.style.boxSizing = 'border-box';
+            clone.style.width = targetWidth + 'px';
+            if (active === 'schedule') {
+                clone.querySelectorAll('.calendar-toggle, .schedule-filters').forEach(el => el.remove());
+            }
+            shell.appendChild(clone);
+            document.body.appendChild(shell);
+            shellEl = shell;
+            target = shell;
+        } else {
+            target = getScreenshotTargetElement();
+        }
+
+        if (!target) { showToast('No screenshot target on this page.'); return; }
+
+        // --- Schedule: hide toggle & filter rows before capture ---
+        if (active === 'schedule') {
+            const toHide = [target.querySelector('.calendar-toggle'), target.querySelector('.schedule-filters')];
+            toHide.forEach(el => {
+                if (!el) return;
+                restoreList.push({ el, prev: el.style.cssText });
+                el.style.cssText = 'display:none!important;';
+            });
+        }
+
+        const rect = target.getBoundingClientRect();
+        const shotW = Math.ceil(target.scrollWidth || rect.width || 800);
+        const shotH = Math.ceil(target.scrollHeight || rect.height || 600);
+
+        const captureOpts = {
+            backgroundColor: '#0a0012',
+            scale: 2.5,
+            useCORS: true,
+            allowTaint: true,
+            width: shotW,
+            height: shotH,
+            windowWidth: shotW,
+            windowHeight: shotH,
+            logging: false
+        };
+        // For live page elements (not off-screen shell), correct scroll offset
+        if (!shellEl) {
+            captureOpts.scrollX = 0;
+            captureOpts.scrollY = -window.scrollY;
+        }
+
+        window.html2canvas(target, captureOpts).then(canvas => {
+            restoreList.forEach(({el, prev}) => el.style.cssText = prev);
+            if (shellEl) shellEl.remove();
+            canvas.toBlob(blob => {
+                if (!blob) return;
+                downloadBlob(blob, `${ctx.fileBase}.png`);
+                showToast('Screenshot saved.', 'locked');
+            });
+        }).catch(() => {
+            restoreList.forEach(({el, prev}) => el.style.cssText = prev);
+            if (shellEl) shellEl.remove();
+            showToast('Screenshot failed.');
+        });
+    }
+
+    function openShareMenu() {
+        const ctx = buildExportContext();
+        if (!ctx) { showToast('Nothing to share from this page.'); return; }
+        sharePayload = { title: ctx.title, text: ctx.text, fileBase: ctx.fileBase };
+        const sub = document.getElementById('share-sheet-sub');
+        if (sub) sub.textContent = `Sharing: ${ctx.title}`;
+        const sheet = document.getElementById('share-sheet');
+        if (sheet) sheet.classList.add('active');
+    }
+
+    function closeShareSheet(e, force = false) {
+        if (!force && e && e.target && e.target.id !== 'share-sheet') return;
+        const sheet = document.getElementById('share-sheet');
+        if (sheet) sheet.classList.remove('active');
+    }
+
+    function shareNative() {
+        if (!navigator.share) {
+            showToast('System share is not supported on this browser.');
+            return;
+        }
+        navigator.share({ title: sharePayload.title, text: sharePayload.text }).catch(() => {});
+    }
+
+    function shareWhatsApp() {
+        const txt = encodeURIComponent(sharePayload.text || '');
+        window.open(`https://wa.me/?text=${txt}`, '_blank');
+    }
+
+    function copyShareText() {
+        if (!navigator.clipboard) { showToast('Clipboard API not available.'); return; }
+        navigator.clipboard.writeText(sharePayload.text || '').then(() => showToast('Share text copied.', 'locked'));
+    }
+
+    function downloadShareText() {
+        downloadBlob(new Blob([sharePayload.text || ''], { type: 'text/plain;charset=utf-8' }), `${sharePayload.fileBase || 'share'}.txt`);
+        showToast('Share text downloaded.', 'locked');
+    }
+
+    // Close utilities popup on outside click
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.qa-utils-wrap')) closeUtilsMenu();
+    });
+
+    // ======================== NEWS SYSTEM ========================
+    const NEWS_SEEN_KEY = 'newsSeenKeys';
+
+    function getNewsItemKey(item) {
+        return [
+            item && item.emoji || '',
+            item && item.title || '',
+            item && item.body || '',
+            item && item.publishedAt || '',
+            item && item.sub || '',
+            item && item.deadlineDate || '',
+            item && item.deadlineTime || ''
+        ].join('||');
+    }
+
+    function getSeenNewsKeys() {
+        try {
+            const raw = localStorage.getItem(NEWS_SEEN_KEY);
+            const arr = raw ? JSON.parse(raw) : [];
+            return Array.isArray(arr) ? arr : [];
+        } catch (_) {
+            return [];
+        }
+    }
+
+    function setSeenNewsKeys(keys) {
+        localStorage.setItem(NEWS_SEEN_KEY, JSON.stringify(keys));
+    }
+
+    function getNewsUnreadCount() {
+        const seen = new Set(getSeenNewsKeys());
+        return (window.NEWS_DATA || []).filter(n => !seen.has(getNewsItemKey(n))).length;
+    }
+
+    function renderNewsBtn() {
+        const btn = document.getElementById('news-fab');
+        if (!btn) return;
+        const count = getNewsUnreadCount();
+        btn.innerHTML = `📬${count > 0 ? `<span class="news-fab-badge">${count > 9 ? '9+' : count}</span>` : ''}`;
+    }
+
+    function openNewsPanel() {
+        if (typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
+        renderNewsPanelItems();
+        document.getElementById('news-panel').classList.add('active');
+        // Show unread highlights first, then mark as viewed
+        setTimeout(() => {
+            const seen = new Set(getSeenNewsKeys());
+            (window.NEWS_DATA || []).forEach(item => seen.add(getNewsItemKey(item)));
+            setSeenNewsKeys(Array.from(seen));
+            renderNewsBtn();
+        }, 500);
+    }
+
+    function closeNewsPanel(e, force = false) {
+        if (!force && e && !e.target.classList.contains('news-panel')) return;
+        document.getElementById('news-panel').classList.remove('active');
+    }
+
+    function renderNewsPanelItems() {
+        const list = document.getElementById('news-items-list');
+        if (!list) return;
+        const seen = new Set(getSeenNewsKeys());
+        const items = (window.NEWS_DATA || []).slice().sort((a, b) => {
+            const ta = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+            const tb = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+            return tb - ta;
+        });
+        if (!items.length) {
+            list.innerHTML = '<div style="text-align:center;color:#555;padding:32px 20px;font-style:italic;font-size:0.87rem;">No announcements yet.</div>';
+            return;
+        }
+        list.innerHTML = items.map(item => {
+            const ts = item.publishedAt ? new Date(item.publishedAt).getTime() : 0;
+            const isUnread = !seen.has(getNewsItemKey(item));
+            const timeAgo = formatNewsTime(ts);
+            let dlHtml = '';
+            if (item.hasDeadline && item.deadlineDate) {
+                const dlabel = formatNewsDeadline(item.deadlineDate, item.deadlineTime);
+                dlHtml = `<span class="ni-dl">⏰ ${eHtml(dlabel)}</span>`;
+            }
+            const subHtml = item.sub ? `<span class="ni-sub">${eHtml(item.sub)}</span>` : '';
+            return `<div class="news-item${isUnread ? ' news-unread' : ''}">
+                <div class="ni-inner">
+                    <div class="ni-emoji">${item.emoji || '📬'}</div>
+                    <div class="ni-body">
+                        <div class="ni-title">${eHtml(item.title || '')}</div>
+                        ${item.body ? `<div class="ni-note">${eHtml(item.body)}</div>` : ''}
+                        <div class="ni-meta">${subHtml}${dlHtml}<span class="ni-time">${timeAgo}</span></div>
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    function formatNewsTime(ts) {
+        if (!ts) return '';
+        const now = Date.now();
+        const diff = now - ts;
+        if (diff < 0) {
+            const abs = -diff;
+            const hrs2 = Math.floor(abs / 3600000);
+            const days2 = Math.floor(abs / 86400000);
+            if (days2 > 0) return `in ${days2} day${days2 > 1 ? 's' : ''}`;
+            if (hrs2 > 0) return `in ${hrs2}h`;
+            return 'soon';
+        }
+        const mins = Math.floor(diff / 60000);
+        const hrs = Math.floor(diff / 3600000);
+        const days = Math.floor(diff / 86400000);
+        if (mins < 2) return 'just now';
+        if (mins < 60) return `${mins}m ago`;
+        if (hrs < 24) return `${hrs}h ago`;
+        if (days < 7) return `${days}d ago`;
+        const d = new Date(ts);
+        return d.toLocaleDateString([], { month: 'short', day: 'numeric' });
+    }
+
+    function formatNewsDeadline(dateStr, timeStr) {
+        try {
+            const d = new Date(dateStr);
+            const label = d.toLocaleDateString([], { month: 'short', day: 'numeric', year: 'numeric' });
+            return timeStr ? `${label} at ${timeStr}` : label;
+        } catch(e) { return dateStr + (timeStr ? ' ' + timeStr : ''); }
     }
 
     // Updated X ago helper
@@ -2928,11 +3874,8 @@
             `;
             if (person.teamsLink) {
                 row.onclick = () => {
-                    let link = person.teamsLink.trim();
-                    if (link && !link.startsWith('http')) {
-                        link = 'https://teams.microsoft.com/l/chat/0/0?users=' + encodeURIComponent(link);
-                    }
-                    window.open(link, '_blank', 'noopener');
+                    const link = getResolvedTeamsLink(person.teamsLink);
+                    if (link) window.open(link, '_blank', 'noopener');
                 };
             }
             section.appendChild(row);
