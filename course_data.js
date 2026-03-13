@@ -6347,14 +6347,14 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_&si=8AeTXdqIeE0N4Gri",
-                        "desc": "⚠️ Linear Algebra. A foundational core of ML that can't be skipped.\nSince we've learned most of this, skip the examples and use AI to quickly summarize each video.",
+                        "desc": "Linear Algebra. A foundational core of ML that can't be skipped.\nSince we've learned most of this, skip the examples and use AI to quickly summarize each video.",
                         "isNew": false
                     },
                     "Another Pre-Requisite": {
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCYQmuXrRpFu_hr8Ujul-ek&si=1sFxIU2Ck2U6FVZX",
-                        "desc": "⚠️ Python + Important libraries! Python (alongside the listed libraries) will be used extensively throughout the course.",
+                        "desc": "Python + Important libraries! Python (alongside the listed libraries) will be used extensively throughout the course.",
                         "isNew": false
                     },
                     "Section Slides": {
@@ -9847,61 +9847,61 @@ window.UPDATES_DATA = [
         "icon": "🗓️",
         "title": "Weekly Timetable",
         "desc": "View your class timetable with section/timing support, alternating weeks, and Ramadan mode, go try it out and make your own combination of courses!",
-        "date": ""
+        "date": "2026-03-11"
     },
     {
         "icon": "👥",
         "title": "Staff Contacts",
         "desc": "Browse instructors and TAs grouped by subject with Teams links to talk to them directly.",
-        "date": ""
+        "date": "2026-03-11"
     },
     {
         "icon": "📝",
         "title": "Midterms Tracker",
         "desc": "See all midterm exams, locations, coverage, and notes in one place.",
-        "date": ""
+        "date": "2026-03-10"
     },
     {
         "icon": "🔗",
         "title": "Useful Links",
         "desc": "Playlists and resources for each subject — YouTube, Drive, and more.",
-        "date": ""
+        "date": "2026-03-11"
     },
     {
         "icon": "📅",
         "title": "Task Schedule",
         "desc": "Semester map of all assignments, quizzes, and projects with week-by-week layout, and a month grid view.",
-        "date": ""
+        "date": "2026-02-28"
     },
     {
         "icon": "⏳",
         "title": "Deadlines",
         "desc": "Upcoming deadlines with countdown timers, color-coded urgency, and ongoing tasks.",
-        "date": ""
+        "date": "2026-03-10"
     },
     {
         "icon": "📜",
         "title": "History",
         "desc": "Track recently viewed materials and quickly jump back to where you left off.",
-        "date": ""
+        "date": "2026-02-13"
     },
     {
         "icon": "⌨️",
         "title": "Keyboard Shortcuts",
         "desc": "Navigate the entire app with hotkeys — press the keyboard icon on the left bottom to see them all.",
-        "date": ""
+        "date": "2026-03-10"
     },
     {
         "icon": "❓",
         "title": "Exam Materials",
         "desc": "Now you can access newly made materials for a specific event from the subject filtering (Weeks - Exam Materials - Useful Links).",
-        "date": ""
+        "date": "2026-03-10"
     },
     {
         "icon": "📂",
         "title": "Others Menu",
         "desc": "Home page expandable 'Others' section groups extra pages neatly.",
-        "date": ""
+        "date": "2026-03-11"
     },
     {
         "icon": "📬",
@@ -9912,7 +9912,7 @@ window.UPDATES_DATA = [
     {
         "icon": "📤",
         "title": "Export Utilities",
-        "desc": "Added compact utilities actions for Word, screenshots, and share with page-specific availability instead of cluttering every screen.",
+        "desc": "Added compact utilities actions for PDF, Word, screenshots, and share on WhatsApp or copy text with page-specific availability instead of cluttering every screen.",
         "date": "2026-03-13"
     },
     {

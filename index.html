@@ -637,6 +637,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="course_data.js"></script>
 
 <script>
@@ -3022,22 +3023,22 @@
 
     function getActionPolicy(activePageId) {
         const map = {
-            'deadlines': { word: false, screenshot: false, share: true },
-            'weeks':     { word: true,  screenshot: false, share: true },
-            'content':   { word: true,  screenshot: false, share: true },
-            'useful-links': { word: true, screenshot: false, share: true },
-            'schedule':  { word: false, screenshot: true,  share: false },
-            'midterm':   { word: false, screenshot: true,  share: false },
-            'timetable': { word: false, screenshot: true,  share: false },
-            'directory': { word: false, screenshot: false, share: true }
+            'deadlines': { pdf: true,  word: false, screenshot: false, share: true },
+            'weeks':     { pdf: true,  word: true,  screenshot: false, share: true },
+            'content':   { pdf: true,  word: true,  screenshot: false, share: true },
+            'useful-links': { pdf: true, word: true, screenshot: false, share: true },
+            'schedule':  { pdf: false, word: false, screenshot: true,  share: false },
+            'midterm':   { pdf: false, word: false, screenshot: true,  share: false },
+            'timetable': { pdf: false, word: false, screenshot: true,  share: false },
+            'directory': { pdf: false, word: false, screenshot: false, share: true }
         };
-        return map[activePageId] || { word: false, screenshot: false, share: false };
+        return map[activePageId] || { pdf: false, word: false, screenshot: false, share: false };
     }
 
     function buildExportContext() {
         const active = getActivePageId();
         const policy = getActionPolicy(active);
-        if (!policy.word && !policy.screenshot && !policy.share) return null;
+        if (!policy.pdf && !policy.word && !policy.screenshot && !policy.share) return null;
 
         if (active === 'deadlines') {
             const items = collectUpcomingDeadlinesData();
@@ -3204,6 +3205,7 @@
         const active = getActivePageId();
         const policy = getActionPolicy(active);
         const actions = [];
+        if (policy.pdf)        actions.push({ icon: '📄', label: '📄 Save PDF',    fn: 'downloadContextPdf()' });
         if (policy.word)       actions.push({ icon: '📝', label: '📝 Save Word',   fn: 'downloadContextWord()' });
         if (policy.screenshot) actions.push({ icon: '📸', label: '📸 Screenshot',  fn: 'downloadContextScreenshot()' });
         if (policy.share)      actions.push({ icon: '🔗', label: '🔗 Share',        fn: 'openShareMenu()' });
@@ -3271,6 +3273,147 @@
         const doc = buildWordDoc(ctx.title, ctx.bodyHtml || '');
         downloadBlob(new Blob([doc], { type: 'application/msword' }), `${ctx.fileBase}.doc`);
         showToast('Word document created.', 'locked');
+    }
+
+    function normalizePdfLine(rawLine) {
+        let s = String(rawLine || '');
+        s = s.replace(/\u00a0/g, ' ').replace(/&nbsp;/gi, ' ');
+        s = s.replace(/&amp;/gi, '&').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&#39;/gi, "'").replace(/&quot;/gi, '"');
+        s = s.replace(/þ/g, '');
+        s = s.replace(/\s*&\s*þ/g, ' and ');
+        s = s.replace(/�/g, '');
+        s = s.replace(/\s+/g, ' ').trim();
+
+        // Fix lines that arrive as spaced letters like: P r e- R e q ...
+        let prev = '';
+        while (s !== prev) {
+            prev = s;
+            s = s.replace(/\b([A-Za-z])\s+(?=[A-Za-z]\b)/g, '$1');
+        }
+
+        s = s.replace(/\s*-\s*/g, '-');
+        s = s.replace(/\s{2,}/g, ' ').trim();
+        return s;
+    }
+
+    function isNoisyPdfLine(line) {
+        const noUrls = String(line || '').replace(/https?:\/\/\S+/gi, '');
+        const alphaNum = (noUrls.match(/[A-Za-z0-9]/g) || []).length;
+        const symbols = (noUrls.match(/[^A-Za-z0-9\s.,:;!?()'"\-]/g) || []).length;
+        if (symbols >= 8 && symbols > alphaNum) return true;
+        if (/^(?:[&+\-]\s*){4,}/.test(noUrls)) return true;
+        if (/(?:&\s*){4,}/.test(noUrls)) return true;
+        return false;
+    }
+
+    function splitTextAndUrl(line) {
+        const m = String(line || '').match(/^(.*?)(https?:\/\/\S+)$/i);
+        if (!m) return null;
+        const before = m[1].replace(/\|\s*$/, '').trim();
+        return { before, url: m[2].trim() };
+    }
+
+    function downloadContextPdf() {
+        const ctx = buildExportContext();
+        if (!ctx) { showToast('Nothing to export from this page.'); return; }
+
+        const jsPdfCtor = (window.jspdf && window.jspdf.jsPDF) || window.jsPDF;
+        if (!jsPdfCtor) { showToast('PDF library not available.'); return; }
+
+        try {
+            const pdf = new jsPdfCtor({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+            const pageW = pdf.internal.pageSize.getWidth();
+            const pageH = pdf.internal.pageSize.getHeight();
+            const margin = 12;
+            const usableW = pageW - (margin * 2);
+            const maxY = pageH - margin;
+            let y = margin;
+
+            const addPageIfNeeded = (neededHeight) => {
+                if (y + neededHeight > maxY) {
+                    pdf.addPage();
+                    y = margin;
+                }
+            };
+
+            const drawWrapped = (text, color, fontStyle, fontSize, extraTop, extraBottom, indent) => {
+                const clean = normalizePdfLine(text);
+                if (!clean) return;
+                if (extraTop) {
+                    addPageIfNeeded(extraTop);
+                    y += extraTop;
+                }
+                pdf.setFont('helvetica', fontStyle);
+                pdf.setFontSize(fontSize);
+                pdf.setTextColor(color[0], color[1], color[2]);
+                const wrapped = pdf.splitTextToSize(clean, usableW - (indent || 0));
+                const lineH = fontSize >= 12 ? 6 : 5;
+                addPageIfNeeded((wrapped.length * lineH) + (extraBottom || 0));
+                pdf.text(wrapped, margin + (indent || 0), y);
+                y += wrapped.length * lineH;
+                if (extraBottom) y += extraBottom;
+            };
+
+            drawWrapped(String(ctx.title || 'Export'), [20, 20, 20], 'bold', 14, 0, 4, 0);
+
+            const contentLines = String(ctx.text || '')
+                .replace(/\r/g, '')
+                .replace(/\*/g, '')
+                .split('\n');
+
+            const normalizedTitle = normalizePdfLine(String(ctx.title || '')).toLowerCase();
+
+            const isHeadingLine = (line) => {
+                if (!line) return false;
+                if (/^•\s+/.test(line)) return false;
+                if (/https?:\/\//i.test(line)) return false;
+                return line.length <= 80;
+            };
+
+            contentLines.forEach(raw => {
+                let line = raw.trimEnd();
+                if (!line.trim()) {
+                    y += 4;
+                    addPageIfNeeded(4);
+                    return;
+                }
+
+                const isBullet = /^\s*-\s+/.test(line);
+                line = line.replace(/^\s*-\s+/, '').trim();
+                line = normalizePdfLine(line);
+                if (!line) return;
+
+                if (line.toLowerCase() === normalizedTitle) return;
+                if (isNoisyPdfLine(line)) return;
+
+                const split = splitTextAndUrl(line);
+                if (isBullet && split) {
+                    if (split.before) drawWrapped('• ' + split.before, [30, 30, 30], 'normal', 10.5, 0, 1.5, 0);
+                    drawWrapped(split.url, [0, 82, 163], 'normal', 10, 0, 1.5, 5);
+                    return;
+                }
+                if (split) {
+                    if (split.before) {
+                        drawWrapped(split.before, [30, 30, 30], isHeadingLine(split.before) ? 'bold' : 'normal', isHeadingLine(split.before) ? 11.5 : 10.5, isHeadingLine(split.before) ? 1.5 : 0, 1.5, 0);
+                    }
+                    drawWrapped(split.url, [0, 82, 163], 'normal', 10, 0, 1.5, 5);
+                    return;
+                }
+
+                if (isBullet) {
+                    drawWrapped('• ' + line, [30, 30, 30], 'normal', 10.5, 0, 1.5, 0);
+                } else if (isHeadingLine(line)) {
+                    drawWrapped(line, [20, 20, 20], 'bold', 11.5, 1.5, 1.5, 0);
+                } else {
+                    drawWrapped(line, [30, 30, 30], 'normal', 10.5, 0, 1.5, 0);
+                }
+            });
+
+            pdf.save(`${ctx.fileBase}.pdf`);
+            showToast('PDF created.', 'locked');
+        } catch (e) {
+            showToast('PDF export failed.');
+        }
     }
 
     function getScreenshotTargetElement() {
