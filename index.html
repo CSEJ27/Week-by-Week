@@ -10,7 +10,32 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --bg-dark: #0a0012; --card-bg: rgba(39, 18, 68, 0.6); --accent-pink: #e91e8c; --accent-purple: #b519d6; --accent-blue: #4a90e2; --text-main: #ffffff; --text-sub: #c4b5db; }
         body { font-family: 'Work Sans', sans-serif; background: linear-gradient(135deg, var(--bg-dark), #1a0d2e, #240b3b); background-attachment: fixed; color: var(--text-main); min-height: 100vh; overflow-x: hidden; padding-top: 60px; }
-        body::before { content: ''; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(233, 30, 140, 0.1) 0%, transparent 60%); z-index: -1; pointer-events: none; }
+        html { scrollbar-width: thin; scrollbar-color: rgba(233, 30, 140, 0.85) rgba(8, 2, 16, 0.9); }
+        html::-webkit-scrollbar { width: 8px; }
+        html::-webkit-scrollbar-track { background: rgba(8, 2, 16, 0.9); }
+        html::-webkit-scrollbar-thumb { background: linear-gradient(180deg, rgba(233, 30, 140, 0.95), rgba(74, 144, 226, 0.95)); border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 0 10px rgba(233, 30, 140, 0.45), 0 0 14px rgba(74, 144, 226, 0.35); }
+        html::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, rgba(255, 64, 170, 1), rgba(106, 173, 255, 1)); box-shadow: 0 0 14px rgba(233, 30, 140, 0.65), 0 0 20px rgba(74, 144, 226, 0.55); }
+        ::selection { background: var(--accent-pink); color: #000; }
+        ::-moz-selection { background: var(--accent-pink); color: #000; }
+        body::before, body::after { content: ''; position: fixed; inset: -35%; pointer-events: none; z-index: -1; }
+        body::before {
+            background:
+                radial-gradient(42% 38% at 22% 30%, rgba(233, 30, 140, 0.15) 0%, rgba(233, 30, 140, 0.05) 48%, transparent 72%),
+                radial-gradient(34% 32% at 78% 66%, rgba(74, 144, 226, 0.13) 0%, rgba(74, 144, 226, 0.04) 52%, transparent 74%),
+                radial-gradient(28% 26% at 56% 24%, rgba(181, 25, 214, 0.11) 0%, transparent 70%);
+            filter: blur(22px) saturate(112%);
+            animation: auroraBreath 9s ease-in-out infinite alternate;
+        }
+        body::after {
+            background:
+                radial-gradient(38% 34% at 70% 24%, rgba(233, 30, 140, 0.09) 0%, transparent 74%),
+                radial-gradient(36% 34% at 30% 72%, rgba(74, 144, 226, 0.1) 0%, transparent 72%),
+                radial-gradient(30% 30% at 84% 84%, rgba(181, 25, 214, 0.08) 0%, transparent 74%);
+            filter: blur(30px) saturate(108%);
+            transform: scale(1.08);
+            opacity: 0.9;
+            animation: auroraDrift 13s ease-in-out infinite alternate;
+        }
         .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
         h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; text-align: center; margin-bottom: 10px; background: linear-gradient(to right, var(--accent-pink), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3); }
         .subtitle { text-align: center; color: var(--text-sub); margin-bottom: 50px; font-size: 1.2rem; }
@@ -55,6 +80,7 @@
         
         .card { background: var(--card-bg); backdrop-filter: blur(12px); border: 2px solid rgba(233, 30, 140, 0.2); border-radius: 20px; padding: 30px; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-8px); border-color: var(--accent-pink); box-shadow: 0 15px 40px rgba(233, 30, 140, 0.25); }
+        .waterfall-item { opacity: 0; transform: translateY(14px); animation: waterfallIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: var(--wf-delay, 0s); }
         .card.locked { cursor: not-allowed; border-color: #555; background: rgba(40, 40, 40, 0.4); }
         .card.locked > * { opacity: 0.5; filter: grayscale(1); }
         .card.locked > .custom-badge { opacity: 1 !important; filter: none !important; }
@@ -120,6 +146,22 @@
         .modal-value a:hover { color: var(--accent-pink); }
 
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes waterfallIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes auroraBreath {
+            0% { transform: translate3d(-8%, -5%, 0) scale(1.02); opacity: 0.72; }
+            50% { transform: translate3d(4%, 5%, 0) scale(1.12); opacity: 0.97; }
+            100% { transform: translate3d(8%, -3%, 0) scale(1.05); opacity: 0.8; }
+        }
+        @keyframes auroraDrift {
+            0% { transform: translate3d(6%, -6%, 0) scale(1.1); opacity: 0.68; }
+            50% { transform: translate3d(-7%, 3%, 0) scale(1.17); opacity: 0.89; }
+            100% { transform: translate3d(2%, 8%, 0) scale(1.12); opacity: 0.76; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .waterfall-item { animation: none !important; opacity: 1; transform: none; }
+            body::before, body::after { animation: none !important; transform: none !important; opacity: 0.75; }
+        }
 
         /* ===== SMART NAVBAR ===== */
         .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(10, 0, 18, 0.92); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(233, 30, 140, 0.25); padding: 0 24px; display: flex; align-items: center; height: 60px; transition: box-shadow 0.3s; }
@@ -756,6 +798,32 @@
         return labels[pageId] || 'Subjects';
     }
 
+    function applyWaterfallToContainer(container, selector = '.card, .recent-card, .update-card') {
+        if (!container) return;
+        const items = [...container.querySelectorAll(selector)];
+        if (!items.length) return;
+
+        items.forEach(el => {
+            el.classList.remove('waterfall-item');
+            el.style.removeProperty('--wf-delay');
+        });
+
+        // Force reflow so re-applying the class reliably restarts animation.
+        void container.offsetWidth;
+
+        items.forEach((el, index) => {
+            const delay = Math.min(index * 0.1, 1.8);
+            el.style.setProperty('--wf-delay', `${delay}s`);
+            el.classList.add('waterfall-item');
+        });
+    }
+
+    function animateActivePageWaterfall() {
+        const activePage = document.querySelector('.page.active');
+        if (!activePage) return;
+        applyWaterfallToContainer(activePage);
+    }
+
     function updateBackButtons() {
         const activePage = document.querySelector('.page.active');
         if (!activePage) return;
@@ -893,6 +961,7 @@
         renderQuickActions();
         if (typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
         renderNewsBtn();
+        animateActivePageWaterfall();
     }
 
     function parseDate(str) {
@@ -1717,6 +1786,8 @@
             `;
             grid.appendChild(card);
         });
+
+        applyWaterfallToContainer(grid, '.card');
     }
 
     function renderCalendarView(grid) {
@@ -2327,6 +2398,8 @@
                 grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:#666; margin-top:30px;">No ${filterType} found.</div>`;
             }
         }
+
+        applyWaterfallToContainer(grid, '.card');
     }
 
     function showContentByObj(weekOrEvent, push = true, from = 'weeks') {
@@ -2538,6 +2611,7 @@
         updateNavActive(id);
         updateBackButtons();
         renderQuickActions();
+        requestAnimationFrame(animateActivePageWaterfall);
     }
 
     // ===== NAVBAR LOGIC =====
@@ -3480,6 +3554,14 @@
             clone.style.width = targetWidth + 'px';
             if (active === 'schedule') {
                 clone.querySelectorAll('.calendar-toggle, .schedule-filters').forEach(el => el.remove());
+                // Prevent cloned cards from being captured mid-waterfall at opacity 0.
+                clone.querySelectorAll('.waterfall-item').forEach(el => {
+                    el.classList.remove('waterfall-item');
+                    el.style.animation = 'none';
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                    el.style.removeProperty('--wf-delay');
+                });
             }
             shell.appendChild(clone);
             document.body.appendChild(shell);
@@ -4075,6 +4157,8 @@
             `;
             list.appendChild(card);
         });
+
+        applyWaterfallToContainer(list, '.update-card');
     }
 
 </script>

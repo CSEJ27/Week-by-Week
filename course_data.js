@@ -1624,7 +1624,7 @@ window.COURSE_DATA = [
                     },
                     "Sheet": {
                         "vis": true,
-                        "link": "https://drive.google.com/file/d/1xZw6nYOOhRdaiR0tgphMaNqDM31LN5Bz/view?usp=drive_link",
+                        "link": "https://drive.google.com/drive/u/1/folders/1ma9pXd8Q-v7c6-PXMLUsClLRTnQ81iGl",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
