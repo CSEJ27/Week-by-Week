@@ -1590,6 +1590,288 @@ window.COURSE_DATA = [
                 "isNew": false,
                 "isRecent": true,
                 "recentDate": "1/3/2026 5:29 AM"
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/0/folders/1jsI4gy6DgnJaQ726IlYjykVBQo9vTLdb",
+                        "desc": "linkedlist1 and linkedlist2 videos ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt&si=6etRqqGOZoOxQwiC",
+                        "desc": "videos 7 & 8 in the playlist ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/0/folders/1Wiv0rgkbWyszlkNTyt03wgTObWQsGbJO",
+                        "desc": "lec 4 in the link (last 10 minutes missing) ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/1/folders/1ma9pXd8Q-v7c6-PXMLUsClLRTnQ81iGl",
+                        "desc": "Ch02-Lists - Part3",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1xZw6nYOOhRdaiR0tgphMaNqDM31LN5Bz/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "13/3/2026 8:53 PM",
+                "isNew": true
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/0/folders/1jsI4gy6DgnJaQ726IlYjykVBQo9vTLdb",
+                        "desc": "linkedlist3 video ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt&si=6etRqqGOZoOxQwiC",
+                        "desc": "video 9 in the playlist ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/0/folders/1Wiv0rgkbWyszlkNTyt03wgTObWQsGbJO",
+                        "desc": "lec 5 in the link",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/1/folders/1ma9pXd8Q-v7c6-PXMLUsClLRTnQ81iGl",
+                        "desc": "Ch02-Lists - Part3 + linked list code (.rar)",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "13/3/2026 9:00 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link",
@@ -6347,14 +6629,14 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_&si=8AeTXdqIeE0N4Gri",
-                        "desc": "Linear Algebra. A foundational core of ML that can't be skipped.\nSince we've learned most of this, skip the examples and use AI to quickly summarize each video.",
+                        "desc": "⚠️ Linear Algebra. A foundational core of ML that can't be skipped.\nSince we've learned most of this, skip the examples and use AI to quickly summarize each video.",
                         "isNew": false
                     },
                     "Another Pre-Requisite": {
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCYQmuXrRpFu_hr8Ujul-ek&si=1sFxIU2Ck2U6FVZX",
-                        "desc": "Python + Important libraries! Python (alongside the listed libraries) will be used extensively throughout the course.",
+                        "desc": "⚠️ Python + Important libraries! Python (alongside the listed libraries) will be used extensively throughout the course.",
                         "isNew": false
                     },
                     "Section Slides": {
@@ -9847,61 +10129,61 @@ window.UPDATES_DATA = [
         "icon": "🗓️",
         "title": "Weekly Timetable",
         "desc": "View your class timetable with section/timing support, alternating weeks, and Ramadan mode, go try it out and make your own combination of courses!",
-        "date": "2026-03-11"
+        "date": ""
     },
     {
         "icon": "👥",
         "title": "Staff Contacts",
         "desc": "Browse instructors and TAs grouped by subject with Teams links to talk to them directly.",
-        "date": "2026-03-11"
+        "date": ""
     },
     {
         "icon": "📝",
         "title": "Midterms Tracker",
         "desc": "See all midterm exams, locations, coverage, and notes in one place.",
-        "date": "2026-03-10"
+        "date": ""
     },
     {
         "icon": "🔗",
         "title": "Useful Links",
         "desc": "Playlists and resources for each subject — YouTube, Drive, and more.",
-        "date": "2026-03-11"
+        "date": ""
     },
     {
         "icon": "📅",
         "title": "Task Schedule",
         "desc": "Semester map of all assignments, quizzes, and projects with week-by-week layout, and a month grid view.",
-        "date": "2026-02-28"
+        "date": ""
     },
     {
         "icon": "⏳",
         "title": "Deadlines",
         "desc": "Upcoming deadlines with countdown timers, color-coded urgency, and ongoing tasks.",
-        "date": "2026-03-10"
+        "date": ""
     },
     {
         "icon": "📜",
         "title": "History",
         "desc": "Track recently viewed materials and quickly jump back to where you left off.",
-        "date": "2026-02-13"
+        "date": ""
     },
     {
         "icon": "⌨️",
         "title": "Keyboard Shortcuts",
         "desc": "Navigate the entire app with hotkeys — press the keyboard icon on the left bottom to see them all.",
-        "date": "2026-03-10"
+        "date": ""
     },
     {
         "icon": "❓",
         "title": "Exam Materials",
         "desc": "Now you can access newly made materials for a specific event from the subject filtering (Weeks - Exam Materials - Useful Links).",
-        "date": "2026-03-10"
+        "date": ""
     },
     {
         "icon": "📂",
         "title": "Others Menu",
         "desc": "Home page expandable 'Others' section groups extra pages neatly.",
-        "date": "2026-03-11"
+        "date": ""
     },
     {
         "icon": "📬",
@@ -9912,7 +10194,7 @@ window.UPDATES_DATA = [
     {
         "icon": "📤",
         "title": "Export Utilities",
-        "desc": "Added compact utilities actions for PDF, Word, screenshots, and share on WhatsApp or copy text with page-specific availability instead of cluttering every screen.",
+        "desc": "Added compact utilities actions for Word, screenshots, and share with page-specific availability instead of cluttering every screen.",
         "date": "2026-03-13"
     },
     {
