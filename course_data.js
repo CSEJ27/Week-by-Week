@@ -5929,10 +5929,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": true,
+                        "vis": false,
                         "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=o66OCM_Zi9V6j9QP",
-                        "desc": "Section 1 [Fall 2023]",
+                        "link": "",
+                        "desc": "",
                         "isNew": false
                     },
                     "Notes": {
@@ -6022,10 +6022,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section Slides": {
-                        "vis": true,
+                        "vis": false,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1-a4ET-cUGED-jan_5OkSF1f6hFX3IpWO/view?usp=drive_link",
-                        "desc": "[Fall 2023]* Slides",
+                        "link": "",
+                        "desc": "",
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
@@ -6120,18 +6120,22 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=o66OCM_Zi9V6j9QP",
+                        "desc": "Section 1 [Fall 2023]",
+                        "isNew": true,
+                        "recentDate": "14/3/2026 7:47 PM",
+                        "isRecent": true
                     },
                     "Section Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1FJEwM4brlL2faU5qtZb-s6epbQOqP9Hc/view?usp=drive_link",
-                        "desc": "[Fall 2025]* Slides.",
-                        "isNew": false
+                        "link": "https://drive.google.com/file/d/1-a4ET-cUGED-jan_5OkSF1f6hFX3IpWO/view?usp=drive_link",
+                        "desc": "[Fall 2023]* Slides",
+                        "isNew": true,
+                        "recentDate": "14/3/2026 7:47 PM",
+                        "isRecent": true
                     },
                     "Notes": {
                         "vis": false,
@@ -6280,10 +6284,10 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section Slides": {
-                        "vis": true,
+                        "vis": false,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1E2QpzIpVJYmeVVI27_ZyhQpYoX5R70x4/view?usp=drive_link",
-                        "desc": "[Fall 2025]* Slides.",
+                        "link": "",
+                        "desc": "",
                         "isNew": false
                     },
                     "Notes": {
@@ -6423,18 +6427,19 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
+                        "link": "https://youtu.be/3J67GgNrVks",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 7:49 PM"
                     },
                     "Section Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1FO12KC-Y2YL8uKMb8cw5EbkXGKfBxjxF/view",
-                        "desc": "",
+                        "link": "https://drive.google.com/file/d/1FJEwM4brlL2faU5qtZb-s6epbQOqP9Hc/view?usp=drive_link",
+                        "desc": "[Fall 2025]* Slides.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -6526,30 +6531,31 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Slides": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1nXOW1pBD6oQVPinmjEDaxStBicomqZlY/view",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://youtu.be/S9nCmuv_-3g",
+                        "desc": "Up till 1:35:00",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1E2QpzIpVJYmeVVI27_ZyhQpYoX5R70x4/view?usp=drive_link",
+                        "desc": "[Fall 2025]* Slides.",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Alternative": {
                         "vis": false,
                         "link": "#",
-                        "desc": "",
+                        "desc": "\n",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -9484,6 +9490,27 @@ window.SCHEDULE_DATA = [
                 "whenLink": "",
                 "whereLink": "",
                 "deadlineDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "CN",
+                "name": "Assignment 1",
+                "icon": "📝",
+                "when": "Sunday (19/4) at 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "19/04/2026 11:59 PM",
+                "deadlineEndDate": "",
                 "isCompleted": false
             }
         ]
