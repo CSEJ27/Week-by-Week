@@ -1021,6 +1021,50 @@
         return d.getTime();
     }
 
+    function formatRecentDateTime(ts) {
+        if(!ts) return '';
+        const d = new Date(ts);
+        if(isNaN(d.getTime())) return '';
+        const day = d.getDate();
+        const month = d.getMonth() + 1;
+        const year = d.getFullYear();
+        let hour = d.getHours();
+        const minute = d.getMinutes().toString().padStart(2, '0');
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        hour = hour % 12 || 12;
+        return `${day}/${month}/${year} ${hour}:${minute} ${ampm}`;
+    }
+
+    function formatRecentTimeOnly(ts) {
+        if(!ts) return '';
+        const d = new Date(ts);
+        if(isNaN(d.getTime())) return '';
+        let hour = d.getHours();
+        const minute = d.getMinutes().toString().padStart(2, '0');
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        hour = hour % 12 || 12;
+        return `${hour}:${minute} ${ampm}`;
+    }
+
+    function formatBatchRange(oldestTs, newestTs) {
+        const fromFull = formatRecentDateTime(oldestTs);
+        const toFull = formatRecentDateTime(newestTs);
+        if(!fromFull || !toFull) return '';
+
+        const oldest = new Date(oldestTs);
+        const newest = new Date(newestTs);
+        const sameDay =
+            oldest.getFullYear() === newest.getFullYear() &&
+            oldest.getMonth() === newest.getMonth() &&
+            oldest.getDate() === newest.getDate();
+
+        if(sameDay) {
+            const toTimeOnly = formatRecentTimeOnly(newestTs);
+            return `From ${fromFull} to ${toTimeOnly}`;
+        }
+        return `From ${fromFull} to ${toFull}`;
+    }
+
     function inferYearFromWeekDate(weekNum, day, month) {
         if(typeof weekNum === 'number' && weekNum > 0) {
             const range = getWeekDates(weekNum);
@@ -1187,22 +1231,28 @@
                 } else if(entry.type === 'res-batch') {
                     const items = entry.items;
                     el.style.cursor = 'default';
+                    const newestTs = items.length > 0 ? items[0].timestamp : 0;
+                    const oldestTs = items.length > 0 ? items[items.length - 1].timestamp : 0;
+                    const batchRangeText = formatBatchRange(oldestTs, newestTs);
                     const header = document.createElement('div');
                     header.innerHTML = `
                         <div class="recent-header"><span>📦 Batch Update — ${items.length} Resources</span><span class="recent-time">${entry.dateStr}</span></div>
+                        ${batchRangeText ? `<div style="margin-top:4px; color:#9fb8dc; font-size:0.78rem; line-height:1.35;">${batchRangeText}</div>` : ''}
                         <div style="margin-top:8px; color:#888; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Includes:</div>
                     `;
                     el.appendChild(header);
                     items.forEach(r => {
                         const subColor = getSubjectColor(r.subCode);
                         const subBg = getSubjectBg(r.subCode);
+                        const singleEditTime = formatRecentDateTime(r.timestamp) || r.dateStr || '';
                         const row = document.createElement('div');
                         row.style.cssText = `display:flex; align-items:center; gap:10px; margin-top:8px; padding:8px 12px; border-radius:10px; background:rgba(0,0,0,0.2); cursor:pointer; transition:0.2s; border-left:3px solid ${subColor};`;
                         row.innerHTML = `
                             <span style="font-size:1.2rem;">${iconMap[r.resName] || '📂'}</span>
                             <span style="background:${subBg}; color:${subColor}; font-size:0.7rem; font-weight:bold; padding:2px 8px; border-radius:6px;">${r.subCode}</span>
                             <span style="color:#aaa; font-size:0.85rem;">${r.wkTitle}</span>
-                            <span style="color:white; font-weight:600; font-size:0.9rem;">${r.resName}</span>
+                            <span style="color:white; font-weight:600; font-size:0.9rem; flex:1;">${r.resName}</span>
+                            <span style="color:#9fb8dc; font-size:0.73rem; white-space:nowrap;">${singleEditTime}</span>
                         `;
                         row.addEventListener('click', (e) => {
                             e.stopPropagation();
