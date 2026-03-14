@@ -3682,7 +3682,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
-                        "desc": "An equivalent recorded section from Fall 24.",
+                        "desc": "An equivalent recorded section from Fall 24 from START till 17:00.",
                         "isNew": false,
                         "isRecent": true,
                         "recentDate": "15/2/2026 11:50 PM"
@@ -3839,13 +3839,13 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVl9v_LIYfGunnpz2vJ-55Sj&si=B8V-PVIQDxr_RtNL",
+                        "desc": "Watch the whole playlist\nVid No. 3 only first 5 minutes is about 82C59A",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 10:37 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -3888,7 +3888,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
-                        "desc": "An equivalent recorded section from Fall 24, till minute 58.",
+                        "desc": "An equivalent recorded section from Fall 24, from 17:00 till minute 39.",
                         "isNew": false
                     },
                     "Section Slides": {
@@ -4042,11 +4042,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
+                        "desc": "Sheet solution [from 1:27:00 till the END].\nNote that this sheet is covering first 3 weeks, and that there is 2 questions that's missing.",
+                        "isNew": true,
+                        "recentDate": "14/3/2026 10:48 PM",
+                        "isRecent": true
                     },
                     "Section Slides": {
                         "vis": true,
@@ -9358,10 +9360,10 @@ window.SCHEDULE_DATA = [
                 "sub": "CN",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "Wednesday (25/3)",
+                "when": "Wednesday (25/3) at 8:00 PM to 8:30 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "Quiz will be 30 minutes long."
             },
             {
                 "sub": "CN",
@@ -9700,7 +9702,7 @@ window.MIDTERM_DATA = [
         "examCode": "CSE313s",
         "time": "4:30 PM",
         "note": "",
-        "coverage": "",
+        "coverage": "Until Week 5.",
         "where": ""
     },
     {
@@ -9745,7 +9747,7 @@ window.MIDTERM_DATA = [
         "examCode": "CSE374s",
         "time": "4:30 PM",
         "note": "",
-        "coverage": "",
+        "coverage": "Until Week 6.",
         "where": ""
     },
     {
@@ -9754,7 +9756,7 @@ window.MIDTERM_DATA = [
         "examCode": "CSE351s",
         "time": "2:30 PM",
         "note": "",
-        "coverage": "",
+        "coverage": "Until Week 7.",
         "where": ""
     },
     {
@@ -9763,7 +9765,7 @@ window.MIDTERM_DATA = [
         "examCode": "CSE335s",
         "time": "12:30 PM",
         "note": "",
-        "coverage": "",
+        "coverage": "Until Ch. 5.",
         "where": ""
     },
     {
