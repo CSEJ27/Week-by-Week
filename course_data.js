@@ -7446,7 +7446,9 @@ window.COURSE_DATA = [
                 },
                 "isNew": false,
                 "isRecent": true,
-                "recentDate": "20/2/2026 10:23 PM"
+                "recentDate": "20/2/2026 10:23 PM",
+                "badgeText": "Start of quiz 1.",
+                "showBadge": true
             },
             {
                 "title": "WEEK 3",
@@ -7591,7 +7593,8 @@ window.COURSE_DATA = [
                 "isNew": false,
                 "isRecent": true,
                 "recentDate": "1/3/2026 6:24 AM",
-                "badgeText": "Quiz 1 till here!"
+                "badgeText": "Quiz 1 till here!",
+                "showBadge": true
             },
             {
                 "title": "WEEK 4",
