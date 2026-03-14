@@ -2547,15 +2547,18 @@
                         el.className = 'card' + (isLocked ? ' locked' : '');
                         if(isEvent) el.style.borderLeft = `4px solid var(--accent-blue)`;
 
-                        const badgeText = (w.showBadge && w.badgeText) ? ` • <span style="color:${w.badgeColor}">${w.badgeText}</span>` : '';
+                        const customBadge = (w.showBadge && w.badgeText)
+                            ? `<div class="custom-badge" style="background:${w.badgeColor || '#e91e8c'}">${w.badgeText}</div>`
+                            : '';
                         const resBadgeCard = res.isNew ? '<div style="margin-top:5px;"><span class="badge-new" style="margin-left:0;">NEW!</span></div>' : '';
                         const notesHtml = (res.desc && res.desc.trim()) ? `<div style="margin-top:15px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.1); color:var(--text-sub); font-size:0.9rem; line-height:1.4; white-space:pre-wrap;">${res.desc}</div>` : '';
                         
                         el.innerHTML = `
+                            ${customBadge}
                             <div style="font-size:2.5rem; margin-bottom:10px">${iconMap[filterType] || '📂'}</div>
                             <div style="font-weight:bold; text-transform:uppercase;">${filterType}</div>
                             ${resBadgeCard}
-                            <div style="color:#aaa; font-size:0.9rem; margin-top:5px;">${w.title}${badgeText}</div>
+                            <div style="color:#aaa; font-size:0.9rem; margin-top:5px;">${w.title}</div>
                             ${notesHtml}
                         `;
                         el.onclick = () => {
