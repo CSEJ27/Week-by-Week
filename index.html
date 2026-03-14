@@ -2575,7 +2575,7 @@
         weekNav.innerHTML = '';
         weekNavPrev = null; weekNavNext = null; weekNavFrom = from;
         const sourceArr = (currSub.events || []).includes(weekOrEvent) ? currSub.events : currSub.weeks;
-        if (sourceArr && from !== 'recent' && from !== 'midterm') {
+        if (sourceArr && from !== 'midterm') {
             const idx = sourceArr.indexOf(weekOrEvent);
             for (let i = idx - 1; i >= 0; i--) { if (!sourceArr[i].locked) { weekNavPrev = sourceArr[i]; break; } }
             for (let i = idx + 1; i < sourceArr.length; i++) { if (!sourceArr[i].locked) { weekNavNext = sourceArr[i]; break; } }
