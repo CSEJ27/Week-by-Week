@@ -9279,15 +9279,6 @@ window.SCHEDULE_DATA = [
                 "note": ""
             },
             {
-                "sub": "AI",
-                "name": "Quiz",
-                "icon": "🧠",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
                 "sub": "DSA",
                 "name": "Quiz",
                 "icon": "🧠",
@@ -9295,7 +9286,8 @@ window.SCHEDULE_DATA = [
                 "where": "Hall C",
                 "coverage": "up till linked lists (Week 4)",
                 "note": "Quiz is written, you will write 2 codes like the codes that we write in the lab, make sure you bring extra papers and a stapler.",
-                "deadlineDate": "16/03/2026 12:30 PM"
+                "deadlineDate": "16/03/2026 12:25 PM",
+                "deadlineEndDate": "16/03/2026 12:50 PM"
             },
             {
                 "sub": "ML",
@@ -9382,6 +9374,27 @@ window.SCHEDULE_DATA = [
                 "submitText": "LMS",
                 "submitNote": "Submit here now!",
                 "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=190474"
+            },
+            {
+                "sub": "AI",
+                "name": "Quiz 1",
+                "icon": "🧠",
+                "when": "Tuesday (24/3) ",
+                "where": "Online",
+                "coverage": "",
+                "note": "Quiz is 10 minutes long.",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
             }
         ]
     },
