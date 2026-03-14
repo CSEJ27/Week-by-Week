@@ -674,12 +674,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "link": "https://youtu.be/6xOyc4QOFIU?si=yz7g9fWoN8FO21sM",
+                        "desc": "Equivalent section from Fall 2022.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 7:06 PM"
                     },
                     "Section Slides": {
                         "vis": true,
@@ -765,6 +766,148 @@ window.COURSE_DATA = [
                 "isNew": true,
                 "isRecent": true,
                 "recentDate": "8/3/2026 7:25 PM"
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlNEXd3aue0fjjPJgqCriR_&si=Ia8dKFFfalT9HptE",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "https://drive.google.com/file/d/1qq3DEEhbgOWMY8ECsNEV_CSJCqnNww5O/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "14/3/2026 7:08 PM",
+                "isRecent": true,
+                "isNew": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/13EVTnrmkFV2XtWVyerUkdcD8s-vkZ34C?usp=drive_link",
@@ -1612,7 +1755,7 @@ window.COURSE_DATA = [
                     "Alternative": {
                         "vis": true,
                         "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt",
-                        "desc": "videos 7 & 8 in the playlist ",
+                        "desc": "videos 7 & 8 in the playlist \nIt also covers week 3 alt.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -3883,11 +4026,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Guide (Explanation)": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://engasuedu-my.sharepoint.com/:v:/g/personal/2300360_eng_asu_edu_eg/IQCcCb17T3nkSoBfvqoIVfquAU625Ezi94TaHJtEIe9ifjE?e=MGqBwj",
+                        "desc": "Lec 3 full explanation.",
+                        "isNew": true,
+                        "recentDate": "14/3/2026 6:57 PM",
+                        "isRecent": true
                     },
                     "Guide (Solving)": {
                         "vis": false,
@@ -4896,7 +5041,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/watch?v=YO_gAw637n0&feature=youtu.be",
-                        "desc": "CH. 3 continued + an intro to CH. 4.",
+                        "desc": "Ch. 3 continued + First 30 slides of Ch. 4.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -4904,18 +5049,19 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtu.be/Z0t4PINqCj0",
-                        "desc": "Rest of CH3 [(13:27):END] ",
+                        "desc": "Rest of Ch. 3 [(13:27):END] ",
                         "isNew": false,
                         "isRecent": true,
                         "recentDate": "10/3/2026 7:33 PM"
                     },
                     "Another Alt.": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "link": "https://youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM&si=qc-o71aZo39sK_8B",
+                        "desc": "Ch. 4 (Full Chapter) \nWatch the following in the playlist:\nLec 7 Pt. 1 + Lec 7 Pt. 2 (start -> 2:30, Skip Amdahl's Law, 11:33 -> end) + Lec 8 Pt. 1 (start -> 12:46) + Lec 9 (2:57 -> end)",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 6:57 PM"
                     },
                     "Another Alt.2": {
                         "vis": false,
@@ -4961,7 +5107,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/playlist?list=PLBiOoMs77rROrZakdz7c5r7ArJPklYUP7",
-                        "desc": "Tutorial 4 in this playlist.",
+                        "desc": "Watch the following in the playlist:\nTutorial 3 [End of CH 3, solving of CH 3 from 31:00 till 1:17:00   +   CH 4 from 1:17:00 till END]",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -5063,16 +5209,16 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gEkuFnfO9p3IIV0Oxw8j7&si=-JyebWV8r4t41XN_",
+                        "desc": "Ch. 5, Pts. I & II",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1&si=Ip0i3nrTV2J7AehZ",
+                        "desc": "Recommended, watch the following:\nLec 11 Pt. 2\nLec 12 Pt. 2\nLec 13 Pt.1 (Start -> 16:21) \"The rest of the lecture is discussing some out of scope concepts, but you might be interested in\" \nLec 13 Pt. 2 (Start -> 14:20)\n\nOur Ch. 5 is mapped to Ch. 6 in this playlist\nCh. 4 was covered in last week's 4 alt",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -5086,16 +5232,17 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/drive/folders/1Im88NwjJS85Y1DK41QNu7-JMKtmCIYgy?usp=drive_link",
-                        "desc": "Ch.4 continued + Ch.5 till slide 17",
+                        "desc": "Ch. 4 continued + Ch. 5 till slide 17",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLBiOoMs77rROrZakdz7c5r7ArJPklYUP7&si=bXBkJ229GsQrhbkZ",
+                        "desc": "Watch the following in the playlist:\nTutorial 4 [Ch. 4 from START till 23:00 + Ch. 5 from 23:00 till END]",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section Slides": {
                         "vis": false,
@@ -9133,21 +9280,21 @@ window.SCHEDULE_DATA = [
                 "sub": "DSA",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "Monday (16/3) at 12:30 PM",
+                "when": "Monday (16/3) from 12:25 PM to 12:50 PM",
                 "where": "Hall C",
                 "coverage": "up till linked lists (Week 4)",
-                "note": "The quiz will be written",
+                "note": "Quiz is written, you will write 2 codes like the codes that we write in the lab, make sure you bring extra papers and a stapler.",
                 "deadlineDate": "16/03/2026 12:30 PM"
             },
             {
                 "sub": "ML",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "Sunday (15/3) at 12:30 PM",
+                "when": "Sunday (15/3) at 12:25 PM",
                 "where": "",
                 "coverage": "Up till week 3 (linear regressions & multi linear regression)",
                 "note": "Online on SEB browser (make sure you download it)",
-                "deadlineDate": "15/03/2026 12:30 PM",
+                "deadlineDate": "15/03/2026 12:25 PM",
                 "deadlineEndDate": ""
             },
             {
@@ -9205,7 +9352,7 @@ window.SCHEDULE_DATA = [
                 "sub": "CN",
                 "name": "Quiz",
                 "icon": "🧠",
-                "when": "",
+                "when": "Wednesday (25/3)",
                 "where": "",
                 "coverage": "",
                 "note": ""
@@ -10510,6 +10657,26 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "OS secction",
+        "body": "There will be an online section on Thursday (19/3)",
+        "publishedAt": "2026-03-14T17:25:32",
+        "sub": "OS",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "CN Lecture",
+        "body": "A replacement lecture is due on Tuesday, March 24th at 8pm.",
+        "publishedAt": "2026-03-14T17:24:42",
+        "sub": "CN",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "🎉",
         "title": "Eid El Fitr Vacation",
