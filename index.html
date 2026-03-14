@@ -886,11 +886,12 @@
             wk.tasks.forEach(t => {
                 if(t.sub !== subCode) return;
                 if(t.isCompleted) return;
-                if(!t.deadlineDate || t.deadlineDate.trim() === '') return;
-                const ts = parseDate(t.deadlineDate);
-                if(ts === 0 || ts < now) return;
+                const meta = getTaskEffectiveDeadlineMeta(t, wk.week);
+                if(meta.timestamp === 0) return;
+                const compareTs = meta.hasTime ? meta.timestamp : getEndOfDayTimestamp(meta.timestamp);
+                if(compareTs < now) return;
 
-                const daysLeft = (ts - now) / (1000 * 60 * 60 * 24);
+                const daysLeft = (compareTs - now) / (1000 * 60 * 60 * 24);
                 const name = (t.name || '').toLowerCase();
                 const weight = typeWeight[name] || 1;
                 const taskScore = daysLeft * weight;
@@ -964,24 +965,136 @@
         animateActivePageWaterfall();
     }
 
-    function parseDate(str) {
-        if(!str) return 0;
+    function parseDateMeta(str) {
+        if(!str) return { timestamp: 0, hasTime: false };
         try {
-            const parts = str.trim().split(/\s+/);
-            if(parts.length < 2) return 0;
-            const dParts = parts[0].split('/');
-            const tParts = parts[1].split(':');
-            const ampm = parts[2] ? parts[2].toUpperCase() : '';
-            let h = parseInt(tParts[0], 10);
-            const m = parseInt(tParts[1], 10);
-            if(ampm === 'PM' && h < 12) h += 12;
-            if(ampm === 'AM' && h === 12) h = 0;
-            const yr = parseInt(dParts[2], 10);
-            const mo = parseInt(dParts[1], 10) - 1;
-            const da = parseInt(dParts[0], 10);
-            const timestamp = new Date(yr, mo, da, h, m).getTime();
-            return isNaN(timestamp) ? 0 : timestamp;
-        } catch(e) { return 0; }
+            const normalized = String(str).trim().replace(/\s+/g, ' ');
+            if(!normalized) return { timestamp: 0, hasTime: false };
+
+            const m = normalized.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})(?:\s+(\d{1,2})(?::(\d{2}))?(?:\s*(AM|PM))?)?$/i);
+            if(!m) return { timestamp: 0, hasTime: false };
+
+            const da = parseInt(m[1], 10);
+            const mo = parseInt(m[2], 10) - 1;
+            const yr = parseInt(m[3], 10);
+            const hasTime = !!m[4];
+
+            let h = 0;
+            let mm = 0;
+            if(hasTime) {
+                h = parseInt(m[4], 10);
+                mm = parseInt(m[5] || '0', 10);
+                const ampm = (m[6] || '').toUpperCase();
+                if(ampm === 'PM' && h < 12) h += 12;
+                if(ampm === 'AM' && h === 12) h = 0;
+            }
+
+            if(mo < 0 || mo > 11 || da < 1 || da > 31 || h < 0 || h > 23 || mm < 0 || mm > 59) {
+                return { timestamp: 0, hasTime: false };
+            }
+
+            const d = new Date(yr, mo, da, h, mm, 0, 0);
+            if(
+                d.getFullYear() !== yr ||
+                d.getMonth() !== mo ||
+                d.getDate() !== da ||
+                d.getHours() !== h ||
+                d.getMinutes() !== mm
+            ) {
+                return { timestamp: 0, hasTime: false };
+            }
+
+            return { timestamp: d.getTime(), hasTime };
+        } catch(e) {
+            return { timestamp: 0, hasTime: false };
+        }
+    }
+
+    function parseDate(str) {
+        return parseDateMeta(str).timestamp;
+    }
+
+    function getEndOfDayTimestamp(ts) {
+        if(!ts) return 0;
+        const d = new Date(ts);
+        d.setHours(23, 59, 59, 999);
+        return d.getTime();
+    }
+
+    function inferYearFromWeekDate(weekNum, day, month) {
+        if(typeof weekNum === 'number' && weekNum > 0) {
+            const range = getWeekDates(weekNum);
+            if(range && range.start && range.end) {
+                const years = [range.start.getFullYear(), range.end.getFullYear()];
+                for(let i = 0; i < years.length; i++) {
+                    const yr = years[i];
+                    const candidate = new Date(yr, month - 1, day, 0, 0, 0, 0);
+                    if(candidate.getFullYear() === yr && candidate.getMonth() === month - 1 && candidate.getDate() === day) {
+                        if(candidate >= range.start && candidate <= range.end) return yr;
+                    }
+                }
+                return range.start.getFullYear();
+            }
+        }
+        return new Date().getFullYear();
+    }
+
+    function parseWhenDeadlineMeta(whenStr, weekNum) {
+        if(!whenStr) return { timestamp: 0, hasTime: false };
+        try {
+            const raw = String(whenStr).trim();
+            if(!raw) return { timestamp: 0, hasTime: false };
+
+            const dateMatch = raw.match(/(\d{1,2})\s*\/\s*(\d{1,2})(?:\s*\/\s*(\d{2,4}))?/);
+            if(!dateMatch) return { timestamp: 0, hasTime: false };
+
+            const day = parseInt(dateMatch[1], 10);
+            const month = parseInt(dateMatch[2], 10);
+            let year = 0;
+            if(dateMatch[3]) {
+                year = parseInt(dateMatch[3], 10);
+                if(year < 100) year += 2000;
+            } else {
+                year = inferYearFromWeekDate(weekNum, day, month);
+            }
+
+            const timeMatch = raw.match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)\b/i);
+            const hasTime = !!timeMatch;
+            let hh = 0;
+            let mm = 0;
+            if(hasTime) {
+                hh = parseInt(timeMatch[1], 10);
+                mm = parseInt(timeMatch[2] || '0', 10);
+                const ampm = timeMatch[3].toUpperCase();
+                if(ampm === 'PM' && hh < 12) hh += 12;
+                if(ampm === 'AM' && hh === 12) hh = 0;
+            }
+
+            if(month < 1 || month > 12 || day < 1 || day > 31 || hh < 0 || hh > 23 || mm < 0 || mm > 59) {
+                return { timestamp: 0, hasTime: false };
+            }
+
+            const d = new Date(year, month - 1, day, hh, mm, 0, 0);
+            if(
+                d.getFullYear() !== year ||
+                d.getMonth() !== month - 1 ||
+                d.getDate() !== day ||
+                d.getHours() !== hh ||
+                d.getMinutes() !== mm
+            ) {
+                return { timestamp: 0, hasTime: false };
+            }
+
+            return { timestamp: d.getTime(), hasTime };
+        } catch(e) {
+            return { timestamp: 0, hasTime: false };
+        }
+    }
+
+    function getTaskEffectiveDeadlineMeta(task, weekNum) {
+        const fromDeadline = parseDateMeta(task && task.deadlineDate);
+        if(fromDeadline.timestamp !== 0) return fromDeadline;
+        return parseWhenDeadlineMeta(task && task.when, weekNum);
     }
 
     function showRecent() {
@@ -1147,32 +1260,34 @@
             if(wk.tasks) {
                 wk.tasks.forEach((t, tIndex) => {
                     if(t.isCompleted) {
-                        const ts = parseDate(t.deadlineDate);
-                        if(ts !== 0) completed.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: ts });
+                        const parsedCompleted = getTaskEffectiveDeadlineMeta(t, wk.week);
+                        const ts = parsedCompleted.timestamp;
+                        if(ts !== 0) completed.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: ts, hasExplicitTime: parsedCompleted.hasTime });
                         return;
                     }
-                    if(!t.deadlineDate || t.deadlineDate.trim() === '') {
-                        unscheduled.push({ wIndex, tIndex, task: t, week: wk.week });
-                        return;
-                    }
-                    const tsStart = parseDate(t.deadlineDate);
+                    const parsedStart = getTaskEffectiveDeadlineMeta(t, wk.week);
+                    const tsStart = parsedStart.timestamp;
+                    const hasExplicitTime = parsedStart.hasTime;
                     if(tsStart === 0) { unscheduled.push({ wIndex, tIndex, task: t, week: wk.week }); return; }
+                    const compareStartTs = hasExplicitTime ? tsStart : getEndOfDayTimestamp(tsStart);
 
                     if(t.deadlineEndDate && t.deadlineEndDate.trim() !== '') {
-                        const tsEnd = parseDate(t.deadlineEndDate);
+                        const parsedEnd = parseDateMeta(t.deadlineEndDate);
+                        const tsEnd = parsedEnd.timestamp;
                         if(tsEnd !== 0) {
-                            if(now >= tsStart && now <= tsEnd) {
-                                ongoing.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: tsStart, endTimestamp: tsEnd });
+                            const compareEndTs = parsedEnd.hasTime ? tsEnd : getEndOfDayTimestamp(tsEnd);
+                            if(now >= tsStart && now <= compareEndTs) {
+                                ongoing.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: tsStart, endTimestamp: tsEnd, hasExplicitTime, endHasExplicitTime: parsedEnd.hasTime });
                                 return;
-                            } else if(now > tsEnd) {
-                                completed.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: tsEnd });
+                            } else if(now > compareEndTs) {
+                                completed.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: tsEnd, hasExplicitTime: parsedEnd.hasTime });
                                 return;
                             }
                         }
                     }
 
-                    const isPast = tsStart < now;
-                    const item = { wIndex, tIndex, task: t, week: wk.week, timestamp: tsStart };
+                    const isPast = compareStartTs < now;
+                    const item = { wIndex, tIndex, task: t, week: wk.week, timestamp: tsStart, hasExplicitTime };
                     if(isPast) completed.push(item);
                     else upcoming.push(item);
                 });
@@ -1196,7 +1311,8 @@
                 newsIndex,
                 task: { icon: n.emoji || '📢', name: n.title || 'Announcement', sub: n.sub || 'NEWS' },
                 week: 'News',
-                timestamp: ts
+                timestamp: ts,
+                hasExplicitTime: !!(n.deadlineTime && String(n.deadlineTime).trim() !== '')
             };
             if (ts >= now) upcoming.push(item);
         });
@@ -1220,12 +1336,16 @@
                 const dayStr = days[d.getDay()];
                 const dateStr = `${d.getDate()} ${months[d.getMonth()]}`;
                 const groupLabel = `${dayStr} · ${dateStr}`;
+                const hasExplicitTime = !!item.hasExplicitTime;
                 
-                let h = d.getHours();
-                const m = d.getMinutes().toString().padStart(2, '0');
-                const ampm = h >= 12 ? 'PM' : 'AM';
-                h = h % 12 || 12;
-                const timeStr = `${h}:${m} ${ampm}`;
+                let timeStr = '';
+                if (hasExplicitTime) {
+                    let h = d.getHours();
+                    const m = d.getMinutes().toString().padStart(2, '0');
+                    const ampm = h >= 12 ? 'PM' : 'AM';
+                    h = h % 12 || 12;
+                    timeStr = `${h}:${m} ${ampm}`;
+                }
 
                 let subName = item.source === 'news' ? 'News Announcement' : item.task.sub;
                 if(window.COURSE_DATA && item.source !== 'news') {
@@ -1243,7 +1363,7 @@
                 const badgeTextColor = isComp ? '#aaa' : getSubjectColor(item.task.sub);
 
                 let countdownHtml = '';
-                if (!isComp) {
+                if (!isComp && hasExplicitTime) {
                     const diffMs = item.timestamp - now;
                     if (diffMs > 0) {
                         const dd = Math.floor(diffMs / (1000 * 60 * 60 * 24));
@@ -1262,6 +1382,10 @@
                     }
                 }
 
+                const rightColumnHtml = hasExplicitTime
+                    ? `<div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${isComp ? '#888' : 'white'}; white-space: nowrap;">${timeStr}</div>${countdownHtml}`
+                    : '';
+
                 const onClick = item.source === 'news' ? 'openNewsPanel()' : `goToScheduleTask(${item.wIndex}, ${item.tIndex})`;
                 html += `
                     <div class="card ${isComp ? 'completed' : ''}" style="border-left: 4px solid ${accentColor}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center;" onclick="${onClick}">
@@ -1271,8 +1395,7 @@
                             <div class="dl-text" style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${subName}${item.source === 'news' ? '' : ` • Week ${item.week}`}</div>
                         </div>
                         <div style="display:flex; flex-direction:column; align-items:flex-end;">
-                            <div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${isComp ? '#888' : 'white'}; white-space: nowrap;">${timeStr}</div>
-                            ${countdownHtml}
+                            ${rightColumnHtml}
                         </div>
                     </div>
                 `;
@@ -1616,12 +1739,12 @@
         return 'other';
     }
 
-    function sortTasksByTime(tasks) {
+    function sortTasksByTime(tasks, weekNum) {
         // Separate tasks with specified time from those without
         const withTime = [];
         const withoutTime = [];
         tasks.forEach((task, origIdx) => {
-            const ts = parseDate(task.deadlineDate);
+            const ts = getTaskEffectiveDeadlineMeta(task, weekNum).timestamp;
             if(ts > 0) {
                 withTime.push({ task, origIdx, ts });
             } else {
@@ -1709,7 +1832,7 @@
             }
 
             // Sort by time
-            const sortedEntries = sortTasksByTime(filteredTasks.map(x => x.task));
+            const sortedEntries = sortTasksByTime(filteredTasks.map(x => x.task), data.week);
             // Re-map to get original indices
             const displayTasks = sortedEntries.map(se => {
                 const match = filteredTasks.find(ft => ft.task === se.task);
@@ -1798,7 +1921,7 @@
             if(!wk.tasks) return;
             wk.tasks.forEach((t, tIndex) => {
                 if(scheduleTaskFilter !== 'all' && getTaskTypeCategory(t.name) !== scheduleTaskFilter) return;
-                const ts = parseDate(t.deadlineDate);
+                const ts = getTaskEffectiveDeadlineMeta(t, wk.week).timestamp;
                 if(ts === 0) {
                     // Undated / TBD task
                     if(!tbdTasksByWeek[wIndex]) tbdTasksByWeek[wIndex] = [];
@@ -2767,36 +2890,43 @@
         const now = Date.now();
         window.SCHEDULE_DATA.forEach((wk, wIndex) => {
             if(wk.tasks) wk.tasks.forEach((t, tIndex) => {
-                if(!t.deadlineDate || t.isCompleted) return;
-                const ts = parseDate(t.deadlineDate);
-                if(ts === 0 || ts <= now) {
+                if(t.isCompleted) return;
+                const parsedStart = getTaskEffectiveDeadlineMeta(t, wk.week);
+                const ts = parsedStart.timestamp;
+                const compareTs = parsedStart.hasTime ? ts : getEndOfDayTimestamp(ts);
+                if(ts === 0 || compareTs <= now) {
                     // For tasks with an end date currently ongoing, show them specially
-                    if(t.deadlineEndDate && ts <= now) {
-                        const tsEnd = parseDate(t.deadlineEndDate);
-                        if(tsEnd > now) upcoming.unshift({ task: t, ts, wIndex, tIndex, week: wk.week, isOngoing: true });
+                    if(t.deadlineEndDate && compareTs <= now) {
+                        const parsedEnd = parseDateMeta(t.deadlineEndDate);
+                        const tsEnd = parsedEnd.timestamp;
+                        const compareEndTs = parsedEnd.hasTime ? tsEnd : getEndOfDayTimestamp(tsEnd);
+                        if(compareEndTs > now) upcoming.unshift({ task: t, ts, compareTs, wIndex, tIndex, week: wk.week, isOngoing: true });
                     }
                     return;
                 }
-                upcoming.push({ task: t, ts, wIndex, tIndex, week: wk.week }); 
+                upcoming.push({ task: t, ts, compareTs, wIndex, tIndex, week: wk.week }); 
             });
         });
         (window.NEWS_DATA || []).forEach((n, newsIndex) => {
             if (!n || !n.hasDeadline) return;
             const ts = parseNewsDeadlineTs(n.deadlineDate, n.deadlineTime);
-            if (ts === 0 || ts <= now) return;
+            const hasExplicitTime = !!(n.deadlineTime && String(n.deadlineTime).trim() !== '');
+            const compareTs = hasExplicitTime ? ts : getEndOfDayTimestamp(ts);
+            if (ts === 0 || compareTs <= now) return;
             upcoming.push({
                 task: { icon: n.emoji || '📢', name: n.title || 'Announcement', sub: n.sub || 'NEWS' },
                 ts,
+                compareTs,
                 source: 'news',
                 newsIndex,
                 week: 'News'
             });
         });
-        upcoming.sort((a,b) => { if(a.isOngoing && !b.isOngoing) return -1; if(!a.isOngoing && b.isOngoing) return 1; return a.ts - b.ts; });
+        upcoming.sort((a,b) => { if(a.isOngoing && !b.isOngoing) return -1; if(!a.isOngoing && b.isOngoing) return 1; return a.compareTs - b.compareTs; });
 
         if(badge) {
             if(upcoming.length > 0) {
-                const closestMs = upcoming[0].ts - now;
+                const closestMs = upcoming[0].compareTs - now;
                 const d = Math.floor(closestMs / (1000 * 60 * 60 * 24));
                 const h = Math.floor((closestMs / (1000 * 60 * 60)) % 24);
                 
@@ -2826,7 +2956,7 @@
         } else {
             upcoming.slice(0, 4).forEach(item => {
                 const d = new Date(item.ts);
-                const diff = item.ts - now;
+                const diff = item.compareTs - now;
                 const daysLeft = Math.ceil(diff / (1000*60*60*24));
                 let urgency = 'dd-deadline-ok';
                 let timeLabel = daysLeft + 'd';
@@ -3040,33 +3170,39 @@
         (window.SCHEDULE_DATA || []).forEach((wk, wIndex) => {
             (wk.tasks || []).forEach((t, tIndex) => {
                 if (t.isCompleted) return;
-                if (!t.deadlineDate || t.deadlineDate.trim() === '') return;
-                const tsStart = parseDate(t.deadlineDate);
+                const parsedStart = getTaskEffectiveDeadlineMeta(t, wk.week);
+                const tsStart = parsedStart.timestamp;
                 if (tsStart === 0) return;
+                const compareStartTs = parsedStart.hasTime ? tsStart : getEndOfDayTimestamp(tsStart);
                 if (t.deadlineEndDate && t.deadlineEndDate.trim() !== '') {
-                    const tsEnd = parseDate(t.deadlineEndDate);
-                    if (tsEnd > now && tsStart <= now) {
-                        out.push({ wIndex, tIndex, week: wk.week, task: t, ts: tsStart, isOngoing: true, endTs: tsEnd });
+                    const parsedEnd = parseDateMeta(t.deadlineEndDate);
+                    const tsEnd = parsedEnd.timestamp;
+                    const compareEndTs = parsedEnd.hasTime ? tsEnd : getEndOfDayTimestamp(tsEnd);
+                    if (compareEndTs > now && tsStart <= now) {
+                        out.push({ wIndex, tIndex, week: wk.week, task: t, ts: tsStart, compareTs: compareStartTs, isOngoing: true, endTs: tsEnd });
                         return;
                     }
                 }
-                if (tsStart >= now) out.push({ wIndex, tIndex, week: wk.week, task: t, ts: tsStart, isOngoing: false });
+                if (compareStartTs >= now) out.push({ wIndex, tIndex, week: wk.week, task: t, ts: tsStart, compareTs: compareStartTs, isOngoing: false });
             });
         });
         (window.NEWS_DATA || []).forEach((n, newsIndex) => {
             if (!n || !n.hasDeadline) return;
             const ts = parseNewsDeadlineTs(n.deadlineDate, n.deadlineTime);
-            if (ts === 0 || ts < now) return;
+            const hasExplicitTime = !!(n.deadlineTime && String(n.deadlineTime).trim() !== '');
+            const compareTs = hasExplicitTime ? ts : getEndOfDayTimestamp(ts);
+            if (ts === 0 || compareTs < now) return;
             out.push({
                 source: 'news',
                 newsIndex,
                 week: 'News',
                 task: { icon: n.emoji || '📢', name: n.title || 'Announcement', sub: n.sub || 'NEWS' },
                 ts,
+                compareTs,
                 isOngoing: false
             });
         });
-        out.sort((a,b) => a.ts - b.ts);
+        out.sort((a,b) => (a.compareTs || a.ts) - (b.compareTs || b.ts));
         return out;
     }
 
@@ -3123,7 +3259,7 @@
             (window.SCHEDULE_DATA || []).forEach(wk => {
                 (wk.tasks || []).forEach(t => {
                     if (t.isCompleted) return;
-                    if (!t.deadlineDate || t.deadlineDate.trim() === '' || parseDate(t.deadlineDate) === 0) {
+                    if (getTaskEffectiveDeadlineMeta(t, wk.week).timestamp === 0) {
                         tbdItems.push({ week: wk.week, task: t });
                     }
                 });
