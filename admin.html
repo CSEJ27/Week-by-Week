@@ -1094,7 +1094,10 @@
     // --- USEFUL LINKS MANAGER ---
     let ulSubIdx = 0; let ulLinkIdx = 0;
 
-    function renderUsefulLinksManager() {
+    function renderUsefulLinksManager(options = {}) {
+        const preserveScroll = options.preserveScroll !== false;
+        const existingList = document.getElementById('ul-links-list');
+        const previousScrollTop = preserveScroll && existingList ? existingList.scrollTop : 0;
         const mid = document.getElementById('middle-col');
         const sub = window.COURSE_DATA[ulSubIdx];
         if(!sub) return;
@@ -1152,9 +1155,11 @@
             const groupTag = group ? `<span style="font-size:0.55rem; color:#4a90e2; border:1px solid rgba(74,144,226,0.3); padding:1px 5px; border-radius:4px; white-space:nowrap;">📁</span>` : '';
             
             el.innerHTML = `<span class="drag-handle">☰</span><span style="font-size:1rem;">${pl.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${pl.title || 'Link'}</div><div style="display:flex; gap:3px; flex-wrap:wrap; margin-top:2px;">${badgePills}${groupTag}</div></div><button class="btn-move" onclick="event.stopPropagation(); moveUL(${i},-1)">▲</button><button class="btn-move" onclick="event.stopPropagation(); moveUL(${i},1)">▼</button><button class="btn btn-del" onclick="event.stopPropagation(); delUsefulLink(${i})">✕</button>`;
-            el.onclick = (e) => { if(e.target.tagName !== 'BUTTON') { ulLinkIdx = i; renderUsefulLinksManager(); renderUsefulLinksEditor(); } };
+            el.onclick = (e) => { if(e.target.tagName !== 'BUTTON') { ulLinkIdx = i; renderUsefulLinksManager({ preserveScroll: true }); renderUsefulLinksEditor(); } };
             list.appendChild(el);
         });
+
+        if (preserveScroll) list.scrollTop = previousScrollTop;
         
         renderUsefulLinksEditor();
     }
