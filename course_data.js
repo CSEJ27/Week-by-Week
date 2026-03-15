@@ -4431,6 +4431,147 @@ window.COURSE_DATA = [
                 "isRecent": true,
                 "isNew": true,
                 "recentDate": "8/3/2026 7:49 PM"
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/dNJMoCWUGFA",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1zthHi-MSItJXjNTKZM2RbseCTbg5YPxp/view?usp=drive_link",
+                        "desc": "Slides from 1 to 10 and then slide 17.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=f0O_9Nk5SvI",
+                        "desc": "From start till 35:00\nNote that the following slides content was not explained in the section and they are missing: 4,8,9,10",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "15/3/2026 2:50 AM",
+                "isRecent": true,
+                "isNew": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1wkMAWai1tW55j42gsDKRh0-PPUCOKdFk?usp=drive_link",
@@ -4441,7 +4582,7 @@ window.COURSE_DATA = [
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlgvQg5Y6FTKBw_8OqmGLlb&si=ba-G4K-0bScdEcRa",
                 "icon": "▶️",
                 "note": "It's not complete as we didn't take all sections and lectures online.",
-                "group": "Spring 2026",
+                "group": "",
                 "badges": [
                     {
                         "text": "Lectures",
@@ -4565,7 +4706,7 @@ window.COURSE_DATA = [
                 "link": "https://youtube.com/playlist?list=PLbxswoh1SoPko-ilIS-PualpJABpg5ai4&si=naLqtIolKw-t5dgM",
                 "icon": "🎓",
                 "note": "",
-                "group": "Dr. Tamer Mostafa",
+                "group": "",
                 "badges": [
                     {
                         "text": "Lectures",
@@ -4645,7 +4786,8 @@ window.COURSE_DATA = [
                         "text": "Tutorials",
                         "color": "#34c759"
                     }
-                ]
+                ],
+                "group": "Eng. Tasneem Adel Awad"
             },
             {
                 "title": "Eng. Ahmed Fathy – Fall 2018",
@@ -4664,7 +4806,7 @@ window.COURSE_DATA = [
                 "link": "https://www.youtube.com/playlist?list=PL-cKUB-e2KiswAkwZLJYlTzI69FpSJa50",
                 "icon": "📘",
                 "note": "",
-                "group": "External",
+                "group": "",
                 "badges": [
                     {
                         "text": "External",
@@ -8517,7 +8659,7 @@ window.COURSE_DATA = [
                 "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzoKrYalQHRs5FzRWHc8WIZK&si=xpGAkzpwPolydJwM",
                 "icon": "📽️",
                 "note": "",
-                "group": "External",
+                "group": "",
                 "badges": [
                     {
                         "text": "External",
