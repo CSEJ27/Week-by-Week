@@ -489,9 +489,11 @@ window.COURSE_DATA = [
                     "Voice Recording": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/161GIYpYQZNta_jv9Gn05phv7EpVhH9/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/161GIYpYQZNtEMa_jv9Gn05phv7EpVhH9/view?usp=drive_link",
                         "desc": "Includes important questions*",
-                        "isNew": false
+                        "isNew": true,
+                        "recentDate": "15/3/2026 2:41 AM",
+                        "isRecent": true
                     },
                     "Slides": {
                         "vis": true,
@@ -771,11 +773,12 @@ window.COURSE_DATA = [
                 "title": "WEEK 5",
                 "resources": {
                     "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtu.be/mCYgwZ9xp-4",
+                        "desc": "Ch. 3 Pt. 1 [From START till 50:00] ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "15/3/2026 2:32 AM"
                     },
                     "Alternative": {
                         "vis": true,
@@ -786,16 +789,16 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Voice Recording": {
-                        "vis": false,
+                        "vis": true,
                         "link": "https://drive.google.com/file/d/1qq3DEEhbgOWMY8ECsNEV_CSJCqnNww5O/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/10O6khI_YXPmwX5CtE1LfVkyGAVGkdYq-/view?usp=drive_link",
+                        "desc": "Ch. 3 [0-57]",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -906,6 +909,147 @@ window.COURSE_DATA = [
                     }
                 },
                 "recentDate": "14/3/2026 7:08 PM",
+                "isRecent": true,
+                "isNew": true
+            },
+            {
+                "title": "WEEK 6",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLaL_BACw3AaG1iKBYjw9jPsw8rgu0er8g",
+                        "desc": "Ch. 3 Pt. 1  [From 50:00 till the end] + Ch. 3 Pt. 2",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/10O6khI_YXPmwX5CtE1LfVkyGAVGkdYq-/view?usp=drive_link",
+                        "desc": "Ch. 3 [57-END]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "15/3/2026 2:35 AM",
                 "isRecent": true,
                 "isNew": true
             }
