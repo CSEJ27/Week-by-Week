@@ -901,6 +901,10 @@
         return score;
     }
 
+    function getHomepageOrderedSubjects() {
+        return [...window.COURSE_DATA].sort((a, b) => getSubjectUrgency(a.code) - getSubjectUrgency(b.code));
+    }
+
     function init() {
         const grid = document.getElementById('subjects-grid');
         if(grid) grid.innerHTML = '';
@@ -909,7 +913,7 @@
         // Auto-expire "New" badges older than 7 days
         autoExpireNewBadges();
 
-        const sorted = [...window.COURSE_DATA].sort((a, b) => getSubjectUrgency(a.code) - getSubjectUrgency(b.code));
+        const sorted = getHomepageOrderedSubjects();
 
         sorted.forEach(s => {
             if(!s.weeks) s.weeks = [];
@@ -2887,7 +2891,7 @@
         const dd = document.getElementById('dd-subjects');
         if(!dd || !window.COURSE_DATA) return;
         let html = '<div class="dd-header">Jump to subject</div>';
-        window.COURSE_DATA.forEach(s => {
+        getHomepageOrderedSubjects().forEach(s => {
             const color = getSubjectColor(s.code);
             const weekCount = (s.weeks || []).filter(w => !w.locked).length;
             html += `<div class="dd-item" onclick="event.stopPropagation(); closeAllDropdowns(); ddGoSubject('${s.code}')">`;
