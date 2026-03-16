@@ -9892,7 +9892,11 @@ window.SCHEDULE_DATA = [
                 "coverage": "Up till week 3 (linear regressions & multi linear regression)",
                 "note": "Online on SEB browser (make sure you download it)",
                 "deadlineDate": "15/03/2026 12:25 PM",
-                "deadlineEndDate": ""
+                "deadlineEndDate": "",
+                "whereLink": "Check your Place here!",
+                "whenLink": "Check your time here!",
+                "whenNote": "https://drive.google.com/file/d/19DmZ-XEiwVlDlKuP415YND5wUkkMpW89/view?usp=drive_link",
+                "whereNote": "https://drive.google.com/file/d/19DmZ-XEiwVlDlKuP415YND5wUkkMpW89/view?usp=drive_link"
             },
             {
                 "sub": "DB",
