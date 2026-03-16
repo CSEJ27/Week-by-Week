@@ -334,18 +334,22 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Another Alt.": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np",
+                        "desc": "Eng. Reham Shouman Spring 2021 sections, very recommended by seniors.\nCh. 2, Pts. 1 & 2 & 3 in the playlist.",
+                        "isNew": true,
+                        "recentDate": "16/3/2026 5:51 PM",
+                        "isRecent": true
                     },
                     "Voice Recording": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://drive.google.com/file/d/10ggLuNEZSeVqozlMFgYPxGMekAmaMVon/view?usp=drive_link",
+                        "desc": "It's not complete.",
+                        "isNew": true,
+                        "recentDate": "16/3/2026 7:39 PM",
+                        "isRecent": true
                     },
                     "Slides": {
                         "vis": true,
@@ -480,11 +484,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Another Alt.": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np",
+                        "desc": "Eng. Reham Shouman Spring 2021 sections, very recommended by seniors.\nCh. 2, Pts. 4 & 5 & 6 in the playlist.",
+                        "isNew": true,
+                        "recentDate": "16/3/2026 5:52 PM",
+                        "isRecent": true
                     },
                     "Voice Recording": {
                         "vis": true,
@@ -628,12 +634,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Alt.": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "link": "https://youtu.be/H7Ft2KgBaRI",
+                        "desc": "Eng. Reham Shouman Spring 2021 section, very recommended by seniors.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 5:53 PM"
                     },
                     "Another Alt.2": {
                         "vis": false,
@@ -831,11 +838,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtu.be/TYoIZtY2MbU",
+                        "desc": "Eng. Reham Shouman Spring 2021 section, very recommended by seniors, from START till 14:06.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 5:54 PM"
                     },
                     "Another Alt.2": {
                         "vis": false,
@@ -930,11 +938,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1Ljr96Z3TKb0jFc7q-Eenf1r-pqaTDnID?usp=drive_link",
+                        "desc": "2 different sources choose one.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 7:37 PM"
                     },
                     "Slides": {
                         "vis": true,
@@ -972,11 +981,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np&si=mZLWO0BLXITP8zv0",
+                        "desc": "Eng. Reham Shouman Spring 2021 sections, very recommended by seniors.\nCh3. Pt. 3 14:06 till END + Ch. 3 Pts. 4&5",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 5:55 PM"
                     },
                     "Another Alt.2": {
                         "vis": false,
@@ -1578,7 +1588,8 @@ window.COURSE_DATA = [
                     }
                 },
                 "isRecent": true,
-                "recentDate": "15/2/2026 10:23 PM"
+                "recentDate": "15/2/2026 10:23 PM",
+                "badgeText": "Start of quiz 1!"
             },
             {
                 "title": "WEEK 2",
@@ -1653,11 +1664,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Notes": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://drive.google.com/drive/folders/13ZmRfXZxC_hPXiZtaW4X99sFT8y69fLt?usp=drive_link",
+                        "desc": "Lab 3 + Tut 2 here.",
+                        "isNew": true,
+                        "recentDate": "16/3/2026 6:02 PM",
+                        "isRecent": true
                     },
                     "Sheet": {
                         "vis": true,
@@ -1812,11 +1825,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Notes": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://drive.google.com/drive/folders/13ZmRfXZxC_hPXiZtaW4X99sFT8y69fLt?usp=drive_link",
+                        "desc": "Lab 4 here.",
+                        "isNew": true,
+                        "recentDate": "16/3/2026 6:03 PM",
+                        "isRecent": true
                     },
                     "Sheet": {
                         "vis": true,
@@ -1925,18 +1940,20 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlMHXx-QQ6XWbm8SZrEylrQ&si=Fc06Yacsg4jtoqto",
+                        "desc": "Lab 4 Linked List 1.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 7:15 PM"
                     },
                     "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1yVsSIjBcZdjFDa9-eDpBqCfQ1KKION_z/view?usp=drive_link",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 7:36 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -1981,11 +1998,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/13ZmRfXZxC_hPXiZtaW4X99sFT8y69fLt?usp=drive_link",
+                        "desc": "Lab 4 here.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 6:03 PM"
                     },
                     "Sheet Answer": {
                         "vis": false,
@@ -2066,6 +2084,154 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Lab": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlMHXx-QQ6XWbm8SZrEylrQ&si=Fc06Yacsg4jtoqto",
+                        "desc": "Lab 4 Linked List 2.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 7:15 PM"
+                    },
+                    "Lab Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1yVsSIjBcZdjFDa9-eDpBqCfQ1KKION_z/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 7:36 PM"
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/13ZmRfXZxC_hPXiZtaW4X99sFT8y69fLt?usp=drive_link",
+                        "desc": "Lab 4 here.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 6:03 PM"
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "13/3/2026 9:00 PM",
+                "badgeText": "Quiz 1 till here!"
+            }
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link",
+        "events": [
+            {
+                "title": "Quiz 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -2122,11 +2288,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/13ZmRfXZxC_hPXiZtaW4X99sFT8y69fLt?usp=drive_link",
+                        "desc": "Quiz 1 content notes, regarding Labs 1-4, Tutorials 1-2.",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Sheet Answer": {
                         "vis": false,
@@ -2164,13 +2331,11 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "isNew": true,
+                "recentDate": "16/3/2026 5:57 PM",
                 "isRecent": true,
-                "recentDate": "13/3/2026 9:00 PM"
+                "isNew": true
             }
         ],
-        "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link",
-        "events": [],
         "playlists": [
             {
                 "title": "Eng. Sawsan Emad – Spring 2026",
@@ -8053,11 +8218,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLwLqgQFjvxcZck-i9_kg3KdvWnPuqIRdU",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 7:14 PM"
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -9701,9 +9867,9 @@ window.SCHEDULE_DATA = [
                 "name": "Quiz",
                 "icon": "🧠",
                 "when": "Wednesday (18/3)",
-                "where": "",
+                "where": "Online",
                 "coverage": "Up till just before PCIe",
-                "note": ""
+                "note": "Online on SEB."
             },
             {
                 "sub": "DSA",
@@ -9711,7 +9877,7 @@ window.SCHEDULE_DATA = [
                 "icon": "🧠",
                 "when": "Monday (16/3) from 12:25 PM to 12:50 PM",
                 "where": "Hall C",
-                "coverage": "up till linked lists (Week 4)",
+                "coverage": "up till linked lists (Week 5)",
                 "note": "Quiz is written, you will write 2 codes like the codes that we write in the lab, make sure you bring extra papers and a stapler.",
                 "deadlineDate": "16/03/2026 12:25 PM",
                 "deadlineEndDate": "16/03/2026 12:50 PM"
@@ -11129,6 +11295,16 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "ML Online Lecture",
+        "body": "We have an online lecture tomorrow at 2:30 PM instead of Thursday's lecture as it's cancelled.LL",
+        "publishedAt": "2026-03-16T17:17:34",
+        "sub": "ML",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "OS secction",
