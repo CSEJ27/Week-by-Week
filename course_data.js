@@ -2303,11 +2303,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1Yinp-wmnMR9i1TsJqAPp-iDq48HD228j/view?usp=drive_link",
+                        "desc": "Our taken quiz with the answer.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 8:01 PM"
                     },
                     "Pre-Requisite": {
                         "vis": false,
