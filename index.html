@@ -228,6 +228,28 @@
         .toast-notification.toast-bottom-right.show { transform: translateY(0); }
         .toast-notification.toast-locked { background: rgba(233, 30, 140, 0.85); border: 1px solid rgba(233, 30, 140, 0.6); box-shadow: 0 0 30px rgba(233, 30, 140, 0.3), 0 8px 32px rgba(0,0,0,0.4); }
 
+        .visit-celebration-card {
+            position: fixed;
+            top: 84px;
+            right: 18px;
+            z-index: 2050;
+            width: min(360px, calc(100vw - 36px));
+            border-radius: 16px;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, rgba(233,30,140,0.24), rgba(74,144,226,0.24));
+            border: 1px solid rgba(255,255,255,0.24);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.42), 0 0 26px rgba(233,30,140,0.24);
+            backdrop-filter: blur(12px);
+            color: #fff;
+            transform: translateY(-12px) scale(0.98);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.28s ease, transform 0.28s ease;
+        }
+        .visit-celebration-card.show { opacity: 1; transform: translateY(0) scale(1); }
+        .visit-celebration-title { font-family: 'Orbitron', sans-serif; font-size: 0.88rem; letter-spacing: 1px; margin-bottom: 4px; }
+        .visit-celebration-text { color: #e6dcf9; font-size: 0.82rem; line-height: 1.45; }
+
         /* Back to Top Button */
         .scroll-btn { position: fixed; right: 20px; z-index: 999; width: 38px; height: 38px; border-radius: 50%; background: rgba(26, 13, 46, 0.85); backdrop-filter: blur(12px); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.12); cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.4); opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.2s ease; }
         .scroll-btn.visible { opacity: 1; pointer-events: auto; }
@@ -4038,6 +4060,7 @@
                 var el = document.getElementById('visit-count');
                 if (el && data && typeof data.count === 'number') {
                     el.textContent = data.count.toLocaleString();
+                    maybeShowVisitCelebration(data.count);
                 } else if (el) {
                     el.textContent = '\u2014';
                 }
@@ -4046,6 +4069,32 @@
                 var el = document.getElementById('visit-count');
                 if (el) el.textContent = '\u2014';
             });
+
+        function maybeShowVisitCelebration(count) {
+            var offset = count - 998;
+            if (offset < 0 || offset % 1000 !== 0) return;
+            var seenKey = 'visit_celebration_seen';
+            if (localStorage.getItem(seenKey) === String(count)) return;
+            localStorage.setItem(seenKey, String(count));
+            showVisitCelebrationCard(count);
+        }
+
+        function showVisitCelebrationCard(count) {
+            var old = document.getElementById('visit-celebration-card');
+            if (old) old.remove();
+            var card = document.createElement('div');
+            card.id = 'visit-celebration-card';
+            card.className = 'visit-celebration-card';
+            card.innerHTML = '<div class="visit-celebration-title">🎉 Milestone Visitor</div>' +
+                '<div class="visit-celebration-text">Congrats! You are visitor #' + count.toLocaleString() +
+                '. Thanks for supporting the site.</div>';
+            document.body.appendChild(card);
+            requestAnimationFrame(function() { card.classList.add('show'); });
+            setTimeout(function() {
+                card.classList.remove('show');
+                setTimeout(function() { if (card.parentNode) card.remove(); }, 350);
+            }, 5000);
+        }
     })();
 
     // --- Timetable ---

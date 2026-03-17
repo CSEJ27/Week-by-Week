@@ -1096,6 +1096,7 @@
 
     function renderUsefulLinksManager(options = {}) {
         const preserveScroll = options.preserveScroll !== false;
+        const skipEditorRender = options.skipEditor === true;
         const existingList = document.getElementById('ul-links-list');
         const previousScrollTop = preserveScroll && existingList ? existingList.scrollTop : 0;
         const mid = document.getElementById('middle-col');
@@ -1161,7 +1162,7 @@
 
         if (preserveScroll) list.scrollTop = previousScrollTop;
         
-        renderUsefulLinksEditor();
+        if (!skipEditorRender) renderUsefulLinksEditor();
     }
 
     function renderUsefulLinksEditor() {
@@ -1182,10 +1183,10 @@
 
         let html = `<div class="form-section" style="border-color:#b519d6;"><h3 style="color:#b519d6;">🔗 Edit Link #${ulLinkIdx+1} in ${sub.code}</h3>`;
         html += `<div style="display:grid; grid-template-columns: 60px 1fr; gap:10px;">`;
-        html += `<div><label>Icon</label><div style="position:relative;"><input type="text" style="text-align:center;" value="${p.icon || '🔗'}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].icon=this.value; markDirty(); renderUsefulLinksManager();" onfocus="showEmojiPicker(this)"><div class="emoji-picker-dropdown" style="display:none;"></div></div></div>`;
-        html += `<div><label>Title</label><input type="text" value="${p.title || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].title=this.value; markDirty(); renderUsefulLinksManager();"></div></div>`;
+        html += `<div><label>Icon</label><div style="position:relative;"><input type="text" style="text-align:center;" value="${p.icon || '🔗'}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].icon=this.value; markDirty(); renderUsefulLinksManager({ preserveScroll: true, skipEditor: true });" onfocus="showEmojiPicker(this)"><div class="emoji-picker-dropdown" style="display:none;"></div></div></div>`;
+        html += `<div><label>Title</label><input type="text" value="${p.title || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].title=this.value; markDirty(); renderUsefulLinksManager({ preserveScroll: true, skipEditor: true });"></div></div>`;
         html += `<label>Link (URL)</label><input type="text" placeholder="https://..." value="${p.link || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].link=this.value; markDirty();">`;
-        html += `<label>Group <span style="font-size:0.75rem; color:#888; font-weight:normal;">(playlists with the same group name appear together)</span></label><input type="text" placeholder="e.g. Dr. Manal Morad" value="${p.group || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].group=this.value; markDirty(); renderUsefulLinksManager();">`;
+        html += `<label>Group <span style="font-size:0.75rem; color:#888; font-weight:normal;">(playlists with the same group name appear together)</span></label><input type="text" placeholder="e.g. Dr. Manal Morad" value="${p.group || ''}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].group=this.value; markDirty(); renderUsefulLinksManager({ preserveScroll: true, skipEditor: true });">`;
         html += `<label>Description / Note</label><textarea rows="2" placeholder="Notes about this link..." oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].note=this.value; markDirty();">${p.note || ''}</textarea>`;
         html += `<div style="background:#150a25; padding:10px; border-radius:8px; margin-top:10px;"><div style="display:flex; justify-content:space-between; align-items:center;"><label style="font-weight:bold; color:#b519d6;">Badges:</label><button class="btn btn-add" style="font-size:0.75rem; padding:3px 10px;" onclick="addULBadge()">+ Badge</button></div><div id="ul-badges-list" style="margin-top:8px;"></div></div>`;
         html += `</div>`;
@@ -1203,7 +1204,7 @@
         p.badges.forEach((b, i) => {
             const row = document.createElement('div');
             row.style.cssText = 'display:grid; grid-template-columns:1fr 50px 30px; gap:6px; margin-bottom:5px; align-items:center;';
-            row.innerHTML = `<input type="text" value="${b.text||''}" placeholder="Badge text" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].badges[${i}].text=this.value; markDirty(); renderUsefulLinksManager();"><input type="color" value="${b.color||'#e91e8c'}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].badges[${i}].color=this.value; markDirty(); renderUsefulLinksManager();" style="height:32px;cursor:pointer;"><button class="btn btn-del" style="padding:2px 6px;font-size:0.8rem;" onclick="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].badges.splice(${i},1); markDirty(); renderULBadges(); renderUsefulLinksManager();">✕</button>`;
+            row.innerHTML = `<input type="text" value="${b.text||''}" placeholder="Badge text" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].badges[${i}].text=this.value; markDirty(); renderUsefulLinksManager({ preserveScroll: true, skipEditor: true });"><input type="color" value="${b.color||'#e91e8c'}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].badges[${i}].color=this.value; markDirty(); renderUsefulLinksManager({ preserveScroll: true, skipEditor: true });" style="height:32px;cursor:pointer;"><button class="btn btn-del" style="padding:2px 6px;font-size:0.8rem;" onclick="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].badges.splice(${i},1); markDirty(); renderULBadges(); renderUsefulLinksManager();">✕</button>`;
             container.appendChild(row);
         });
         if (p.badges.length === 0) {
@@ -1712,7 +1713,9 @@
         '🔗','🌐','💻','📱','🎬','🎧','🎵','📹','📷','🎨',
         '🧠','💡','⭐','🔥','🚀','🎯','🛠️','⚙️','🔍','📧',
         '📁','📅','📊','📈','✅','❌','⚠️','ℹ️','🏆','🎓',
-        '💬','💭','📢','📰','🧪','🤖','💾','💿'
+        '💬','💭','📢','📰','🧪','🤖','💾','💿',
+        '⏳','⌨️','▶️','☝️','✔️','❓','🌟','🎙️','👥','📂',
+        '📄','📋','📜','📤','📬','📸','📽️','🔁','🔧','🔬','🗓️'
     ];
 
     function showEmojiPicker(inputEl) {

@@ -2356,15 +2356,20 @@ window.COURSE_DATA = [
                 "icon": "💻",
                 "note": "",
                 "badgeText": "",
-                "badgeColor": "#e91e8c"
+                "badgeColor": "#e91e8c",
+                "badges": []
             },
             {
                 "title": "Michael Sambol – Quick Short Videos",
                 "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzqBGRR0bvxqWkg4PoKrFIsV&si=06twmUSy0rFAh7C1",
                 "icon": "🌟",
                 "note": "Short and visual explanations for each data structure.",
-                "badgeText": "Recommended",
-                "badgeColor": "#ff9500"
+                "badges": [
+                    {
+                        "text": "Recommended",
+                        "color": "#ff9500"
+                    }
+                ]
             },
             {
                 "title": "Dr. Ashraf Abdelraouf – Credit Lectures (Google Drive)",
@@ -2372,8 +2377,12 @@ window.COURSE_DATA = [
                 "icon": "📘",
                 "note": "",
                 "group": "Dr. Ashraf Abdelraouf",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Ashraf Abdelraouf – Summer 2025",
@@ -2381,8 +2390,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Ashraf Abdelraouf",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Ashraf Abdelraouf – Spring 2025",
@@ -2390,8 +2403,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Ashraf Abdelraouf",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Ashraf Abdelraouf – Fall 2024",
@@ -2399,8 +2416,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Ashraf Abdelraouf",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Islam Ahmed – Fall 2025",
@@ -2408,8 +2429,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Islam Ahmed",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Islam Ahmed – Fall 2023",
@@ -2417,8 +2442,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Islam Ahmed",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Islam Ahmed – Fall 2022",
@@ -2426,8 +2455,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Islam Ahmed",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Islam Ahmed – Fall 2021",
@@ -2435,8 +2468,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Islam Ahmed",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Dr. Islam Ahmed – Spring 2021",
@@ -2444,8 +2481,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "Dr. Islam Ahmed",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
             },
             {
                 "title": "Eng. Fady Faragallah – Fall 2023 (Tut. & Labs)",
@@ -2453,8 +2494,12 @@ window.COURSE_DATA = [
                 "icon": "👥",
                 "note": "",
                 "group": "Eng. Fady Faragallah",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Eng. Fady Faragallah – Fall 2022 (Tut. & Labs)",
@@ -2462,8 +2507,12 @@ window.COURSE_DATA = [
                 "icon": "👥",
                 "note": "",
                 "group": "Eng. Fady Faragallah",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Eng. Fady Faragallah – Fall 2021 (Tut. & Labs)",
@@ -2471,16 +2520,24 @@ window.COURSE_DATA = [
                 "icon": "👥",
                 "note": "",
                 "group": "Eng. Fady Faragallah",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Eng. Amr Mohamed – Spring 2021",
                 "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa8yHjRC1XgU2EhSLHB41A1E&si=4bLGjvMxl7Kwh3yT",
                 "icon": "👥",
                 "note": "",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Qt – C++ GUI",
@@ -2488,8 +2545,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "Qt / GUI",
-                "badgeText": "Qt / GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "Qt – Project Based",
@@ -2497,8 +2558,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "Qt / GUI",
-                "badgeText": "Qt / GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "Qt + QML",
@@ -2506,8 +2571,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "Qt / GUI",
-                "badgeText": "Qt / GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "QML",
@@ -2515,62 +2584,25 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "Qt / GUI",
-                "badgeText": "Qt / GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "Qt / GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
-                "title": "Abdul Bari – Data Structures (Udemy)",
-                "link": "https://www.udemy.com/course/datastructurescncpp",
-                "icon": "🎓",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Abdul Bari – Algorithms",
-                "link": "https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O",
-                "icon": "🎓",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Jenny – Data Structures",
-                "link": "https://www.youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU",
+                "title": "Mahmoud Samy - Hard Code",
+                "link": "https://youtube.com/playlist?list=PLwCMLs3sjOY4UQq4vXgGPwGLVX1Y5faaS&si=u-qYQ4US9Qbjkl4l",
                 "icon": "▶️",
                 "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Neso Academy – Data Structures",
-                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y&si=5pKb_HVLUM1yrgAQ",
-                "icon": "▶️",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Neso Academy – Algorithms",
-                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRhoF3cPp0mgOZPuXeu84nAd&si=vGpQTFT0E2waEUlX",
-                "icon": "▶️",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Dr. Mostafa Saad – Data Structures",
-                "link": "https://youtube.com/playlist?list=PLPt2dINI2MIZX2EtY81WI-lDkvhKziLKM&si=rlngHu-lbsWZNhz_",
-                "icon": "🎓",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ],
+                "group": "External"
             },
             {
                 "title": "Mohamed El Desouki – Data Structures",
@@ -2578,35 +2610,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Adel Nasim – Data Structures",
-                "link": "https://www.youtube.com/playlist?list=PLCInYL3l2AajqOUW_2SwjWeMwf4vL4RSp",
-                "icon": "▶️",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Eyad Alsherif – Data Structures",
-                "link": "https://www.youtube.com/playlist?app=desktop&list=PLITnyKsguk5kQlezLby2KJn4yO2odVGgH",
-                "icon": "▶️",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Dr. Mohammed El-said – Data Structures",
-                "link": "https://youtube.com/playlist?list=PLfay0LLBd0wiNeOR_SGoYfC3w-NxFwd0D&si=mKGRlCFGgNhnzk-5",
-                "icon": "🎓",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "Ghassan Shobaki – Algorithms",
@@ -2614,8 +2623,129 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Adel Nasim – Data Structures",
+                "link": "https://www.youtube.com/playlist?list=PLCInYL3l2AajqOUW_2SwjWeMwf4vL4RSp",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Abdul Bari – Data Structures (Udemy)",
+                "link": "https://www.udemy.com/course/datastructurescncpp",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Abdul Bari – Algorithms",
+                "link": "https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Jenny – Data Structures",
+                "link": "https://www.youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Neso Academy – Data Structures",
+                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y&si=5pKb_HVLUM1yrgAQ",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Neso Academy – Algorithms",
+                "link": "https://youtube.com/playlist?list=PLBlnK6fEyqRhoF3cPp0mgOZPuXeu84nAd&si=vGpQTFT0E2waEUlX",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Mostafa Saad – Data Structures",
+                "link": "https://youtube.com/playlist?list=PLPt2dINI2MIZX2EtY81WI-lDkvhKziLKM&si=rlngHu-lbsWZNhz_",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Eyad Alsherif – Data Structures",
+                "link": "https://www.youtube.com/playlist?app=desktop&list=PLITnyKsguk5kQlezLby2KJn4yO2odVGgH",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Mohammed El-said – Data Structures",
+                "link": "https://youtube.com/playlist?list=PLfay0LLBd0wiNeOR_SGoYfC3w-NxFwd0D&si=mKGRlCFGgNhnzk-5",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "freeCodeCamp – Data Structures (10 hrs)",
@@ -2623,8 +2753,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "Full course in one video, approx 10 hours.",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "CodeWithHarry – Data Structures",
@@ -2632,8 +2766,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "mycodeschool – Data Structures",
@@ -2641,8 +2779,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "mycodeschool",
-                "badgeText": "mycodeschool",
-                "badgeColor": "#ff3b30"
+                "badges": [
+                    {
+                        "text": "mycodeschool",
+                        "color": "#ff3b30"
+                    }
+                ]
             },
             {
                 "title": "mycodeschool – Sorting Algorithms",
@@ -2650,8 +2792,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "mycodeschool",
-                "badgeText": "mycodeschool",
-                "badgeColor": "#ff3b30"
+                "badges": [
+                    {
+                        "text": "mycodeschool",
+                        "color": "#ff3b30"
+                    }
+                ]
             },
             {
                 "title": "mycodeschool – Binary Search",
@@ -2659,8 +2805,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "mycodeschool",
-                "badgeText": "mycodeschool",
-                "badgeColor": "#ff3b30"
+                "badges": [
+                    {
+                        "text": "mycodeschool",
+                        "color": "#ff3b30"
+                    }
+                ]
             },
             {
                 "title": "mycodeschool – Recursion",
@@ -2668,8 +2818,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "mycodeschool",
-                "badgeText": "mycodeschool",
-                "badgeColor": "#ff3b30"
+                "badges": [
+                    {
+                        "text": "mycodeschool",
+                        "color": "#ff3b30"
+                    }
+                ]
             },
             {
                 "title": "mycodeschool – Time Complexity Analysis",
@@ -2677,8 +2831,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "mycodeschool",
-                "badgeText": "mycodeschool",
-                "badgeColor": "#ff3b30"
+                "badges": [
+                    {
+                        "text": "mycodeschool",
+                        "color": "#ff3b30"
+                    }
+                ]
             },
             {
                 "title": "mycodeschool – Pointers in C/C++",
@@ -2686,8 +2844,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "mycodeschool",
-                "badgeText": "mycodeschool",
-                "badgeColor": "#ff3b30"
+                "badges": [
+                    {
+                        "text": "mycodeschool",
+                        "color": "#ff3b30"
+                    }
+                ]
             },
             {
                 "title": "Page Rank – Playlist",
@@ -2695,8 +2857,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "Page Rank",
-                "badgeText": "Page Rank",
-                "badgeColor": "#ff9500"
+                "badges": [
+                    {
+                        "text": "Page Rank",
+                        "color": "#ff9500"
+                    }
+                ]
             },
             {
                 "title": "Page Rank – Video 1",
@@ -2704,8 +2870,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "Page Rank",
-                "badgeText": "Page Rank",
-                "badgeColor": "#ff9500"
+                "badges": [
+                    {
+                        "text": "Page Rank",
+                        "color": "#ff9500"
+                    }
+                ]
             },
             {
                 "title": "Page Rank – Video 2",
@@ -2713,8 +2883,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "Page Rank",
-                "badgeText": "Page Rank",
-                "badgeColor": "#ff9500"
+                "badges": [
+                    {
+                        "text": "Page Rank",
+                        "color": "#ff9500"
+                    }
+                ]
             },
             {
                 "title": "Betweenness Centrality",
@@ -2722,16 +2896,24 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "Page Rank",
-                "badgeText": "Page Rank",
-                "badgeColor": "#ff9500"
+                "badges": [
+                    {
+                        "text": "Page Rank",
+                        "color": "#ff9500"
+                    }
+                ]
             },
             {
                 "title": "C++ Basics & OOP – Mohamed El Desouki",
                 "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6IUD9Gt5rZlQfbZyAWXd-oD",
                 "icon": "☝️",
                 "note": "",
-                "badgeText": "Prerequisites",
-                "badgeColor": "#8e8e93"
+                "badges": [
+                    {
+                        "text": "Prerequisites",
+                        "color": "#8e8e93"
+                    }
+                ]
             },
             {
                 "title": "Ahmed Bakr – Advanced Programming (JavaFX)",
@@ -2739,8 +2921,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "GUI",
-                "badgeText": "GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "thenewboston – JavaFX",
@@ -2748,8 +2934,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "GUI",
-                "badgeText": "GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "Scene Builder (JavaFX)",
@@ -2757,8 +2947,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "GUI",
-                "badgeText": "GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "Tkinter – Python GUI",
@@ -2766,8 +2960,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "GUI",
-                "badgeText": "GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "Kivy – Python GUI",
@@ -2775,8 +2973,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "GUI",
-                "badgeText": "GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "PyQt – Python GUI",
@@ -2784,8 +2986,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "GUI",
-                "badgeText": "GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "GUI",
+                        "color": "#af52de"
+                    }
+                ]
             },
             {
                 "title": "Electron JS – Desktop Apps",
@@ -2793,8 +2999,12 @@ window.COURSE_DATA = [
                 "icon": "🔧",
                 "note": "",
                 "group": "GUI",
-                "badgeText": "GUI",
-                "badgeColor": "#af52de"
+                "badges": [
+                    {
+                        "text": "GUI",
+                        "color": "#af52de"
+                    }
+                ]
             }
         ],
         "color": "#00e5ff",
@@ -4741,7 +4951,150 @@ window.COURSE_DATA = [
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1wkMAWai1tW55j42gsDKRh0-PPUCOKdFk?usp=drive_link",
-        "events": [],
+        "events": [
+            {
+                "title": "Quiz 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1zAiSs22UyUcWoQO0D9fnnJJ83_VC72E8/view?usp=drive_link",
+                        "desc": "Quiz 1 content notes, everything the doctor had said is there.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1XaqtAK__J4ooAVJgVlzNmB3n9Ph5axQX?usp=drive_link",
+                        "desc": "Quiz 1 questions answers.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "17/3/2026 7:31 PM"
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "17/3/2026 7:26 PM",
+                "isRecent": true,
+                "isNew": true
+            }
+        ],
         "playlists": [
             {
                 "title": "Spring 2026",
@@ -10152,6 +10505,27 @@ window.SCHEDULE_DATA = [
                 "deadlineDate": "29/03/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
+            },
+            {
+                "sub": "DB",
+                "name": "Project Phase 1",
+                "icon": "✔️",
+                "when": "Before Midterm",
+                "where": "",
+                "coverage": "Week 4",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1lF60L4hvUyschDcYOX80rvbBM2SlAsF0/view?usp=drive_link",
+                "coverageNote": "Check the details of project here!",
+                "submitText": "LMS",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
             }
         ]
     },
@@ -10203,11 +10577,18 @@ window.SCHEDULE_DATA = [
             {
                 "sub": "OS",
                 "name": "Mini Project",
-                "icon": "🚀",
-                "when": "",
+                "icon": "✔️",
+                "when": "Friday (17/4) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "",
+                "submitText": "LMS",
+                "coverageLink": "https://drive.google.com/file/d/1GKSaFSBSbTBH1zUzSCisJTdho5MVUynQ/view?usp=drive_link",
+                "coverageNote": "Check the details of project here!",
+                "deadlineDate": "17/04/2026 11:59 PM",
+                "deadlineEndDate": "",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=196241",
+                "submitNote": "Upload it here!"
             },
             {
                 "sub": "CN",
@@ -11462,7 +11843,7 @@ window.NEWS_DATA = [
     {
         "emoji": "📢",
         "title": "ML Online Lecture",
-        "body": "We have an online lecture tomorrow at 2:30 PM instead of Thursday's lecture as it's cancelled.LL",
+        "body": "We have an online lecture tomorrow at 2:30 PM instead of Thursday's lecture as it's cancelled.",
         "publishedAt": "2026-03-16T17:17:34",
         "sub": "ML",
         "hasDeadline": false,
