@@ -4515,9 +4515,11 @@ window.COURSE_DATA = [
                     "Alternative": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCRyq3r_Xe2WHOL3q3UyD2s&si=jEjz0KkkhsrRP1l9",
-                        "desc": "First 30 minutes from the second video.",
-                        "isNew": false
+                        "link": "https://youtu.be/h9p2tGg0FkQ",
+                        "desc": "An alternative prepared by Lobna Ahmed.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "17/3/2026 11:20 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -4548,11 +4550,11 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Guide (Explanation)": {
-                        "vis": true,
+                        "vis": false,
                         "lock": false,
                         "link": "https://engasuedu-my.sharepoint.com/:v:/g/personal/2300360_eng_asu_edu_eg/IQCcCb17T3nkSoBfvqoIVfquAU625Ezi94TaHJtEIe9ifjE?e=MGqBwj",
                         "desc": "Lec 3 full explanation.",
-                        "isNew": true,
+                        "isNew": false,
                         "recentDate": "14/3/2026 6:57 PM",
                         "isRecent": true
                     },
@@ -4660,12 +4662,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGDH0IynW3pjmnQ0mw403cyU&si=UbN2e_mJLLQjqYaU",
+                        "desc": "An alternative to the lecture content, includes a video on the Synchronous & Asynchronous part (prepared by Lobna Ahmed).",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "17/3/2026 11:25 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -4700,11 +4703,11 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Guide (Explanation)": {
-                        "vis": true,
+                        "vis": false,
                         "lock": false,
                         "link": "https://engasuedu-my.sharepoint.com/:v:/g/personal/2300360_eng_asu_edu_eg/IQB67Fzr0k-SRpBeRxSJPkA2AX9x3mZ_fyDhmuCX4xXWUiM?e=pleUG7&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
                         "desc": "Synchronous & asynchronous part.\nCombine the Guide explanation with the section as an alternative.",
-                        "isNew": true,
+                        "isNew": false,
                         "isRecent": true,
                         "recentDate": "14/3/2026 1:43 AM"
                     },
