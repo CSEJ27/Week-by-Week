@@ -5064,9 +5064,9 @@ window.COURSE_DATA = [
                         "vis": true,
                         "link": "https://drive.google.com/drive/folders/1XaqtAK__J4ooAVJgVlzNmB3n9Ph5axQX?usp=drive_link",
                         "desc": "Quiz 1 questions answers.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "17/3/2026 7:31 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Pre-Requisite": {
                         "vis": false,

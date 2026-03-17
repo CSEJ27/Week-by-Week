@@ -243,12 +243,35 @@
             color: #fff;
             transform: translateY(-12px) scale(0.98);
             opacity: 0;
-            pointer-events: none;
+            pointer-events: auto;
             transition: opacity 0.28s ease, transform 0.28s ease;
         }
         .visit-celebration-card.show { opacity: 1; transform: translateY(0) scale(1); }
+        .visit-celebration-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
         .visit-celebration-title { font-family: 'Orbitron', sans-serif; font-size: 0.88rem; letter-spacing: 1px; margin-bottom: 4px; }
         .visit-celebration-text { color: #e6dcf9; font-size: 0.82rem; line-height: 1.45; }
+        .visit-celebration-close {
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.2);
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .visit-celebration-close:hover { background: rgba(255,255,255,0.15); }
+        @media (max-width: 768px) {
+            .visit-celebration-card {
+                top: auto;
+                right: 12px;
+                left: 12px;
+                width: auto;
+                bottom: 132px;
+            }
+        }
 
         /* Back to Top Button */
         .scroll-btn { position: fixed; right: 20px; z-index: 999; width: 38px; height: 38px; border-radius: 50%; background: rgba(26, 13, 46, 0.85); backdrop-filter: blur(12px); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.12); cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.4); opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.2s ease; }
@@ -4071,8 +4094,7 @@
             });
 
         function maybeShowVisitCelebration(count) {
-            var offset = count - 998;
-            if (offset < 0 || offset % 1000 !== 0) return;
+            if (count <= 0 || count % 1000 !== 0) return;
             var seenKey = 'visit_celebration_seen';
             if (localStorage.getItem(seenKey) === String(count)) return;
             localStorage.setItem(seenKey, String(count));
@@ -4085,15 +4107,24 @@
             var card = document.createElement('div');
             card.id = 'visit-celebration-card';
             card.className = 'visit-celebration-card';
-            card.innerHTML = '<div class="visit-celebration-title">🎉 Milestone Visitor</div>' +
+            card.innerHTML = '<div class="visit-celebration-head"><div class="visit-celebration-title">🎉 Milestone Visitor</div>' +
+                '<button class="visit-celebration-close" type="button" aria-label="Close celebration">✕</button></div>' +
                 '<div class="visit-celebration-text">Congrats! You are visitor #' + count.toLocaleString() +
                 '. Thanks for supporting the site.</div>';
             document.body.appendChild(card);
             requestAnimationFrame(function() { card.classList.add('show'); });
-            setTimeout(function() {
+            var closeBtn = card.querySelector('.visit-celebration-close');
+            var hideTimer = null;
+            function closeCard() {
+                if (hideTimer) {
+                    clearTimeout(hideTimer);
+                    hideTimer = null;
+                }
                 card.classList.remove('show');
                 setTimeout(function() { if (card.parentNode) card.remove(); }, 350);
-            }, 5000);
+            }
+            if (closeBtn) closeBtn.addEventListener('click', closeCard);
+            hideTimer = setTimeout(closeCard, 60000);
         }
     })();
 
