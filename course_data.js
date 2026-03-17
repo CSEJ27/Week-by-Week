@@ -9687,6 +9687,144 @@ window.COURSE_DATA = [
                 },
                 "isRecent": true,
                 "recentDate": "26/2/2026 10:28 AM"
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://lms.eng.asu.edu.eg/pluginfile.php/679126/mod_resource/content/0/Lecture%204_%20Inverse%20Kinematics.pdf",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                }
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1_-XsOXQOgNauxPsRg0WPOtQDXBWsDq4X?usp=drive_link",
@@ -9991,6 +10129,27 @@ window.SCHEDULE_DATA = [
                 "submitLink": "",
                 "submitNote": "",
                 "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "RB",
+                "name": "Assignment",
+                "icon": "📝",
+                "when": "Su (29/3) ",
+                "where": "online",
+                "coverage": "Weeks 1 to 5",
+                "note": "NO EXCUSES ARE ACCEPTED !!",
+                "whenLink": "",
+                "whereLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=196159",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "29/03/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
             }
@@ -10351,9 +10510,9 @@ window.MIDTERM_DATA = [
         "sub": "RB",
         "examCode": "CSE373s",
         "time": "4:30 PM",
-        "note": "",
-        "coverage": "",
-        "where": ""
+        "note": "All of thee content mentioned in the lecture is in the midterm including Velocity Kinematics",
+        "coverage": "Week 1 to 6",
+        "where": "Hall C"
     },
     {
         "dateLabel": "Tuesday · 31 March",
