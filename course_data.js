@@ -4276,7 +4276,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCRyq3r_Xe2WHOL3q3UyD2s&si=jEjz0KkkhsrRP1l9",
-                        "desc": "First 30 minutes from the second video.",
+                        "desc": "Either watch the first video from START to 32.\nFirst 30 minutes from the second video.",
                         "isNew": false
                     },
                     "Another Alt.": {
@@ -10854,8 +10854,8 @@ window.MIDTERM_DATA = [
         "examCode": "CSE333s",
         "time": "2:30 PM",
         "note": "",
-        "coverage": "",
-        "where": ""
+        "coverage": "Until Week 7.",
+        "where": "Hall C (150), Hall D (36)"
     },
     {
         "dateLabel": "Saturday · 28 March",
@@ -10864,7 +10864,7 @@ window.MIDTERM_DATA = [
         "time": "4:30 PM",
         "note": "",
         "coverage": "Until Week 5.",
-        "where": ""
+        "where": "Hall C (150), Hall D (36)"
     },
     {
         "dateLabel": "Sunday · 29 March",
@@ -10873,7 +10873,7 @@ window.MIDTERM_DATA = [
         "time": "12:30 PM",
         "note": "",
         "coverage": "",
-        "where": ""
+        "where": "931"
     },
     {
         "dateLabel": "Monday · 30 March",
@@ -10882,7 +10882,7 @@ window.MIDTERM_DATA = [
         "time": "2:30 PM",
         "note": "",
         "coverage": "",
-        "where": ""
+        "where": " Hall A (150), Hall B (23)"
     },
     {
         "dateLabel": "Monday · 30 March",
@@ -10891,7 +10891,7 @@ window.MIDTERM_DATA = [
         "time": "4:30 PM",
         "note": "",
         "coverage": "",
-        "where": ""
+        "where": " Hall 1"
     },
     {
         "dateLabel": "Monday · 30 March",
@@ -10909,7 +10909,7 @@ window.MIDTERM_DATA = [
         "time": "4:30 PM",
         "note": "",
         "coverage": "Until Week 6.",
-        "where": ""
+        "where": " Hall B (150), Hall C (24)"
     },
     {
         "dateLabel": "Wednesday · 1 April",
@@ -10918,7 +10918,7 @@ window.MIDTERM_DATA = [
         "time": "2:30 PM",
         "note": "",
         "coverage": "Until Week 7.",
-        "where": ""
+        "where": " Hall B (150), Hall C (35)"
     },
     {
         "dateLabel": "Thursday · 2 April",
@@ -10927,7 +10927,7 @@ window.MIDTERM_DATA = [
         "time": "12:30 PM",
         "note": "",
         "coverage": "Until Ch. 5.",
-        "where": ""
+        "where": " Hall A (111), Hall B (75)"
     },
     {
         "dateLabel": "Friday · 3 April",
@@ -10935,8 +10935,8 @@ window.MIDTERM_DATA = [
         "examCode": "CSE334s",
         "time": "4:30 PM",
         "note": "",
-        "coverage": "",
-        "where": ""
+        "coverage": "Until Week 6.",
+        "where": "504 (151), Hall A (35)"
     }
 ];
 

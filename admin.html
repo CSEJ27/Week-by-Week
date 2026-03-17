@@ -893,8 +893,12 @@
                         <label>📍 Where?</label>
                         <input type="text" placeholder="e.g. Hall 3" value="${m.where || ''}" oninput="window.MIDTERM_DATA[${i}].where = this.value">
                         <input type="text" placeholder="URL (Optional)" value="${m.whereLink || ''}" style="font-size:0.8rem; margin-top:-5px; background:rgba(0,0,0,0.5);" oninput="window.MIDTERM_DATA[${i}].whereLink = this.value">
+                        <input type="text" placeholder="Link note (e.g. Check your place here)" value="${m.whereNote || ''}" style="font-size:0.75rem; margin-bottom:4px; background:rgba(74,144,226,0.1); border-color:rgba(74,144,226,0.3); color:#4a90e2;" oninput="window.MIDTERM_DATA[${i}].whereNote = this.value">
                     </div>
-                    <div><label>📚 Coverage?</label><input type="text" placeholder="e.g. Weeks 1-4" value="${m.coverage || ''}" oninput="window.MIDTERM_DATA[${i}].coverage = this.value"></div>
+                    <div>
+                        <label>📚 Coverage?</label>
+                        <input type="text" placeholder="e.g. Weeks 1-4" value="${m.coverage || ''}" oninput="window.MIDTERM_DATA[${i}].coverage = this.value">
+                    </div>
                 </div>
                 <label>📝 Extra Notes:</label>
                 <textarea rows="2" placeholder="e.g. Bring Student ID" oninput="window.MIDTERM_DATA[${i}].note = this.value">${m.note || ''}</textarea>
