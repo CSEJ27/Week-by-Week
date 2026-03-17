@@ -4344,7 +4344,9 @@ window.COURSE_DATA = [
                     }
                 },
                 "isRecent": true,
-                "recentDate": "13/2/2026 5:48 AM"
+                "recentDate": "13/2/2026 5:48 AM",
+                "badgeText": "Quiz 1 start here!",
+                "showBadge": true
             },
             {
                 "title": "WEEK 2",
@@ -4693,7 +4695,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/drive/u/1/folders/1iewrSuGrp7FDn7Lq6PjNfgxPDJJ8Tq4E",
-                        "desc": "Slides [29: 35] in Buses.",
+                        "desc": "Slides [29: 45] in Buses.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -4806,7 +4808,9 @@ window.COURSE_DATA = [
                 },
                 "isRecent": true,
                 "isNew": true,
-                "recentDate": "8/3/2026 7:49 PM"
+                "recentDate": "8/3/2026 7:49 PM",
+                "showBadge": true,
+                "badgeText": "Quiz 1 till here!"
             },
             {
                 "title": "WEEK 5",
