@@ -4094,10 +4094,12 @@
             });
 
         function maybeShowVisitCelebration(count) {
-            if (count <= 0 || count % 1000 !== 0) return;
-            var seenKey = 'visit_celebration_seen';
-            if (localStorage.getItem(seenKey) === String(count)) return;
-            localStorage.setItem(seenKey, String(count));
+            // Only show for the first person who hits 1000, never again for any user or milestone
+            var milestone = 1000;
+            var seenKey = 'visit_celebration_seen_once';
+            if (count !== milestone) return;
+            if (localStorage.getItem(seenKey) === 'shown') return;
+            localStorage.setItem(seenKey, 'shown');
             showVisitCelebrationCard(count);
         }
 
