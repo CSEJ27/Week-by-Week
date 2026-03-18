@@ -10434,7 +10434,7 @@ window.SCHEDULE_DATA = [
         "tasks": [
             {
                 "sub": "DB",
-                "name": "Quiz",
+                "name": "Quiz 1",
                 "icon": "🧠",
                 "when": "Monday (9/3) 8:45 to 9:15 AM",
                 "where": "Hall A",
@@ -10445,7 +10445,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "OS",
-                "name": "Quiz",
+                "name": "Quiz 1",
                 "icon": "🧠",
                 "when": "Wednesday (11/3) at 10:40 AM",
                 "where": "Online",
@@ -10508,16 +10508,19 @@ window.SCHEDULE_DATA = [
         "tasks": [
             {
                 "sub": "CA",
-                "name": "Quiz",
+                "name": "Quiz 1",
                 "icon": "🧠",
-                "when": "Wednesday (18/3)",
+                "when": "Wednesday (18/3) at 11 PM",
                 "where": "Online",
                 "coverage": "Up till just before PCIe",
-                "note": "Online on SEB."
+                "note": "Online on SEB.",
+                "deadlineDate": "18/03/2026 11:00 PM",
+                "deadlineEndDate": "",
+                "isCompleted": true
             },
             {
                 "sub": "DSA",
-                "name": "Quiz",
+                "name": "Quiz 1 (practical)",
                 "icon": "🧠",
                 "when": "Monday (16/3) from 12:25 PM to 12:50 PM",
                 "where": "Hall C",
@@ -10528,7 +10531,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "ML",
-                "name": "Quiz",
+                "name": "Quiz 1",
                 "icon": "🧠",
                 "when": "Sunday (15/3) at 12:25 PM",
                 "where": "",
@@ -10594,12 +10597,15 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "CN",
-                "name": "Quiz",
+                "name": "Quiz 1",
                 "icon": "🧠",
                 "when": "Wednesday (25/3) at 8:00 PM to 8:30 PM",
-                "where": "",
-                "coverage": "",
-                "note": "Quiz will be 30 minutes long."
+                "where": "Online",
+                "coverage": "Chapters 1,2 and 3.",
+                "note": "Quiz will be 30 minutes long.\nQuiz will be on Google Classroom so make sure you join the classroom.",
+                "submitText": "",
+                "deadlineDate": "25/03/2026 8:00 PM",
+                "deadlineEndDate": "25/03/2026 8:30 PM"
             },
             {
                 "sub": "CN",
@@ -11994,9 +12000,9 @@ window.UPDATES_DATA = [
 window.NEWS_DATA = [
     {
         "emoji": "📢",
-        "title": "ML Online Lecture",
-        "body": "We have an online lecture tomorrow at 2:30 PM instead of Thursday's lecture as it's cancelled.",
-        "publishedAt": "2026-03-16T17:17:34",
+        "title": "ML Section",
+        "body": "There will be an online section on Thursday (19/3) at 11 AM for sections 1&2 but anyone can attend.",
+        "publishedAt": "2026-03-18T21:38:09",
         "sub": "ML",
         "hasDeadline": false,
         "deadlineDate": "",
@@ -12004,10 +12010,20 @@ window.NEWS_DATA = [
     },
     {
         "emoji": "📢",
-        "title": "OS secction",
-        "body": "There will be an online section on Thursday (19/3)",
-        "publishedAt": "2026-03-14T17:25:32",
+        "title": "OS Section",
+        "body": "There will be an online section on Thursday (19/3) at 1 PM",
+        "publishedAt": "2026-03-18T21:37:31",
         "sub": "OS",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "ML Online Lecture",
+        "body": "We have an online lecture tomorrow at 2:30 PM instead of Thursday's lecture as it's cancelled.",
+        "publishedAt": "2026-03-16T17:17:34",
+        "sub": "ML",
         "hasDeadline": false,
         "deadlineDate": "",
         "deadlineTime": ""
