@@ -10568,33 +10568,17 @@ window.SCHEDULE_DATA = [
                 "coverage": "",
                 "note": "",
                 "deadlineDate": "20/03/2026 11:59 PM",
-                "coverageLink": "https://drive.google.com/file/d/1IuXtUh2Ft3ZymGa-kR3TKuBsZpk42gM9/view?usp=drive_link",
+                "coverageLink": "https://drive.google.com/file/d/1JbNTpnWmOfN843wuf7ABfy1Cza16UQ0u/view?usp=drive_link",
                 "coverageNote": "Check the assignment details here!",
-                "submitText": "LMS"
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=196081",
+                "submitNote": "Submit here!"
             }
         ]
     },
     {
         "week": 7,
         "tasks": [
-            {
-                "sub": "CA",
-                "name": "Assignment",
-                "icon": "📝",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
-                "sub": "DB",
-                "name": "Mini Project",
-                "icon": "🚀",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
             {
                 "sub": "CN",
                 "name": "Quiz 1",
@@ -10645,10 +10629,10 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "RB",
-                "name": "Assignment",
+                "name": "Assignment 1",
                 "icon": "📝",
-                "when": "Su (29/3) ",
-                "where": "online",
+                "when": "Sunday (29/3) ",
+                "where": "Online",
                 "coverage": "Weeks 1 to 5",
                 "note": "NO EXCUSES ARE ACCEPTED !!",
                 "whenLink": "",
@@ -10726,6 +10710,27 @@ window.SCHEDULE_DATA = [
                 "submitText": "LMS",
                 "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=194500",
                 "submitNote": "Submit here now!"
+            },
+            {
+                "sub": "ML",
+                "name": "Peer Review Discussion ",
+                "icon": "💬",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
             }
         ]
     },
@@ -11998,6 +12003,26 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "AI Online Lecture",
+        "body": "There will be an online lecture on Tuesday (24/3) at 6:00 PM.",
+        "publishedAt": "2026-03-20T17:16:04",
+        "sub": "AI",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "DSA Online Lecture",
+        "body": "There will be an online lecture on Tuesday (24/3) at 12:00 PM, this lecture will be included in the midterm, but the any questions related to it will be straight forward and easy.",
+        "publishedAt": "2026-03-20T17:14:09",
+        "sub": "DSA",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "ML Section",
