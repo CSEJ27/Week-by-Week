@@ -4720,7 +4720,7 @@ window.COURSE_DATA = [
                     "Section Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1FA9yB8Dd0oZrMyvQlzTqUGc14c6Sj3Gw/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1Iz3s2k4X7Olyk2lU_MgDQfd3U6OrJwUo/view?usp=drive_link",
                         "desc": "From the 8255A to the end.",
                         "isNew": false
                     },
