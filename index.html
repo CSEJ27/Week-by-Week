@@ -37,7 +37,7 @@
             animation: auroraDrift 13s ease-in-out infinite alternate;
         }
         .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
-        h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; text-align: center; margin-bottom: 10px; background: linear-gradient(to right, var(--accent-pink), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3); }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; text-align: center; margin-bottom: 10px; background: linear-gradient(to right, var(--accent-pink), var(--accent-blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3); }
         .subtitle { text-align: center; color: var(--text-sub); margin-bottom: 50px; font-size: 1.2rem; }
         .page { display: none; animation: fadeIn 0.5s ease; }
         .page.active { display: block; }
@@ -167,7 +167,7 @@
         .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(10, 0, 18, 0.92); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(233, 30, 140, 0.25); padding: 0 24px; display: flex; align-items: center; height: 60px; transition: box-shadow 0.3s; }
         .navbar.scrolled { box-shadow: 0 4px 30px rgba(233, 30, 140, 0.15); }
         
-        .nav-brand { font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 900; background: linear-gradient(to right, var(--accent-pink), var(--accent-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; cursor: pointer; white-space: nowrap; margin-right: 30px; letter-spacing: -0.5px; transform: scaleX(0.85); transform-origin: left center; flex-shrink: 0; }
+        .nav-brand { font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 900; background: linear-gradient(to right, var(--accent-pink), var(--accent-blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; cursor: pointer; white-space: nowrap; margin-right: 30px; letter-spacing: -0.5px; transform: scaleX(0.85); transform-origin: left center; flex-shrink: 0; }
         
         .nav-links { display: flex; align-items: center; gap: 4px; flex: 1; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: rgba(233,30,140,0.3) transparent; -webkit-overflow-scrolling: touch; }
         .nav-links::-webkit-scrollbar { height: 3px; }
@@ -384,7 +384,7 @@
         .hotkey-row { display: flex; align-items: center; gap: 10px; padding: 5px 0; font-size: 0.85rem; color: var(--text-sub); }
         .hotkey-key { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 6px; font-family: 'Orbitron', sans-serif; font-size: 0.7rem; color: white; min-width: 28px; text-align: center; font-weight: 700; }
         .directory-btn { background: rgba(52, 199, 89, 0.2); border: 2px solid #34c759; color: #34c759; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
-        .directory-btn:hover { background: rgba(52, 199, 89, 0.3); border-color: #34c759; color: white; box-shadow: 0 0 20px #34c759; }
+        .directory-btn:hover { background: #34c759; border-color: transparent; color: white; box-shadow: 0 0 20px #34c759; }
         .timetable-btn { background: rgba(255, 55, 95, 0.2); border: 2px solid #ff375f; color: #ff375f; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .timetable-btn:hover { background: #ff375f; color: white; box-shadow: 0 0 20px #ff375f; }
         .others-toggle-btn { background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.2); color: var(--text-sub); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; display: flex; align-items: center; gap: 8px; justify-content: center; }
@@ -462,6 +462,69 @@
         .ni-time { color: #555; font-size: 0.71rem; }
         .ni-dl { background: rgba(255,100,50,0.12); border: 1px solid rgba(255,100,50,0.35); color: #ff8a65; font-size: 0.7rem; font-weight: 600; padding: 2px 7px; border-radius: 5px; }
         .ni-sub { background: rgba(74,144,226,0.1); border: 1px solid rgba(74,144,226,0.3); color: #4a90e2; font-size: 0.7rem; padding: 2px 7px; border-radius: 5px; }
+
+        /* GPA Calculator — Purple→Pink gradient palette */
+        .nav-link-gpa.active { background: rgba(233, 30, 140, 0.15); border-color: rgba(233, 30, 140, 0.4); color: var(--accent-pink); }
+        .gpa-btn { background: rgba(233, 30, 140, 0.2); border: 2px solid var(--accent-pink); color: var(--accent-pink); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .gpa-btn:hover { background: var(--accent-pink); color: white; box-shadow: 0 0 20px var(--accent-pink); border-color: transparent; }
+        .gpa-wrap { max-width: 800px; margin: 0 auto; }
+        .gpa-mode-bar { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+        .gpa-mode-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #aaa; padding: 8px 18px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: 0.2s; }
+        .gpa-mode-pill:hover { background: rgba(255,255,255,0.1); color: white; }
+        .gpa-mode-pill.active { background: rgba(233, 30, 140, 0.15); color: var(--accent-pink); border-color: var(--accent-pink); box-shadow: 0 0 10px rgba(233, 30, 140, 0.2); }
+        .gpa-cumulative-box { background: linear-gradient(135deg, rgba(181, 25, 214, 0.1), rgba(233, 30, 140, 0.1)); border: 1px solid rgba(233, 30, 140, 0.3); border-radius: 14px; padding: 18px 20px; margin-bottom: 24px; display: none; }
+        .gpa-cumulative-box.visible { display: block; }
+        .gpa-cumulative-box label { color: #ccc; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 6px; }
+        .gpa-input { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 10px 14px; border-radius: 10px; font-size: 0.95rem; font-family: 'Work Sans', sans-serif; outline: none; transition: border 0.2s; width: 100%; }
+        .gpa-input:focus { border-color: var(--accent-pink); }
+        .gpa-input::placeholder { color: #555; }
+        .gpa-select { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 10px 8px; border-radius: 10px; font-size: 0.85rem; font-family: 'Work Sans', sans-serif; outline: none; cursor: pointer; transition: border 0.2s; -webkit-appearance: none; appearance: none; }
+        .gpa-select:focus { border-color: var(--accent-purple); }
+        .gpa-select option { background: #1a0d2e; color: white; }
+        .gpa-input-mode-bar { display: flex; gap: 6px; justify-content: center; margin-bottom: 16px; }
+        .gpa-input-mode-pill { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); color: #888; padding: 5px 14px; border-radius: 16px; cursor: pointer; font-size: 0.78rem; font-weight: 600; transition: 0.2s; }
+        .gpa-input-mode-pill:hover { color: #ccc; background: rgba(255,255,255,0.08); }
+        .gpa-input-mode-pill.active { background: rgba(233, 30, 140, 0.15); color: var(--accent-pink); border-color: var(--accent-pink); box-shadow: 0 0 10px rgba(233, 30, 140, 0.2); }
+        .gpa-subjects-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        .gpa-subjects-header h3 { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; color: var(--accent-purple); letter-spacing: 2px; text-transform: uppercase; }
+        .gpa-row { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(0,0,0,0.2); border-radius: 12px; margin-bottom: 8px; border-left: 3px solid rgba(181, 25, 214, 0.4); transition: all 0.2s; flex-wrap: wrap; }
+        .gpa-row:hover { background: rgba(233, 30, 140, 0.08); border-left-color: var(--accent-pink); box-shadow: inset 4px 0 15px rgba(233, 30, 140, 0.2); }
+        .gpa-row-name { flex: 1; min-width: 120px; font-weight: 600; color: white; font-size: 0.9rem; }
+        .gpa-row-credits { color: #888; font-size: 0.78rem; white-space: nowrap; min-width: 50px; }
+        .gpa-row-grade { min-width: 90px; }
+        .gpa-row-points { min-width: 80px; }
+        .gpa-row-result { min-width: 40px; text-align: center; font-family: 'Orbitron', sans-serif; font-size: 0.8rem; font-weight: 700; }
+        .gpa-row-remove { background: none; border: none; color: #555; cursor: pointer; font-size: 1.1rem; padding: 4px 6px; border-radius: 6px; transition: 0.2s; flex-shrink: 0; }
+        .gpa-row-remove:hover { color: #ff3b30; background: rgba(255,59,48,0.15); }
+        .gpa-add-bar { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+        .gpa-add-btn { background: rgba(181, 25, 214, 0.1); border: 1px dashed rgba(181, 25, 214, 0.4); color: var(--accent-purple); padding: 10px 18px; border-radius: 12px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: 0.2s; flex-shrink: 0; }
+        .gpa-add-btn:hover { background: rgba(181, 25, 214, 0.2); border-style: solid; border-color: var(--accent-pink); color: var(--accent-pink); box-shadow: 0 0 15px rgba(233, 30, 140, 0.3); }
+        .gpa-add-dropdown { position: relative; display: inline-block; }
+        .gpa-add-menu { display: none; position: absolute; bottom: 100%; left: 0; margin-bottom: 6px; background: rgba(16,4,30,0.97); border: 1px solid rgba(233, 30, 140, 0.4); border-radius: 12px; padding: 6px; min-width: 240px; z-index: 100; box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 15px rgba(233, 30, 140, 0.15); }
+        .gpa-add-menu.open { display: block; }
+        .gpa-add-menu-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; cursor: pointer; transition: 0.15s; color: #ccc; font-size: 0.85rem; }
+        .gpa-add-menu-item:hover { background: rgba(233, 30, 140, 0.15); color: white; }
+        .gpa-add-menu-item .gpa-add-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .gpa-add-custom { display: flex; gap: 8px; flex: 1; min-width: 200px; align-items: center; flex-wrap: wrap; }
+        .gpa-result-card { background: rgba(20, 10, 30, 0.8); border: 2px solid var(--accent-pink); border-radius: 20px; padding: 28px 24px; margin-top: 28px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 0 40px rgba(233, 30, 140, 0.2); }
+        .gpa-result-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(233, 30, 140, 0.1) 0%, rgba(181, 25, 214, 0.05) 40%, transparent 70%); pointer-events: none; }
+        .gpa-result-label { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; color: #888; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        .gpa-result-value { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; font-weight: 900; background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1; filter: drop-shadow(0 0 10px rgba(233, 30, 140, 0.5)); }
+        .gpa-result-sub { color: #888; font-size: 0.85rem; margin-top: 8px; }
+        .gpa-result-letter { display: inline-block; margin-top: 8px; padding: 4px 16px; border-radius: 20px; font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 2px; }
+        .gpa-export-bar { display: flex; gap: 8px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .gpa-export-btn { background: rgba(181, 25, 214, 0.1); border: 1px solid var(--accent-purple); color: var(--accent-purple); padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.82rem; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 6px; }
+        .gpa-export-btn:hover { background: var(--accent-purple); color: white; box-shadow: 0 0 15px var(--accent-purple); text-shadow: none; pointer-events: auto; }
+        .gpa-cum-toggle { background: rgba(233, 30, 140, 0.08); border: 2px solid rgba(233, 30, 140, 0.4); color: var(--text-sub); padding: 10px 24px; border-radius: 25px; cursor: pointer; font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; transition: all 0.3s ease; font-family: 'Work Sans', sans-serif; }
+        .gpa-cum-toggle:hover { background: rgba(233, 30, 140, 0.15); color: white; border-color: var(--accent-pink); box-shadow: 0 0 15px rgba(233, 30, 140, 0.3); }
+        .gpa-cum-toggle.active { background: rgba(233, 30, 140, 0.25); color: white; border-color: var(--accent-pink); box-shadow: 0 0 20px rgba(233, 30, 140, 0.5); text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+        .gpa-row-inputs { display: flex; gap: 6px; align-items: center; min-width: 180px; }
+        @media (max-width: 768px) {
+            .gpa-row { gap: 6px; padding: 8px 10px; }
+            .gpa-row-name { min-width: 80px; font-size: 0.82rem; }
+            .gpa-result-value { font-size: 2.5rem; }
+            .gpa-row-inputs { min-width: 140px; }
+        }
     </style>
 </head>
 <body>
@@ -516,6 +579,11 @@
             </div>
             <div class="nav-dropdown" id="dd-directory"></div>
         </div>
+        <div class="nav-item" id="nav-item-gpa">
+            <div class="nav-link nav-link-gpa" data-nav="gpa" onclick="navFromBar('gpa')">
+                <span class="nav-icon">🎓</span> GPA Calc
+            </div>
+        </div>
         <div class="nav-item" id="nav-item-updates">
             <div class="nav-link nav-link-updates" data-nav="updates" onclick="navFromBar('updates')">
                 <span class="nav-icon">🚀</span> Updates
@@ -543,6 +611,7 @@
                 <button class="useful-btn" onclick="showUsefulLinks()">🔗 Useful Links</button>
                 <button class="timetable-btn" onclick="showTimetable()">🗓️ Timetable</button>
                 <button class="directory-btn" onclick="showDirectory()">👥 Staff Contacts</button>
+                <button class="gpa-btn" onclick="showGpa()">🎓 GPA Calculator</button>
                 <button class="updates-btn" onclick="showUpdates()">🚀 Updates</button>
             </div>
         </div>
@@ -623,6 +692,49 @@
         <p class="subtitle" style="margin-bottom: 30px;">Instructors &amp; Teaching Assistants</p>
         <div id="directory-filter-bar" class="filter-bar"></div>
         <div class="grid weeks-grid" id="directory-list" style="gap:15px;"></div>
+    </div>
+
+    <div id="gpa-page" class="page">
+        <button class="back-btn" onclick="smartBack()">← Back</button>
+        <h1 style="background: linear-gradient(to right, var(--accent-pink), var(--accent-purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3);">GPA CALCULATOR</h1>
+        <p class="subtitle" style="margin-bottom: 20px;">Calculate your semester or cumulative GPA live</p>
+        <div class="gpa-wrap" id="gpa-capture-wrap">
+            <div style="text-align:center; margin-bottom:20px;">
+                <button class="gpa-cum-toggle" id="gpa-cum-toggle" onclick="toggleGpaCumulative()">📈 Current GPA</button>
+            </div>
+            <div class="gpa-cumulative-box" id="gpa-cum-box">
+                <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end;">
+                    <div style="flex:1; min-width:140px;">
+                        <label>Current GPA</label>
+                        <input type="number" class="gpa-input" id="gpa-cum-gpa" placeholder="e.g. 3.5" min="0" max="4" step="0.01" oninput="gpaRecalc()">
+                    </div>
+                    <div style="flex:1; min-width:140px;">
+                        <label>Passed Credit Hours</label>
+                        <input type="number" class="gpa-input" id="gpa-cum-hours" placeholder="e.g. 30" min="0" step="1" oninput="gpaRecalc()">
+                    </div>
+                </div>
+            </div>
+            <div class="gpa-subjects-header">
+                <h3>Subjects</h3>
+                <span id="gpa-total-credits" style="color:#888; font-size:0.8rem;"></span>
+            </div>
+            <div id="gpa-subjects-list"></div>
+            <div class="gpa-add-bar">
+                <div class="gpa-add-dropdown">
+                    <button class="gpa-add-btn" onclick="toggleGpaAddMenu()">+ Add Subject</button>
+                    <div class="gpa-add-menu" id="gpa-add-menu"></div>
+                </div>
+                <div class="gpa-add-custom" id="gpa-add-custom" style="display:none;">
+                    <input type="text" class="gpa-input" id="gpa-custom-name" placeholder="Subject name" style="flex:1; min-width:100px;">
+                    <input type="number" class="gpa-input" id="gpa-custom-credits" placeholder="Credits" min="1" max="6" style="width:80px;">
+                    <button class="gpa-add-btn" onclick="gpaAddCustom()" style="border-style:solid;">Add</button>
+                </div>
+            </div>
+            <div id="gpa-result-area"></div>
+            <div class="gpa-export-bar" id="gpa-export-bar" style="display:none;">
+                <button class="gpa-export-btn" onclick="exportGpaImage()">📸 Save as Image</button>
+            </div>
+        </div>
     </div>
 
     <div id="updates-page" class="page">
@@ -718,6 +830,7 @@
     <div class="hotkey-row"><span class="hotkey-key">M</span> Midterms</div>
     <div class="hotkey-row"><span class="hotkey-key">L</span> Useful Links</div>
     <div class="hotkey-row"><span class="hotkey-key">H</span> History</div>
+    <div class="hotkey-row"><span class="hotkey-key">G</span> GPA Calculator</div>
     <div class="hotkey-row"><span class="hotkey-key">Home</span> Scroll to top</div>
     <div class="hotkey-row"><span class="hotkey-key">End</span> Scroll to bottom</div>
     <div class="hotkey-row"><span class="hotkey-key">←→</span> Weeks / months / nav tabs</div>
@@ -824,7 +937,7 @@
     let currentPageId = 'home';
     let previousPageId = 'home';
 
-    const NAV_TAB_ORDER = ['home', 'recent', 'schedule', 'deadlines', 'midterm', 'useful-links', 'timetable', 'directory', 'updates'];
+    const NAV_TAB_ORDER = ['home', 'recent', 'schedule', 'deadlines', 'midterm', 'useful-links', 'timetable', 'directory', 'gpa', 'updates'];
 
     function getPageLabel(pageId) {
         const labels = {
@@ -836,6 +949,7 @@
             'useful-links': 'Useful Links',
             'timetable': 'Timetable',
             'directory': 'Staff Contacts',
+            'gpa': 'GPA Calculator',
             'updates': 'Updates',
             'weeks': (currSub ? `${currSub.code} Material` : 'Subject Material'),
             'content': (currSub ? `${currSub.code}` : 'Material')
@@ -896,6 +1010,7 @@
         else if(tabId === 'useful-links') showUsefulLinks(true, currentUsefulFilter, currentUsefulSubject);
         else if(tabId === 'timetable') showTimetable();
         else if(tabId === 'directory') showDirectory();
+        else if(tabId === 'gpa') showGpa();
         else if(tabId === 'updates') showUpdates();
     }
 
@@ -994,6 +1109,7 @@
                 else if(event.state.page === 'useful-links') showUsefulLinks(false, event.state.filter || currentUsefulFilter, event.state.subject || currentUsefulSubject);
                 else if(event.state.page === 'directory') showDirectory(false);
                 else if(event.state.page === 'timetable') showTimetable(false);
+                else if(event.state.page === 'gpa') showGpa(false);
                 else if(event.state.page === 'updates') showUpdates(false);
                 else if(event.state.page === 'weeks') {
                     currentSubjectView = event.state.subView || 'weeks';
@@ -2822,6 +2938,7 @@
         else if (key === 'm') { e.preventDefault(); showMidterms(true, 'home'); }
         else if (key === 'l') { e.preventDefault(); showUsefulLinks(true, currentUsefulFilter, currentUsefulSubject); }
         else if (key === 'h') { e.preventDefault(); showRecent(); }
+        else if (key === 'g') { e.preventDefault(); showGpa(); }
     });
 
     function nav(id, push = true, stateData = {}) { 
@@ -2874,6 +2991,7 @@
         else if(id === 'useful-links') showUsefulLinks(true, currentUsefulFilter, currentUsefulSubject);
         else if(id === 'timetable') showTimetable();
         else if(id === 'directory') showDirectory();
+        else if(id === 'gpa') showGpa();
         else if(id === 'updates') showUpdates();
     }
 
@@ -4436,6 +4554,398 @@
 
         applyWaterfallToContainer(list, '.update-card');
     }
+
+    // --- GPA Calculator ---
+    const GPA_GRADE_SCALE = [
+        { letter: 'A+', gpa: 4.0, min: 97, max: 100 },
+        { letter: 'A',  gpa: 4.0, min: 93, max: 96 },
+        { letter: 'A-', gpa: 3.7, min: 89, max: 92 },
+        { letter: 'B+', gpa: 3.3, min: 84, max: 88 },
+        { letter: 'B',  gpa: 3.0, min: 80, max: 83 },
+        { letter: 'B-', gpa: 2.7, min: 76, max: 79 },
+        { letter: 'C+', gpa: 2.3, min: 73, max: 75 },
+        { letter: 'C',  gpa: 2.0, min: 70, max: 72 },
+        { letter: 'C-', gpa: 1.7, min: 67, max: 69 },
+        { letter: 'D+', gpa: 1.3, min: 64, max: 66 },
+        { letter: 'D',  gpa: 1.0, min: 60, max: 63 },
+        { letter: 'F',  gpa: 0.0, min: 0,  max: 59 }
+    ];
+
+    const GPA_EXCLUDED_CODES = ['QC', 'RB', 'SW'];
+    let gpaSubjects = [];
+    let gpaCumulativeOn = false;
+    let gpaInitialized = false;
+
+    function parseCreditsNumber(creditsStr) {
+        if (!creditsStr) return 3;
+        const m = String(creditsStr).match(/(\d+)/);
+        return m ? parseInt(m[1], 10) : 3;
+    }
+
+    function getGpaDefaultSubjects() {
+        const defaults = [];
+        if (window.COURSE_DATA) {
+            window.COURSE_DATA.forEach(s => {
+                if (!GPA_EXCLUDED_CODES.includes(s.code)) {
+                    defaults.push({ id: 'cd_' + s.code, code: s.code, name: s.name, credits: parseCreditsNumber(s.credits), grade: '', pointsLost: '' });
+                }
+            });
+        }
+        return defaults;
+    }
+
+    function getAllCourseSubjects() {
+        if (!window.COURSE_DATA) return [];
+        return window.COURSE_DATA.map(s => ({ code: s.code, name: s.name, credits: parseCreditsNumber(s.credits) }));
+    }
+
+    function pointsToGrade(score) {
+        if (score === '' || score === null || score === undefined || isNaN(score)) return null;
+        score = Math.max(0, Math.min(100, Math.round(Number(score))));
+        for (const g of GPA_GRADE_SCALE) { if (score >= g.min && score <= g.max) return g; }
+        return GPA_GRADE_SCALE[GPA_GRADE_SCALE.length - 1];
+    }
+
+    function letterToGrade(letter) {
+        if (!letter) return null;
+        return GPA_GRADE_SCALE.find(g => g.letter === letter) || null;
+    }
+
+    function getGpaLetterForValue(gpa) {
+        if (gpa >= 3.85) return { letter: 'A / A+', color: '#34c759', bg: 'rgba(52,199,89,0.15)' };
+        if (gpa >= 3.5)  return { letter: 'A-', color: '#30d158', bg: 'rgba(48,209,88,0.15)' };
+        if (gpa >= 3.15) return { letter: 'B+', color: '#ffd60a', bg: 'rgba(255,214,10,0.15)' };
+        if (gpa >= 2.85) return { letter: 'B', color: '#ff9f0a', bg: 'rgba(255,159,10,0.15)' };
+        if (gpa >= 2.5)  return { letter: 'B-', color: '#ff9500', bg: 'rgba(255,149,0,0.15)' };
+        if (gpa >= 2.15) return { letter: 'C+', color: '#ff6b35', bg: 'rgba(255,107,53,0.15)' };
+        if (gpa >= 1.85) return { letter: 'C', color: '#ff453a', bg: 'rgba(255,69,58,0.15)' };
+        if (gpa >= 1.5)  return { letter: 'C-', color: '#ff3b30', bg: 'rgba(255,59,48,0.15)' };
+        if (gpa >= 1.0)  return { letter: 'D', color: '#ff2d55', bg: 'rgba(255,45,85,0.15)' };
+        return { letter: 'F', color: '#ff0000', bg: 'rgba(255,0,0,0.15)' };
+    }
+
+    // --- localStorage persistence ---
+    const GPA_STORAGE_KEY = 'wbw_gpa_state';
+
+    function gpaSaveState() {
+        try {
+            const state = {
+                subjects: gpaSubjects.map(s => ({ id: s.id, code: s.code, name: s.name, credits: s.credits, grade: s.grade, pointsLost: s.pointsLost })),
+                cumulativeOn: gpaCumulativeOn,
+                cumGpa: document.getElementById('gpa-cum-gpa') ? document.getElementById('gpa-cum-gpa').value : '',
+                cumHours: document.getElementById('gpa-cum-hours') ? document.getElementById('gpa-cum-hours').value : ''
+            };
+            localStorage.setItem(GPA_STORAGE_KEY, JSON.stringify(state));
+        } catch(e) {}
+    }
+
+    function gpaLoadState() {
+        try {
+            const raw = localStorage.getItem(GPA_STORAGE_KEY);
+            if (!raw) return null;
+            return JSON.parse(raw);
+        } catch(e) { return null; }
+    }
+
+    function showGpa(push = true) {
+        if (!gpaInitialized) {
+            const saved = gpaLoadState();
+            if (saved && saved.subjects && saved.subjects.length > 0) {
+                gpaSubjects = saved.subjects;
+                gpaCumulativeOn = !!saved.cumulativeOn;
+            } else {
+                gpaSubjects = getGpaDefaultSubjects();
+            }
+            gpaInitialized = true;
+        }
+        renderGpaPage();
+        // Restore cumulative inputs after render
+        const saved = gpaLoadState();
+        if (saved) {
+            const cumGpaEl = document.getElementById('gpa-cum-gpa');
+            const cumHrsEl = document.getElementById('gpa-cum-hours');
+            if (cumGpaEl && saved.cumGpa) cumGpaEl.value = saved.cumGpa;
+            if (cumHrsEl && saved.cumHours) cumHrsEl.value = saved.cumHours;
+        }
+        gpaRecalc();
+        nav('gpa', push);
+    }
+
+    function toggleGpaCumulative() {
+        gpaCumulativeOn = !gpaCumulativeOn;
+        const btn = document.getElementById('gpa-cum-toggle');
+        const box = document.getElementById('gpa-cum-box');
+        btn.classList.toggle('active', gpaCumulativeOn);
+        box.classList.toggle('visible', gpaCumulativeOn);
+        gpaRecalc();
+    }
+
+    function renderGpaPage() {
+        const btn = document.getElementById('gpa-cum-toggle');
+        const box = document.getElementById('gpa-cum-box');
+        if (btn) btn.classList.toggle('active', gpaCumulativeOn);
+        if (box) box.classList.toggle('visible', gpaCumulativeOn);
+        renderGpaSubjectRows();
+    }
+
+    function renderGpaSubjectRows() {
+        const list = document.getElementById('gpa-subjects-list');
+        if (!list) return;
+        list.innerHTML = '';
+
+        gpaSubjects.forEach((sub, idx) => {
+            const row = document.createElement('div');
+            row.className = 'gpa-row';
+            row.id = 'gpa-row-' + idx;
+            const color = '#ec4899';
+
+            // Grade dropdown
+            let gradeOpts = '<option value="">Grade</option>';
+            GPA_GRADE_SCALE.forEach(g => {
+                const sel = sub.grade === g.letter ? 'selected' : '';
+                gradeOpts += `<option value="${g.letter}" ${sel}>${g.letter} (${g.gpa})</option>`;
+            });
+
+            // Resolve current grade info for result display
+            let gradeInfo = null;
+            if (sub.grade) gradeInfo = letterToGrade(sub.grade);
+            else if (sub.pointsLost !== '') {
+                const score = 100 - Number(sub.pointsLost);
+                gradeInfo = pointsToGrade(score);
+            }
+            const resultHtml = gradeInfo
+                ? `<div class="gpa-row-result" style="color:${getGpaLetterForValue(gradeInfo.gpa).color};">${gradeInfo.gpa}</div>`
+                : `<div class="gpa-row-result" style="color:#555;">—</div>`;
+
+            row.innerHTML = `
+                <div class="gpa-row-name">${sub.code ? `<span style="color:var(--accent-purple); font-family:'Orbitron',sans-serif; font-size:0.7rem; margin-right:6px;">${sub.code}</span>` : ''}${sub.name}</div>
+                <div class="gpa-row-credits">${sub.credits} cr</div>
+                <div class="gpa-row-inputs">
+                    <select class="gpa-select" style="flex:1; min-width:80px;" onchange="gpaSetGrade(${idx}, this.value)">${gradeOpts}</select>
+                    <input type="number" class="gpa-input" style="width:60px; padding:8px 6px; flex-shrink:0; text-align:center;" placeholder="Lost" min="0" max="100" value="${sub.pointsLost !== '' ? sub.pointsLost : ''}" oninput="gpaSetPoints(${idx}, this.value)" title="Points lost out of 100">
+                </div>
+                ${resultHtml}
+                <button class="gpa-row-remove" onclick="gpaRemoveSubject(${idx})" title="Remove">✕</button>
+            `;
+            list.appendChild(row);
+        });
+
+        const totalCr = gpaSubjects.reduce((sum, s) => sum + s.credits, 0);
+        const crEl = document.getElementById('gpa-total-credits');
+        if (crEl) crEl.textContent = `Total: ${totalCr} credits`;
+    }
+
+    function gpaSetGrade(idx, letter) {
+        gpaSubjects[idx].grade = letter;
+        const g = letterToGrade(letter);
+        if (g) gpaSubjects[idx].pointsLost = String(100 - g.min);
+        else gpaSubjects[idx].pointsLost = '';
+        // Sync the points input in the same row
+        const row = document.getElementById('gpa-row-' + idx);
+        if (row) {
+            const ptsInput = row.querySelector('input[type="number"]');
+            if (ptsInput) ptsInput.value = gpaSubjects[idx].pointsLost;
+            const resultEl = row.querySelector('.gpa-row-result');
+            if (resultEl && g) { resultEl.style.color = getGpaLetterForValue(g.gpa).color; resultEl.textContent = g.gpa; }
+            else if (resultEl) { resultEl.style.color = '#555'; resultEl.textContent = '—'; }
+        }
+        gpaRecalc();
+    }
+
+    function gpaSetPoints(idx, val) {
+        gpaSubjects[idx].pointsLost = val;
+        const score = val !== '' ? 100 - Number(val) : NaN;
+        const g = pointsToGrade(score);
+        gpaSubjects[idx].grade = g ? g.letter : '';
+        // Sync the grade dropdown in the same row
+        const row = document.getElementById('gpa-row-' + idx);
+        if (row) {
+            const sel = row.querySelector('select');
+            if (sel) sel.value = gpaSubjects[idx].grade;
+            const resultEl = row.querySelector('.gpa-row-result');
+            if (resultEl && g) { resultEl.style.color = getGpaLetterForValue(g.gpa).color; resultEl.textContent = g.gpa; }
+            else if (resultEl) { resultEl.style.color = '#555'; resultEl.textContent = '—'; }
+        }
+        gpaRecalc();
+    }
+
+    function gpaRemoveSubject(idx) {
+        gpaSubjects.splice(idx, 1);
+        renderGpaSubjectRows();
+        gpaRecalc();
+    }
+
+    function toggleGpaAddMenu() {
+        const menu = document.getElementById('gpa-add-menu');
+        menu.classList.toggle('open');
+        if (menu.classList.contains('open')) renderGpaAddMenu();
+    }
+
+    function renderGpaAddMenu() {
+        const menu = document.getElementById('gpa-add-menu');
+        if (!menu) return;
+        const allCourses = getAllCourseSubjects();
+        const existingCodes = new Set(gpaSubjects.filter(s => s.code).map(s => s.code));
+        let html = '';
+        allCourses.filter(c => !existingCodes.has(c.code)).forEach(c => {
+            const color = getSubjectColor(c.code);
+            html += `<div class="gpa-add-menu-item" onclick="gpaAddCourse('${c.code}')">
+                <span class="gpa-add-dot" style="background:${color};"></span>
+                <span style="flex:1;">${c.code} — ${c.name}</span>
+                <span style="color:#888; font-size:0.75rem;">${c.credits} cr</span>
+            </div>`;
+        });
+        html += `<div class="gpa-add-menu-item" onclick="gpaShowCustomAdd()" style="border-top:1px solid rgba(255,255,255,0.08); margin-top:4px; padding-top:10px; color:#ffd700;">
+            <span style="font-size:1rem;">✏️</span><span>Custom subject...</span>
+        </div>`;
+        menu.innerHTML = html;
+    }
+
+    function gpaAddCourse(code) {
+        const course = getAllCourseSubjects().find(c => c.code === code);
+        if (!course) return;
+        gpaSubjects.push({ id: 'cd_' + course.code + '_' + Date.now(), code: course.code, name: course.name, credits: course.credits, grade: '', pointsLost: '' });
+        document.getElementById('gpa-add-menu').classList.remove('open');
+        renderGpaSubjectRows();
+        gpaRecalc();
+    }
+
+    function gpaShowCustomAdd() {
+        document.getElementById('gpa-add-menu').classList.remove('open');
+        document.getElementById('gpa-add-custom').style.display = 'flex';
+        document.getElementById('gpa-custom-name').focus();
+    }
+
+    function gpaAddCustom() {
+        const nameEl = document.getElementById('gpa-custom-name');
+        const crEl = document.getElementById('gpa-custom-credits');
+        const name = (nameEl.value || '').trim();
+        const credits = parseInt(crEl.value, 10);
+        if (!name) { nameEl.focus(); return; }
+        if (!credits || credits < 1) { crEl.focus(); return; }
+        gpaSubjects.push({ id: 'custom_' + Date.now(), code: '', name: name, credits: credits, grade: '', pointsLost: '' });
+        nameEl.value = ''; crEl.value = '';
+        document.getElementById('gpa-add-custom').style.display = 'none';
+        renderGpaSubjectRows();
+        gpaRecalc();
+    }
+
+    function gpaRecalc() {
+        let totalPoints = 0, totalCredits = 0, hasAnyGrade = false;
+
+        gpaSubjects.forEach(sub => {
+            let gradeInfo = null;
+            if (sub.grade) gradeInfo = letterToGrade(sub.grade);
+            else if (sub.pointsLost !== '') gradeInfo = pointsToGrade(100 - Number(sub.pointsLost));
+            if (gradeInfo) {
+                totalPoints += gradeInfo.gpa * sub.credits;
+                totalCredits += sub.credits;
+                hasAnyGrade = true;
+            }
+        });
+
+        const resultArea = document.getElementById('gpa-result-area');
+        const exportBar = document.getElementById('gpa-export-bar');
+
+        if (!hasAnyGrade) {
+            resultArea.innerHTML = `<div class="gpa-result-card">
+                <div class="gpa-result-label">Semester GPA</div>
+                <div class="gpa-result-value" style="font-size:1.5rem; -webkit-text-fill-color:#555;">Enter grades above</div>
+            </div>`;
+            if (exportBar) exportBar.style.display = 'none';
+            gpaSaveState();
+            return;
+        }
+
+        const semesterGpa = Math.min(4.0, Math.max(0, totalCredits > 0 ? totalPoints / totalCredits : 0));
+        const gradedCount = gpaSubjects.filter(s => s.grade || s.pointsLost !== '').length;
+        const subText = `${totalCredits} credit hours · ${gradedCount} subjects`;
+
+        let hasCumulative = false;
+        let cumulativeGpa = semesterGpa;
+        if (gpaCumulativeOn) {
+            const cumGpa = parseFloat(document.getElementById('gpa-cum-gpa').value);
+            const cumHours = parseInt(document.getElementById('gpa-cum-hours').value, 10);
+            if (!isNaN(cumGpa) && cumGpa >= 0 && !isNaN(cumHours) && cumHours > 0) {
+                cumulativeGpa = Math.min(4.0, Math.max(0, (cumGpa * cumHours + totalPoints) / (cumHours + totalCredits)));
+                hasCumulative = true;
+            }
+        }
+
+        const semLetterInfo = getGpaLetterForValue(semesterGpa);
+
+        if (hasCumulative) {
+            const cumLetterInfo = getGpaLetterForValue(cumulativeGpa);
+            const cumGpaVal = parseFloat(document.getElementById('gpa-cum-gpa').value);
+            const cumHoursVal = parseInt(document.getElementById('gpa-cum-hours').value, 10);
+            const totalHours = cumHoursVal + totalCredits;
+            resultArea.innerHTML = `<div class="gpa-result-card" id="gpa-capture-area">
+                <div class="gpa-result-label">Cumulative GPA</div>
+                <div class="gpa-result-value">${cumulativeGpa.toFixed(2)}</div>
+                <div class="gpa-result-letter" style="color:${cumLetterInfo.color}; background:${cumLetterInfo.bg}; border:1px solid ${cumLetterInfo.color};">${cumLetterInfo.letter}</div>
+                <div class="gpa-result-sub" style="margin-top:10px;">Total: ${totalHours} credit hours passed</div>
+                <div style="margin-top:16px; padding-top:14px; border-top:1px solid rgba(233,30,140,0.15);">
+                    <div class="gpa-result-label" style="margin-bottom:6px;">Semester GPA</div>
+                    <div style="font-family:'Orbitron',sans-serif; font-size:1.8rem; font-weight:800; color:var(--accent-pink);">${semesterGpa.toFixed(2)}</div>
+                    <div class="gpa-result-letter" style="color:${semLetterInfo.color}; background:${semLetterInfo.bg}; border:1px solid ${semLetterInfo.color}; font-size:0.8rem; padding:3px 12px;">${semLetterInfo.letter}</div>
+                    <div class="gpa-result-sub" style="margin-top:6px;">${totalCredits} credit hours · ${gradedCount} subjects</div>
+                </div>
+                <div style="margin-top:14px; padding-top:12px; border-top:1px solid rgba(233,30,140,0.1); font-size:0.78rem; color:#777;">
+                    Previous: <span style="color:var(--accent-purple);">${cumGpaVal.toFixed(2)}</span> GPA × <span style="color:var(--accent-pink);">${cumHoursVal}</span> hrs &nbsp;+&nbsp; This semester: <span style="color:var(--accent-pink);">${totalCredits}</span> hrs
+                </div>
+            </div>`;
+        } else {
+            resultArea.innerHTML = `<div class="gpa-result-card" id="gpa-capture-area">
+                <div class="gpa-result-label">Semester GPA</div>
+                <div class="gpa-result-value">${semesterGpa.toFixed(2)}</div>
+                <div class="gpa-result-sub">${subText}</div>
+                <div class="gpa-result-letter" style="color:${semLetterInfo.color}; background:${semLetterInfo.bg}; border:1px solid ${semLetterInfo.color};">${semLetterInfo.letter}</div>
+            </div>`;
+        }
+
+        if (exportBar) exportBar.style.display = 'flex';
+        gpaSaveState();
+    }
+
+    // --- GPA Screenshot (captures full calculator) ---
+    function exportGpaImage() {
+        const el = document.getElementById('gpa-capture-wrap');
+        if (!el) { showToast('Nothing to capture', 'locked'); return; }
+        showToast('📸 Generating image...', 'locked');
+        // Temporarily hide export bar and back button for clean screenshot
+        const exportBar = document.getElementById('gpa-export-bar');
+        const backBtn = document.querySelector('#gpa-page > .back-btn');
+        if (exportBar) exportBar.style.display = 'none';
+        if (backBtn) backBtn.style.display = 'none';
+        html2canvas(el, {
+            backgroundColor: '#0a0012',
+            scale: 2,
+            useCORS: true,
+            scrollY: -window.scrollY,
+            windowWidth: el.scrollWidth
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'gpa-calculator.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            showToast('📸 Image saved!', 'locked');
+        }).catch(() => {
+            showToast('⚠️ Could not generate image', 'locked');
+        }).finally(() => {
+            // Restore hidden elements
+            if (exportBar) exportBar.style.display = 'flex';
+            if (backBtn) backBtn.style.display = '';
+        });
+    }
+
+    // Close add menu on outside click
+    document.addEventListener('click', function(e) {
+        const menu = document.getElementById('gpa-add-menu');
+        const btn = e.target.closest('.gpa-add-btn');
+        if (menu && !menu.contains(e.target) && !btn) {
+            menu.classList.remove('open');
+        }
+    });
 
 </script>
 </body>

@@ -16,7 +16,7 @@
         .list-container { flex: 1; overflow-y: auto; }
         .list-item { padding: 8px 10px; border-bottom: 1px solid #2a1b3d; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: background 0.2s; }
         .list-item:hover { background: var(--hover); }
-        .list-item.active { background: var(--accent); color: white; font-weight: bold; border-left: 5px solid white; }
+        .list-item.active { background: var(--accent); color: white; font-weight: bold; border-left: 5px solid white; box-shadow: 0 0 18px 0 rgba(233,30,140,0.5), 0 0 8px 0 rgba(168,85,247,0.3); }
         .list-item.dragging { opacity: 0.5; background: #444; }
         .drag-handle { cursor: grab; color: #666; font-size: 1.2rem; padding:0 5px; }
         
@@ -30,7 +30,8 @@
         .btn-schedule { width: 100%; background: #ff9500; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: black; cursor: pointer; }
         .btn-midterms { width: 100%; background: #007aff; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; }
         .btn-deadlines { width: 100%; background: #00E5FF; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: black; cursor: pointer; }
-        .btn-expire { width: 100%; background: #673ab7; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; }
+        .btn-expire { width: 100%; background: #673ab7; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; transition: box-shadow 0.3s, background 0.3s; }
+        .btn-expire.glow { box-shadow: 0 0 18px 0 rgba(233,30,140,0.5), 0 0 8px 0 rgba(168,85,247,0.3); background: linear-gradient(135deg, #a855f7 0%, #e91e8c 100%); color: white; }
         .btn-move { background: transparent; color: #aaa; font-size: 0.8rem; padding: 2px 5px; border: 1px solid #444; border-radius: 3px; }
         .btn-move:hover { background: #444; color: white; }
 
@@ -1184,7 +1185,7 @@
         // Migrate old format
         if (!p.badges && p.badgeText) { p.badges = [{text: p.badgeText, color: p.badgeColor || '#e91e8c'}]; delete p.badgeText; delete p.badgeColor; }
         if (!p.badges) p.badges = [];
-
+        
         let html = `<div class="form-section" style="border-color:#b519d6;"><h3 style="color:#b519d6;">🔗 Edit Link #${ulLinkIdx+1} in ${sub.code}</h3>`;
         html += `<div style="display:grid; grid-template-columns: 60px 1fr; gap:10px;">`;
         html += `<div><label>Icon</label><div style="position:relative;"><input type="text" style="text-align:center;" value="${p.icon || '🔗'}" oninput="window.COURSE_DATA[ulSubIdx].playlists[ulLinkIdx].icon=this.value; markDirty(); renderUsefulLinksManager({ preserveScroll: true, skipEditor: true });" onfocus="showEmojiPicker(this)"><div class="emoji-picker-dropdown" style="display:none;"></div></div></div>`;
@@ -1332,7 +1333,7 @@
             });
 
             el.innerHTML = `
-                <div style="display:flex; justify-content:space-between; width:100%; align-items:center; margin-bottom:10px;">
+                <div style="display:flex; justify-content:space-between; width:100%; align-items:center; margin-bottom:10px; gap:10px; flex-wrap:wrap;">
                     <strong style="color:white;">${person.name || 'New Staff'}</strong>
                     <button class="btn btn-del" onclick="delStaffMember(${i})">✕ Remove</button>
                 </div>
@@ -1584,22 +1585,22 @@
                     <strong style="color:white;">${item.icon || '🚀'} ${item.title || 'Update'}</strong>
                     <button class="btn btn-del" onclick="delUpdateEntry(${i})">✕ Remove</button>
                 </div>
-                <div style="display:flex; gap:10px; width:100%; align-items:flex-end;">
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
                     <div style="position:relative; flex:0 0 60px;">
                         <label>Icon</label>
                         <input type="text" value="${item.icon || ''}" style="width:100%; text-align:center; cursor:pointer; padding:8px 4px;" onfocus="showEmojiPicker(this)" oninput="window.UPDATES_DATA[${i}].icon=this.value; markDirty();">
                         <div class="emoji-picker-dropdown" style="display:none;"></div>
                     </div>
-                    <div style="flex:1;">
+                    <div style="flex:1;min-width:160px;">
                         <label>Title</label>
                         <input type="text" value="${item.title || ''}" oninput="window.UPDATES_DATA[${i}].title=this.value; markDirty();">
                     </div>
-                    <div style="flex:0 0 150px;">
+                    <div style="flex:0 0 190px;">
                         <label>Date</label>
-                        <input type="date" value="${item.date || ''}" style="padding:8px 10px; color-scheme:dark;" oninput="window.UPDATES_DATA[${i}].date=this.value; markDirty();">
+                        <input type="date" value="${item.date || ''}" style="padding:8px 10px; color-scheme:dark;" oninput="window.UPDATES_DATA[${i}].date=this.value ? this.value+':00' : ''; markDirty();">
                     </div>
                 </div>
-                <div style="width:100%; margin-top:8px;">
+                <div style="width:100%; margin-bottom:10px;">
                     <label>Description</label>
                     <textarea rows="2" oninput="window.UPDATES_DATA[${i}].desc=this.value; markDirty();">${item.desc || ''}</textarea>
                 </div>
@@ -1613,17 +1614,13 @@
     }
 
     function addUpdateEntry() {
-        window.UPDATES_DATA.push({ icon: '🚀', title: 'New Update', desc: '', date: new Date().toISOString().split('T')[0] });
+        window.UPDATES_DATA.push({ icon: '🚀', title: 'New Update', desc: '', date: new Date().toISOString().slice(0,19) });
         markDirty();
         renderUpdatesManager();
     }
 
     function delUpdateEntry(i) {
-        if(confirm('Remove this update?')) {
-            window.UPDATES_DATA.splice(i, 1);
-            markDirty();
-            renderUpdatesManager();
-        }
+        if(confirm('Remove this update?')) { window.UPDATES_DATA.splice(i, 1); markDirty(); renderUpdatesManager(); }
     }
 
     // --- NEWS MANAGER ---

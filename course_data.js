@@ -11999,6 +11999,12 @@ window.UPDATES_DATA = [
         "title": "Staff Sharing",
         "desc": "Staff contacts can now be shared with resolved Teams chat links instead of only copying raw email identifiers.",
         "date": "2026-03-13"
+    },
+    {
+        "icon": "🎓",
+        "title": "GPA Calculator",
+        "desc": "Live GPA calculator with your current subjects pre-loaded. Two input modes: select a letter grade or type how many points you lost out of 100. Supports cumulative GPA by entering your previous GPA and passed hours. Export results as an image to share.",
+        "date": "2026-03-20"
     }
 ];
 
