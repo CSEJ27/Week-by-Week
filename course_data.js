@@ -6881,8 +6881,8 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1THlTtGAKIhlb3Ot4tmNOUB70IzcAEQDN/view?usp=drive_link",
-                        "desc": "Slides [0:31].",
+                        "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
+                        "desc": "Slides [0:40].",
                         "isNew": false
                     },
                     "Section": {
@@ -7058,8 +7058,8 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1THlTtGAKIhlb3Ot4tmNOUB70IzcAEQDN/view?usp=drive_link",
-                        "desc": "",
+                        "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
+                        "desc": "41: END",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
