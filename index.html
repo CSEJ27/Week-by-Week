@@ -740,6 +740,7 @@
             <div id="gpa-result-area"></div>
             <div class="gpa-export-bar" id="gpa-export-bar" style="display:none;">
                 <button class="gpa-export-btn" onclick="exportGpaImage()">📸 Save as Image</button>
+                <button class="gpa-export-btn" onclick="openGpaDataModal()">📋 Import / Export</button>
             </div>
         </div>
     </div>
@@ -788,6 +789,32 @@
         <div class="modal-title" id="m-title">🧠 Quiz</div>
         <div class="modal-subtitle" id="m-sub">Computer Networks - Week 5</div>
         <div id="m-fields-container"></div>
+    </div>
+</div>
+
+<div id="gpa-data-modal" class="modal-overlay" onclick="closeGpaDataModal(event)">
+    <div class="modal-content" style="max-width:400px; padding:24px;" onclick="event.stopPropagation()">
+        <div class="modal-close" onclick="closeGpaDataModal(null, true)">✕</div>
+        <div class="modal-title" style="color:var(--accent-pink);">📋 Import / Export Data</div>
+        <div class="modal-subtitle" style="margin-bottom:15px; color:#aaa;">Transfer your GPA data between devices</div>
+        
+        <!-- Export Section -->
+        <div style="background:rgba(255,255,255,0.05); padding:12px; border-radius:10px; margin-bottom:15px; border:1px solid rgba(255,255,255,0.1);">
+            <label style="font-size:0.8rem; color:#fff; display:block; margin-bottom:8px;">📤 Export Your Data</label>
+            <p style="font-size:0.7rem; color:#aaa; margin-bottom:8px; line-height:1.4;">Copy this code to transfer your current GPA setup to another device.</p>
+            <div style="display:flex; gap:8px;">
+                <input type="text" id="gpa-export-text" class="gpa-input" style="flex:1; font-family:monospace; font-size:0.75rem; color:#888;" readonly onclick="this.select()">
+                <button class="gpa-btn" style="padding:8px 15px; font-size:0.8rem;" onclick="copyGpaData()">Copy</button>
+            </div>
+        </div>
+
+        <!-- Import Section -->
+        <div style="background:rgba(255,255,255,0.05); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.1);">
+            <label style="font-size:0.8rem; color:#fff; display:block; margin-bottom:8px;">📥 Import Data</label>
+            <p style="font-size:0.7rem; color:#aaa; margin-bottom:8px; line-height:1.4;">Paste a code from another device here to overwrite your current GPA.</p>
+            <textarea id="gpa-import-text" class="gpa-input" style="width:100%; height:60px; resize:none; font-family:monospace; font-size:0.75rem; margin-bottom:10px;" placeholder="Paste data code here..."></textarea>
+            <button class="gpa-btn" style="width:100%; padding:10px; font-size:0.8rem; border-color:#34c759; color:#34c759;" onclick="importGpaData()">Import Data</button>
+        </div>
     </div>
 </div>
 
@@ -5362,6 +5389,97 @@
         }
     });
 
+    // --- GPA Import/Export ---
+    function openGpaDataModal() {
+        const modal = document.getElementById('gpa-data-modal');
+        const exportText = document.getElementById('gpa-export-text');
+        const importText = document.getElementById('gpa-import-text');
+        if (!modal || !exportText || !importText) return;
+        
+        importText.value = ''; // clear previous import attempt
+        
+        const state = {
+            subjects: gpaSubjects,
+            semesters: gpaSemesters,
+            groupMode: gpaGroupMode,
+            cumulativeOn: gpaCumulativeOn,
+            cumGpa: gpaCumGpa,
+            cumHours: gpaCumHours
+        };
+        
+        try {
+            const jsonStr = JSON.stringify(state);
+            exportText.value = btoa(encodeURIComponent(jsonStr));
+        } catch(e) {
+            exportText.value = 'Error generating data.';
+        }
+        
+        modal.classList.add('active');
+    }
+
+    function closeGpaDataModal(event, force=false) {
+        if (force || event.target.id === 'gpa-data-modal') {
+            document.getElementById('gpa-data-modal').classList.remove('active');
+        }
+    }
+
+    function copyGpaData() {
+        const input = document.getElementById('gpa-export-text');
+        if (!input.value || input.value.startsWith('Error')) return;
+        
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(input.value).then(() => {
+                showToast('📋 Copied to clipboard!', 'success');
+            }).catch(() => {
+                fallbackCopy(input);
+            });
+        } else {
+            fallbackCopy(input);
+        }
+    }
+    
+    function fallbackCopy(input) {
+        input.select();
+        try {
+            document.execCommand('copy');
+            showToast('📋 Copied to clipboard!', 'success');
+        } catch (err) {
+            showToast('⚠️ Could not copy automatically', 'locked');
+        }
+    }
+
+    function importGpaData() {
+        const textarea = document.getElementById('gpa-import-text');
+        if (!textarea.value) {
+            showToast('⚠️ Please paste a data code first', 'locked');
+            return;
+        }
+        
+        try {
+            const jsonStr = decodeURIComponent(atob(textarea.value.trim()));
+            const parsed = JSON.parse(jsonStr);
+            
+            if (parsed && Array.isArray(parsed.subjects)) {
+                gpaSubjects = parsed.subjects;
+                gpaSemesters = parsed.semesters || [];
+                gpaGroupMode = !!parsed.groupMode;
+                gpaCumulativeOn = !!parsed.cumulativeOn;
+                gpaCumGpa = parsed.cumGpa || '';
+                gpaCumHours = parsed.cumHours || '';
+                
+                gpaSaveState();
+                renderGpaPage();
+                gpaRecalc();
+                
+                closeGpaDataModal(null, true);
+                showToast('✅ GPA Data Imported Successfully!', 'success');
+            } else {
+                showToast('❌ Invalid Data Format', 'locked');
+            }
+        } catch(e) {
+            showToast('❌ Failed to parse data. Make sure you copied the entire string.', 'locked');
+        }
+    }
 </script>
 </body>
 </html>
