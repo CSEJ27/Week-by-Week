@@ -729,7 +729,7 @@
 
     <div id="gpa-page" class="page">
         <button class="back-btn" onclick="smartBack()">← Back</button>
-        <h1 style="background: linear-gradient(to right, var(--accent-pink), var(--accent-purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3);">GPA CALCULATOR</h1>
+        <h1 style="background: linear-gradient(to right, var(--accent-pink), var(--accent-purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3);">GPA CALCULATOR <span style="font-size:0.4em; color:#ff3b30; -webkit-text-fill-color:#ff3b30; vertical-align:top;">[v3]</span></h1>
         <p class="subtitle" style="margin-bottom: 20px;">Calculate your semester or cumulative GPA live</p>
         <div class="gpa-wrap" id="gpa-capture-wrap">
             <div id="gpa-mode-toggles" style="text-align:center; margin-bottom:20px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
@@ -738,8 +738,8 @@
             </div>
             <div id="gpa-content-area" style="min-height:200px;"></div>
             <div id="gpa-result-area"></div>
-            <div class="gpa-export-bar" id="gpa-export-bar" style="display:none;">
-                <button class="gpa-export-btn" onclick="exportGpaImage()">📸 Save as Image</button>
+            <div class="gpa-export-bar" id="gpa-export-bar" style="display:flex !important; opacity:1 !important; visibility:visible !important; min-height:40px; margin-top:30px;">
+                <button class="gpa-export-btn" id="gpa-export-img-btn" onclick="exportGpaImage()" style="display:none;">📸 Save as Image</button>
                 <button class="gpa-export-btn" onclick="openGpaDataModal()">📋 Import / Export</button>
             </div>
         </div>
@@ -5213,13 +5213,14 @@
 
         const resEl = document.getElementById('gpa-result-area');
         const expBar = document.getElementById('gpa-export-bar');
-        
+        const imgBtn = document.getElementById('gpa-export-img-btn');
+        if (expBar) expBar.style.display = 'flex'; // Always show export bar
         if (!hasGrade && !hasCum) {
             resEl.innerHTML = `<div class="gpa-result-card">
                 <div class="gpa-result-label">Cumulative GPA</div>
                 <div class="gpa-result-value" style="font-size:1.5rem; -webkit-text-fill-color:#555;">Enter grades above</div>
             </div>`;
-            if (expBar) expBar.style.display = 'none';
+            if (imgBtn) imgBtn.style.display = 'none';
         } else {
             const totPts = pts + cumPts;
             const totCrs = crs + cumCrs;
@@ -5241,7 +5242,7 @@
                 ${semGpaHtml}
                 <div class="gpa-result-sub" style="margin-top:10px;">Total: ${totCrs} credit hours passed${!hasCum ? subjectsSuffix : ''}</div>
             </div>`;
-            if (expBar) expBar.style.display = 'flex';
+            if (imgBtn) imgBtn.style.display = 'flex';
         }
         gpaSaveState();
     }
@@ -5306,7 +5307,8 @@
                 <div class="gpa-result-label">Cumulative GPA</div>
                 <div class="gpa-result-value" style="font-size:1.5rem; -webkit-text-fill-color:#555;">Enter grades above</div>
             </div>`;
-            if (exportBar) exportBar.style.display = 'none';
+            const imgBtn = document.getElementById('gpa-export-img-btn');
+            if (imgBtn) imgBtn.style.display = 'none';
             // Need to save even if empty so state removes old data
             gpaSaveState();
             return;
@@ -5321,7 +5323,8 @@
             ${semesterCount > 1 ? breakdownHtml : ''}
         </div>`;
 
-        if (exportBar) exportBar.style.display = 'flex';
+        const imgBtn = document.getElementById('gpa-export-img-btn');
+        if (imgBtn) imgBtn.style.display = 'flex';
         gpaSaveState();
     }
 

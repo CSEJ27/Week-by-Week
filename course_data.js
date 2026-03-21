@@ -12003,7 +12003,7 @@ window.UPDATES_DATA = [
     {
         "icon": "🎓",
         "title": "GPA Calculator",
-        "desc": "The live GPA calculator comes pre-loaded with your subjects and tracks your cumulative progress using your past GPA and flexible inputs like letter grades or points lost. With the new Group Semesters mode, you can create, name, and drag-and-drop semesters to view color-coded GPA breakdowns, track subject and credit counts, add quick prior GPA summaries, and easily export your final GPA results as a clean image.",
+        "desc": "The live GPA calculator pre-loads subjects, tracking cumulative progress using past GPAs with flexible letter grade or points-lost inputs. The drag-and-drop Group Semesters mode lets you name terms, color-code breakdowns, monitor subject counts alongside credits, or add prior GPA summaries. You can also export results as a clean image, utilizing the new import/export button to seamlessly transfer data between websites without retyping.",
         "date": "2026-03-20"
     }
 ];
