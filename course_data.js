@@ -12017,7 +12017,10 @@ window.NEWS_DATA = [
         "sub": "AI",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "hasEvent": true,
+        "eventDate": "2026-03-24",
+        "eventTime": "18:00"
     },
     {
         "emoji": "📢",
@@ -12027,7 +12030,10 @@ window.NEWS_DATA = [
         "sub": "DSA",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "hasEvent": true,
+        "eventDate": "2026-03-24",
+        "eventTime": "12:00"
     },
     {
         "emoji": "📢",
@@ -12037,7 +12043,10 @@ window.NEWS_DATA = [
         "sub": "ML",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "hasEvent": true,
+        "eventDate": "2026-03-19",
+        "eventTime": "11:00"
     },
     {
         "emoji": "📢",
@@ -12047,7 +12056,10 @@ window.NEWS_DATA = [
         "sub": "OS",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "hasEvent": true,
+        "eventDate": "2026-03-19",
+        "eventTime": "13:00"
     },
     {
         "emoji": "📢",
@@ -12057,7 +12069,10 @@ window.NEWS_DATA = [
         "sub": "ML",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "eventDate": "2026-03-17",
+        "eventTime": "14:30",
+        "hasEvent": true
     },
     {
         "emoji": "📢",
@@ -12067,7 +12082,10 @@ window.NEWS_DATA = [
         "sub": "CN",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "hasEvent": true,
+        "eventDate": "2026-03-24",
+        "eventTime": "20:00"
     },
     {
         "emoji": "🎉",
@@ -12077,7 +12095,10 @@ window.NEWS_DATA = [
         "sub": "",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "eventDate": "2026-03-19",
+        "eventTime": "19:00",
+        "hasEvent": false
     },
     {
         "emoji": "📢",
@@ -12087,7 +12108,10 @@ window.NEWS_DATA = [
         "sub": "OS",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "eventDate": "2026-03-14",
+        "hasEvent": true,
+        "eventTime": "23:59"
     },
     {
         "emoji": "📢",
@@ -12097,7 +12121,10 @@ window.NEWS_DATA = [
         "sub": "CA",
         "hasDeadline": false,
         "deadlineDate": "",
-        "deadlineTime": ""
+        "deadlineTime": "",
+        "eventTime": "21:00",
+        "hasEvent": true,
+        "eventDate": "2026-03-17"
     },
     {
         "emoji": "🎉",
@@ -12107,6 +12134,9 @@ window.NEWS_DATA = [
         "sub": "DB",
         "hasDeadline": true,
         "deadlineDate": "2026-03-14",
-        "deadlineTime": "11:59 PM"
+        "deadlineTime": "11:59 PM",
+        "hasEvent": true,
+        "eventDate": "2026-03-14",
+        "eventTime": "11:59"
     }
 ];

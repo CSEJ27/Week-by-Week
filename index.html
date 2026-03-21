@@ -486,7 +486,15 @@
         .nav-link-gpa.active { background: rgba(233, 30, 140, 0.15); border-color: rgba(233, 30, 140, 0.4); color: var(--accent-pink); }
         .gpa-btn { background: rgba(233, 30, 140, 0.2); border: 2px solid var(--accent-pink); color: var(--accent-pink); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .gpa-btn:hover { background: var(--accent-pink); color: white; box-shadow: 0 0 20px var(--accent-pink); border-color: transparent; }
-        .gpa-wrap { max-width: 800px; margin: 0 auto; }
+        .gpa-wrap { max-width: 800px; margin: 0 auto; transition: max-width 0.3s; }
+        .gpa-wrap.card-active { max-width: 100%; }
+        .gpa-grid-view { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 25px; align-items: stretch; width: 100%; }
+        .gpa-semester-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(233,30,140,0.15); border-radius: 16px; padding: 20px; box-sizing: border-box; width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .gpa-semester-card .gpa-row { flex-wrap: wrap; }
+        .gpa-semester-card .gpa-row-name { min-width: 100px; }
+        .gpa-semester-card .gpa-row-inputs { min-width: 120px; flex: 1; }
+        .gpa-semester-card .gpa-row-credits { min-width: 36px; font-size: 0.75rem; }
+        .gpa-list-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(233,30,140,0.15); border-radius: 16px; padding: 20px; box-sizing: border-box; width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2); margin-bottom: 24px; }
         .gpa-mode-bar { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
         .gpa-mode-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #aaa; padding: 8px 18px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: 0.2s; }
         .gpa-mode-pill:hover { background: rgba(255,255,255,0.1); color: white; }
@@ -553,6 +561,10 @@
             .gpa-row-name { min-width: 80px; font-size: 0.82rem; }
             .gpa-result-value { font-size: 2.5rem; }
             .gpa-row-inputs { min-width: 140px; }
+            /* On mobile: always stack semesters, never show grid */
+            #gpa-card-toggle { display: none !important; }
+            .gpa-grid-view { display: block !important; }
+            .gpa-semester-card { margin-bottom: 20px; }
         }
     </style>
 </head>
@@ -4070,6 +4082,8 @@
             item && item.body || '',
             item && item.publishedAt || '',
             item && item.sub || '',
+            item && item.eventDate || '',
+            item && item.eventTime || '',
             item && item.deadlineDate || '',
             item && item.deadlineTime || ''
         ].join('||');
@@ -4091,16 +4105,26 @@
 
     function isNewsVisibleToViewer(item) {
         if (!item) return false;
+        if (item.hasEvent && item.eventDate) {
+            const timeStr = item.eventTime ? item.eventTime : '00:00'; 
+            const eventDateTime = new Date(`${item.eventDate}T${timeStr}`);
+            if (!isNaN(eventDateTime) && eventDateTime < new Date()) {
+                return false; 
+            }
+        }
         if (item.hasDeadline && item.deadlineDate) {
             const deadlineTs = parseNewsDeadlineTs(item.deadlineDate, item.deadlineTime);
             if (deadlineTs > 0 && Date.now() > deadlineTs) return false;
         }
-        if (!item.publishedAt) return true;
-        const ts = new Date(item.publishedAt).getTime();
-        if (!ts || isNaN(ts)) return true;
-        const now = Date.now();
-        if (ts > now) return true;
-        return (now - ts) <= (NEWS_MAX_VISIBLE_DAYS * 24 * 60 * 60 * 1000);
+        if (!item.hasEvent) {
+            if (!item.publishedAt) return true;
+            const ts = new Date(item.publishedAt).getTime();
+            if (!ts || isNaN(ts)) return true;
+            const now = Date.now();
+            if (ts > now) return true;
+            return (now - ts) <= (NEWS_MAX_VISIBLE_DAYS * 24 * 60 * 60 * 1000);
+        }
+        return true;
     }
 
     function getVisibleNewsItems() {
@@ -4142,6 +4166,13 @@
         if (!list) return;
         const seen = new Set(getSeenNewsKeys());
         const items = getVisibleNewsItems().slice().sort((a, b) => {
+            if (a.hasEvent && !b.hasEvent) return -1;
+            if (!a.hasEvent && b.hasEvent) return 1;
+            if (a.hasEvent && b.hasEvent) {
+                const ta = parseNewsDeadlineTs(a.eventDate, a.eventTime) || 0;
+                const tb = parseNewsDeadlineTs(b.eventDate, b.eventTime) || 0;
+                return ta - tb;
+            }
             const ta = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
             const tb = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
             return tb - ta;
@@ -4159,6 +4190,11 @@
                 const dlabel = formatNewsDeadline(item.deadlineDate, item.deadlineTime);
                 dlHtml = `<span class="ni-dl">⏰ ${eHtml(dlabel)}</span>`;
             }
+            let evtHtml = '';
+            if (item.hasEvent && item.eventDate) {
+                const elabel = formatNewsDeadline(item.eventDate, item.eventTime);
+                evtHtml = `<span class="ni-dl" style="background:rgba(0, 229, 255, 0.15); border-color:#00E5FF; color:#00E5FF; box-shadow:0 0 10px rgba(0,229,255,0.4);">🗓️ Held on: ${eHtml(elabel)}</span>`;
+            }
             const subHtml = item.sub ? `<span class="ni-sub">${eHtml(item.sub)}</span>` : '';
             return `<div class="news-item${isUnread ? ' news-unread' : ''}">
                 <div class="ni-inner">
@@ -4166,7 +4202,7 @@
                     <div class="ni-body">
                         <div class="ni-title">${eHtml(item.title || '')}</div>
                         ${item.body ? `<div class="ni-note">${eHtml(item.body)}</div>` : ''}
-                        <div class="ni-meta">${subHtml}${dlHtml}<span class="ni-time">${timeAgo}</span></div>
+                        <div class="ni-meta">${subHtml}${evtHtml}${dlHtml}<span class="ni-time">${timeAgo}</span></div>
                     </div>
                 </div>
             </div>`;
@@ -4200,7 +4236,15 @@
         try {
             const d = new Date(dateStr);
             const label = d.toLocaleDateString([], { month: 'short', day: 'numeric', year: 'numeric' });
-            return timeStr ? `${label} at ${timeStr}` : label;
+            let formattedTime = timeStr;
+            if (timeStr && /^(\d{2}):(\d{2})$/.test(timeStr)) {
+                let [hh, mm] = timeStr.split(':').map(Number);
+                let ampm = hh >= 12 ? 'PM' : 'AM';
+                let h = hh % 12;
+                if (h === 0) h = 12;
+                formattedTime = `${h}:${mm.toString().padStart(2, '0')} ${ampm}`;
+            }
+            return formattedTime ? `${label} at ${formattedTime}` : label;
         } catch(e) { return dateStr + (timeStr ? ' ' + timeStr : ''); }
     }
 
@@ -4615,6 +4659,7 @@
     let gpaSubjects = [];
     let gpaSemesters = [];
     let gpaGroupMode = false;
+    let gpaCardMode = false;
     let gpaCumulativeOn = false;
     let gpaCumGpa = '';
     let gpaCumHours = '';
@@ -4677,6 +4722,7 @@
                 subjects: gpaSubjects,
                 semesters: gpaSemesters,
                 groupMode: gpaGroupMode,
+                cardMode: gpaCardMode,
                 cumulativeOn: gpaCumulativeOn,
                 cumGpa: gpaCumGpa,
                 cumHours: gpaCumHours
@@ -4698,6 +4744,7 @@
             const saved = gpaLoadState();
             if (saved) {
                 gpaGroupMode = !!saved.groupMode;
+                gpaCardMode = !!saved.cardMode;
                 gpaCumulativeOn = !!saved.cumulativeOn;
                 gpaCumGpa = saved.cumGpa || '';
                 gpaCumHours = saved.cumHours || '';
@@ -4737,6 +4784,12 @@
         renderGpaPage();
         gpaRecalc();
         gpaSaveState();
+    }
+
+    function toggleGpaCardMode() {
+        gpaCardMode = !gpaCardMode;
+        gpaSaveState();
+        renderGpaPage();
     }
 
     function gpaAddSemester() {
@@ -4788,9 +4841,27 @@
         }
         if (groupToggle) groupToggle.classList.toggle('active', gpaGroupMode);
 
+        let cardToggle = document.getElementById('gpa-card-toggle');
+        if (gpaGroupMode) {
+            if (!cardToggle) {
+                cardToggle = document.createElement('button');
+                cardToggle.className = 'gpa-cum-toggle';
+                cardToggle.id = 'gpa-card-toggle';
+                cardToggle.onclick = toggleGpaCardMode;
+                document.getElementById('gpa-mode-toggles').appendChild(cardToggle);
+            }
+            cardToggle.style.display = 'inline-block';
+            cardToggle.innerText = gpaCardMode ? '📋 List View' : '🪟 Card View';
+        } else {
+            if (cardToggle) cardToggle.style.display = 'none';
+        }
+
         const container = document.getElementById('gpa-content-area');
         if (!container) return;
         container.innerHTML = '';
+
+        const captureWrap = document.getElementById('gpa-capture-wrap');
+        if (captureWrap) captureWrap.classList.toggle('card-active', gpaGroupMode && gpaCardMode);
 
         if (!gpaGroupMode) {
             renderGpaNormal(container);
@@ -4829,13 +4900,23 @@
     }
 
     function renderGpaGrouped(container) {
+        const wrap = document.createElement('div');
+        if (gpaCardMode) {
+            wrap.className = 'gpa-grid-view';
+        } else {
+            wrap.style.width = '100%';
+        }
+
         gpaSemesters.forEach((sem, idx) => {
             const card = document.createElement('div');
-            card.className = 'gpa-semester-card';
-            card.style.cssText = 'background: rgba(255,255,255,0.02); border: 1px solid rgba(233,30,140,0.15); border-radius: 12px; margin-bottom: 24px; padding: 24px; position:relative;';
+            // Card mode uses grid card style; list mode uses stacked list-card style
+            card.className = gpaCardMode ? 'gpa-semester-card' : 'gpa-list-card';
+            card.id = `card-${sem.id}`;
+
+            let htmlCore = '';
 
             if (sem.mode === 'summary') {
-                card.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+                htmlCore = `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
                         <h3 style="margin:0; font-size:1.1rem; color:var(--accent-pink); padding:4px; display:flex; align-items:center; gap:8px;">
                             <span contenteditable="true" onblur="gpaUpdateSemName('${sem.id}', this.innerText)" style="border-bottom:1px dashed rgba(255,255,255,0.5); outline:none; min-width:50px;" title="Click to rename">${sem.name}</span>
                             <span style="font-size:0.8rem; opacity:0.6; pointer-events:none;">✏️</span>
@@ -4857,7 +4938,6 @@
                             <input type="number" class="gpa-input" value="${sem.summaryHours}" oninput="gpaUpdateSummary('${sem.id}', 'hours', this.value)" placeholder="e.g. 15" min="0" step="1">
                         </div>
                     </div>`;
-                container.appendChild(card);
             } else {
                 const totalCr = sem.subjects.reduce((sum, s) => sum + s.credits, 0);
                 let gpaLabel = '';
@@ -4873,7 +4953,7 @@
                     const sLtr = getGpaLetterForValue(sGPA);
                     gpaLabel = `<span style="background:${sLtr.bg}; color:${sLtr.color}; padding:4px 10px; border-radius:10px; font-weight:bold; font-size:0.9rem; border:1px solid ${sLtr.color}; margin-right:12px;">${sGPA.toFixed(2)}</span>`;
                 }
-                card.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:16px; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+                htmlCore = `<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:16px; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
                         <h3 style="margin:0; font-size:1.15rem; color:var(--accent-pink); flex:1; padding:4px; min-width:120px; display:flex; align-items:center; gap:8px;">
                             <span contenteditable="true" onblur="gpaUpdateSemName('${sem.id}', this.innerText)" style="border-bottom:1px dashed rgba(255,255,255,0.5); outline:none; min-width:50px;" title="Click to rename">${sem.name}</span>
                             <span style="font-size:0.8rem; opacity:0.6; pointer-events:none;">✏️</span>
@@ -4888,7 +4968,17 @@
                     </div>
                     <div id="gpa-subj-list-${sem.id}" style="min-height:50px; padding-bottom:10px;" ondragover="gpaDragOver(event, '${sem.id}')" ondrop="gpaDrop(event, '${sem.id}')"></div>
                     ${renderGpaAddBar(sem.id)}`;
-                container.appendChild(card);
+            }
+
+            card.innerHTML = htmlCore;
+            wrap.appendChild(card);
+        });
+
+        container.appendChild(wrap);
+
+        // Render subjective datasets reliably 
+        gpaSemesters.forEach(sem => {
+            if (sem.mode !== 'summary') {
                 renderSubjectRows(sem, document.getElementById(`gpa-subj-list-${sem.id}`));
             }
         });
@@ -5263,6 +5353,7 @@
         const exportBar = document.getElementById('gpa-export-bar');
 
         if (!hasAnyGrade) {
+            resultArea.style.cssText = 'margin: 30px auto; display: block; max-width: 400px;';
             resultArea.innerHTML = `<div class="gpa-result-card">
                 <div class="gpa-result-label">Cumulative GPA</div>
                 <div class="gpa-result-value" style="font-size:1.5rem; -webkit-text-fill-color:#555;">Enter grades above</div>
@@ -5276,6 +5367,7 @@
 
         const cumGpa = globalPoints / globalCredits;
 
+        resultArea.style.cssText = 'margin: 30px auto; display: block; max-width: 400px;';
         resultArea.innerHTML = `<div class="gpa-result-card" id="gpa-capture-area">
             <div class="gpa-result-label">Cumulative GPA</div>
             <div class="gpa-result-value">${cumGpa.toFixed(2)}</div>
@@ -5308,7 +5400,55 @@
         const exportBar = document.getElementById('gpa-export-bar');
         const backBtn = document.querySelector('#gpa-page > .back-btn');
         const toggles = document.getElementById('gpa-mode-toggles');
-        capturePageImage(el, 'gpa-calculator.png', [exportBar, backBtn, toggles]);
+
+        if (!el) { showToast('Nothing to capture', 'locked'); return; }
+        showToast('📸 Generating image...', 'locked');
+
+        [exportBar, backBtn, toggles].forEach(item => { if (item) item.style.display = 'none'; });
+
+        // In card/grid mode, force a wide container so the grid renders at full columns
+        const isGrid = gpaGroupMode && gpaCardMode;
+        const GRID_CAPTURE_WIDTH = 1400; // wide enough for 3 × 420px columns + gaps
+
+        const origMaxWidth = el.style.maxWidth;
+        const origWidth = el.style.width;
+        const origPadding = el.style.padding;
+        const origBg = el.style.background;
+
+        if (isGrid) {
+            el.style.maxWidth = GRID_CAPTURE_WIDTH + 'px';
+            el.style.width = GRID_CAPTURE_WIDTH + 'px';
+        }
+        el.style.padding = '40px 20px';
+        el.style.background = '#0a0012';
+
+        // Let the browser reflow before measuring
+        requestAnimationFrame(() => {
+            const captureWidth = isGrid ? GRID_CAPTURE_WIDTH : el.scrollWidth;
+
+            html2canvas(el, {
+                backgroundColor: '#0a0012',
+                scale: 2,
+                useCORS: true,
+                scrollY: -window.scrollY,
+                width: captureWidth,
+                windowWidth: captureWidth
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'gpa-calculator.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                showToast('📸 Image saved!', 'locked');
+            }).catch(() => {
+                showToast('⚠️ Could not generate image', 'locked');
+            }).finally(() => {
+                [exportBar, backBtn, toggles].forEach(item => { if (item) item.style.display = (item && item.id && item.id.includes('bar')) ? 'flex' : ''; });
+                el.style.maxWidth = origMaxWidth;
+                el.style.width = origWidth;
+                el.style.padding = origPadding;
+                el.style.background = origBg;
+            });
+        });
     }
 
     function capturePageImage(el, fileName, hideElements = []) {
@@ -5327,6 +5467,7 @@
             scale: 2,
             useCORS: true,
             scrollY: -window.scrollY,
+            width: el.scrollWidth,
             windowWidth: el.scrollWidth
         }).then(canvas => {
             const link = document.createElement('a');
@@ -5365,6 +5506,7 @@
             subjects: gpaSubjects,
             semesters: gpaSemesters,
             groupMode: gpaGroupMode,
+            cardMode: gpaCardMode,
             cumulativeOn: gpaCumulativeOn,
             cumGpa: gpaCumGpa,
             cumHours: gpaCumHours
@@ -5426,6 +5568,7 @@
                 gpaSubjects = parsed.subjects;
                 gpaSemesters = parsed.semesters || [];
                 gpaGroupMode = !!parsed.groupMode;
+                gpaCardMode = !!parsed.cardMode;
                 gpaCumulativeOn = !!parsed.cumulativeOn;
                 gpaCumGpa = parsed.cumGpa || '';
                 gpaCumHours = parsed.cumHours || '';
