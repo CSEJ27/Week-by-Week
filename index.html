@@ -542,7 +542,13 @@
         .gpa-cum-toggle:hover { background: rgba(233, 30, 140, 0.15); color: white; border-color: var(--accent-pink); box-shadow: 0 0 15px rgba(233, 30, 140, 0.3); }
         .gpa-cum-toggle.active { background: rgba(233, 30, 140, 0.25); color: white; border-color: var(--accent-pink); box-shadow: 0 0 20px rgba(233, 30, 140, 0.5); text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
         .gpa-row-inputs { display: flex; gap: 6px; align-items: center; min-width: 180px; }
+        .gpa-row-updown { display: none; gap: 4px; padding-right: 8px; }
+        .gpa-row-btn { background: rgba(255,255,255,0.1); border: none; color: white; padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; transition: 0.2s; font-family: 'Orbitron', sans-serif; }
+        .gpa-row-btn:hover:not(:disabled) { background: rgba(255,255,255,0.25); color: var(--accent-pink); }
+        .gpa-row-btn:disabled { opacity: 0.3; cursor: not-allowed; }
         @media (max-width: 768px) {
+            .gpa-drag-handle > span[title="Drag to reorder"] { display: none; }
+            .gpa-row-updown { display: flex; }
             .gpa-row { gap: 6px; padding: 8px 10px; }
             .gpa-row-name { min-width: 80px; font-size: 0.82rem; }
             .gpa-result-value { font-size: 2.5rem; }
@@ -4948,70 +4954,7 @@
             row.ondragleave = () => { row.style.borderTop = ""; };
             row.ondrop = (e) => { e.preventDefault(); e.stopPropagation(); row.style.borderTop = ""; gpaDropOnSubject(sem.id, sIdx); };
 
-            row.addEventListener('touchstart', (e) => {
-                if(e.touches.length > 1) return;
-                if(['INPUT','SELECT','BUTTON', 'OPTION'].includes(e.target.tagName)) return;
-                gpaTouchTimeout = setTimeout(() => {
-                    if(window.navigator.vibrate) window.navigator.vibrate(50);
-                    gpaDragSubject = sub; gpaDragSourceSemId = sem.id;
-                    row.classList.add('gpa-dragging');
-                    row.style.position = 'fixed';
-                    row.style.zIndex = 9999;
-                    row.style.width = row.offsetWidth + 'px';
-                    row.style.boxShadow = '0 10px 30px rgba(233,30,140,0.5)';
-                    const touch = e.touches[0];
-                    row.style.left = (touch.clientX - row.offsetWidth/2) + 'px';
-                    row.style.top = (touch.clientY - row.offsetHeight/2) + 'px';
-                }, 400);
-            }, {passive: false});
-
-            row.addEventListener('touchmove', (e) => {
-                if(row.classList.contains('gpa-dragging')) {
-                    e.preventDefault();
-                    const touch = e.touches[0];
-                    row.style.left = (touch.clientX - row.offsetWidth/2) + 'px';
-                    row.style.top = (touch.clientY - row.offsetHeight/2) + 'px';
-                } else clearTimeout(gpaTouchTimeout);
-            }, {passive: false});
-
-            row.addEventListener('touchend', (e) => {
-                clearTimeout(gpaTouchTimeout);
-                if(row.classList.contains('gpa-dragging')) {
-                    e.preventDefault();
-                    row.classList.remove('gpa-dragging');
-                    row.style.position = ''; row.style.zIndex = ''; row.style.width = ''; row.style.boxShadow = '';
-                    row.style.left = ''; row.style.top = '';
-                    
-                    const touch = e.changedTouches[0];
-                    row.style.display = 'none';
-                    const elem = document.elementFromPoint(touch.clientX, touch.clientY);
-                    row.style.display = 'flex';
-                    
-                    if(elem) {
-                        const targetRow = elem.closest('.gpa-row');
-                        if (targetRow) {
-                            let tSemId = null;
-                            if (targetRow.id.includes('normal')) {
-                                tSemId = 'normal';
-                            } else {
-                                const tSemObj = gpaSemesters.find(s => targetRow.id.includes(s.id));
-                                if (tSemObj) tSemId = tSemObj.id;
-                            }
-                            if (tSemId) {
-                                const m = targetRow.id.match(/-([0-9]+)$/);
-                                if (m) gpaDropOnSubject(tSemId, parseInt(m[1], 10));
-                            }
-                        } else {
-                            const targetSemContainer = elem.closest('[id^="gpa-subj-list-"]');
-                            if (targetSemContainer) {
-                                const tSemId = targetSemContainer.id.replace('gpa-subj-list-', '');
-                                gpaDrop(null, tSemId);
-                            } else renderGpaPage();
-                        }
-                    } else renderGpaPage();
-                }
-            });
-            row.addEventListener('touchcancel', () => clearTimeout(gpaTouchTimeout));
+            // Mobile drag and drop touch events replaced with Up/Down buttons
 
             let gradeOpts = '<option value="">Grade</option>';
             GPA_GRADE_SCALE.forEach(g => {
@@ -5029,6 +4972,10 @@
 
             row.innerHTML = `<div class="gpa-drag-handle gpa-row-name" style="flex:1; display:flex; align-items:center;">
                 <span style="opacity:0.3; padding:0 6px 0 0; cursor:grab; font-weight:normal;" title="Drag to reorder">⋮⋮</span>
+                <div class="gpa-row-updown">
+                    <button class="gpa-row-btn" onclick="gpaMoveSubject('${sem.id}', ${sIdx}, -1)" ${sIdx === 0 ? 'disabled' : ''}>↑</button>
+                    <button class="gpa-row-btn" onclick="gpaMoveSubject('${sem.id}', ${sIdx}, 1)" ${sIdx === sem.subjects.length - 1 ? 'disabled' : ''}>↓</button>
+                </div>
                 <div>
                     ${sub.code ? `<span style="color:var(--accent-purple); font-family:'Orbitron',sans-serif; font-size:0.7rem; margin-right:6px;">${sub.code}</span>` : ''}
                     ${sub.name}
@@ -5109,6 +5056,19 @@
         const subList = semId === 'normal' ? gpaSubjects : gpaSemesters.find(s => s.id === semId)?.subjects;
         if (!subList) return;
         subList.splice(idx, 1);
+        renderGpaPage();
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    function gpaMoveSubject(semId, idx, dir) {
+        const subList = semId === 'normal' ? gpaSubjects : gpaSemesters.find(s => s.id === semId)?.subjects;
+        if (!subList) return;
+        const newIdx = idx + dir;
+        if (newIdx < 0 || newIdx >= subList.length) return;
+        const temp = subList[idx];
+        subList[idx] = subList[newIdx];
+        subList[newIdx] = temp;
         renderGpaPage();
         gpaRecalc();
         gpaSaveState();
