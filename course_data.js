@@ -7166,7 +7166,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
-                        "desc": "Slides [0:40].",
+                        "desc": "[0 :40]",
                         "isNew": false
                     },
                     "Section": {
@@ -7343,7 +7343,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
-                        "desc": "41: END",
+                        "desc": "[41: END]",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
@@ -7499,8 +7499,8 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/file/d/1nXOW1pBD6oQVPinmjEDaxStBicomqZlY/view?usp=drive_link",
-                        "desc": "",
+                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "desc": "[1 : 7]",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
@@ -7646,8 +7646,8 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/drive/u/5/folders/1-Mwr85KrGPR0hjm7K9jyd_Y41N2Y1a65",
-                        "desc": "",
+                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "desc": "[7 : 40]",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -7773,8 +7773,8 @@ window.COURSE_DATA = [
                     },
                     "Slides": {
                         "vis": true,
-                        "link": "https://drive.google.com/file/d/1nXOW1pBD6oQVPinmjEDaxStBicomqZlY/view",
-                        "desc": "",
+                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "desc": "[42 : 88]",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -7900,6 +7900,147 @@ window.COURSE_DATA = [
                     }
                 },
                 "recentDate": "14/3/2026 1:44 AM",
+                "isRecent": true,
+                "isNew": true
+            },
+            {
+                "title": "WEEK 6",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/DU4k9AnpI_Q",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "desc": "2- State Space [93 : END]\n3- Games [1 : 25]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "22/3/2026 12:44 AM",
                 "isRecent": true,
                 "isNew": true
             }
