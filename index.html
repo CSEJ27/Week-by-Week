@@ -162,6 +162,25 @@
             .waterfall-item { animation: none !important; opacity: 1; transform: none; }
             body::before, body::after { animation: none !important; transform: none !important; opacity: 0.75; }
         }
+        .gpa-row { display: flex; align-items: center; gap: 14px; padding: 16px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .gpa-row:hover { background: rgba(255,255,255,0.02); }
+        .gpa-row-name { font-weight: bold; font-size: 0.95rem; }
+        .gpa-row-credits { color: #888; font-size: 0.85rem; }
+        .gpa-row-inputs { display: flex; gap: 8px; }
+        .gpa-row-result { font-family: 'Orbitron', Arial, sans-serif; font-weight: bold; font-size: 1.15rem; min-width: 44px; text-align: right; }
+        .gpa-row-remove { background: none; border: none; color: #ff3b30; cursor: pointer; font-size: 1.2rem; padding: 0 5px; opacity: 0.7; transition: 0.2s; }
+        .gpa-row-remove:hover { opacity: 1; transform: scale(1.1); }
+        .gpa-dragging { opacity: 0.8; transform: scale(1.02); }
+
+        @media (max-width: 600px) {
+            .gpa-row { flex-wrap: wrap; position: relative; padding: 16px 12px; }
+            .gpa-row-name { flex: 0 0 100% !important; margin-bottom: 12px; font-size: 1.05rem; padding-right: 70px; box-sizing: border-box; }
+            .gpa-row-credits { position: absolute; top: 18px; right: 40px; }
+            .gpa-row-remove { position: absolute; text-align: center; right: 8px; top: 16px; transform: none; width: 26px; height: 26px; line-height: 26px; padding: 0; }
+            .gpa-row-inputs { flex: 1; justify-content: flex-start; margin-right: 12px; }
+            .gpa-row-result { margin-left: auto; display: flex; align-items: center; }
+            .gpa-drag-handle { transform: translateY(-2px); }
+        }
 
         /* ===== SMART NAVBAR ===== */
         .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba(10, 0, 18, 0.92); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(233, 30, 140, 0.25); padding: 0 24px; display: flex; align-items: center; height: 60px; transition: box-shadow 0.3s; }
@@ -515,6 +534,10 @@
         .gpa-export-bar { display: flex; gap: 8px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
         .gpa-export-btn { background: rgba(181, 25, 214, 0.1); border: 1px solid var(--accent-purple); color: var(--accent-purple); padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.82rem; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 6px; }
         .gpa-export-btn:hover { background: var(--accent-purple); color: white; box-shadow: 0 0 15px var(--accent-purple); text-shadow: none; pointer-events: auto; }
+        .midterm-export-btn { background: rgba(0, 122, 255, 0.15); border: 1px solid #007aff; color: #007aff; padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.82rem; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 6px; }
+        .midterm-export-btn:hover { background: #007aff; color: white; box-shadow: 0 0 15px #007aff; text-shadow: none; }
+        .timetable-export-btn { background: rgba(233, 30, 140, 0.12); border: 1px solid rgba(233,30,140,0.4); color: #e91e8c; padding: 8px 16px; border-radius: 10px; cursor: pointer; font-size: 0.82rem; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 6px; }
+        .timetable-export-btn:hover { background: #e91e8c; color: white; box-shadow: 0 0 15px #e91e8c; border-color: #e91e8c; text-shadow: none; }
         .gpa-cum-toggle { background: rgba(233, 30, 140, 0.08); border: 2px solid rgba(233, 30, 140, 0.4); color: var(--text-sub); padding: 10px 24px; border-radius: 25px; cursor: pointer; font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; transition: all 0.3s ease; font-family: 'Work Sans', sans-serif; }
         .gpa-cum-toggle:hover { background: rgba(233, 30, 140, 0.15); color: white; border-color: var(--accent-pink); box-shadow: 0 0 15px rgba(233, 30, 140, 0.3); }
         .gpa-cum-toggle.active { background: rgba(233, 30, 140, 0.25); color: white; border-color: var(--accent-pink); box-shadow: 0 0 20px rgba(233, 30, 140, 0.5); text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
@@ -662,11 +685,16 @@
 
     <div id="midterm-page" class="page">
         <button id="midterm-back-btn" class="back-btn" onclick="smartBack()">← Back</button>
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-            <h1 style="color:#007aff">MIDTERM EXAMS</h1>
+        <div id="midterm-capture-wrap">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                <h1 style="color:#007aff">MIDTERM EXAMS</h1>
+            </div>
+            <p class="subtitle" style="margin-bottom: 30px;">27 March — 3 April 2026 &nbsp;·&nbsp; Spring 2026</p>
+            <div id="midterm-list" style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column;"></div>
         </div>
-        <p class="subtitle" style="margin-bottom: 30px;">27 March — 3 April 2026 &nbsp;·&nbsp; Spring 2026</p>
-        <div id="midterm-list" style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column;"></div>
+        <div id="midterm-export-bar" style="display:flex; justify-content:center; margin-top:30px;">
+            <button class="midterm-export-btn" onclick="exportMidtermImage()">📸 Save as Image</button>
+        </div>
     </div>
 
     <div id="useful-links-page" class="page">
@@ -679,11 +707,16 @@
 
     <div id="timetable-page" class="page">
         <button class="back-btn" onclick="smartBack()">← Back</button>
-        <h1 style="color:#ff375f">TIMETABLE</h1>
-        <p class="subtitle" style="margin-bottom: 20px;">Your weekly class schedule</p>
-        <div id="timetable-controls"></div>
-        <div id="timetable-legend"></div>
-        <div class="tt-grid-wrap"><table class="tt-grid" id="timetable-grid"></table></div>
+        <div id="timetable-capture-wrap">
+            <h1 style="color:#ff375f">TIMETABLE</h1>
+            <p class="subtitle" style="margin-bottom: 20px;">Your weekly class schedule</p>
+            <div id="timetable-controls"></div>
+            <div id="timetable-legend"></div>
+            <div class="tt-grid-wrap"><table class="tt-grid" id="timetable-grid"></table></div>
+        </div>
+        <div id="timetable-export-bar" style="display:flex; justify-content:center; margin-top:30px;">
+            <button class="timetable-export-btn" onclick="exportTimetableImage()">📸 Save as Image</button>
+        </div>
     </div>
 
     <div id="directory-page" class="page">
@@ -699,37 +732,11 @@
         <h1 style="background: linear-gradient(to right, var(--accent-pink), var(--accent-purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 30px rgba(233, 30, 140, 0.3);">GPA CALCULATOR</h1>
         <p class="subtitle" style="margin-bottom: 20px;">Calculate your semester or cumulative GPA live</p>
         <div class="gpa-wrap" id="gpa-capture-wrap">
-            <div style="text-align:center; margin-bottom:20px;">
+            <div id="gpa-mode-toggles" style="text-align:center; margin-bottom:20px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
                 <button class="gpa-cum-toggle" id="gpa-cum-toggle" onclick="toggleGpaCumulative()">📈 Current GPA</button>
+                <button class="gpa-cum-toggle" id="gpa-group-toggle" onclick="toggleGpaGroupMode()">🗂️ Group Semesters</button>
             </div>
-            <div class="gpa-cumulative-box" id="gpa-cum-box">
-                <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end;">
-                    <div style="flex:1; min-width:140px;">
-                        <label>Current GPA</label>
-                        <input type="number" class="gpa-input" id="gpa-cum-gpa" placeholder="e.g. 3.5" min="0" max="4" step="0.01" oninput="gpaRecalc()">
-                    </div>
-                    <div style="flex:1; min-width:140px;">
-                        <label>Passed Credit Hours</label>
-                        <input type="number" class="gpa-input" id="gpa-cum-hours" placeholder="e.g. 30" min="0" step="1" oninput="gpaRecalc()">
-                    </div>
-                </div>
-            </div>
-            <div class="gpa-subjects-header">
-                <h3>Subjects</h3>
-                <span id="gpa-total-credits" style="color:#888; font-size:0.8rem;"></span>
-            </div>
-            <div id="gpa-subjects-list"></div>
-            <div class="gpa-add-bar">
-                <div class="gpa-add-dropdown">
-                    <button class="gpa-add-btn" onclick="toggleGpaAddMenu()">+ Add Subject</button>
-                    <div class="gpa-add-menu" id="gpa-add-menu"></div>
-                </div>
-                <div class="gpa-add-custom" id="gpa-add-custom" style="display:none;">
-                    <input type="text" class="gpa-input" id="gpa-custom-name" placeholder="Subject name" style="flex:1; min-width:100px;">
-                    <input type="number" class="gpa-input" id="gpa-custom-credits" placeholder="Credits" min="1" max="6" style="width:80px;">
-                    <button class="gpa-add-btn" onclick="gpaAddCustom()" style="border-style:solid;">Add</button>
-                </div>
-            </div>
+            <div id="gpa-content-area" style="min-height:200px;"></div>
             <div id="gpa-result-area"></div>
             <div class="gpa-export-bar" id="gpa-export-bar" style="display:none;">
                 <button class="gpa-export-btn" onclick="exportGpaImage()">📸 Save as Image</button>
@@ -2350,28 +2357,28 @@
         let whenHtml = task.when || '';
         if(task.whenLink && task.whenLink.trim() !== '') {
             const whenNote = task.whenNote || 'Check your time here';
-            whenHtml = `${task.when || ''} <a href="${task.whenLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${whenNote}</a>`;
+            whenHtml = (task.when ? task.when + ' ' : '') + `<a href="${task.whenLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${whenNote}</a>`;
         }
         
         // Where field with URL icon
         let whereHtml = task.where || '';
         if(task.whereLink && task.whereLink.trim() !== '') {
             const whereNote = task.whereNote || 'Check your place here';
-            whereHtml = `${task.where || ''} <a href="${task.whereLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${whereNote}</a>`;
+            whereHtml = (task.where ? task.where + ' ' : '') + `<a href="${task.whereLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${whereNote}</a>`;
         }
 
         // Coverage field with URL icon
         let coverageHtml = task.coverage || '';
         if(task.coverageLink && task.coverageLink.trim() !== '') {
             const coverageNote = task.coverageNote || 'Check coverage here';
-            coverageHtml = `${task.coverage || ''} <a href="${task.coverageLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${coverageNote}</a>`;
+            coverageHtml = (task.coverage ? task.coverage + ' ' : '') + `<a href="${task.coverageLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${coverageNote}</a>`;
         }
 
         // Submit field with URL
         let submitHtml = task.submitText || '';
         if(task.submitLink && task.submitLink.trim() !== '') {
             const submitNote = task.submitNote || 'Submit here';
-            submitHtml = `${task.submitText || ''} <a href="${task.submitLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${submitNote}</a>`;
+            submitHtml = (task.submitText ? task.submitText + ' ' : '') + `<a href="${task.submitLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${submitNote}</a>`;
         }
 
         const fields = [
@@ -2422,7 +2429,7 @@
         
         let whereHtml = exam.where || '';
         if(exam.whereLink && exam.whereLink.trim() !== '') {
-            whereHtml = `${exam.where || ''} <a href="${exam.whereLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 Check your place here</a>`;
+            whereHtml = (exam.where ? exam.where + ' ' : '') + `<a href="${exam.whereLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 Check your place here</a>`;
         }
 
         const fields = [
@@ -2892,8 +2899,8 @@
 
     document.addEventListener('keydown', function(e) {
         if (!isPC()) return;
-        // Skip if user is typing in an input/textarea/select
-        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+        // Skip if user is typing in an input/textarea/select or contenteditable element
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT' || e.target.isContentEditable) return;
         // Skip if modal is open (except Escape)
         const modalOpen = document.querySelector('.modal-overlay.active');
 
@@ -3460,8 +3467,8 @@
             'content':   { pdf: true,  word: true,  screenshot: false, share: true },
             'useful-links': { pdf: true, word: true, screenshot: false, share: true },
             'schedule':  { pdf: false, word: false, screenshot: true,  share: false },
-            'midterm':   { pdf: false, word: false, screenshot: true,  share: false },
-            'timetable': { pdf: false, word: false, screenshot: true,  share: false },
+            'midterm':   { pdf: false, word: false, screenshot: false, share: false },
+            'timetable': { pdf: false, word: false, screenshot: false, share: false },
             'directory': { pdf: false, word: false, screenshot: false, share: true }
         };
         return map[activePageId] || { pdf: false, word: false, screenshot: false, share: false };
@@ -4573,7 +4580,11 @@
 
     const GPA_EXCLUDED_CODES = ['QC', 'RB', 'SW'];
     let gpaSubjects = [];
+    let gpaSemesters = [];
+    let gpaGroupMode = false;
     let gpaCumulativeOn = false;
+    let gpaCumGpa = '';
+    let gpaCumHours = '';
     let gpaInitialized = false;
 
     function parseCreditsNumber(creditsStr) {
@@ -4630,10 +4641,12 @@
     function gpaSaveState() {
         try {
             const state = {
-                subjects: gpaSubjects.map(s => ({ id: s.id, code: s.code, name: s.name, credits: s.credits, grade: s.grade, pointsLost: s.pointsLost })),
+                subjects: gpaSubjects,
+                semesters: gpaSemesters,
+                groupMode: gpaGroupMode,
                 cumulativeOn: gpaCumulativeOn,
-                cumGpa: document.getElementById('gpa-cum-gpa') ? document.getElementById('gpa-cum-gpa').value : '',
-                cumHours: document.getElementById('gpa-cum-hours') ? document.getElementById('gpa-cum-hours').value : ''
+                cumGpa: gpaCumGpa,
+                cumHours: gpaCumHours
             };
             localStorage.setItem(GPA_STORAGE_KEY, JSON.stringify(state));
         } catch(e) {}
@@ -4650,273 +4663,675 @@
     function showGpa(push = true) {
         if (!gpaInitialized) {
             const saved = gpaLoadState();
-            if (saved && saved.subjects && saved.subjects.length > 0) {
-                gpaSubjects = saved.subjects;
+            if (saved) {
+                gpaGroupMode = !!saved.groupMode;
                 gpaCumulativeOn = !!saved.cumulativeOn;
+                gpaCumGpa = saved.cumGpa || '';
+                gpaCumHours = saved.cumHours || '';
+                gpaSubjects = saved.subjects || getGpaDefaultSubjects();
+                gpaSemesters = saved.semesters || [];
+                if (gpaSemesters.length === 0) {
+                    // Initialize groups with Prior Semesters + Current Semester
+                    gpaSemesters.push({ id: 'sem_prior', name: 'Prior Semesters', mode: 'summary', summaryGpa: gpaCumGpa, summaryHours: gpaCumHours, subjects: [] });
+                    gpaSemesters.push({ id: 'sem_curr', name: 'Current Semester', mode: 'subjects', summaryGpa: '', summaryHours: '', subjects: JSON.parse(JSON.stringify(gpaSubjects)) });
+                }
             } else {
                 gpaSubjects = getGpaDefaultSubjects();
+                gpaSemesters = [
+                    { id: 'sem_prior', name: 'Prior Semesters', mode: 'summary', summaryGpa: '', summaryHours: '', subjects: [] },
+                    { id: 'sem_curr', name: 'Current Semester', mode: 'subjects', summaryGpa: '', summaryHours: '', subjects: JSON.parse(JSON.stringify(gpaSubjects)) }
+                ];
             }
             gpaInitialized = true;
         }
         renderGpaPage();
-        // Restore cumulative inputs after render
-        const saved = gpaLoadState();
-        if (saved) {
-            const cumGpaEl = document.getElementById('gpa-cum-gpa');
-            const cumHrsEl = document.getElementById('gpa-cum-hours');
-            if (cumGpaEl && saved.cumGpa) cumGpaEl.value = saved.cumGpa;
-            if (cumHrsEl && saved.cumHours) cumHrsEl.value = saved.cumHours;
-        }
+        
         gpaRecalc();
-        nav('gpa', push);
+        if (push) nav('gpa', true);
     }
 
     function toggleGpaCumulative() {
-        gpaCumulativeOn = !gpaCumulativeOn;
-        const btn = document.getElementById('gpa-cum-toggle');
-        const box = document.getElementById('gpa-cum-box');
-        btn.classList.toggle('active', gpaCumulativeOn);
-        box.classList.toggle('visible', gpaCumulativeOn);
+        if (!gpaGroupMode) {
+            gpaCumulativeOn = !gpaCumulativeOn;
+        }
+        renderGpaPage();
         gpaRecalc();
+        gpaSaveState();
+    }
+
+    function toggleGpaGroupMode() {
+        gpaGroupMode = !gpaGroupMode;
+        renderGpaPage();
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    function gpaAddSemester() {
+        const id = 'sem_' + Date.now();
+        const count = gpaSemesters.length + 1;
+        gpaSemesters.push({ id: id, name: 'Semester ' + count, mode: 'subjects', summaryGpa: '', summaryHours: '', subjects: [] });
+        renderGpaPage();
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    function toggleSemesterMode(id) {
+        const sem = gpaSemesters.find(s => s.id === id);
+        if (sem) {
+            sem.mode = sem.mode === 'subjects' ? 'summary' : 'subjects';
+            renderGpaPage();
+            gpaRecalc();
+            gpaSaveState();
+        }
+    }
+
+    function gpaMoveSemester(id, dir) {
+        const idx = gpaSemesters.findIndex(s => s.id === id);
+        if (idx < 0) return;
+        const newIdx = idx + dir;
+        if (newIdx < 0 || newIdx >= gpaSemesters.length) return;
+        const temp = gpaSemesters[idx];
+        gpaSemesters[idx] = gpaSemesters[newIdx];
+        gpaSemesters[newIdx] = temp;
+        renderGpaPage();
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    function gpaRemoveSemester(id) {
+        gpaSemesters = gpaSemesters.filter(s => s.id !== id);
+        if (gpaSemesters.length === 0) gpaSemesters.push({ id: 'sem_1', name: 'Semester 1', isSummary: false, subjects: [] });
+        renderGpaPage();
+        gpaRecalc();
+        gpaSaveState();
     }
 
     function renderGpaPage() {
-        const btn = document.getElementById('gpa-cum-toggle');
-        const box = document.getElementById('gpa-cum-box');
-        if (btn) btn.classList.toggle('active', gpaCumulativeOn);
-        if (box) box.classList.toggle('visible', gpaCumulativeOn);
-        renderGpaSubjectRows();
+        const cumToggle = document.getElementById('gpa-cum-toggle');
+        const groupToggle = document.getElementById('gpa-group-toggle');
+        if (cumToggle) {
+            cumToggle.style.display = gpaGroupMode ? 'none' : 'inline-block';
+            if (!gpaGroupMode) cumToggle.classList.toggle('active', gpaCumulativeOn);
+        }
+        if (groupToggle) groupToggle.classList.toggle('active', gpaGroupMode);
+
+        const container = document.getElementById('gpa-content-area');
+        if (!container) return;
+        container.innerHTML = '';
+
+        if (!gpaGroupMode) {
+            renderGpaNormal(container);
+        } else {
+            renderGpaGrouped(container);
+        }
     }
 
-    function renderGpaSubjectRows() {
-        const list = document.getElementById('gpa-subjects-list');
-        if (!list) return;
-        list.innerHTML = '';
+    function renderGpaNormal(container) {
+        const totalCr = gpaSubjects.reduce((sum, s) => sum + s.credits, 0);
+        let html = '';
+        if (gpaCumulativeOn) {
+            html += `<div class="gpa-cumulative-box visible" id="gpa-cum-box" style="margin-bottom:20px;">
+                <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end;">
+                    <div style="flex:1; min-width:140px;">
+                        <label>Current GPA</label>
+                        <input type="number" class="gpa-input" id="gpa-cum-gpa" placeholder="e.g. 3.5" min="0" max="4" step="0.01" value="${gpaCumGpa}" oninput="if(gpaGroupMode)return; gpaCumGpa=this.value; gpaRecalc(); gpaSaveState();">
+                    </div>
+                    <div style="flex:1; min-width:140px;">
+                        <label>Passed Credit Hours</label>
+                        <input type="number" class="gpa-input" id="gpa-cum-hours" placeholder="e.g. 30" min="0" step="1" value="${gpaCumHours}" oninput="if(gpaGroupMode)return; gpaCumHours=this.value; gpaRecalc(); gpaSaveState();">
+                    </div>
+                </div>
+            </div>`;
+        }
+        html += `<div class="gpa-subjects-header" style="display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:14px; margin-bottom:16px;">
+            <h3 style="margin:0; font-size:1.1rem; color:var(--accent-pink);">Subjects</h3>
+            <span id="gpa-total-credits" style="color:#888; font-size:0.8rem;">Total: ${totalCr} credits</span>
+        </div>
+        <div id="gpa-subj-list-normal" style="min-height:50px; padding-bottom:16px;" ondragover="gpaDragOver(event, 'normal')" ondrop="gpaDrop(event, 'normal')"></div>
+        ${renderGpaAddBar('normal')}`;
+        container.innerHTML = html;
+        
+        const list = document.getElementById('gpa-subj-list-normal');
+        renderSubjectRows({ id: 'normal', subjects: gpaSubjects }, list);
+    }
 
-        gpaSubjects.forEach((sub, idx) => {
+    function renderGpaGrouped(container) {
+        gpaSemesters.forEach((sem, idx) => {
+            const card = document.createElement('div');
+            card.className = 'gpa-semester-card';
+            card.style.cssText = 'background: rgba(255,255,255,0.02); border: 1px solid rgba(233,30,140,0.15); border-radius: 12px; margin-bottom: 24px; padding: 24px; position:relative;';
+
+            if (sem.mode === 'summary') {
+                card.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+                        <h3 style="margin:0; font-size:1.1rem; color:var(--accent-pink); padding:4px; display:flex; align-items:center; gap:8px;">
+                            <span contenteditable="true" onblur="gpaUpdateSemName('${sem.id}', this.innerText)" style="border-bottom:1px dashed rgba(255,255,255,0.5); outline:none; min-width:50px;" title="Click to rename">${sem.name}</span>
+                            <span style="font-size:0.8rem; opacity:0.6; pointer-events:none;">✏️</span>
+                        </h3>
+                        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+                            <button class="gpa-add-btn" style="padding:6px 10px; font-size:0.8rem; border:1px solid rgba(255,255,255,0.2); border-radius:12px;" onclick="toggleSemesterMode('${sem.id}')">Switch to Subjects</button>
+                            <button class="gpa-add-btn" style="padding:6px 10px; font-size:0.8rem; border:1px solid rgba(255,255,255,0.2); border-radius:12px;" onclick="gpaMoveSemester('${sem.id}', -1)" title="Move Up"${idx === 0 ? ' disabled style="opacity:0.3; cursor:not-allowed;"' : ''}>↑</button>
+                            <button class="gpa-add-btn" style="padding:6px 10px; font-size:0.8rem; border:1px solid rgba(255,255,255,0.2); border-radius:12px;" onclick="gpaMoveSemester('${sem.id}', 1)" title="Move Down"${idx === gpaSemesters.length - 1 ? ' disabled style="opacity:0.3; cursor:not-allowed;"' : ''}>↓</button>
+                            <button class="gpa-row-remove" onclick="gpaRemoveSemester('${sem.id}')" title="Remove Semester">✕</button>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:flex-end; padding-bottom:8px;">
+                        <div style="flex:1; min-width:140px;">
+                            <label style="font-size:0.85rem; margin-bottom:6px; display:block; color:#888;">Semester GPA</label>
+                            <input type="number" class="gpa-input" value="${sem.summaryGpa}" oninput="gpaUpdateSummary('${sem.id}', 'gpa', this.value)" placeholder="e.g. 3.5" min="0" max="4" step="0.01">
+                        </div>
+                        <div style="flex:1; min-width:140px;">
+                            <label style="font-size:0.85rem; margin-bottom:6px; display:block; color:#888;">Passed Hours</label>
+                            <input type="number" class="gpa-input" value="${sem.summaryHours}" oninput="gpaUpdateSummary('${sem.id}', 'hours', this.value)" placeholder="e.g. 15" min="0" step="1">
+                        </div>
+                    </div>`;
+                container.appendChild(card);
+            } else {
+                const totalCr = sem.subjects.reduce((sum, s) => sum + s.credits, 0);
+                let gpaLabel = '';
+                let pts = 0, crs = 0, hasG = false;
+                sem.subjects.forEach(sub => {
+                    let gInfo = null;
+                    if (sub.grade) gInfo = letterToGrade(sub.grade);
+                    else if (sub.pointsLost !== '') gInfo = pointsToGrade(100 - Number(sub.pointsLost));
+                    if(gInfo) { pts += gInfo.gpa * sub.credits; crs += sub.credits; hasG = true; }
+                });
+                if(hasG && crs > 0) {
+                    const sGPA = pts / crs;
+                    const sLtr = getGpaLetterForValue(sGPA);
+                    gpaLabel = `<span style="background:${sLtr.bg}; color:${sLtr.color}; padding:4px 10px; border-radius:10px; font-weight:bold; font-size:0.9rem; border:1px solid ${sLtr.color}; margin-right:12px;">${sGPA.toFixed(2)}</span>`;
+                }
+                card.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:16px; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+                        <h3 style="margin:0; font-size:1.15rem; color:var(--accent-pink); flex:1; padding:4px; min-width:120px; display:flex; align-items:center; gap:8px;">
+                            <span contenteditable="true" onblur="gpaUpdateSemName('${sem.id}', this.innerText)" style="border-bottom:1px dashed rgba(255,255,255,0.5); outline:none; min-width:50px;" title="Click to rename">${sem.name}</span>
+                            <span style="font-size:0.8rem; opacity:0.6; pointer-events:none;">✏️</span>
+                        </h3>
+                        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+                            ${gpaLabel} <span style="color:#888; font-size:0.85rem;">${totalCr} cr</span>
+                            <button class="gpa-add-btn" style="padding:6px 10px; font-size:0.8rem; border:1px solid rgba(255,255,255,0.2); border-radius:12px;" onclick="toggleSemesterMode('${sem.id}')">Switch to Manual GPA/Hrs</button>
+                            <button class="gpa-add-btn" style="padding:6px 10px; font-size:0.8rem; border:1px solid rgba(255,255,255,0.2); border-radius:12px;" onclick="gpaMoveSemester('${sem.id}', -1)" title="Move Up"${idx === 0 ? ' disabled style="opacity:0.3; cursor:not-allowed;"' : ''}>↑</button>
+                            <button class="gpa-add-btn" style="padding:6px 10px; font-size:0.8rem; border:1px solid rgba(255,255,255,0.2); border-radius:12px;" onclick="gpaMoveSemester('${sem.id}', 1)" title="Move Down"${idx === gpaSemesters.length - 1 ? ' disabled style="opacity:0.3; cursor:not-allowed;"' : ''}>↓</button>
+                            <button class="gpa-row-remove" onclick="gpaRemoveSemester('${sem.id}')" title="Remove Semester">✕</button>
+                        </div>
+                    </div>
+                    <div id="gpa-subj-list-${sem.id}" style="min-height:50px; padding-bottom:10px;" ondragover="gpaDragOver(event, '${sem.id}')" ondrop="gpaDrop(event, '${sem.id}')"></div>
+                    ${renderGpaAddBar(sem.id)}`;
+                container.appendChild(card);
+                renderSubjectRows(sem, document.getElementById(`gpa-subj-list-${sem.id}`));
+            }
+        });
+
+        const addBtns = document.createElement('div');
+        addBtns.style.cssText = 'display:flex; gap:10px; justify-content:center; margin-top:20px;';
+        addBtns.innerHTML = `<button class="gpa-add-btn" onclick="gpaAddSemester()">+ Add Semester</button>`;
+        container.appendChild(addBtns);
+    }
+
+    function renderGpaAddBar(semId) {
+        return `<div class="gpa-add-bar" style="margin-top:10px; background:rgba(0,0,0,0.2); padding:10px; border-radius:12px;">
+            <div class="gpa-add-dropdown" style="margin-right:0;">
+                <button class="gpa-add-btn" onclick="toggleGpaAddMenu('${semId}')">+ Subject</button>
+                <div class="gpa-add-menu" id="gpa-add-menu-${semId}"></div>
+            </div>
+            <div class="gpa-add-custom" id="gpa-add-custom-${semId}" style="display:none; flex-wrap:wrap; margin-top:10px;">
+                <input type="text" class="gpa-input" id="gpa-custom-name-${semId}" placeholder="Name" style="flex:1; min-width:80px;">
+                <input type="number" class="gpa-input" id="gpa-custom-credits-${semId}" placeholder="Cr" min="1" max="6" style="width:60px;">
+                <button class="gpa-add-btn" onclick="gpaAddCustom('${semId}')" style="border-style:solid; border-color:var(--accent-purple);">Add</button>
+            </div>
+        </div>`;
+    }
+
+    function gpaUpdateSemName(semId, name) {
+        const sem = gpaSemesters.find(s => s.id === semId);
+        if (sem) sem.name = name.trim();
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    function gpaUpdateSummary(semId, field, value) {
+        const sem = gpaSemesters.find(s => s.id === semId);
+        if (sem) {
+            if (field === 'gpa') sem.summaryGpa = value;
+            if (field === 'hours') sem.summaryHours = value;
+        }
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    let gpaDragSubject = null;
+    let gpaDragSourceSemId = null;
+    let gpaTouchTimeout = null;
+
+    function renderSubjectRows(sem, container) {
+        if (!container) return;
+        container.innerHTML = '';
+        sem.subjects.forEach((sub, sIdx) => {
             const row = document.createElement('div');
             row.className = 'gpa-row';
-            row.id = 'gpa-row-' + idx;
-            const color = '#ec4899';
+            row.id = `gpa-row-${sem.id}-${sIdx}`;
+            
+            row.draggable = true;
+            row.ondragstart = (e) => { 
+                gpaDragSubject = sub; gpaDragSourceSemId = sem.id; 
+                e.dataTransfer.setData('text/plain', sub.id); 
+                e.dataTransfer.effectAllowed = 'move';
+                row.style.opacity = '0.5';
+            };
+            row.ondragend = () => { row.style.opacity = '1'; };
+            row.ondragover = (e) => { e.preventDefault(); e.stopPropagation(); row.style.borderTop = "2px solid var(--accent-pink)"; };
+            row.ondragleave = () => { row.style.borderTop = ""; };
+            row.ondrop = (e) => { e.preventDefault(); e.stopPropagation(); row.style.borderTop = ""; gpaDropOnSubject(sem.id, sIdx); };
 
-            // Grade dropdown
+            row.addEventListener('touchstart', (e) => {
+                if(e.touches.length > 1) return;
+                if(['INPUT','SELECT','BUTTON', 'OPTION'].includes(e.target.tagName)) return;
+                gpaTouchTimeout = setTimeout(() => {
+                    if(window.navigator.vibrate) window.navigator.vibrate(50);
+                    gpaDragSubject = sub; gpaDragSourceSemId = sem.id;
+                    row.classList.add('gpa-dragging');
+                    row.style.position = 'fixed';
+                    row.style.zIndex = 9999;
+                    row.style.width = row.offsetWidth + 'px';
+                    row.style.boxShadow = '0 10px 30px rgba(233,30,140,0.5)';
+                    const touch = e.touches[0];
+                    row.style.left = (touch.clientX - row.offsetWidth/2) + 'px';
+                    row.style.top = (touch.clientY - row.offsetHeight/2) + 'px';
+                }, 400);
+            }, {passive: false});
+
+            row.addEventListener('touchmove', (e) => {
+                if(row.classList.contains('gpa-dragging')) {
+                    e.preventDefault();
+                    const touch = e.touches[0];
+                    row.style.left = (touch.clientX - row.offsetWidth/2) + 'px';
+                    row.style.top = (touch.clientY - row.offsetHeight/2) + 'px';
+                } else clearTimeout(gpaTouchTimeout);
+            }, {passive: false});
+
+            row.addEventListener('touchend', (e) => {
+                clearTimeout(gpaTouchTimeout);
+                if(row.classList.contains('gpa-dragging')) {
+                    e.preventDefault();
+                    row.classList.remove('gpa-dragging');
+                    row.style.position = ''; row.style.zIndex = ''; row.style.width = ''; row.style.boxShadow = '';
+                    row.style.left = ''; row.style.top = '';
+                    
+                    const touch = e.changedTouches[0];
+                    row.style.display = 'none';
+                    const elem = document.elementFromPoint(touch.clientX, touch.clientY);
+                    row.style.display = 'flex';
+                    
+                    if(elem) {
+                        const targetRow = elem.closest('.gpa-row');
+                        if (targetRow) {
+                            let tSemId = null;
+                            if (targetRow.id.includes('normal')) {
+                                tSemId = 'normal';
+                            } else {
+                                const tSemObj = gpaSemesters.find(s => targetRow.id.includes(s.id));
+                                if (tSemObj) tSemId = tSemObj.id;
+                            }
+                            if (tSemId) {
+                                const m = targetRow.id.match(/-([0-9]+)$/);
+                                if (m) gpaDropOnSubject(tSemId, parseInt(m[1], 10));
+                            }
+                        } else {
+                            const targetSemContainer = elem.closest('[id^="gpa-subj-list-"]');
+                            if (targetSemContainer) {
+                                const tSemId = targetSemContainer.id.replace('gpa-subj-list-', '');
+                                gpaDrop(null, tSemId);
+                            } else renderGpaPage();
+                        }
+                    } else renderGpaPage();
+                }
+            });
+            row.addEventListener('touchcancel', () => clearTimeout(gpaTouchTimeout));
+
             let gradeOpts = '<option value="">Grade</option>';
             GPA_GRADE_SCALE.forEach(g => {
                 const sel = sub.grade === g.letter ? 'selected' : '';
-                gradeOpts += `<option value="${g.letter}" ${sel}>${g.letter} (${g.gpa})</option>`;
+                gradeOpts += `<option value="${g.letter}" ${sel}>${g.letter}</option>`;
             });
 
-            // Resolve current grade info for result display
             let gradeInfo = null;
             if (sub.grade) gradeInfo = letterToGrade(sub.grade);
-            else if (sub.pointsLost !== '') {
-                const score = 100 - Number(sub.pointsLost);
-                gradeInfo = pointsToGrade(score);
-            }
+            else if (sub.pointsLost !== '') gradeInfo = pointsToGrade(100 - Number(sub.pointsLost));
+            
             const resultHtml = gradeInfo
                 ? `<div class="gpa-row-result" style="color:${getGpaLetterForValue(gradeInfo.gpa).color};">${gradeInfo.gpa}</div>`
                 : `<div class="gpa-row-result" style="color:#555;">—</div>`;
 
-            row.innerHTML = `
-                <div class="gpa-row-name">${sub.code ? `<span style="color:var(--accent-purple); font-family:'Orbitron',sans-serif; font-size:0.7rem; margin-right:6px;">${sub.code}</span>` : ''}${sub.name}</div>
-                <div class="gpa-row-credits">${sub.credits} cr</div>
-                <div class="gpa-row-inputs">
-                    <select class="gpa-select" style="flex:1; min-width:80px;" onchange="gpaSetGrade(${idx}, this.value)">${gradeOpts}</select>
-                    <input type="number" class="gpa-input" style="width:60px; padding:8px 6px; flex-shrink:0; text-align:center;" placeholder="Lost" min="0" max="100" value="${sub.pointsLost !== '' ? sub.pointsLost : ''}" oninput="gpaSetPoints(${idx}, this.value)" title="Points lost out of 100">
+            row.innerHTML = `<div class="gpa-drag-handle gpa-row-name" style="flex:1; display:flex; align-items:center;">
+                <span style="opacity:0.3; padding:0 6px 0 0; cursor:grab; font-weight:normal;" title="Drag to reorder">⋮⋮</span>
+                <div>
+                    ${sub.code ? `<span style="color:var(--accent-purple); font-family:'Orbitron',sans-serif; font-size:0.7rem; margin-right:6px;">${sub.code}</span>` : ''}
+                    ${sub.name}
                 </div>
-                ${resultHtml}
-                <button class="gpa-row-remove" onclick="gpaRemoveSubject(${idx})" title="Remove">✕</button>
-            `;
-            list.appendChild(row);
+            </div>
+            <div class="gpa-row-credits">${sub.credits} cr</div>
+            <div class="gpa-row-inputs">
+                <select class="gpa-select" style="flex:1; min-width:60px;" onchange="gpaSetGrade('${sem.id}', ${sIdx}, this.value)">${gradeOpts}</select>
+                <input type="number" class="gpa-input" style="width:50px; padding:4px 6px; flex-shrink:0; text-align:center;" placeholder="Pts" min="0" max="100" value="${sub.pointsLost !== '' ? sub.pointsLost : ''}" oninput="gpaSetPoints('${sem.id}', ${sIdx}, this.value)">
+            </div>
+            ${resultHtml}
+            <button class="gpa-row-remove" onclick="gpaRemoveSubject('${sem.id}', ${sIdx})" title="Remove">✕</button>`;
+            container.appendChild(row);
         });
-
-        const totalCr = gpaSubjects.reduce((sum, s) => sum + s.credits, 0);
-        const crEl = document.getElementById('gpa-total-credits');
-        if (crEl) crEl.textContent = `Total: ${totalCr} credits`;
     }
 
-    function gpaSetGrade(idx, letter) {
-        gpaSubjects[idx].grade = letter;
-        const g = letterToGrade(letter);
-        if (g) gpaSubjects[idx].pointsLost = String(100 - g.min);
-        else gpaSubjects[idx].pointsLost = '';
-        // Sync the points input in the same row
-        const row = document.getElementById('gpa-row-' + idx);
-        if (row) {
-            const ptsInput = row.querySelector('input[type="number"]');
-            if (ptsInput) ptsInput.value = gpaSubjects[idx].pointsLost;
-            const resultEl = row.querySelector('.gpa-row-result');
-            if (resultEl && g) { resultEl.style.color = getGpaLetterForValue(g.gpa).color; resultEl.textContent = g.gpa; }
-            else if (resultEl) { resultEl.style.color = '#555'; resultEl.textContent = '—'; }
-        }
+    function gpaDragOver(e, semId) {
+        e.preventDefault();
+        e.currentTarget.style.backgroundColor = 'rgba(233,30,140,0.05)';
+    }
+
+    function gpaDrop(e, targetSemId) {
+        if(e) { e.preventDefault(); e.currentTarget.style.backgroundColor = ''; }
+        if(!gpaDragSubject || !gpaDragSourceSemId) return;
+        const srcSem = gpaSemesters.find(s => s.id === gpaDragSourceSemId);
+        if(!srcSem) return;
+        srcSem.subjects = srcSem.subjects.filter(s => s.id !== gpaDragSubject.id);
+        const tgtSem = gpaSemesters.find(s => s.id === targetSemId);
+        if(tgtSem) tgtSem.subjects.push(gpaDragSubject);
+        gpaDragSubject = null; gpaDragSourceSemId = null;
+        renderGpaPage();
         gpaRecalc();
+        gpaSaveState();
     }
 
-    function gpaSetPoints(idx, val) {
-        gpaSubjects[idx].pointsLost = val;
+    function gpaDropOnSubject(targetSemId, targetSubjIdx) {
+        if(!gpaDragSubject || !gpaDragSourceSemId) return;
+        const srcSem = gpaSemesters.find(s => s.id === gpaDragSourceSemId);
+        const tgtSem = gpaSemesters.find(s => s.id === targetSemId);
+        if(!srcSem || !tgtSem) return;
+        if (srcSem.id === tgtSem.id && gpaDragSubject.id === tgtSem.subjects[targetSubjIdx].id) {
+            gpaDragSubject = null; gpaDragSourceSemId = null;
+            return;
+        }
+        srcSem.subjects = srcSem.subjects.filter(s => s.id !== gpaDragSubject.id);
+        tgtSem.subjects.splice(targetSubjIdx, 0, gpaDragSubject);
+        gpaDragSubject = null; gpaDragSourceSemId = null;
+        renderGpaPage();
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    function gpaSetGrade(semId, idx, letter) {
+        const subList = semId === 'normal' ? gpaSubjects : gpaSemesters.find(s => s.id === semId)?.subjects;
+        if (!subList || !subList[idx]) return;
+        subList[idx].grade = letter;
+        const g = letterToGrade(letter);
+        if (g) subList[idx].pointsLost = String(100 - g.min);
+        else subList[idx].pointsLost = '';
+        renderGpaPage();
+        gpaRecalc();
+        gpaSaveState();
+    }
+
+    function gpaSetPoints(semId, idx, val) {
+        const subList = semId === 'normal' ? gpaSubjects : gpaSemesters.find(s => s.id === semId)?.subjects;
+        if (!subList || !subList[idx]) return;
+        subList[idx].pointsLost = val;
         const score = val !== '' ? 100 - Number(val) : NaN;
         const g = pointsToGrade(score);
-        gpaSubjects[idx].grade = g ? g.letter : '';
-        // Sync the grade dropdown in the same row
-        const row = document.getElementById('gpa-row-' + idx);
-        if (row) {
-            const sel = row.querySelector('select');
-            if (sel) sel.value = gpaSubjects[idx].grade;
-            const resultEl = row.querySelector('.gpa-row-result');
-            if (resultEl && g) { resultEl.style.color = getGpaLetterForValue(g.gpa).color; resultEl.textContent = g.gpa; }
-            else if (resultEl) { resultEl.style.color = '#555'; resultEl.textContent = '—'; }
-        }
+        subList[idx].grade = g ? g.letter : '';
+        renderGpaPage();
         gpaRecalc();
+        gpaSaveState();
     }
 
-    function gpaRemoveSubject(idx) {
-        gpaSubjects.splice(idx, 1);
-        renderGpaSubjectRows();
+    function gpaRemoveSubject(semId, idx) {
+        const subList = semId === 'normal' ? gpaSubjects : gpaSemesters.find(s => s.id === semId)?.subjects;
+        if (!subList) return;
+        subList.splice(idx, 1);
+        renderGpaPage();
         gpaRecalc();
+        gpaSaveState();
     }
 
-    function toggleGpaAddMenu() {
-        const menu = document.getElementById('gpa-add-menu');
+    function toggleGpaAddMenu(semId) {
+        const menu = document.getElementById('gpa-add-menu-' + semId);
+        if(!menu) return;
         menu.classList.toggle('open');
-        if (menu.classList.contains('open')) renderGpaAddMenu();
-    }
-
-    function renderGpaAddMenu() {
-        const menu = document.getElementById('gpa-add-menu');
-        if (!menu) return;
-        const allCourses = getAllCourseSubjects();
-        const existingCodes = new Set(gpaSubjects.filter(s => s.code).map(s => s.code));
-        let html = '';
-        allCourses.filter(c => !existingCodes.has(c.code)).forEach(c => {
-            const color = getSubjectColor(c.code);
-            html += `<div class="gpa-add-menu-item" onclick="gpaAddCourse('${c.code}')">
-                <span class="gpa-add-dot" style="background:${color};"></span>
-                <span style="flex:1;">${c.code} — ${c.name}</span>
-                <span style="color:#888; font-size:0.75rem;">${c.credits} cr</span>
+        if (menu.classList.contains('open')) {
+            const allCourses = getAllCourseSubjects();
+            let existingCodes;
+            if (semId === 'normal') {
+                existingCodes = new Set(gpaSubjects.filter(s => s.code).map(s => s.code));
+            } else {
+                existingCodes = new Set(gpaSemesters.flatMap(sem => sem.subjects || []).filter(s => s.code).map(s => s.code));
+            }
+            let html = '';
+            allCourses.filter(c => !existingCodes.has(c.code)).forEach(c => {
+                const color = getSubjectColor(c.code);
+                html += `<div class="gpa-add-menu-item" onclick="gpaAddCourse('${semId}', '${c.code}')">
+                    <span class="gpa-add-dot" style="background:${color};"></span>
+                    <span style="flex:1;">${c.code} — ${c.name}</span>
+                    <span style="color:#888; font-size:0.75rem;">${c.credits} cr</span>
+                </div>`;
+            });
+            html += `<div class="gpa-add-menu-item" onclick="gpaShowCustomAdd('${semId}')" style="border-top:1px solid rgba(255,255,255,0.08); margin-top:4px; padding-top:10px; color:#ffd700;">
+                <span style="font-size:1rem;">✏️</span><span>Custom subject...</span>
             </div>`;
-        });
-        html += `<div class="gpa-add-menu-item" onclick="gpaShowCustomAdd()" style="border-top:1px solid rgba(255,255,255,0.08); margin-top:4px; padding-top:10px; color:#ffd700;">
-            <span style="font-size:1rem;">✏️</span><span>Custom subject...</span>
-        </div>`;
-        menu.innerHTML = html;
+            menu.innerHTML = html;
+        }
     }
 
-    function gpaAddCourse(code) {
+    function gpaAddCourse(semId, code) {
         const course = getAllCourseSubjects().find(c => c.code === code);
         if (!course) return;
-        gpaSubjects.push({ id: 'cd_' + course.code + '_' + Date.now(), code: course.code, name: course.name, credits: course.credits, grade: '', pointsLost: '' });
-        document.getElementById('gpa-add-menu').classList.remove('open');
-        renderGpaSubjectRows();
+        const subList = semId === 'normal' ? gpaSubjects : gpaSemesters.find(s => s.id === semId)?.subjects;
+        if (!subList) return;
+        subList.push({ id: 'cd_' + course.code + '_' + Date.now(), code: course.code, name: course.name, credits: course.credits, grade: '', pointsLost: '' });
+        document.getElementById('gpa-add-menu-' + semId).classList.remove('open');
+        renderGpaPage();
         gpaRecalc();
+        gpaSaveState();
     }
 
-    function gpaShowCustomAdd() {
-        document.getElementById('gpa-add-menu').classList.remove('open');
-        document.getElementById('gpa-add-custom').style.display = 'flex';
-        document.getElementById('gpa-custom-name').focus();
+    function gpaShowCustomAdd(semId) {
+        document.getElementById('gpa-add-menu-' + semId).classList.remove('open');
+        document.getElementById('gpa-add-custom-' + semId).style.display = 'flex';
+        document.getElementById('gpa-custom-name-' + semId).focus();
     }
 
-    function gpaAddCustom() {
-        const nameEl = document.getElementById('gpa-custom-name');
-        const crEl = document.getElementById('gpa-custom-credits');
+    function gpaAddCustom(semId) {
+        const nameEl = document.getElementById('gpa-custom-name-' + semId);
+        const crEl = document.getElementById('gpa-custom-credits-' + semId);
         const name = (nameEl.value || '').trim();
         const credits = parseInt(crEl.value, 10);
         if (!name) { nameEl.focus(); return; }
         if (!credits || credits < 1) { crEl.focus(); return; }
-        gpaSubjects.push({ id: 'custom_' + Date.now(), code: '', name: name, credits: credits, grade: '', pointsLost: '' });
-        nameEl.value = ''; crEl.value = '';
-        document.getElementById('gpa-add-custom').style.display = 'none';
-        renderGpaSubjectRows();
+        const subList = semId === 'normal' ? gpaSubjects : gpaSemesters.find(s => s.id === semId)?.subjects;
+        if (!subList) return;
+        subList.push({ id: 'custom_' + Date.now(), code: '', name: name, credits: credits, grade: '', pointsLost: '' });
+        renderGpaPage();
         gpaRecalc();
+        gpaSaveState();
     }
 
     function gpaRecalc() {
-        let totalPoints = 0, totalCredits = 0, hasAnyGrade = false;
+        if (!gpaGroupMode) {
+            gpaRecalcNormal();
+        } else {
+            gpaRecalcGrouped();
+        }
+    }
+
+    function gpaRecalcNormal() {
+        let pts = 0;
+        let crs = 0;
+        let hasGrade = false;
 
         gpaSubjects.forEach(sub => {
-            let gradeInfo = null;
-            if (sub.grade) gradeInfo = letterToGrade(sub.grade);
-            else if (sub.pointsLost !== '') gradeInfo = pointsToGrade(100 - Number(sub.pointsLost));
-            if (gradeInfo) {
-                totalPoints += gradeInfo.gpa * sub.credits;
-                totalCredits += sub.credits;
-                hasAnyGrade = true;
+            let info = null;
+            if (sub.grade) info = letterToGrade(sub.grade);
+            else if (sub.pointsLost !== '') info = pointsToGrade(100 - Number(sub.pointsLost));
+            
+            if (info) {
+                pts += info.gpa * sub.credits;
+                crs += sub.credits;
+                hasGrade = true;
             }
         });
+
+        let cumPts = 0, cumCrs = 0, hasCum = false;
+        if (gpaCumulativeOn) {
+            const cGpa = parseFloat(gpaCumGpa);
+            const cHrs = parseInt(gpaCumHours, 10);
+            if (!isNaN(cGpa) && !isNaN(cHrs) && cHrs > 0 && cGpa >= 0) {
+                cumPts = cGpa * cHrs;
+                cumCrs = cHrs;
+                hasCum = true;
+            }
+        }
+
+        const resEl = document.getElementById('gpa-result-area');
+        const expBar = document.getElementById('gpa-export-bar');
+        
+        if (!hasGrade && !hasCum) {
+            resEl.innerHTML = `<div class="gpa-result-card">
+                <div class="gpa-result-label">Cumulative GPA</div>
+                <div class="gpa-result-value" style="font-size:1.5rem; -webkit-text-fill-color:#555;">Enter grades above</div>
+            </div>`;
+            if (expBar) expBar.style.display = 'none';
+        } else {
+            const totPts = pts + cumPts;
+            const totCrs = crs + cumCrs;
+            const fgpa = totPts / totCrs;
+            const fgInfo = getGpaLetterForValue(fgpa);
+
+            const listedSubjects = gpaSubjects.filter(s => s.grade || s.pointsLost !== '').length;
+            const subjectsSuffix = listedSubjects > 0 ? ` (${listedSubjects} subjects)` : '';
+
+            let semGpaHtml = '';
+            if (hasCum && hasGrade && crs > 0) {
+                const sGpa = pts / crs;
+                semGpaHtml = `<div class="gpa-result-label" style="margin-top:15px; font-size:0.8rem;">Semester GPA: <span style="color:var(--accent-pink); font-size:1.1rem; font-family:'Orbitron',sans-serif;">${sGpa.toFixed(2)}</span> (${crs} cr${subjectsSuffix})</div>`;
+            }
+
+            resEl.innerHTML = `<div class="gpa-result-card" id="gpa-capture-area">
+                <div class="gpa-result-label">Cumulative GPA</div>
+                <div class="gpa-result-value">${fgpa.toFixed(2)}</div>
+                ${semGpaHtml}
+                <div class="gpa-result-sub" style="margin-top:10px;">Total: ${totCrs} credit hours passed${!hasCum ? subjectsSuffix : ''}</div>
+            </div>`;
+            if (expBar) expBar.style.display = 'flex';
+        }
+        gpaSaveState();
+    }
+
+    function gpaRecalcGrouped() {
+        let globalPoints = 0, globalCredits = 0, hasAnyGrade = false;
+        let breakdownHtml = '<div style="margin-top:16px; display:flex; flex-direction:column; gap:8px;">';
+        let semesterCount = 0;
+
+        gpaSemesters.forEach(sem => {
+            let semPoints = 0, semCredits = 0, semHasGrade = false;
+            
+            if (sem.mode === 'summary') {
+                const gpa = parseFloat(sem.summaryGpa);
+                const hrs = parseInt(sem.summaryHours, 10);
+                if (!isNaN(gpa) && !isNaN(hrs) && hrs > 0 && gpa >= 0) {
+                    semPoints = gpa * hrs;
+                    semCredits = hrs;
+                    semHasGrade = true;
+                }
+            } else {
+                sem.subjects.forEach(sub => {
+                    let gradeInfo = null;
+                    if (sub.grade) gradeInfo = letterToGrade(sub.grade);
+                    else if (sub.pointsLost !== '') gradeInfo = pointsToGrade(100 - Number(sub.pointsLost));
+                    
+                    if (gradeInfo) {
+                        semPoints += gradeInfo.gpa * sub.credits;
+                        semCredits += sub.credits;
+                        semHasGrade = true;
+                    }
+                });
+            }
+
+            if (semHasGrade && semCredits > 0) {
+                globalPoints += semPoints;
+                globalCredits += semCredits;
+                hasAnyGrade = true;
+                const sGPA = semPoints / semCredits;
+                
+                let subLabel = '';
+                if (sem.mode !== 'summary') {
+                    const subCount = (sem.subjects || []).filter(s => s.grade || s.pointsLost !== '').length;
+                    subLabel = `, ${subCount} subjects`;
+                }
+
+                breakdownHtml += `<div style="display:flex; justify-content:space-between; font-size:0.85rem; padding-bottom:6px; border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <span style="color:#aaa;">${sem.name} <span style="font-size:0.7rem;">(${semCredits} cr${subLabel})</span></span>
+                        <span style="color:var(--accent-pink); font-weight:bold;">${sGPA.toFixed(2)}</span>
+                    </div>`;
+                semesterCount++;
+            }
+        });
+
+        breakdownHtml += '</div>';
 
         const resultArea = document.getElementById('gpa-result-area');
         const exportBar = document.getElementById('gpa-export-bar');
 
         if (!hasAnyGrade) {
             resultArea.innerHTML = `<div class="gpa-result-card">
-                <div class="gpa-result-label">Semester GPA</div>
+                <div class="gpa-result-label">Cumulative GPA</div>
                 <div class="gpa-result-value" style="font-size:1.5rem; -webkit-text-fill-color:#555;">Enter grades above</div>
             </div>`;
             if (exportBar) exportBar.style.display = 'none';
+            // Need to save even if empty so state removes old data
             gpaSaveState();
             return;
         }
 
-        const semesterGpa = Math.min(4.0, Math.max(0, totalCredits > 0 ? totalPoints / totalCredits : 0));
-        const gradedCount = gpaSubjects.filter(s => s.grade || s.pointsLost !== '').length;
-        const subText = `${totalCredits} credit hours · ${gradedCount} subjects`;
+        const cumGpa = globalPoints / globalCredits;
 
-        let hasCumulative = false;
-        let cumulativeGpa = semesterGpa;
-        if (gpaCumulativeOn) {
-            const cumGpa = parseFloat(document.getElementById('gpa-cum-gpa').value);
-            const cumHours = parseInt(document.getElementById('gpa-cum-hours').value, 10);
-            if (!isNaN(cumGpa) && cumGpa >= 0 && !isNaN(cumHours) && cumHours > 0) {
-                cumulativeGpa = Math.min(4.0, Math.max(0, (cumGpa * cumHours + totalPoints) / (cumHours + totalCredits)));
-                hasCumulative = true;
-            }
-        }
-
-        const semLetterInfo = getGpaLetterForValue(semesterGpa);
-
-        if (hasCumulative) {
-            const cumLetterInfo = getGpaLetterForValue(cumulativeGpa);
-            const cumGpaVal = parseFloat(document.getElementById('gpa-cum-gpa').value);
-            const cumHoursVal = parseInt(document.getElementById('gpa-cum-hours').value, 10);
-            const totalHours = cumHoursVal + totalCredits;
-            resultArea.innerHTML = `<div class="gpa-result-card" id="gpa-capture-area">
-                <div class="gpa-result-label">Cumulative GPA</div>
-                <div class="gpa-result-value">${cumulativeGpa.toFixed(2)}</div>
-                <div class="gpa-result-letter" style="color:${cumLetterInfo.color}; background:${cumLetterInfo.bg}; border:1px solid ${cumLetterInfo.color};">${cumLetterInfo.letter}</div>
-                <div class="gpa-result-sub" style="margin-top:10px;">Total: ${totalHours} credit hours passed</div>
-                <div style="margin-top:16px; padding-top:14px; border-top:1px solid rgba(233,30,140,0.15);">
-                    <div class="gpa-result-label" style="margin-bottom:6px;">Semester GPA</div>
-                    <div style="font-family:'Orbitron',sans-serif; font-size:1.8rem; font-weight:800; color:var(--accent-pink);">${semesterGpa.toFixed(2)}</div>
-                    <div class="gpa-result-letter" style="color:${semLetterInfo.color}; background:${semLetterInfo.bg}; border:1px solid ${semLetterInfo.color}; font-size:0.8rem; padding:3px 12px;">${semLetterInfo.letter}</div>
-                    <div class="gpa-result-sub" style="margin-top:6px;">${totalCredits} credit hours · ${gradedCount} subjects</div>
-                </div>
-                <div style="margin-top:14px; padding-top:12px; border-top:1px solid rgba(233,30,140,0.1); font-size:0.78rem; color:#777;">
-                    Previous: <span style="color:var(--accent-purple);">${cumGpaVal.toFixed(2)}</span> GPA × <span style="color:var(--accent-pink);">${cumHoursVal}</span> hrs &nbsp;+&nbsp; This semester: <span style="color:var(--accent-pink);">${totalCredits}</span> hrs
-                </div>
-            </div>`;
-        } else {
-            resultArea.innerHTML = `<div class="gpa-result-card" id="gpa-capture-area">
-                <div class="gpa-result-label">Semester GPA</div>
-                <div class="gpa-result-value">${semesterGpa.toFixed(2)}</div>
-                <div class="gpa-result-sub">${subText}</div>
-                <div class="gpa-result-letter" style="color:${semLetterInfo.color}; background:${semLetterInfo.bg}; border:1px solid ${semLetterInfo.color};">${semLetterInfo.letter}</div>
-            </div>`;
-        }
+        resultArea.innerHTML = `<div class="gpa-result-card" id="gpa-capture-area">
+            <div class="gpa-result-label">Cumulative GPA</div>
+            <div class="gpa-result-value">${cumGpa.toFixed(2)}</div>
+            <div class="gpa-result-sub" style="margin-top:10px;">Total: ${globalCredits} credit hours passed</div>
+            ${semesterCount > 1 ? breakdownHtml : ''}
+        </div>`;
 
         if (exportBar) exportBar.style.display = 'flex';
         gpaSaveState();
     }
 
-    // --- GPA Screenshot (captures full calculator) ---
+    // --- Page Screenshot Helpers ---
+    function exportTimetableImage() {
+        const el = document.getElementById('timetable-capture-wrap');
+        const bar = document.getElementById('timetable-export-bar');
+        const backBtn = document.querySelector('#timetable-page > .back-btn');
+        capturePageImage(el, 'timetable.png', [bar, backBtn]);
+    }
+
+    function exportMidtermImage() {
+        const el = document.getElementById('midterm-capture-wrap');
+        const bar = document.getElementById('midterm-export-bar');
+        const backBtn = document.querySelector('#midterm-page > .back-btn');
+        capturePageImage(el, 'midterm-exams.png', [bar, backBtn]);
+    }
+
     function exportGpaImage() {
         const el = document.getElementById('gpa-capture-wrap');
-        if (!el) { showToast('Nothing to capture', 'locked'); return; }
-        showToast('📸 Generating image...', 'locked');
-        // Temporarily hide export bar and back button for clean screenshot
         const exportBar = document.getElementById('gpa-export-bar');
         const backBtn = document.querySelector('#gpa-page > .back-btn');
-        if (exportBar) exportBar.style.display = 'none';
-        if (backBtn) backBtn.style.display = 'none';
+        const toggles = document.getElementById('gpa-mode-toggles');
+        capturePageImage(el, 'gpa-calculator.png', [exportBar, backBtn, toggles]);
+    }
+
+    function capturePageImage(el, fileName, hideElements = []) {
+        if (!el) { showToast('Nothing to capture', 'locked'); return; }
+        showToast('📸 Generating image...', 'locked');
+
+        hideElements.forEach(item => { if (item) item.style.display = 'none'; });
+        
+        const origPadding = el.style.padding;
+        const origBg = el.style.background;
+        el.style.padding = '40px 20px';
+        el.style.background = '#0a0012';
+
         html2canvas(el, {
             backgroundColor: '#0a0012',
             scale: 2,
@@ -4925,16 +5340,16 @@
             windowWidth: el.scrollWidth
         }).then(canvas => {
             const link = document.createElement('a');
-            link.download = 'gpa-calculator.png';
+            link.download = fileName;
             link.href = canvas.toDataURL('image/png');
             link.click();
             showToast('📸 Image saved!', 'locked');
         }).catch(() => {
             showToast('⚠️ Could not generate image', 'locked');
         }).finally(() => {
-            // Restore hidden elements
-            if (exportBar) exportBar.style.display = 'flex';
-            if (backBtn) backBtn.style.display = '';
+            hideElements.forEach(item => { if (item) item.style.display = (item.id && item.id.includes('bar')) ? 'flex' : ''; });
+            el.style.padding = origPadding;
+            el.style.background = origBg;
         });
     }
 
