@@ -9808,7 +9808,740 @@ window.COURSE_DATA = [
         "name": "Software Testing",
         "credits": "2 Credits",
         "semester": "Spring 2026",
-        "weeks": [],
+        "weeks": [
+            {
+                "title": "WEEK 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "#",
+                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:12 PM"
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1l1TkoHWMvUpCUrFo9CXXtEAbWm80BmdK/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 6:55 PM"
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/OLrpH6e7y8Q?si=cLi8BZNhnRkBd6Ed",
+                        "desc": "Lab1",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:22 PM"
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": true,
+                        "link": "https://youtu.be/OLrpH6e7y8Q?si=cLi8BZNhnRkBd6Ed",
+                        "desc": "JUnit setup and first program, Lab submission deadline is on the same day.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 6:57 PM"
+                    },
+                    "Lab Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1pkbBp03yvnLTDEk76dT18R3C3BMuaEl9/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:12 PM"
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "badgeText": "Quiz 1 Start here",
+                "showBadge": true,
+                "isRecent": true,
+                "recentDate": "22/3/2026 7:21 PM",
+                "isNew": false
+            },
+            {
+                "title": "WEEK 2",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "#",
+                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:13 PM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1Dcky3-zCtByYifoljhCgM2ML413IbR1l/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:13 PM"
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/FYfygjoeyqc?si=yMa2Jz-0Ubmeo4LO",
+                        "desc": "the solutions of the sheet questions :)",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:16 PM"
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1C8QsargL-nOlxbWF0LkinooZcnZg0iZX/view?usp=drive_link",
+                        "desc": "sheets submission is day before the section",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:14 PM"
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "22/3/2026 7:21 PM",
+                "isRecent": true,
+                "isNew": false
+            },
+            {
+                "title": "WEEK 3",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/11aheczxdkpxj4wHne3h3hYuNFmshfr5O/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:18 PM"
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/Ul5iIPTByA8?si=lf9mn67ocdw6Ur__",
+                        "desc": "solving of the Lab2",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:18 PM"
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": true,
+                        "link": "https://youtu.be/Ul5iIPTByA8?si=lf9mn67ocdw6Ur__",
+                        "desc": "Lab2",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:18 PM"
+                    },
+                    "Lab Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/16ZHiflFc6NFpXwAOsESuWuXgeevIld0E/view?usp=drive_link",
+                        "desc": "Lab2.zip, Having the code of the login page.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:19 PM"
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "badgeText": "Quiz1 till here",
+                "showBadge": true,
+                "recentDate": "22/3/2026 7:21 PM",
+                "isRecent": true,
+                "isNew": false
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "#",
+                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:28 PM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1BBaaxmOml8s5F5IyFGd-4rIWQ14eznu-/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:25 PM"
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/xBRKJ3Q8Klk?si=pwm2cHv7nomlwoQI",
+                        "desc": "sheet2 solving",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:25 PM"
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/14_BPf4aQpGEuvFUZ9cjFNgSjFYWSD9Ee/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:25 PM"
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "22/3/2026 7:26 PM",
+                "isRecent": true,
+                "isNew": false
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "#",
+                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:28 PM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/19EFyHlSar9aNWUGatdSVp0uyi_WfacO9/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:28 PM"
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/ALfEx4cz7zs?si=GnQCmwcwZD64tG1P",
+                        "desc": "only first 3 questions.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:32 PM"
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/14_BPf4aQpGEuvFUZ9cjFNgSjFYWSD9Ee/view?usp=drive_link",
+                        "desc": "sheet3",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 7:30 PM"
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "badgeText": "Midterm till here",
+                "showBadge": true,
+                "recentDate": "22/3/2026 7:32 PM",
+                "isRecent": true,
+                "isNew": true
+            }
+        ],
         "driveLink": "https://drive.google.com/drive/folders/1-DGr621UC2zPt5y3phF1SRJE-86eiYyK?usp=drive_link",
         "events": [],
         "playlists": [
@@ -10972,7 +11705,8 @@ window.SCHEDULE_DATA = [
                 "coverageLink": "https://drive.google.com/file/d/1pizuDsEPggA4eDCmfayKvTvKZXtENAEx/view?usp=drive_link",
                 "submitText": "Outlook"
             }
-        ]
+        ],
+        "isMidterm": false
     },
     {
         "week": 4,
