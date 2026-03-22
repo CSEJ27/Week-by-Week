@@ -68,7 +68,7 @@
         .drive-btn:hover { background: #ffd700; color: black; box-shadow: 0 0 15px #ffd700; }
         
         .subject-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
-        .sub-tab { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 10px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; transition: 0.3s; letter-spacing: 1px; text-transform: uppercase; }
+        .sub-tab { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 9px 20px; border-radius: 30px; cursor: pointer; font-weight: bold; font-family: 'Orbitron', sans-serif; font-size: 0.82rem; transition: 0.3s; letter-spacing: 0.5px; text-transform: uppercase; }
         .sub-tab:hover { background: rgba(255,255,255,0.1); color: white; }
         .sub-tab.active { background: var(--accent-purple); color: white; border-color: var(--accent-purple); box-shadow: 0 0 15px rgba(181, 25, 214, 0.4); }
 
@@ -110,6 +110,25 @@
         .filter-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2); color: #ccc; padding: 8px 16px; border-radius: 20px; cursor: pointer; transition: 0.2s; font-size: 0.9rem; }
         .filter-btn:hover { background: rgba(255,255,255,0.15); color: white; }
         .filter-btn.active { background: var(--accent-pink); color: white; border-color: var(--accent-pink); box-shadow: 0 0 15px rgba(233,30,140,0.4); font-weight: bold; }
+        /* Badge multi-select filter chips */
+        .badge-filter-bar { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; align-items: center; }
+        .badge-filter-chip { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; cursor: pointer; border: 1.5px solid rgba(255,255,255,0.12); color: #aaa; background: rgba(255,255,255,0.04); transition: all 0.18s; letter-spacing: 0.3px; }
+        .badge-filter-chip:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
+        .badge-filter-chip.active { color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+        .badge-filter-clear { padding: 4px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; cursor: pointer; border: 1px dashed rgba(255,255,255,0.2); color: #888; background: transparent; transition: all 0.18s; }
+        .badge-filter-clear:hover { border-color: rgba(255,255,255,0.4); color: #ccc; }
+        /* Compact subject chips (history, deadlines etc.) */
+        .sub-filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; align-items: center; }
+        .schedule-filters { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; margin-bottom: 10px; }
+        .schedule-filter-chip { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.18); color: #aaa; padding: 5px 14px; border-radius: 20px; cursor: pointer; font-size: 0.82rem; font-weight: 600; font-family: 'Work Sans', sans-serif; transition: all 0.18s; white-space: nowrap; }
+        .schedule-filter-chip:hover { background: rgba(255,255,255,0.1); color: #ddd; }
+        .schedule-filter-chip.active { background: rgba(233,30,140,0.18); border-color: var(--accent-pink); color: var(--accent-pink); box-shadow: 0 0 10px rgba(233,30,140,0.3); }
+        .sub-filter-chip { padding: 4px 11px; border-radius: 14px; font-size: 0.72rem; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.12); color: #888; background: rgba(255,255,255,0.03); transition: all 0.18s; letter-spacing: 0.3px; font-family: 'Orbitron', sans-serif; }
+        .sub-filter-chip:hover { background: rgba(255,255,255,0.08); color: #ccc; }
+        .sub-filter-chip.active { color: #fff; }
+        /* Midterm hidden subjects indicator */
+        .midterm-hidden-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; cursor: pointer; border: 1px solid rgba(0,122,255,0.3); color: #007aff; background: rgba(0,122,255,0.08); transition: all 0.2s; margin-bottom: 16px; }
+        .midterm-hidden-btn:hover { background: rgba(0,122,255,0.15); }
         
         .useful-select { background: rgba(181, 25, 214, 0.15); border: 1px solid rgba(181, 25, 214, 0.4); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; cursor: pointer; outline: none; font-weight: bold; font-family: 'Work Sans', sans-serif; transition: 0.3s; }
         .useful-select:hover { background: rgba(181, 25, 214, 0.3); }
@@ -325,10 +344,66 @@
         .modal-url-badge:hover { background: rgba(74, 144, 226, 0.3); color: white; }
 
         /* Schedule task type filters */
-        .schedule-filters { display: flex; gap: 8px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap; }
-        .schedule-filter-chip { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #aaa; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: 0.2s; letter-spacing: 0.5px; }
-        .schedule-filter-chip:hover { background: rgba(255,255,255,0.1); color: white; }
-        .schedule-filter-chip.active { background: rgba(255, 149, 0, 0.2); color: #ff9500; border-color: #ff9500; }
+        /* ── Collapsible filter panel ─────────────────────── */
+        .fp-toggle { display: inline-flex; align-items: center; gap: 7px; padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); color: #aaa; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.22s; font-family: 'Work Sans', sans-serif; user-select: none; }
+        .fp-toggle:hover { background: rgba(255,255,255,0.09); color: #ddd; border-color: rgba(255,255,255,0.25); }
+        .fp-toggle.has-filter { border-color: var(--accent-pink); color: var(--accent-pink); background: rgba(233,30,140,0.1); box-shadow: 0 0 12px rgba(233,30,140,0.25); }
+        .fp-toggle.open { border-color: rgba(255,255,255,0.3); color: #fff; background: rgba(255,255,255,0.08); }
+        .fp-toggle.open.has-filter { border-color: var(--accent-pink); background: rgba(233,30,140,0.15); box-shadow: 0 0 18px rgba(233,30,140,0.35); }
+        /* Active filter label — shown as plain text after the icon, not a pill */
+        .fp-active-label { font-size: 0.75rem; color: white; font-weight: 600; opacity: 0.9; max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .fp-badge { background: var(--accent-pink); color: white; font-size: 0.65rem; padding: 1px 7px; border-radius: 8px; font-weight: 800; box-shadow: 0 0 6px rgba(233,30,140,0.5); }
+        .fp-toggle .fp-arrow { font-size: 0.6rem; transition: transform 0.22s; opacity: 0.5; }
+        .fp-toggle.open .fp-arrow { transform: rotate(180deg); opacity: 1; }
+        .fp-panel { display: none; position: absolute; top: calc(100% + 8px); left: 0; min-width: 320px; max-width: min(680px, 95vw); z-index: 200; background: rgba(8,2,18,0.95); border: 1px solid rgba(255,255,255,0.09); border-radius: 16px; padding: 14px 16px 16px; backdrop-filter: blur(12px); box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04); animation: fpFadeIn 0.18s ease; }
+        .fp-panel.open { display: block; }
+        .fp-toggle-wrap { position: relative; display: inline-block; }
+        .fp-toggle-wrap.centered .fp-panel { left: 50%; transform: translateX(-50%); }
+        @media (max-width: 480px) { .fp-panel { left: 50% !important; right: auto !important; transform: translateX(-50%) !important; min-width: min(340px, 90vw) !important; max-width: 92vw !important; } }
+        @media (max-width: 480px) { .fp-toggle-wrap { position: static !important; } .fp-toggle-wrap .fp-panel { position: fixed !important; top: auto !important; left: 50% !important; transform: translateX(-50%) !important; } }
+        .fp-sep { height: 1px; background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent); margin: 14px 0 0; }
+        .fp-row { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; justify-content: center; }
+        .fp-row + .fp-row { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.07); }
+        .fp-label { font-size: 0.62rem; color: #555; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; margin-right: 4px; }
+        .fp-chip { padding: 5px 13px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); color: #888; background: transparent; cursor: pointer; font-size: 0.76rem; font-weight: 600; transition: all 0.18s; white-space: nowrap; font-family: 'Work Sans', sans-serif; }
+        .fp-chip:hover { background: rgba(255,255,255,0.08); color: #ddd; border-color: rgba(255,255,255,0.22); }
+        .fp-chip.active { color: #fff; background: rgba(233,30,140,0.18); border-color: var(--accent-pink); box-shadow: 0 0 10px rgba(233,30,140,0.35), inset 0 0 8px rgba(233,30,140,0.08); }
+        .fp-chip.active:hover { box-shadow: 0 0 16px rgba(233,30,140,0.5), inset 0 0 10px rgba(233,30,140,0.12); }
+        .fp-clear-btn { margin-top: 12px; display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 12px; border: 1px dashed rgba(233,30,140,0.35); color: rgba(233,30,140,0.7); background: transparent; cursor: pointer; font-size: 0.72rem; font-weight: 600; transition: all 0.18s; font-family: 'Work Sans', sans-serif; }
+        .fp-clear-btn:hover { border-color: var(--accent-pink); color: var(--accent-pink); background: rgba(233,30,140,0.08); }
+        @keyframes fpFadeIn { from { opacity: 0; transform: translateY(-6px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        /* Inline chip bar (history & deadlines filters — always visible, pushes content down) */
+        .fp-inline-bar { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; background: rgba(8,2,18,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 10px 18px; }
+        /* Collapsible bar container wrapping toggle + chip bar */
+        .fp-bar-section { text-align: center; margin-bottom: 4px; }
+        .fp-bar-collapsible { display: none; margin-top: 8px; margin-bottom: 18px; }
+        .fp-bar-collapsible.open { display: flex; flex-wrap: wrap; justify-content: center; }
+        @media (max-width: 600px) { .fp-chip { padding: 4px 10px; font-size: 0.72rem; } .fp-panel { padding: 11px 12px 13px; } .fp-toggle { padding: 6px 13px; font-size: 0.78rem; } }
+        @media (max-width: 500px) { .sub-tab { padding: 7px 12px; font-size: 0.72rem; letter-spacing: 0; } .subject-tabs { gap: 8px; } }
+        /* ── Drive button inline style ───────────────────── */
+        .drive-btn-inline { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.55); color: #ffd700; padding: 5px 14px; border-radius: 12px; font-weight: 700; text-decoration: none; font-size: 0.78rem; transition: all 0.25s; vertical-align: middle; box-shadow: 0 0 12px rgba(255,215,0,0.25), inset 0 0 8px rgba(255,215,0,0.06); text-shadow: 0 0 8px rgba(255,215,0,0.5); }
+        .drive-btn-inline:hover { background: rgba(255,215,0,0.22); box-shadow: 0 0 22px rgba(255,215,0,0.5), inset 0 0 12px rgba(255,215,0,0.1); border-color: #ffd700; text-shadow: 0 0 12px rgba(255,215,0,0.8); }
+        /* ── News panel animation ───────────────────────── */
+        .news-panel { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0); z-index: 1100; align-items: center; justify-content: center; backdrop-filter: blur(0px); transition: background 0.28s ease, backdrop-filter 0.28s ease; }
+        .news-panel.active { display: flex; background: rgba(0,0,0,0.75); backdrop-filter: blur(6px); }
+        .news-panel-card { width: min(520px, calc(100vw - 32px)); max-height: 80vh; background: #13062a; border: 1px solid rgba(233,30,140,0.3); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 12px 40px rgba(0,0,0,0.55); transform: scale(0.88) translateY(16px); opacity: 0; transition: transform 0.32s cubic-bezier(0.34,1.5,0.64,1), opacity 0.25s ease; transform-origin: bottom left; }
+        .news-panel.active .news-panel-card { transform: scale(1) translateY(0); opacity: 1; }
+        @keyframes newsClose { 0% { transform: scale(1) translate(0,0); opacity: 1; } 100% { transform: scale(0.4) translate(-160px, 200px); opacity: 0; } }
+        .news-panel-card.closing { animation: newsClose 0.32s cubic-bezier(0.55,0,1,0.8) forwards; pointer-events: none; }
+        /* ── News unread toast ─────────────────────────── */
+        .news-toast { position: fixed; bottom: 145px; left: 18px; z-index: 1050; width: min(300px, calc(100vw - 36px)); background: linear-gradient(135deg, rgba(39,18,68,0.97), rgba(20,6,40,0.98)); border: 1px solid rgba(233,30,140,0.4); border-radius: 16px; padding: 14px 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(233,30,140,0.2); backdrop-filter: blur(16px); transform: translateX(-120%) scale(0.95); opacity: 0; transition: transform 0.4s cubic-bezier(0.34,1.3,0.64,1), opacity 0.35s ease; pointer-events: none; }
+        .news-toast.show { transform: translateX(0) scale(1); opacity: 1; pointer-events: auto; }
+        .news-toast.hiding { transform: translateX(-120%) scale(0.9); opacity: 0; transition: transform 0.3s ease, opacity 0.25s ease; }
+        .news-toast-title { font-family: 'Orbitron', sans-serif; font-size: 0.72rem; letter-spacing: 1.5px; color: var(--accent-pink); text-transform: uppercase; margin-bottom: 5px; }
+        .news-toast-body { color: #ccc; font-size: 0.82rem; line-height: 1.4; margin-bottom: 12px; }
+        .news-toast-actions { display: flex; gap: 8px; }
+        .news-toast-btn { flex: 1; padding: 7px 10px; border-radius: 10px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.18s; text-align: center; font-family: 'Work Sans', sans-serif; }
+        .news-toast-btn.primary { background: rgba(233,30,140,0.2); border: 1px solid rgba(233,30,140,0.5); color: #f472b6; }
+        .news-toast-btn.primary:hover { background: rgba(233,30,140,0.35); box-shadow: 0 0 14px rgba(233,30,140,0.35); }
+        .news-toast-btn.secondary { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #888; }
+        .news-toast-btn.secondary:hover { background: rgba(255,255,255,0.09); color: #ccc; }
+        .news-toast-timer { height: 2px; background: rgba(233,30,140,0.25); border-radius: 1px; margin-top: 11px; overflow: hidden; }
+        .news-toast-timer-bar { height: 100%; background: linear-gradient(to right, rgba(233,30,140,0.7), rgba(181,25,214,0.7)); border-radius: 1px; transition: width linear; width: 100%; }
 
         /* Week updated ago text */
         .week-updated-ago { font-size: 0.7rem; color: #666; margin-top: 8px; font-style: italic; }
@@ -346,6 +421,9 @@
         .cal-month-nav button { background: rgba(255,149,0,0.2); border: 1px solid #ff9500; color: #ff9500; padding: 6px 14px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s; }
         .cal-month-nav button:hover { background: #ff9500; color: black; }
         .cal-month-label { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; color: #ff9500; min-width: 200px; text-align: center; }
+        .cal-view-btn { background: rgba(255,149,0,0.1); border: 1px solid rgba(255,149,0,0.4); color: rgba(255,149,0,0.7); padding: 6px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: 'Work Sans', sans-serif; font-size: 0.85rem; transition: all 0.2s; white-space: nowrap; }
+        .cal-view-btn:hover { background: rgba(255,149,0,0.2); border-color: #ff9500; color: #ff9500; }
+        .cal-view-btn.active { background: rgba(255,149,0,0.2); border: 1px solid #ff9500; color: #ff9500; box-shadow: 0 0 12px rgba(255,149,0,0.3); }
         .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
         .cal-day-header { text-align: center; font-size: 0.75rem; color: #888; font-weight: bold; padding: 8px 0; text-transform: uppercase; letter-spacing: 1px; }
         .cal-day { min-height: 90px; background: rgba(0,0,0,0.2); border-radius: 10px; padding: 6px; border: 1px solid rgba(255,255,255,0.05); position: relative; }
@@ -453,8 +531,8 @@
         @media (max-width: 768px) {
             .hotkeys-fab, .hotkeys-panel { display: none !important; }
             .news-fab { left: 18px !important; bottom: 18px !important; }
-            .news-panel { align-items: flex-end; justify-content: center; }
-            .news-panel-card { border-radius: 18px 18px 0 0; }
+            .news-panel { align-items: center !important; justify-content: center !important; }
+            .news-panel-card { border-radius: 18px; width: calc(100vw - 28px); max-height: 85vh; transform-origin: bottom center; }
         }
 
         /* News FAB */
@@ -462,9 +540,7 @@
         .news-fab:hover { border-color: var(--accent-pink); box-shadow: 0 4px 20px rgba(233,30,140,0.3); }
         .news-fab-badge { position: absolute; top: -5px; right: -5px; background: #e91e8c; color: white; font-size: 0.6rem; font-weight: 800; min-width: 17px; height: 17px; border-radius: 10px; display: flex; align-items: center; justify-content: center; padding: 0 3px; box-shadow: 0 0 8px rgba(233,30,140,0.7); pointer-events: none; line-height: 1; }
         /* News Panel */
-        .news-panel { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 1100; align-items: center; justify-content: center; backdrop-filter: blur(6px); }
-        .news-panel.active { display: flex; }
-        .news-panel-card { width: min(520px, calc(100vw - 32px)); max-height: 80vh; background: #13062a; border: 1px solid rgba(233,30,140,0.3); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 12px 40px rgba(0,0,0,0.55); }
+        .news-panel.active { display: flex; background: rgba(0,0,0,0.75); backdrop-filter: blur(6px); }
         .news-panel-header { padding: 16px 18px 12px; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; background: #13062a; }
         .news-panel-title { font-family: 'Orbitron', sans-serif; font-size: 0.88rem; color: white; letter-spacing: 1px; }
         .news-panel-close { background: none; border: none; color: #888; cursor: pointer; font-size: 1.05rem; padding: 4px 8px; border-radius: 6px; transition: 0.15s; }
@@ -683,19 +759,19 @@
 
     <div id="schedule-page" class="page">
         <button id="schedule-back-btn" class="back-btn" onclick="smartBack()">← Back</button>
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-            <h1 style="color:#ff9500">SEMESTER MAP</h1>
-        </div>
-        <p class="subtitle" style="margin-bottom: 30px;">Your overview of assignments, quizzes, and projects</p>
+        <h1 style="color:#ff9500; text-align:center;">SEMESTER MAP</h1>
+        <p class="subtitle" style="margin-bottom: 10px;">Your overview of assignments, quizzes, and projects</p>
+        <div id="schedule-view-toggle" style="display:flex; justify-content:center; gap:8px; margin-bottom:8px;"></div>
+        <div id="schedule-filter-container" style="text-align:center; margin-bottom:6px;"></div>
+        <div style="height:1px; background:linear-gradient(to right,transparent,rgba(255,255,255,0.1),transparent); margin-bottom:14px;" id="schedule-sep"></div>
         <div class="grid weeks-grid" id="deliverables-grid"></div>
     </div>
 
     <div id="deadlines-page" class="page">
         <button class="back-btn" onclick="smartBack()">← Back</button>
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-            <h1 style="color:#00E5FF">DEADLINES</h1>
-        </div>
-        <p class="subtitle" style="margin-bottom: 30px;">Track your upcoming tasks and quizzes</p>
+        <h1 style="color:#00E5FF; text-align:center;">DEADLINES</h1>
+        <p class="subtitle" style="margin-bottom: 12px;">Track your upcoming tasks and quizzes</p>
+        <div id="deadlines-filter-bar" style="max-width:800px; margin:0 auto 14px; text-align:center;"></div>
         
         <div style="max-width: 800px; margin: 0 auto;">
             <div id="ongoing-container" style="display:none; margin-bottom:35px;">
@@ -720,9 +796,7 @@
     <div id="midterm-page" class="page">
         <button id="midterm-back-btn" class="back-btn" onclick="smartBack()">← Back</button>
         <div id="midterm-capture-wrap">
-            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-                <h1 style="color:#007aff">MIDTERM EXAMS</h1>
-            </div>
+            <h1 style="color:#007aff; text-align:center;">MIDTERM EXAMS</h1>
             <p class="subtitle" style="margin-bottom: 30px;">27 March — 3 April 2026 &nbsp;·&nbsp; Spring 2026</p>
             <div id="midterm-list" style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column;"></div>
         </div>
@@ -734,8 +808,8 @@
     <div id="useful-links-page" class="page">
         <button class="back-btn" onclick="smartBack()">← Back</button>
         <h1 style="color:var(--accent-purple)">USEFUL LINKS</h1>
-        <p class="subtitle" style="margin-bottom: 30px;">Important resources across all subjects</p>
-        <div id="useful-links-filter-bar" class="filter-bar"></div>
+        <p class="subtitle" style="margin-bottom: 14px;">Important resources across all subjects</p>
+        <div id="useful-links-filter-bar" style="max-width:900px; margin:0 auto 8px; display:flex; flex-direction:column; gap:0;"></div>
         <div class="grid weeks-grid" id="all-links-list"></div>
     </div>
 
@@ -789,18 +863,22 @@
 
     <div id="weeks-page" class="page">
         <button class="back-btn" onclick="smartBack()">← Back</button>
-        <div style="text-align:center;">
-            <h1 id="subject-title" style="margin-bottom:5px;"></h1>
-            <div id="drive-container" style="margin-bottom:20px;"></div>
+        <div style="text-align:center; margin-bottom:6px;">
+            <h1 id="subject-title" style="margin-bottom:0; display:inline;"></h1>
         </div>
         
-        <div id="subject-tabs" class="subject-tabs">
+        <div id="subject-tabs" class="subject-tabs" style="margin-bottom:12px;">
             <button id="tab-weeks" class="sub-tab active" onclick="renderSubjectView('weeks')">📚 Weeks</button>
             <button id="tab-events" class="sub-tab" onclick="renderSubjectView('events')">🎯 Exam Materials</button>
             <button id="tab-playlists" class="sub-tab" onclick="renderSubjectView('playlists')">🔗 Useful Links</button>
         </div>
 
-        <div id="filter-bar" class="filter-bar"></div>
+        <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:10px; min-height:36px;">
+            <div id="filter-bar-wrap" style="display:none;"></div>
+            <span id="drive-container"></span>
+        </div>
+        <div id="filter-bar" class="filter-bar" style="display:none;"></div>
+        <div id="filter-sep" style="display:none; height:1px; background:linear-gradient(to right,transparent,rgba(255,255,255,0.1),transparent); margin:0 0 20px;"></div>
         <div class="grid weeks-grid" id="weeks-grid"></div>
         <div class="grid weeks-grid" id="playlists-grid" style="display:none;"></div>
     </div>
@@ -877,6 +955,15 @@
 
 <!-- News FAB -->
 <button class="news-fab" id="news-fab" onclick="openNewsPanel()" title="News & Announcements"></button>
+<div id="news-toast" class="news-toast">
+    <div class="news-toast-title">📬 Announcements</div>
+    <div class="news-toast-body" id="news-toast-body"></div>
+    <div class="news-toast-actions">
+        <button class="news-toast-btn primary" onclick="dismissNewsToast(); openNewsPanel();">Go check them →</button>
+        <button class="news-toast-btn secondary" onclick="dismissNewsToast();">Dismiss</button>
+    </div>
+    <div class="news-toast-timer"><div class="news-toast-timer-bar" id="news-toast-timer-bar"></div></div>
+</div>
 
 <!-- News Panel -->
 <div id="news-panel" class="news-panel" onclick="closeNewsPanel(event)">
@@ -995,9 +1082,23 @@
     if(typeof window.STAFF_DATA === 'undefined') window.STAFF_DATA = [];
     
     let currSub = null;
-    let currentSubjectView = 'weeks'; 
+    let currentSubjectView = 'weeks';
+    let playlistBadgeFilters = new Set();
+    let historySubFilter = new Set();
+    // Filter panel open states — survive re-renders
+    let fpOpenState = { schedule: false, deadlines: false, usefulBadges: false, playlist: false, history: false };
+    let deadlineSubFilter = new Set();
+    let deadlineTypeFilter = new Set();
+    let midtermHiddenSet = (() => {
+        try { return new Set(JSON.parse(localStorage.getItem('midtermHidden') || '[]')); }
+        catch(e) { return new Set(); }
+    })();
+    function saveMidtermHidden() {
+        try { localStorage.setItem('midtermHidden', JSON.stringify([...midtermHiddenSet])); } catch(e) {}
+    }
     let currentUsefulFilter = 'All Links';
-    let currentUsefulSubject = 'All Subjects';
+    let currentUsefulSubject = new Set(); // multi-select subject filter
+    let currentUsefulBadgeFilters = new Set(); // multi-select badge filters
     let subjectViewFilters = {};
     let weekNavPrev = null, weekNavNext = null, weekNavFrom = 'weeks';
     let currentContentObj = null;
@@ -1175,7 +1276,7 @@
                 else if(event.state.page === 'schedule') showSchedule(false, event.state.from || 'home');
                 else if(event.state.page === 'deadlines') showDeadlines(false);
                 else if(event.state.page === 'midterm') showMidterms(false, event.state.from || 'home');
-                else if(event.state.page === 'useful-links') showUsefulLinks(false, event.state.filter || currentUsefulFilter, event.state.subject || currentUsefulSubject);
+                else if(event.state.page === 'useful-links') showUsefulLinks(false, event.state.filter || currentUsefulFilter, event.state.subject || null);
                 else if(event.state.page === 'directory') showDirectory(false);
                 else if(event.state.page === 'timetable') showTimetable(false);
                 else if(event.state.page === 'gpa') showGpa(false);
@@ -1197,6 +1298,8 @@
         if (typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
         renderNewsBtn();
         animateActivePageWaterfall();
+        // Show unread notification toast after a brief delay
+        setTimeout(maybeShowNewsToast, 1800);
     }
 
     function parseDateMeta(str) {
@@ -1375,7 +1478,8 @@
         return parseWhenDeadlineMeta(task && task.when, weekNum);
     }
 
-    function showRecent() {
+    function showRecent(subFilter = null) {
+        if (subFilter !== null) historySubFilter = subFilter;
         const list = document.getElementById('recent-list');
         list.innerHTML = '';
         let weekItems = [];
@@ -1430,10 +1534,136 @@
         });
         displayItems.sort((a, b) => b.timestamp - a.timestamp);
 
-        if(displayItems.length === 0) {
-            list.innerHTML = `<div style="text-align:center; color:#666; margin-top:50px">No history found.</div>`;
+        // Build compact subject filter chips
+        const allSubCodes = new Set();
+        displayItems.forEach(e => {
+            const code = e.type === 'week' ? e.item.subCode : (e.type === 'res-single' ? e.item.subCode : (e.items ? e.items[0].subCode : null));
+            if (code) allSubCodes.add(code);
+        });
+
+        if (allSubCodes.size > 1) {
+            const anyFilter = historySubFilter.size > 0;
+            const section = document.createElement('div');
+            section.className = 'fp-bar-section';
+            section.dataset.historyFilterSection = '1';
+
+            const togBtn = document.createElement('button');
+            togBtn.className = 'fp-toggle' + (anyFilter ? ' has-filter open' : '');
+            if (anyFilter) {
+                if (historySubFilter.size === 1) {
+                    const col = getSubjectColor([...historySubFilter][0]);
+                    togBtn.innerHTML = `Subject: <span class="fp-active-label">${[...historySubFilter][0]}</span> <span class="fp-arrow">▲</span>`;
+                    togBtn.style.cssText = `border-color:${col}; color:${col}; background:${col}22; box-shadow:0 0 12px ${col}44;`;
+                } else {
+                    const names = [...historySubFilter].join(', ');
+                    togBtn.innerHTML = `Subject: <span class="fp-active-label">${names}</span> <span class="fp-arrow">▲</span>`;
+                    togBtn.style.cssText = `border-color:#c4b5db; color:#c4b5db; background:rgba(196,181,219,0.12); box-shadow:0 0 12px rgba(196,181,219,0.3);`;
+                }
+            } else {
+                togBtn.innerHTML = `Subject <span class="fp-arrow">▼</span>`;
+            }
+
+            const bar = document.createElement('div');
+            bar.className = 'fp-bar-collapsible fp-inline-bar' + (fpOpenState.history ? ' open' : '');
+
+            const refreshHistoryTog = () => {
+                const open = bar.classList.contains('open');
+                const arrow = open ? '▲' : '▼';
+                if (historySubFilter.size === 0) {
+                    togBtn.className = 'fp-toggle' + (open ? ' open' : '');
+                    togBtn.innerHTML = `Subject <span class="fp-arrow">${arrow}</span>`;
+                    togBtn.style.cssText = '';
+                } else if (historySubFilter.size === 1) {
+                    const col = getSubjectColor([...historySubFilter][0]);
+                    togBtn.className = 'fp-toggle has-filter' + (open ? ' open' : '');
+                    togBtn.innerHTML = `Subject: <span class="fp-active-label">${[...historySubFilter][0]}</span> <span class="fp-arrow">${arrow}</span>`;
+                    togBtn.style.cssText = `border-color:${col}; color:${col}; background:${col}22; box-shadow:0 0 12px ${col}44;`;
+                } else {
+                    const names = [...historySubFilter].join(', ');
+                    togBtn.className = 'fp-toggle has-filter' + (open ? ' open' : '');
+                    togBtn.innerHTML = `Subject: <span class="fp-active-label">${names}</span> <span class="fp-arrow">${arrow}</span>`;
+                    togBtn.style.cssText = `border-color:#c4b5db; color:#c4b5db; background:rgba(196,181,219,0.12); box-shadow:0 0 12px rgba(196,181,219,0.3);`;
+                }
+            };
+
+            const refreshHistoryChips = () => {
+                bar.querySelectorAll('.fp-chip').forEach(b => {
+                    const code = b.dataset.code;
+                    if (code === '') {
+                        const isAll = historySubFilter.size === 0;
+                        b.classList.toggle('active', isAll);
+                        b.style.cssText = isAll ? 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;' : '';
+                    } else {
+                        const act = historySubFilter.has(code);
+                        b.classList.toggle('active', act);
+                        const col = getSubjectColor(code);
+                        b.style.cssText = act ? `background:${getSubjectBg(code)}; border-color:${col}; color:${col};` : '';
+                    }
+                });
+            };
+
+            const allChip = document.createElement('button');
+            allChip.className = 'fp-chip' + (historySubFilter.size === 0 ? ' active' : '');
+            allChip.textContent = 'All';
+            allChip.dataset.code = '';
+            if (historySubFilter.size === 0) allChip.style.cssText = 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;';
+            allChip.onclick = () => {
+                historySubFilter.clear();
+                refreshHistoryChips();
+                refreshHistoryTog();
+                renderHistoryCards(list, displayWithFilteredBatch, displayItems);
+            };
+            bar.appendChild(allChip);
+
+            allSubCodes.forEach(code => {
+                const color = getSubjectColor(code);
+                const chip = document.createElement('button');
+                chip.className = 'fp-chip' + (historySubFilter.has(code) ? ' active' : '');
+                chip.textContent = code;
+                chip.dataset.code = code;
+                if (historySubFilter.has(code)) chip.style.cssText = `background:${getSubjectBg(code)}; border-color:${color}; color:${color};`;
+                chip.onclick = () => {
+                    if (historySubFilter.has(code)) historySubFilter.delete(code); else historySubFilter.add(code);
+                    refreshHistoryChips();
+                    refreshHistoryTog();
+                    renderHistoryCards(list, displayWithFilteredBatch, displayItems);
+                };
+                bar.appendChild(chip);
+            });
+
+            togBtn.addEventListener('click', () => {
+                const isOpen = bar.classList.contains('open');
+                bar.classList.toggle('open', !isOpen);
+                togBtn.classList.toggle('open', !isOpen);
+                fpOpenState.history = !isOpen;
+                refreshHistoryTog();
+            });
+
+            section.appendChild(togBtn);
+            section.appendChild(bar);
+            list.appendChild(section);
+        }
+
+        const filteredDisplay = historySubFilter.size === 0 ? displayItems : displayItems.filter(e => {
+            if (e.type === 'week') return historySubFilter.has(e.item.subCode);
+            if (e.type === 'res-single') return historySubFilter.has(e.item.subCode);
+            if (e.type === 'res-batch') return e.items.some(i => historySubFilter.has(i.subCode));
+            return true;
+        });
+
+        const displayWithFilteredBatch = filteredDisplay.map(e => {
+            if (e.type === 'res-batch' && historySubFilter.size > 0) {
+                const filtered = e.items.filter(i => historySubFilter.has(i.subCode));
+                if (filtered.length === 1) return { type: 'res-single', item: filtered[0], timestamp: filtered[0].timestamp };
+                return { ...e, items: filtered };
+            }
+            return e;
+        });
+
+        if(displayWithFilteredBatch.length === 0) {
+            list.innerHTML += `<div style="text-align:center; color:#666; margin-top:50px">No history found for this subject.</div>`;
         } else {
-            displayItems.forEach(entry => {
+            displayWithFilteredBatch.forEach(entry => {
                 const el = document.createElement('div');
                 el.className = 'recent-card';
 
@@ -1504,6 +1734,83 @@
         nav('recent');
     }
 
+    function updateHistoryFilterUI(section) {
+        // Filter UI is now updated inline via refreshHistoryChips / refreshHistoryTog
+    }
+
+    function renderHistoryCards(list, displayWithFilteredBatch, displayItems) {
+        // Keep the filter section, remove everything else
+        const filterSection = list.querySelector('[data-history-filter-section]');
+        Array.from(list.children).forEach(child => {
+            if (child !== filterSection) child.remove();
+        });
+        const filteredDisplay = historySubFilter.size === 0 ? displayItems : displayItems.filter(e => {
+            if (e.type === 'week') return historySubFilter.has(e.item.subCode);
+            if (e.type === 'res-single') return historySubFilter.has(e.item.subCode);
+            if (e.type === 'res-batch') return e.items.some(i => historySubFilter.has(i.subCode));
+            return true;
+        });
+        const toRender = filteredDisplay.map(e => {
+            if (e.type === 'res-batch' && historySubFilter.size > 0) {
+                const filtered = e.items.filter(i => historySubFilter.has(i.subCode));
+                if (filtered.length === 1) return { type: 'res-single', item: filtered[0], timestamp: filtered[0].timestamp };
+                return { ...e, items: filtered };
+            }
+            return e;
+        });
+        if (toRender.length === 0) {
+            const empty = document.createElement('div');
+            empty.style.cssText = 'text-align:center; color:#666; margin-top:50px';
+            empty.textContent = 'No history found for this subject.';
+            list.appendChild(empty);
+        } else {
+            _appendHistoryEntries(list, toRender);
+        }
+    }
+
+    function _appendHistoryEntries(list, entries) {
+        // Inline version of the render loop from showRecent
+        entries.forEach(entry => {
+            const el = document.createElement('div');
+            el.className = 'recent-card';
+            if (entry.type === 'week') {
+                const item = entry.item;
+                el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj, true, 'recent'); };
+                let resList = '';
+                if (item.wkObj.resources) {
+                    const keys = window.CONFIG && window.CONFIG.resources ? window.CONFIG.resources.map(r=>r.name) : Object.keys(item.wkObj.resources);
+                    keys.forEach(k => { if(item.wkObj.resources[k] && item.wkObj.resources[k].vis && !item.wkObj.resources[k].isRecent) resList += `<div style="margin-top:4px;">${iconMap[k]||'📂'} ${k}</div>`; });
+                }
+                el.innerHTML = `<div class="recent-header"><span>${item.subName} - ${item.wkObj.title}</span><span class="recent-time">${item.dateStr}</span></div><div style="margin-top:5px; color:#888; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Full Update Includes:</div><div class="recent-sub">${resList}</div>`;
+            } else if (entry.type === 'res-single') {
+                const item = entry.item;
+                el.onclick = () => { currSub = window.COURSE_DATA.find(s => s.code === item.subCode); showContentByObj(item.wkObj, true, 'recent'); };
+                el.innerHTML = `<div class="recent-header"><span>${item.subName} - ${item.wkObj.title}</span><span class="recent-time">${item.dateStr}</span></div><div class="recent-sub" style="margin-top:10px;">New Upload: <strong style="color:white">${item.resName}</strong></div><div class="recent-icons">${iconMap[item.resName] || "📂"}</div>`;
+            } else if (entry.type === 'res-batch') {
+                const items = entry.items;
+                el.style.cursor = 'default';
+                const newestTs = items.length > 0 ? items[0].timestamp : 0;
+                const oldestTs = items.length > 0 ? items[items.length-1].timestamp : 0;
+                const batchRangeText = formatBatchRange(oldestTs, newestTs);
+                const header = document.createElement('div');
+                header.innerHTML = `<div class="recent-header"><span>📦 Batch Update — ${items.length} Resources</span><span class="recent-time">${entry.dateStr}</span></div>${batchRangeText?`<div style="margin-top:4px; color:#9fb8dc; font-size:0.78rem; line-height:1.35;">${batchRangeText}</div>`:''}<div style="margin-top:8px; color:#888; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px;">Includes:</div>`;
+                el.appendChild(header);
+                items.forEach(r => {
+                    const subColor = getSubjectColor(r.subCode), subBg = getSubjectBg(r.subCode);
+                    const singleEditTime = formatRecentDateTime(r.timestamp) || r.dateStr || '';
+                    const row = document.createElement('div');
+                    row.style.cssText = `display:flex; align-items:center; gap:10px; margin-top:8px; padding:8px 12px; border-radius:10px; background:rgba(0,0,0,0.2); cursor:pointer; transition:0.2s; border-left:3px solid ${subColor};`;
+                    row.innerHTML = `<span style="font-size:1.2rem;">${iconMap[r.resName]||'📂'}</span><span style="background:${subBg}; color:${subColor}; font-size:0.7rem; font-weight:bold; padding:2px 8px; border-radius:6px;">${r.subCode}</span><span style="color:#aaa; font-size:0.85rem;">${r.wkTitle}</span><span style="color:white; font-weight:600; font-size:0.9rem; flex:1;">${r.resName}</span><span style="color:#9fb8dc; font-size:0.73rem; white-space:nowrap;">${singleEditTime}</span>`;
+                    row.addEventListener('click', e => { e.stopPropagation(); currSub = window.COURSE_DATA.find(s => s.code === r.subCode); showContentByObj(r.wkObj, true, 'recent'); });
+                    row.addEventListener('mouseenter', () => { row.style.background = 'rgba(255,255,255,0.06)'; row.style.transform = 'translateX(4px)'; });
+                    row.addEventListener('mouseleave', () => { row.style.background = 'rgba(0,0,0,0.2)'; row.style.transform = 'translateX(0)'; });
+                    el.appendChild(row);
+                });
+            }
+            list.appendChild(el);
+        });
+    }
+
     function getSubjectColor(code) { 
         if(window.COURSE_DATA) { const s = window.COURSE_DATA.find(x => x.code === code); if(s && s.color) return s.color; }
         const fallback = { 'CA': '#ff9500', 'DSA': '#34c759', 'DB': '#007aff', 'OS': '#ff2d55', 'CN': '#af52de', 'AI': '#B388FF' };
@@ -1520,7 +1827,20 @@
     }
 
     // --- DEADLINES LOGIC ---
-    function showDeadlines(push = true) {
+    function showDeadlines(push = true, typeFilter = null, subFilter = null) {
+        if (typeFilter !== null && typeFilter !== 'all') {
+            if (typeFilter instanceof Set) deadlineTypeFilter = typeFilter;
+            else { deadlineTypeFilter = new Set(); } // 'all' or null = clear
+        } else if (typeFilter === 'all') {
+            deadlineTypeFilter = new Set();
+        }
+        if (subFilter !== null && subFilter !== 'All') {
+            if (subFilter instanceof Set) deadlineSubFilter = subFilter;
+            else { deadlineSubFilter = new Set(); }
+        } else if (subFilter === 'All') {
+            deadlineSubFilter = new Set();
+        }
+
         const ongoingContainer = document.getElementById('ongoing-container');
         const ongoingList = document.getElementById('ongoing-list');
         const upList = document.getElementById('upcoming-list');
@@ -1605,6 +1925,230 @@
         upcoming.sort((a, b) => a.timestamp - b.timestamp);
         completed.sort((a, b) => b.timestamp - a.timestamp);
 
+        // ── Build collapsible filter panel (only when not called from chip tap) ──
+        if (!_dlSkipFilterRebuild) {
+        const filterBarEl = document.getElementById('deadlines-filter-bar');
+        if (filterBarEl) {
+            filterBarEl.innerHTML = '';
+
+            const typeChips = [
+                { key: 'quiz',       label: '🧠 Quizzes',    color: '#af52de' },
+                { key: 'assignment', label: '📝 Assignments', color: '#007aff' },
+                { key: 'project',    label: '🚀 Projects',    color: '#34c759' },
+                { key: 'news',       label: '📢 News',        color: '#e91e8c' }
+            ];
+
+            const subCodesSet = new Set();
+            [...ongoing, ...upcoming, ...completed, ...unscheduled].forEach(item => {
+                if (item.task && item.task.sub && item.task.sub !== 'NEWS') subCodesSet.add(item.task.sub);
+            });
+            const hasMultipleSubs = subCodesSet.size > 1;
+
+            const anyActive = deadlineTypeFilter.size > 0 || deadlineSubFilter.size > 0;
+            const isOpen = fpOpenState.deadlines;
+
+            const togBtn = document.createElement('button');
+            const getTogLabel = (open) => {
+                const active = deadlineTypeFilter.size > 0 || deadlineSubFilter.size > 0;
+                if (active) {
+                    const parts = [];
+                    deadlineTypeFilter.forEach(k => { const c = typeChips.find(t=>t.key===k); if(c) parts.push(c.label.replace(/^\S+\s/,'')); });
+                    deadlineSubFilter.forEach(s => parts.push(s));
+                    return `Filter: <span class="fp-active-label">${parts.join(', ')}</span> <span class="fp-arrow">${open ? '▲' : '▼'}</span>`;
+                }
+                return `Filter <span class="fp-arrow">${open ? '▲' : '▼'}</span>`;
+            };
+            togBtn.className = 'fp-toggle' + (anyActive ? ' has-filter' : '') + (isOpen ? ' open' : '');
+            togBtn.innerHTML = getTogLabel(isOpen);
+            filterBarEl.appendChild(togBtn);
+
+            const collapsible = document.createElement('div');
+            collapsible.className = 'fp-bar-collapsible' + (isOpen ? ' open' : '');
+            collapsible.style.cssText = 'flex-direction:column; gap:0; margin-top:8px; margin-bottom:18px; align-items:stretch;';
+
+            const refreshTog = () => {
+                const open = collapsible.classList.contains('open');
+                const active = deadlineTypeFilter.size > 0 || deadlineSubFilter.size > 0;
+                togBtn.className = 'fp-toggle' + (active ? ' has-filter' : '') + (open ? ' open' : '');
+                togBtn.innerHTML = getTogLabel(open);
+            };
+
+            const outerBar = document.createElement('div');
+            outerBar.style.cssText = 'background:rgba(8,2,18,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:20px; padding:10px 18px; display:flex; flex-direction:column; gap:10px;';
+
+            // ROW 1 — TYPE chips (multi-select)
+            const dlTypeRowWrapper = document.createElement('div');
+            dlTypeRowWrapper.style.cssText = 'display:flex; align-items:center; gap:10px;';
+            const dlTypeRowLabel = document.createElement('span');
+            dlTypeRowLabel.textContent = 'Types';
+            dlTypeRowLabel.style.cssText = 'font-size:0.58rem; font-weight:700; color:rgba(196,181,219,0.45); text-transform:uppercase; letter-spacing:1.5px; white-space:nowrap; flex-shrink:0; min-width:46px;';
+            const typeRow = document.createElement('div');
+            typeRow.style.cssText = 'flex:1; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; align-items:center;';
+            const refreshTypeChips = () => {
+                typeRow.querySelectorAll('.fp-chip').forEach(b => {
+                    const k = b.dataset.key;
+                    const act = deadlineTypeFilter.has(k);
+                    b.classList.toggle('active', act);
+                    const c = typeChips.find(t=>t.key===k);
+                    b.style.cssText = act && c ? `background:${c.color}22; border-color:${c.color}; color:${c.color}; box-shadow:0 0 10px ${c.color}55;` : '';
+                });
+            };
+            typeChips.forEach(chip => {
+                const btn = document.createElement('button');
+                btn.className = 'fp-chip' + (deadlineTypeFilter.has(chip.key) ? ' active' : '');
+                btn.textContent = chip.label;
+                btn.dataset.key = chip.key;
+                if (deadlineTypeFilter.has(chip.key)) btn.style.cssText = `background:${chip.color}22; border-color:${chip.color}; color:${chip.color}; box-shadow:0 0 10px ${chip.color}55;`;
+                btn.addEventListener('click', () => {
+                    if (deadlineTypeFilter.has(chip.key)) deadlineTypeFilter.delete(chip.key); else deadlineTypeFilter.add(chip.key);
+                    refreshTypeChips();
+                    refreshTog();
+                    renderDeadlineContent();
+                });
+                typeRow.appendChild(btn);
+            });
+            dlTypeRowWrapper.appendChild(dlTypeRowLabel);
+            dlTypeRowWrapper.appendChild(typeRow);
+            outerBar.appendChild(dlTypeRowWrapper);
+
+            // ROW 2 — SUBJECT chips (multi-select, if multiple)
+            if (hasMultipleSubs) {
+                const rowDivider = document.createElement('div');
+                rowDivider.style.cssText = 'height:1px; background:rgba(255,255,255,0.08); margin:0 -4px;';
+                outerBar.appendChild(rowDivider);
+
+                const dlSubRowWrapper = document.createElement('div');
+                dlSubRowWrapper.style.cssText = 'display:flex; align-items:center; gap:10px;';
+                const dlSubRowLabel = document.createElement('span');
+                dlSubRowLabel.textContent = 'Subjects';
+                dlSubRowLabel.style.cssText = 'font-size:0.58rem; font-weight:700; color:rgba(196,181,219,0.45); text-transform:uppercase; letter-spacing:1.5px; white-space:nowrap; flex-shrink:0; min-width:46px;';
+                const subRow = document.createElement('div');
+                subRow.style.cssText = 'flex:1; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; align-items:center;';
+
+                const refreshSubChips = () => {
+                    subRow.querySelectorAll('.fp-chip').forEach(b => {
+                        const k = b.dataset.key;
+                        if (k === '__all__') {
+                            const isAll = deadlineSubFilter.size === 0;
+                            b.classList.toggle('active', isAll);
+                            b.style.cssText = isAll ? 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;' : '';
+                        } else {
+                            const act = deadlineSubFilter.has(k);
+                            b.classList.toggle('active', act);
+                            const col = getSubjectColor(k);
+                            b.style.cssText = act ? `background:${col}22; border-color:${col}; color:${col}; box-shadow:0 0 10px ${col}55;` : '';
+                        }
+                    });
+                    // Single-subject color on toggle button
+                    if (deadlineSubFilter.size === 1) {
+                        const col = getSubjectColor([...deadlineSubFilter][0]);
+                        togBtn.style.cssText = `border-color:${col}; color:${col}; background:${col}22; box-shadow:0 0 12px ${col}44;`;
+                    } else {
+                        togBtn.style.cssText = '';
+                    }
+                };
+
+                const allSubBtn = document.createElement('button');
+                allSubBtn.className = 'fp-chip' + (deadlineSubFilter.size === 0 ? ' active' : '');
+                allSubBtn.textContent = 'All';
+                allSubBtn.dataset.key = '__all__';
+                if (deadlineSubFilter.size === 0) allSubBtn.style.cssText = 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;';
+                allSubBtn.addEventListener('click', () => {
+                    deadlineSubFilter.clear();
+                    refreshSubChips();
+                    refreshTog();
+                    renderDeadlineContent();
+                });
+                subRow.appendChild(allSubBtn);
+
+                subCodesSet.forEach(code => {
+                    const color = getSubjectColor(code);
+                    const btn = document.createElement('button');
+                    btn.className = 'fp-chip' + (deadlineSubFilter.has(code) ? ' active' : '');
+                    btn.textContent = code;
+                    btn.dataset.key = code;
+                    if (deadlineSubFilter.has(code)) btn.style.cssText = `background:${color}22; border-color:${color}; color:${color}; box-shadow:0 0 10px ${color}55;`;
+                    btn.addEventListener('click', () => {
+                        if (deadlineSubFilter.has(code)) deadlineSubFilter.delete(code); else deadlineSubFilter.add(code);
+                        refreshSubChips();
+                        refreshTog();
+                        renderDeadlineContent();
+                    });
+                    subRow.appendChild(btn);
+                });
+                dlSubRowWrapper.appendChild(dlSubRowLabel);
+                dlSubRowWrapper.appendChild(subRow);
+                outerBar.appendChild(dlSubRowWrapper);
+
+                // Apply single-subject color on initial render
+                if (deadlineSubFilter.size === 1) {
+                    const col = getSubjectColor([...deadlineSubFilter][0]);
+                    togBtn.style.cssText = `border-color:${col}; color:${col}; background:${col}22; box-shadow:0 0 12px ${col}44;`;
+                }
+            }
+
+            // Clear all button
+            const dlClearDivider = document.createElement('div');
+            dlClearDivider.style.cssText = 'height:1px; background:rgba(255,255,255,0.08); margin:0 -4px;';
+            outerBar.appendChild(dlClearDivider);
+            const dlClearRow = document.createElement('div');
+            dlClearRow.style.cssText = 'display:flex; justify-content:center;';
+            const dlClearBtn = document.createElement('button');
+            dlClearBtn.className = 'fp-clear-btn';
+            dlClearBtn.innerHTML = '✕ Clear all filters';
+            dlClearBtn.addEventListener('click', () => {
+                deadlineTypeFilter.clear();
+                deadlineSubFilter.clear();
+                showDeadlines(false);
+            });
+            dlClearRow.appendChild(dlClearBtn);
+            outerBar.appendChild(dlClearRow);
+            const syncDlClear = () => {
+                const active = deadlineTypeFilter.size > 0 || deadlineSubFilter.size > 0;
+                dlClearDivider.style.display = active ? '' : 'none';
+                dlClearRow.style.display = active ? 'flex' : 'none';
+            };
+            syncDlClear();
+            collapsible.appendChild(outerBar);
+
+            outerBar.addEventListener('click', () => { setTimeout(syncDlClear, 0); });
+
+            togBtn.addEventListener('click', () => {
+                const nowOpen = collapsible.classList.contains('open');
+                collapsible.classList.toggle('open', !nowOpen);
+                fpOpenState.deadlines = !nowOpen;
+                refreshTog();
+            });
+
+            filterBarEl.appendChild(collapsible);
+        } // end if(filterBarEl)
+        } // end if(!_dlSkipFilterRebuild)
+
+        const applyDeadlineFilters = (arr) => {
+            return arr.filter(item => {
+                // Type filter (OR across selected types)
+                if (deadlineTypeFilter.size > 0) {
+                    const isNews = item.source === 'news';
+                    const cat = isNews ? 'news' : getTaskTypeCategory(item.task.name);
+                    if (!deadlineTypeFilter.has(cat)) return false;
+                }
+                // Subject filter (OR across selected subjects)
+                if (deadlineSubFilter.size > 0) {
+                    if (!deadlineSubFilter.has(item.task.sub)) return false;
+                }
+                return true;
+            });
+        }
+
+        const filteredOngoing     = applyDeadlineFilters(ongoing);
+        const filteredUpcoming    = applyDeadlineFilters(upcoming);
+        const filteredCompleted   = applyDeadlineFilters(completed);
+        const filteredUnscheduled = applyDeadlineFilters(unscheduled);
+
+        if (filteredOngoing.length > 0) {
+            ongoingContainer.style.display = 'block';
+        }
+
         function getGroupedHtml(arr, isComp) {
             if (arr.length === 0) return `<div class="empty-state">${isComp ? 'No completed tasks yet.' : 'Hooray! No upcoming deadlines.'}</div>`;
             
@@ -1688,10 +2232,10 @@
         }
 
         // Render ongoing tasks
-        if(ongoing.length > 0) {
+        if(filteredOngoing.length > 0) {
             ongoingContainer.style.display = 'block';
             let ongoingHtml = '';
-            ongoing.forEach(item => {
+            filteredOngoing.forEach(item => {
                 let subName = item.task.sub;
                 if(window.COURSE_DATA) {
                     const sObj = window.COURSE_DATA.find(s => s.code === item.task.sub);
@@ -1726,13 +2270,13 @@
             ongoingList.innerHTML = ongoingHtml;
         }
 
-        upList.innerHTML = getGroupedHtml(upcoming, false);
-        compList.innerHTML = getGroupedHtml(completed, true);
+        upList.innerHTML = getGroupedHtml(filteredUpcoming, false);
+        compList.innerHTML = getGroupedHtml(filteredCompleted, true);
 
-        if(unscheduled.length > 0) {
+        if(filteredUnscheduled.length > 0) {
             unschContainer.style.display = 'block';
             let unschHtml = '';
-            unscheduled.forEach(item => {
+            filteredUnscheduled.forEach(item => {
                 let subName = item.source === 'news' ? 'News Announcement' : item.task.sub;
                 if(window.COURSE_DATA && item.source !== 'news') {
                     const sObj = window.COURSE_DATA.find(s => s.code === item.task.sub);
@@ -1758,43 +2302,50 @@
         nav('deadlines', push);
     }
 
+    // Re-renders lists only (skips filter bar rebuild) when a filter chip is tapped
+    let _dlSkipFilterRebuild = false;
+    function renderDeadlineContent() {
+        _dlSkipFilterRebuild = true;
+        showDeadlines(false);
+        _dlSkipFilterRebuild = false;
+    }
+
     function goToScheduleTask(wIndex, tIndex) {
         showSchedule(true, 'deadlines');
-        setTimeout(() => {
-            openModal(wIndex, tIndex);
-        }, 150);
+        setTimeout(() => { openModal(wIndex, tIndex); }, 150);
     }
 
     // --- USEFUL LINKS GLOBAL PAGE ---
-    function showUsefulLinks(push = true, filterType = 'All Links', subjectFilter = 'All Subjects') {
+    function showUsefulLinks(push = true, filterType = 'All Links', subjectFilter = null, badgeFilters = null) {
         currentUsefulFilter = filterType;
-        currentUsefulSubject = subjectFilter;
+        if (subjectFilter !== null) {
+            // Accept a Set, array, or legacy string
+            if (subjectFilter instanceof Set) currentUsefulSubject = subjectFilter;
+            else if (Array.isArray(subjectFilter)) currentUsefulSubject = new Set(subjectFilter.filter(s => s !== 'All Subjects'));
+            else if (subjectFilter === 'All Subjects') currentUsefulSubject = new Set();
+            else currentUsefulSubject = new Set([subjectFilter]);
+        }
+        if (badgeFilters !== null) currentUsefulBadgeFilters = new Set(badgeFilters);
 
         const filterBar = document.getElementById('useful-links-filter-bar');
         const list = document.getElementById('all-links-list');
         list.innerHTML = '';
-        filterBar.innerHTML = '';
+        if (!_ulSkipFilterRebuild) filterBar.innerHTML = '';
 
         let hasLinksAnywhere = false;
         let activeSubjects = [];
-        let catCounts = { 'Lectures':0, 'Tutorials':0, 'Labs':0, 'Projects':0, 'Presentations':0 };
+        // Collect all unique badge texts across all playlists for current subject filter
+        const allBadgeSet = new Map(); // badge text -> badge color
 
         window.COURSE_DATA.forEach(sub => {
             if (sub.playlists && sub.playlists.length > 0) {
                 hasLinksAnywhere = true;
                 activeSubjects.push(sub);
-
-                if (subjectFilter === 'All Subjects' || subjectFilter === sub.code) {
+                if (currentUsefulSubject.size === 0 || currentUsefulSubject.has(sub.code)) {
                     sub.playlists.forEach(p => {
-                        const t = (p.title || '').toLowerCase();
-                        const n = (p.note || '').toLowerCase();
-                        const btext = (p.badges||[]).map(b=>(b.text||'').toLowerCase()).join(' ');
-                        const all = t + ' ' + n + ' ' + btext;
-                        if(all.includes('lecture')) catCounts['Lectures']++;
-                        if(all.includes('section') || all.includes('tutorial')) catCounts['Tutorials']++;
-                        if(all.includes('lab')) catCounts['Labs']++;
-                        if(all.includes('project')) catCounts['Projects']++;
-                        if(all.includes('presentation')) catCounts['Presentations']++;
+                        (p.badges || []).forEach(b => {
+                            if (b.text && b.text.trim()) allBadgeSet.set(b.text.trim(), b.color || '#e91e8c');
+                        });
                     });
                 }
             }
@@ -1806,213 +2357,312 @@
             return;
         }
 
-        let selectHtml = `<select class="useful-select" onchange="showUsefulLinks(false, currentUsefulFilter, this.value)">`;
-        selectHtml += `<option value="All Subjects" ${subjectFilter === 'All Subjects' ? 'selected' : ''}>All Subjects</option>`;
-        activeSubjects.forEach(s => {
-            selectHtml += `<option value="${s.code}" ${subjectFilter === s.code ? 'selected' : ''}>${s.code} - ${s.name}</option>`;
-        });
-        selectHtml += `</select>`;
-        
-        const selectWrapper = document.createElement('div');
-        selectWrapper.innerHTML = selectHtml;
-        filterBar.appendChild(selectWrapper.firstChild);
+        // ── Combined Filter toggle (subjects row + badges row) ──
+        if (!_ulSkipFilterRebuild) {
 
-        const btnAll = document.createElement('button');
-        btnAll.className = `filter-btn ${filterType === 'All Links' ? 'active' : ''}`;
-        btnAll.innerText = 'All Links';
-        btnAll.onclick = () => showUsefulLinks(false, 'All Links', currentUsefulSubject);
-        filterBar.appendChild(btnAll);
+        const anySubFilter = currentUsefulSubject.size > 0;
+        const anyBadgeFilter = currentUsefulBadgeFilters.size > 0;
+        const anyUlActive = anySubFilter || anyBadgeFilter;
 
-        Object.keys(catCounts).forEach(cat => {
-            if (catCounts[cat] > 0) {
-                const btn = document.createElement('button');
-                btn.className = `filter-btn ${filterType === cat ? 'active' : ''}`;
-                btn.innerText = cat;
-                btn.onclick = () => showUsefulLinks(false, cat, currentUsefulSubject);
-                filterBar.appendChild(btn);
+        const ulTogBtn = document.createElement('button');
+        ulTogBtn.id = 'ul-filter-toggle';
+        ulTogBtn.style.cssText = 'display:block; margin:0 auto 8px;';
+        const getUlTogLabel = (open) => {
+            if (currentUsefulSubject.size > 0 || currentUsefulBadgeFilters.size > 0) {
+                const parts = [];
+                if (currentUsefulSubject.size === 1) parts.push([...currentUsefulSubject][0]);
+                else if (currentUsefulSubject.size > 1) parts.push(`${currentUsefulSubject.size} subjects`);
+                if (currentUsefulBadgeFilters.size > 0) parts.push(`${currentUsefulBadgeFilters.size} badge${currentUsefulBadgeFilters.size>1?'s':''}`);
+                return `Filter: <span class="fp-active-label">${parts.join(', ')}</span> <span class="fp-arrow">${open ? '▲' : '▼'}</span>`;
             }
+            return `Filter <span class="fp-arrow">${open ? '▲' : '▼'}</span>`;
+        };
+        ulTogBtn.className = 'fp-toggle' + (anyUlActive ? ' has-filter' : '') + (fpOpenState.usefulBadges ? ' open' : '');
+        ulTogBtn.innerHTML = getUlTogLabel(fpOpenState.usefulBadges);
+        filterBar.appendChild(ulTogBtn);
+
+        const ulCollapsible = document.createElement('div');
+        ulCollapsible.className = 'fp-bar-collapsible' + (fpOpenState.usefulBadges ? ' open' : '');
+        ulCollapsible.style.cssText = 'flex-direction:column; gap:0; margin-bottom:12px; align-items:stretch;';
+
+        const ulOuterBar = document.createElement('div');
+        ulOuterBar.style.cssText = 'background:rgba(8,2,18,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:20px; padding:10px 18px; display:flex; flex-direction:column; gap:10px;';
+
+        const refreshUlTog = () => {
+            const open = ulCollapsible.classList.contains('open');
+            const active = currentUsefulSubject.size > 0 || currentUsefulBadgeFilters.size > 0;
+            ulTogBtn.className = 'fp-toggle' + (active ? ' has-filter' : '') + (open ? ' open' : '');
+            ulTogBtn.innerHTML = getUlTogLabel(open);
+        };
+
+        // Helper to sync clear button visibility based on either filter
+        const syncUlClear = () => {
+            const active = currentUsefulBadgeFilters.size > 0 || currentUsefulSubject.size > 0;
+            ulClearDivider.style.display = active ? '' : 'none';
+            ulClearRow.style.display = active ? 'flex' : 'none';
+        };
+
+        // ROW 1 — Subject chips (multi-select) — wrapped with label
+        const subRowWrapper = document.createElement('div');
+        subRowWrapper.style.cssText = 'display:flex; align-items:center; gap:10px;';
+        const subRowLabel = document.createElement('span');
+        subRowLabel.textContent = 'Subjects';
+        subRowLabel.style.cssText = 'font-size:0.58rem; font-weight:700; color:rgba(196,181,219,0.45); text-transform:uppercase; letter-spacing:1.5px; white-space:nowrap; flex-shrink:0; min-width:46px;';
+        const subChipRow = document.createElement('div');
+        subChipRow.style.cssText = 'flex:1; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; align-items:center;';
+
+        const refreshUlSubChips = () => {
+            subChipRow.querySelectorAll('.fp-chip').forEach(b => {
+                const k = b.dataset.key;
+                if (k === '__all__') {
+                    const isAll = currentUsefulSubject.size === 0;
+                    b.classList.toggle('active', isAll);
+                    b.style.cssText = isAll ? 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;' : '';
+                } else {
+                    const act = currentUsefulSubject.has(k);
+                    b.classList.toggle('active', act);
+                    const col = getSubjectColor(k);
+                    b.style.cssText = act ? `background:${getSubjectBg(k)}; border-color:${col}; color:${col};` : '';
+                }
+            });
+        };
+
+        const allSubChip = document.createElement('button');
+        allSubChip.className = 'fp-chip' + (currentUsefulSubject.size === 0 ? ' active' : '');
+        allSubChip.textContent = 'All';
+        allSubChip.dataset.key = '__all__';
+        if (currentUsefulSubject.size === 0) allSubChip.style.cssText = 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;';
+        allSubChip.addEventListener('click', () => {
+            currentUsefulSubject.clear();
+            currentUsefulBadgeFilters = new Set();
+            refreshUlSubChips();
+            refreshUlTog();
+            renderUsefulLinksContent();
+            if (typeof syncUlClear === 'function') syncUlClear();
         });
+        subChipRow.appendChild(allSubChip);
+        activeSubjects.forEach(s => {
+            const color = getSubjectColor(s.code);
+            const btn = document.createElement('button');
+            btn.className = 'fp-chip' + (currentUsefulSubject.has(s.code) ? ' active' : '');
+            btn.textContent = s.code;
+            btn.dataset.key = s.code;
+            if (currentUsefulSubject.has(s.code)) btn.style.cssText = `background:${getSubjectBg(s.code)}; border-color:${color}; color:${color};`;
+            btn.addEventListener('click', () => {
+                if (currentUsefulSubject.has(s.code)) currentUsefulSubject.delete(s.code); else currentUsefulSubject.add(s.code);
+                currentUsefulBadgeFilters = new Set();
+                refreshUlSubChips();
+                refreshUlTog();
+                renderUsefulLinksContent();
+                if (typeof syncUlClear === 'function') syncUlClear();
+            });
+            subChipRow.appendChild(btn);
+        });
+        subRowWrapper.appendChild(subRowLabel);
+        subRowWrapper.appendChild(subChipRow);
+        ulOuterBar.appendChild(subRowWrapper);
 
-        let renderedCount = 0;
-        const isListView = true;
+        // ROW 2 — Badge chips (if any badges exist)
+        if (allBadgeSet.size > 0) {
+            const bdivider = document.createElement('div');
+            bdivider.style.cssText = 'height:1px; background:rgba(255,255,255,0.08); margin:0 -4px;';
+            ulOuterBar.appendChild(bdivider);
 
-        if (isListView) {
-            list.style.display = 'flex';
-            list.style.flexDirection = 'column';
-            list.style.maxWidth = '900px';
-            list.style.margin = '0 auto';
-            list.style.gap = '0';
-        } else {
-            list.style.display = '';
-            list.style.flexDirection = '';
-            list.style.maxWidth = '';
-            list.style.margin = '';
-            list.style.gap = '';
+            const badgeRowWrapper = document.createElement('div');
+            badgeRowWrapper.style.cssText = 'display:flex; align-items:center; gap:10px;';
+            const badgeRowLabel = document.createElement('span');
+            badgeRowLabel.textContent = 'Badges';
+            badgeRowLabel.style.cssText = 'font-size:0.58rem; font-weight:700; color:rgba(196,181,219,0.45); text-transform:uppercase; letter-spacing:1.5px; white-space:nowrap; flex-shrink:0; min-width:46px;';
+            const badgeChipRow = document.createElement('div');
+            badgeChipRow.style.cssText = 'flex:1; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; align-items:center;';
+            allBadgeSet.forEach((color, text) => {
+                const isActive = currentUsefulBadgeFilters.has(text);
+                const btn = document.createElement('button');
+                btn.className = 'fp-chip' + (isActive ? ' active' : '');
+                btn.textContent = text;
+                btn.dataset.badgeText = text;
+                btn.dataset.badgeColor = color;
+                if (isActive) btn.style.cssText = `background:${color}33; border-color:${color}; color:${color}; box-shadow:0 0 8px ${color}44;`;
+                btn.addEventListener('click', () => {
+                    fpOpenState.usefulBadges = true;
+                    const next = new Set(currentUsefulBadgeFilters);
+                    if (next.has(text)) next.delete(text); else next.add(text);
+                    currentUsefulBadgeFilters = next;
+                    // Update badge chip styles in-place
+                    badgeChipRow.querySelectorAll('.fp-chip').forEach(b => {
+                        const bt = b.dataset.badgeText; if (!bt) return;
+                        const bc = b.dataset.badgeColor || '#e91e8c';
+                        const act = currentUsefulBadgeFilters.has(bt);
+                        b.classList.toggle('active', act);
+                        b.style.cssText = act ? `background:${bc}33; border-color:${bc}; color:${bc}; box-shadow:0 0 8px ${bc}44;` : '';
+                    });
+                    ulClearRow.style.display = (currentUsefulBadgeFilters.size > 0 || currentUsefulSubject.size > 0) ? 'flex' : 'none';
+                    ulClearDivider.style.display = ulClearRow.style.display;                    refreshUlTog();
+                    renderUsefulLinksContent();
+                });
+                badgeChipRow.appendChild(btn);
+            });
+            badgeRowWrapper.appendChild(badgeRowLabel);
+            badgeRowWrapper.appendChild(badgeChipRow);
+            ulOuterBar.appendChild(badgeRowWrapper);
         }
 
+        const ulClearDivider = document.createElement('div');
+        ulClearDivider.style.cssText = 'height:1px; background:rgba(255,255,255,0.08); margin:0 -4px; display:' + (anyUlActive ? '' : 'none') + ';';
+        ulOuterBar.appendChild(ulClearDivider);
+        const ulClearRow = document.createElement('div');
+        ulClearRow.style.cssText = 'display:' + (anyUlActive ? 'flex' : 'none') + '; justify-content:center;';
+        const ulClearBtn = document.createElement('button');
+        ulClearBtn.className = 'fp-clear-btn';
+        ulClearBtn.innerHTML = '✕ Clear all filters';
+        ulClearBtn.addEventListener('click', () => {
+            currentUsefulBadgeFilters = new Set();
+            currentUsefulSubject = new Set();
+            fpOpenState.usefulBadges = true;
+            showUsefulLinks(false);
+        });
+        ulClearRow.appendChild(ulClearBtn);
+        ulOuterBar.appendChild(ulClearRow);
+
+        ulCollapsible.appendChild(ulOuterBar);
+
+        ulTogBtn.addEventListener('click', () => {
+            const nowOpen = ulCollapsible.classList.contains('open');
+            ulCollapsible.classList.toggle('open', !nowOpen);
+            fpOpenState.usefulBadges = !nowOpen;
+            refreshUlTog();
+        });
+
+        filterBar.appendChild(ulCollapsible);
+
+        } // end !_ulSkipFilterRebuild
+
+        // ── Render links ──────────────────────────────────────
+        list.style.display = 'flex';
+        list.style.flexDirection = 'column';
+        list.style.maxWidth = '900px';
+        list.style.margin = '0 auto';
+        list.style.gap = '0';
+
+        let renderedCount = 0;
+
         window.COURSE_DATA.forEach(sub => {
-            if (subjectFilter !== 'All Subjects' && subjectFilter !== sub.code) return;
-            
-            if (sub.playlists && sub.playlists.length > 0) {
-                let filteredPlaylists = sub.playlists.filter(p => {
-                    if (filterType === 'All Links') return true;
-                    const t = (p.title || '').toLowerCase();
-                    const n = (p.note || '').toLowerCase();
-                    const btext = (p.badges||[]).map(b=>(b.text||'').toLowerCase()).join(' ');
-                    const all = t + ' ' + n + ' ' + btext;
-                    const kw = filterType.toLowerCase();
-                    if(kw === 'lectures' && all.includes('lecture')) return true;
-                    if(kw === 'tutorials' && (all.includes('section') || all.includes('tutorial'))) return true;
-                    if(kw === 'labs' && all.includes('lab')) return true;
-                    if(kw === 'projects' && all.includes('project')) return true;
-                    if(kw === 'presentations' && all.includes('presentation')) return true;
-                    return false;
-                });
+            if (currentUsefulSubject.size > 0 && !currentUsefulSubject.has(sub.code)) return;
+            if (!sub.playlists || sub.playlists.length === 0) return;
 
-                if (filteredPlaylists.length > 0) {
-                    if (isListView) {
-                        // --- LIST VIEW: subject section with link rows + compact grouping ---
-                        const color = getSubjectColor(sub.code);
-                        const section = document.createElement('div');
-                        section.style.cssText = 'margin-bottom:30px;';
-
-                        const header = document.createElement('div');
-                        header.style.cssText = `font-family:'Orbitron',sans-serif; font-size:1.3rem; color:${color}; border-bottom:2px solid ${color}; padding-bottom:10px; margin-bottom:12px; margin-top:10px; display:flex; align-items:center; gap:10px;`;
-                        header.innerHTML = `<span style="font-size:1.5rem;"></span>${sub.code} — ${sub.name} <span style="font-size:0.6rem; color:${color}; opacity:0.7; font-family:'Segoe UI',sans-serif; font-weight:600; background:rgba(255,255,255,0.06); padding:2px 6px; border-radius:6px; margin-left:4px;">${filteredPlaylists.length}</span>`;
-                        section.appendChild(header);
-
-                        // Build grouped + ungrouped render items
-                        const ulRenderItems = [];
-                        const ulProcessedGroups = new Set();
-                        filteredPlaylists.forEach(p => {
-                            const grp = (p.group || '').trim();
-                            if (grp) {
-                                if (!ulProcessedGroups.has(grp)) {
-                                    ulProcessedGroups.add(grp);
-                                    ulRenderItems.push({ type: 'group', name: grp, items: filteredPlaylists.filter(gp => (gp.group||'').trim() === grp) });
-                                }
-                            } else {
-                                ulRenderItems.push({ type: 'single', playlist: p });
-                            }
-                        });
-
-                        ulRenderItems.forEach(item => {
-                            if (item.type === 'single') {
-                                renderedCount++;
-                                const p = item.playlist;
-                                const row = document.createElement('div');
-                                row.style.cssText = `display:flex; align-items:center; gap:14px; padding:12px 16px; border-radius:12px; cursor:pointer; transition:all 0.2s; border-left:3px solid ${color}; margin-bottom:8px; background:rgba(0,0,0,0.2);`;
-                                row.onmouseenter = () => { row.style.background = 'rgba(255,255,255,0.06)'; row.style.transform = 'translateX(6px)'; };
-                                row.onmouseleave = () => { row.style.background = 'rgba(0,0,0,0.2)'; row.style.transform = 'translateX(0)'; };
-                                const lbadges = p.badges || (p.badgeText ? [{text:p.badgeText, color:p.badgeColor||'#e91e8c'}] : []);
-                                const badgeHtml = lbadges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.65rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px; flex-shrink:0;">${b.text}</span>`).join('');
-                                const noteHtml = p.note ? `<div style="color:var(--text-sub); font-size:0.8rem; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:500px;">${p.note.split('\n')[0]}</div>` : '';
-                                row.innerHTML = `<span style="font-size:1.5rem; flex-shrink:0;">${p.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.95rem;">${p.title || 'Link'}</span>${badgeHtml}</div>${noteHtml}</div><span style="color:${color}; font-size:1rem; flex-shrink:0; opacity:0.6;">→</span>`;
-                                row.onclick = () => { if(p.link && p.link !== '#' && p.link.trim() !== '') window.open(p.link, '_blank'); else alert('No link assigned.'); };
-                                section.appendChild(row);
-                            } else {
-                                // Compact group: collapsible row with count badge
-                                const gWrap = document.createElement('div');
-                                gWrap.style.cssText = `border-left:3px solid ${color}; margin-bottom:8px; border-radius:12px; background:rgba(0,0,0,0.15); overflow:hidden;`;
-                                const firstBadges = (item.items[0].badges || []).filter(b=>b.text);
-                                const gBadgeHtml = firstBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
-                                const gHeader = document.createElement('div');
-                                gHeader.style.cssText = `display:flex; align-items:center; gap:10px; padding:10px 16px; cursor:pointer; transition:background 0.2s;`;
-                                gHeader.onmouseenter = () => { gHeader.style.background = 'rgba(255,255,255,0.04)'; };
-                                gHeader.onmouseleave = () => { gHeader.style.background = 'transparent'; };
-                                gHeader.innerHTML = `<span style="font-size:1.3rem;">${item.items[0].icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;"><span style="font-weight:700; color:white; font-size:0.95rem;">${item.name}</span>${gBadgeHtml}<span style="font-size:0.65rem; color:#888; background:rgba(255,255,255,0.08); padding:2px 8px; border-radius:10px;">${item.items.length} links</span></div></div><span class="ul-group-arrow" style="color:${color}; font-size:0.8rem; transition:transform 0.2s;">▼</span>`;
-                                gWrap.appendChild(gHeader);
-                                
-                                const gBody = document.createElement('div');
-                                gBody.style.cssText = 'padding:0 8px 8px 8px; display:none;';
-                                item.items.forEach(p => {
-                                    renderedCount++;
-                                    const subRow = document.createElement('div');
-                                    subRow.style.cssText = 'display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; cursor:pointer; transition:all 0.15s; margin-bottom:2px;';
-                                    subRow.onmouseenter = () => { subRow.style.background = 'rgba(255,255,255,0.05)'; subRow.style.transform = 'translateX(4px)'; };
-                                    subRow.onmouseleave = () => { subRow.style.background = 'transparent'; subRow.style.transform = 'translateX(0)'; };
-                                    const pBadges = (p.badges||[]).filter(b=>b.text);
-                                    const pBadgeHtml = pBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.55rem; padding:1px 6px; border-radius:6px; font-weight:800;">${b.text}</span>`).join('');
-                                    const noteSnip = p.note ? `<div style="color:var(--text-sub); font-size:0.75rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.note.split('\n')[0]}</div>` : '';
-                                    subRow.innerHTML = `<span style="font-size:1rem;">${p.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.85rem;">${p.title || 'Link'}</span>${pBadgeHtml}</div>${noteSnip}</div><span style="color:${color}; opacity:0.4; font-size:0.8rem;">→</span>`;
-                                    subRow.onclick = () => { if(p.link && p.link !== '#' && p.link.trim() !== '') window.open(p.link, '_blank'); else alert('No link assigned.'); };
-                                    gBody.appendChild(subRow);
-                                });
-                                gWrap.appendChild(gBody);
-                                
-                                gHeader.onclick = () => {
-                                    const isOpen = gBody.style.display !== 'none';
-                                    gBody.style.display = isOpen ? 'none' : 'block';
-                                    gHeader.querySelector('.ul-group-arrow').style.transform = isOpen ? '' : 'rotate(180deg)';
-                                };
-                                section.appendChild(gWrap);
-                            }
-                        });
-
-                        list.appendChild(section);
-                    } else {
-                        // --- CARD GRID VIEW (filtered or single subject) ---
-                        if (subjectFilter === 'All Subjects') {
-                            const header = document.createElement('div');
-                            header.style.gridColumn = '1 / -1';
-                            header.style.fontFamily = "'Orbitron', sans-serif";
-                            header.style.fontSize = '1.3rem';
-                            header.style.color = getSubjectColor(sub.code);
-                            header.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-                            header.style.paddingBottom = '10px';
-                            header.style.marginTop = '20px';
-                            header.innerHTML = `${sub.code} - ${sub.name} <span style="font-size:0.55rem; color:${getSubjectColor(sub.code)}; opacity:0.7; font-family:'Segoe UI',sans-serif; font-weight:600; background:rgba(255,255,255,0.06); padding:2px 6px; border-radius:6px; margin-left:6px;">${filteredPlaylists.length}</span>`;
-                            list.appendChild(header);
-                        }
-
-                        filteredPlaylists.forEach(p => {
-                            renderedCount++;
-                            const el = document.createElement('div');
-                            el.className = 'card';
-                            const cbadges = p.badges || (p.badgeText ? [{text:p.badgeText, color:p.badgeColor||'#e91e8c'}] : []);
-                            const badgeHtml = cbadges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
-                            const badgeWrapHtml = badgeHtml ? `<div style="position:absolute; top:12px; right:12px; display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end; max-width:70%;">${badgeHtml}</div>` : '';
-                            const noteHtml = (p.note) ? `<div style="color:var(--text-sub); margin-top:15px; font-size:0.9rem; line-height:1.4; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px; white-space:pre-wrap;">${p.note}</div>` : '';
-                            
-                            el.innerHTML = `
-                                ${badgeWrapHtml}
-                                <span class="sub-badge" style="position:absolute; top:15px; left:15px; background:${getSubjectBg(sub.code)}; color:${getSubjectColor(sub.code)}; padding:4px 8px; border-radius:6px; font-size:0.7rem; border-left: 2px solid ${getSubjectColor(sub.code)};">${sub.code}</span>
-                                <div style="font-size:2.5rem; margin-bottom:10px; margin-top:20px;">${p.icon || '🔗'}</div>
-                                <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>
-                                ${noteHtml}
-                            `;
-                            el.onclick = () => {
-                                if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
-                                else alert("No link assigned.");
-                            };
-                            list.appendChild(el);
-                        });
-                    }
+            let filteredPlaylists = sub.playlists.filter(p => {
+                if (currentUsefulBadgeFilters.size === 0) return true;
+                // playlist passes if it has ANY of the selected badge filters (OR logic)
+                const pBadges = new Set((p.badges || []).map(b => (b.text || '').trim()));
+                for (const f of currentUsefulBadgeFilters) {
+                    if (pBadges.has(f)) return true;
                 }
-            }
+                return false;
+            });
+
+            if (filteredPlaylists.length === 0) return;
+
+            const color = getSubjectColor(sub.code);
+            const section = document.createElement('div');
+            section.style.cssText = 'margin-bottom:30px;';
+
+            const header = document.createElement('div');
+            header.style.cssText = `font-family:'Orbitron',sans-serif; font-size:1.3rem; color:${color}; border-bottom:2px solid ${color}; padding-bottom:10px; margin-bottom:12px; margin-top:10px; display:flex; align-items:center; gap:10px;`;
+            header.innerHTML = `${sub.code} — ${sub.name} <span style="font-size:0.6rem; color:${color}; opacity:0.7; font-family:'Segoe UI',sans-serif; font-weight:600; background:rgba(255,255,255,0.06); padding:2px 6px; border-radius:6px; margin-left:4px;">${filteredPlaylists.length}</span>`;
+            section.appendChild(header);
+
+            const ulRenderItems = [];
+            const ulProcessedGroups = new Set();
+            filteredPlaylists.forEach(p => {
+                const grp = (p.group || '').trim();
+                if (grp) {
+                    if (!ulProcessedGroups.has(grp)) {
+                        ulProcessedGroups.add(grp);
+                        ulRenderItems.push({ type: 'group', name: grp, items: filteredPlaylists.filter(gp => (gp.group||'').trim() === grp) });
+                    }
+                } else {
+                    ulRenderItems.push({ type: 'single', playlist: p });
+                }
+            });
+
+            ulRenderItems.forEach(item => {
+                if (item.type === 'single') {
+                    renderedCount++;
+                    const p = item.playlist;
+                    const row = document.createElement('div');
+                    row.style.cssText = `display:flex; align-items:center; gap:14px; padding:12px 16px; border-radius:12px; cursor:pointer; transition:all 0.2s; border-left:3px solid ${color}; margin-bottom:8px; background:rgba(0,0,0,0.2);`;
+                    row.onmouseenter = () => { row.style.background = 'rgba(255,255,255,0.06)'; row.style.transform = 'translateX(6px)'; };
+                    row.onmouseleave = () => { row.style.background = 'rgba(0,0,0,0.2)'; row.style.transform = 'translateX(0)'; };
+                    const lbadges = p.badges || (p.badgeText ? [{text:p.badgeText, color:p.badgeColor||'#e91e8c'}] : []);
+                    const badgeHtml = lbadges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.65rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px; flex-shrink:0;">${b.text}</span>`).join('');
+                    const noteHtml = p.note ? `<div style="color:var(--text-sub); font-size:0.8rem; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:500px;">${p.note.split('\n')[0]}</div>` : '';
+                    row.innerHTML = `<span style="font-size:1.5rem; flex-shrink:0;">${p.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.95rem;">${p.title || 'Link'}</span>${badgeHtml}</div>${noteHtml}</div><span style="color:${color}; font-size:1rem; flex-shrink:0; opacity:0.6;">→</span>`;
+                    row.onclick = () => { if(p.link && p.link !== '#' && p.link.trim() !== '') window.open(p.link, '_blank'); else alert('No link assigned.'); };
+                    section.appendChild(row);
+                } else {
+                    const gWrap = document.createElement('div');
+                    gWrap.style.cssText = `border-left:3px solid ${color}; margin-bottom:8px; border-radius:12px; background:rgba(0,0,0,0.15); overflow:hidden;`;
+                    const firstBadges = (item.items[0].badges || []).filter(b=>b.text);
+                    const gBadgeHtml = firstBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
+                    const gHeader = document.createElement('div');
+                    gHeader.style.cssText = `display:flex; align-items:center; gap:10px; padding:10px 16px; cursor:pointer; transition:background 0.2s;`;
+                    gHeader.onmouseenter = () => { gHeader.style.background = 'rgba(255,255,255,0.04)'; };
+                    gHeader.onmouseleave = () => { gHeader.style.background = 'transparent'; };
+                    gHeader.innerHTML = `<span style="font-size:1.3rem;">${item.items[0].icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;"><span style="font-weight:700; color:white; font-size:0.95rem;">${item.name}</span>${gBadgeHtml}<span style="font-size:0.65rem; color:#888; background:rgba(255,255,255,0.08); padding:2px 8px; border-radius:10px;">${item.items.length} links</span></div></div><span class="ul-group-arrow" style="color:${color}; font-size:0.8rem; transition:transform 0.2s;">▼</span>`;
+                    gWrap.appendChild(gHeader);
+                    const gBody = document.createElement('div');
+                    gBody.style.cssText = 'padding:0 8px 8px 8px; display:none;';
+                    item.items.forEach(p => {
+                        renderedCount++;
+                        const subRow = document.createElement('div');
+                        subRow.style.cssText = 'display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:8px; cursor:pointer; transition:all 0.15s; margin-bottom:2px;';
+                        subRow.onmouseenter = () => { subRow.style.background = 'rgba(255,255,255,0.05)'; subRow.style.transform = 'translateX(4px)'; };
+                        subRow.onmouseleave = () => { subRow.style.background = 'transparent'; subRow.style.transform = 'translateX(0)'; };
+                        const pBadges = (p.badges||[]).filter(b=>b.text);
+                        const pBadgeHtml = pBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.55rem; padding:1px 6px; border-radius:6px; font-weight:800;">${b.text}</span>`).join('');
+                        const noteSnip = p.note ? `<div style="color:var(--text-sub); font-size:0.75rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.note.split('\n')[0]}</div>` : '';
+                        subRow.innerHTML = `<span style="font-size:1rem;">${p.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.85rem;">${p.title || 'Link'}</span>${pBadgeHtml}</div>${noteSnip}</div><span style="color:${color}; opacity:0.4; font-size:0.8rem;">→</span>`;
+                        subRow.onclick = () => { if(p.link && p.link !== '#' && p.link.trim() !== '') window.open(p.link, '_blank'); else alert('No link assigned.'); };
+                        gBody.appendChild(subRow);
+                    });
+                    gWrap.appendChild(gBody);
+                    gHeader.onclick = () => {
+                        const isOpen = gBody.style.display !== 'none';
+                        gBody.style.display = isOpen ? 'none' : 'block';
+                        gHeader.querySelector('.ul-group-arrow').style.transform = isOpen ? '' : 'rotate(180deg)';
+                    };
+                    section.appendChild(gWrap);
+                }
+            });
+            list.appendChild(section);
         });
 
         if (renderedCount === 0) {
             list.innerHTML = `<div class="empty-state" style="grid-column:1/-1;">No links match your selected filters.</div>`;
         }
-        
-        nav('useful-links', push, { filter: filterType, subject: subjectFilter });
 
-        // Keep current history entry in sync with live filter changes.
-        // This ensures browser Back returns to the same Useful Links filter state.
+        nav('useful-links', push, { filter: filterType, subject: [...currentUsefulSubject] });
         if (!push) {
             history.replaceState(
-                { page: 'useful-links', filter: filterType, subject: subjectFilter },
-                null,
-                '#useful-links'
+                { page: 'useful-links', filter: filterType, subject: [...currentUsefulSubject] },
+                null, '#useful-links'
             );
         }
     }
 
+    // Re-renders just the links list (not filter bar) when badge chip is tapped
+    let _ulSkipFilterRebuild = false;
+    function renderUsefulLinksContent() {
+        _ulSkipFilterRebuild = true;
+        showUsefulLinks(false, currentUsefulFilter, currentUsefulSubject, Array.from(currentUsefulBadgeFilters));
+        _ulSkipFilterRebuild = false;
+    }
+
     // --- SCHEDULE LOGIC ---
-    let scheduleViewMode = 'list';  // 'list' or 'calendar'
-    let scheduleTaskFilter = 'all'; // 'all', 'quiz', 'assignment', 'project'
-    let calendarMonth = null; // will be auto-set
+    let scheduleViewMode = 'list';
+    let scheduleTaskFilter = new Set();
+    let scheduleSubFilter = new Set(); // subject filter for schedule
+    let calendarMonth = null;
     let calendarAvailableMonths = []; // stored for keyboard nav
 
     function getTaskTypeCategory(taskName) {
@@ -2070,35 +2720,224 @@
     }
 
     function renderScheduleContent() {
+        renderScheduleFilters();
+        renderScheduleWeeksGrid();
+    }
+
+    function renderScheduleFilters() {
+        const filterContainer = document.getElementById('schedule-filter-container');
+        const viewToggleContainer = document.getElementById('schedule-view-toggle');
+        if (!filterContainer || !viewToggleContainer) return;
+
+        viewToggleContainer.innerHTML = '';
+        ['📋 List','📅 Calendar'].forEach((label, i) => {
+            const mode = i === 0 ? 'list' : 'calendar';
+            const btn = document.createElement('button');
+            btn.className = 'cal-view-btn' + (scheduleViewMode === mode ? ' active' : '');
+            btn.textContent = label;
+            btn.addEventListener('click', () => { scheduleViewMode = mode; renderScheduleWeeksGrid(); renderScheduleFilters(); });
+            viewToggleContainer.appendChild(btn);
+        });
+
+        const subCodes = new Set();
+        window.SCHEDULE_DATA.forEach(wk => { (wk.tasks||[]).forEach(t => { if(t.sub) subCodes.add(t.sub); }); });
+        const hasMultipleSubs = subCodes.size > 1;
+
+        filterContainer.innerHTML = '';
+
+        const typeChipsData = [
+            { key: 'quiz',       label: '🧠 Quizzes',    color: '#af52de' },
+            { key: 'assignment', label: '📝 Assignments', color: '#007aff' },
+            { key: 'project',    label: '🚀 Projects',    color: '#34c759' }
+        ];
+
+        const anyActive = scheduleTaskFilter.size > 0 || scheduleSubFilter.size > 0;
+        const isOpen = fpOpenState.schedule;
+
+        const togBtn = document.createElement('button');
+        const getTogLabel = (open) => {
+            const active = scheduleTaskFilter.size > 0 || scheduleSubFilter.size > 0;
+            if (active) {
+                const parts = [];
+                if (scheduleTaskFilter.size > 0) {
+                    scheduleTaskFilter.forEach(k => { const c = typeChipsData.find(t=>t.key===k); if(c) parts.push(c.label.replace(/^\S+\s/,'')); });
+                }
+                if (scheduleSubFilter.size > 0) { scheduleSubFilter.forEach(s => parts.push(s)); }
+                return `Filter: <span class="fp-active-label">${parts.join(', ')}</span> <span class="fp-arrow">${open ? '▲' : '▼'}</span>`;
+            }
+            return `Filter <span class="fp-arrow">${open ? '▲' : '▼'}</span>`;
+        };
+        togBtn.className = 'fp-toggle' + (anyActive ? ' has-filter' : '') + (isOpen ? ' open' : '');
+        togBtn.innerHTML = getTogLabel(isOpen);
+        filterContainer.appendChild(togBtn);
+
+        const collapsible = document.createElement('div');
+        collapsible.className = 'fp-bar-collapsible' + (isOpen ? ' open' : '');
+        collapsible.style.cssText = 'flex-direction:column; gap:0; margin-top:8px; align-items:stretch;';
+
+        const refreshTog = () => {
+            const open = collapsible.classList.contains('open');
+            const active = scheduleTaskFilter.size > 0 || scheduleSubFilter.size > 0;
+            togBtn.className = 'fp-toggle' + (active ? ' has-filter' : '') + (open ? ' open' : '');
+            togBtn.innerHTML = getTogLabel(open);
+        };
+
+        const outerBar = document.createElement('div');
+        outerBar.style.cssText = 'background:rgba(8,2,18,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:20px; padding:10px 18px; display:flex; flex-direction:column; gap:10px;';
+
+        // ROW 1 — TYPE chips (multi-select, no "All" chip — empty Set = All)
+        const typeRowWrapper = document.createElement('div');
+        typeRowWrapper.style.cssText = 'display:flex; align-items:center; gap:10px;';
+        const typeRowLabel = document.createElement('span');
+        typeRowLabel.textContent = 'Types';
+        typeRowLabel.style.cssText = 'font-size:0.58rem; font-weight:700; color:rgba(196,181,219,0.45); text-transform:uppercase; letter-spacing:1.5px; white-space:nowrap; flex-shrink:0; min-width:46px;';
+        const typeRow = document.createElement('div');
+        typeRow.style.cssText = 'flex:1; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; align-items:center;';
+        const refreshTypeChips = () => {
+            typeRow.querySelectorAll('.fp-chip').forEach(b => {
+                const k = b.dataset.key;
+                const act = scheduleTaskFilter.has(k);
+                b.classList.toggle('active', act);
+                const c = typeChipsData.find(t=>t.key===k);
+                b.style.cssText = act && c ? `background:${c.color}22; border-color:${c.color}; color:${c.color}; box-shadow:0 0 10px ${c.color}55;` : '';
+            });
+        };
+        typeChipsData.forEach(chip => {
+            const btn = document.createElement('button');
+            btn.className = 'fp-chip' + (scheduleTaskFilter.has(chip.key) ? ' active' : '');
+            btn.textContent = chip.label;
+            btn.dataset.key = chip.key;
+            if (scheduleTaskFilter.has(chip.key)) btn.style.cssText = `background:${chip.color}22; border-color:${chip.color}; color:${chip.color}; box-shadow:0 0 10px ${chip.color}55;`;
+            btn.addEventListener('click', () => {
+                if (scheduleTaskFilter.has(chip.key)) scheduleTaskFilter.delete(chip.key); else scheduleTaskFilter.add(chip.key);
+                refreshTypeChips();
+                refreshTog();
+                renderScheduleWeeksGrid();
+            });
+            typeRow.appendChild(btn);
+        });
+        typeRowWrapper.appendChild(typeRowLabel);
+        typeRowWrapper.appendChild(typeRow);
+        outerBar.appendChild(typeRowWrapper);
+
+        // ROW 2 — SUBJECT chips (multi-select, if multiple subjects exist)
+        if (hasMultipleSubs) {
+            const rowDivider = document.createElement('div');
+            rowDivider.style.cssText = 'height:1px; background:rgba(255,255,255,0.08); margin:0 -4px;';
+            outerBar.appendChild(rowDivider);
+
+            const subRowWrapper2 = document.createElement('div');
+            subRowWrapper2.style.cssText = 'display:flex; align-items:center; gap:10px;';
+            const subRowLabel2 = document.createElement('span');
+            subRowLabel2.textContent = 'Subjects';
+            subRowLabel2.style.cssText = 'font-size:0.58rem; font-weight:700; color:rgba(196,181,219,0.45); text-transform:uppercase; letter-spacing:1.5px; white-space:nowrap; flex-shrink:0; min-width:46px;';
+            const subRow = document.createElement('div');
+            subRow.style.cssText = 'flex:1; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; align-items:center;';
+
+            const refreshSubChips = () => {
+                subRow.querySelectorAll('.fp-chip').forEach(b => {
+                    const k = b.dataset.key;
+                    if (k === '__all__') {
+                        const isAll = scheduleSubFilter.size === 0;
+                        b.classList.toggle('active', isAll);
+                        b.style.cssText = isAll ? 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;' : '';
+                    } else {
+                        const act = scheduleSubFilter.has(k);
+                        b.classList.toggle('active', act);
+                        const color = getSubjectColor(k);
+                        b.style.cssText = act ? `background:${getSubjectBg(k)}; color:${color}; border-color:${color}; box-shadow:0 0 10px ${color}55;` : '';
+                    }
+                });
+            };
+
+            const allSubBtn = document.createElement('button');
+            allSubBtn.className = 'fp-chip' + (scheduleSubFilter.size === 0 ? ' active' : '');
+            allSubBtn.textContent = 'All';
+            allSubBtn.dataset.key = '__all__';
+            if (scheduleSubFilter.size === 0) allSubBtn.style.cssText = 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;';
+            allSubBtn.addEventListener('click', () => {
+                scheduleSubFilter.clear();
+                refreshSubChips();
+                refreshTog();
+                renderScheduleWeeksGrid();
+            });
+            subRow.appendChild(allSubBtn);
+
+            subCodes.forEach(code => {
+                const color = getSubjectColor(code);
+                const btn = document.createElement('button');
+                btn.className = 'fp-chip' + (scheduleSubFilter.has(code) ? ' active' : '');
+                btn.textContent = code;
+                btn.dataset.key = code;
+                if (scheduleSubFilter.has(code)) btn.style.cssText = `background:${getSubjectBg(code)}; color:${color}; border-color:${color}; box-shadow:0 0 10px ${color}55;`;
+                btn.addEventListener('click', () => {
+                    if (scheduleSubFilter.has(code)) scheduleSubFilter.delete(code); else scheduleSubFilter.add(code);
+                    refreshSubChips();
+                    refreshTog();
+                    renderScheduleWeeksGrid();
+                });
+                subRow.appendChild(btn);
+            });
+            subRowWrapper2.appendChild(subRowLabel2);
+            subRowWrapper2.appendChild(subRow);
+            outerBar.appendChild(subRowWrapper2);
+        }
+
+        // Clear all button
+        const scClearDivider = document.createElement('div');
+        scClearDivider.style.cssText = 'height:1px; background:rgba(255,255,255,0.08); margin:0 -4px;';
+        outerBar.appendChild(scClearDivider);
+        const scClearRow = document.createElement('div');
+        scClearRow.style.cssText = 'display:flex; justify-content:center;';
+        const scClearBtn = document.createElement('button');
+        scClearBtn.className = 'fp-clear-btn';
+        scClearBtn.innerHTML = '✕ Clear all filters';
+        scClearBtn.addEventListener('click', () => {
+            scheduleTaskFilter.clear();
+            scheduleSubFilter.clear();
+            renderScheduleFilters();
+            renderScheduleWeeksGrid();
+        });
+        scClearRow.appendChild(scClearBtn);
+        outerBar.appendChild(scClearRow);
+        const syncScClear = () => {
+            const active = scheduleTaskFilter.size > 0 || scheduleSubFilter.size > 0;
+            scClearDivider.style.display = active ? '' : 'none';
+            scClearRow.style.display = active ? 'flex' : 'none';
+        };
+        syncScClear();
+        collapsible.appendChild(outerBar);
+
+        outerBar.addEventListener('click', () => { setTimeout(syncScClear, 0); });
+
+        togBtn.addEventListener('click', () => {
+            const nowOpen = collapsible.classList.contains('open');
+            collapsible.classList.toggle('open', !nowOpen);
+            fpOpenState.schedule = !nowOpen;
+            refreshTog();
+        });
+
+        filterContainer.appendChild(collapsible);
+    }
+
+    function renderScheduleWeeksGrid() {
         const grid = document.getElementById('deliverables-grid');
         grid.innerHTML = '';
 
-        // View Toggle (list vs calendar)
-        let toggleHtml = `<div class="calendar-toggle" style="grid-column:1/-1;">
-            <button class="cal-toggle-btn ${scheduleViewMode==='list'?'active':''}" onclick="scheduleViewMode='list'; renderScheduleContent();">📋 List</button>
-            <button class="cal-toggle-btn ${scheduleViewMode==='calendar'?'active':''}" onclick="scheduleViewMode='calendar'; renderScheduleContent();">📅 Calendar</button>
-        </div>`;
-
-        // Filter chips
-        const filterTypes = [
-            { key: 'all', label: 'All' },
-            { key: 'quiz', label: '🧠 Quizzes' },
-            { key: 'assignment', label: '📝 Assignments' },
-            { key: 'project', label: '🚀 Projects' }
-        ];
-        let filterHtml = `<div class="schedule-filters" style="grid-column:1/-1;">`;
-        filterTypes.forEach(f => {
-            filterHtml += `<button class="schedule-filter-chip ${scheduleTaskFilter===f.key?'active':''}" onclick="scheduleTaskFilter='${f.key}'; renderScheduleContent();">${f.label}</button>`;
-        });
-        filterHtml += `</div>`;
-
-        grid.innerHTML = toggleHtml + filterHtml;
-
         if (scheduleViewMode === 'calendar') {
+            // Force a single full-width column so the calendar is never squashed
+            // regardless of which filter is active. Inline style overrides any
+            // class-based grid-template-columns that could auto-fill narrower columns.
+            grid.className = 'grid';
+            grid.style.gridTemplateColumns = '1fr';
             renderCalendarView(grid);
             return;
         }
-        
+
+        // Restore multi-column layout for list view
+        grid.className = 'grid weeks-grid';
+        grid.style.gridTemplateColumns = '';
+
         // List view
         const todayDate = new Date();
         window.SCHEDULE_DATA.forEach((data, wIndex) => {
@@ -2111,8 +2950,11 @@
             
             // Filter and sort tasks
             let filteredTasks = (data.tasks || []).map((t, i) => ({task: t, origIdx: i}));
-            if(scheduleTaskFilter !== 'all') {
-                filteredTasks = filteredTasks.filter(x => getTaskTypeCategory(x.task.name) === scheduleTaskFilter);
+            if(scheduleTaskFilter.size > 0) {
+                filteredTasks = filteredTasks.filter(x => scheduleTaskFilter.has(getTaskTypeCategory(x.task.name)));
+            }
+            if(scheduleSubFilter.size > 0) {
+                filteredTasks = filteredTasks.filter(x => scheduleSubFilter.has(x.task.sub));
             }
 
             // Sort by time
@@ -2204,7 +3046,8 @@
         window.SCHEDULE_DATA.forEach((wk, wIndex) => {
             if(!wk.tasks) return;
             wk.tasks.forEach((t, tIndex) => {
-                if(scheduleTaskFilter !== 'all' && getTaskTypeCategory(t.name) !== scheduleTaskFilter) return;
+                if(scheduleTaskFilter.size > 0 && !scheduleTaskFilter.has(getTaskTypeCategory(t.name))) return;
+                if(scheduleSubFilter.size > 0 && !scheduleSubFilter.has(t.sub)) return;
                 const ts = getTaskEffectiveDeadlineMeta(t, wk.week).timestamp;
                 if(ts === 0) {
                     // Undated / TBD task
@@ -2219,17 +3062,22 @@
             });
         });
 
-        // Find available months
+        // Find available months from ALL tasks (unfiltered) so months never disappear when filtering
         const monthSet = new Set();
-        Object.keys(tasksByDate).forEach(k => {
-            monthSet.add(k.substring(0, 7)); // YYYY-MM
-        });
-        // Include months from TBD task weeks so those months are navigable
-        Object.keys(tbdTasksByWeek).forEach(wIdx => {
-            const wk = window.SCHEDULE_DATA[Number(wIdx)];
-            const { start, end } = getWeekDates(wk.week);
-            monthSet.add(`${start.getFullYear()}-${String(start.getMonth()+1).padStart(2,'0')}`);
-            monthSet.add(`${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}`);
+        window.SCHEDULE_DATA.forEach(wk => {
+            if (!wk.tasks) return;
+            wk.tasks.forEach(t => {
+                const ts = getTaskEffectiveDeadlineMeta(t, wk.week).timestamp;
+                if (ts !== 0) {
+                    const d = new Date(ts);
+                    monthSet.add(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`);
+                } else {
+                    // TBD task — include its week's months
+                    const { start, end } = getWeekDates(wk.week);
+                    monthSet.add(`${start.getFullYear()}-${String(start.getMonth()+1).padStart(2,'0')}`);
+                    monthSet.add(`${end.getFullYear()}-${String(end.getMonth()+1).padStart(2,'0')}`);
+                }
+            });
         });
         // Always include the current real-time month
         const nowForMonths = new Date();
@@ -2256,7 +3104,8 @@
 
         const calContainer = document.createElement('div');
         calContainer.className = 'calendar-container';
-        calContainer.style.gridColumn = '1/-1';
+        // Force full width regardless of parent grid state or content
+        calContainer.style.cssText = 'width:100%; box-sizing:border-box;';
 
         const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
@@ -2282,14 +3131,22 @@
             dayHeaders.forEach(d => { calHtml += `<div class="cal-day-header">${d}</div>`; });
 
             const semStartDate = window.CONFIG && window.CONFIG.semesterStart ? new Date(window.CONFIG.semesterStart + 'T00:00:00') : null;
-            for(let i = 0; i < firstDay; i++) {
+            // Calculate leading empty cells: day-of-week offset + any pre-semester days
+            let leadingEmpties = firstDay;
+            if (semStartDate) {
+                for (let d = 1; d <= daysInMonth; d++) {
+                    const thisDate = new Date(yr, mo-1, d);
+                    if (thisDate < semStartDate) leadingEmpties++;
+                    else break;
+                }
+            }
+            for(let i = 0; i < leadingEmpties; i++) {
                 calHtml += `<div class="cal-day empty"></div>`;
             }
             for(let d = 1; d <= daysInMonth; d++) {
                 const thisDate = new Date(yr, mo-1, d);
                 if(semStartDate && thisDate < semStartDate) {
-                    calHtml += `<div class="cal-day empty"></div>`;
-                    continue;
+                    continue; // already accounted for in leadingEmpties, skip rendering
                 }
                 const dateKey = `${yr}-${String(mo).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
                 const isToday = dateKey === todayKey;
@@ -2301,7 +3158,8 @@
                         const bg = getSubjectBg(item.task.sub);
                         const timeStr = extractTimeFromWhen(item.task.when);
                         const timeHtml = timeStr ? `<div style="font-size:0.55rem; opacity:0.85; margin-top:1px;">🕒 ${timeStr}</div>` : '';
-                        calHtml += `<div class="cal-task" style="background:${bg}; color:${color}; border-left:2px solid ${color};" onclick="openModal(${item.wIndex}, ${item.tIndex})" title="${item.task.sub}: ${item.task.name}${timeStr ? ' — '+timeStr : ''}">${item.task.icon} ${item.task.name}${timeHtml}</div>`;
+                        const subLabel = `<span style="font-size:0.5rem; font-weight:900; opacity:0.75; letter-spacing:0.3px; margin-right:2px;">[${item.task.sub}]</span>`;
+                        calHtml += `<div class="cal-task" style="background:${bg}; color:${color}; border-left:2px solid ${color};" onclick="openModal(${item.wIndex}, ${item.tIndex})" title="${item.task.sub}: ${item.task.name}${timeStr ? ' — '+timeStr : ''}">${subLabel}${item.task.icon} ${item.task.name}${timeHtml}</div>`;
                     });
                 }
                 calHtml += `</div>`;
@@ -2366,34 +3224,138 @@
     function showMidterms(push = true, from = 'home') {
         const container = document.getElementById('midterm-list');
         container.innerHTML = '';
-        
+
+        // Hidden indicator + panel slot — using addEventListener so onclick survives re-renders
+        const hiddenCount = midtermHiddenSet.size;
+        if (hiddenCount > 0) {
+            const hiddenBtn = document.createElement('button');
+            hiddenBtn.className = 'midterm-hidden-btn';
+            hiddenBtn.textContent = '🔒 Hidden (' + hiddenCount + ') — tap to manage';
+            hiddenBtn.addEventListener('click', openMidtermHiddenPanel);
+            container.appendChild(hiddenBtn);
+            const slot = document.createElement('div');
+            slot.id = 'midterm-hidden-panel-slot';
+            container.appendChild(slot);
+        }
+
         let lastDate = '';
-        window.MIDTERM_DATA.forEach((exam, idx) => {
+        window.MIDTERM_DATA.forEach(function(exam, idx) {
+            if (midtermHiddenSet.has(idx)) return;
+
             if (exam.dateLabel !== lastDate) {
-                container.innerHTML += `<div style="font-family: 'Orbitron', sans-serif; font-size: 1.1rem; letter-spacing: 2px; color: var(--accent-blue); text-transform: uppercase; margin-bottom: 10px; margin-top: 30px; padding-left: 2px; font-weight: bold;">${exam.dateLabel}</div>`;
+                const dateEl = document.createElement('div');
+                dateEl.style.cssText = "font-family:'Orbitron',sans-serif; font-size:1.1rem; letter-spacing:2px; color:var(--accent-blue); text-transform:uppercase; margin-bottom:10px; margin-top:30px; padding-left:2px; font-weight:bold;";
+                dateEl.textContent = exam.dateLabel;
+                container.appendChild(dateEl);
                 lastDate = exam.dateLabel;
             }
-            
+
             let subName = exam.sub;
             if(window.COURSE_DATA) {
-                const sObj = window.COURSE_DATA.find(s => s.code === exam.sub);
+                const sObj = window.COURSE_DATA.find(function(s){ return s.code === exam.sub; });
                 if(sObj) subName = sObj.name;
             }
 
-            container.innerHTML += `
-                <div class="card" style="border-left: 4px solid ${getSubjectColor(exam.sub)}; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center;" onclick="openMidtermModal(${idx})">
-                    <span class="sub-badge" style="background: ${getSubjectBg(exam.sub)}; color: ${getSubjectColor(exam.sub)}; min-width: 52px; font-size: 0.72rem; padding: 5px 10px; border-radius:8px;">${exam.sub}</span>
-                    <div style="flex: 1; margin-left: 15px;">
-                        <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">${subName}</div>
-                        <div style="font-size: 0.78rem; color: var(--text-sub); margin-top: 2px;">${exam.examCode}</div>
-                    </div>
-                    <div style="font-family: 'Orbitron', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--accent-blue); white-space: nowrap; flex-shrink: 0;">${exam.time}</div>
-                </div>
-            `;
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.style.cssText = 'border-left:4px solid ' + getSubjectColor(exam.sub) + '; flex-direction:row; cursor:pointer; padding:14px 18px; margin-bottom:10px; display:flex; align-items:center;';
+            card.addEventListener('click', (function(i){ return function(){ openMidtermModal(i); }; })(idx));
+
+            const badge = document.createElement('span');
+            badge.className = 'sub-badge';
+            badge.style.cssText = 'background:' + getSubjectBg(exam.sub) + '; color:' + getSubjectColor(exam.sub) + '; min-width:52px; font-size:0.72rem; padding:5px 10px; border-radius:8px;';
+            badge.textContent = exam.sub;
+
+            const info = document.createElement('div');
+            info.style.flex = '1';
+            info.style.marginLeft = '15px';
+            const n1 = document.createElement('div');
+            n1.style.cssText = 'font-weight:600; font-size:0.95rem; color:var(--text-main);';
+            n1.textContent = subName;
+            const n2 = document.createElement('div');
+            n2.style.cssText = 'font-size:0.78rem; color:var(--text-sub); margin-top:2px;';
+            n2.textContent = exam.examCode;
+            info.appendChild(n1); info.appendChild(n2);
+
+            const time = document.createElement('div');
+            time.style.cssText = "font-family:'Orbitron',sans-serif; font-size:0.9rem; font-weight:700; color:var(--accent-blue); white-space:nowrap; flex-shrink:0; margin-right:10px;";
+            time.textContent = exam.time;
+
+            const hideBtn = document.createElement('button');
+            hideBtn.textContent = 'Hide';
+            hideBtn.style.cssText = 'background:none; border:1px solid rgba(255,255,255,0.1); color:#555; padding:4px 8px; border-radius:8px; cursor:pointer; font-size:0.72rem; flex-shrink:0;';
+            hideBtn.addEventListener('mouseenter', function(){ hideBtn.style.color='#ff3b30'; hideBtn.style.borderColor='rgba(255,59,48,0.3)'; });
+            hideBtn.addEventListener('mouseleave', function(){ hideBtn.style.color='#555'; hideBtn.style.borderColor='rgba(255,255,255,0.1)'; });
+            hideBtn.addEventListener('click', (function(i){ return function(e){ e.stopPropagation(); const sy = window.scrollY; midtermHiddenSet.add(i); saveMidtermHidden(); showMidterms(false); requestAnimationFrame(()=>window.scrollTo(0,sy)); }; })(idx));
+
+            card.appendChild(badge); card.appendChild(info); card.appendChild(time); card.appendChild(hideBtn);
+            container.appendChild(card);
         });
-        container.innerHTML += `<div style="text-align: center; margin-top: 52px; margin-bottom: 20px; font-size: 0.75rem; color: var(--text-sub); letter-spacing: 3px; opacity: 0.5;">GOOD LUCK &nbsp;✦&nbsp; SPRING 2026</div>`;
-        
+
+        const footer = document.createElement('div');
+        footer.style.cssText = 'text-align:center; margin-top:52px; margin-bottom:20px; font-size:0.75rem; color:var(--text-sub); letter-spacing:3px; opacity:0.5;';
+        footer.textContent = 'GOOD LUCK · SPRING 2026';
+        container.appendChild(footer);
+
         nav('midterm', push, { from: from });
+    }
+
+    function openMidtermHiddenPanel() {
+        const slot = document.getElementById('midterm-hidden-panel-slot');
+        if (!slot) return;
+        const existing = document.getElementById('midterm-hidden-panel');
+        if (existing) { existing.remove(); return; }
+
+        const panel = document.createElement('div');
+        panel.id = 'midterm-hidden-panel';
+        panel.style.cssText = 'background:rgba(0,122,255,0.06); border:1px solid rgba(0,122,255,0.25); border-radius:14px; padding:16px 20px; margin-bottom:16px;';
+
+        const title = document.createElement('div');
+        title.style.cssText = "font-family:'Orbitron',sans-serif; font-size:0.75rem; letter-spacing:2px; color:#007aff; margin-bottom:12px; text-transform:uppercase;";
+        title.textContent = 'Hidden Exams';
+        panel.appendChild(title);
+
+        if (midtermHiddenSet.size === 0) {
+            const empty = document.createElement('div');
+            empty.style.cssText = 'color:#888; font-size:0.85rem; font-style:italic;';
+            empty.textContent = 'Nothing hidden.';
+            panel.appendChild(empty);
+        } else {
+            midtermHiddenSet.forEach(function(idx) {
+                const exam = window.MIDTERM_DATA[idx];
+                if (!exam) return;
+                let subName = exam.sub;
+                if(window.COURSE_DATA) {
+                    const sObj = window.COURSE_DATA.find(function(s){ return s.code === exam.sub; });
+                    if(sObj) subName = sObj.name;
+                }
+                const row = document.createElement('div');
+                row.style.cssText = 'display:flex; align-items:center; gap:10px; margin-bottom:8px; padding:8px 12px; background:rgba(0,0,0,0.2); border-radius:10px;';
+                const sb = document.createElement('span');
+                sb.style.cssText = 'background:' + getSubjectBg(exam.sub) + '; color:' + getSubjectColor(exam.sub) + "; font-size:0.72rem; padding:3px 8px; border-radius:6px; font-weight:bold; font-family:'Orbitron',sans-serif;";
+                sb.textContent = exam.sub;
+                const nm = document.createElement('span');
+                nm.style.cssText = 'flex:1; color:#ccc; font-size:0.85rem;';
+                nm.textContent = subName;
+                const ub = document.createElement('button');
+                ub.textContent = 'Unhide';
+                ub.style.cssText = 'background:rgba(52,199,89,0.15); border:1px solid rgba(52,199,89,0.35); color:#34c759; padding:3px 10px; border-radius:8px; cursor:pointer; font-size:0.75rem; font-weight:bold;';
+                ub.addEventListener('click', (function(i){ return function(){
+                    const sy = window.scrollY;
+                    midtermHiddenSet.delete(i);
+                    saveMidtermHidden();
+                    showMidterms(false);
+                    requestAnimationFrame(() => {
+                        window.scrollTo(0, sy);
+                        // Re-open the hidden panel after re-render
+                        openMidtermHiddenPanel();
+                    });
+                }; })(idx));
+                row.appendChild(sb); row.appendChild(nm); row.appendChild(ub);
+                panel.appendChild(row);
+            });
+        }
+        slot.appendChild(panel);
     }
 
     function openModal(wIndex, tIndex) {
@@ -2443,12 +3405,19 @@
             submitHtml = (task.submitText ? task.submitText + ' ' : '') + `<a href="${task.submitLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${submitNote}</a>`;
         }
 
+        // Notes field with optional URL
+        let noteHtml = task.note || '';
+        if (task.noteLink && task.noteLink.trim() !== '') {
+            const noteNote = task.noteNote || 'Read more';
+            noteHtml = (task.note ? task.note + ' ' : '') + `<a href="${task.noteLink}" target="_blank" rel="noopener" class="modal-url-badge">🔗 ${noteNote}</a>`;
+        }
+
         const fields = [
             { label: '🕒 When', val: whenHtml },
             { label: '📍 Where', val: whereHtml },
             { label: '📚 Coverage', val: coverageHtml },
             { label: '📤 Submit', val: submitHtml },
-            { label: '📝 Extra Notes', val: task.note }
+            { label: '📝 Extra Notes', val: noteHtml }
         ];
 
         fields.forEach(f => {
@@ -2549,13 +3518,13 @@
 
     function showWeeks(sub, push = true) {
         currSub = sub;
-        document.getElementById('subject-title').innerText = `${sub.code} - ${sub.name}`;
+        document.getElementById('subject-title').innerText = `${sub.code} — ${sub.name}`;
         
         const dContainer = document.getElementById('drive-container');
         dContainer.innerHTML = '';
         if(sub.driveLink && sub.driveLink.trim() !== "") {
             const a = document.createElement('a');
-            a.className = 'drive-btn';
+            a.className = 'drive-btn-inline';
             a.href = sub.driveLink;
             a.target = "_blank";
             a.innerHTML = "📂 Course Drive";
@@ -2568,6 +3537,7 @@
 
     function renderSubjectView(viewType, pushState = true) {
         currentSubjectView = viewType;
+        closeSubjectFilterDropdown(); // close filter dropdown when switching tabs
         
         document.getElementById('tab-weeks').classList.remove('active');
         document.getElementById('tab-events').classList.remove('active');
@@ -2582,7 +3552,12 @@
             filterBar.style.display = 'none';
             gridWeeks.style.display = 'none';
             gridPlaylists.style.display = 'grid';
-            renderPlaylistGrid();
+            // Hide the weeks filter wrap on playlists tab
+            const fwrap = document.getElementById('filter-bar-wrap');
+            const fsep = document.getElementById('filter-sep');
+            if (fwrap) fwrap.style.display = 'none';
+            if (fsep) fsep.style.display = 'none';
+            renderPlaylistGrid(false);
         } else {
             filterBar.style.display = 'flex';
             gridPlaylists.style.display = 'none';
@@ -2597,7 +3572,8 @@
         renderQuickActions();
     }
 
-    function renderPlaylistGrid() {
+    function renderPlaylistGrid(resetFilters = false) {
+        if (resetFilters) playlistBadgeFilters = new Set();
         const grid = document.getElementById('playlists-grid');
         grid.innerHTML = '';
         if(!currSub.playlists || currSub.playlists.length === 0) {
@@ -2605,15 +3581,100 @@
             return;
         }
 
+        // Collect all badge texts
+        const allBadgeMap = new Map();
+        currSub.playlists.forEach(p => {
+            (p.badges || []).forEach(b => { if (b.text && b.text.trim()) allBadgeMap.set(b.text.trim(), b.color || '#e91e8c'); });
+        });
+
+        // Always-visible inline chip bar (fp-chip style, centered, compact)
+        if (allBadgeMap.size > 0) {
+            const filterWrap = document.createElement('div');
+            filterWrap.style.cssText = 'grid-column:1/-1; margin-bottom:-22px;';
+
+            const bar = document.createElement('div');
+            bar.className = 'fp-inline-bar';
+            bar.style.cssText = 'flex-wrap:wrap; justify-content:center; display:flex; gap:7px;';
+
+            const allBtn = document.createElement('button');
+            allBtn.className = 'fp-chip' + (playlistBadgeFilters.size === 0 ? ' active' : '');
+            allBtn.textContent = 'All';
+            if (playlistBadgeFilters.size === 0) allBtn.style.cssText = 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;';
+            allBtn.dataset.key = '__all__';
+            allBtn.onclick = () => { playlistBadgeFilters.clear(); renderPlaylistGrid(); };
+            bar.appendChild(allBtn);
+
+            const plClearRow = document.createElement('div');
+            plClearRow.style.cssText = 'display:' + (playlistBadgeFilters.size > 0 ? 'flex' : 'none') + '; justify-content:center; margin-top:6px;';
+            const plClearBtn = document.createElement('button');
+            plClearBtn.className = 'fp-clear-btn';
+            plClearBtn.innerHTML = '✕ Clear all filters';
+            plClearBtn.onclick = () => { playlistBadgeFilters.clear(); renderPlaylistGrid(); };
+            plClearRow.appendChild(plClearBtn);
+
+            allBadgeMap.forEach((color, text) => {
+                const isActive = playlistBadgeFilters.has(text);
+                const btn = document.createElement('button');
+                btn.className = 'fp-chip' + (isActive ? ' active' : '');
+                btn.textContent = text;
+                btn.dataset.key = text;
+                if (isActive) btn.style.cssText = `background:${color}33; border-color:${color}; color:${color}; box-shadow:0 0 8px ${color}44;`;
+                btn.onclick = () => {
+                    if (playlistBadgeFilters.has(text)) playlistBadgeFilters.delete(text);
+                    else playlistBadgeFilters.add(text);
+                    // Update chip styles in-place
+                    bar.querySelectorAll('.fp-chip').forEach(b => {
+                        if (b.dataset.key === '__all__') {
+                            const allNow = playlistBadgeFilters.size === 0;
+                            b.classList.toggle('active', allNow);
+                            b.style.cssText = allNow ? 'background:rgba(74,144,226,0.15); border-color:rgba(74,144,226,0.5); color:#4a90e2;' : '';
+                        } else {
+                            const c = allBadgeMap.get(b.dataset.key) || '#e91e8c';
+                            const act = playlistBadgeFilters.has(b.dataset.key);
+                            b.classList.toggle('active', act);
+                            b.style.cssText = act ? `background:${c}33; border-color:${c}; color:${c}; box-shadow:0 0 8px ${c}44;` : '';
+                        }
+                    });
+                    plClearRow.style.display = playlistBadgeFilters.size > 0 ? 'flex' : 'none';
+                    // Re-render cards only (filter wrap stays)
+                    renderPlaylistGrid();
+                };
+                bar.appendChild(btn);
+            });
+
+            filterWrap.appendChild(bar);
+            filterWrap.appendChild(plClearRow);
+            grid.appendChild(filterWrap);
+        }
+
+        const color = getSubjectColor(currSub.code);
+
+        // Filter playlists
+        let playlists = currSub.playlists;
+        if (playlistBadgeFilters.size > 0) {
+            playlists = playlists.filter(p => {
+                const pBadges = new Set((p.badges || []).map(b => (b.text || '').trim()));
+                for (const f of playlistBadgeFilters) { if (pBadges.has(f)) return true; }
+                return false;
+            });
+        }
+
+        if (playlists.length === 0) {
+            const emptyEl = document.createElement('div');
+            emptyEl.style.cssText = 'grid-column:1/-1; text-align:center; color:#666; margin-top:20px; font-style:italic;';
+            emptyEl.textContent = 'No links match selected filters.';
+            grid.appendChild(emptyEl);
+            return;
+        }
+
         const renderItems = [];
         const processedGroups = new Set();
-        currSub.playlists.forEach((p, i) => {
+        playlists.forEach(p => {
             const group = (p.group || '').trim();
             if (group) {
                 if (!processedGroups.has(group)) {
                     processedGroups.add(group);
-                    const groupItems = currSub.playlists.filter(gp => (gp.group || '').trim() === group);
-                    renderItems.push({ type: 'group', name: group, items: groupItems });
+                    renderItems.push({ type: 'group', name: group, items: playlists.filter(gp => (gp.group || '').trim() === group) });
                 }
             } else {
                 renderItems.push({ type: 'single', playlist: p });
@@ -2629,16 +3690,8 @@
                 const badgeHtml = badges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
                 const badgeWrap = badgeHtml ? `<div style="position:absolute; top:12px; right:12px; display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end; max-width:70%;">${badgeHtml}</div>` : '';
                 const noteHtml = (p.note) ? `<div style="color:var(--text-sub); margin-top:15px; font-size:0.9rem; line-height:1.4; border-top:1px solid rgba(255,255,255,0.1); padding-top:15px; white-space:pre-wrap;">${p.note}</div>` : '';
-                el.innerHTML = `
-                    ${badgeWrap}
-                    <div style="font-size:2.5rem; margin-bottom:10px">${p.icon || '🔗'}</div>
-                    <div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>
-                    ${noteHtml}
-                `;
-                el.onclick = () => {
-                    if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank");
-                    else alert("No link assigned.");
-                };
+                el.innerHTML = `${badgeWrap}<div style="font-size:2.5rem; margin-bottom:10px">${p.icon || '🔗'}</div><div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${p.title || 'Link'}</div>${noteHtml}`;
+                el.onclick = () => { if(p.link && p.link !== "#" && p.link.trim() !== "") window.open(p.link, "_blank"); else alert("No link assigned."); };
                 grid.appendChild(el);
             } else {
                 const groupEl = document.createElement('div');
@@ -2646,22 +3699,13 @@
                 const firstItem = item.items[0];
                 const commonBadges = firstItem.badges || [];
                 const hBadgeHtml = commonBadges.filter(b=>b.text).map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.6rem; padding:2px 7px; border-radius:8px; font-weight:800; letter-spacing:0.5px;">${b.text}</span>`).join('');
-                let innerHtml = `<div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.08);">
-                    <span style="font-size:1.8rem;">${firstItem.icon || '🔗'}</span>
-                    <div style="flex:1;"><div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${item.name}</div></div>
-                    <div style="display:flex; gap:4px; flex-wrap:wrap;">${hBadgeHtml}</div>
-                    <span style="color:var(--text-sub); font-size:0.8rem; white-space:nowrap;">${item.items.length} links</span>
-                </div>`;
+                let innerHtml = `<div style="display:flex; align-items:center; gap:12px; margin-bottom:14px; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.08);"><span style="font-size:1.8rem;">${firstItem.icon || '🔗'}</span><div style="flex:1;"><div style="font-weight:bold; font-size:1.1rem; text-transform:uppercase; color:white;">${item.name}</div></div><div style="display:flex; gap:4px; flex-wrap:wrap;">${hBadgeHtml}</div><span style="color:var(--text-sub); font-size:0.8rem; white-space:nowrap;">${item.items.length} links</span></div>`;
                 item.items.forEach(p => {
                     const pBadges = (p.badges || []).filter(b=>b.text);
                     const pBadgeHtml = pBadges.map(b => `<span style="background:${b.color||'#e91e8c'}; color:#fff; font-size:0.55rem; padding:1px 6px; border-radius:6px; font-weight:800;">${b.text}</span>`).join('');
                     const noteSnippet = p.note ? `<div style="color:var(--text-sub); font-size:0.78rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.note.split('\n')[0]}</div>` : '';
                     const safeLink = (p.link || '').replace(/'/g, "\\'");
-                    innerHtml += `<div class="group-link-row" onclick="window.open('${safeLink}','_blank')" style="display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; cursor:pointer; transition:all 0.2s; margin-bottom:4px;">
-                        <span style="font-size:1.2rem;">${p.icon || '🔗'}</span>
-                        <div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.9rem;">${p.title || 'Link'}</span>${pBadgeHtml}</div>${noteSnippet}</div>
-                        <span style="color:var(--accent); opacity:0.5; font-size:0.9rem;">→</span>
-                    </div>`;
+                    innerHtml += `<div class="group-link-row" onclick="window.open('${safeLink}','_blank')" style="display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; cursor:pointer; transition:all 0.2s; margin-bottom:4px;"><span style="font-size:1.2rem;">${p.icon || '🔗'}</span><div style="flex:1; min-width:0;"><div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;"><span style="font-weight:600; color:white; font-size:0.9rem;">${p.title || 'Link'}</span>${pBadgeHtml}</div>${noteSnippet}</div><span style="color:${color}; opacity:0.5; font-size:0.9rem;">→</span></div>`;
                 });
                 groupEl.innerHTML = innerHtml;
                 grid.appendChild(groupEl);
@@ -2669,64 +3713,201 @@
         });
     }
 
+    // ── Universal collapsible filter panel builder ────────────────────────
+    // anchorEl: element to render the toggle button into
+    // panelEl: element to render the expanded panel into (can be same as anchor)
+    // rows: array of { label, chips: [{key, label, color?}] }
+    // getActive: fn() => { rowIndex: key } map
+    // onSelect: fn(rowIndex, key)
+    // allKey: the key that means "no filter" (default 'ALL' / 'all')
+    function buildFilterPanel(anchorEl, panelEl, rows, getActive, onSelect, allKey = 'ALL', openStateKey = null) {
+        anchorEl.innerHTML = '';
+        panelEl.innerHTML = '';
+
+        const active = getActive();
+        const anyActive = Object.values(active).some(v => v && v !== allKey && v !== 'all' && v !== 'All' && v !== 'All Subjects');
+        const activeLabels = [];
+        rows.forEach((row, ri) => {
+            const ak = active[ri];
+            if (ak && ak !== allKey && ak !== 'all' && ak !== 'All' && ak !== 'All Subjects') {
+                const chip = row.chips.find(c => c.key === ak);
+                if (chip) activeLabels.push(chip.label.replace(/^[^\w\u{1F300}-\u{1F9FF}]*/u,'').trim().split(' ').slice(-1)[0]);
+            }
+        });
+
+        // Restore open state: only based on explicit user action
+        const shouldBeOpen = openStateKey ? fpOpenState[openStateKey] : false;
+
+        // Active filter summary — plain text, not a pill
+        const summaryParts = [];
+        rows.forEach((row, ri) => {
+            const ak = active[ri];
+            if (ak && ak !== allKey && ak !== 'all' && ak !== 'All' && ak !== 'All Subjects') {
+                const chip = row.chips.find(c => c.key === ak);
+                if (chip) summaryParts.push(chip.label.replace(/^\p{Emoji}\s*/u, '').trim());
+            }
+        });
+
+        const toggle = document.createElement('button');
+        toggle.className = 'fp-toggle' + (anyActive ? ' has-filter' : '') + (shouldBeOpen ? ' open' : '');
+        if (anyActive) {
+            toggle.innerHTML = `Filter: <span class="fp-active-label">${summaryParts.join(', ')}</span> <span class="fp-arrow">▼</span>`;
+        } else {
+            toggle.innerHTML = `Filter <span class="fp-arrow">▼</span>`;
+        }
+
+        const panel = document.createElement('div');
+        panel.className = 'fp-panel' + (shouldBeOpen ? ' open' : '');
+
+        rows.forEach((row, ri) => {
+            if (row.chips.length <= 1) return;
+            const rowEl = document.createElement('div');
+            rowEl.className = 'fp-row';
+            if (row.label) {
+                const lbl = document.createElement('span');
+                lbl.className = 'fp-label';
+                lbl.textContent = row.label;
+                rowEl.appendChild(lbl);
+            }
+            row.chips.forEach(chip => {
+                const btn = document.createElement('button');
+                btn.className = 'fp-chip';
+                btn.textContent = chip.label;
+                const isActive = (active[ri] || allKey) === chip.key;
+                if (isActive) {
+                    btn.classList.add('active');
+                    if (chip.color) btn.style.cssText = `background:${chip.color}22; border-color:${chip.color}; color:${chip.color}; box-shadow:0 0 10px ${chip.color}55;`;
+                    else btn.style.cssText = 'background:rgba(233,30,140,0.18); border-color:var(--accent-pink); color:var(--accent-pink);';
+                }
+                // Never close panel on chip click — user closes explicitly
+                btn.dataset.chipKey = chip.key;
+                if (chip.color) btn.dataset.chipColor = chip.color;
+                btn.addEventListener('click', () => {
+                    if (openStateKey) fpOpenState[openStateKey] = true;
+                    onSelect(ri, chip.key);
+                });
+                rowEl.appendChild(btn);
+            });
+            panel.appendChild(rowEl);
+        });
+
+        toggle.addEventListener('click', () => {
+            const isOpen = panel.classList.contains('open');
+            panel.classList.toggle('open', !isOpen);
+            toggle.classList.toggle('open', !isOpen);
+            if (openStateKey) fpOpenState[openStateKey] = !isOpen;
+        });
+
+        // Separator + clear button at bottom of panel (not for subject resource filter)
+        if (openStateKey === 'playlist') {
+            // no sep/clear for subject weeks/exam filter
+        } else {
+        const sep = document.createElement('div');
+        sep.className = 'fp-sep';
+        panel.appendChild(sep);
+
+        const clearRow = document.createElement('div');
+        clearRow.style.cssText = 'display:flex; justify-content:center; margin-top:10px;';
+        const clearBtn = document.createElement('button');
+        clearBtn.className = 'fp-clear-btn';
+        clearBtn.innerHTML = '✕ Clear all filters';
+        clearBtn.style.display = anyActive ? 'inline-flex' : 'none';
+        clearBtn.addEventListener('click', () => {
+            if (openStateKey) fpOpenState[openStateKey] = true;
+            // Reset state variables based on openStateKey
+            if (openStateKey === 'schedule') { scheduleTaskFilter.clear(); scheduleSubFilter.clear(); renderScheduleFilters(); renderScheduleWeeksGrid(); }
+            else if (openStateKey === 'deadlines') { deadlineTypeFilter.clear(); deadlineSubFilter.clear(); showDeadlines(false); }
+            else { rows.forEach((row, ri) => onSelect(ri, row.chips[0] ? row.chips[0].key : allKey)); }
+        });
+        clearRow.appendChild(clearBtn);
+        panel.appendChild(clearRow);
+        } // end if not playlist
+
+        // Wrap toggle+panel in a relative container so panel is absolutely positioned below toggle
+        const wrapper = document.createElement('div');
+        wrapper.className = 'fp-toggle-wrap' + (openStateKey === 'schedule' || openStateKey === 'deadlines' ? ' centered' : '');
+        wrapper.appendChild(toggle);
+        wrapper.appendChild(panel);
+        anchorEl.appendChild(wrapper);
+    }
+
     function renderFilterBar(viewType) {
-        const bar = document.getElementById('filter-bar');
-        bar.innerHTML = '';
+        const wrapEl = document.getElementById('filter-bar-wrap');
+        const barEl = document.getElementById('filter-bar');
+        wrapEl.style.display = 'block';
+        barEl.style.display = 'none';
+        const sepEl = document.getElementById('filter-sep');
+        if (sepEl) sepEl.style.display = 'block';
+        wrapEl.innerHTML = '';
 
         const filterKey = `${currSub.code}:${viewType}`;
-        
         const sourceArr = viewType === 'events' ? currSub.events : currSub.weeks;
         const availableTypes = new Set();
-        
         if(sourceArr) {
             sourceArr.forEach(w => {
-                if(w.resources) {
-                    Object.keys(w.resources).forEach(key => {
-                        if(w.resources[key].vis) availableTypes.add(key);
-                    });
-                }
+                if(w.resources) Object.keys(w.resources).forEach(k => { if(w.resources[k].vis) availableTypes.add(k); });
             });
         }
 
-        const btnAll = document.createElement('button');
-        btnAll.className = 'filter-btn';
-        btnAll.innerText = 'ALL';
-        btnAll.onclick = () => {
-            subjectViewFilters[filterKey] = 'ALL';
-            setActiveFilter(btnAll, 'filter-bar');
+        // Build chips list for resource filter
+        const resourceChips = [{ key: 'ALL', label: 'All' }];
+        if(window.CONFIG && window.CONFIG.resources) {
+            window.CONFIG.resources.forEach(res => {
+                if(availableTypes.has(res.name)) resourceChips.push({ key: res.name, label: res.name });
+            });
+        }
+
+        // If only "All" available, render grid immediately and hide panel
+        if (resourceChips.length <= 1) {
+            wrapEl.style.display = 'none';
+            if (sepEl) sepEl.style.display = 'none';
             renderWeekGrid('ALL', viewType === 'events');
-        };
-        bar.appendChild(btnAll);
-
-        if(window.CONFIG && window.CONFIG.resources) {
-            window.CONFIG.resources.forEach(res => {
-                if(availableTypes.has(res.name)) {
-                    const btn = document.createElement('button');
-                    btn.className = 'filter-btn';
-                    btn.innerText = res.name;
-                    btn.onclick = () => {
-                        subjectViewFilters[filterKey] = res.name;
-                        setActiveFilter(btn, 'filter-bar');
-                        renderWeekGrid(res.name, viewType === 'events');
-                    };
-                    bar.appendChild(btn);
-                }
-            });
-        }
-
-        const availableFilters = new Set(['ALL']);
-        if(window.CONFIG && window.CONFIG.resources) {
-            window.CONFIG.resources.forEach(res => {
-                if(availableTypes.has(res.name)) availableFilters.add(res.name);
-            });
+            return;
         }
 
         let activeFilter = subjectViewFilters[filterKey] || 'ALL';
-        if (!availableFilters.has(activeFilter)) activeFilter = 'ALL';
+        if (!resourceChips.find(c => c.key === activeFilter)) activeFilter = 'ALL';
         subjectViewFilters[filterKey] = activeFilter;
 
-        const activeBtn = [...bar.querySelectorAll('.filter-btn')].find(b => b.innerText === activeFilter);
-        if (activeBtn) activeBtn.classList.add('active');
+        buildFilterPanel(
+            wrapEl, wrapEl,
+            [{ label: '', chips: resourceChips }],
+            () => ({ 0: activeFilter }),
+            (ri, key) => {
+                subjectViewFilters[filterKey] = key;
+                activeFilter = key;
+                // Close panel after selection (single-select)
+                fpOpenState.playlist = false;
+                const pnl = wrapEl.querySelector('.fp-panel');
+                const tgl = wrapEl.querySelector('.fp-toggle');
+                if (pnl) pnl.classList.remove('open');
+                if (tgl) { tgl.classList.remove('open'); }
+                // Update active chip styles in-place without rebuilding
+                wrapEl.querySelectorAll('.fp-chip').forEach(btn => {
+                    const isNowActive = btn.textContent.trim() === (resourceChips.find(ch=>ch.key===key)||{}).label;
+                    btn.classList.toggle('active', isNowActive || (key === 'ALL' && btn.textContent.trim() === 'All'));
+                    if (btn.classList.contains('active')) {
+                        btn.style.cssText = 'background:rgba(233,30,140,0.18); border-color:var(--accent-pink); color:var(--accent-pink);';
+                    } else {
+                        btn.style.cssText = '';
+                    }
+                });
+                // Update toggle label
+                const tog = wrapEl.querySelector('.fp-toggle');
+                if (tog) {
+                    if (key !== 'ALL') {
+                        tog.classList.add('has-filter');
+                        tog.innerHTML = `Filter: <span class="fp-active-label">${key}</span> <span class="fp-arrow ${tog.classList.contains('open')?'open':''}">▼</span>`;
+                    } else {
+                        tog.classList.remove('has-filter');
+                        tog.innerHTML = `Filter <span class="fp-arrow ${tog.classList.contains('open')?'open':''}">▼</span>`;
+                    }
+                }
+                renderWeekGrid(key, viewType === 'events');
+            },
+            'ALL',
+            'playlist'
+        );
 
         renderWeekGrid(activeFilter, viewType === 'events');
     }
@@ -2907,6 +4088,28 @@
         if (panel && fab && !panel.contains(e.target) && !fab.contains(e.target)) {
             panel.classList.remove('visible');
         }
+    });
+
+    // Auto-close subject filter dropdown (weeks/exam materials) on outside click or tab switch
+    function closeSubjectFilterDropdown() {
+        const wrap = document.getElementById('filter-bar-wrap');
+        if (!wrap) return;
+        const pnl = wrap.querySelector('.fp-panel');
+        const tgl = wrap.querySelector('.fp-toggle');
+        if (pnl && pnl.classList.contains('open')) {
+            pnl.classList.remove('open');
+            if (tgl) tgl.classList.remove('open');
+            fpOpenState.playlist = false;
+        }
+    }
+    document.addEventListener('click', function(e) {
+        const wrap = document.getElementById('filter-bar-wrap');
+        if (wrap && !wrap.contains(e.target)) {
+            closeSubjectFilterDropdown();
+        }
+    });
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) closeSubjectFilterDropdown();
     });
 
     function isPC() {
@@ -3446,7 +4649,8 @@
     function collectUsefulLinksSelection(subjectFilter, filterType) {
         const groups = [];
         (window.COURSE_DATA || []).forEach(sub => {
-            if (subjectFilter !== 'All Subjects' && subjectFilter !== sub.code) return;
+            const subSet = subjectFilter instanceof Set ? subjectFilter : new Set();
+            if (subSet.size > 0 && !subSet.has(sub.code)) return;
             const links = (sub.playlists || []).filter(p => matchUsefulFilter(p, filterType));
             if (links.length) groups.push({ subCode: sub.code, subName: sub.name, links });
         });
@@ -3616,10 +4820,11 @@
             const groups = collectUsefulLinksSelection(currentUsefulSubject, currentUsefulFilter);
             const htmlSections = groups.length ? groups.map(g => `<h2>${eHtml(g.subCode)} - ${eHtml(g.subName)}</h2><ul>${g.links.map(p => `<li><b>${eHtml(p.title || 'Link')}</b>${p.note ? ` - ${eHtml(p.note.split('\n')[0])}` : ''}${p.link && p.link !== '#' ? ` <br><a href="${eHtml(p.link)}">${eHtml(p.link)}</a>` : ''}</li>`).join('')}</ul>`).join('') : '<p>No matching links.</p>';
             const txtSections = groups.length ? groups.map(g => [`${g.subCode} - ${g.subName}`, ...g.links.map(p => `- ${p.title || 'Link'}${p.link && p.link !== '#' ? ` | ${p.link}` : ''}`)].join('\n')).join('\n\n') : 'No matching links.';
-            const t = `${currentUsefulSubject === 'All Subjects' ? 'All Subjects' : currentUsefulSubject} - ${currentUsefulFilter}`;
+            const subLabel = currentUsefulSubject.size === 0 ? 'All Subjects' : [...currentUsefulSubject].join('-');
+            const t = `${subLabel} - ${currentUsefulFilter}`;
             return {
                 title: `Useful Links (${t})`,
-                fileBase: `useful-links-${String(currentUsefulSubject).toLowerCase()}-${String(currentUsefulFilter).toLowerCase().replace(/\s+/g,'-')}`,
+                fileBase: `useful-links-${subLabel.toLowerCase().replace(/\s+/g,'-')}-${String(currentUsefulFilter).toLowerCase().replace(/\s+/g,'-')}`,
                 bodyHtml: `${htmlSections}`,
                 text: `*Useful Links (${t})*\n\n${txtSections}`,
                 screenshotSelector: '#useful-links-page'
@@ -3978,7 +5183,7 @@
             clone.style.boxSizing = 'border-box';
             clone.style.width = targetWidth + 'px';
             if (active === 'schedule') {
-                clone.querySelectorAll('.calendar-toggle, .schedule-filters').forEach(el => el.remove());
+                clone.querySelectorAll('.calendar-toggle, .schedule-filters, .ctrl-bar').forEach(el => el.remove());
                 // Prevent cloned cards from being captured mid-waterfall at opacity 0.
                 clone.querySelectorAll('.waterfall-item').forEach(el => {
                     el.classList.remove('waterfall-item');
@@ -4000,7 +5205,7 @@
 
         // --- Schedule: hide toggle & filter rows before capture ---
         if (active === 'schedule') {
-            const toHide = [target.querySelector('.calendar-toggle'), target.querySelector('.schedule-filters')];
+            const toHide = [target.querySelector('.calendar-toggle'), target.querySelector('.schedule-filters'), target.querySelector('.ctrl-bar')];
             toHide.forEach(el => {
                 if (!el) return;
                 restoreList.push({ el, prev: el.style.cssText });
@@ -4162,9 +5367,11 @@
 
     function openNewsPanel() {
         if (typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
+        dismissNewsToast();
         renderNewsPanelItems();
-        document.getElementById('news-panel').classList.add('active');
-        // Show unread highlights first, then mark as viewed
+        const panel = document.getElementById('news-panel');
+        panel.style.display = 'flex';
+        requestAnimationFrame(() => panel.classList.add('active'));
         setTimeout(() => {
             const seen = new Set(getSeenNewsKeys());
             getVisibleNewsItems().forEach(item => seen.add(getNewsItemKey(item)));
@@ -4175,7 +5382,49 @@
 
     function closeNewsPanel(e, force = false) {
         if (!force && e && !e.target.classList.contains('news-panel')) return;
-        document.getElementById('news-panel').classList.remove('active');
+        const panel = document.getElementById('news-panel');
+        const card = panel.querySelector('.news-panel-card');
+        if (!card) { panel.classList.remove('active'); return; }
+        card.classList.add('closing');
+        panel.classList.remove('active');
+        setTimeout(() => {
+            panel.style.display = '';
+            card.classList.remove('closing');
+        }, 300);
+    }
+
+    let _newsToastTimer = null;
+    function showNewsToast(count) {
+        const toast = document.getElementById('news-toast');
+        const body = document.getElementById('news-toast-body');
+        const timerBar = document.getElementById('news-toast-timer-bar');
+        if (!toast || !body) return;
+        body.textContent = `You have ${count} unread announcement${count !== 1 ? 's' : ''} you haven't seen yet.`;
+        toast.classList.remove('hiding');
+        toast.classList.add('show');
+        // Progress bar countdown
+        timerBar.style.transition = 'none';
+        timerBar.style.width = '100%';
+        requestAnimationFrame(() => {
+            timerBar.style.transition = 'width 12s linear';
+            timerBar.style.width = '0%';
+        });
+        if (_newsToastTimer) clearTimeout(_newsToastTimer);
+        _newsToastTimer = setTimeout(() => dismissNewsToast(), 12000);
+    }
+
+    function dismissNewsToast() {
+        const toast = document.getElementById('news-toast');
+        if (!toast) return;
+        if (_newsToastTimer) { clearTimeout(_newsToastTimer); _newsToastTimer = null; }
+        toast.classList.add('hiding');
+        toast.classList.remove('show');
+        setTimeout(() => toast.classList.remove('hiding'), 350);
+    }
+
+    function maybeShowNewsToast() {
+        const count = getNewsUnreadCount();
+        if (count > 0) showNewsToast(count);
     }
 
     function renderNewsPanelItems() {
@@ -4640,8 +5889,16 @@
             list.innerHTML = '<div style="grid-column:1/-1; text-align:center; color:#666; margin-top:30px; font-style:italic;">No updates yet.</div>';
             return;
         }
-        // Show newest first
-        [...data].reverse().forEach(item => {
+        // Sort by date descending; entries without a valid date fall to the bottom
+        const sorted = [...data].sort((a, b) => {
+            const ta = a.date ? new Date(a.date).getTime() : 0;
+            const tb = b.date ? new Date(b.date).getTime() : 0;
+            if (ta === 0 && tb === 0) return 0;
+            if (ta === 0) return 1;
+            if (tb === 0) return -1;
+            return tb - ta;
+        });
+        sorted.forEach(item => {
             const card = document.createElement('div');
             card.className = 'update-card';
             card.innerHTML = `
@@ -4652,7 +5909,6 @@
             `;
             list.appendChild(card);
         });
-
         applyWaterfallToContainer(list, '.update-card');
     }
 

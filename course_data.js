@@ -7757,7 +7757,7 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     }
                 },
-                "isNew": false,
+                "isNew": true,
                 "isRecent": true,
                 "recentDate": "8/3/2026 7:57 PM"
             },
@@ -7780,8 +7780,8 @@ window.COURSE_DATA = [
                     },
                     "Section": {
                         "vis": true,
-                        "link": "https://youtu.be/3J67GgNrVks",
-                        "desc": "",
+                        "link": "https://youtu.be/S9nCmuv_-3g",
+                        "desc": "Up till 1:35:00",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -7901,7 +7901,7 @@ window.COURSE_DATA = [
                 },
                 "recentDate": "14/3/2026 1:44 AM",
                 "isRecent": true,
-                "isNew": false
+                "isNew": true
             },
             {
                 "title": "WEEK 6",
@@ -7921,12 +7921,11 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": true,
-                        "link": "https://youtu.be/28R16twGbec?si=8JPL82w2ltiCVuAg",
+                        "vis": false,
+                        "link": "#",
                         "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 8:19 AM"
+                        "isNew": false,
+                        "isRecent": false
                     },
                     "Section Slides": {
                         "vis": false,
