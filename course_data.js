@@ -7499,8 +7499,8 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
-                        "desc": "[1 : 7]",
+                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
+                        "desc": "[1 : 11]",
                         "isNew": false
                     },
                     "Guide (Explanation)": {
@@ -7646,8 +7646,8 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "lock": false,
-                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
-                        "desc": "[7 : 40]",
+                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
+                        "desc": "[12 : 41]",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -7773,7 +7773,7 @@ window.COURSE_DATA = [
                     },
                     "Slides": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
                         "desc": "[42 : 88]",
                         "isNew": false,
                         "isRecent": false
@@ -11232,6 +11232,29 @@ window.SCHEDULE_DATA = [
                 "submitLink": "",
                 "submitNote": "",
                 "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "DSA",
+                "name": "Lab Bonus 4",
+                "icon": "🧪",
+                "when": "Monday (23/3) at 11:59 PM.",
+                "where": "",
+                "coverage": "Lab 4 (Week 4)",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/18Qqwk5vz0o-xeJqRo14dQLA17YWG8cKH/view?usp=drive_link",
+                "coverageNote": "Check the assignment here!",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=196135",
+                "submitNote": "Submit here!",
+                "deadlineDate": "23/03/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
             }
