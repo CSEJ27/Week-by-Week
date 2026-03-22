@@ -9813,12 +9813,12 @@ window.COURSE_DATA = [
                 "title": "WEEK 1",
                 "resources": {
                     "Lecture": {
-                        "vis": true,
+                        "vis": false,
                         "link": "#",
-                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:12 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Alternative": {
                         "vis": false,
@@ -9851,10 +9851,10 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/1l1TkoHWMvUpCUrFo9CXXtEAbWm80BmdK/view?usp=drive_link",
-                        "desc": "",
+                        "desc": "Note: Lecture video is not allowed to share on social media, instead Dr. Mona provide the recording on Teams.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 6:55 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -9875,8 +9875,8 @@ window.COURSE_DATA = [
                         "link": "https://youtu.be/OLrpH6e7y8Q?si=cLi8BZNhnRkBd6Ed",
                         "desc": "Lab1",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:22 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section Slides": {
                         "vis": false,
@@ -9911,16 +9911,16 @@ window.COURSE_DATA = [
                         "link": "https://youtu.be/OLrpH6e7y8Q?si=cLi8BZNhnRkBd6Ed",
                         "desc": "JUnit setup and first program, Lab submission deadline is on the same day.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 6:57 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Lab Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/1pkbBp03yvnLTDEk76dT18R3C3BMuaEl9/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:12 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Topic Related Questions ": {
                         "vis": false,
@@ -9955,26 +9955,26 @@ window.COURSE_DATA = [
                 "showBadge": true,
                 "isRecent": true,
                 "recentDate": "22/3/2026 7:21 PM",
-                "isNew": false
+                "isNew": true
             },
             {
                 "title": "WEEK 2",
                 "resources": {
                     "Lecture": {
-                        "vis": true,
+                        "vis": false,
                         "link": "#",
-                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:13 PM"
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/1Dcky3-zCtByYifoljhCgM2ML413IbR1l/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:13 PM"
+                        "desc": "Note: Lecture video is not allowed to share on social media, instead Dr. Mona provide the recording on Teams.",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Lab": {
                         "vis": false,
@@ -10036,9 +10036,9 @@ window.COURSE_DATA = [
                         "vis": true,
                         "link": "https://youtu.be/FYfygjoeyqc?si=yMa2Jz-0Ubmeo4LO",
                         "desc": "the solutions of the sheet questions :)",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:16 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section Slides": {
                         "vis": false,
@@ -10058,9 +10058,9 @@ window.COURSE_DATA = [
                         "vis": true,
                         "link": "https://drive.google.com/file/d/1C8QsargL-nOlxbWF0LkinooZcnZg0iZX/view?usp=drive_link",
                         "desc": "sheets submission is day before the section",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:14 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Sheet Answer": {
                         "vis": false,
@@ -10098,9 +10098,9 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "recentDate": "22/3/2026 7:21 PM",
+                "recentDate": "22/3/2026 7:22 PM",
                 "isRecent": true,
-                "isNew": false
+                "isNew": true
             },
             {
                 "title": "WEEK 3",
@@ -10108,48 +10108,49 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": false,
                         "link": "#",
-                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/11aheczxdkpxj4wHne3h3hYuNFmshfr5O/view?usp=drive_link",
-                        "desc": "",
+                        "desc": "Note: Lecture video is not allowed to share on social media, instead Dr. Mona provide the recording on Teams.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:18 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section": {
                         "vis": true,
                         "link": "https://youtu.be/Ul5iIPTByA8?si=lf9mn67ocdw6Ur__",
                         "desc": "solving of the Lab2",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:18 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Sheet": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Lab": {
                         "vis": true,
                         "link": "https://youtu.be/Ul5iIPTByA8?si=lf9mn67ocdw6Ur__",
                         "desc": "Lab2",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:18 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Lab Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/16ZHiflFc6NFpXwAOsESuWuXgeevIld0E/view?usp=drive_link",
                         "desc": "Lab2.zip, Having the code of the login page.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:19 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Alternative": {
                         "vis": false,
@@ -10245,44 +10246,44 @@ window.COURSE_DATA = [
                 },
                 "badgeText": "Quiz1 till here",
                 "showBadge": true,
-                "recentDate": "22/3/2026 7:21 PM",
+                "recentDate": "22/3/2026 7:23 PM",
                 "isRecent": true,
-                "isNew": false
+                "isNew": true
             },
             {
                 "title": "WEEK 4",
                 "resources": {
                     "Lecture": {
-                        "vis": true,
+                        "vis": false,
                         "link": "#",
-                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:28 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/1BBaaxmOml8s5F5IyFGd-4rIWQ14eznu-/view?usp=drive_link",
-                        "desc": "",
+                        "desc": "Note: Lecture video is not allowed to share on social media, instead Dr. Mona provide the recording on Teams.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:25 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section": {
                         "vis": true,
                         "link": "https://youtu.be/xBRKJ3Q8Klk?si=pwm2cHv7nomlwoQI",
                         "desc": "sheet2 solving",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:25 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Sheet": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/14_BPf4aQpGEuvFUZ9cjFNgSjFYWSD9Ee/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:25 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Lab": {
                         "vis": false,
@@ -10392,42 +10393,42 @@ window.COURSE_DATA = [
                 },
                 "recentDate": "22/3/2026 7:26 PM",
                 "isRecent": true,
-                "isNew": false
+                "isNew": true
             },
             {
                 "title": "WEEK 5",
                 "resources": {
                     "Lecture": {
-                        "vis": true,
+                        "vis": false,
                         "link": "#",
-                        "desc": "Not allowed to share on social media, Instead Dr.Mona provide the recording on Teams.",
+                        "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:28 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/19EFyHlSar9aNWUGatdSVp0uyi_WfacO9/view?usp=drive_link",
-                        "desc": "",
+                        "desc": "Note: Lecture video is not allowed to share on social media, instead Dr. Mona provide the recording on Teams.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:28 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section": {
                         "vis": true,
                         "link": "https://youtu.be/ALfEx4cz7zs?si=GnQCmwcwZD64tG1P",
                         "desc": "only first 3 questions.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:32 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Sheet": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/14_BPf4aQpGEuvFUZ9cjFNgSjFYWSD9Ee/view?usp=drive_link",
                         "desc": "sheet3",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 7:30 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Lab": {
                         "vis": false,
@@ -13675,7 +13676,7 @@ window.UPDATES_DATA = [
     },
     {
         "icon": "📅",
-        "title": "Task Schedule",
+        "title": "Semester Map",
         "desc": "Semester map of all assignments, quizzes, and projects with week-by-week layout, and a month grid view.",
         "date": "2026-02-28"
     },
