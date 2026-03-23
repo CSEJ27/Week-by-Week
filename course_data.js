@@ -12177,7 +12177,7 @@ window.SCHEDULE_DATA = [
                 "submitNote": "Submit here!",
                 "deadlineDate": "23/03/2026 11:59 PM",
                 "deadlineEndDate": "",
-                "isCompleted": true
+                "isCompleted": false
             }
         ]
     },
