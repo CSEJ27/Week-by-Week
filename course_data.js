@@ -8043,7 +8043,9 @@ window.COURSE_DATA = [
                 },
                 "recentDate": "22/3/2026 12:44 AM",
                 "isRecent": true,
-                "isNew": true
+                "isNew": true,
+                "badgeText": "Quiz 1",
+                "showBadge": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1Qa5n273x25nYmBfi_UzulawXih-GpRsp?usp=drive_link",
@@ -10944,6 +10946,426 @@ window.COURSE_DATA = [
                 "isNew": false,
                 "isRecent": true,
                 "recentDate": "20/2/2026 5:23 PM"
+            },
+            {
+                "title": "WEEK 3",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=_wgonH81z9s&list=PL67BE5BOCmVmoeJszweLQjVIY8zs7F-Ef&index=1",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1rxm6L8cea6PJvH81ZzC_Q4PQ3x6BxrBV/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1pR00ELpZ7MTq0n_FEK5nJrt0Hjo3qdvm/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1F0EKmFg53FINhfF8BhptsScS8Xu-G3Sl/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1xGiZ7zLkbj8RtCmJAjuIFNYBFbymrrQ9/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                }
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=PQK6D4I78ZU&list=PL67BE5BOCmVmoeJszweLQjVIY8zs7F-Ef&index=2",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1rxm6L8cea6PJvH81ZzC_Q4PQ3x6BxrBV/view",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                }
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=R3kx2vjEqtQ&list=PL67BE5BOCmVmoeJszweLQjVIY8zs7F-Ef&index=3",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1rxm6L8cea6PJvH81ZzC_Q4PQ3x6BxrBV/view",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1E9SYe4C3JxlaV88oijiSBWKslmGc9WI5/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1NRjcAAsuZnw1vv5__XyyCTTjoTUsMmT6/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1jbiV7opyF5OJ4pckXCMeToYuKucHpiED/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "badgeText": "Midterm",
+                "showBadge": true,
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "24/3/2026 1:19 AM"
             }
         ],
         "events": [],
@@ -12136,27 +12558,6 @@ window.SCHEDULE_DATA = [
                 "isCompleted": false
             },
             {
-                "sub": "DB",
-                "name": "Project Phase 1",
-                "icon": "✔️",
-                "when": "Before Midterm",
-                "where": "",
-                "coverage": "Week 4",
-                "note": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "https://drive.google.com/file/d/1lF60L4hvUyschDcYOX80rvbBM2SlAsF0/view?usp=drive_link",
-                "coverageNote": "Check the details of project here!",
-                "submitText": "LMS",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
                 "sub": "DSA",
                 "name": "Lab Bonus 4",
                 "icon": "🧪",
@@ -12308,6 +12709,29 @@ window.SCHEDULE_DATA = [
                 "submitLink": "",
                 "submitNote": "",
                 "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "DB",
+                "name": "Project Phase 1",
+                "icon": "✔️",
+                "when": "Monday (06/04) at 11:59 PM",
+                "where": "",
+                "coverage": "Week 4",
+                "note": "Spreadsheet Of Teams",
+                "noteLink": "https://drive.google.com/drive/folders/1-2QwWNeS8VfeqQiAzoG0kiBS4kwYuUOW",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1lF60L4hvUyschDcYOX80rvbBM2SlAsF0/view?usp=drive_link",
+                "coverageNote": "Check the details of project here!",
+                "submitText": "LMS",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "06/04/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
             }
@@ -12760,7 +13184,8 @@ window.MIDTERM_DATA = [
         "time": "4:30 PM",
         "note": "",
         "coverage": "Until Week 5.",
-        "where": "Hall C (150), Hall D (36)"
+        "where": "Hall C (150), Hall D (36)",
+        "whereLink": "https://teams.microsoft.com/l/message/19:OtQMKJq8kEVGxdpQefnafRGUmQVptAWJ1dH8z4tlFHI1@thread.tacv2/1774298348676?tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&groupId=70d1a24f-e63c-4152-bed5-b9bf7c24d3dd&parentMessageId=1774298348676&teamName=CSE313s%20(UG2023)%20-%20Computer%20Architecture%20(40951)&channelName=General&createdTime=1774298348676"
     },
     {
         "dateLabel": "Sunday · 29 March",
@@ -12785,8 +13210,8 @@ window.MIDTERM_DATA = [
         "sub": "QC",
         "examCode": "CSE418s",
         "time": "4:30 PM",
-        "note": "",
-        "coverage": "",
+        "note": "Exam is 8:30 AM 30 March",
+        "coverage": "Weeks 1-5",
         "where": " Hall 1"
     },
     {
@@ -13749,6 +14174,45 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "DSA Online Labs 6",
+        "body": "There will be an online Lab Wednesday (25/3) at 9:00 PM on QUEUE, this lab will be included in the midterm.",
+        "publishedAt": "2026-03-23T23:13:09",
+        "sub": "DSA",
+        "hasEvent": true,
+        "eventDate": "2026-03-25",
+        "eventTime": "21:00",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "❗",
+        "title": "CA Quiz ",
+        "body": "CA Quiz 1 Grades are Out now !!!",
+        "publishedAt": "2026-03-23T22:52:46",
+        "sub": "CA",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "DSA Online Labs 5 ",
+        "body": "There will be an online Lab on Tuesday (24/3) at 10:30 PM on STACK after AI quiz , this lab will be included in the midterm.",
+        "publishedAt": "2026-03-23T22:49:12",
+        "sub": "DSA",
+        "hasEvent": true,
+        "eventDate": "2026-03-24",
+        "eventTime": "22:30",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "AI Online Lecture",
