@@ -1950,7 +1950,7 @@
                     if(t.deadlineEndDate && t.deadlineEndDate.trim() !== '') {
                         const parsedEnd = parseDateMeta(t.deadlineEndDate);
                         const tsEnd = parsedEnd.timestamp;
-                        if(tsEnd !== 0) {
+                        if(tsEnd !== 0 && tsEnd > tsStart) {  // only valid if end is genuinely after start
                             const compareEndTs = parsedEnd.hasTime ? tsEnd : getEndOfDayTimestamp(tsEnd);
                             if(now >= tsStart && now <= compareEndTs) {
                                 ongoing.push({ wIndex, tIndex, task: t, week: wk.week, timestamp: tsStart, endTimestamp: tsEnd, hasExplicitTime, endHasExplicitTime: parsedEnd.hasTime });
@@ -2266,15 +2266,24 @@
                 if (!isComp && hasExplicitTime) {
                     const diffMs = item.timestamp - now;
                     if (diffMs > 0) {
-                        const dd = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-                        const hh = Math.floor((diffMs / (1000 * 60 * 60)) % 24);
-                        const mm = Math.floor((diffMs / 1000 / 60) % 60);
-
                         let timeRemaining = '';
-                        if (dd > 0) {
-                            timeRemaining = `${dd} day${dd !== 1 ? 's' : ''} ${hh} hr${hh !== 1 ? 's' : ''}`;
+                        if (diffMs < 60 * 1000) {
+                            const s = Math.floor(diffMs / 1000);
+                            timeRemaining = `${s}s`;
+                        } else if (diffMs < 60 * 60 * 1000) {
+                            const m = Math.floor(diffMs / 60000);
+                            const s = Math.floor((diffMs % 60000) / 1000);
+                            timeRemaining = `${m}m ${s}s`;
+                        } else if (diffMs < 24 * 60 * 60 * 1000) {
+                            const h = Math.floor(diffMs / (60 * 60 * 1000));
+                            const m = Math.floor((diffMs % (60 * 60 * 1000)) / 60000);
+                            timeRemaining = `${h}h ${m}m`;
                         } else {
-                            timeRemaining = `${hh} hr${hh !== 1 ? 's' : ''} ${mm} min`;
+                            const totalHours = diffMs / (1000 * 60 * 60);
+                            const fullDays = Math.floor(totalHours / 24);
+                            const remainHours = totalHours - fullDays * 24;
+                            const daysRounded = remainHours >= 16 ? fullDays + 1 : fullDays;
+                            timeRemaining = `${daysRounded} day${daysRounded !== 1 ? 's' : ''}`;
                         }
                         countdownHtml = `<div style="font-size: 0.75rem; color: #00E5FF; font-weight: bold; background: rgba(0, 229, 255, 0.1); padding: 4px 8px; border-radius: 6px; display: inline-block; margin-top: 6px; border: 1px solid rgba(0, 229, 255, 0.2);">⏳ ${timeRemaining} left</div>`;
                     } else {
@@ -2322,8 +2331,34 @@
                 const endsStr = `${endDays[endD.getDay()]} ${endD.getDate()} ${endMonths[endD.getMonth()]}`;
 
                 const remainMs = item.endTimestamp - now;
-                const daysLeft = Math.ceil(remainMs / (1000 * 60 * 60 * 24));
-                const daysLabel = daysLeft === 1 ? '1 day left' : daysLeft + ' days left';
+                const daysLeft = (() => {
+                    const totalHours = remainMs / (1000 * 60 * 60);
+                    const fullDays = Math.floor(totalHours / 24);
+                    const remainHours = totalHours - fullDays * 24;
+                    return remainHours >= 16 ? fullDays + 1 : fullDays;
+                })();
+                const totalSecsLeft = Math.floor(remainMs / 1000);
+                const daysLabel = (() => {
+                    if (remainMs <= 0) return 'ending now';
+                    if (remainMs < 60 * 1000) {
+                        // Under 1 minute — show seconds
+                        return `${totalSecsLeft}s left`;
+                    }
+                    if (remainMs < 60 * 60 * 1000) {
+                        // Under 1 hour — show minutes and seconds
+                        const m = Math.floor(remainMs / 60000);
+                        const s = Math.floor((remainMs % 60000) / 1000);
+                        return `${m}m ${s}s left`;
+                    }
+                    if (remainMs < 24 * 60 * 60 * 1000) {
+                        // Under 24 hours — show hours and minutes
+                        const h = Math.floor(remainMs / (60 * 60 * 1000));
+                        const m = Math.floor((remainMs % (60 * 60 * 1000)) / 60000);
+                        return `${h}h ${m}m left`;
+                    }
+                    // 24h or more — use day rounding
+                    return daysLeft === 1 ? '1 day left' : `${daysLeft} days left`;
+                })();
 
                 ongoingHtml += `
                     <div class="card" style="border-left: 4px solid #af52de; flex-direction: row; cursor: pointer; padding: 14px 18px; margin-bottom: 10px; display: flex; align-items: center; background: linear-gradient(135deg, rgba(175,82,222,0.15), var(--card-bg)); box-shadow: 0 0 20px rgba(175,82,222,0.1);" onclick="goToScheduleTask(${item.wIndex}, ${item.tIndex})">
