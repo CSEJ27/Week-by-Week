@@ -316,6 +316,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -465,6 +473,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -607,6 +623,14 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -775,6 +799,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -919,6 +951,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "14/3/2026 7:08 PM",
@@ -1062,6 +1102,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "15/3/2026 2:35 AM",
@@ -1206,6 +1254,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "24/3/2026 5:42 AM",
@@ -1732,6 +1788,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -1892,6 +1956,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -2042,6 +2114,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -2186,6 +2266,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "13/3/2026 8:53 PM",
@@ -2330,6 +2418,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -2477,6 +2573,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "16/3/2026 5:57 PM",
@@ -3337,6 +3441,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -3496,6 +3608,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -3646,6 +3766,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -3784,6 +3912,14 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -3934,6 +4070,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeColor": "#ff0000",
@@ -4077,6 +4221,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -4234,6 +4386,14 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -4632,6 +4792,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -4787,6 +4955,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -4929,6 +5105,14 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -5098,6 +5282,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -5242,6 +5434,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "15/3/2026 2:50 AM",
@@ -5383,6 +5583,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -5528,6 +5736,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "17/3/2026 7:26 PM",
@@ -5985,6 +6201,14 @@ window.COURSE_DATA = [
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "10/3/2026 11:06 PM"
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -6130,6 +6354,14 @@ window.COURSE_DATA = [
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "10/3/2026 11:06 PM"
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -6275,6 +6507,14 @@ window.COURSE_DATA = [
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "10/3/2026 11:07 PM"
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -6437,6 +6677,14 @@ window.COURSE_DATA = [
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "10/3/2026 11:07 PM"
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -6581,6 +6829,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "14/3/2026 1:37 AM",
@@ -6722,6 +6978,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -6861,6 +7125,14 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -7450,6 +7722,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -7599,6 +7879,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -7735,6 +8023,14 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -7902,6 +8198,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -8044,6 +8348,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "14/3/2026 1:44 AM",
@@ -8186,6 +8498,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "22/3/2026 12:44 AM",
@@ -8332,6 +8652,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "24/3/2026 5:38 AM",
@@ -8799,6 +9127,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "Optional for lectures, required later.",
@@ -8964,6 +9300,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -9114,6 +9458,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -9254,6 +9606,14 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -9422,6 +9782,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -9566,6 +9934,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "15/3/2026 2:46 AM",
@@ -9707,6 +10083,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": true,
@@ -9865,6 +10249,14 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -10240,6 +10632,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "Quiz 1 Start here",
@@ -10387,6 +10787,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "22/3/2026 7:22 PM",
@@ -10533,6 +10941,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "Quiz1 till here",
@@ -10680,6 +11096,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "22/3/2026 7:26 PM",
@@ -10825,6 +11249,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "Midterm till here",
@@ -11081,6 +11513,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "locked": false,
@@ -11230,6 +11670,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -11372,6 +11820,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 }
             },
@@ -11510,6 +11966,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 }
             },
@@ -11648,6 +12112,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "Midterm",
@@ -11901,6 +12373,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -12043,6 +12523,14 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -12200,6 +12688,14 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -12340,6 +12836,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 }
             }
@@ -12561,7 +13065,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "DB",
-                "name": "Assignment sheet3",
+                "name": "Lab 2 Task",
                 "icon": "📝",
                 "when": "Friday (12/3) at 11:59 PM",
                 "where": "",
@@ -13464,7 +13968,8 @@ window.MIDTERM_DATA = [
         "time": "2:30 PM",
         "note": "",
         "coverage": "Until Week 7.",
-        "where": "Hall C (150), Hall D (36)"
+        "where": "Hall C (150), Hall D (36)",
+        "date": "2026-03-27"
     },
     {
         "dateLabel": "Saturday · 28 March",
@@ -13474,7 +13979,9 @@ window.MIDTERM_DATA = [
         "note": "",
         "coverage": "Until Week 5.",
         "where": "Hall C (150), Hall D (36)",
-        "whereLink": "https://teams.microsoft.com/l/message/19:OtQMKJq8kEVGxdpQefnafRGUmQVptAWJ1dH8z4tlFHI1@thread.tacv2/1774298348676?tenantId=ad2a8324-bef7-46a8-adb4-fe51b6613b24&groupId=70d1a24f-e63c-4152-bed5-b9bf7c24d3dd&parentMessageId=1774298348676&teamName=CSE313s%20(UG2023)%20-%20Computer%20Architecture%20(40951)&channelName=General&createdTime=1774298348676"
+        "whereLink": "https://drive.google.com/drive/u/1/folders/1zrO6n867ftpnTqCOk8C9gbJ3WcuQmQBR",
+        "date": "2026-03-28",
+        "whereNote": "Check your place here!"
     },
     {
         "dateLabel": "Sunday · 29 March",
@@ -13483,7 +13990,8 @@ window.MIDTERM_DATA = [
         "time": "12:30 PM",
         "note": "",
         "coverage": "",
-        "where": "931"
+        "where": "931",
+        "date": "2026-03-29"
     },
     {
         "dateLabel": "Monday · 30 March",
@@ -13492,25 +14000,28 @@ window.MIDTERM_DATA = [
         "time": "2:30 PM",
         "note": "",
         "coverage": "",
-        "where": " Hall A (150), Hall B (23)"
+        "where": " Hall A (150), Hall B (23)",
+        "date": "2026-03-30"
     },
     {
         "dateLabel": "Monday · 30 March",
         "sub": "QC",
         "examCode": "CSE418s",
-        "time": "4:30 PM",
-        "note": "Exam is 8:30 AM 30 March",
+        "time": "8:30 AM",
+        "note": "",
         "coverage": "Weeks 1-5",
-        "where": " Hall 1"
+        "where": " Hall 1",
+        "date": "2026-03-30"
     },
     {
         "dateLabel": "Monday · 30 March",
         "sub": "RB",
         "examCode": "CSE373s",
         "time": "4:30 PM",
-        "note": "All of thee content mentioned in the lecture is in the midterm including Velocity Kinematics",
+        "note": "All of the content mentioned in the lecture is in the midterm including Velocity Kinematics",
         "coverage": "Week 1 to 6",
-        "where": "Hall C"
+        "where": "Hall C",
+        "date": "2026-03-30"
     },
     {
         "dateLabel": "Tuesday · 31 March",
@@ -13519,7 +14030,8 @@ window.MIDTERM_DATA = [
         "time": "4:30 PM",
         "note": "",
         "coverage": "Until Week 6.",
-        "where": " Hall B (150), Hall C (24)"
+        "where": " Hall B (150), Hall C (24)",
+        "date": "2026-03-31"
     },
     {
         "dateLabel": "Wednesday · 1 April",
@@ -13528,7 +14040,8 @@ window.MIDTERM_DATA = [
         "time": "2:30 PM",
         "note": "",
         "coverage": "Until Week 7.",
-        "where": " Hall B (150), Hall C (35)"
+        "where": " Hall B (150), Hall C (35)",
+        "date": "2026-04-01"
     },
     {
         "dateLabel": "Thursday · 2 April",
@@ -13537,7 +14050,8 @@ window.MIDTERM_DATA = [
         "time": "12:30 PM",
         "note": "",
         "coverage": "Until Ch. 5.",
-        "where": " Hall A (111), Hall B (75)"
+        "where": " Hall A (111), Hall B (75)",
+        "date": "2026-04-02"
     },
     {
         "dateLabel": "Friday · 3 April",
@@ -13546,9 +14060,12 @@ window.MIDTERM_DATA = [
         "time": "4:30 PM",
         "note": "",
         "coverage": "Until Week 6.",
-        "where": "504 (151), Hall A (35)"
+        "where": "504 (151), Hall A (35)",
+        "date": "2026-04-03"
     }
 ];
+
+window.FINAL_DATA = [];
 
 window.STAFF_DATA = [
     {
