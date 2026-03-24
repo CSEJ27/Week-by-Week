@@ -59,6 +59,8 @@
         .schedule-btn:hover { background: #ff9500; color: black; box-shadow: 0 0 20px #ff9500; }
         .midterm-btn { background: rgba(0, 122, 255, 0.2); border: 2px solid #007aff; color: #007aff; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .midterm-btn:hover { background: #007aff; color: white; box-shadow: 0 0 20px #007aff; }
+        .midterm-btn.finals-mode { background: rgba(204, 34, 0, 0.2); border-color: #cc2200; color: #cc2200; }
+        .midterm-btn.finals-mode:hover { background: #cc2200; color: white; box-shadow: 0 0 20px #cc2200; }
         .deadline-btn { background: rgba(0, 229, 255, 0.2); border: 2px solid #00E5FF; color: #00E5FF; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .deadline-btn:hover { background: #00E5FF; color: black; box-shadow: 0 0 20px #00E5FF; }
         .useful-btn { background: rgba(181, 25, 214, 0.2); border: 2px solid var(--accent-purple); color: var(--accent-purple); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
@@ -3565,8 +3567,13 @@
         // Update nav tab color to match active exam type
         const navLink = document.querySelector('.nav-link-midterms');
         if (navLink) {
-            if (examViewMode === 'finals') navLink.classList.add('finals-mode');
-            else navLink.classList.remove('finals-mode');
+            if (examViewMode === 'finals') {
+                navLink.classList.add('finals-mode');
+                document.querySelectorAll('.midterm-btn').forEach(btn => btn.classList.add('finals-mode'));
+            } else {
+                navLink.classList.remove('finals-mode');
+                document.querySelectorAll('.midterm-btn').forEach(btn => btn.classList.remove('finals-mode'));
+            }
         }
 
         wrap.innerHTML = '';
@@ -4718,9 +4725,17 @@
         const dd = document.getElementById('dd-schedule');
         if(!dd || !window.SCHEDULE_DATA) return;
         let targetWeek = null;
+        const todayDate = new Date();
         for(let i = 0; i < window.SCHEDULE_DATA.length; i++) {
             const wk = window.SCHEDULE_DATA[i];
-            if(wk.tasks && wk.tasks.some(t => !t.isCompleted)) { targetWeek = wk; break; }
+            const { start: wkStart, end: wkEnd } = getWeekDates(wk.week);
+            if (todayDate >= wkStart && todayDate <= wkEnd) { targetWeek = wk; break; }
+        }
+        if(!targetWeek) {
+            for(let i = 0; i < window.SCHEDULE_DATA.length; i++) {
+                const wk = window.SCHEDULE_DATA[i];
+                if(wk.tasks && wk.tasks.some(t => !t.isCompleted)) { targetWeek = wk; break; }
+            }
         }
         let html = '<div class="dd-header">This period</div>';
         if(!targetWeek || !targetWeek.tasks || targetWeek.tasks.length === 0) {
