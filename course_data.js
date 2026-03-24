@@ -10454,7 +10454,7 @@ window.COURSE_DATA = [
                     },
                     "Section": {
                         "vis": true,
-                        "link": "https://youtu.be/tt27m50eHuQ?si=l1iTbiOSWvvUuKmF",
+                        "link": "https://youtu.be/p0f4DeowA7o?si=SsB5xlzLsYHeofVj",
                         "desc": "",
                         "isNew": true,
                         "isRecent": true,
