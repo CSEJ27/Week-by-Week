@@ -2742,8 +2742,8 @@ window.COURSE_DATA = [
                 "title": "WEEK 7",
                 "resources": {
                     "Lecture": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=V0mdMJJCWoM",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
@@ -2882,10 +2882,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "locked": true,
+                "locked": false,
                 "badgeText": "Midterm till here!",
                 "badgeColor": "#193800",
-                "showBadge": true
+                "showBadge": true,
+                "recentDate": "24/3/2026 11:43 PM",
+                "isRecent": true,
+                "isNew": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link",
@@ -8983,16 +8986,16 @@ window.COURSE_DATA = [
                 "title": "WEEK 7",
                 "resources": {
                     "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY",
+                        "desc": "We got two lectures this week.\nCheck out lectures 7&8.\nNote that midterm only till Lecture 7 till 1:21:40",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1AdAjjbm7e4Lc6D7GqXs_HhdC47VOC6Za/view?usp=drive_link",
+                        "desc": "[25 : END]",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -9123,10 +9126,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "locked": true,
+                "locked": false,
                 "showBadge": true,
                 "badgeText": "Midterm till here!",
-                "badgeColor": "#193800"
+                "badgeColor": "#193800",
+                "recentDate": "24/3/2026 11:43 PM",
+                "isRecent": true,
+                "isNew": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1Qa5n273x25nYmBfi_UzulawXih-GpRsp?usp=drive_link",
