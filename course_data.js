@@ -8994,8 +8994,8 @@ window.COURSE_DATA = [
                     },
                     "Slides": {
                         "vis": true,
-                        "link": "https://drive.google.com/file/d/1AdAjjbm7e4Lc6D7GqXs_HhdC47VOC6Za/view?usp=drive_link",
-                        "desc": "[25 : END]",
+                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "desc": "Lec7: Games [25 : END] + Constraint Satisfaction [1:9]",
                         "isNew": false,
                         "isRecent": false
                     },
