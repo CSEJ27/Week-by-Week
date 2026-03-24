@@ -327,7 +327,9 @@ window.COURSE_DATA = [
                     }
                 },
                 "isRecent": true,
-                "recentDate": "13/2/2026 5:48 AM"
+                "recentDate": "13/2/2026 5:48 AM",
+                "showBadge": true,
+                "badgeText": "Quiz 1 starts from here!"
             },
             {
                 "title": "WEEK 2",
@@ -501,7 +503,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/playlist?list=PLwTK_kzdGnGClKi-u1ePqDkFiyUekLmlC",
-                        "desc": "2nd video, up until the 23rd minute mark.",
+                        "desc": "1st video, up till 23:55.\n2nd video, up until the 23rd minute mark.",
                         "isNew": false
                     },
                     "Another Alt.": {
@@ -658,7 +660,7 @@ window.COURSE_DATA = [
                         "vis": true,
                         "lock": false,
                         "link": "https://www.youtube.com/watch?v=kbCs9Zku1_A&feature=youtu.be",
-                        "desc": "",
+                        "desc": "start 23rd minute mark.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -1114,6 +1116,160 @@ window.COURSE_DATA = [
                 },
                 "recentDate": "15/3/2026 2:35 AM",
                 "isRecent": true,
+                "isNew": true,
+                "showBadge": true,
+                "badgeText": "Quiz 1 till here!"
+            },
+            {
+                "title": "WEEK 7",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=-nUwPEqQPHY",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1y-Dk-kYjshCnAm5FqyWGd1TcLHf40g9T/view?usp=drive_link",
+                        "desc": "[1:67]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "locked": false,
+                "badgeText": "Midterm till here!",
+                "badgeColor": "#193800",
+                "showBadge": true,
+                "recentDate": "24/3/2026 11:31 PM",
+                "isRecent": true,
                 "isNew": true
             }
         ],
@@ -1228,11 +1384,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1RZGWi72pDoBZ1I0PEuKQ3TDUcgmW4Y3F?usp=drive_link",
+                        "desc": "Quiz 1 content related MCQs. ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "24/3/2026 11:36 PM"
                     },
                     "Pre-Requisite": {
                         "vis": false,
@@ -1256,12 +1413,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1W7oqLlNLhje_NdYrAldV0kexM1bPKIkp",
+                        "desc": "Capsule notes, very useful as well.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "24/3/2026 11:36 PM"
                     }
                 },
                 "recentDate": "24/3/2026 5:42 AM",
@@ -1800,7 +1957,8 @@ window.COURSE_DATA = [
                 },
                 "isRecent": true,
                 "recentDate": "15/2/2026 10:23 PM",
-                "badgeText": "Start of quiz 1!"
+                "badgeText": "Quiz 1 starts from here!",
+                "showBadge": true
             },
             {
                 "title": "WEEK 2",
@@ -2431,7 +2589,303 @@ window.COURSE_DATA = [
                 "isNew": true,
                 "isRecent": true,
                 "recentDate": "13/3/2026 9:00 PM",
-                "badgeText": "Quiz 1 till here!"
+                "badgeText": "Quiz 1 till here!",
+                "showBadge": true
+            },
+            {
+                "title": "WEEK 6",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "locked": true
+            },
+            {
+                "title": "WEEK 7",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "locked": true,
+                "badgeText": "Midterm till here!",
+                "badgeColor": "#193800",
+                "showBadge": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1obc-iX8mnVia84xk5Ru8Z9EyFmHKi9DM?usp=drive_link",
@@ -3453,7 +3907,7 @@ window.COURSE_DATA = [
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM",
-                "badgeText": "Start of quiz 1",
+                "badgeText": "Quiz 1 starts from here!",
                 "showBadge": true
             },
             {
@@ -4233,7 +4687,10 @@ window.COURSE_DATA = [
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "18/3/2026 1:39 AM"
+                "recentDate": "18/3/2026 1:39 AM",
+                "showBadge": true,
+                "badgeText": "Midterm till here!",
+                "badgeColor": "#193800"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link",
@@ -4804,7 +5261,7 @@ window.COURSE_DATA = [
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM",
-                "badgeText": "Quiz 1 start here!",
+                "badgeText": "Quiz 1 starts from here!",
                 "showBadge": true
             },
             {
@@ -5446,7 +5903,10 @@ window.COURSE_DATA = [
                 },
                 "recentDate": "15/3/2026 2:50 AM",
                 "isRecent": true,
-                "isNew": true
+                "isNew": true,
+                "badgeText": "Midterm till here!",
+                "showBadge": true,
+                "badgeColor": "#193800"
             },
             {
                 "title": "WEEK 6",
@@ -6214,7 +6674,7 @@ window.COURSE_DATA = [
                 "isRecent": true,
                 "recentDate": "13/2/2026 5:48 AM",
                 "showBadge": true,
-                "badgeText": "Quiz 1 starting from here!"
+                "badgeText": "Quiz 1 starts from here!"
             },
             {
                 "title": "WEEK 2",
@@ -6849,7 +7309,7 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "link": "https://youtu.be/imqo-Y5Ehzk?si=rdPrL61N8j8BPDer",
-                        "desc": "",
+                        "desc": "Note that midterm content only till Ch5.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -6990,7 +7450,10 @@ window.COURSE_DATA = [
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "21/3/2026 11:56 PM"
+                "recentDate": "21/3/2026 11:56 PM",
+                "showBadge": true,
+                "badgeText": "Midterm till here!",
+                "badgeColor": "#193800"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1CIqmEG3hlHCfabTtADnfT_NgpCbs2kR1?usp=drive_link",
@@ -7733,7 +8196,9 @@ window.COURSE_DATA = [
                     }
                 },
                 "isRecent": true,
-                "recentDate": "13/2/2026 5:48 AM"
+                "recentDate": "13/2/2026 5:48 AM",
+                "showBadge": true,
+                "badgeText": "Quiz 1 from here!"
             },
             {
                 "title": "WEEK 2",
@@ -8368,7 +8833,7 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "link": "https://youtu.be/DU4k9AnpI_Q",
-                        "desc": "",
+                        "desc": "Note that quiz 1 is only till State Space Ch.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -8511,8 +8976,157 @@ window.COURSE_DATA = [
                 "recentDate": "22/3/2026 12:44 AM",
                 "isRecent": true,
                 "isNew": true,
-                "badgeText": "Quiz 1",
+                "badgeText": "Quiz 1 till here!",
                 "showBadge": true
+            },
+            {
+                "title": "WEEK 7",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "locked": true,
+                "showBadge": true,
+                "badgeText": "Midterm till here!",
+                "badgeColor": "#193800"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1Qa5n273x25nYmBfi_UzulawXih-GpRsp?usp=drive_link",
@@ -8626,11 +9240,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1KODgXRqihWRDeYqFizxeZz9nfXm-qxSB?usp=drive_link",
+                        "desc": "Quiz 1 content related MCQs. ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "24/3/2026 11:36 PM"
                     },
                     "Pre-Requisite": {
                         "vis": false,
@@ -9312,7 +9927,9 @@ window.COURSE_DATA = [
                 },
                 "isRecent": true,
                 "recentDate": "13/2/2026 3:45 PM",
-                "isNew": false
+                "isNew": false,
+                "badgeText": "Quiz 1 starts from here!",
+                "showBadge": true
             },
             {
                 "title": "WEEK 2",
@@ -10095,7 +10712,10 @@ window.COURSE_DATA = [
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "21/3/2026 11:43 PM"
+                "recentDate": "21/3/2026 11:43 PM",
+                "badgeText": "Midterm till here!",
+                "showBadge": true,
+                "badgeColor": "#193800"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link",
@@ -10642,7 +11262,7 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     }
                 },
-                "badgeText": "Quiz 1 Start here",
+                "badgeText": "Quiz 1 starts from here!",
                 "showBadge": true,
                 "isRecent": true,
                 "recentDate": "22/3/2026 7:21 PM",
@@ -10951,7 +11571,7 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     }
                 },
-                "badgeText": "Quiz1 till here",
+                "badgeText": "Quiz 1 till here!",
                 "showBadge": true,
                 "recentDate": "22/3/2026 7:23 PM",
                 "isRecent": true,
@@ -11259,11 +11879,12 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     }
                 },
-                "badgeText": "Midterm till here",
+                "badgeText": "Midterm till here!",
                 "showBadge": true,
                 "recentDate": "22/3/2026 7:32 PM",
                 "isRecent": true,
-                "isNew": true
+                "isNew": true,
+                "badgeColor": "#193800"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1-DGr621UC2zPt5y3phF1SRJE-86eiYyK?usp=drive_link",
@@ -12122,11 +12743,12 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     }
                 },
-                "badgeText": "Midterm",
+                "badgeText": "Midterm till here!",
                 "showBadge": true,
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "24/3/2026 1:19 AM"
+                "recentDate": "24/3/2026 1:19 AM",
+                "badgeColor": "#193800"
             }
         ],
         "events": [],
@@ -13312,7 +13934,7 @@ window.SCHEDULE_DATA = [
                 "sub": "AI",
                 "name": "Quiz 1",
                 "icon": "🧠",
-                "when": "Tuesday (24/3) from 10:30 PM to 10:40 PM ",
+                "when": "Wednesday (25/3) from 10:00 PM to 10:15 PM ",
                 "where": "Online",
                 "coverage": "Ch2 (State Space - Half of Week 6)",
                 "note": "Quiz is 10 minutes long.",
@@ -13325,8 +13947,8 @@ window.SCHEDULE_DATA = [
                 "submitText": "Google Forms",
                 "submitLink": "",
                 "submitNote": "",
-                "deadlineDate": "24/03/2026 10:30 PM",
-                "deadlineEndDate": "24/03/2026 10:40 PM",
+                "deadlineDate": "25/03/2026 10:00 PM",
+                "deadlineEndDate": "25/03/2026 10:15 PM",
                 "isCompleted": false
             },
             {
@@ -13969,7 +14591,9 @@ window.MIDTERM_DATA = [
         "note": "",
         "coverage": "Until Week 7.",
         "where": "Hall C (150), Hall D (36)",
-        "date": "2026-03-27"
+        "date": "2026-03-27",
+        "whereNote": "Check your location here!",
+        "whereLink": "https://drive.google.com/drive/u/1/folders/1EDIf1_lhF7bfUM4eC4vmsrW6Zs_iHf0Y"
     },
     {
         "dateLabel": "Saturday · 28 March",
@@ -13999,9 +14623,11 @@ window.MIDTERM_DATA = [
         "examCode": "CSE471s",
         "time": "2:30 PM",
         "note": "",
-        "coverage": "",
+        "coverage": "Until Week 7.",
         "where": " Hall A (150), Hall B (23)",
-        "date": "2026-03-30"
+        "date": "2026-03-30",
+        "whereNote": "Check your place here!",
+        "whereLink": "https://drive.google.com/drive/folders/1jInBIbOHZEkULZfPAgWQ86vAUJOp5V3S?usp=drive_link"
     },
     {
         "dateLabel": "Monday · 30 March",
@@ -14009,7 +14635,7 @@ window.MIDTERM_DATA = [
         "examCode": "CSE418s",
         "time": "8:30 AM",
         "note": "",
-        "coverage": "Weeks 1-5",
+        "coverage": "Until Week 5.",
         "where": " Hall 1",
         "date": "2026-03-30"
     },
@@ -14019,7 +14645,7 @@ window.MIDTERM_DATA = [
         "examCode": "CSE373s",
         "time": "4:30 PM",
         "note": "All of the content mentioned in the lecture is in the midterm including Velocity Kinematics",
-        "coverage": "Week 1 to 6",
+        "coverage": "Until Week 6.",
         "where": "Hall C",
         "date": "2026-03-30"
     },
@@ -14031,7 +14657,9 @@ window.MIDTERM_DATA = [
         "note": "",
         "coverage": "Until Week 6.",
         "where": " Hall B (150), Hall C (24)",
-        "date": "2026-03-31"
+        "date": "2026-03-31",
+        "whereNote": "Check your place here!",
+        "whereLink": "https://drive.google.com/drive/folders/16xGvu4h52okV1Ez_LgSX6ojeGCHQ-S1t?usp=drive_link"
     },
     {
         "dateLabel": "Wednesday · 1 April",
@@ -14041,7 +14669,9 @@ window.MIDTERM_DATA = [
         "note": "",
         "coverage": "Until Week 7.",
         "where": " Hall B (150), Hall C (35)",
-        "date": "2026-04-01"
+        "date": "2026-04-01",
+        "whereNote": "Check your place here!",
+        "whereLink": "https://drive.google.com/drive/folders/1nSPuptsFJseWNxao-YDhUcLJG6H6eJgM?usp=drive_link"
     },
     {
         "dateLabel": "Thursday · 2 April",
@@ -14049,9 +14679,11 @@ window.MIDTERM_DATA = [
         "examCode": "CSE335s",
         "time": "12:30 PM",
         "note": "",
-        "coverage": "Until Ch. 5.",
+        "coverage": "Until Ch. 5 (Week 6). ",
         "where": " Hall A (111), Hall B (75)",
-        "date": "2026-04-02"
+        "date": "2026-04-02",
+        "whereNote": "Check your place here!",
+        "whereLink": "https://drive.google.com/drive/folders/1ZWHsX9_zA2yYGKg4zJxWHBWmWNdAjbUQ?usp=drive_link"
     },
     {
         "dateLabel": "Friday · 3 April",
@@ -14061,7 +14693,9 @@ window.MIDTERM_DATA = [
         "note": "",
         "coverage": "Until Week 6.",
         "where": "504 (151), Hall A (35)",
-        "date": "2026-04-03"
+        "date": "2026-04-03",
+        "whereNote": "Check your place here!",
+        "whereLink": "https://drive.google.com/drive/folders/16PFrfVUIIGdnim504zj9YCJbiCjVNfFT?usp=drive_link"
     }
 ];
 
