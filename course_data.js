@@ -3054,14 +3054,22 @@ window.COURSE_DATA = [
         ],
         "playlists": [
             {
-                "title": "Eng. Sawsan Emad – Spring 2026",
+                "title": "Dr. Youssra & Eng. Sawsan - Spring 2026 ",
                 "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVlMHXx-QQ6XWbm8SZrEylrQ",
-                "icon": "🧪",
+                "icon": "▶️",
                 "note": "It's not complete as we didn't take all labs online.",
                 "badges": [
                     {
                         "text": "Labs",
                         "color": "#ff3b30"
+                    },
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    },
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
                     }
                 ]
             },
