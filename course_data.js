@@ -2605,7 +2605,7 @@ window.COURSE_DATA = [
                     "Alternative": {
                         "vis": true,
                         "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt  Vid no 10,11 in this playlist DSA W6 alt #DSA W6",
-                        "desc": "Videos No. 10&11 in this playlist.\nNote that it might not be complete.",
+                        "desc": "- Videos No. 10&11 in this playlist.\n- Note that it's not complete, he only covered stack&queue using linked lists, he skipped using static and dynamic array, due to lack of time we won't be able to provide a good alt for now (after midterm we will) so for now focus on the lab & tutorial.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -2617,11 +2617,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1ma9pXd8Q-v7c6-PXMLUsClLRTnQ81iGl?usp=drive_link",
+                        "desc": "Chs. 3&4.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "26/3/2026 12:22 AM"
                     },
                     "Notes": {
                         "vis": false,
@@ -2632,10 +2633,11 @@ window.COURSE_DATA = [
                     },
                     "Sheet": {
                         "vis": true,
-                        "link": "https://drive.google.com/file/d/1XaT4T5g51se4RoOU69Z7cLAxJrT_JP3i/view?usp=drivesdk  DSA w6 sheet #DSA W6",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "link": "https://drive.google.com/drive/u/1/folders/1yXG6IZqC0dsqGH8XmKtiD1nwIAyIchaU",
+                        "desc": "Labs 5&6.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "26/3/2026 12:22 AM"
                     },
                     "Lab": {
                         "vis": true,
@@ -2746,10 +2748,11 @@ window.COURSE_DATA = [
                 "resources": {
                     "Lecture": {
                         "vis": true,
-                        "link": "https://www.youtube.com/watch?v=V0mdMJJCWoM",
+                        "link": "https://youtu.be/t3zo4znEt2E",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "26/3/2026 12:19 AM"
                     },
                     "Alternative": {
                         "vis": false,
@@ -13922,7 +13925,7 @@ window.SCHEDULE_DATA = [
                 "where": "Online",
                 "coverage": "Chapters 1,2 and 3.",
                 "note": "Quiz will be 30 minutes long.\nQuiz will be on Google Classroom so make sure you join the classroom.",
-                "submitText": "",
+                "submitText": "Google Classroom ",
                 "deadlineDate": "25/03/2026 8:00 PM",
                 "deadlineEndDate": "25/03/2026 8:30 PM"
             },
