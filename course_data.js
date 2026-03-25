@@ -9015,11 +9015,12 @@ window.COURSE_DATA = [
                         "recentDate": "25/3/2026 9:56 PM"
                     },
                     "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1FO12KC-Y2YL8uKMb8cw5EbkXGKfBxjxF/view?usp=sharing Slides sections   games",
+                        "desc": "Note that this is only about Games chapter.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "26/3/2026 12:32 AM"
                     },
                     "Notes": {
                         "vis": false,
