@@ -2596,22 +2596,22 @@ window.COURSE_DATA = [
                 "title": "WEEK 6",
                 "resources": {
                     "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVkSKWEXpBPfXMf_88sWU70d&si=pGU5kptniyqlGwuM  DSA W6 Lec - Dr ashraf Note that queue might not be complete as I'm not sure   #DSA W6",
+                        "desc": "Note that queue might not be complete as I'm not sure ",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt  Vid no 10,11 in this playlist DSA W6 alt #DSA W6",
+                        "desc": "Videos No. 10&11 in this playlist.\nNote that it might not be complete.",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1BhQY3fl9u-p7usV853q9f5WCXdpVRNLS/view?usp=drivesdk  DSA W6 Voice Recording  #DSA W6",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
@@ -2631,22 +2631,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Sheet": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1XaT4T5g51se4RoOU69Z7cLAxJrT_JP3i/view?usp=drivesdk  DSA w6 sheet #DSA W6",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Lab": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://youtu.be/TexU-Mh_fIE",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1rv-LIeoznMAdg1NGbGTK0ywoqPhPcfwt/view?usp=drivesdk",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
@@ -2736,7 +2736,10 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "locked": true
+                "locked": false,
+                "recentDate": "25/3/2026 9:54 PM",
+                "isRecent": true,
+                "isNew": true
             },
             {
                 "title": "WEEK 7",
@@ -2763,11 +2766,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Slides": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1IHmNJWuGzC65yo7Mv326_2L7JN6Lk-hX/view?usp=drivesdk  DSA W7 Slides (yes she finished whole chapter) #DSA W7",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "25/3/2026 9:54 PM"
                     },
                     "Notes": {
                         "vis": false,
@@ -9000,11 +9004,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=oNU846j_2Ehqba_b",
+                        "desc": "Games are covered in the following:\nSection 6 [1:36:52 : END]\nSection 7 [START : 46:15]",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "25/3/2026 9:56 PM"
                     },
                     "Section Slides": {
                         "vis": false,
@@ -10454,7 +10459,7 @@ window.COURSE_DATA = [
                     },
                     "Section": {
                         "vis": true,
-                        "link": "https://youtu.be/p0f4DeowA7o?si=SsB5xlzLsYHeofVj",
+                        "link": "https://youtu.be/tt27m50eHuQ?si=l1iTbiOSWvvUuKmF",
                         "desc": "",
                         "isNew": true,
                         "isRecent": true,
