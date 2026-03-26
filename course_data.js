@@ -2752,7 +2752,7 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt  Vid no 10,11 in this playlist DSA W6 alt #DSA W6",
+                        "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt  Vid",
                         "desc": "- Videos No. 10&11 in this playlist.\n- Note that it's not complete, he only covered stack&queue using linked lists, he skipped using static and dynamic array, due to lack of time we won't be able to provide a good alt for now (after midterm we will) so for now focus on the lab & tutorial.",
                         "isNew": false,
                         "isRecent": false
