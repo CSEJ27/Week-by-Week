@@ -14389,8 +14389,9 @@ window.COURSE_DATA = [
                         "vis": true,
                         "link": "https://lms.eng.asu.edu.eg/pluginfile.php/679126/mod_resource/content/0/Lecture%204_%20Inverse%20Kinematics.pdf",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "29/3/2026 4:11 PM"
                     },
                     "Sheet": {
                         "vis": false,
@@ -14446,14 +14447,16 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://engasuedu.sharepoint.com/sites/MCT344sUG2018-IndustrialRobotics40839/_layouts/15/stream.aspx?id=%2Fsites%2FMCT344sUG2018%2DIndustrialRobotics40839%2FShared%20Documents%2FGeneral%2FRecordings%2FMeeting%20in%20General%2D20260325%5F091558%2DMeeting%20Recording%2Emp4&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E09789697%2Dd2b3%2D4d9b%2Da075%2De0ac6367e539&isDarkMode=true",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "29/3/2026 4:13 PM"
                     },
                     "Section Slides": {
                         "vis": false,
@@ -15703,8 +15706,8 @@ window.MIDTERM_DATA = [
         "sub": "RB",
         "examCode": "CSE373s",
         "time": "4:30 PM",
-        "note": "All of the content mentioned in the lecture is in the midterm including Velocity Kinematics",
-        "coverage": "Until Week 6.",
+        "note": "Mid content is only to the inverse kinematics\nExam is written not MCQ ",
+        "coverage": "Until Week 5.",
         "where": "Hall C",
         "date": "2026-03-30"
     },
@@ -16673,6 +16676,19 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "🎉",
+        "title": "Robotics Midterm Content",
+        "body": "The exam content is only to Inverse Kinematics \nSo, Velocity Kinematics is not includedd",
+        "publishedAt": "2026-03-29T14:09:09",
+        "sub": "RB",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "DSA Online Labs 6",
