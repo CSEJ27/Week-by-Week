@@ -569,8 +569,8 @@
             .recent-icons { font-size: 1rem; letter-spacing: 2px; }
             /* Deadlines: no clipping for long screenshots */
             #deadlines-page { overflow: visible !important; height: auto !important; }
-            /* Mobile only: badges compact — custom-badge shrunk so week title is visible */
-            .custom-badge { font-size: 0.56rem !important; padding: 2px 6px !important; border-bottom-left-radius: 8px !important; max-width: 60% !important; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            /* Mobile only: badges compact — smaller but full text wraps freely */
+            .custom-badge { font-size: 0.56rem !important; padding: 2px 6px !important; border-bottom-left-radius: 8px !important; max-width: 60% !important; line-height: 1.3; white-space: normal !important; overflow: visible !important; text-overflow: unset !important; word-break: break-word; }
             /* NEW badge: small, sits below custom-badge so they don't overlap */
             .badge-new { font-size: 0.5rem !important; padding: 2px 4px !important; margin-left: 3px !important; border-radius: 5px !important; letter-spacing: 0.5px !important; }
             .card:has(.custom-badge) .badge-new { display: block; position: absolute; top: 26px; right: 6px; margin-left: 0; font-size: 0.48rem !important; padding: 1px 4px !important; }
