@@ -5005,6 +5005,154 @@ window.COURSE_DATA = [
                 "showBadge": true,
                 "badgeText": "Midterm till here!",
                 "badgeColor": "#193800"
+            },
+            {
+                "title": "WEEK 7",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "badgeText": "No lecture was taken this week.",
+                "badgeColor": "#ff0000",
+                "locked": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link",
@@ -15103,22 +15251,24 @@ window.SCHEDULE_DATA = [
                 "sub": "ML",
                 "name": "Peer Review Discussion ",
                 "icon": "💬",
-                "when": "",
+                "when": "Thursday (9/4) ",
                 "where": "",
                 "coverage": "",
-                "note": "",
+                "note": "You have to make a team of 5, 2 for paper 1 and three for paper 2.",
                 "whenLink": "",
                 "whereLink": "",
                 "whenNote": "",
                 "whereNote": "",
-                "coverageLink": "",
-                "coverageNote": "",
+                "coverageLink": "https://drive.google.com/drive/folders/1zULjSGbMqWlHKMGtCF5QI7u8rxGdbAd8?usp=drive_link",
+                "coverageNote": "Check the details of it here!",
                 "submitText": "",
                 "submitLink": "",
                 "submitNote": "",
                 "deadlineDate": "",
                 "deadlineEndDate": "",
-                "isCompleted": false
+                "isCompleted": false,
+                "noteNote": "Check the details of registration in this form!",
+                "noteLink": "https://docs.google.com/spreadsheets/u/0/d/122F7CzToXyqCNzIs_uziA4PUOUry7flwKTiTVXp47OE/htmlview"
             },
             {
                 "sub": "SW",
@@ -15212,7 +15362,9 @@ window.SCHEDULE_DATA = [
                 "deadlineEndDate": "",
                 "isCompleted": false
             }
-        ]
+        ],
+        "isMidterm": false,
+        "isFinals": false
     },
     {
         "week": 10,
@@ -15401,6 +15553,29 @@ window.SCHEDULE_DATA = [
                 "submitLink": "",
                 "submitNote": "",
                 "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "ML",
+                "name": "Project Phase 1 Submission",
+                "icon": "✔️",
+                "when": "Thursday (23/4) at 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/drive/u/1/folders/14F18KnCIg6NRHutL4ajUEIutr5GYAPfz",
+                "coverageNote": "Check the details of the project here!",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "23/04/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
             }
@@ -16676,6 +16851,45 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "OS Attendance ",
+        "body": "Eng. Habiba will not take attendance anymore, unless the doctor tells her, she'll tell us before it.",
+        "publishedAt": "2026-04-04T12:40:18",
+        "sub": "OS",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "DB Quiz 1 Grades",
+        "body": "DB quiz 1 grades has been published, check it out in your grades section in the LMS.",
+        "publishedAt": "2026-04-04T12:35:56",
+        "sub": "DB",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "ML Project & Peer Review",
+        "body": "Check the details of project phase 1 and peer review in the semester map!",
+        "publishedAt": "2026-04-04T12:34:57",
+        "sub": "ML",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "🎉",
         "title": "Robotics Midterm Content",
