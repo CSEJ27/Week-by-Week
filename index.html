@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7867,9 +7867,8 @@
         if (!item) return false;
         if (item.sub && isSubjectHidden(item.sub)) return false;
         if (item.hasEvent && item.eventDate) {
-            const timeStr = item.eventTime ? item.eventTime : '00:00'; 
-            const eventDateTime = new Date(`${item.eventDate}T${timeStr}`);
-            if (!isNaN(eventDateTime) && eventDateTime < new Date()) {
+            const eventTs = parseNewsDeadlineTs(item.eventDate, item.eventTime ? item.eventTime : '00:00');
+            if (eventTs > 0 && eventTs < Date.now()) {
                 return false; 
             }
         }
@@ -8076,12 +8075,11 @@
         return `<div class="week-updated-ago">Updated ${label}</div>`;
     }
 
-    window.onload = init;
-
     // --- Visitor Counter (CounterAPI v1, 6hr cooldown) ---
     (function() {
         var COOLDOWN_MS = 6 * 60 * 60 * 1000;
         var lastHit = parseInt(localStorage.getItem('visit_ts') || '0', 10);
+        if (isNaN(lastHit)) lastHit = 0;
         var shouldCount = Date.now() - lastHit > COOLDOWN_MS;
         var url = shouldCount
             ? 'https://api.counterapi.dev/v1/free-bobuxs-team/page-views/up'
@@ -8104,13 +8102,12 @@
             });
 
         function maybeShowVisitCelebration(count) {
-            // Only show for the first person who hits 1000, never again for any user or milestone
-            var milestone = 1000;
-            var seenKey = 'visit_celebration_seen_once';
-            if (count !== milestone) return;
-            if (localStorage.getItem(seenKey) === 'shown') return;
-            localStorage.setItem(seenKey, 'shown');
+            var seenKey = 'last_celebrated_count';
+            var lastCelebrated = parseInt(localStorage.getItem(seenKey) || '0', 10);
+            if (isNaN(lastCelebrated)) lastCelebrated = 0;
+            if (!(count > 0 && count % 1000 === 0 && count !== lastCelebrated)) return;
             showVisitCelebrationCard(count);
+            localStorage.setItem(seenKey, String(count));
         }
 
         function showVisitCelebrationCard(count) {
@@ -8161,7 +8158,16 @@
     };
 
     let ttSection = localStorage.getItem('tt_section') || '3-4';
-    let ttSelectedSubjects = JSON.parse(localStorage.getItem('tt_subjects') || 'null');
+    let ttSelectedSubjects = (() => {
+        try {
+            const raw = localStorage.getItem('tt_subjects');
+            if (!raw) return null;
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : null;
+        } catch (_) {
+            return null;
+        }
+    })();
     let ttMode = localStorage.getItem('tt_mode') || 'normal';
 
     function showTimetable(push = true) {

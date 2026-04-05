@@ -1,4 +1,4 @@
-window.CONFIG = {
+﻿window.CONFIG = {
     "semesterStart": "2026-02-14",
     "resources": [
         {
