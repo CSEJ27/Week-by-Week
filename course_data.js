@@ -14728,6 +14728,59 @@ window.COURSE_DATA = [
     }
 ];
 
+window.SUBJECT_DETAILS_DATA = {
+    "CN": {
+        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes: UNKOWN\nLab Reports: UNKOWN\nAssignments: UNKOWN\nProject: UNKOWN",
+        "examTypes": "Final: Written\nMidterm: MCQ\nQuizzes: MCQ",
+        "generalNotes": "Dr. Hossam cares about attendance very much, so make sure you attend or you'll face a very harsh fate 💀, attend and make sure you type what he LITERALLY said, don't think stating the answer from your perspective or your understanding will be enough, you need to say exactly what he said."
+    },
+    "DSA": {
+        "gradeDistribution": "Final: 50\nMidterm: 20\nPractical Exams (2): 10\nQuiz (1): 5\nMajor assessment: UNKOWN\nAssignments (2): 5\nProject: 10",
+        "examTypes": "Final: Written\nMidterm: Written\nQuizzes: Written",
+        "generalNotes": "Dr. Youssra tends to get some questions idea from dr. Ashraf's exams so make sure you go thgouh them.\nPractical Exams are just like the midterm questions."
+    },
+    "DB": {
+        "gradeDistribution": "Final: 50\nMidterm: 20\nPractical: 10\nQuizzes (2): 20",
+        "examTypes": "Final: Written\nMidterm: Written\nQuizzes: Written",
+        "generalNotes": ""
+    },
+    "CA": {
+        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes: UNKOWN\nAssignments: UNKOWN\nProject: UNKOWN",
+        "examTypes": "Final: MCQ\nMidterm: MCQ\nQuizzes: MCQ",
+        "generalNotes": ""
+    },
+    "OS": {
+        "gradeDistribution": "Final: 50\nMidterm: 20\nProject: UKNOWN\nProgramming Assignment: UKNOWN\nQuizzes (2): UKNOWN",
+        "examTypes": "Final: Written\nMidterm: Written\nQuizzes: MCQ",
+        "generalNotes": "Dr. Sahar cares so much about attendance, so try to attend as much as you can, it's online anyway, if the attendance is good, she will heavily repeat the exam (not a single new question), if the attendance is not good, she will create maybe one or two questions (or more)."
+    },
+    "AI": {
+        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes: 15\nProject: 15",
+        "examTypes": "Final: Written\nMidterm: Written\nQuizzes: MCQ",
+        "generalNotes": ""
+    },
+    "ML": {
+        "gradeDistribution": "Final: 50\nMidterm: 50\nQuizzes (3): 10\nWritten Assignment: 5\nPeer review activity: 5\nProject: 10",
+        "examTypes": "Final: Written\nMidterm: Written \nQuizzes: MCQ",
+        "generalNotes": "Dr. Nesma makes easy exams so don't piss her off and you'll be fine with."
+    },
+    "SW": {
+        "gradeDistribution": "",
+        "examTypes": "",
+        "generalNotes": ""
+    },
+    "QC": {
+        "gradeDistribution": "",
+        "examTypes": "",
+        "generalNotes": ""
+    },
+    "RB": {
+        "gradeDistribution": "",
+        "examTypes": "",
+        "generalNotes": ""
+    }
+};
+
 window.SCHEDULE_DATA = [
     {
         "week": 1,
@@ -16850,6 +16903,54 @@ window.UPDATES_DATA = [
         "title": "GPA Calculator",
         "desc": "The live GPA calculator pre-loads subjects, tracking cumulative progress using past GPAs with flexible letter grade or points-lost inputs. The drag-and-drop Group Semesters mode lets you name terms, color-code breakdowns, monitor subject counts alongside credits, or add prior GPA summaries. You can also export results as a clean image, utilizing the new import/export button to seamlessly transfer data between websites without retyping.",
         "date": "2026-03-20"
+    },
+    {
+        "icon": "📱",
+        "title": "Mobile Swipe Navigation",
+        "desc": "Navigating on your phone is now much faster. You can simply swipe left or right on your screen to seamlessly jump back and forth between weeks!",
+        "date": "2026-03-29"
+    },
+    {
+        "icon": "✅",
+        "title": "Personal To-Do List",
+        "desc": "Save specific resources or bulk-add whole weeks using the new [+] button. Your To-Do tab cleanly groups items by subject, tracks how long they've been pending, and automatically bumps upcoming quizzes to the top of your priority list.",
+        "date": "2026-04-04"
+    },
+    {
+        "icon": "👁️",
+        "title": "Hide Subjects",
+        "desc": "\nDeclutter your dashboard by clicking the crossed-eye icon on any subject. This completely hides it from your Home, Deadlines, and Announcements. You can restore hidden subjects anytime at the bottom of the Home page.",
+        "date": "2026-04-04"
+    },
+    {
+        "icon": "🔗",
+        "title": "Shareable Links",
+        "desc": "You can now share direct links! The URL automatically updates when you open a subject or week (e.g., /#OS/week4). Copy and share it so your friends jump straight to the exact material instead of the home page.",
+        "date": "2026-04-04"
+    },
+    {
+        "icon": "📋",
+        "title": "Subject Details Tab",
+        "desc": "A new \"Details\" tab inside each subject view gives you a quick, accessible overview of the course structure, including grade distribution, exam types, and instructor notes.",
+        "date": "2026-04-04"
+    },
+    {
+        "icon": "🖱️",
+        "title": "Enhanced Links",
+        "desc": "You can now right/middle-click almost anything to open them in new tabs, or copy the link to share. ",
+        "date": "2026-04-04"
+    },
+    {
+        "icon": "⏰",
+        "title": "Integrated Deadlines & Tasks",
+        "desc": "You can now mark deadlines as \"Done\" to hide them and reduce clutter. General tasks will automatically sync to your To-Do list, and you can right-click any deadline to manually add it to your daily tasks.",
+        "date": "2026-04-04"
+    },
+    {
+        "icon": "📅",
+        "title": "Save Daily Timetables",
+        "desc": "You no longer have to save your entire weekly timetable! You can now select and save just a single day at a time, making it much easier to focus strictly on today's schedule.",
+        "date": "2026-04-04"
     }
 ];
 
