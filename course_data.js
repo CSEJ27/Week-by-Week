@@ -2903,11 +2903,12 @@ window.COURSE_DATA = [
                         "recentDate": "26/3/2026 12:19 AM"
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt",
+                        "desc": "videos 10 & 11 in the playlist ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "6/4/2026 7:33 PM"
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -2960,18 +2961,20 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtu.be/p-K5OeYuqUE?si=mL-tKa2fYicwJpGs",
+                        "desc": "Alt for Stack",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "6/4/2026 7:34 PM"
                     },
                     "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtu.be/IZrSxbz6uFk?si=bAVv5SiJwUT2FYT9",
+                        "desc": "Alt for Queue",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "6/4/2026 7:34 PM"
                     },
                     "Guide (Explanation)": {
                         "vis": false,
