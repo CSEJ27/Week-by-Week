@@ -5159,16 +5159,16 @@ window.COURSE_DATA = [
                 "title": "WEEK 8",
                 "resources": {
                     "Lecture": {
-                        "vis": false,
+                        "vis": true,
                         "link": "https://www.youtube.com/watch?v=cIWF1nyvWZo",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
+                        "vis": true,
                         "link": "https://www.youtube.com/playlist?list=PL37D52B7714788190",
-                        "desc": "videos from 14 to 18",
+                        "desc": "videos from 15 to 18",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -5187,7 +5187,7 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Slides": {
-                        "vis": false,
+                        "vis": true,
                         "link": "https://drive.google.com/file/d/1IiUfWSyBhkBmCx7uc8WmicpkVA7Dnoc0/view",
                         "desc": "",
                         "isNew": false,
