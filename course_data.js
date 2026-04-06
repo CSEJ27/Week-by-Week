@@ -5152,7 +5152,8 @@ window.COURSE_DATA = [
                 },
                 "badgeText": "No lecture was taken this week.",
                 "badgeColor": "#ff0000",
-                "locked": true
+                "locked": true,
+                "showBadge": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link",
