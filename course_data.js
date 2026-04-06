@@ -1,4 +1,4 @@
-﻿window.CONFIG = {
+window.CONFIG = {
     "semesterStart": "2026-02-14",
     "resources": [
         {
@@ -15397,8 +15397,8 @@ window.SCHEDULE_DATA = [
                 "coverageLink": "https://drive.google.com/file/d/1lF60L4hvUyschDcYOX80rvbBM2SlAsF0/view?usp=drive_link",
                 "coverageNote": "Check the details of project here!",
                 "submitText": "LMS",
-                "submitLink": "",
-                "submitNote": "",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=197171",
+                "submitNote": "Submit here!",
                 "deadlineDate": "06/04/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
