@@ -100,6 +100,16 @@ window.CONFIG = {
             "name": "Another Notes",
             "icon": "✏️",
             "defaultDesc": ""
+        },
+        {
+            "name": "Lecture codes",
+            "icon": "💻",
+            "defaultDesc": ""
+        },
+        {
+            "name": "Lecture codes 2",
+            "icon": "💻",
+            "defaultDesc": ""
         }
     ],
     "helpLink": "https://forms.gle/gtLTmKoJDYVo6yLV6",
@@ -324,6 +334,20 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isRecent": true,
@@ -809,9 +833,23 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
-                "isNew": true,
+                "isNew": false,
                 "isRecent": true,
                 "recentDate": "8/3/2026 7:25 PM"
             },
@@ -1131,11 +1169,11 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://youtu.be/oCeBsKilfpg?si=KSYF8BsKOxGC9qFn",
+                        "desc": "Chapter 4 Lecture 1 till 1:12:53",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": true
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -1262,6 +1300,20 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "locked": false,
@@ -1271,6 +1323,167 @@ window.COURSE_DATA = [
                 "recentDate": "24/3/2026 11:31 PM",
                 "isRecent": true,
                 "isNew": true
+            },
+            {
+                "title": "WEEK 8",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaG1iKBYjw9jPsw8rgu0er8g&si=yFhyOsp26XhMHMq0",
+                        "desc": "Chapter 4 lec 1 from 1:12:53 till end AND all of Chapter 4- Lecture 2",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1y-Dk-kYjshCnAm5FqyWGd1TcLHf40g9T/view?usp=drive_link",
+                        "desc": "from 67 till end EXCLUDING SLIDES: 142 171 179 181 182",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/13EVTnrmkFV2XtWVyerUkdcD8s-vkZ34C?usp=drive_link",
@@ -2101,6 +2314,27 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lec codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isRecent": true,
@@ -2270,6 +2504,27 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lec codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/13kUel2UJmevf-hRQRbKYVRbv4VE6pbH5?usp=drive_link",
+                        "desc": "Static Array Lecture code",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/13kUel2UJmevf-hRQRbKYVRbv4VE6pbH5?usp=drive_link",
+                        "desc": "Static Lists ",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isNew": false,
@@ -2428,6 +2683,27 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lec codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1QpskXicqhuJrMGR49-3hFsrF1Mg6A-dJ?usp=drive_link",
+                        "desc": "Dynamic lists Lecture codes",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1QpskXicqhuJrMGR49-3hFsrF1Mg6A-dJ?usp=drive_link",
+                        "desc": "Dynamic Lists",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isNew": false,
@@ -2580,6 +2856,27 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lec codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1RFj6PKotoUziGClpRAXY6GvHyanJLZQw?usp=drive_link",
+                        "desc": "LinkedLists Source Codes",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1RFj6PKotoUziGClpRAXY6GvHyanJLZQw?usp=drive_link",
+                        "desc": "LinkedLists Code",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "recentDate": "13/3/2026 8:53 PM",
@@ -2732,6 +3029,27 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lec codes": {
+                        "vis": false,
+                        "link": "https://drive.google.com/drive/folders/1dnQCxVBGR2z25b88fOutmIgle0G05YEA?usp=drive_link",
+                        "desc": "Linked Stack",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1mLJrORIVIRyYWOXJ8zeGPhDB5B_RU8q-?usp=drive_link",
+                        "desc": "Dynamic Stack",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes 2": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1dnQCxVBGR2z25b88fOutmIgle0G05YEA?usp=drive_link",
+                        "desc": "Linked Stack",
+                        "isNew": true,
+                        "isRecent": true
                     }
                 },
                 "isNew": true,
@@ -2884,6 +3202,20 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1ZDtsIvJ4IT0RSTgHlTuEmlxmMRbXZGPW?usp=drive_link",
+                        "desc": "Linked Queue",
+                        "isNew": true,
+                        "isRecent": true
+                    },
+                    "Lecture codes 2": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1OWD7UtFAlERg_yWeOdVvASTUWM92u02y?usp=drive_link",
+                        "desc": "Priority Queue",
+                        "isNew": true,
+                        "isRecent": true
                     }
                 },
                 "locked": false,
@@ -3033,6 +3365,20 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -4220,6 +4566,20 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isRecent": true,
@@ -6019,6 +6379,20 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isRecent": true,
@@ -7579,6 +7953,20 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isRecent": true,
@@ -7885,9 +8273,23 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
-                "isNew": true,
+                "isNew": false,
                 "isRecent": true,
                 "recentDate": "01/03/2026 12:48 AM"
             },
@@ -8055,11 +8457,25 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isRecent": true,
                 "recentDate": "8/3/2026 7:56 PM",
-                "isNew": true,
+                "isNew": false,
                 "badgeText": "Quiz 1 till here!",
                 "showBadge": true
             },
@@ -8207,11 +8623,25 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "recentDate": "14/3/2026 1:37 AM",
                 "isRecent": true,
-                "isNew": true
+                "isNew": false
             },
             {
                 "title": "WEEK 6",
@@ -8356,14 +8786,189 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
-                "isNew": true,
+                "isNew": false,
                 "isRecent": true,
                 "recentDate": "21/3/2026 11:56 PM",
                 "showBadge": true,
                 "badgeText": "Midterm till here!",
                 "badgeColor": "#193800"
+            },
+            {
+                "title": "WEEK 7",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmwj6lAV9P-4-st3gCCu_AV&si=6PGZr4I6qKRXAtA9",
+                        "desc": "Chapter 6 --> Lecture 6 from 56:00 and Lecture 7",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": true,
+                        "link": "https://youtu.be/tsJrxirFSYM?si=4wc0LB0DtOd37AYD&t=1520",
+                        "desc": "Section Alternative",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1K3ptwmINWe_aAMDznn0tNGgvAkA_4i1J/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/gor4DBKHCvY?si=By3hJBBJOMSnLymM",
+                        "desc": "tut 6 till 2:21:08",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1r9VaHUVhZCQPj_3Na6fz68padiDykBfe/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Sheet Answer": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1DyZgQeoa91GigfMPZNkh4OBdQiXurc1I/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isRecent": true,
+                "isNew": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1CIqmEG3hlHCfabTtADnfT_NgpCbs2kR1?usp=drive_link",
