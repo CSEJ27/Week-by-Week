@@ -1166,7 +1166,7 @@
         </div>
         <div id="timetable-export-bar" style="display:flex; justify-content:center; gap:10px; margin-top:30px; flex-wrap:wrap;">
             <button class="timetable-export-btn" onclick="exportTimetableImage()">📸 Screenshot Timetable</button>
-            <button class="timetable-export-btn" onclick="exportTimetableDayImage()">📅 Screenshot Day</button>
+            <button class="timetable-export-btn" onclick="openScreenshotModeModal()">📅 Screenshot Day</button>
         </div>
     </div>
 
@@ -1247,6 +1247,55 @@
         <div class="modal-title" id="m-title">🧠 Quiz</div>
         <div class="modal-subtitle" id="m-sub">Computer Networks - Week 5</div>
         <div id="m-fields-container"></div>
+    </div>
+</div>
+
+<div id="screenshot-studio-modal" class="modal-overlay" style="z-index:10000;" onclick="closeScreenshotStudioModal(event)">
+    <div style="position:relative; background:#0a0012; border:1px solid rgba(233,30,140,0.4); border-radius:16px; padding:20px 24px; box-shadow:0 0 40px rgba(233,30,140,0.2); width:min(920px,92vw); max-height:86vh; overflow:auto;" onclick="event.stopPropagation()">
+        <div class="modal-close" style="top:10px; right:14px;" onclick="closeScreenshotStudioModal(null, true)">✕</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:0.78rem;color:var(--accent-pink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;text-align:center;">📸 Screenshot Studio</div>
+        <div id="studio-customizer" style="display:block; border-top:1px solid rgba(255,255,255,0.1); padding-top:14px; margin-top:12px;">
+            <div style="display:flex; justify-content:center; margin-bottom:10px;">
+                <button onclick="studioGoBack()" style="background:none;border:1px solid #555;color:#888;padding:6px 12px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.78rem;transition:0.2s;">← Back to Days</button>
+            </div>
+            <div id="studio-day-label" style="font-family:'Orbitron',sans-serif; font-size:0.75rem; letter-spacing:2px; color:#ff375f; text-transform:uppercase; margin-bottom:10px; text-align:center;">Editing: --</div>
+            <div id="studio-day-events" style="display:flex; flex-direction:column; gap:8px; max-height:220px; overflow:auto; padding-right:4px; margin-bottom:12px;"></div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px;">
+                <select id="studio-subject" class="useful-select" style="width:100%; background:rgba(233,30,140,0.1); border:1px solid rgba(233,30,140,0.4); color:#e91e8c;"></select>
+                <select id="studio-type" class="useful-select" style="width:100%; background:rgba(0,229,255,0.1); border:1px solid rgba(0,229,255,0.4); color:#00e5ff;">
+                    <option value="lec">Lecture</option>
+                    <option value="tut">Tutorial</option>
+                    <option value="lab">Lab</option>
+                </select>
+                <input type="text" id="studio-time-input" class="useful-select" style="width:100%; background:rgba(233,30,140,0.1); border:1px solid rgba(233,30,140,0.4); color:#e91e8c;" list="studio-times" placeholder="e.g. 8:30 AM or 10:00 - 11:50">
+                <datalist id="studio-times"></datalist>
+                <input id="studio-room" class="useful-select" style="width:100%; background:rgba(0,229,255,0.1); border:1px solid rgba(0,229,255,0.4); color:#00e5ff;" list="studio-places" placeholder="Room / Location">
+                <datalist id="studio-places"></datalist>
+            </div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; justify-content:center;">
+                <button onclick="studioAddTempEvent()" style="background:rgba(233,30,140,0.1);border:1px solid rgba(233,30,140,0.4);color:#e91e8c;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.8rem;transition:0.2s;">➕ Add Temporary Event</button>
+                <button onclick="studioResetTempEvents()" style="background:rgba(255,59,48,0.1);border:1px solid rgba(255,59,48,0.4);color:#ff3b30;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.8rem;transition:0.2s;">↺ Reset</button>
+            </div>
+            <button onclick="studioCaptureCustomTimetable()" style="display:block; margin:12px auto 0; background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.4);color:#00e5ff;padding:9px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.84rem;transition:0.2s;">📸 Capture Custom Timetable</button>
+        </div>
+    </div>
+</div>
+
+<div id="screenshot-mode-modal" class="modal-overlay" style="z-index:10000;" onclick="closeScreenshotModeModal(event)">
+    <div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#0a0012;border:1px solid rgba(233,30,140,0.4);border-radius:16px;padding:20px 24px;z-index:3000;box-shadow:0 0 40px rgba(233,30,140,0.2);min-width:320px;" onclick="event.stopPropagation()">
+        <div style="font-family:'Orbitron',sans-serif;font-size:0.75rem;color:var(--accent-pink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;text-align:center;">Screenshot Mode</div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+            <button onclick="openStandardDaySelector()" style="background:rgba(233,30,140,0.1);border:1px solid rgba(233,30,140,0.4);color:#e91e8c;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;">📷 Default (Quick Capture)</button>
+            <button onclick="openStudioDaySelector()" style="background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.4);color:#00e5ff;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;">🛠️ Customize Events</button>
+        </div>
+        <button onclick="closeScreenshotModeModal(null, true)" style="display:block;margin:14px auto 0;background:none;border:1px solid #555;color:#888;padding:4px 16px;border-radius:8px;cursor:pointer;font-size:0.78rem;">Cancel</button>
+    </div>
+</div>
+
+<div id="semester-capture-modal" class="modal-overlay" style="z-index:10000;" onclick="closeSemesterCaptureModal(event)">
+    <div style="position:relative; background:#0a0012; border:1px solid rgba(233,30,140,0.4); border-radius:16px; padding:20px 24px; box-shadow:0 0 40px rgba(233,30,140,0.2); min-width:320px; width:min(480px,92vw);" onclick="event.stopPropagation()">
+        <div style="font-family:'Orbitron',sans-serif;font-size:0.75rem;color:var(--accent-pink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;text-align:center;">Semester Map Capture</div>
+        <div id="semester-capture-body"></div>
     </div>
 </div>
 
@@ -4958,19 +5007,22 @@
                 card.style.borderColor = hex;
                 card.style.background = `linear-gradient(135deg,rgba(${r},${g},${b},0.35),rgba(${r},${g},${b},0.12))`;
                 card.style.boxShadow  = `0 10px 30px rgba(${r},${g},${b},0.25)`;
-                if (isSpecialWk) { card.style.cursor = 'pointer'; card.onclick = () => showMidterms(true,'schedule'); }
+                if (isSpecialWk) {
+                    card.style.cursor = 'pointer';
+                    card.onclick = () => openExamViewFromSchedule(isFinalsWk ? 'finals' : 'midterms');
+                }
             } else if (isFinalsWk) {
                 card.style.borderColor = '#cc2200';
                 card.style.background = 'linear-gradient(135deg,rgba(204,34,0,0.4),rgba(120,20,0,0.6))';
                 card.style.boxShadow = '0 10px 30px rgba(204,34,0,0.3)';
                 card.style.cursor = 'pointer';
-                card.onclick = () => showMidterms(true, 'schedule');
+                card.onclick = () => openExamViewFromSchedule('finals');
             } else if (isMidtermWk) {
                 card.style.borderColor = '#007aff';
                 card.style.background = 'linear-gradient(135deg,rgba(0,122,255,0.4),rgba(0,60,150,0.6))';
                 card.style.boxShadow = '0 10px 30px rgba(0,122,255,0.3)';
                 card.style.cursor = 'pointer';
-                card.onclick = () => showMidterms(true, 'schedule');
+                card.onclick = () => openExamViewFromSchedule('midterms');
             } else if (isCurrentWeek) {
                 card.style.borderColor = '#ff3b30';
                 card.style.background = 'linear-gradient(135deg,rgba(255,59,48,0.08),var(--card-bg))';
@@ -5017,6 +5069,7 @@
 
             const weekTitle = (data.weekName && data.weekName.trim()) ? data.weekName.trim().toUpperCase() : 'WEEK ' + data.week;
             const h2Color = isCurrentWeek && !isSpecialWk ? '#ff3b30' : (isWhiteText ? '#fff' : 'var(--accent-purple)');
+            card.dataset.week = String(data.week);
 
             card.innerHTML = `
                 <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:10px;">
@@ -5495,6 +5548,26 @@
         nav('midterm', push, { from: from });
     }
 
+    function openExamViewFromSchedule(mode) {
+        examViewMode = mode === 'finals' ? 'finals' : 'midterms';
+        saveExamViewMode();
+        renderCurrentExamView(false);
+        nav('midterm', true, { from: 'schedule' });
+    }
+
+    function goToExamSubject(subCode) {
+        if (!Array.isArray(window.COURSE_DATA)) return;
+        const subjectIndex = window.COURSE_DATA.findIndex(function(c) { return c.code === subCode; });
+        if (subjectIndex < 0) {
+            showToast('Subject not found.', 'locked');
+            return;
+        }
+        const subjectObj = window.COURSE_DATA[subjectIndex];
+        closeModal(null, true);
+        currSub = subjectObj;
+        showWeeks(subjectObj);
+    }
+
     function openMidtermHiddenPanel() {
         buildHiddenPanel('midterm-hidden-panel-slot', 'midterm-hidden-panel', midtermHiddenSet, window.MIDTERM_DATA, '#007aff', saveMidtermHidden, '0,122,255');
     }
@@ -5583,6 +5656,7 @@
         let subName = exam.sub;
         let targetEvent = null;
         let targetSub = null;
+        const safeSubCode = String(exam.sub || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 
         if(window.COURSE_DATA) {
             const sObj = window.COURSE_DATA.find(s => s.code === exam.sub);
@@ -5628,7 +5702,7 @@
                 <button style="width:100%; padding:12px; margin-top:15px; border-radius:8px; background:rgba(181,25,214,0.2); color:var(--accent-purple); font-weight:bold; cursor:pointer; border:1px solid var(--accent-purple); font-family:'Orbitron'; transition:0.3s; font-size:0.85rem;" 
                 onmouseover="this.style.background='var(--accent-purple)'; this.style.color='white';" 
                 onmouseout="this.style.background='rgba(181,25,214,0.2)'; this.style.color='var(--accent-purple)';"
-                onclick="closeModal(null, true); currSub = window.COURSE_DATA.find(s => s.code === '${exam.sub}'); showWeeks(currSub);">
+                onclick="goToExamSubject('${safeSubCode}')">
                     📚 GO TO SUBJECT
                 </button>
             `;
@@ -5643,7 +5717,7 @@
                 <button style="width:100%; padding:12px; margin-top:8px; border-radius:8px; background:rgba(0,122,255,0.2); color:#007aff; font-weight:bold; cursor:pointer; border:1px solid #007aff; font-family:'Orbitron'; transition:0.3s; font-size:0.85rem;" 
                 onmouseover="this.style.background='#007aff'; this.style.color='white';" 
                 onmouseout="this.style.background='rgba(0,122,255,0.2)'; this.style.color='#007aff';"
-                onclick="closeModal(null, true); currSub = window.COURSE_DATA.find(s => s.code === '${exam.sub}'); renderSubjectView('events', false); showContentByObj(currSub.events[${evIdx}], true, 'midterm');">
+                onclick="goToExamSubject('${safeSubCode}'); if (currSub && currSub.events && currSub.events[${evIdx}]) { renderSubjectView('events', false); showContentByObj(currSub.events[${evIdx}], true, 'midterm'); }">
                     📝 GO TO MIDTERM MATERIAL
                 </button>
             `;
@@ -5659,6 +5733,7 @@
         const exam = window.FINAL_DATA[idx];
         let subName = exam.sub;
         let targetSub = null;
+        const safeSubCode = String(exam.sub || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
         if (window.COURSE_DATA) {
             const sObj = window.COURSE_DATA.find(s => s.code === exam.sub);
             if (sObj) { subName = sObj.name; targetSub = sObj; }
@@ -5696,7 +5771,7 @@
                 <button style="width:100%; padding:12px; margin-top:15px; border-radius:8px; background:rgba(181,25,214,0.2); color:var(--accent-purple); font-weight:bold; cursor:pointer; border:1px solid var(--accent-purple); font-family:'Orbitron'; transition:0.3s; font-size:0.85rem;"
                 onmouseover="this.style.background='var(--accent-purple)'; this.style.color='white';"
                 onmouseout="this.style.background='rgba(181,25,214,0.2)'; this.style.color='var(--accent-purple)';"
-                onclick="closeModal(null, true); currSub = window.COURSE_DATA.find(s => s.code === '${exam.sub}'); showWeeks(currSub);">
+                onclick="goToExamSubject('${safeSubCode}')">
                     📚 GO TO SUBJECT
                 </button>`;
         }
@@ -7643,7 +7718,59 @@
         return document.querySelector(ctx.screenshotSelector);
     }
 
-    function downloadContextScreenshot() {
+    function closeSemesterCaptureModal(e, force = false) {
+        if (!force && e && e.target && e.target.id !== 'semester-capture-modal') return;
+        const modal = document.getElementById('semester-capture-modal');
+        if (modal) modal.classList.remove('active');
+    }
+
+    function showSemesterCaptureModeChoices() {
+        const body = document.getElementById('semester-capture-body');
+        if (!body) return;
+        body.innerHTML = `
+            <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:10px;">
+                <button onclick="downloadContextScreenshot({ mode: 'full' }); closeSemesterCaptureModal(null, true);" style="background:rgba(233,30,140,0.1);border:1px solid rgba(233,30,140,0.4);color:#e91e8c;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;">🗺️ Capture Full Map</button>
+                <button onclick="showSemesterCaptureWeekInput()" style="background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.4);color:#00e5ff;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;">📅 Capture Specific Week</button>
+            </div>
+            <button onclick="closeSemesterCaptureModal(null, true)" style="display:block;margin:8px auto 0;background:none;border:1px solid #555;color:#888;padding:4px 16px;border-radius:8px;cursor:pointer;font-size:0.78rem;">Cancel</button>
+        `;
+    }
+
+    function showSemesterCaptureWeekInput() {
+        const body = document.getElementById('semester-capture-body');
+        if (!body) return;
+        body.innerHTML = `
+            <div style="font-size:0.76rem; color:#999; text-align:center; margin-bottom:9px; letter-spacing:0.3px;">Enter week number</div>
+            <input id="semester-capture-week-input" type="number" min="1" step="1" placeholder="Week #" style="display:block; width:100%; background:rgba(255,255,255,0.06); border:1px solid rgba(233,30,140,0.35); color:#fff; border-radius:10px; padding:10px 12px; outline:none; font-size:0.9rem; margin-bottom:10px;">
+            <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+                <button onclick="runSemesterSpecificWeekCapture()" style="background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.4);color:#00e5ff;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;">📸 Capture</button>
+                <button onclick="showSemesterCaptureModeChoices()" style="background:none;border:1px solid #555;color:#888;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;">← Back</button>
+            </div>
+        `;
+        const input = document.getElementById('semester-capture-week-input');
+        if (input) input.focus();
+    }
+
+    function runSemesterSpecificWeekCapture() {
+        const input = document.getElementById('semester-capture-week-input');
+        if (!input) return;
+        const week = parseInt(input.value, 10);
+        if (!Number.isInteger(week)) {
+            showToast('Enter a valid week number.');
+            input.focus();
+            return;
+        }
+        closeSemesterCaptureModal(null, true);
+        downloadContextScreenshot({ mode: 'specific-week', week: week });
+    }
+
+    function openSemesterCaptureModal() {
+        showSemesterCaptureModeChoices();
+        const modal = document.getElementById('semester-capture-modal');
+        if (modal) modal.classList.add('active');
+    }
+
+    function downloadContextScreenshot(scheduleCaptureOptions = null) {
         const ctx = buildExportContext();
         if (!ctx) { showToast('No screenshot target on this page.'); return; }
 
@@ -7651,7 +7778,7 @@
         if (!window.html2canvas) {
             showToast('⏳ Loading screenshot library...');
             const poll = setInterval(() => {
-                if (window.html2canvas) { clearInterval(poll); downloadContextScreenshot(); }
+                if (window.html2canvas) { clearInterval(poll); downloadContextScreenshot(scheduleCaptureOptions); }
             }, 200);
             return;
         }
@@ -7660,6 +7787,28 @@
         const restoreList = [];
         let target = null;
         let shellEl = null;
+        let weekWrapperEl = null;
+        let scheduleSpecificWeek = null;
+        let restoreScheduleMode = null;
+
+        if (active === 'schedule') {
+            if (!scheduleCaptureOptions || !scheduleCaptureOptions.mode) {
+                openSemesterCaptureModal();
+                return;
+            }
+            if (scheduleCaptureOptions.mode === 'specific-week') {
+                scheduleSpecificWeek = parseInt(scheduleCaptureOptions.week, 10);
+                if (!Number.isInteger(scheduleSpecificWeek)) {
+                    showToast('Invalid week number.');
+                    return;
+                }
+                if (scheduleViewMode === 'calendar') {
+                    restoreScheduleMode = 'calendar';
+                    scheduleViewMode = 'list';
+                    renderScheduleContent();
+                }
+            }
+        }
 
         // --- Midterm / Finals: build a clean off-screen tile ---
         if (active === 'midterm') {
@@ -7735,6 +7884,37 @@
             document.body.appendChild(shell);
             shellEl = shell;
             target = shell;
+
+            if (active === 'schedule' && Number.isInteger(scheduleSpecificWeek)) {
+                const targetCard = target.querySelector('.card[data-week="' + String(scheduleSpecificWeek) + '"]');
+                if (!targetCard) {
+                    if (shellEl) shellEl.remove();
+                    if (restoreScheduleMode === 'calendar') {
+                        scheduleViewMode = 'calendar';
+                        renderScheduleContent();
+                    }
+                    showToast('Week not found in Semester Map.');
+                    return;
+                }
+
+                const exactWidth = targetCard.offsetWidth;
+                const cardClone = targetCard.cloneNode(true);
+                cardClone.style.width = exactWidth + 'px';
+                cardClone.style.boxSizing = 'border-box';
+                cardClone.style.margin = '0';
+                const wrapper = document.createElement('div');
+                wrapper.style.cssText = 'position: fixed; top: -9999px; left: 0; padding: 20px; background: #0a0012; display: inline-block; width: fit-content; height: fit-content; overflow: hidden;';
+                wrapper.appendChild(cardClone);
+                document.body.appendChild(wrapper);
+
+                weekWrapperEl = wrapper;
+                target = wrapper;
+
+                if (shellEl) {
+                    shellEl.remove();
+                    shellEl = null;
+                }
+            }
         } else {
             target = getScreenshotTargetElement();
         }
@@ -7765,7 +7945,19 @@
             windowHeight: shotH,
             logging: false
         };
-        if (!shellEl) {
+
+        if (weekWrapperEl) {
+            captureOpts.backgroundColor = '#0a0012';
+            captureOpts.width = weekWrapperEl.offsetWidth;
+            captureOpts.height = weekWrapperEl.offsetHeight;
+            captureOpts.windowWidth = weekWrapperEl.offsetWidth;
+            captureOpts.windowHeight = weekWrapperEl.offsetHeight;
+            captureOpts.scrollX = 0;
+            captureOpts.scrollY = 0;
+            captureOpts.scale = 2;
+        }
+
+        if (!shellEl && !weekWrapperEl) {
             captureOpts.scrollX = 0;
             captureOpts.scrollY = -window.scrollY;
         }
@@ -7774,6 +7966,11 @@
             window.html2canvas(target, captureOpts).then(canvas => {
                 restoreList.forEach(({el, prev}) => el.style.cssText = prev);
                 if (shellEl) shellEl.remove();
+                if (weekWrapperEl && weekWrapperEl.parentNode) weekWrapperEl.parentNode.removeChild(weekWrapperEl);
+                if (restoreScheduleMode === 'calendar') {
+                    scheduleViewMode = 'calendar';
+                    renderScheduleContent();
+                }
                 canvas.toBlob(blob => {
                     if (!blob) return;
                     downloadBlob(blob, `${ctx.fileBase}.png`);
@@ -7782,6 +7979,11 @@
             }).catch(() => {
                 restoreList.forEach(({el, prev}) => el.style.cssText = prev);
                 if (shellEl) shellEl.remove();
+                if (weekWrapperEl && weekWrapperEl.parentNode) weekWrapperEl.parentNode.removeChild(weekWrapperEl);
+                if (restoreScheduleMode === 'calendar') {
+                    scheduleViewMode = 'calendar';
+                    renderScheduleContent();
+                }
                 showToast('Screenshot failed.');
             });
         });
@@ -8169,10 +8371,445 @@
         }
     })();
     let ttMode = localStorage.getItem('tt_mode') || 'normal';
+    let studioTodayIndex = 0;
+    let studioTempDayEvents = [];
+    let studioBaseDayEvents = [];
+    let tempStudioEvents = [];
+    let studioSelectedDayName = '';
+    let studioSelectedDayIndex = 0;
+
+    function getStudioSectionKey(TD) {
+        const adminSec = (typeof window.ttAdminSection !== 'undefined' && window.ttAdminSection) ? String(window.ttAdminSection) : '';
+        if (adminSec && TD && TD.sections && TD.sections[adminSec]) return adminSec;
+        return ttSection;
+    }
+
+    function getTimetableDayIndexByName(TD, dayName) {
+        if (!TD || !Array.isArray(TD.days)) return -1;
+        const n = String(dayName || '').toLowerCase();
+        const n3 = n.slice(0, 3);
+        return TD.days.findIndex(function(d) {
+            const v = String(d || '').toLowerCase();
+            return v === n || v.slice(0, 3) === n3;
+        });
+    }
+
+    function extractStudioEventTimeText(ev, TD) {
+        if (!ev) return '';
+        if (ev.displayTime && String(ev.displayTime).trim()) return String(ev.displayTime).trim();
+        if (ev.timeText && String(ev.timeText).trim()) return String(ev.timeText).trim();
+        if (ev.customTime && String(ev.customTime).trim()) return String(ev.customTime).trim();
+        if (Number.isInteger(ev.slot)) {
+            const normal = TD && TD.timeSlots && Array.isArray(TD.timeSlots.normal) ? TD.timeSlots.normal : [];
+            return String(normal[ev.slot] || ('Slot ' + (ev.slot + 1)));
+        }
+        return '';
+    }
+
+    function parseStudioTime(timeStr) {
+        if (!timeStr) return 99; // Push empty/invalid times to the bottom
+        let str = timeStr.toString().toLowerCase().trim();
+        
+        // If it's a range (e.g., '2:30 - 4:20'), sort by the start time
+        if (str.includes('-')) str = str.split('-')[0].trim(); 
+
+        let hr = 0, min = 0;
+        let isPM = str.includes('pm');
+        let isAM = str.includes('am');
+
+        let match = str.match(/(\d{1,2}):?(\d{2})?/);
+        if (match) {
+            hr = parseInt(match[1] || 0, 10);
+            min = parseInt(match[2] || 0, 10);
+        }
+
+        // IMPLICIT TIME LOGIC: If no AM/PM is typed, assume normal college hours.
+        // Hours 1 through 7 are afternoon/evening (1:00 PM - 7:59 PM).
+        // Hours 8 through 11 are morning (8:00 AM - 11:59 AM).
+        if (!isPM && !isAM) {
+            if (hr >= 1 && hr <= 7) {
+                isPM = true;
+            }
+        }
+
+        // Convert to 24-hour float for perfect sorting
+        if (isPM && hr < 12) hr += 12;
+        if (isAM && hr === 12) hr = 0; // Midnight edge case
+
+        return hr + (min / 60);
+    }
+
+    function studioResolveSubjectName(subjectValue, selectedOption) {
+        const raw = String(subjectValue || '').trim();
+        if (!raw) return '';
+
+        if (selectedOption && selectedOption.dataset && selectedOption.dataset.fullname) {
+            return String(selectedOption.dataset.fullname).trim();
+        }
+
+        const courseList = Array.isArray(window.COURSE_DATA) ? window.COURSE_DATA : [];
+        const byCode = courseList.find(function(c) {
+            return String(c.code || '').trim().toLowerCase() === raw.toLowerCase();
+        });
+        if (byCode && byCode.name) return String(byCode.name).trim();
+
+        const byName = courseList.find(function(c) {
+            return String(c.name || '').trim().toLowerCase() === raw.toLowerCase();
+        });
+        if (byName && byName.name) return String(byName.name).trim();
+
+        return raw;
+    }
+
+    function studioSortTempEvents() {
+        const TD = window.TIMETABLE_DATA;
+        studioTempDayEvents.sort(function(a, b) {
+            const ta = parseStudioTime(extractStudioEventTimeText(a, TD));
+            const tb = parseStudioTime(extractStudioEventTimeText(b, TD));
+            if (ta !== tb) return ta - tb;
+            const sa = String(a.subject || '');
+            const sb = String(b.subject || '');
+            return sa.localeCompare(sb);
+        });
+        tempStudioEvents = studioTempDayEvents;
+    }
 
     function showTimetable(push = true) {
         renderTimetable();
         nav('timetable', push);
+    }
+
+    function getTimetableTodayIndex(TD) {
+        if (!TD || !Array.isArray(TD.days) || TD.days.length === 0) return 0;
+        const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const todayName = dayNames[new Date().getDay()].toLowerCase();
+        const todayShort = todayName.slice(0, 3);
+        const idx = TD.days.findIndex(function(d) {
+            const v = String(d || '').toLowerCase();
+            return v === todayName || v.slice(0, 3) === todayShort;
+        });
+        return idx >= 0 ? idx : 0;
+    }
+
+    function closeScreenshotStudioModal(e, force) {
+        if (!force && e && e.target && e.target.id !== 'screenshot-studio-modal') return;
+        const modal = document.getElementById('screenshot-studio-modal');
+        if (modal) modal.classList.remove('active');
+    }
+
+    function closeScreenshotModeModal(e, force = false) {
+        if (!force && e && e.target && e.target.id !== 'screenshot-mode-modal') return;
+        const modal = document.getElementById('screenshot-mode-modal');
+        if (modal) modal.classList.remove('active');
+    }
+
+    function openScreenshotModeModal() {
+        const modal = document.getElementById('screenshot-mode-modal');
+        if (modal) modal.classList.add('active');
+    }
+
+    function captureTimetableDayImage(dayIndex) {
+        const TD = window.TIMETABLE_DATA;
+        if (!TD || !Array.isArray(TD.days)) return Promise.reject(new Error('No timetable data'));
+        const dayName = TD.days[dayIndex] || ('Day ' + (dayIndex + 1));
+        return _captureOneDay(dayIndex, dayName);
+    }
+
+    function openStandardDaySelector() {
+        closeScreenshotModeModal(null, true);
+        const TD = window.TIMETABLE_DATA;
+        if (!TD || !Array.isArray(TD.days)) { showToast('No timetable data.', 'locked'); return; }
+        const days = TD.days
+            .map(function(day, idx) { return { day: String(day || ''), idx: idx }; })
+            .filter(function(item) { return item.day.toLowerCase() !== 'friday'; });
+
+        const existingPicker = document.getElementById('tt-day-picker');
+        if (existingPicker) existingPicker.remove();
+
+        const picker = document.createElement('div');
+        picker.id = 'tt-day-picker';
+        picker.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#0a0012;border:1px solid rgba(233,30,140,0.4);border-radius:16px;padding:20px 24px;z-index:10000;box-shadow:0 0 40px rgba(233,30,140,0.2);min-width:260px;';
+        picker.innerHTML = '<div style="font-family:\'Orbitron\',sans-serif;font-size:0.75rem;color:var(--accent-pink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;text-align:center;">Select Day</div>' +
+            '<div id="tt-day-picker-btns" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;"></div>' +
+            '<button onclick="document.getElementById(\'tt-day-picker\').remove()" style="display:block;margin:14px auto 0;background:none;border:1px solid #555;color:#888;padding:4px 16px;border-radius:8px;cursor:pointer;font-size:0.78rem;">Cancel</button>';
+
+        const btnWrap = picker.querySelector('#tt-day-picker-btns');
+        days.forEach(function(item) {
+            const b = document.createElement('button');
+            b.textContent = item.day;
+            b.style.cssText = 'background:rgba(233,30,140,0.1);border:1px solid rgba(233,30,140,0.4);color:#e91e8c;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;';
+            b.onmouseover = function() { b.style.background = '#e91e8c'; b.style.color = '#fff'; };
+            b.onmouseout = function() { b.style.background = 'rgba(233,30,140,0.1)'; b.style.color = '#e91e8c'; };
+            b.onclick = function() { picker.remove(); captureTimetableDayImage(item.idx); };
+            btnWrap.appendChild(b);
+        });
+        document.body.appendChild(picker);
+    }
+
+    function openStudioDaySelector() {
+        closeScreenshotModeModal(null, true);
+        const TD = window.TIMETABLE_DATA;
+        if (!TD) { showToast('No timetable data.', 'locked'); return; }
+
+        const existingPicker = document.getElementById('tt-day-picker');
+        if (existingPicker) existingPicker.remove();
+
+        const orderedDays = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+        const picker = document.createElement('div');
+        picker.id = 'tt-day-picker';
+        picker.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#0a0012;border:1px solid rgba(233,30,140,0.4);border-radius:16px;padding:20px 24px;z-index:10000;box-shadow:0 0 40px rgba(233,30,140,0.2);min-width:280px;';
+        picker.innerHTML = '<div style="font-family:\'Orbitron\',sans-serif;font-size:0.75rem;color:var(--accent-pink);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;text-align:center;">Select Day To Edit</div>' +
+            '<div id="tt-day-picker-btns" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;"></div>' +
+            '<button onclick="document.getElementById(\'tt-day-picker\').remove()" style="display:block;margin:14px auto 0;background:none;border:1px solid #555;color:#888;padding:4px 16px;border-radius:8px;cursor:pointer;font-size:0.78rem;">Cancel</button>';
+
+        const btnWrap = picker.querySelector('#tt-day-picker-btns');
+        orderedDays.forEach(function(dayName) {
+            const isFriday = dayName === 'Friday';
+            const b = document.createElement('button');
+            b.textContent = dayName;
+            b.style.cssText = isFriday
+                ? 'background:rgba(255,149,0,0.13);border:1px solid rgba(255,149,0,0.5);color:#ff9500;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s; box-shadow:0 0 12px rgba(255,149,0,0.18);'
+                : 'background:rgba(233,30,140,0.1);border:1px solid rgba(233,30,140,0.4);color:#e91e8c;padding:7px 16px;border-radius:10px;cursor:pointer;font-weight:700;font-size:0.82rem;transition:0.2s;';
+            b.onclick = function() {
+                picker.remove();
+                openScreenshotStudioModal(dayName);
+            };
+            btnWrap.appendChild(b);
+        });
+        document.body.appendChild(picker);
+    }
+
+    function studioShowDaySelector() {
+        studioGoBack();
+    }
+
+    function studioGoBack() {
+        studioTempDayEvents = [];
+        studioBaseDayEvents = [];
+        tempStudioEvents = [];
+        studioSelectedDayName = '';
+        studioSelectedDayIndex = 0;
+        closeScreenshotStudioModal(null, true);
+        openStudioDaySelector();
+    }
+
+    function studioOpenCustomizer() {
+        openStudioDaySelector();
+    }
+
+    function studioSelectDay(dayName) {
+        openScreenshotStudioModal(dayName);
+    }
+
+    function studioPopulatePlaces(TD) {
+        const places = new Set();
+        const sectionKey = getStudioSectionKey(TD);
+        const sectionEntries = (TD && TD.sections && TD.sections[sectionKey]) ? TD.sections[sectionKey] : [];
+        sectionEntries.forEach(function(e) {
+            const room = String(e.room || '').trim();
+            if (room) places.add(room);
+        });
+        const list = document.getElementById('studio-places');
+        if (!list) return;
+        list.innerHTML = '';
+        Array.from(places).sort().forEach(function(room) {
+            const opt = document.createElement('option');
+            opt.value = room;
+            list.appendChild(opt);
+        });
+    }
+
+    function studioRenderEvents() {
+        const TD = window.TIMETABLE_DATA;
+        const box = document.getElementById('studio-day-events');
+        const dayLabel = document.getElementById('studio-day-label');
+        if (!box || !TD) return;
+        studioSortTempEvents();
+        if (dayLabel) {
+            const dayName = studioSelectedDayName || (TD.days && TD.days[studioTodayIndex] ? TD.days[studioTodayIndex] : 'Current Day');
+            dayLabel.textContent = 'Editing: ' + dayName;
+        }
+        box.innerHTML = '';
+        if (!studioTempDayEvents.length) {
+            box.innerHTML = '<div style="text-align:center; color:#777; font-style:italic; padding:8px 0;">No events for this day.</div>';
+            return;
+        }
+        studioTempDayEvents.forEach(function(ev) {
+                const idx = studioTempDayEvents.indexOf(ev);
+                const row = document.createElement('div');
+                const ts = TT_TYPE_STYLES[ev.type] || TT_TYPE_STYLES.lec;
+                const timeText = extractStudioEventTimeText(ev, TD) || 'No time';
+                row.style.cssText = 'display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px 10px;';
+                row.innerHTML = '<span style="font-family:Orbitron,sans-serif; color:' + ts.color + '; font-size:0.68rem; min-width:42px;">' + ts.label + '</span>' +
+                    '<span style="color:#ddd; font-size:0.84rem; min-width:120px;">' + timeText + '</span>' +
+                    '<span style="color:#fff; font-weight:700; font-size:0.84rem; min-width:60px;">' + (ev.subject || '') + '</span>' +
+                    '<span style="color:#aaa; font-size:0.8rem; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">' + (ev.room || 'No room') + '</span>' +
+                    '<button style="background:none; border:1px solid rgba(255,59,48,0.35); color:#ff3b30; width:24px; height:24px; border-radius:6px; cursor:pointer; font-weight:700;" onclick="studioRemoveTempEvent(' + idx + ')">✕</button>';
+                box.appendChild(row);
+            });
+    }
+
+    function studioPopulateFormOptions() {
+        const TD = window.TIMETABLE_DATA;
+        if (!TD) return;
+        const subSel = document.getElementById('studio-subject');
+        const timeInput = document.getElementById('studio-time-input');
+        const timesList = document.getElementById('studio-times');
+        if (!subSel || !timeInput || !timesList) return;
+
+        subSel.innerHTML = '';
+        const courseList = Array.isArray(window.COURSE_DATA) ? window.COURSE_DATA : [];
+        if (courseList.length) {
+            courseList.forEach(function(c) {
+                const opt = document.createElement('option');
+                opt.value = c.code;
+                opt.dataset.fullname = c.name;
+                opt.dataset.code = c.code;
+                opt.textContent = c.code + ' - ' + c.name;
+                subSel.appendChild(opt);
+            });
+        } else {
+            (TD.subjects || []).forEach(function(s) {
+                const opt = document.createElement('option');
+                opt.value = s;
+                opt.textContent = s;
+                subSel.appendChild(opt);
+            });
+        }
+
+        const times = (TD.timeSlots && Array.isArray(TD.timeSlots.normal) ? TD.timeSlots.normal : []);
+        timesList.innerHTML = '';
+        times.forEach(function(t) {
+            const opt = document.createElement('option');
+            opt.value = t;
+            timesList.appendChild(opt);
+        });
+        timeInput.value = '';
+    }
+
+    function studioResolveSlotIndex(TD, timeText) {
+        const normalTimes = (TD && TD.timeSlots && Array.isArray(TD.timeSlots.normal)) ? TD.timeSlots.normal : [];
+        if (!normalTimes.length) return 0;
+
+        const exact = normalTimes.indexOf(timeText);
+        if (exact >= 0) return exact;
+
+        const target = parseStudioTime(timeText);
+        if (!Number.isFinite(target)) return 0;
+
+        let bestIdx = 0;
+        let bestDiff = Number.POSITIVE_INFINITY;
+        normalTimes.forEach(function(slotText, idx) {
+            const slotVal = parseStudioTime(slotText);
+            if (!Number.isFinite(slotVal)) return;
+            const diff = Math.abs(slotVal - target);
+            if (diff < bestDiff) {
+                bestDiff = diff;
+                bestIdx = idx;
+            }
+        });
+        return bestIdx;
+    }
+
+    function openScreenshotStudioModal(dayName) {
+        const TD = window.TIMETABLE_DATA;
+        const sectionKey = (typeof window.ttAdminSection !== 'undefined' && window.ttAdminSection)
+            ? String(window.ttAdminSection)
+            : getStudioSectionKey(TD);
+        if (!TD || !TD.sections || !TD.sections[sectionKey]) {
+            showToast('No timetable data.', 'locked');
+            return;
+        }
+
+        const selectedDay = String(dayName || '').trim();
+        if (!selectedDay) {
+            openStudioDaySelector();
+            return;
+        }
+
+        studioSelectedDayName = selectedDay;
+        const mappedIdx = getTimetableDayIndexByName(TD, selectedDay);
+        studioSelectedDayIndex = mappedIdx >= 0 ? mappedIdx : (Array.isArray(TD.days) ? TD.days.length : 0);
+        studioTodayIndex = studioSelectedDayIndex;
+
+        if (selectedDay.toLowerCase() === 'friday') {
+            studioBaseDayEvents = [];
+            studioTempDayEvents = [];
+            tempStudioEvents = [];
+        } else {
+            const preloaded = (TD.sections[sectionKey] || []).filter(function(e) { return e.day === studioSelectedDayIndex; });
+            studioBaseDayEvents = JSON.parse(JSON.stringify(preloaded));
+            studioTempDayEvents = JSON.parse(JSON.stringify(preloaded));
+            tempStudioEvents = studioTempDayEvents;
+        }
+
+        studioSortTempEvents();
+        studioPopulatePlaces(TD);
+        studioPopulateFormOptions();
+        const label = document.getElementById('studio-day-label');
+        if (label) label.textContent = 'Editing: ' + selectedDay;
+        const customizer = document.getElementById('studio-customizer');
+        if (customizer) customizer.style.display = 'block';
+        studioRenderEvents();
+        const modal = document.getElementById('screenshot-studio-modal');
+        if (modal) modal.classList.add('active');
+    }
+
+    function studioAddTempEvent() {
+        const TD = window.TIMETABLE_DATA;
+        if (!TD) return;
+        const subSel = document.getElementById('studio-subject');
+        const typeSel = document.getElementById('studio-type');
+        const timeInput = document.getElementById('studio-time-input');
+        const roomInput = document.getElementById('studio-room');
+        if (!subSel || !typeSel || !timeInput || !roomInput) return;
+
+        const timeText = String(timeInput.value || '').trim();
+        if (!timeText) {
+            showToast('Enter a time.', 'locked');
+            return;
+        }
+
+        const selectedOption = subSel.options[subSel.selectedIndex] || null;
+        const subjectCode = String(subSel.value || '').trim();
+        const subjectName = studioResolveSubjectName(subjectCode, selectedOption);
+        const normalizedType = ['lec', 'tut', 'lab'].includes(typeSel.value) ? typeSel.value : 'lec';
+        const matchedSlot = studioResolveSlotIndex(TD, timeText);
+
+        studioTempDayEvents.push({
+            day: studioSelectedDayIndex,
+            slot: matchedSlot,
+            subject: subjectName,
+            subjectCode: subjectCode,
+            type: normalizedType,
+            room: roomInput.value.trim(),
+            note: '',
+            alternating: false,
+            backup: false,
+            displayTime: timeText,
+            timeText: timeText,
+            time: timeText,
+            slotText: timeText,
+        });
+        studioSortTempEvents();
+        tempStudioEvents = studioTempDayEvents;
+        timeInput.value = '';
+        roomInput.value = '';
+        studioRenderEvents();
+    }
+
+    function studioRemoveTempEvent(idx) {
+        if (idx < 0 || idx >= studioTempDayEvents.length) return;
+        studioTempDayEvents.splice(idx, 1);
+        tempStudioEvents = studioTempDayEvents;
+        studioRenderEvents();
+    }
+
+    function studioResetTempEvents() {
+        studioTempDayEvents = JSON.parse(JSON.stringify(studioBaseDayEvents));
+        tempStudioEvents = studioTempDayEvents;
+        studioSortTempEvents();
+        studioRenderEvents();
     }
 
     function renderTimetable() {
@@ -9866,49 +10503,200 @@
         document.body.appendChild(picker);
     }
 
-    function _captureOneDay(dayIndex, dayName) {
-        const TD = window.TIMETABLE_DATA;
-        const times = TD.timeSlots[ttMode] || TD.timeSlots.normal;
-        const entries = (TD.sections[ttSection] || []).filter(e => ttSelectedSubjects.includes(e.subject) && e.day === dayIndex);
+    function captureTimetableDayImageFromData(dayIndex, dayName, fileName) {
+        return new Promise(function(resolve, reject) {
+            if (typeof window.html2canvas !== 'function') {
+                reject(new Error('html2canvas unavailable'));
+                return;
+            }
+            const TD = window.TIMETABLE_DATA;
+            if (!TD) {
+                reject(new Error('No timetable data'));
+                return;
+            }
+            const sectionKey = getStudioSectionKey(TD);
+            const times = (TD.timeSlots && (TD.timeSlots[ttMode] || TD.timeSlots.normal)) || [];
+            const entries = (TD.sections[sectionKey] || []).filter(function(e) {
+                return ttSelectedSubjects.includes(e.subject) && e.day === dayIndex;
+            });
+            const sortedEntries = entries.slice().sort(function(a, b) {
+                const ta = parseStudioTime(extractStudioEventTimeText(a, TD));
+                const tb = parseStudioTime(extractStudioEventTimeText(b, TD));
+                if (ta !== tb) return ta - tb;
+                return String(a.subject || '').localeCompare(String(b.subject || ''));
+            });
 
-        const usedSlots = new Set(entries.map(e => e.slot));
-        const slotIndices = usedSlots.size > 0 ? [...usedSlots].sort((a,b)=>a-b) : times.map((_,i)=>i);
+            const shell = document.createElement('div');
+            shell.style.cssText = 'position:absolute;left:-9999px;top:0;background:#0a0012;padding:24px 28px;font-family:Work Sans,Arial,sans-serif;box-sizing:border-box;min-width:340px;';
+            shell.innerHTML = '<div style="font-family:Orbitron,sans-serif;font-size:18px;font-weight:900;color:#e91e8c;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">' + dayName + '</div>' +
+                '<div style="font-size:11px;color:#888;margin-bottom:18px;">Section ' + sectionKey + ' · ' + ttMode.charAt(0).toUpperCase() + ttMode.slice(1) + ' schedule</div>';
 
-        const shell = document.createElement('div');
-        shell.style.cssText = 'position:absolute;left:-9999px;top:0;background:#0a0012;padding:24px 28px;font-family:Work Sans,Arial,sans-serif;box-sizing:border-box;min-width:340px;';
-
-        // Header: day name + section/mode info
-        shell.innerHTML = `<div style="font-family:Orbitron,sans-serif;font-size:18px;font-weight:900;color:#e91e8c;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">${dayName}</div>
-            <div style="font-size:11px;color:#888;margin-bottom:18px;">Section ${ttSection} · ${ttMode.charAt(0).toUpperCase()+ttMode.slice(1)} schedule</div>`;
-
-        if (entries.length === 0) {
-            shell.innerHTML += `<div style="text-align:center;color:#555;padding:30px 0;font-size:13px;">No classes on ${dayName}</div>`;
-        } else {
-            slotIndices.forEach(si => {
-                const cellEntries = entries.filter(e => e.slot === si);
-                if (cellEntries.length === 0) return;
-                const timeLabel = times[si] || '';
-                shell.innerHTML += `<div style="font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;margin-top:12px;">${timeLabel}</div>`;
-                cellEntries.forEach(e => {
+            if (sortedEntries.length === 0) {
+                shell.innerHTML += '<div style="text-align:center;color:#555;padding:30px 0;font-size:13px;">No classes on ' + dayName + '</div>';
+            } else {
+                sortedEntries.forEach(function(e) {
                     const sc = TT_SUBJECT_COLORS[e.subject] || { text:'#ccc' };
                     const ts = TT_TYPE_STYLES[e.type] || TT_TYPE_STYLES.lec;
-                    shell.innerHTML += `<div style="background:${ts.bg};border:1px solid ${ts.border};border-radius:10px;padding:10px 14px;margin-bottom:6px;">
-                        <div style="color:${sc.text};font-family:Orbitron,sans-serif;font-size:13px;font-weight:800;margin-bottom:3px;">${e.subject}</div>
-                        <div style="color:${ts.text};font-size:11px;">${ts.label}${e.room?' · '+e.room:''}</div>
-                        ${e.note?`<div style="color:${ts.text};font-size:10px;margin-top:3px;opacity:0.8;">${e.note}</div>`:''}
-                    </div>`;
+                    const timeText = extractStudioEventTimeText(e, TD) || (Number.isInteger(e.slot) ? (times[e.slot] || '') : '');
+                    if (timeText) {
+                        shell.innerHTML += '<div style="font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;margin-top:12px;">' + timeText + '</div>';
+                    }
+                    shell.innerHTML += '<div style="background:' + ts.bg + ';border:1px solid ' + ts.border + ';border-radius:10px;padding:10px 14px;margin-bottom:6px;">' +
+                        '<div style="color:' + sc.text + ';font-family:Orbitron,sans-serif;font-size:13px;font-weight:800;margin-bottom:3px;">' + e.subject + '</div>' +
+                        '<div style="color:' + ts.text + ';font-size:11px;">' + ts.label + (e.room ? ' · ' + e.room : '') + '</div>' +
+                        (e.note ? '<div style="color:' + ts.text + ';font-size:10px;margin-top:3px;opacity:0.8;">' + e.note + '</div>' : '') +
+                        '</div>';
                 });
+            }
+
+            document.body.appendChild(shell);
+            showToast('📸 Generating image...', 'locked');
+            requestAnimationFrame(function() {
+                window.html2canvas(shell, { backgroundColor:'#0a0012', scale:2.5, useCORS:true, allowTaint:true, width:shell.scrollWidth, windowWidth:shell.scrollWidth, logging:false })
+                    .then(function(canvas) {
+                        canvas.toBlob(function(blob) {
+                            if (blob) {
+                                downloadBlob(blob, fileName || ('timetable-' + String(dayName || 'day').toLowerCase() + '.png'));
+                                showToast('📸 Image saved!','locked');
+                                resolve();
+                            } else {
+                                showToast('⚠️ Could not generate image','locked');
+                                reject(new Error('Capture failed'));
+                            }
+                        });
+                    })
+                    .catch(function() {
+                        showToast('⚠️ Could not generate image','locked');
+                        reject(new Error('Capture failed'));
+                    })
+                    .finally(function() { shell.remove(); });
             });
+        });
+    }
+
+    function _captureOneDay(dayIndex, dayName) {
+        return captureTimetableDayImageFromData(dayIndex, dayName, `timetable-${dayName.toLowerCase()}.png`);
+    }
+
+    function studioQuickCapture() {
+        const TD = window.TIMETABLE_DATA;
+        if (!TD) return;
+        if (typeof window.html2canvas !== 'function') {
+            showToast('⏳ Loading screenshot library...', 'locked');
+            const poll = setInterval(function() {
+                if (typeof window.html2canvas === 'function') {
+                    clearInterval(poll);
+                    studioQuickCapture();
+                }
+            }, 200);
+            return;
+        }
+        const dayIndex = getTimetableTodayIndex(TD);
+        const dayName = (TD.days && TD.days[dayIndex]) ? TD.days[dayIndex] : 'Day';
+        captureTimetableDayImageFromData(dayIndex, dayName, 'timetable-' + String(dayName).toLowerCase() + '.png')
+            .then(function() { closeScreenshotStudioModal(null, true); })
+            .catch(function() {});
+    }
+
+    function studioCaptureCustomTimetable(selectedDayName) {
+        const TD = window.TIMETABLE_DATA;
+        if (typeof window.html2canvas !== 'function') {
+            showToast('⏳ Loading screenshot library...', 'locked');
+            const poll = setInterval(function() {
+                if (typeof window.html2canvas === 'function') {
+                    clearInterval(poll);
+                    studioCaptureCustomTimetable();
+                }
+            }, 200);
+            return;
         }
 
-        document.body.appendChild(shell);
-        showToast('📸 Generating image...', 'locked');
-        requestAnimationFrame(() => {
-            window.html2canvas(shell, { backgroundColor:'#0a0012', scale:2.5, useCORS:true, allowTaint:true, width:shell.scrollWidth, windowWidth:shell.scrollWidth, logging:false })
-                .then(canvas => { canvas.toBlob(blob => { if(blob) { downloadBlob(blob, `timetable-${dayName.toLowerCase()}.png`); showToast('📸 Image saved!','locked'); } }); })
-                .catch(() => showToast('⚠️ Could not generate image','locked'))
-                .finally(() => shell.remove());
+        const chosenDay = String(selectedDayName || studioSelectedDayName || '').trim();
+        if (!chosenDay) {
+            showToast('Select a day first.', 'locked');
+            studioGoBack();
+            return;
+        }
+
+        studioSortTempEvents();
+        const preparedEvents = studioTempDayEvents.map(function(event) {
+            const copy = JSON.parse(JSON.stringify(event));
+            copy.subject = studioResolveSubjectName(copy.subject || copy.subjectCode);
+            const resolvedTime = String(copy.displayTime || copy.time || copy.slotText || copy.timeText || extractStudioEventTimeText(copy, TD)).trim();
+            copy.displayTime = resolvedTime || 'No time';
+            return copy;
+        }).sort(function(a, b) {
+            return parseStudioTime(a.displayTime) - parseStudioTime(b.displayTime);
         });
+        tempStudioEvents = preparedEvents;
+
+        const ghostContainer = document.createElement('div');
+        ghostContainer.style.cssText = 'position:absolute; left:-9999px; top:0; width:300px; background:var(--bg-dark); padding:20px; border-radius:12px; display:flex; flex-direction:column; gap:10px;';
+        document.body.appendChild(ghostContainer);
+
+        const header = document.createElement('h2');
+        header.style.cssText = 'color:var(--accent-pink); text-align:center; margin:0 0 8px 0; font-family:Orbitron,sans-serif; letter-spacing:1px; text-transform:uppercase;';
+        header.textContent = chosenDay;
+        ghostContainer.appendChild(header);
+
+        preparedEvents.forEach(function(event) {
+            const ts = TT_TYPE_STYLES[event.type] || TT_TYPE_STYLES.lec;
+            const sc = TT_SUBJECT_COLORS[event.subject] || { text: '#ccc' };
+            const typedTime = String(event.displayTime || '').trim() || 'No time';
+
+            const block = document.createElement('div');
+            block.style.cssText = 'display:flex; flex-direction:column; gap:6px;';
+
+            const timeLine = document.createElement('div');
+            timeLine.style.cssText = 'font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;';
+            timeLine.textContent = typedTime;
+            block.appendChild(timeLine);
+
+            const card = document.createElement('div');
+            card.style.cssText = 'background:' + ts.bg + '; border:1px solid ' + ts.border + '; box-shadow:0 0 12px ' + ts.border + ', inset 0 0 12px ' + ts.bg + '; border-radius:10px; padding:10px 12px;';
+            card.innerHTML = '<div style="color:' + sc.text + '; font-family:Orbitron,sans-serif; font-size:13px; font-weight:800;">' + eHtml(event.subject || '') + '</div>' +
+                '<div style="color:' + ts.text + '; font-size:11px; margin-top:3px;">' + ts.label + (event.room ? ' · ' + eHtml(event.room) : '') + '</div>' +
+                '<div style="display:flex; gap:6px; margin-top:6px;">' +
+                '<span style="background:' + ts.border + '; color:#000; font-size:10px; font-weight:700; padding:2px 6px; border-radius:4px;">' + ts.label + '</span>' +
+                (event.backup ? '<span style="font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; background:rgba(255,204,0,0.2); color:#ffcc00; border:1px solid rgba(255,204,0,0.4); padding:2px 6px; border-radius:4px;">BACKUP</span>' : '') +
+                '</div>' +
+                (event.note ? '<div style="color:' + ts.text + '; font-size:10px; margin-top:5px;">' + eHtml(event.note) + '</div>' : '');
+            block.appendChild(card);
+            ghostContainer.appendChild(block);
+        });
+
+        if (!preparedEvents.length) {
+            const empty = document.createElement('div');
+            empty.style.cssText = 'text-align:center;color:#666;font-size:12px;padding:16px 0;';
+            empty.textContent = 'No events for this day.';
+            ghostContainer.appendChild(empty);
+        }
+
+        setTimeout(function() {
+            window.html2canvas(ghostContainer, {
+                backgroundColor: '#0a0012',
+                scale: 2.5,
+                useCORS: true,
+                allowTaint: true,
+                width: ghostContainer.scrollWidth,
+                windowWidth: ghostContainer.scrollWidth,
+                logging: false
+            }).then(function(canvas) {
+                canvas.toBlob(function(blob) {
+                    if (blob) {
+                        downloadBlob(blob, 'timetable-custom-' + String(chosenDay).toLowerCase() + '.png');
+                        showToast('📸 Image saved!', 'locked');
+                    } else {
+                        showToast('⚠️ Could not generate image', 'locked');
+                    }
+                    if (ghostContainer.parentNode) ghostContainer.parentNode.removeChild(ghostContainer);
+                    closeScreenshotStudioModal(null, true);
+                });
+            }).catch(function() {
+                    if (ghostContainer.parentNode) ghostContainer.parentNode.removeChild(ghostContainer);
+                    showToast('⚠️ Could not generate image', 'locked');
+                });
+        }, 150);
     }
 
     function _buildExamShell(isFinals) {
