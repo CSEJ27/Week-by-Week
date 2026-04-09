@@ -507,6 +507,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -657,6 +673,22 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -999,6 +1031,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "14/3/2026 7:08 PM",
@@ -1144,6 +1192,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -1632,6 +1696,22 @@ window.COURSE_DATA = [
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "24/3/2026 11:36 PM"
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "24/3/2026 5:42 AM",
@@ -1780,6 +1860,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -3542,6 +3638,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "16/3/2026 5:57 PM",
@@ -3690,6 +3802,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -4747,6 +4875,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -4905,6 +5049,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -5051,6 +5211,22 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -5209,6 +5385,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeColor": "#ff0000",
@@ -5354,6 +5546,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -5511,6 +5719,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "No lecture was taken this week.",
@@ -5660,6 +5884,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -5831,6 +6071,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 }
             },
@@ -5976,6 +6232,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -6556,6 +6828,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -6706,6 +6994,22 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -6883,6 +7187,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -7035,6 +7355,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "15/3/2026 2:50 AM",
@@ -7181,6 +7517,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -7340,6 +7692,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "17/3/2026 7:26 PM",
@@ -7488,6 +7856,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -8114,6 +8498,22 @@ window.COURSE_DATA = [
                         "recentDate": "10/3/2026 11:06 PM"
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -9117,6 +9517,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -9265,6 +9681,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -9856,6 +10288,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -10015,6 +10463,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -10159,6 +10623,22 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -10334,6 +10814,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -10484,6 +10980,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "14/3/2026 1:44 AM",
@@ -10628,6 +11140,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -10786,6 +11314,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "locked": false,
@@ -10943,6 +11487,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "24/3/2026 5:38 AM",
@@ -11091,6 +11651,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -11566,6 +12142,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "Optional for lectures, required later.",
@@ -11739,6 +12331,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -11899,6 +12507,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -12047,6 +12671,22 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -12223,6 +12863,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -12375,6 +13031,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "15/3/2026 2:46 AM",
@@ -12518,6 +13190,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -12699,6 +13387,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false
@@ -12845,6 +13549,22 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -13224,6 +13944,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "badgeText": "Quiz 1 starts from here!",
@@ -13379,6 +14115,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "22/3/2026 7:22 PM",
@@ -13527,6 +14279,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -13688,6 +14456,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "recentDate": "22/3/2026 7:26 PM",
@@ -13835,6 +14619,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -14106,6 +14906,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "locked": false,
@@ -14263,6 +15079,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isNew": false,
@@ -14407,6 +15239,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -14559,6 +15407,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 }
             },
@@ -14699,6 +15563,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -14967,6 +15847,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -15117,6 +16013,22 @@ window.COURSE_DATA = [
                         "recentDate": ""
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -15282,6 +16194,22 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     }
                 },
                 "isRecent": true,
@@ -15427,6 +16355,22 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -16186,28 +17130,6 @@ window.SCHEDULE_DATA = [
                 "submitNote": "Upload it here!"
             },
             {
-                "sub": "CN",
-                "name": "Assignment",
-                "icon": "📝",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
-                "sub": "ML",
-                "name": "Project Phase 1 Submission",
-                "icon": "✔️",
-                "when": "Thursday (16/4)",
-                "where": "",
-                "coverage": "",
-                "note": "",
-                "whenLink": "",
-                "whereLink": "",
-                "deadlineDate": "",
-                "isCompleted": false
-            },
-            {
                 "sub": "SW",
                 "name": " Practical Assignment 4",
                 "icon": "📝",
@@ -16250,37 +17172,6 @@ window.SCHEDULE_DATA = [
                 "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=194500",
                 "submitNote": "Submit here now!",
                 "deadlineEndDate": ""
-            },
-            {
-                "sub": "CA",
-                "name": "Assignment",
-                "icon": "📝",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
-                "sub": "OS",
-                "name": "Report Presentation",
-                "icon": "📊",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
-                "sub": "ML",
-                "name": "Quiz 2",
-                "icon": "🧠",
-                "when": "",
-                "where": "",
-                "coverage": "Bayes Theorem and class Metrics",
-                "note": "",
-                "whenLink": "",
-                "whereLink": "",
-                "deadlineDate": "",
-                "isCompleted": false
             },
             {
                 "sub": "CN",
@@ -17725,6 +18616,58 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "OS Tutorial's Compensation ",
+        "body": "Our next week OS's Tutorial won't be on Saturday, instead it's going to be held online on Tuesday (14/4) at 6:00 PM online.",
+        "publishedAt": "2026-04-09T18:30:00",
+        "sub": "OS",
+        "hasEvent": true,
+        "eventDate": "2026-04-14",
+        "eventTime": "18:00",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "CN Lecture's Compensation ",
+        "body": "Our next week CN's lecture won't be on Saturday, instead it's going to be held online on Tuesday (14/4) at 8:00 PM online.",
+        "publishedAt": "2026-04-09T18:29:00",
+        "sub": "CN",
+        "hasEvent": true,
+        "eventDate": "2026-04-14",
+        "eventTime": "20:00",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "DSA Lecture's Compensation ",
+        "body": "Our next week DSA's lecture won't be on Monday, instead it's going to be held online on Tuesday (14/4) at 12:30 PM online.",
+        "publishedAt": "2026-04-09T18:28:00",
+        "sub": "DSA",
+        "hasEvent": true,
+        "eventDate": "2026-04-14",
+        "eventTime": "12:30",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
+        "title": "ML Online Lec",
+        "body": "Next's week lecture is going to be held on Wednesday (15/4) at 4:30 PM.",
+        "publishedAt": "2026-04-09T18:26:00",
+        "sub": "ML",
+        "hasEvent": true,
+        "eventDate": "2026-04-15",
+        "eventTime": "16:30",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "OS Attendance ",
