@@ -11842,10 +11842,10 @@ window.COURSE_DATA = [
                     "Section": {
                         "vis": true,
                         "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=oNU846j_2Ehqba_b",
-                        "desc": "Games are covered in the following:\nSection 6 [1:36:52 : END]\nSection 7 [START : 46:15]",
+                        "desc": "Games are covered in the following:\nSection 6 [1:36:52 : END]\nSection 7 [START : 46:15]\n\nConstraints are covered in the following,\nSection 7 [46:15: END]\nSection 8.\n",
                         "isNew": true,
                         "isRecent": true,
-                        "recentDate": "25/3/2026 9:56 PM"
+                        "recentDate": "10/4/2026 10:04 PM"
                     },
                     "Section Slides": {
                         "vis": true,
@@ -11871,11 +11871,11 @@ window.COURSE_DATA = [
                         "recentDate": "10/4/2026 9:29 PM"
                     },
                     "Another Alt.": {
-                        "vis": true,
-                        "link": "https://youtu.be/oWJTJt-zwqc?si=N-NitFkk6PpGfQRx",
+                        "vis": false,
+                        "link": "",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": true
+                        "isRecent": false
                     },
                     "Another Alt.2": {
                         "vis": false,
