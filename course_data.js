@@ -5919,7 +5919,7 @@ window.COURSE_DATA = [
                     "Alternative": {
                         "vis": true,
                         "link": "https://www.youtube.com/playlist?list=PL37D52B7714788190",
-                        "desc": "Videos 15 through 18.",
+                        "desc": "Videos 15 through 18, alongside video 14.",
                         "isNew": false,
                         "isRecent": false
                     },
