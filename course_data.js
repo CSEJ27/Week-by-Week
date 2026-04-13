@@ -1234,17 +1234,19 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://youtu.be/oCeBsKilfpg?si=KSYF8BsKOxGC9qFn",
-                        "desc": "Chapter 4 Lecture 1 till 1:12:53",
-                        "isNew": false,
-                        "isRecent": true
+                        "link": "https://drive.google.com/drive/folders/140HAYtdZ6ud91lD0LZ8hEbb_SZTVeR-B?usp=drive_link",
+                        "desc": "Chapter 4 parts 1-4 ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "13/4/2026 10:43 PM"
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLiIaOwqnv7z_xMK8DYtZyfyaecBjJ09Dk",
+                        "desc": "Guide made by Osama. Video 3 and video 4 up to minute 53",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "13/4/2026 10:44 PM"
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -1407,11 +1409,12 @@ window.COURSE_DATA = [
                         "recentDate": "10/4/2026 9:16 PM"
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLiIaOwqnv7z_xMK8DYtZyfyaecBjJ09Dk",
+                        "desc": "Guide made by Osama. Video 4 from 53 till end and video 5",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "13/4/2026 10:47 PM"
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -12011,11 +12014,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=zg-Pb0euVEI",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "13/4/2026 10:53 PM"
                     },
                     "Section Slides": {
                         "vis": false,
