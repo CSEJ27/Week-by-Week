@@ -18431,14 +18431,15 @@ window.SCHEDULE_DATA = [
                 "sub": "ML",
                 "name": "Quiz 3",
                 "icon": "🧠",
-                "when": "",
+                "when": "Sunday (3/5)",
                 "where": "",
                 "coverage": "SVM1 and logistic regression",
                 "note": "",
                 "whenLink": "",
                 "whereLink": "",
                 "deadlineDate": "",
-                "isCompleted": false
+                "isCompleted": false,
+                "submitText": "SEB"
             },
             {
                 "sub": "ML",
