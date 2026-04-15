@@ -19784,8 +19784,21 @@ window.UPDATES_DATA = [
 window.NEWS_DATA = [
     {
         "emoji": "📢",
+        "title": "CN Online Tutorial",
+        "body": "We have an online tutorial tomorrow (Thursday (16/5)) at 6:00 PM.",
+        "publishedAt": "2026-04-15T19:00:00",
+        "sub": "CN",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
+    {
+        "emoji": "📢",
         "title": "DB Online Lab",
-        "body": "We have an extra db lab tomorrow (Thursday (16/5)) at 8:00 PM for all groups ",
+        "body": "We have an extra online lab tomorrow (Thursday (16/5)) at 8:00 PM for all groups ",
         "publishedAt": "2026-04-15T18:07:00",
         "sub": "DB",
         "hasEvent": true,
