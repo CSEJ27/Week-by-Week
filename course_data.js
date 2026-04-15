@@ -18214,7 +18214,7 @@ window.SCHEDULE_DATA = [
                 "whereNote": "",
                 "coverageLink": "https://drive.google.com/file/d/1ovDTenczbUWsiABBFEbaRCbMvMd8UUqM/view?usp=drive_link",
                 "coverageNote": "Check the details of the assignment here!",
-                "submitText": "",
+                "submitText": "Google Classroom ",
                 "submitLink": "",
                 "submitNote": "",
                 "deadlineDate": "19/04/2026 11:59 PM",
