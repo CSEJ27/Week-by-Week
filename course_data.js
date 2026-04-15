@@ -18335,6 +18335,29 @@ window.SCHEDULE_DATA = [
                 "deadlineDate": "",
                 "deadlineEndDate": "",
                 "isCompleted": false
+            },
+            {
+                "sub": "DB",
+                "name": "Quiz 2 (Sections 2,4)",
+                "icon": "🧠",
+                "when": "Saturday (18/4) at 4:30 PM",
+                "where": "Hall 261",
+                "coverage": "Labs 3,4 and 5",
+                "note": "The quiz will be an SQL problem, the quiz will cover only these 3 labs (no lectures are covered in the quiz), and lastly the quiz is written.",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
             }
         ],
         "dateStart": "2026-04-18",
@@ -18345,7 +18368,7 @@ window.SCHEDULE_DATA = [
         "tasks": [
             {
                 "sub": "DSA",
-                "name": "Quiz",
+                "name": "Quiz 2",
                 "icon": "🧠",
                 "when": "",
                 "where": "",
@@ -18354,7 +18377,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "OS",
-                "name": "Quiz",
+                "name": "Quiz 2",
                 "icon": "🧠",
                 "when": "",
                 "where": "",
@@ -18383,6 +18406,29 @@ window.SCHEDULE_DATA = [
                 "deadlineDate": "01/05/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
+            },
+            {
+                "sub": "DB",
+                "name": "Quiz 2 (Sections 1,3)",
+                "icon": "📝",
+                "when": "Saturday (25/4) at 4:30 PM",
+                "where": "Hall 261",
+                "coverage": "Labs 3,4 and 5",
+                "note": "The quiz will be an SQL problem, the quiz will cover only these 3 labs (no lectures are covered in the quiz), and lastly the quiz is written.",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
             }
         ],
         "dateStart": "2026-04-25",
@@ -18402,7 +18448,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "DB",
-                "name": "Mini Project",
+                "name": "Project Phase 2",
                 "icon": "🚀",
                 "when": "",
                 "where": "",
@@ -18411,7 +18457,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "OS",
-                "name": "Assignment",
+                "name": "Assignment 1",
                 "icon": "📝",
                 "when": "",
                 "where": "",
@@ -18420,7 +18466,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "AI",
-                "name": "Quiz",
+                "name": "Quiz 2",
                 "icon": "🧠",
                 "when": "",
                 "where": "",
@@ -18486,7 +18532,7 @@ window.SCHEDULE_DATA = [
         "tasks": [
             {
                 "sub": "CA",
-                "name": "Quiz",
+                "name": "Quiz 2",
                 "icon": "🧠",
                 "when": "",
                 "where": "",
@@ -18495,7 +18541,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "DB",
-                "name": "Mini Project",
+                "name": "Project Phase 3",
                 "icon": "🚀",
                 "when": "",
                 "where": "",
@@ -18504,7 +18550,7 @@ window.SCHEDULE_DATA = [
             },
             {
                 "sub": "CN",
-                "name": "Quiz",
+                "name": "Quiz 2",
                 "icon": "🧠",
                 "when": "",
                 "where": "",
@@ -18565,7 +18611,7 @@ window.SCHEDULE_DATA = [
         "tasks": [
             {
                 "sub": "CA",
-                "name": "Assignment",
+                "name": "Assignment 3",
                 "icon": "📝",
                 "when": "",
                 "where": "",
@@ -19667,6 +19713,19 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "DB Online Lab",
+        "body": "We have an extra db lab tomorrow (Thursday (16/5)) at 8:00 PM for all groups ",
+        "publishedAt": "2026-04-15T18:07:00",
+        "sub": "DB",
+        "hasEvent": true,
+        "eventDate": "2026-04-16",
+        "eventTime": "20:00",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "CA Lecture's Compensation ",
