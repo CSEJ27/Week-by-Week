@@ -18210,6 +18210,29 @@ window.SCHEDULE_DATA = [
                 "isCompleted": false
             },
             {
+                "sub": "ML",
+                "name": "Quiz 2",
+                "icon": "🧠",
+                "when": "Sunday (19/4) at 12:05 PM",
+                "where": "",
+                "coverage": "Bayes Theorem and class. Metrics",
+                "note": "All questions are on one page (no browsing between pages), formulas/rules should be studied as they won't be given, make sure SEB is working before you come.",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "https://drive.google.com/file/d/1Ifx7Vf49N_vtWFtE_b82_BweRpEZGNWl/view?usp=drive_link",
+                "whereLink": "https://drive.google.com/file/d/1Ifx7Vf49N_vtWFtE_b82_BweRpEZGNWl/view?usp=drive_link",
+                "whenNote": "Check your exact time here!",
+                "whereNote": "Check your place here!",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "SEB",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "19/04/2026 12:05 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
                 "sub": "DSA",
                 "name": "Lab Bonus 5",
                 "icon": "🧪",
@@ -18406,29 +18429,6 @@ window.SCHEDULE_DATA = [
                 "isCompleted": false
             },
             {
-                "sub": "ML",
-                "name": "Quiz 2",
-                "icon": "🧠",
-                "when": "Sunday (19/4)",
-                "where": "",
-                "coverage": "Bayes Theorem and class. Metrics",
-                "note": "",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "",
-                "coverageNote": "",
-                "submitText": "SEB",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
                 "sub": "DSA",
                 "name": "Quiz 2 (Practical 2) - Sec 3,4",
                 "icon": "🧠",
@@ -18481,15 +18481,6 @@ window.SCHEDULE_DATA = [
     {
         "week": 12,
         "tasks": [
-            {
-                "sub": "DSA",
-                "name": "Quiz 2",
-                "icon": "🧠",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
             {
                 "sub": "OS",
                 "name": "Quiz 2",
@@ -18693,22 +18684,6 @@ window.SCHEDULE_DATA = [
                 "deadlineDate": "",
                 "deadlineEndDate": "",
                 "isCompleted": false
-            }
-        ],
-        "dateStart": "2026-05-09",
-        "dateEnd": "2026-05-15"
-    },
-    {
-        "week": 15,
-        "tasks": [
-            {
-                "sub": "CA",
-                "name": "Assignment 3",
-                "icon": "📝",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
             },
             {
                 "sub": "CN",
@@ -18717,11 +18692,58 @@ window.SCHEDULE_DATA = [
                 "when": "",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
             }
         ],
+        "dateStart": "2026-05-09",
+        "dateEnd": "2026-05-15"
+    },
+    {
+        "week": 16,
+        "tasks": [
+            {
+                "sub": "AI",
+                "name": "Project Submission",
+                "icon": "✔️",
+                "when": "Tuesday (28/5) at 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1kPmxLrjlVlNtS2k0CK0hxxagJXwpC-GG/view?usp=drive_link",
+                "coverageNote": "Check the details of the project here!",
+                "submitText": "LMS",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "28/05/2026 11:59 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            }
+        ],
+        "weekName": "FINALS ",
+        "isFinals": true,
+        "isMidterm": false,
         "dateStart": "2026-05-16",
-        "dateEnd": "2026-05-22"
+        "dateEnd": "2026-06-16"
     }
 ];
 
@@ -18842,7 +18864,128 @@ window.MIDTERM_DATA = [
     }
 ];
 
-window.FINAL_DATA = [];
+window.FINAL_DATA = [
+    {
+        "dateLabel": "Saturday · 16 May",
+        "sub": "RB",
+        "examCode": "CSE373s",
+        "time": "Second Period",
+        "date": "2026-05-16",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Monday · 18 May",
+        "sub": "OS",
+        "examCode": "CSE335s",
+        "time": "Second Period",
+        "date": "2026-05-18",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Thursday · 21 May",
+        "sub": "DB",
+        "examCode": "CSE334s",
+        "time": "First Period",
+        "date": "2026-05-21",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Sunday · 24 May",
+        "sub": "QC",
+        "examCode": "CSE418s",
+        "time": "Second Period",
+        "date": "2026-05-24",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Sunday · 24 May",
+        "sub": "SW",
+        "examCode": "CSE337s",
+        "time": "Second Period",
+        "date": "2026-05-24",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Monday · 1 June",
+        "sub": "ML",
+        "examCode": "CSE374s",
+        "time": "Second Period",
+        "date": "2026-06-01",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Saturday · 6 June",
+        "sub": "AI",
+        "examCode": "CSE471s",
+        "time": "First Period",
+        "date": "2026-06-06",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Monday · 8 June",
+        "sub": "CN",
+        "examCode": "CSE351s",
+        "time": "First Period",
+        "date": "2026-06-08",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Saturday · 13 June",
+        "sub": "DSA",
+        "examCode": "CSE333s",
+        "time": "Second Period",
+        "date": "2026-06-13",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    },
+    {
+        "dateLabel": "Tuesday · 16 June",
+        "sub": "CA",
+        "examCode": "CSE313s",
+        "time": "Second Period",
+        "date": "2026-06-16",
+        "note": "",
+        "coverage": "",
+        "where": "",
+        "whereLink": "",
+        "whereNote": ""
+    }
+];
 
 window.STAFF_DATA = [
     {
@@ -19805,6 +19948,19 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "AI Project",
+        "body": "Check out the details of AI project in the semester map!",
+        "publishedAt": "2026-04-18T02:16:00",
+        "sub": "AI",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "DB Lab",
