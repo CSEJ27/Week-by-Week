@@ -20013,12 +20013,12 @@ window.NEWS_DATA = [
     {
         "emoji": "📢",
         "title": "CN Online Tutorial",
-        "body": "We have an online tutorial tomorrow (Thursday (16/5)) at 6:00 PM.",
+        "body": "We have an online tutorial tomorrow (Thursday (16/4)) at 6:00 PM.",
         "publishedAt": "2026-04-15T19:00:00",
         "sub": "CN",
-        "hasEvent": false,
-        "eventDate": "",
-        "eventTime": "",
+        "hasEvent": true,
+        "eventDate": "2026-04-16",
+        "eventTime": "18:00",
         "hasDeadline": false,
         "deadlineDate": "",
         "deadlineTime": ""
