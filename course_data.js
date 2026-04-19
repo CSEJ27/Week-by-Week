@@ -3658,7 +3658,9 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "isNew": true
+                "isNew": true,
+                "badgeText": "Quiz 2 till here!",
+                "showBadge": true
             },
             {
                 "title": "WEEK 10",
@@ -3819,8 +3821,8 @@ window.COURSE_DATA = [
                     }
                 },
                 "locked": false,
-                "badgeText": "Quiz 2 till here!",
-                "showBadge": true,
+                "badgeText": "",
+                "showBadge": false,
                 "isRecent": true,
                 "recentDate": "19/4/2026 9:19 PM",
                 "isNew": true
