@@ -1398,23 +1398,23 @@ window.COURSE_DATA = [
                         "link": "https://youtube.com/playlist?list=PLaL_BACw3AaG1iKBYjw9jPsw8rgu0er8g&si=yFhyOsp26XhMHMq0",
                         "desc": "CH.4 L1 [(1:12:23): END], alongside CH.4 L2",
                         "isNew": false,
-                        "isRecent": true
+                        "isRecent": false
                     },
                     "Alternative": {
                         "vis": true,
                         "link": "https://drive.google.com/drive/folders/140HAYtdZ6ud91lD0LZ8hEbb_SZTVeR-B?usp=drive_link",
                         "desc": "Chapter 4 Part 5 onwards.",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "10/4/2026 9:16 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Another Alt.": {
                         "vis": true,
                         "link": "https://www.youtube.com/playlist?list=PLiIaOwqnv7z_xMK8DYtZyfyaecBjJ09Dk",
                         "desc": "Guide made by Osama. Video 4 from 53 till end and video 5",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "13/4/2026 10:47 PM"
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -1428,7 +1428,8 @@ window.COURSE_DATA = [
                         "link": "https://drive.google.com/file/d/1y-Dk-kYjshCnAm5FqyWGd1TcLHf40g9T/view?usp=drive_link",
                         "desc": "[67: END] excluding slides: 142, 171, 179, 181, 182.",
                         "isNew": false,
-                        "isRecent": true
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Section": {
                         "vis": false,
@@ -1550,8 +1551,9 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "isNew": true,
-                "isRecent": true
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "10/4/2026 9:16 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/13EVTnrmkFV2XtWVyerUkdcD8s-vkZ34C?usp=drive_link",
@@ -3658,9 +3660,11 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "isNew": true,
+                "isNew": false,
                 "badgeText": "Quiz 2 till here!",
-                "showBadge": true
+                "showBadge": true,
+                "recentDate": "10/4/2026 9:16 PM",
+                "isRecent": true
             },
             {
                 "title": "WEEK 10",
@@ -10192,8 +10196,9 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
-                "isNew": true,
-                "isRecent": false
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "10/4/2026 9:16 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1CIqmEG3hlHCfabTtADnfT_NgpCbs2kR1?usp=drive_link",
