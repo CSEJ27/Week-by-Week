@@ -18322,7 +18322,7 @@ window.SCHEDULE_DATA = [
                 "when": "Sunday (19/4) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": "",
+                "note": "Only one of team submit the assignment, submit on google classroom, open the assignment from the classwork tab, and then click on add or create in \"Your work\" section, and then submit your assignment.",
                 "whenLink": "",
                 "whereLink": "",
                 "whenNote": "",
@@ -19971,6 +19971,32 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "ML Project Form",
+        "body": "Complete the sent google form on teams, as its deadline on Friday (24/4) at 11:59 PM.",
+        "publishedAt": "2026-04-19T20:56:00",
+        "sub": "ML",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": true,
+        "deadlineDate": "2026-04-24",
+        "deadlineTime": "23:59"
+    },
+    {
+        "emoji": "📢",
+        "title": "OS Project Form",
+        "body": "Complete the sent google form on teams, as its deadline on Wednesday (22/4) at 11:59 PM.",
+        "publishedAt": "2026-04-19T20:52:00",
+        "sub": "OS",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": true,
+        "deadlineDate": "2026-04-22",
+        "deadlineTime": "23:59"
+    },
     {
         "emoji": "📢",
         "title": "CN Project",
