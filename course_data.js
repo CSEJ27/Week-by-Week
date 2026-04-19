@@ -18737,6 +18737,29 @@ window.SCHEDULE_DATA = [
                 "deadlineDate": "28/05/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
+            },
+            {
+                "sub": "CN",
+                "name": "Manet Experiment ",
+                "icon": "✔️",
+                "when": "Sunday (17/5) at 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1MkzFUrALAs5ninWRnmcgglkTOO6vsozo/view?usp=drive_link",
+                "coverageNote": "Check the details of it here!",
+                "submitText": "Google Classroom ",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
             }
         ],
         "weekName": "FINALS ",
@@ -19948,6 +19971,19 @@ window.UPDATES_DATA = [
 ];
 
 window.NEWS_DATA = [
+    {
+        "emoji": "📢",
+        "title": "CN Project",
+        "body": "Check the details of the MANET experiment in the semester map!",
+        "publishedAt": "2026-04-19T20:35:00",
+        "sub": "CN",
+        "hasEvent": false,
+        "eventDate": "",
+        "eventTime": "",
+        "hasDeadline": false,
+        "deadlineDate": "",
+        "deadlineTime": ""
+    },
     {
         "emoji": "📢",
         "title": "AI Project",
