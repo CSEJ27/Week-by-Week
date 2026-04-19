@@ -18766,7 +18766,8 @@ window.SCHEDULE_DATA = [
         "isFinals": true,
         "isMidterm": false,
         "dateStart": "2026-05-16",
-        "dateEnd": "2026-06-16"
+        "dateEnd": "2026-06-16",
+        "currentLabel": "Finals Month"
     }
 ];
 
