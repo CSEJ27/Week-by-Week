@@ -3321,7 +3321,9 @@ window.COURSE_DATA = [
                 "locked": false,
                 "recentDate": "25/3/2026 9:54 PM",
                 "isRecent": true,
-                "isNew": true
+                "isNew": true,
+                "showBadge": true,
+                "badgeText": "Quiz 2 starts from here!"
             },
             {
                 "title": "WEEK 7",
@@ -3538,7 +3540,168 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/drive/folders/1ma9pXd8Q-v7c6-PXMLUsClLRTnQ81iGl?usp=drive_link",
-                        "desc": "Trees and Algorithms",
+                        "desc": "Ch6 Trees \nCh7 Algorithms",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/1/folders/1yXG6IZqC0dsqGH8XmKtiD1nwIAyIchaU",
+                        "desc": "Lab 8 & Tut 4.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "19/4/2026 9:22 PM"
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true
+            },
+            {
+                "title": "WEEK 10",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/Xr1YxV7ivxw",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1GrI34KzHRYragpdMpxYxOBUB7SkYboaQ/view?usp=drive_link",
+                        "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -3655,6 +3818,11 @@ window.COURSE_DATA = [
                         "isRecent": false
                     }
                 },
+                "locked": false,
+                "badgeText": "Quiz 2 till here!",
+                "showBadge": true,
+                "isRecent": true,
+                "recentDate": "19/4/2026 9:19 PM",
                 "isNew": true
             }
         ],
@@ -13171,8 +13339,8 @@ window.COURSE_DATA = [
                 "isRecent": true,
                 "recentDate": "13/2/2026 3:45 PM",
                 "isNew": false,
-                "badgeText": "Quiz 1 starts from here!",
-                "showBadge": true
+                "badgeText": "",
+                "showBadge": false
             },
             {
                 "title": "WEEK 2",
@@ -13347,7 +13515,7 @@ window.COURSE_DATA = [
                 "isNew": false,
                 "isRecent": true,
                 "recentDate": "20/2/2026 10:23 PM",
-                "badgeText": "Start of quiz 1.",
+                "badgeText": "Quiz 1 starts from here!",
                 "showBadge": true
             },
             {
@@ -14036,7 +14204,7 @@ window.COURSE_DATA = [
                 "isNew": false,
                 "isRecent": true,
                 "recentDate": "21/3/2026 11:43 PM",
-                "badgeText": "Midterm till here!",
+                "badgeText": "Midterm till here and Quiz 2 starts from here!",
                 "showBadge": true,
                 "badgeColor": "#193800"
             },
@@ -14200,7 +14368,9 @@ window.COURSE_DATA = [
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "10/4/2026 9:35 PM"
+                "recentDate": "10/4/2026 9:35 PM",
+                "showBadge": true,
+                "badgeText": "Quiz 2 till here!"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link",
@@ -18641,15 +18811,6 @@ window.SCHEDULE_DATA = [
                 "note": ""
             },
             {
-                "sub": "AI",
-                "name": "Mini Project",
-                "icon": "🚀",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
                 "sub": "ML",
                 "name": "Project Presentation",
                 "icon": "📽️",
@@ -18670,29 +18831,6 @@ window.SCHEDULE_DATA = [
                 "where": "",
                 "coverage": "",
                 "note": "the time not scheduled yet :)",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "",
-                "coverageNote": "",
-                "submitText": "",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
-                "sub": "CN",
-                "name": "Mini Project",
-                "icon": "🚀",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": "",
                 "noteLink": "",
                 "noteNote": "",
                 "whenLink": "",
