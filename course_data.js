@@ -12220,7 +12220,7 @@ window.COURSE_DATA = [
                     "Another Alt.": {
                         "vis": true,
                         "link": "https://youtu.be/qK46ET1xk2A?si=fDvSO7bUnqLlhiLI",
-                        "desc": "CS50 is great for concept grasping but make sure to check the lecture/tutorial for the exact material we have",
+                        "desc": "From 51 till end. CS50 is great for concept grasping but make sure to check the lecture/tutorial for the exact material we have",
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "20/4/2026 4:28 AM"
