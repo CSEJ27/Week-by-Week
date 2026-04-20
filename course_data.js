@@ -10575,11 +10575,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=smwsoBvbZ7M",
                         "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 8:06 PM"
                     },
                     "Section Slides": {
                         "vis": false,
