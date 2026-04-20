@@ -3837,7 +3837,7 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "link": "https://youtu.be/gwSjMiYd1Y8",
-                        "desc": "From start till 2:14",
+                        "desc": "From start till 2:14:08",
                         "isNew": false,
                         "isRecent": false
                     },
