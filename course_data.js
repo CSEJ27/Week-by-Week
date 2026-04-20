@@ -3837,7 +3837,7 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "link": "https://youtu.be/gwSjMiYd1Y8",
-                        "desc": "",
+                        "desc": "From start till 2:14",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -6287,11 +6287,11 @@ window.COURSE_DATA = [
                     },
                     "Section": {
                         "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVlailWUGWHJIQOWBthgzedp",
-                        "desc": "",
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmzQzHugpyMIubimKg_-Hdv",
+                        "desc": "Section 6&7",
                         "isNew": true,
                         "isRecent": true,
-                        "recentDate": "20/4/2026 8:00 PM"
+                        "recentDate": "20/4/2026 8:32 PM"
                     },
                     "Section Slides": {
                         "vis": true,
