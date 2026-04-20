@@ -3172,8 +3172,8 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt  Vid",
-                        "desc": "- Videos No. 10&11 in this playlist.\n- Note that it's not complete, he only covered stack&queue using linked lists, he skipped using static and dynamic array, due to lack of time we won't be able to provide a good alt for now (after midterm we will) so for now focus on the lab & tutorial.",
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVn4QH9g-MWtFaaZNxbOI-_o&si=4S4BsHO39XSjfEAE",
+                        "desc": "- Note that it's not complete, so check the lab & tutorial.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -3339,12 +3339,12 @@ window.COURSE_DATA = [
                         "recentDate": "26/3/2026 12:19 AM"
                     },
                     "Alternative": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt",
-                        "desc": "videos 10 & 11 in the playlist ",
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "6/4/2026 7:33 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -3386,7 +3386,7 @@ window.COURSE_DATA = [
                     },
                     "Lab Slides": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1owO76jzRanfkZGqyJrmvIYrA1ILj3d9v?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1mYpWYS-2HggD1PywZzBh3o32HSRVQt66/view?usp=drive_link",
                         "desc": "",
                         "isNew": true,
                         "isRecent": true,
@@ -3400,20 +3400,20 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Alt.": {
-                        "vis": true,
-                        "link": "https://youtu.be/p-K5OeYuqUE?si=mL-tKa2fYicwJpGs",
-                        "desc": "Alt for Stack",
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "6/4/2026 7:34 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Another Alt.2": {
-                        "vis": true,
-                        "link": "https://youtu.be/IZrSxbz6uFk?si=bAVv5SiJwUT2FYT9",
-                        "desc": "Alt for Queue",
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
                         "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "6/4/2026 7:34 PM"
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Guide (Explanation)": {
                         "vis": false,
@@ -3437,11 +3437,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/18GGqyP2OjLeyzi3qHYTFK5G-pL000RmR/view?usp=drive_link",
+                        "desc": "This section covered STL, and also Algorithm Efficiency, which is covered in w9. ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 10:55 PM"
                     },
                     "Sheet Answer": {
                         "vis": false,
@@ -3569,11 +3570,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1oiKEslE9xhAdrnOy9s3Pd3P6GmDdnx9f/view?usp=drive_link",
+                        "desc": "This lab covered Trees.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 10:57 PM"
                     },
                     "Topic Related Questions ": {
                         "vis": false,
@@ -3618,11 +3620,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/18GGqyP2OjLeyzi3qHYTFK5G-pL000RmR/view?usp=drive_link",
+                        "desc": "This section covered Algorithm Efficiency, and also STL which is covered in w7. ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 10:56 PM"
                     },
                     "Sheet Answer": {
                         "vis": false,
@@ -6576,6 +6579,172 @@ window.COURSE_DATA = [
                 "locked": true,
                 "isNew": false,
                 "badgeColor": "#e92525"
+            },
+            {
+                "title": "SQL",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/1/folders/1yNGRJzAT1nzwGMcnDj64jr0ujGhcgNER",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmFqcQ28LJPzgYJm03f3GBe&si=ljECghB_U9MXwGgc",
+                        "desc": "This is supposed to be covering all the topics that was taken in the labs, please be aware that these topics are not discussed in lectures, but nonetheless they will be included in the final exam.",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lab Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/1/folders/1YbWpMvcjm0xlUyE1DG2TnSaH59VscVCA",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "recentDate": "20/4/2026 10:58 PM",
+                "isRecent": true,
+                "isNew": true,
+                "showBadge": true,
+                "badgeText": "Included in finals!",
+                "badgeColor": "#00787a"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1lbwvAUj2btfs1BCkFVZRyhURfu2bbGx-?usp=drive_link",
@@ -6928,8 +7097,89 @@ window.COURSE_DATA = [
         ],
         "playlists": [
             {
-                "title": "Eng. Ahmed Fawzi – Spring 2026",
+                "title": "Eng. Ahmed Fawzi & Eng. Mohamed Musaad – Spring 2026",
                 "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmzQzHugpyMIubimKg_-Hdv&si=aDjee-Le_b9Yybhm",
+                "icon": "👥",
+                "note": "",
+                "group": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    },
+                    {
+                        "text": "Labs",
+                        "color": "#ff3b30"
+                    }
+                ]
+            },
+            {
+                "title": "SQL Practice",
+                "link": "https://www.sql-practice.com/",
+                "icon": "🌐",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Questions",
+                        "color": "#b300ad"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Yomna – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PL0LvIAr-YxdRcxU2E6vetoWhfYl2v-jVh&si=TSz5XZd9dBTagWEC",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Yomna",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Yomna – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjePHlm2mKixQgCtAB9CEd8Ob&si=j1Ous0aWLaQZadnn",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Yomna",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hoda – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKEd7EkVEiHekPYrEOSrzb9&si=_SjR8I8w1mdbp8dy",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hoda",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hoda – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGOX0Iy2PAMIQOYBsrV_lVO&si=deQD_3Ac1GpHDr0a",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hoda",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Fawzy – Spring 2025",
+                "link": "https://youtube.com/playlist?list=PL0LvIAr-YxdSI_Xp-4x1IEWuHsku8Chh8&si=WNNrV_hhJnKZUP5R",
                 "icon": "👥",
                 "note": "",
                 "group": "Eng. Ahmed Fawzy",
@@ -6941,66 +7191,29 @@ window.COURSE_DATA = [
                 ]
             },
             {
-                "title": "Dr. Yomna – Spring 2025",
-                "link": "https://youtube.com/playlist?list=PL0LvIAr-YxdRcxU2E6vetoWhfYl2v-jVh&si=TSz5XZd9dBTagWEC",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Yomna",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
-            },
-            {
-                "title": "Dr. Hoda – Spring 2024",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKEd7EkVEiHekPYrEOSrzb9&si=_SjR8I8w1mdbp8dy",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Hoda",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
-            },
-            {
-                "title": "Dr. Hoda – Spring 2023",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGOX0Iy2PAMIQOYBsrV_lVO&si=deQD_3Ac1GpHDr0a",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Hoda",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
-            },
-            {
-                "title": "Dr. Yomna – Fall 2022",
-                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjePHlm2mKixQgCtAB9CEd8Ob&si=j1Ous0aWLaQZadnn",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Yomna",
-                "badgeText": "Lectures",
-                "badgeColor": "#007aff"
-            },
-            {
-                "title": "Eng. Ahmed Fawzy – Spring 2025",
-                "link": "https://youtube.com/playlist?list=PL0LvIAr-YxdSI_Xp-4x1IEWuHsku8Chh8&si=WNNrV_hhJnKZUP5R",
-                "icon": "👥",
-                "note": "",
-                "group": "Eng. Ahmed Fawzy",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
-            },
-            {
                 "title": "Eng. Ahmed Fawzy – Spring 2024",
                 "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKZbk4PMO5ZJDpOzKHprN0k&si=SdXvPzr8tEI7B66y",
                 "icon": "👥",
                 "note": "",
                 "group": "Eng. Ahmed Fawzy",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Eng. Fady Faragallah – Spring 2023",
                 "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHyw-QOicVPy0xE4dA7GGT1&si=4uMqzS3Zx5dn0K_h",
                 "icon": "👥",
                 "note": "",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Eng. Diana Nabil – Fall 2022",
@@ -7008,8 +7221,12 @@ window.COURSE_DATA = [
                 "icon": "👥",
                 "note": "",
                 "group": "Eng. Diana Nabil",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Eng. Diana Nabil – Summer 2022",
@@ -7017,8 +7234,12 @@ window.COURSE_DATA = [
                 "icon": "👥",
                 "note": "",
                 "group": "Eng. Diana Nabil",
-                "badgeText": "Tutorials",
-                "badgeColor": "#34c759"
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
             },
             {
                 "title": "Eng. Mai AboZaid – Spring 2022 Revision",
@@ -7026,8 +7247,12 @@ window.COURSE_DATA = [
                 "icon": "📝",
                 "note": "",
                 "group": "Revision",
-                "badgeText": "Revision",
-                "badgeColor": "#ff9500"
+                "badges": [
+                    {
+                        "text": "Revision",
+                        "color": "#ff9500"
+                    }
+                ]
             },
             {
                 "title": "ERD + SQL Lab – Eng. Abrar",
@@ -7035,26 +7260,12 @@ window.COURSE_DATA = [
                 "icon": "🌟",
                 "note": "Very Useful",
                 "group": "Revision",
-                "badgeText": "Revision",
-                "badgeColor": "#ff9500"
-            },
-            {
-                "title": "CMU Intro to Database Systems (15-445/645 – Fall 2025)",
-                "link": "https://youtube.com/playlist?list=PLSE8ODhjZXjYMAgsGH-GtY5rJYZ6zjsd5&si=n7MfObWVvbqrEnvp",
-                "icon": "🎓",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
-            },
-            {
-                "title": "Eng. Mahmoud Fawzy – Fall 2018",
-                "link": "https://youtube.com/playlist?list=PLAuF74dVvpM1R6ofdBQyti-O5dK3WmQJb&si=NDUyGEYuhmpAiTbt",
-                "icon": "▶️",
-                "note": "",
-                "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "Revision",
+                        "color": "#ff9500"
+                    }
+                ]
             },
             {
                 "title": "Mohamed El Desouki – Theoretical Part",
@@ -7062,8 +7273,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "Mohamed El Desouki",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "Mohamed El Desouki – Lectures",
@@ -7071,8 +7286,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "Mohamed El Desouki",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "Mohamed El Desouki – Labs",
@@ -7080,8 +7299,12 @@ window.COURSE_DATA = [
                 "icon": "💻",
                 "note": "",
                 "group": "Mohamed El Desouki",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "Mohamed El Desouki – MS SQL Server For Beginners",
@@ -7089,8 +7312,38 @@ window.COURSE_DATA = [
                 "icon": "💻",
                 "note": "",
                 "group": "Mohamed El Desouki",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mahmoud Fawzy – Fall 2018",
+                "link": "https://youtube.com/playlist?list=PLAuF74dVvpM1R6ofdBQyti-O5dK3WmQJb&si=NDUyGEYuhmpAiTbt",
+                "icon": "▶️",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "CMU Intro to Database Systems (15-445/645 – Fall 2025)",
+                "link": "https://youtube.com/playlist?list=PLSE8ODhjZXjYMAgsGH-GtY5rJYZ6zjsd5&si=n7MfObWVvbqrEnvp",
+                "icon": "🎓",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "Bess Gates (Eng. Ramy) – SQL ITI",
@@ -7098,8 +7351,12 @@ window.COURSE_DATA = [
                 "icon": "💻",
                 "note": "",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "Neso Academy – DBMS",
@@ -7107,8 +7364,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "Mohsen",
@@ -7116,8 +7377,12 @@ window.COURSE_DATA = [
                 "icon": "▶️",
                 "note": "",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             },
             {
                 "title": "CS50's Introduction to Databases with SQL",
@@ -7125,8 +7390,12 @@ window.COURSE_DATA = [
                 "icon": "🎓",
                 "note": "",
                 "group": "External",
-                "badgeText": "External",
-                "badgeColor": "#5856d6"
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
             }
         ],
         "color": "#34c759",
@@ -18738,7 +19007,7 @@ window.COURSE_DATA = [
 
 window.SUBJECT_DETAILS_DATA = {
     "CN": {
-        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes: UNKOWN\nLab Reports: UNKOWN\nAssignments: UNKOWN\nProject: UNKOWN",
+        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes (2): 20\nLab Reports: UNKOWN\nAssignments: UNKOWN\nProject: UNKOWN",
         "examTypes": "Final: Written\nMidterm: MCQ\nQuizzes: MCQ",
         "generalNotes": "Dr. Hossam cares about attendance very much, so make sure you attend or you'll face a very harsh fate 💀, attend and make sure you type what he LITERALLY said, don't think stating the answer from your perspective or your understanding will be enough, you need to say exactly what he said."
     },
@@ -19481,29 +19750,6 @@ window.SCHEDULE_DATA = [
                 "deadlineDate": "17/04/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
-            },
-            {
-                "sub": "DSA",
-                "name": "Assignment 1",
-                "icon": "📝",
-                "when": "Friday (17/4) 11:59 PM",
-                "where": "",
-                "coverage": "",
-                "note": "",
-                "noteLink": "https://drive.google.com/file/d/12NdtUfPN7mBSpZfu-Eup7GAbUVd72OlW/view?usp=drive_link",
-                "noteNote": "Make sure you follow this guide to join the contest on codeforces",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "",
-                "coverageNote": "",
-                "submitText": "CodeForces",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "17/04/2026 11:59 PM",
-                "deadlineEndDate": "",
-                "isCompleted": false
             }
         ],
         "dateStart": "2026-04-11",
@@ -19555,75 +19801,6 @@ window.SCHEDULE_DATA = [
                 "submitLink": "",
                 "submitNote": "",
                 "deadlineDate": "19/04/2026 12:05 PM",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
-                "sub": "DSA",
-                "name": "Lab Bonus 5",
-                "icon": "🧪",
-                "when": "Sunday (19/4) at 11:59 PM",
-                "where": "",
-                "coverage": "Lab 5",
-                "note": "",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "https://drive.google.com/file/d/1kXv6jiBFomyMRaCDJXL508zSkz5umDZm/view?usp=drive_link",
-                "coverageNote": "Check the details here!",
-                "submitText": "LMS",
-                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=197819",
-                "submitNote": "Submit here!",
-                "deadlineDate": "19/04/2026 11:59 PM",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
-                "sub": "DSA",
-                "name": "Lab Bonus 6",
-                "icon": "🧪",
-                "when": "Sunday (19/4) at 11:59 PM",
-                "where": "",
-                "coverage": "Lab 6",
-                "note": "",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "https://drive.google.com/file/d/1vw5VFL0qpUJ61p48oNsVyP4sKqw6mOpV/view?usp=drive_link",
-                "coverageNote": "Check the details here!",
-                "submitText": "LMS",
-                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=197820",
-                "submitNote": "Submit here!",
-                "deadlineDate": "19/04/2026 11:59 PM",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
-                "sub": "DSA",
-                "name": "Lab Bonus 7",
-                "icon": "🧪",
-                "when": "Sunday (19/4) at 11:59 PM",
-                "where": "",
-                "coverage": "Lab 7",
-                "note": "",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "https://drive.google.com/file/d/1GquFPRHdh8ICNBCkTcHE-ll54oTa7Zmg/view?usp=drive_link",
-                "coverageNote": "Check the details here!",
-                "submitText": "LMS",
-                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=197858",
-                "submitNote": "Submit here!",
-                "deadlineDate": "19/04/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
             },
@@ -19686,6 +19863,121 @@ window.SCHEDULE_DATA = [
                 "isCompleted": false
             },
             {
+                "sub": "DSA",
+                "name": "Assignment 1",
+                "icon": "📝",
+                "when": "Monday (20/4) 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "noteLink": "https://drive.google.com/file/d/12NdtUfPN7mBSpZfu-Eup7GAbUVd72OlW/view?usp=drive_link",
+                "noteNote": "Make sure you follow this guide to join the contest on codeforces",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "CodeForces",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "20/04/2026 11:59 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "DSA",
+                "name": "Quiz 2 (Practical 2)",
+                "icon": "🧠",
+                "when": "Thursday (23/4) at 10:00 AM",
+                "where": "",
+                "coverage": "From Chapter 3 to end of Chapter 7 (Stacks, Queues, Templates, STL, Binary trees, Algorithm efficiency)",
+                "note": "The quiz is written, and it will be 30 minutes long.\n- 10:00 am: sec. 1,2\n- 10:30 am: sec. 3,4",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "23/04/2026 10:00 AM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "DSA",
+                "name": "Lab Bonus 7",
+                "icon": "🧪",
+                "when": "Thursday (23/4) at 11:59 PM",
+                "where": "",
+                "coverage": "Lab 7",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1GquFPRHdh8ICNBCkTcHE-ll54oTa7Zmg/view?usp=drive_link",
+                "coverageNote": "Check the details here!",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=197858",
+                "submitNote": "Submit here!",
+                "deadlineDate": "23/04/2026 11:59 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "DSA",
+                "name": "Lab Bonus 6",
+                "icon": "🧪",
+                "when": "Thursday (23/4) at 11:59 PM",
+                "where": "",
+                "coverage": "Lab 6",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1vw5VFL0qpUJ61p48oNsVyP4sKqw6mOpV/view?usp=drive_link",
+                "coverageNote": "Check the details here!",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=197820",
+                "submitNote": "Submit here!",
+                "deadlineDate": "23/04/2026 11:59 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "DSA",
+                "name": "Lab Bonus 5",
+                "icon": "🧪",
+                "when": "Thursday (23/4) at 11:59 PM",
+                "where": "",
+                "coverage": "Lab 5",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1kXv6jiBFomyMRaCDJXL508zSkz5umDZm/view?usp=drive_link",
+                "coverageNote": "Check the details here!",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=197819",
+                "submitNote": "Submit here!",
+                "deadlineDate": "23/04/2026 11:59 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
                 "sub": "SW",
                 "name": "Assignment sheet 4",
                 "icon": "📝",
@@ -19704,6 +19996,29 @@ window.SCHEDULE_DATA = [
                 "submitText": "",
                 "submitLink": "",
                 "submitNote": "",
+                "deadlineDate": "24/04/2026 11:59 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "ML",
+                "name": "Assignment 1",
+                "icon": "📝",
+                "when": "Friday (24/4) at 11:59 PM",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "https://drive.google.com/file/d/1YEdFEYe1iEVv-OVt7JFGEdCOGai_U27c/view?usp=drive_link",
+                "coverageNote": "Check the details here!",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=195483",
+                "submitNote": "Submit here!",
                 "deadlineDate": "24/04/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
@@ -19753,52 +20068,6 @@ window.SCHEDULE_DATA = [
                 "deadlineDate": "23/04/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
-            },
-            {
-                "sub": "DSA",
-                "name": "Quiz 2 (Practical 2) - Sec 3,4",
-                "icon": "🧠",
-                "when": "Tuesday (21/4) at 9:30 AM",
-                "where": "Hall 319",
-                "coverage": "From Chapter 3 to end of Chapter 7 (Stacks, Queues, Templates, STL, Binary trees, Algorithm efficiency)",
-                "note": "The quiz is written, and it will be 30 minutes long.",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "",
-                "coverageNote": "",
-                "submitText": "",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
-                "sub": "DSA",
-                "name": "Quiz 2 (Practical 2) - Sec 1,2",
-                "icon": "🧠",
-                "when": "Thursday (23/4) at 9:30 AM",
-                "where": "",
-                "coverage": "From Chapter 3 to end of Chapter 7 (Stacks, Queues, Templates, STL, Binary trees, Algorithm efficiency)",
-                "note": "The quiz is written, and it will be 30 minutes long.",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "",
-                "coverageNote": "",
-                "submitText": "",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "",
-                "deadlineEndDate": "",
-                "isCompleted": false
             }
         ],
         "dateStart": "2026-04-18",
@@ -19811,10 +20080,13 @@ window.SCHEDULE_DATA = [
                 "sub": "OS",
                 "name": "Quiz 2",
                 "icon": "🧠",
-                "when": "",
+                "when": "Wednesday (29/4) from 11:45 AM to 12:00 PM",
                 "where": "",
-                "coverage": "",
-                "note": ""
+                "coverage": "Chapter 6 & 8.",
+                "note": "The quiz duration is 10 minutes.",
+                "deadlineDate": "29/04/2026 11:45 AM",
+                "deadlineEndDate": "29/04/2026 12:00 PM",
+                "submitText": "LMS"
             },
             {
                 "sub": "SW",
@@ -19940,6 +20212,18 @@ window.SCHEDULE_DATA = [
         "week": 14,
         "tasks": [
             {
+                "sub": "CN",
+                "name": "Quiz 2",
+                "icon": "🧠",
+                "when": "Wednesday (13/5) at 8:00 PM",
+                "where": "",
+                "coverage": "Chapters 1,2,3,4,5,6",
+                "note": "",
+                "submitText": "Google Classroom",
+                "deadlineDate": "13/05/2026 8:00 PM",
+                "deadlineEndDate": ""
+            },
+            {
                 "sub": "CA",
                 "name": "Quiz 2",
                 "icon": "🧠",
@@ -19952,15 +20236,6 @@ window.SCHEDULE_DATA = [
                 "sub": "DB",
                 "name": "Project Phase 3",
                 "icon": "🚀",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": ""
-            },
-            {
-                "sub": "CN",
-                "name": "Quiz 2",
-                "icon": "🧠",
                 "when": "",
                 "where": "",
                 "coverage": "",
@@ -20510,7 +20785,7 @@ window.STAFF_DATA = [
         "subjects": [
             "DB"
         ],
-        "teamsLink": "mohamed.musaad@cis.asu.edu.eg",
+        "teamsLink": "e08249@eng.asu.edu.eg",
         "note": "Lab TA"
     },
     {
