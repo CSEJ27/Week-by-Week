@@ -7732,11 +7732,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlMIKiYKSLn0MB3-IZM46vX&si=QQHQMiSIVtwQz51y",
+                        "desc": "All of video 1 (Lobna's guide) and video 2 from 31:30 Till End\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:27 AM"
                     },
                     "Slides": {
                         "vis": true,
@@ -8060,11 +8061,12 @@ window.COURSE_DATA = [
                         "recentDate": "10/4/2026 9:19 PM"
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtu.be/DzzdfkoWwEU?si=-SGk4K3slQP7QxE2 From Start Till 35  #CA W9 alt",
+                        "desc": "From Start Till 35",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:27 AM"
                     },
                     "Slides": {
                         "vis": true,
@@ -9721,11 +9723,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1",
+                        "desc": "End of Chapter 5\nlec. 13 part 2 (14:20 -> end)\n\"Pthreads & Thread Scheduling are not covered in this playlist, covered in the Spring 26 recorded tutorial by Eng.Habiba\"\n\nChapter 6\nlec. 9 part 1 (start -> 6:48) \"Race Condition Example is not covered (Slide 8)\"",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:33 AM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -9887,11 +9890,12 @@ window.COURSE_DATA = [
                         "isRecent": true
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1",
+                        "desc": "lec. 9 part 1 (6:58 -> end)\nlec. 9 part 2 (start -> end) \"Slides 15, 17, 22, 23, 24, 26, 27, 29 are not covered\"\n\nThe missing slides are covered in the Old Recorded Eng.Habiba Tutorial 6",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:34 AM"
                     },
                     "Another Alt.": {
                         "vis": true,
@@ -10049,18 +10053,20 @@ window.COURSE_DATA = [
                         "recentDate": "10/4/2026 9:22 PM"
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLLhe0ZInsJiVdbAaoM2rxW2W1rA3iQPf1",
+                        "desc": "lec. 10 part 1 (start -> end)\nlec. 11  part 2 (strat -> end) Ends at Slide 47\n\n\"The Rest of the chapter is not covered in this playlist\"\n\"Old Eng.Habiba Tutorial 7 is not recorded\"\nCHECK ANOTHER ALT FOR THE REST OF THE CHAPTER !!!!!!!!!!",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:37 AM"
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLcwCIYKT3kR1gEkuFnfO9p3IIV0Oxw8j7",
+                        "desc": "Semaphore Lecture (nearly the last quarter of the video)\nClassical Problems Lecture\nMonitor part I Lecture\nMonitor part I Lecture",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:39 AM"
                     },
                     "Another Alt.2": {
                         "vis": false,
@@ -10211,11 +10217,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM",
+                        "desc": "lec. 7 part 1  (start -> end) \nlec. 7 part 2 (start -> end)\nlec. 7 part 3 (start -> end)\nlec. 7 part 4 (start -> 2:45)\n\n\"Slides 2, 4, 5, 6, 7, 11, 18, 19, 20, 24, 25\nare not covered in this playlist and not covered in Eng.Habiba Tutorials\"",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:36 AM"
                     },
                     "Another Alt.": {
                         "vis": false,
@@ -12211,11 +12218,12 @@ window.COURSE_DATA = [
                         "recentDate": "10/4/2026 9:29 PM"
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtu.be/qK46ET1xk2A?si=fDvSO7bUnqLlhiLI",
+                        "desc": "CS50 is great for concept grasping but make sure to check the lecture/tutorial for the exact material we have",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:28 AM"
                     },
                     "Another Alt.2": {
                         "vis": false,
