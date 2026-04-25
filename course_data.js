@@ -13291,11 +13291,11 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "#https://drive.google.com/file/d/1zB9hTshZKNBKW2r-qfC7v1WauNXJK9tI/view?usp=drive_link",
+                        "desc": "Knowledge Representation and Reasoning\nMissing content from slides: Refer to lecture timestamp 1:03:00",
+                        "isNew": true,
+                        "isRecent": true
                     },
                     "Section": {
                         "vis": false,
