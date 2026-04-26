@@ -21740,14 +21740,14 @@ window.NEWS_DATA = [
     {
         "emoji": "📢",
         "title": "DSA Project Form",
-        "body": "Complete the sent google form on teams, as its deadline on Monday (27/4) at 11:59 PM.",
+        "body": "Complete the sent google form on teams, as its deadline on Saturday (2/5) at 11:59 PM.",
         "publishedAt": "2026-04-24T20:16:00",
         "sub": "DSA",
         "hasEvent": false,
         "eventDate": "",
         "eventTime": "",
         "hasDeadline": true,
-        "deadlineDate": "2026-04-27",
+        "deadlineDate": "2026-05-02",
         "deadlineTime": "23:59"
     },
     {
