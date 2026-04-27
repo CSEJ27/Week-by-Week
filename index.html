@@ -2811,37 +2811,16 @@
     function getSubjectUrgency(subCode) {
         const now = Date.now();
         let score = Infinity;
-        const typeWeight = { 'quiz': 0.8, 'midterm': 0.15, 'final': 0.15, 'lab exam': 0.5 };
-
-        if (window.MIDTERM_DATA) {
-            window.MIDTERM_DATA.forEach((exam, idx) => {
-                if (exam.sub !== subCode) return;
-                if (typeof midtermHiddenSet !== 'undefined' && midtermHiddenSet.has(idx)) return;
-                const ts = parseExamDateTime(exam);
-                if (!ts || ts < now) return;
-                const daysLeft = (ts - now) / (1000 * 60 * 60 * 24);
-                const s = daysLeft * 0.12;
-                if (s < score) score = s;
-            });
-        }
-
-        if (window.FINAL_DATA) {
-            window.FINAL_DATA.forEach((exam, idx) => {
-                if (exam.sub !== subCode) return;
-                if (typeof finalHiddenSet !== 'undefined' && finalHiddenSet.has(idx)) return;
-                const ts = parseExamDateTime(exam);
-                if (!ts || ts < now) return;
-                const daysLeft = (ts - now) / (1000 * 60 * 60 * 24);
-                const s = daysLeft * 0.12;
-                if (s < score) score = s;
-            });
-        }
+        const typeWeight = { 'quiz': 0.8, 'lab exam': 0.5 };
 
         if (window.SCHEDULE_DATA) {
-            window.SCHEDULE_DATA.forEach(wk => {
+            window.SCHEDULE_DATA.forEach((wk, wIndex) => {
                 if (!wk.tasks) return;
-                wk.tasks.forEach(t => {
+                wk.tasks.forEach((t, tIndex) => {
                     if (t.sub !== subCode || t.isCompleted) return;
+                    const signature = buildScheduleDeadlineSignature(wIndex, tIndex, wk.week, t);
+                    const status = getDeadlineState(signature);
+                    if (status === 'hidden' || status === 'completed') return;
                     const meta = getTaskEffectiveDeadlineMeta(t, wk.week);
                     if (meta.timestamp === 0) return;
                     const compareTs = meta.hasTime ? meta.timestamp : getEndOfDayTimestamp(meta.timestamp);
@@ -2862,16 +2841,7 @@
         const scores = {};
         const visible = getVisibleCourseSubjects();
         visible.forEach(s => { scores[s.code] = getSubjectUrgency(s.code); });
-        function isSubjectFullyMidtermHidden(subCode) {
-            if (!window.MIDTERM_DATA || typeof midtermHiddenSet === 'undefined') return false;
-            const subExams = window.MIDTERM_DATA.map((e, i) => ({ e, i })).filter(({ e }) => e.sub === subCode);
-            if (subExams.length === 0) return false;
-            return subExams.every(({ i }) => midtermHiddenSet.has(i));
-        }
         return [...visible].sort((a, b) => {
-            const aH = isSubjectFullyMidtermHidden(a.code), bH = isSubjectFullyMidtermHidden(b.code);
-            if (aH && !bH) return 1;
-            if (!aH && bH) return -1;
             return scores[a.code] - scores[b.code];
         });
     }
@@ -7294,6 +7264,32 @@
         return d.toLocaleString([], { year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' });
     }
 
+    function formatDeadlineCompactDateTime(ts) {
+        const d = new Date(ts);
+        if (isNaN(d.getTime())) return '';
+        const day = d.getDate();
+        const month = d.getMonth() + 1;
+        let hour = d.getHours();
+        const minute = String(d.getMinutes()).padStart(2, '0');
+        const ampm = hour >= 12 ? 'PM' : 'AM';
+        hour = hour % 12 || 12;
+        return `(${day}/${month}) at ${hour}:${minute} ${ampm}`;
+    }
+
+    function formatDeadlineTimeLeft(compareTs, nowTs = Date.now()) {
+        const diffMs = (Number(compareTs) || 0) - nowTs;
+        if (diffMs <= 0) return 'overdue';
+        const totalMinutes = Math.floor(diffMs / 60000);
+        const days = Math.floor(totalMinutes / (60 * 24));
+        const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+        const mins = totalMinutes % 60;
+        if (days >= 2) return `${days} days left`;
+        if (days === 1) return 'tomorrow';
+        if (hours >= 8) return 'today';
+        if (hours > 0) return `${hours}h ${mins}m left`;
+        return `${Math.max(mins, 1)}m left`;
+    }
+
     function getExportResources(itemObj) {
         const out = [];
         const conf = (window.CONFIG && window.CONFIG.resources) ? window.CONFIG.resources : [];
@@ -7336,6 +7332,7 @@
 
         if (active === 'deadlines') {
             const items = collectUpcomingDeadlinesData();
+            const nowTs = Date.now();
             // Collect TBD (no date) tasks
             const tbdItems = [];
             (window.SCHEDULE_DATA || []).forEach(wk => {
@@ -7347,7 +7344,13 @@
                 });
             });
             const rowsHtml = items.length ? items.map(it => `<li><b>${eHtml(it.task.sub)} - ${eHtml(it.task.name)}</b> (Week ${it.week})${it.isOngoing ? ' <em>ONGOING</em>' : ''}<br><small>${eHtml(formatDateTs(it.ts))}</small></li>`).join('') : '<li>No upcoming deadlines.</li>';
-            const rowsTxt = items.length ? items.map(it => `- ${it.task.sub} - ${it.task.name} (Week ${it.week})${it.isOngoing ? ' [ONGOING]' : ''} | ${formatDateTs(it.ts)}`).join('\n') : '- No upcoming deadlines.';
+            const rowsTxt = items.length
+                ? items.map(it => {
+                    const compactTs = formatDeadlineCompactDateTime(it.ts);
+                    const leftText = formatDeadlineTimeLeft(it.compareTs || it.ts, nowTs);
+                    return `${it.task.sub} - ${it.task.name}${it.isOngoing ? ' [ONGOING]' : ''}  | ${compactTs} | ${leftText}`;
+                }).join('\n')
+                : '- No upcoming deadlines.';
             const tbdHtml = tbdItems.length ? `<h2>Date TBD</h2><ul>${tbdItems.map(it => `<li><b>${eHtml(it.task.sub)} - ${eHtml(it.task.name)}</b> (Week ${it.week})</li>`).join('')}</ul>` : '';
             const tbdTxt = tbdItems.length ? `\n\n*Date TBD*\n${tbdItems.map(it => `- ${it.task.sub} - ${it.task.name} (Week ${it.week})`).join('\n')}` : '';
             return {
@@ -8044,6 +8047,8 @@
             item && item.body || '',
             item && item.publishedAt || '',
             item && item.sub || '',
+            item && item.linkUrl || '',
+            item && item.linkNote || '',
             item && item.eventDate || '',
             item && item.eventTime || '',
             item && item.deadlineDate || '',
@@ -8094,6 +8099,40 @@
 
     function getVisibleNewsItems() {
         return (window.NEWS_DATA || []).filter(isNewsVisibleToViewer);
+    }
+
+    function getNewsPublishedTs(item) {
+        const ts = item && item.publishedAt ? new Date(item.publishedAt).getTime() : 0;
+        return Number.isFinite(ts) && ts > 0 ? ts : 0;
+    }
+
+    function getNewsUpcomingPriorityTs(item, nowTs = Date.now()) {
+        if (!item) return Number.POSITIVE_INFINITY;
+        const candidates = [];
+        if (item.hasEvent && item.eventDate) {
+            const eventTs = parseNewsDeadlineTs(item.eventDate, item.eventTime ? item.eventTime : '00:00');
+            if (eventTs > nowTs) candidates.push(eventTs);
+        }
+        if (item.hasDeadline && item.deadlineDate) {
+            const dlTs = parseNewsDeadlineTs(item.deadlineDate, item.deadlineTime);
+            if (dlTs > nowTs) candidates.push(dlTs);
+        }
+        return candidates.length ? Math.min(...candidates) : Number.POSITIVE_INFINITY;
+    }
+
+    function sortNewsItemsByPublishedThenUpcoming(items) {
+        const TWO_HOURS_MS = 2 * 60 * 60 * 1000;
+        const nowTs = Date.now();
+        return (items || []).slice().sort((a, b) => {
+            const ta = getNewsPublishedTs(a);
+            const tb = getNewsPublishedTs(b);
+            if (Math.abs(ta - tb) <= TWO_HOURS_MS) {
+                const pa = getNewsUpcomingPriorityTs(a, nowTs);
+                const pb = getNewsUpcomingPriorityTs(b, nowTs);
+                if (pa !== pb) return pa - pb;
+            }
+            return tb - ta;
+        });
     }
 
     function getNewsUnreadCount() {
@@ -8174,18 +8213,7 @@
         const list = document.getElementById('news-items-list');
         if (!list) return;
         const seen = new Set(getSeenNewsKeys());
-        const items = getVisibleNewsItems().slice().sort((a, b) => {
-            if (a.hasEvent && !b.hasEvent) return -1;
-            if (!a.hasEvent && b.hasEvent) return 1;
-            if (a.hasEvent && b.hasEvent) {
-                const ta = parseNewsDeadlineTs(a.eventDate, a.eventTime) || 0;
-                const tb = parseNewsDeadlineTs(b.eventDate, b.eventTime) || 0;
-                return ta - tb;
-            }
-            const ta = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
-            const tb = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
-            return tb - ta;
-        });
+        const items = sortNewsItemsByPublishedThenUpcoming(getVisibleNewsItems());
         if (!items.length) {
             list.innerHTML = '<div style="text-align:center;color:#555;padding:32px 20px;font-style:italic;font-size:0.87rem;">No announcements yet.</div>';
             return;
@@ -8205,12 +8233,19 @@
                 evtHtml = `<span class="ni-dl" style="background:rgba(0, 229, 255, 0.15); border-color:#00E5FF; color:#00E5FF; box-shadow:0 0 10px rgba(0,229,255,0.4);">🗓️ Held on: ${eHtml(elabel)}</span>`;
             }
             const subHtml = item.sub ? `<span class="ni-sub">${eHtml(item.sub)}</span>` : '';
+            const linkUrl = String(item.linkUrl || '').trim();
+            const linkNote = String(item.linkNote || '').trim();
+            const normalizedLink = /^https?:\/\//i.test(linkUrl) ? linkUrl : (linkUrl ? ('https://' + linkUrl) : '');
+            const linkHtml = normalizedLink
+                ? `<div style="margin-top:8px;"><a href="${eHtml(normalizedLink)}" target="_blank" rel="noopener noreferrer" class="modal-url-badge">🔗 ${eHtml(linkNote || 'Open Link')}</a></div>`
+                : '';
             return `<div class="news-item${isUnread ? ' news-unread' : ''}">
                 <div class="ni-inner">
                     <div class="ni-emoji">${item.emoji || '📬'}</div>
                     <div class="ni-body">
                         <div class="ni-title">${eHtml(item.title || '')}</div>
                         ${item.body ? `<div class="ni-note">${eHtml(item.body)}</div>` : ''}
+                        ${linkHtml}
                         <div class="ni-meta">${subHtml}${evtHtml}${dlHtml}<span class="ni-time">${timeAgo}</span></div>
                     </div>
                 </div>
@@ -8277,30 +8312,59 @@
         return `<div class="week-updated-ago">Updated ${label}</div>`;
     }
 
-    // --- Visitor Counter (CounterAPI v1, 6hr cooldown) ---
+    // --- Visitor Counter (countapi + resilient fallback, 6hr cooldown) ---
     (function() {
         var COOLDOWN_MS = 6 * 60 * 60 * 1000;
+        var BASELINE_COUNT = 3800;
+        var BASELINE_DATE_TS = new Date('2026-04-06T00:00:00').getTime();
+        var EST_DAILY_GROWTH = 110;
+        var NAMESPACE = 'free-bobuxs-team';
+        var KEY = 'page-views';
         var lastHit = parseInt(localStorage.getItem('visit_ts') || '0', 10);
+        var cachedCount = parseInt(localStorage.getItem('visit_count_cache') || '0', 10);
         if (isNaN(lastHit)) lastHit = 0;
+        if (isNaN(cachedCount)) cachedCount = 0;
         var shouldCount = Date.now() - lastHit > COOLDOWN_MS;
+        var nowTs = Date.now();
+        var daysSinceBaseline = Math.max(0, Math.floor((nowTs - BASELINE_DATE_TS) / (24 * 60 * 60 * 1000)));
+        var estimatedNow = BASELINE_COUNT + (daysSinceBaseline * EST_DAILY_GROWTH);
         var url = shouldCount
-            ? 'https://api.counterapi.dev/v1/free-bobuxs-team/page-views/up'
-            : 'https://api.counterapi.dev/v1/free-bobuxs-team/page-views/';
+            ? ('https://api.countapi.xyz/hit/' + NAMESPACE + '/' + KEY)
+            : ('https://api.countapi.xyz/get/' + NAMESPACE + '/' + KEY);
+
+        function setDisplayedCount(value) {
+            var el = document.getElementById('visit-count');
+            if (!el) return;
+            el.textContent = Number(value || 0).toLocaleString();
+            maybeShowVisitCelebration(Number(value || 0));
+        }
+
+        function setFallbackCount() {
+            var fallback = Math.max(cachedCount || 0, estimatedNow);
+            if (shouldCount) fallback = Math.max(fallback, (cachedCount || estimatedNow) + 1);
+            localStorage.setItem('visit_count_cache', String(fallback));
+            if (shouldCount) localStorage.setItem('visit_ts', String(Date.now()));
+            setDisplayedCount(fallback);
+        }
+
         fetch(url)
             .then(function(r) { return r.json(); })
             .then(function(data) {
-                if (shouldCount) localStorage.setItem('visit_ts', String(Date.now()));
-                var el = document.getElementById('visit-count');
-                if (el && data && typeof data.count === 'number') {
-                    el.textContent = data.count.toLocaleString();
-                    maybeShowVisitCelebration(data.count);
-                } else if (el) {
-                    el.textContent = '\u2014';
+                var apiValue = (data && typeof data.value === 'number') ? data.value : NaN;
+                if (!isNaN(apiValue)) {
+                    var finalCount = Math.max(apiValue, cachedCount || 0, estimatedNow);
+                    if (shouldCount) {
+                        finalCount = Math.max(finalCount, (cachedCount || estimatedNow) + 1);
+                        localStorage.setItem('visit_ts', String(Date.now()));
+                    }
+                    localStorage.setItem('visit_count_cache', String(finalCount));
+                    setDisplayedCount(finalCount);
+                } else {
+                    setFallbackCount();
                 }
             })
             .catch(function() {
-                var el = document.getElementById('visit-count');
-                if (el) el.textContent = '\u2014';
+                setFallbackCount();
             });
 
         function maybeShowVisitCelebration(count) {

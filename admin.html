@@ -191,6 +191,9 @@
     let dragSrcIndex = null; 
     let viewMode = 'editor'; 
     let subViewMode = 'weeks'; 
+    let adminScheduleSubjectFilter = new Set();
+    let adminScheduleTypeFilter = new Set();
+    let adminScheduleFiltersOpen = false;
     let previewEnabled = false;
     let previewDebounceTimer = null;
 
@@ -231,6 +234,161 @@
             if(ampm === 'PM' && h < 12) h += 12; if(ampm === 'AM' && h === 12) h = 0;
             return new Date(dParts[2], dParts[1]-1, dParts[0], h, m);
         } catch(e) { return null; }
+    }
+
+    function pad2(v) { return String(v).padStart(2, '0'); }
+
+    function formatLocalDateTimeValue(dateObj) {
+        if (!(dateObj instanceof Date) || Number.isNaN(dateObj.getTime())) return '';
+        return `${dateObj.getFullYear()}-${pad2(dateObj.getMonth() + 1)}-${pad2(dateObj.getDate())}T${pad2(dateObj.getHours())}:${pad2(dateObj.getMinutes())}`;
+    }
+
+    function getNowLocalDateTimeString() {
+        return `${formatLocalDateTimeValue(new Date())}:00`;
+    }
+
+    function parseStoredDateTime(value) {
+        if (!value || !String(value).trim()) return null;
+        const txt = String(value).trim();
+
+        const localIso = txt.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2}))?$/);
+        if (localIso) {
+            return new Date(
+                parseInt(localIso[1], 10),
+                parseInt(localIso[2], 10) - 1,
+                parseInt(localIso[3], 10),
+                parseInt(localIso[4], 10),
+                parseInt(localIso[5], 10),
+                parseInt(localIso[6] || '0', 10)
+            );
+        }
+
+        const d = new Date(txt);
+        return Number.isNaN(d.getTime()) ? null : d;
+    }
+
+    function getPublishedAtInputValue(value) {
+        const dt = parseStoredDateTime(value);
+        return dt ? formatLocalDateTimeValue(dt) : '';
+    }
+
+    function setNewsPublishedAtFromInput(idx, inputValue) {
+        if (typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
+        if (!window.NEWS_DATA[idx]) return;
+        window.NEWS_DATA[idx].publishedAt = inputValue ? `${inputValue}:00` : '';
+        markDirty();
+    }
+
+    function getNewsPcDeltaLabel(value) {
+        const dt = parseStoredDateTime(value);
+        if (!dt) return 'No publish time set.';
+        const now = new Date();
+        const diffMin = Math.round((dt.getTime() - now.getTime()) / 60000);
+        const absMin = Math.abs(diffMin);
+        if (absMin < 1) return 'Matches your PC time.';
+        const dir = diffMin > 0 ? 'ahead of' : 'behind';
+        if (absMin < 60) return `${absMin} minute${absMin === 1 ? '' : 's'} ${dir} your PC time.`;
+        const hrs = Math.round((absMin / 60) * 10) / 10;
+        return `${hrs} hour${hrs === 1 ? '' : 's'} ${dir} your PC time.`;
+    }
+
+    function syncNewsPublishedAtNow(idx) {
+        if (!window.NEWS_DATA || !window.NEWS_DATA[idx]) return;
+        window.NEWS_DATA[idx].publishedAt = getNowLocalDateTimeString();
+        markDirty();
+        renderNewsManager();
+    }
+
+    function inferScheduleTaskType(task) {
+        const rawName = ((task && task.name) || '').trim();
+        const lowerName = rawName.toLowerCase();
+        const presets = (window.CONFIG && window.CONFIG.taskPresets) || [];
+
+        for (const preset of presets) {
+            const pName = (preset && preset.name) ? preset.name.trim() : '';
+            if (!pName) continue;
+            const pLower = pName.toLowerCase();
+            if (lowerName === pLower || lowerName.startsWith(`${pLower} `) || lowerName.includes(pLower)) return pName;
+        }
+
+        return rawName || 'Other';
+    }
+
+    function getAdminSchedulePresetOptions() {
+        return ((window.CONFIG && window.CONFIG.taskPresets) || [])
+            .map(p => ({
+                name: (p && p.name ? p.name.trim() : ''),
+                icon: (p && p.icon ? p.icon : '📝')
+            }))
+            .filter(p => p.name);
+    }
+
+    function taskPassesAdminScheduleFilters(task) {
+        const subOk = adminScheduleSubjectFilter.size === 0 || adminScheduleSubjectFilter.has(task.sub || '');
+        const typeOk = adminScheduleTypeFilter.size === 0 || adminScheduleTypeFilter.has(inferScheduleTaskType(task));
+        return subOk && typeOk;
+    }
+
+    function toggleAdminScheduleSubjectFilter(code) {
+        if (!code) return;
+        if (adminScheduleSubjectFilter.has(code)) adminScheduleSubjectFilter.delete(code);
+        else adminScheduleSubjectFilter.add(code);
+        refreshScheduleViews();
+    }
+
+    function toggleAdminScheduleTypeFilter(typeName) {
+        if (!typeName) return;
+        if (adminScheduleTypeFilter.has(typeName)) adminScheduleTypeFilter.delete(typeName);
+        else adminScheduleTypeFilter.add(typeName);
+        refreshScheduleViews();
+    }
+
+    function clearAdminScheduleFilters() {
+        adminScheduleSubjectFilter.clear();
+        adminScheduleTypeFilter.clear();
+        refreshScheduleViews();
+    }
+
+    function toggleAdminScheduleFiltersPanel() {
+        adminScheduleFiltersOpen = !adminScheduleFiltersOpen;
+        renderScheduleWeeks();
+    }
+
+    function getCurrentScheduleWeekIndex() {
+        return inferWeekIndexFromDate(new Date());
+    }
+
+    function renderAdminScheduleFilterBar() {
+        const subjectCodes = (window.COURSE_DATA || []).map(s => s.code).filter(Boolean);
+        const typeOptions = getAdminSchedulePresetOptions();
+        const hasFilters = adminScheduleSubjectFilter.size > 0 || adminScheduleTypeFilter.size > 0;
+
+        const subjectChips = subjectCodes.map(code => {
+            const active = adminScheduleSubjectFilter.has(code);
+            const color = getSubjectColor(code);
+            return `<button class="btn" style="padding:4px 10px; border-radius:14px; font-size:0.72rem; background:${active ? `${color}22` : 'rgba(255,255,255,0.04)'}; border:1px solid ${active ? color : 'rgba(255,255,255,0.18)'}; color:${active ? color : '#999'};" onclick="toggleAdminScheduleSubjectFilter(decodeURIComponent('${encodeURIComponent(code)}'))">${escHtml(code)}</button>`;
+        }).join('');
+
+        const typeChips = typeOptions.map(tp => {
+            const active = adminScheduleTypeFilter.has(tp.name);
+            const label = `${tp.icon} ${tp.name}`;
+            return `<button class="btn" style="padding:4px 10px; border-radius:14px; font-size:0.72rem; background:${active ? 'rgba(0,229,255,0.15)' : 'rgba(255,255,255,0.04)'}; border:1px solid ${active ? '#00E5FF' : 'rgba(255,255,255,0.18)'}; color:${active ? '#00E5FF' : '#999'};" onclick="toggleAdminScheduleTypeFilter(decodeURIComponent('${encodeURIComponent(tp.name)}'))">${escHtml(label)}</button>`;
+        }).join('');
+
+        const activeCount = adminScheduleSubjectFilter.size + adminScheduleTypeFilter.size;
+        const arrow = adminScheduleFiltersOpen ? '▲' : '▼';
+
+        return `
+            <div style="padding:8px 10px; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; flex-direction:column; gap:8px;">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                    <button class="btn" style="padding:5px 12px; border-radius:14px; font-size:0.74rem; background:${hasFilters ? 'rgba(233,30,140,0.12)' : 'rgba(255,255,255,0.05)'}; border:1px solid ${hasFilters ? 'rgba(233,30,140,0.45)' : 'rgba(255,255,255,0.18)'}; color:${hasFilters ? '#e91e8c' : '#aaa'};" onclick="toggleAdminScheduleFiltersPanel()">Filters ${activeCount ? `(${activeCount})` : ''} ${arrow}</button>
+                    ${hasFilters ? '<button class="btn" style="padding:3px 9px; font-size:0.68rem; border-radius:10px; border:1px dashed rgba(255,255,255,0.35); color:#ccc; background:transparent;" onclick="clearAdminScheduleFilters()">Clear All Filters</button>' : ''}
+                </div>
+                ${adminScheduleFiltersOpen ? `
+                    <div style="display:flex; flex-wrap:wrap; gap:6px; align-items:center;"><span style="font-size:0.66rem; color:#666; margin-right:2px;">Subjects:</span>${subjectChips || '<span style="font-size:0.72rem; color:#666;">No subjects</span>'}</div>
+                    <div style="display:flex; flex-wrap:wrap; gap:6px; align-items:center;"><span style="font-size:0.66rem; color:#666; margin-right:2px;">Presets:</span>${typeChips || '<span style="font-size:0.72rem; color:#666;">No presets</span>'}</div>
+                ` : ''}
+            </div>`;
     }
 
     function init() {
@@ -919,6 +1077,7 @@
         window.SCHEDULE_DATA.forEach((wk, weekIdx) => {
             (wk.tasks || []).forEach((task, taskIdx) => {
                 if (!task.deadlineDate || !task.deadlineDate.trim()) return;
+                if (!taskPassesAdminScheduleFilters(task)) return;
                 const endStr = (task.deadlineEndDate && task.deadlineEndDate.trim()) ? task.deadlineEndDate : task.deadlineDate;
                 const endDate = pDate(endStr) || parseAdminDeadlineDate(endStr);
                 const endTs = endDate ? endDate.getTime() : NaN;
@@ -985,6 +1144,7 @@
                     <option value="deadlines" ${isDeadlineMode ? 'selected' : ''}>⏳ Upcoming Deadlines</option>
                 </select>
             </div>
+            ${renderAdminScheduleFilterBar()}
             <div id="sch-week-list" class="list-container"></div>
             ${isDeadlineMode ? '<button class="btn btn-add" style="background:#00E5FF; color:black;" onclick="renderDeadlineEditor()">↻ Refresh Deadlines</button>' : '<button class="btn btn-add" style="background:#ff9500; color:black;" onclick="addScheduleWeek()">+ Add Schedule Week</button>'}
         `;
@@ -1020,12 +1180,16 @@
             return;
         }
 
+        const currentWeekIdx = getCurrentScheduleWeekIndex();
         window.SCHEDULE_DATA.forEach((wk, i) => {
             const el = document.createElement('div');
             el.className = `list-item ${i === schWIdx ? 'active' : ''}`;
             if(i === schWIdx) el.style.borderLeftColor = "#ff9500";
             const displayName = (wk.weekName && wk.weekName.trim()) ? wk.weekName.trim().toUpperCase() : `WEEK ${wk.week}`;
-            el.innerHTML = `<div style="flex:1">${displayName} <span style="font-size:0.7rem; background:#333; padding:2px 5px; border-radius:4px;">${wk.tasks ? wk.tasks.length : 0} tasks</span></div><button class="btn btn-del" onclick="delScheduleWeek(event, ${i})">✕</button>`;
+            const isCurrent = i === currentWeekIdx;
+            if (isCurrent) el.style.boxShadow = '0 0 0 1px rgba(52,199,89,0.45), 0 0 15px rgba(52,199,89,0.2)';
+            const marker = isCurrent ? '<span style="font-size:0.66rem; background:rgba(52,199,89,0.2); color:#34c759; border:1px solid rgba(52,199,89,0.5); padding:2px 6px; border-radius:10px; margin-right:6px;">●</span>' : '';
+            el.innerHTML = `<div style="flex:1">${marker}${displayName} <span style="font-size:0.7rem; background:#333; padding:2px 5px; border-radius:4px;">${wk.tasks ? wk.tasks.length : 0} tasks</span></div><button class="btn btn-del" onclick="delScheduleWeek(event, ${i})">✕</button>`;
             el.onclick = (e) => { if(e.target.tagName !== 'BUTTON') { schWIdx = i; renderScheduleWeeks(); renderScheduleEditor(); } };
             list.appendChild(el);
         });
@@ -1215,7 +1379,16 @@
         container.innerHTML = html;
 
         const list = document.getElementById('sch-task-list');
-        wk.tasks.forEach((task, tIdx) => {
+        const visibleTasks = wk.tasks.map((task, tIdx) => ({ task, tIdx })).filter(({ task }) => taskPassesAdminScheduleFilters(task));
+
+        if (visibleTasks.length === 0) {
+            const msg = document.createElement('div');
+            msg.style.cssText = 'text-align:center; color:#777; padding:16px; border:1px dashed rgba(255,255,255,0.18); border-radius:10px; margin-bottom:10px;';
+            msg.innerHTML = 'No tasks match current admin filters for this week.';
+            list.appendChild(msg);
+        }
+
+        visibleTasks.forEach(({ task, tIdx }) => {
             const el = document.createElement('div');
             el.className = 'res-item';
             el.style.flexDirection = 'column';
@@ -1475,11 +1648,12 @@
                     <h3 style="color:${accentColor}; margin:0; border:none; padding:0;">${icon} Manage Midterms & Finals</h3>
                     <div style="display:flex; gap:8px; align-items:center;">
                         <span style="color:#666; font-size:0.8rem;">${activeArr.length} exam${activeArr.length !== 1 ? 's' : ''} · drag ☰ to reorder</span>
-                        <button class="btn" style="background:${accentColor}; padding:8px 18px;" onclick="addMidterm()">+ Add ${label} Exam</button>
+                        ${!isFinals ? `<button class="btn" style="background:${accentColor}; padding:8px 18px;" onclick="addMidterm()">+ Add ${label} Exam</button>` : ''}
                     </div>
                 </div>
                 ${tabHtml}
                 <div id="midterm-list-admin"></div>
+                ${isFinals ? `<div style="display:flex; justify-content:center; margin-top:18px;"><button class="btn" style="background:${accentColor}; padding:10px 22px;" onclick="addMidterm()">+ Add ${label} Exam</button></div>` : ''}
             </div>
         `;
 
@@ -1553,8 +1727,7 @@
                         <input type="text" placeholder="Link label (e.g. Check your seat here)" value="${escAttr(m.whereNote || '')}" style="font-size:0.75rem; background:rgba(${isFinals?'255,69,58':'74,144,226'},0.1); border-color:rgba(${isFinals?'255,69,58':'74,144,226'},0.3); color:${accentColor};" oninput="${dataRef}[${i}].whereNote = this.value;">
                     </div>
                     <div>
-                        <label>📚 Coverage</label>
-                        <input type="text" placeholder="e.g. Weeks 1–4" value="${escAttr(m.coverage || '')}" oninput="${dataRef}[${i}].coverage = this.value;">
+                        ${isFinals ? '' : `<label>📚 Coverage</label><input type="text" placeholder="e.g. Weeks 1–4" value="${escAttr(m.coverage || '')}" oninput="${dataRef}[${i}].coverage = this.value;">`}
                         <label style="margin-top:4px;">📝 Extra Notes</label>
                         <textarea rows="2" placeholder="e.g. Bring Student ID" oninput="${dataRef}[${i}].note = this.value;" style="margin-bottom:0;">${escHtml(m.note || '')}</textarea>
                     </div>
@@ -2342,6 +2515,7 @@
             el.style.cssText = 'flex-direction:column; border-left:4px solid #e91e8c; margin-bottom:18px;';
             const subOptions = (window.COURSE_DATA || []).map(s => `<option value="${s.code}" ${item.sub === s.code ? 'selected' : ''}>${s.code}</option>`).join('');
             const emojiOpts = NEWS_EMOJIS.map(em => `<button title="${em}" onclick="window.NEWS_DATA[${i}].emoji='${em}';markDirty();renderNewsManager();" style="background:none;border:none;cursor:pointer;font-size:1.2rem;padding:3px 5px;border-radius:5px;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='none'">${em}</button>`).join('');
+            const publishedHint = getNewsPcDeltaLabel(item.publishedAt);
             el.innerHTML = `
                 <div style="display:flex;justify-content:space-between;width:100%;align-items:center;margin-bottom:12px;">
                     <strong style="color:white;font-size:1rem;">${escHtml(item.emoji||'📢')} ${escHtml(item.title||'Announcement')}</strong>
@@ -2358,8 +2532,9 @@
                         <input type="text" value="${escAttr(item.title||'')}" placeholder="e.g. DS Lecture Cancelled" oninput="window.NEWS_DATA[${i}].title=this.value;markDirty();">
                     </div>
                     <div style="flex:0 0 190px;">
-                        <label>Published At</label>
-                        <input type="datetime-local" value="${escAttr(item.publishedAt?item.publishedAt.slice(0,16):'')}" style="padding:8px 10px;color-scheme:dark;width:100%;" oninput="window.NEWS_DATA[${i}].publishedAt=this.value ? this.value+':00' : ''; markDirty();">
+                        <label>Published At <button class="btn" style="padding:2px 7px; font-size:0.68rem; margin-left:6px; border:1px solid rgba(255,255,255,0.25); background:transparent; color:#8aa2bd;" onclick="syncNewsPublishedAtNow(${i})" type="button">Use PC Time</button></label>
+                        <input type="datetime-local" value="${escAttr(getPublishedAtInputValue(item.publishedAt))}" style="padding:8px 10px;color-scheme:dark;width:100%;" oninput="setNewsPublishedAtFromInput(${i}, this.value)">
+                        <div style="font-size:0.7rem; color:#8aa2bd; margin-top:3px;">${escHtml(publishedHint)}</div>
                     </div>
                     <div style="flex:0 0 130px;">
                         <label>Subject (opt.)</label>
@@ -2372,6 +2547,16 @@
                 <div style="width:100%;margin-bottom:10px;">
                     <label>Body / Note</label>
                     <textarea rows="2" placeholder="Details, links, or extra context..." oninput="window.NEWS_DATA[${i}].body=this.value;markDirty();">${escHtml(item.body||'')}</textarea>
+                </div>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
+                    <div style="flex:1;min-width:220px;">
+                        <label>Link URL (opt.)</label>
+                        <input type="url" value="${escAttr(item.linkUrl||'')}" placeholder="https://example.com/form" oninput="window.NEWS_DATA[${i}].linkUrl=this.value;markDirty();">
+                    </div>
+                    <div style="flex:1;min-width:180px;">
+                        <label>Link Note (opt.)</label>
+                        <input type="text" value="${escAttr(item.linkNote||'')}" placeholder="Open Form / Join Meeting" oninput="window.NEWS_DATA[${i}].linkNote=this.value;markDirty();">
+                    </div>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:0;">
                     <div style="background:rgba(255,255,255,0.05);padding:15px;border-radius:8px;margin-bottom:15px;display:flex;flex-direction:column;width:100%;box-sizing:border-box;">
@@ -2409,7 +2594,7 @@
 
     function addNewsEntry() {
         if(typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
-        window.NEWS_DATA.unshift({ emoji:'📢', title:'New Announcement', body:'', publishedAt: new Date().toISOString().slice(0,19), sub:'', hasEvent:false, eventDate:'', eventTime:'', hasDeadline:false, deadlineDate:'', deadlineTime:'' });
+        window.NEWS_DATA.unshift({ emoji:'📢', title:'New Announcement', body:'', publishedAt: getNowLocalDateTimeString(), sub:'', linkUrl:'', linkNote:'', hasEvent:false, eventDate:'', eventTime:'', hasDeadline:false, deadlineDate:'', deadlineTime:'' });
         markDirty();
         renderNewsManager();
     }
