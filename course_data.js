@@ -22,6 +22,11 @@ window.CONFIG = {
             "defaultDesc": ""
         },
         {
+            "name": "Another Alt.3",
+            "icon": "📦",
+            "defaultDesc": ""
+        },
+        {
             "name": "Voice Recording",
             "icon": "🎙️",
             "defaultDesc": ""
@@ -109,11 +114,6 @@ window.CONFIG = {
         {
             "name": "Lecture codes 2",
             "icon": "💻",
-            "defaultDesc": ""
-        },
-        {
-            "name": "Another Alt.3",
-            "icon": "📦",
             "defaultDesc": ""
         }
     ],
