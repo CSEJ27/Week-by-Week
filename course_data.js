@@ -110,6 +110,11 @@ window.CONFIG = {
             "name": "Lecture codes 2",
             "icon": "💻",
             "defaultDesc": ""
+        },
+        {
+            "name": "Another Alt.3",
+            "icon": "📦",
+            "defaultDesc": ""
         }
     ],
     "helpLink": "https://forms.gle/gtLTmKoJDYVo6yLV6",
@@ -339,6 +344,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -9777,6 +9789,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 1: Introduction",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:22 PM"
                     }
                 },
                 "isRecent": true,
@@ -9802,11 +9822,13 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Another Alt.": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 2: All\nChapter 3 (Part 1): 0:00 → 50:00",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:23 PM"
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -9946,6 +9968,13 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isNew": false,
@@ -10113,6 +10142,14 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 3 (Part 1): 50:00 → end\nChapter 3 (Part 2): 0:00 → end\nChapter 3 (Part 3): 0:00 → 1:15:07\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:24 PM"
                     }
                 },
                 "isNew": false,
@@ -10149,12 +10186,13 @@ window.COURSE_DATA = [
                         "recentDate": "14/3/2026 6:57 PM"
                     },
                     "Another Alt.2": {
-                        "vis": false,
+                        "vis": true,
                         "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 3 (Part 3): 1:15:07 → end\nChapter 4 (Part 1): 0:00 → end\nChapter 4 (Part 2): 0:00 → end\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:25 PM"
                     },
                     "Voice Recording": {
                         "vis": false,
@@ -10297,6 +10335,13 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isRecent": true,
@@ -10330,11 +10375,12 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 5 (Part 1): CPU Scheduling 0:00 → end\nChapter 5 (Part 2): 0:00 → end \nChapter 5 (Part 3): 0:00 → end\nChapter 5 (Part 4): 0:00 → 35:20\n\n\n\n\n\n\n\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:26 PM"
                     },
                     "Slides": {
                         "vis": true,
@@ -10463,6 +10509,13 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "recentDate": "14/3/2026 1:37 AM",
@@ -10488,11 +10541,12 @@ window.COURSE_DATA = [
                         "recentDate": "20/4/2026 4:33 AM"
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 5 (Part 4): 35:20 → end\nChapter 5 (Part 5): 0:00 → end\nChapter 5 (Part 6): 0:00 → end\nChapter 6 & 7 (Part 1): 0:00 → 41:50\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:27 PM"
                     },
                     "Another Alt.2": {
                         "vis": false,
@@ -10627,13 +10681,20 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isNew": false,
                 "isRecent": true,
                 "recentDate": "21/3/2026 11:56 PM",
                 "showBadge": true,
-                "badgeText": "Midterm till here!",
+                "badgeText": "Midterm till here and Quiz 2 starts from ch 6 here!",
                 "badgeColor": "#193800"
             },
             {
@@ -10662,11 +10723,12 @@ window.COURSE_DATA = [
                         "isRecent": true
                     },
                     "Another Alt.2": {
-                        "vis": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 6 & 7 (Part 1): 41:50 → end\nChapter 6 & 7 (Part 2): 0:00 → end\nChapter 6 & 7 (Part 3): 0:00 → 18:03\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:28 PM"
                     },
                     "Slides": {
                         "vis": true,
@@ -10788,6 +10850,13 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
@@ -10958,6 +11027,13 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isNew": false,
@@ -10983,18 +11059,20 @@ window.COURSE_DATA = [
                         "recentDate": "20/4/2026 4:36 AM"
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 8 (Part 1, 2 & 3)",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "27/4/2026 6:30 PM"
                     },
                     "Another Alt.2": {
                         "vis": false,
                         "link": "#",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": false,
+                        "recentDate": ""
                     },
                     "Slides": {
                         "vis": true,
@@ -11121,11 +11199,189 @@ window.COURSE_DATA = [
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
                     }
                 },
                 "isNew": true,
                 "isRecent": true,
                 "recentDate": "20/4/2026 1:32 AM"
+            },
+            {
+                "title": "WEEK 11",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/SyaPHtGQbPg",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLEAVxJYaCW29PfjToX7uiPOaLhI0kmZxg&si=cRZtONFvnZVC-yHf",
+                        "desc": "Shebl (alternative):\nChapter 8 (Part 4)\n(Note: missing Deadlocks detection slides not sure)\n",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/0/folders/1Im88NwjJS85Y1DK41QNu7-JMKtmCIYgy",
+                        "desc": "Ch 8 Slides [26: END]\nCh 9 till slide 21",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "27/4/2026 6:30 PM",
+                "badgeText": "Quiz 2 till ch 8 here!",
+                "showBadge": true
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/1CIqmEG3hlHCfabTtADnfT_NgpCbs2kR1?usp=drive_link",
