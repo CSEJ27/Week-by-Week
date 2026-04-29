@@ -1631,8 +1631,8 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/folders/14790KdlRjfILPb8Qi-yptpo38hjl_QP4?usp=drive_link",
-                        "desc": "Parts 1 through 7.",
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np&si=c73QobWGgOrNKVrK",
+                        "desc": "Chapter 5, Parts 1 through 7.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -1800,7 +1800,7 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/folders/14790KdlRjfILPb8Qi-yptpo38hjl_QP4?usp=drive_link",
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np&si=c73QobWGgOrNKVrK",
                         "desc": "Chapter 5, Parts 8 through 10.",
                         "isNew": false,
                         "isRecent": false
@@ -9838,7 +9838,7 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": false,
-                        "link": " https://youtu.be/Da7kqrcDUwQ?si=hulBqY2-qvoyfwki",
+                        "link": "",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
@@ -12081,7 +12081,7 @@ window.COURSE_DATA = [
                     "Alternative": {
                         "vis": true,
                         "link": "https://www.youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM",
-                        "desc": "Lecture 7, parts 1 through 3 alongside P.4 [START: 2:45]\nDo note that slides 2, 4, 5, 6, 7, 11, 18, 19, 20, 24, 25 are not covered in this playlist and not covered in the tutorials",
+                        "desc": "Chapter 7, parts 1 through 3 alongside P.4 [START: 2:45] (Videos no. 30,31,32,33)\nDo note that slides 2, 4, 5, 6, 7, 11, 18, 19, 20, 24, 25 are not covered in this playlist and not covered in the tutorials",
                         "isNew": true,
                         "isRecent": true,
                         "recentDate": "20/4/2026 4:36 AM"
@@ -14282,7 +14282,7 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY",
-                        "desc": "We got two lectures this week.\nCheck out lectures 7&8.\nNote that midterm only till Lecture 7 till 1:21:40",
+                        "desc": "We got two lectures this week.\nCheck out lectures 7&8.\nNote that midterm only till Lecture 7 till 1:21:40 and Quiz 2 is the rest of lecture 7 alongside lecture 8.",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -14450,7 +14450,7 @@ window.COURSE_DATA = [
                 },
                 "locked": false,
                 "showBadge": true,
-                "badgeText": "Midterm till here!",
+                "badgeText": "Midterm till here and Quiz 2 from here!",
                 "badgeColor": "#193800",
                 "recentDate": "24/3/2026 11:43 PM",
                 "isRecent": true,
@@ -14625,7 +14625,9 @@ window.COURSE_DATA = [
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "10/4/2026 9:31 PM"
+                "recentDate": "10/4/2026 9:31 PM",
+                "showBadge": true,
+                "badgeText": "Quiz 2 till here!"
             },
             {
                 "title": "WEEK 10",
@@ -17259,7 +17261,9 @@ window.COURSE_DATA = [
                 },
                 "isNew": true,
                 "isRecent": true,
-                "recentDate": "20/4/2026 7:06 AM"
+                "recentDate": "20/4/2026 7:06 AM",
+                "showBadge": true,
+                "badgeText": "Quiz 3 starts from here!"
             },
             {
                 "title": "WEEK 11",
@@ -22004,6 +22008,46 @@ window.SCHEDULE_DATA = [
         "week": 13,
         "tasks": [
             {
+                "sub": "ML",
+                "name": "Quiz 3",
+                "icon": "🧠",
+                "when": "Sunday (3/5) at 12:05 PM",
+                "where": "",
+                "coverage": "SVM1 and logistic regression",
+                "note": "All questions are on one page (no browsing between pages), formulas/rules should be studied as they won't be given, make sure SEB is working before you come.",
+                "whenLink": "https://drive.google.com/file/d/1MDjFSsViceWBFEeT_d6V2XPwsiVhYVsW/view?usp=drive_link",
+                "whereLink": "https://drive.google.com/file/d/1MDjFSsViceWBFEeT_d6V2XPwsiVhYVsW/view?usp=drive_link",
+                "deadlineDate": "03/05/2026 12:05 PM",
+                "isCompleted": false,
+                "submitText": "SEB",
+                "whenNote": "Check your exact time here!",
+                "whereNote": "Check your place here!",
+                "deadlineEndDate": ""
+            },
+            {
+                "sub": "DSA",
+                "name": "Quiz 3",
+                "icon": "🧠",
+                "when": "Thursday (7/5) at 8:00 PM",
+                "where": "",
+                "coverage": "Searching Algorithm ",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "SEB",
+                "submitLink": "",
+                "submitNote": "",
+                "deadlineDate": "07/05/2026 8:00 PM",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
                 "sub": "DB",
                 "name": "Project Phase 2",
                 "icon": "✔️",
@@ -22064,70 +22108,28 @@ window.SCHEDULE_DATA = [
                 "isCompleted": false
             },
             {
-                "sub": "DSA",
-                "name": "Project Submission",
-                "icon": "✔️",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": "",
-                "coverageLink": "https://drive.google.com/file/d/1sMsSUE0Thn4F4xxBEI4UuKgUurVW4NZC/view?usp=drive_link",
-                "coverageNote": "Check the details of the project here!"
-            },
-            {
                 "sub": "OS",
                 "name": "Assignment 1",
                 "icon": "📝",
-                "when": "",
+                "when": "Friday (8/5) at 11:59 PM",
                 "where": "",
                 "coverage": "",
-                "note": ""
+                "note": "",
+                "submitNote": "Submit here!",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=199203",
+                "coverageLink": "https://drive.google.com/file/d/1MDjFSsViceWBFEeT_d6V2XPwsiVhYVsW/view?usp=drive_link",
+                "coverageNote": "Check the details here!",
+                "deadlineDate": "08/05/2026 11:59 PM",
+                "deadlineEndDate": ""
             },
             {
                 "sub": "AI",
                 "name": "Quiz 2",
                 "icon": "🧠",
-                "when": "",
+                "when": "Wednesday (6/5)",
                 "where": "",
-                "coverage": "",
+                "coverage": "Constraint Satisfaction and Genetic Algorithm",
                 "note": ""
-            },
-            {
-                "sub": "ML",
-                "name": "Quiz 3",
-                "icon": "🧠",
-                "when": "Sunday (3/5)",
-                "where": "",
-                "coverage": "SVM1 and logistic regression",
-                "note": "",
-                "whenLink": "",
-                "whereLink": "",
-                "deadlineDate": "",
-                "isCompleted": false,
-                "submitText": "SEB"
-            },
-            {
-                "sub": "DSA",
-                "name": "Quiz 3",
-                "icon": "🧠",
-                "when": "",
-                "where": "",
-                "coverage": "",
-                "note": "",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "",
-                "coverageNote": "",
-                "submitText": "SEB",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "",
-                "deadlineEndDate": "",
-                "isCompleted": false
             }
         ],
         "dateStart": "2026-05-02",
@@ -22235,6 +22237,29 @@ window.SCHEDULE_DATA = [
                 "submitText": "LMS",
                 "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=198142",
                 "submitNote": "Submit here!",
+                "deadlineDate": "",
+                "deadlineEndDate": "",
+                "isCompleted": false
+            },
+            {
+                "sub": "DSA",
+                "name": "Project Submission",
+                "icon": "✔️",
+                "when": "",
+                "where": "",
+                "coverage": "",
+                "note": "",
+                "noteLink": "",
+                "noteNote": "",
+                "whenLink": "",
+                "whereLink": "",
+                "whenNote": "",
+                "whereNote": "",
+                "coverageLink": "",
+                "coverageNote": "",
+                "submitText": "",
+                "submitLink": "",
+                "submitNote": "",
                 "deadlineDate": "",
                 "deadlineEndDate": "",
                 "isCompleted": false
