@@ -23702,14 +23702,16 @@ window.NEWS_DATA = [
         "emoji": "📢",
         "title": "DSA Project Form",
         "body": "Complete the sent google form on teams, as its deadline on Saturday (2/5) at 11:59 PM.",
-        "publishedAt": "2026-04-24T20:16:00",
+        "publishedAt": "2026-04-30T00:32:00",
         "sub": "DSA",
         "hasEvent": false,
         "eventDate": "",
         "eventTime": "",
         "hasDeadline": true,
         "deadlineDate": "2026-05-02",
-        "deadlineTime": "23:59"
+        "deadlineTime": "23:59",
+        "linkUrl": "https://forms.gle/HrZ8rnDpK5k8xUPX6",
+        "linkNote": "Form Link"
     },
     {
         "emoji": "📢",
