@@ -14662,18 +14662,20 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
+                        "vis": true,
+                        "link": "https://youtu.be/-GBHc0QGUxU?si=6NkZK1AS9Yczth1G",
+                        "desc": "The content of the section differs a bit from that of the lecture, so it's preferred to actually study the lecture content and consider this as more of a \"compliment\" than a total replacement for the lecture.",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": true,
+                        "recentDate": "30/4/2026 2:40 AM"
                     },
                     "Section Slides": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1FXUXAXeo9WOXgw8IFaky_sb-dZbRXItW/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
-                        "isRecent": false
+                        "isRecent": true,
+                        "recentDate": "30/4/2026 2:40 AM"
                     },
                     "Notes": {
                         "vis": false,
