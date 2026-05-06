@@ -1962,14 +1962,14 @@ window.COURSE_DATA = [
                 "resources": {
                     "Lecture": {
                         "vis": true,
-                        "link": "#https://youtube.com/playlist?list=PL67BE5BOCmVkaj-GhORNFGVxoOsRH3NHl&si=dVm92xNKFNiV4VMa",
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVkaj-GhORNFGVxoOsRH3NHl&si=dVm92xNKFNiV4VMa",
                         "desc": "Chapter 5, continued.",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "#https://drive.google.com/drive/folders/14790KdlRjfILPb8Qi-yptpo38hjl_QP4?usp=drive_link",
+                        "link": "https://drive.google.com/drive/folders/14790KdlRjfILPb8Qi-yptpo38hjl_QP4?usp=drive_link",
                         "desc": "Chapter 5, Parts 9 through 12.",
                         "isNew": false,
                         "isRecent": false
@@ -1990,7 +1990,7 @@ window.COURSE_DATA = [
                     },
                     "Slides": {
                         "vis": true,
-                        "link": "#https://drive.google.com/file/d/1bTM6j6wgM7leQQIaG9_UAR6L6GzzCk9s/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1bTM6j6wgM7leQQIaG9_UAR6L6GzzCk9s/view?usp=drive_link",
                         "desc": "Ch5 till 251",
                         "isNew": false,
                         "isRecent": false
@@ -2004,7 +2004,7 @@ window.COURSE_DATA = [
                     },
                     "Section Slides": {
                         "vis": true,
-                        "link": "#https://drive.google.com/drive/folders/1-rDq7jtCme3qC0g5iwHPhTiuUYji09Y1?usp=drive_link",
+                        "link": "https://drive.google.com/drive/folders/1-rDq7jtCme3qC0g5iwHPhTiuUYji09Y1?usp=drive_link",
                         "desc": "section 9 and 10 ",
                         "isNew": false,
                         "isRecent": false
@@ -2130,14 +2130,14 @@ window.COURSE_DATA = [
                 "resources": {
                     "Lecture": {
                         "vis": true,
-                        "link": "#https://youtube.com/playlist?list=PLaL_BACw3AaG1iKBYjw9jPsw8rgu0er8g&si=PjpL-ywa8UtF5f1L",
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaG1iKBYjw9jPsw8rgu0er8g&si=PjpL-ywa8UtF5f1L",
                         "desc": "Ch5  cont. From1:25:14 to end + Ch6",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "#https://drive.google.com/drive/folders/119JVzRMBEdoKYmJFsfwq9ASLNvYBNzyK?usp=drive_link",
+                        "link": "https://drive.google.com/drive/folders/119JVzRMBEdoKYmJFsfwq9ASLNvYBNzyK?usp=drive_link",
                         "desc": "Ch6",
                         "isNew": false,
                         "isRecent": false
@@ -2158,21 +2158,21 @@ window.COURSE_DATA = [
                     },
                     "Slides": {
                         "vis": true,
-                        "link": "#https://drive.google.com/file/d/1I3oYnxjsJiFwmTbNpa4odDibiSrB8kGD/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1I3oYnxjsJiFwmTbNpa4odDibiSrB8kGD/view?usp=drive_link",
                         "desc": "Ch6",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Section": {
                         "vis": true,
-                        "link": "#https://drive.google.com/file/d/1JLqF0Pkxlvc_tVQorfE5clBXBEOBaZZH/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1JLqF0Pkxlvc_tVQorfE5clBXBEOBaZZH/view?usp=drive_link",
                         "desc": "Eng/Noha Wahdan Ch6",
                         "isNew": true,
                         "isRecent": false
                     },
                     "Section Slides": {
                         "vis": true,
-                        "link": "#https://drive.google.com/file/d/1Ekc1sY7ZlSiySghmuQEL1QFzM_CHXp6O/view?usp=drive_link",
+                        "link": "https://drive.google.com/file/d/1Ekc1sY7ZlSiySghmuQEL1QFzM_CHXp6O/view?usp=drive_link",
                         "desc": "section 11 \"Ch6:Transport Layer\"",
                         "isNew": false,
                         "isRecent": false
