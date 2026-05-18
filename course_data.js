@@ -8350,7 +8350,7 @@ window.COURSE_DATA = [
                 "isRecent": true,
                 "isNew": true,
                 "showBadge": true,
-                "badgeText": "Included in finals!",
+                "badgeText": "Included in finals (Except for ADO.net).",
                 "badgeColor": "#00787a"
             }
         ],
