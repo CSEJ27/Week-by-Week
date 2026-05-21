@@ -838,6 +838,13 @@
     function updateRes(key, field, val) {
         const item = subViewMode === 'events' ? window.COURSE_DATA[cIdx].events[eIdx] : window.COURSE_DATA[cIdx].weeks[wIdx];
         item.resources[key][field] = val;
+        // Auto-show resource when a real link is entered
+        if (field === 'link' && val && val.trim() !== '' && val.trim() !== '#') {
+            if (!item.resources[key].vis) {
+                item.resources[key].vis = true;
+                renderEditor(); // refresh so Show checkbox reflects new state
+            }
+        }
     }
     function toggleRecentRes(key, checked) { updateRes(key, 'isRecent', checked); if(checked) { updateRes(key, 'vis', true); autoMarkNewRes(key); renderEditor(); } }
     
@@ -2429,6 +2436,21 @@
     // --- NEWS MANAGER ---
     function toggleNewsManager() { setView('news'); renderNewsManager(); }
 
+    function cleanUpOldNews() {
+        const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+        const before = window.NEWS_DATA.length;
+        window.NEWS_DATA = window.NEWS_DATA.filter(item => {
+            if (!item.publishedAt) return true; // no date = keep
+            const ts = new Date(item.publishedAt).getTime();
+            return isNaN(ts) || ts >= cutoff;
+        });
+        const removed = before - window.NEWS_DATA.length;
+        markDirty();
+        renderNewsManager();
+        if (removed > 0) alert(`Removed ${removed} old announcement${removed > 1 ? 's' : ''} (published more than 7 days ago).`);
+        else alert('Nothing to remove — all announcements are within the last 7 days.');
+    }
+
     function renderNewsManager() {
         const mid = document.getElementById('middle-col');
         mid.style.display = 'none';
@@ -2438,7 +2460,10 @@
             <div class="form-section" style="border-color:#e91e8c;">
                 <h3 style="color:#e91e8c;">📢 Manage News & Announcements</h3>
                 <p style="color:#888; font-size:0.85rem; margin-bottom:15px;">Add announcements, grade releases, cancelled lectures, form deadlines, etc. Appears automatically on the main site's news panel with unread counter.</p>
-                <button class="btn btn-add" style="background:#e91e8c; color:white; border-radius:4px; margin-bottom:15px;" onclick="addNewsEntry()">+ Add Announcement</button>
+                <div style="display:flex; gap:8px; margin-bottom:15px; flex-wrap:wrap;">
+                    <button class="btn btn-add" style="background:#e91e8c; color:white; border-radius:4px;" onclick="addNewsEntry()">＋ Add Announcement</button>
+                    <button class="btn" style="background:rgba(255,59,48,0.15); border:1px solid rgba(255,59,48,0.4); color:#ff3b30; padding:6px 14px; border-radius:6px; font-size:0.8rem; cursor:pointer;" onclick="cleanUpOldNews()" title="Remove all announcements published more than 7 days ago">🗑 Clean Up Old (&gt;7 days)</button>
+                </div>
                 <div id="news-list-admin"></div>
             </div>
         `;
