@@ -920,9 +920,9 @@
             <p class="subtitle">Select a subject to begin</p>
         </header>
         <div class="header-actions">
-            <button class="recent-btn" data-link="#recent" onclick="showRecent()">📜 History</button>
             <button class="schedule-btn" data-link="#schedule" onclick="showSchedule()">🗓️ Semester Map</button>
             <button class="deadline-btn" data-link="#deadlines" onclick="showDeadlines()">⏳ Deadlines</button>
+            <button class="midterm-btn" id="home-exam-btn" style="display:none;" onclick="showMidterms()">📝 Midterms / Finals</button>
         </div>
         <div class="grid subjects-grid" id="subjects-grid"></div>
         <div id="hidden-subject-controls" style="text-align:center; margin-top:14px;"></div>
@@ -2072,69 +2072,59 @@
         return base + (h * 60 + min) * 60 * 1000;
     }
 
+    // Shared helpers used by both getSubjectUrgency and the home page exam button
+    const _EXAM_DEFAULT_OFFSET = (14 * 60 + 30) * 60 * 1000; // 2:30 PM fallback
+
+    function _examTimestamp(exam) {
+        if (!exam || !exam.date) return null;
+        const base = new Date(exam.date + 'T00:00:00').getTime();
+        if (!exam.time || !String(exam.time).trim()) return base + _EXAM_DEFAULT_OFFSET;
+        const m = String(exam.time).match(/(\d+):(\d+)\s*(AM|PM)?/i);
+        if (!m) return base + _EXAM_DEFAULT_OFFSET;
+        let h = parseInt(m[1], 10), min = parseInt(m[2], 10);
+        const ampm = (m[3] || '').toUpperCase();
+        if (ampm === 'PM' && h < 12) h += 12;
+        if (ampm === 'AM' && h === 12) h = 0;
+        return base + (h * 60 + min) * 60 * 1000;
+    }
+
+    function isExamPeriodActive(dataArr, triggerMs) {
+        if (!dataArr || !dataArr.length) return false;
+        const now = Date.now();
+        let firstTs = Infinity, lastEndTs = -Infinity;
+        dataArr.forEach(e => {
+            const ts = _examTimestamp(e);
+            if (!ts || !e.date) return;
+            if (ts < firstTs) firstTs = ts;
+            const eod = new Date(e.date + 'T00:00:00').getTime() + 24 * 60 * 60 * 1000;
+            if (eod > lastEndTs) lastEndTs = eod;
+        });
+        if (firstTs === Infinity || lastEndTs === -Infinity) return false;
+        return (firstTs - now) <= triggerMs && lastEndTs > now;
+    }
+
     function getSubjectUrgency(subCode) {
         const now = Date.now();
-        const FINALS_TRIGGER_MS  = 5 * 24 * 60 * 60 * 1000; // trigger: first final within 5 days
-        const MIDTERM_TRIGGER_MS = 3 * 24 * 60 * 60 * 1000; // trigger: first midterm within 3 days
-        const DEFAULT_OFFSET_MS  = (14 * 60 + 30) * 60 * 1000; // 2:30 PM fallback when no time given
-        const GROUP2_OFFSET = 500; // ensures group-2 always sorts after group-1
+        const FINALS_TRIGGER_MS  = 5 * 24 * 60 * 60 * 1000;
+        const MIDTERM_TRIGGER_MS = 3 * 24 * 60 * 60 * 1000;
+        const GROUP2_OFFSET = 500;
 
-        // --- helpers ---
-
-        function examTimestamp(exam) {
-            if (!exam || !exam.date) return null;
-            const base = new Date(exam.date + 'T00:00:00').getTime();
-            if (!exam.time || !String(exam.time).trim()) return base + DEFAULT_OFFSET_MS;
-            const m = String(exam.time).match(/(\d+):(\d+)\s*(AM|PM)?/i);
-            if (!m) return base + DEFAULT_OFFSET_MS;
-            let h = parseInt(m[1], 10), min = parseInt(m[2], 10);
-            const ampm = (m[3] || '').toUpperCase();
-            if (ampm === 'PM' && h < 12) h += 12;
-            if (ampm === 'AM' && h === 12) h = 0;
-            return base + (h * 60 + min) * 60 * 1000;
-        }
-
-        // End-of-day for a given ISO date string
         function endOfDay(dateStr) {
             return new Date(dateStr + 'T00:00:00').getTime() + 24 * 60 * 60 * 1000;
         }
 
-        // Is the exam PERIOD active?
-        // Triggered when first exam is within triggerMs ahead (or already started),
-        // and deactivated only when the LAST exam's day has fully passed.
-        function periodActive(dataArr, triggerMs) {
-            if (!dataArr || !dataArr.length) return false;
-            let firstTs = Infinity, lastEndTs = -Infinity;
-            dataArr.forEach(e => {
-                const ts = examTimestamp(e);
-                if (!ts || !e.date) return;
-                if (ts < firstTs) firstTs = ts;
-                const eod = endOfDay(e.date);
-                if (eod > lastEndTs) lastEndTs = eod;
-            });
-            if (firstTs === Infinity || lastEndTs === -Infinity) return false;
-            // Mode starts: first exam is within trigger window (or already started)
-            const triggered = (firstTs - now) <= triggerMs;
-            // Mode ends: the last exam's day has completely passed
-            const periodOver = lastEndTs <= now;
-            return triggered && !periodOver;
-        }
-
-        // Best upcoming exam for this subject in the dataset
-        // (not yet fully passed = end of its day is still in the future)
         function nextSubjectExam(dataArr) {
             if (!dataArr) return null;
             let best = null, bestTs = Infinity;
             dataArr.forEach(e => {
                 if (e.sub !== subCode || !e.date) return;
-                if (endOfDay(e.date) <= now) return; // this exam's day has passed
-                const ts = examTimestamp(e);
+                if (endOfDay(e.date) <= now) return;
+                const ts = _examTimestamp(e);
                 if (ts !== null && ts < bestTs) { best = e; bestTs = ts; }
             });
             return best;
         }
 
-        // Deadline-based score (lower = more urgent), unchanged from before
         function deadlineScore() {
             let score = Infinity;
             const typeWeight = { 'quiz': 0.8, 'lab exam': 0.5 };
@@ -2161,32 +2151,18 @@
             return score;
         }
 
-        // --- ordering decision ---
-        // Finals period takes priority over midterms period
-
-        if (periodActive(window.FINAL_DATA, FINALS_TRIGGER_MS)) {
+        if (isExamPeriodActive(window.FINAL_DATA, FINALS_TRIGGER_MS)) {
             const exam = nextSubjectExam(window.FINAL_DATA);
-            if (exam) {
-                // Group 1: this subject still has a final coming — sort by days until that final
-                const ts = examTimestamp(exam);
-                return Math.max(0, (ts - now) / (1000 * 60 * 60 * 24));
-            }
-            // Group 2: this subject's final already passed — sort by deadlines, after Group 1
+            if (exam) return Math.max(0, (_examTimestamp(exam) - now) / (1000 * 60 * 60 * 24));
             return GROUP2_OFFSET + deadlineScore();
         }
 
-        if (periodActive(window.MIDTERM_DATA, MIDTERM_TRIGGER_MS)) {
+        if (isExamPeriodActive(window.MIDTERM_DATA, MIDTERM_TRIGGER_MS)) {
             const exam = nextSubjectExam(window.MIDTERM_DATA);
-            if (exam) {
-                // Group 1: this subject still has a midterm coming — sort by days until that midterm
-                const ts = examTimestamp(exam);
-                return Math.max(0, (ts - now) / (1000 * 60 * 60 * 24));
-            }
-            // Group 2: this subject's midterm already passed — sort by deadlines, after Group 1
+            if (exam) return Math.max(0, (_examTimestamp(exam) - now) / (1000 * 60 * 60 * 24));
             return GROUP2_OFFSET + deadlineScore();
         }
 
-        // Normal mode: sort purely by upcoming deadlines
         return deadlineScore();
     }
 
@@ -2257,6 +2233,28 @@
         });
         if (grid) grid.appendChild(frag); // single reflow
         renderHiddenSubjectsControls();
+
+        // Show / update exam period button
+        const examBtn = document.getElementById('home-exam-btn');
+        if (examBtn) {
+            const FINALS_MS  = 5 * 24 * 60 * 60 * 1000;
+            const MIDTERM_MS = 3 * 24 * 60 * 60 * 1000;
+            const finalsOn   = isExamPeriodActive(window.FINAL_DATA,   FINALS_MS);
+            const midtermsOn = isExamPeriodActive(window.MIDTERM_DATA, MIDTERM_MS);
+            if (finalsOn) {
+                examBtn.textContent = '🏁 Final Exams';
+                examBtn.style.cssText = 'background:rgba(217,119,6,0.2); border:2px solid #d97706; color:#d97706; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:bold; text-transform:uppercase; letter-spacing:2px; transition:0.3s;';
+                examBtn.onclick = () => showMidterms();
+                examBtn.style.display = '';
+            } else if (midtermsOn) {
+                examBtn.textContent = '📝 Midterms / Finals';
+                examBtn.style.cssText = '';  // use .midterm-btn class default
+                examBtn.onclick = () => showMidterms();
+                examBtn.style.display = '';
+            } else {
+                examBtn.style.display = 'none';
+            }
+        }
         
         window.onpopstate = function(event) {
             closeModal(null, true);
