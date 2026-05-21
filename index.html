@@ -48,10 +48,6 @@
         .week-nav-btn { background: rgba(0,0,0,0.3); border: 2px solid var(--accent-purple); color: white; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.3s; box-shadow: 0 0 15px rgba(181, 25, 214, 0.1); font-size: 0.9rem; max-width: 45%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .week-nav-btn:hover { background: var(--accent-purple); box-shadow: 0 0 25px rgba(181, 25, 214, 0.4); }
         .week-nav-spacer { flex: 1; }
-        .visit-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(74, 144, 226, 0.1); border: 1px solid rgba(74, 144, 226, 0.25); padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; color: var(--text-sub); margin-left: 10px; vertical-align: middle; }
-        .visit-badge .vb-dot { width: 6px; height: 6px; background: #34c759; border-radius: 50%; box-shadow: 0 0 6px #34c759; animation: pulse 2s infinite alternate; flex-shrink: 0; }
-        .visit-badge .vb-num { font-family: 'Orbitron', sans-serif; font-weight: 700; color: var(--accent-blue); font-size: 0.8rem; }
-        
         .header-actions { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
         .recent-btn { background: rgba(74, 144, 226, 0.2); border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .recent-btn:hover { background: var(--accent-blue); color: white; box-shadow: 0 0 20px var(--accent-blue); }
@@ -59,8 +55,8 @@
         .schedule-btn:hover { background: #ff9500; color: white; box-shadow: 0 0 20px #ff9500; }
         .midterm-btn { background: rgba(0, 122, 255, 0.2); border: 2px solid #007aff; color: #007aff; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .midterm-btn:hover { background: #007aff; color: white; box-shadow: 0 0 20px #007aff; }
-        .midterm-btn.finals-mode { background: rgba(204, 34, 0, 0.2); border-color: #cc2200; color: #cc2200; }
-        .midterm-btn.finals-mode:hover { background: #cc2200; color: white; box-shadow: 0 0 20px #cc2200; }
+        .midterm-btn.finals-mode { background: rgba(217,119,6,0.2); border-color: #d97706; color: #d97706; }
+        .midterm-btn.finals-mode:hover { background: #d97706; color: white; box-shadow: 0 0 20px #d97706; }
         .deadline-btn { background: rgba(0, 229, 255, 0.2); border: 2px solid #00E5FF; color: #00E5FF; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .deadline-btn:hover { background: #00E5FF; color: white; box-shadow: 0 0 20px #00E5FF; }
         .useful-btn { background: rgba(181, 25, 214, 0.2); border: 2px solid var(--accent-purple); color: var(--accent-purple); padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
@@ -144,8 +140,8 @@
         /* Midterm hidden subjects indicator */
         .midterm-hidden-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; cursor: pointer; border: 1px solid rgba(0,122,255,0.3); color: #007aff; background: rgba(0,122,255,0.08); transition: all 0.2s; margin-bottom: 16px; }
         .midterm-hidden-btn:hover { background: rgba(0,122,255,0.15); }
-        .finals-hidden-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; cursor: pointer; border: 1px solid rgba(204,34,0,0.3); color: #cc2200; background: rgba(204,34,0,0.08); transition: all 0.2s; margin-bottom: 16px; }
-        .finals-hidden-btn:hover { background: rgba(204,34,0,0.15); }
+        .finals-hidden-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; cursor: pointer; border: 1px solid rgba(217,119,6,0.3); color: #d97706; background: rgba(217,119,6,0.08); transition: all 0.2s; margin-bottom: 16px; }
+        .finals-hidden-btn:hover { background: rgba(217,119,6,0.15); }
 
         /* Exam view toggle (big cards) */
         .exam-view-toggle { display: flex; gap: 12px; justify-content: center; margin-bottom: 28px; flex-wrap: wrap; }
@@ -153,16 +149,16 @@
         .exam-view-card-midterms { background: rgba(0,122,255,0.08); border-color: rgba(0,122,255,0.25); }
         .exam-view-card-midterms:hover { background: rgba(0,122,255,0.14); border-color: rgba(0,122,255,0.5); box-shadow: 0 0 16px rgba(0,122,255,0.2); }
         .exam-view-card-midterms.active { background: rgba(0,122,255,0.18); border-color: #007aff; box-shadow: 0 0 22px rgba(0,122,255,0.35); }
-        .exam-view-card-finals { background: rgba(204,34,0,0.08); border-color: rgba(204,34,0,0.25); }
-        .exam-view-card-finals:hover { background: rgba(204,34,0,0.14); border-color: rgba(204,34,0,0.5); box-shadow: 0 0 16px rgba(204,34,0,0.2); }
-        .exam-view-card-finals.active { background: rgba(204,34,0,0.18); border-color: #cc2200; box-shadow: 0 0 22px rgba(204,34,0,0.35); }
+        .exam-view-card-finals { background: rgba(217,119,6,0.08); border-color: rgba(217,119,6,0.25); }
+        .exam-view-card-finals:hover { background: rgba(217,119,6,0.14); border-color: rgba(217,119,6,0.5); box-shadow: 0 0 16px rgba(217,119,6,0.2); }
+        .exam-view-card-finals.active { background: rgba(217,119,6,0.18); border-color: #d97706; box-shadow: 0 0 22px rgba(217,119,6,0.35); }
         .exam-view-card-label { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
         .exam-view-card-midterms .exam-view-card-label { color: #007aff; }
-        .exam-view-card-finals .exam-view-card-label { color: #cc2200; }
+        .exam-view-card-finals .exam-view-card-label { color: #d97706; }
         .exam-view-card-count { font-size: 0.7rem; color: #888; margin-top: 1px; }
         .exam-view-card.active .exam-view-card-count { color: #bbb; }
         /* Nav bar turns red when finals mode is active */
-        .nav-link-midterms.finals-mode.active { background: rgba(204,34,0,0.15) !important; border-color: rgba(204,34,0,0.4) !important; color: #cc2200 !important; }
+        .nav-link-midterms.finals-mode.active { background: rgba(217,119,6,0.15) !important; border-color: rgba(217,119,6,0.4) !important; color: #d97706 !important; }
         
         .useful-select { background: rgba(181, 25, 214, 0.15); border: 1px solid rgba(181, 25, 214, 0.4); color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; cursor: pointer; outline: none; font-weight: bold; font-family: 'Work Sans', sans-serif; transition: 0.3s; }
         .useful-select:hover { background: rgba(181, 25, 214, 0.3); }
@@ -300,51 +296,6 @@
         .toast-notification.toast-bottom-right.show { transform: translateY(0); }
         .toast-notification.toast-locked { background: rgba(233, 30, 140, 0.85); border: 1px solid rgba(233, 30, 140, 0.6); box-shadow: 0 0 30px rgba(233, 30, 140, 0.3), 0 8px 32px rgba(0,0,0,0.4); }
         .toast-notification.toast-todo { background: rgba(32, 201, 151, 0.85); border: 1px solid rgba(32, 201, 151, 0.6); box-shadow: 0 0 30px rgba(32, 201, 151, 0.3), 0 8px 32px rgba(0,0,0,0.4); }
-
-        .visit-celebration-card {
-            position: fixed;
-            top: 84px;
-            right: 18px;
-            z-index: 2050;
-            width: min(360px, calc(100vw - 36px));
-            border-radius: 16px;
-            padding: 14px 16px;
-            background: linear-gradient(135deg, rgba(233,30,140,0.24), rgba(74,144,226,0.24));
-            border: 1px solid rgba(255,255,255,0.24);
-            box-shadow: 0 18px 45px rgba(0,0,0,0.42), 0 0 26px rgba(233,30,140,0.24);
-            backdrop-filter: blur(12px);
-            color: #fff;
-            transform: translateY(-12px) scale(0.98);
-            opacity: 0;
-            pointer-events: auto;
-            transition: opacity 0.28s ease, transform 0.28s ease;
-        }
-        .visit-celebration-card.show { opacity: 1; transform: translateY(0) scale(1); }
-        .visit-celebration-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
-        .visit-celebration-title { font-family: 'Orbitron', sans-serif; font-size: 0.88rem; letter-spacing: 1px; margin-bottom: 4px; }
-        .visit-celebration-text { color: #e6dcf9; font-size: 0.82rem; line-height: 1.45; }
-        .visit-celebration-close {
-            border: 1px solid rgba(255,255,255,0.3);
-            background: rgba(0,0,0,0.2);
-            color: #fff;
-            width: 26px;
-            height: 26px;
-            border-radius: 7px;
-            cursor: pointer;
-            font-size: 1rem;
-            line-height: 1;
-            flex-shrink: 0;
-        }
-        .visit-celebration-close:hover { background: rgba(255,255,255,0.15); }
-        @media (max-width: 768px) {
-            .visit-celebration-card {
-                top: auto;
-                right: 12px;
-                left: 12px;
-                width: auto;
-                bottom: 132px;
-            }
-        }
 
         /* Back to Top Button */
         .scroll-btn { position: fixed; right: 20px; z-index: 999; width: 38px; height: 38px; border-radius: 50%; background: rgba(26, 13, 46, 0.85); backdrop-filter: blur(12px); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.12); cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.4); opacity: 0; pointer-events: none; transition: opacity 0.3s ease, transform 0.2s ease; }
@@ -966,21 +917,12 @@
     <div id="home-page" class="page active">
         <header>
             <h1>WEEK BY WEEK MATERIAL</h1>
-            <p class="subtitle">Select a subject to begin <span class="visit-badge"><span class="vb-dot"></span> <span class="vb-num" id="visit-count">...</span> visits</span></p>
+            <p class="subtitle">Select a subject to begin</p>
         </header>
         <div class="header-actions">
             <button class="recent-btn" data-link="#recent" onclick="showRecent()">📜 History</button>
             <button class="schedule-btn" data-link="#schedule" onclick="showSchedule()">🗓️ Semester Map</button>
             <button class="deadline-btn" data-link="#deadlines" onclick="showDeadlines()">⏳ Deadlines</button>
-            <button class="others-toggle-btn" onclick="toggleHomeOthers()">📂 Others <span class="others-arrow">▼</span></button>
-            <div class="others-expand-area" id="home-others-expand">
-                <button class="midterm-btn" data-link="#midterm" onclick="showMidterms()">📝 Midterms / Finals</button>
-                <button class="useful-btn" data-link="#useful-links" onclick="showUsefulLinks()">🔗 Useful Links</button>
-                <button class="timetable-btn" data-link="#timetable" onclick="showTimetable()">🗓️ Timetable</button>
-                <button class="directory-btn" data-link="#directory" onclick="showDirectory()">👥 Staff Contacts</button>
-                <button class="gpa-btn" data-link="#gpa" onclick="showGpa()">🎓 GPA Calculator</button>
-                <button class="updates-btn" data-link="#updates" onclick="showUpdates()">🚀 Updates</button>
-            </div>
         </div>
         <div class="grid subjects-grid" id="subjects-grid"></div>
         <div id="hidden-subject-controls" style="text-align:center; margin-top:14px;"></div>
@@ -1049,12 +991,12 @@
         <!-- Finals view -->
         <div id="exam-finals-view" style="display:none;">
             <div id="finals-capture-wrap">
-                <h1 style="color:#cc2200; text-align:center;">FINAL EXAMS</h1>
+                <h1 style="color:#d97706; text-align:center;">FINAL EXAMS</h1>
                 <p id="finals-view-subtitle" class="subtitle" style="margin-bottom: 30px;"></p>
                 <div id="finals-list" style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column;"></div>
             </div>
             <div id="finals-export-bar" style="display:flex; justify-content:center; margin-top:30px;">
-                <button class="midterm-export-btn" style="background:rgba(204,34,0,0.15); border-color:#cc2200; color:#cc2200;" onclick="exportFinalsImage()">📸 Save as Image</button>
+                <button class="midterm-export-btn" style="background:rgba(217,119,6,0.15); border-color:#d97706; color:#d97706;" onclick="exportFinalsImage()">📸 Save as Image</button>
             </div>
         </div>
     </div>
@@ -1713,6 +1655,17 @@
         _dlSkipFilterRebuild = true;
         showDeadlines(false);
         _dlSkipFilterRebuild = prevSkip;
+        // Silently re-sort home subjects grid so order is correct when user returns
+        const grid = document.getElementById('subjects-grid');
+        if (grid && grid.children.length > 0) {
+            const sorted = getHomepageOrderedSubjects();
+            const frag = document.createDocumentFragment();
+            sorted.forEach(s => {
+                const card = grid.querySelector(`[data-link="#${s.code}"]`);
+                if (card) frag.appendChild(card);
+            });
+            grid.appendChild(frag);
+        }
         requestAnimationFrame(() => window.scrollTo(0, y));
     }
 
@@ -2121,31 +2074,120 @@
 
     function getSubjectUrgency(subCode) {
         const now = Date.now();
-        let score = Infinity;
-        const typeWeight = { 'quiz': 0.8, 'lab exam': 0.5 };
+        const FINALS_TRIGGER_MS  = 5 * 24 * 60 * 60 * 1000; // trigger: first final within 5 days
+        const MIDTERM_TRIGGER_MS = 3 * 24 * 60 * 60 * 1000; // trigger: first midterm within 3 days
+        const DEFAULT_OFFSET_MS  = (14 * 60 + 30) * 60 * 1000; // 2:30 PM fallback when no time given
+        const GROUP2_OFFSET = 500; // ensures group-2 always sorts after group-1
 
-        if (window.SCHEDULE_DATA) {
-            window.SCHEDULE_DATA.forEach((wk, wIndex) => {
-                if (!wk.tasks) return;
-                wk.tasks.forEach((t, tIndex) => {
-                    if (t.sub !== subCode || t.isCompleted) return;
-                    const signature = buildScheduleDeadlineSignature(wIndex, tIndex, wk.week, t);
-                    const status = getDeadlineState(signature);
-                    if (status === 'hidden' || status === 'completed') return;
-                    const meta = getTaskEffectiveDeadlineMeta(t, wk.week);
-                    if (meta.timestamp === 0) return;
-                    const compareTs = meta.hasTime ? meta.timestamp : getEndOfDayTimestamp(meta.timestamp);
-                    if (compareTs < now) return;
-                    const daysLeft = (compareTs - now) / (1000 * 60 * 60 * 24);
-                    const name = (t.name || '').toLowerCase();
-                    const weight = typeWeight[name] !== undefined ? typeWeight[name] : 1;
-                    const taskScore = daysLeft * weight;
-                    if (taskScore < score) score = taskScore;
-                });
-            });
+        // --- helpers ---
+
+        function examTimestamp(exam) {
+            if (!exam || !exam.date) return null;
+            const base = new Date(exam.date + 'T00:00:00').getTime();
+            if (!exam.time || !String(exam.time).trim()) return base + DEFAULT_OFFSET_MS;
+            const m = String(exam.time).match(/(\d+):(\d+)\s*(AM|PM)?/i);
+            if (!m) return base + DEFAULT_OFFSET_MS;
+            let h = parseInt(m[1], 10), min = parseInt(m[2], 10);
+            const ampm = (m[3] || '').toUpperCase();
+            if (ampm === 'PM' && h < 12) h += 12;
+            if (ampm === 'AM' && h === 12) h = 0;
+            return base + (h * 60 + min) * 60 * 1000;
         }
 
-        return score;
+        // End-of-day for a given ISO date string
+        function endOfDay(dateStr) {
+            return new Date(dateStr + 'T00:00:00').getTime() + 24 * 60 * 60 * 1000;
+        }
+
+        // Is the exam PERIOD active?
+        // Triggered when first exam is within triggerMs ahead (or already started),
+        // and deactivated only when the LAST exam's day has fully passed.
+        function periodActive(dataArr, triggerMs) {
+            if (!dataArr || !dataArr.length) return false;
+            let firstTs = Infinity, lastEndTs = -Infinity;
+            dataArr.forEach(e => {
+                const ts = examTimestamp(e);
+                if (!ts || !e.date) return;
+                if (ts < firstTs) firstTs = ts;
+                const eod = endOfDay(e.date);
+                if (eod > lastEndTs) lastEndTs = eod;
+            });
+            if (firstTs === Infinity || lastEndTs === -Infinity) return false;
+            // Mode starts: first exam is within trigger window (or already started)
+            const triggered = (firstTs - now) <= triggerMs;
+            // Mode ends: the last exam's day has completely passed
+            const periodOver = lastEndTs <= now;
+            return triggered && !periodOver;
+        }
+
+        // Best upcoming exam for this subject in the dataset
+        // (not yet fully passed = end of its day is still in the future)
+        function nextSubjectExam(dataArr) {
+            if (!dataArr) return null;
+            let best = null, bestTs = Infinity;
+            dataArr.forEach(e => {
+                if (e.sub !== subCode || !e.date) return;
+                if (endOfDay(e.date) <= now) return; // this exam's day has passed
+                const ts = examTimestamp(e);
+                if (ts !== null && ts < bestTs) { best = e; bestTs = ts; }
+            });
+            return best;
+        }
+
+        // Deadline-based score (lower = more urgent), unchanged from before
+        function deadlineScore() {
+            let score = Infinity;
+            const typeWeight = { 'quiz': 0.8, 'lab exam': 0.5 };
+            if (window.SCHEDULE_DATA) {
+                window.SCHEDULE_DATA.forEach((wk, wIndex) => {
+                    if (!wk.tasks) return;
+                    wk.tasks.forEach((t, tIndex) => {
+                        if (t.sub !== subCode || t.isCompleted) return;
+                        const sig = buildScheduleDeadlineSignature(wIndex, tIndex, wk.week, t);
+                        const st = getDeadlineState(sig);
+                        if (st === 'hidden' || st === 'completed') return;
+                        const meta = getTaskEffectiveDeadlineMeta(t, wk.week);
+                        if (meta.timestamp === 0) return;
+                        const compareTs = meta.hasTime ? meta.timestamp : getEndOfDayTimestamp(meta.timestamp);
+                        if (compareTs < now) return;
+                        const daysLeft = (compareTs - now) / (1000 * 60 * 60 * 24);
+                        const name = (t.name || '').toLowerCase();
+                        const weight = typeWeight[name] !== undefined ? typeWeight[name] : 1;
+                        const s = daysLeft * weight;
+                        if (s < score) score = s;
+                    });
+                });
+            }
+            return score;
+        }
+
+        // --- ordering decision ---
+        // Finals period takes priority over midterms period
+
+        if (periodActive(window.FINAL_DATA, FINALS_TRIGGER_MS)) {
+            const exam = nextSubjectExam(window.FINAL_DATA);
+            if (exam) {
+                // Group 1: this subject still has a final coming — sort by days until that final
+                const ts = examTimestamp(exam);
+                return Math.max(0, (ts - now) / (1000 * 60 * 60 * 24));
+            }
+            // Group 2: this subject's final already passed — sort by deadlines, after Group 1
+            return GROUP2_OFFSET + deadlineScore();
+        }
+
+        if (periodActive(window.MIDTERM_DATA, MIDTERM_TRIGGER_MS)) {
+            const exam = nextSubjectExam(window.MIDTERM_DATA);
+            if (exam) {
+                // Group 1: this subject still has a midterm coming — sort by days until that midterm
+                const ts = examTimestamp(exam);
+                return Math.max(0, (ts - now) / (1000 * 60 * 60 * 24));
+            }
+            // Group 2: this subject's midterm already passed — sort by deadlines, after Group 1
+            return GROUP2_OFFSET + deadlineScore();
+        }
+
+        // Normal mode: sort purely by upcoming deadlines
+        return deadlineScore();
     }
 
     function getHomepageOrderedSubjects() {
@@ -4197,9 +4239,9 @@
                     card.onclick = () => openExamViewFromSchedule(isFinalsWk ? 'finals' : 'midterms');
                 }
             } else if (isFinalsWk) {
-                card.style.borderColor = '#cc2200';
-                card.style.background = 'linear-gradient(135deg,rgba(204,34,0,0.4),rgba(120,20,0,0.6))';
-                card.style.boxShadow = '0 10px 30px rgba(204,34,0,0.3)';
+                card.style.borderColor = '#d97706';
+                card.style.background = 'linear-gradient(135deg,rgba(217,119,6,0.4),rgba(120,20,0,0.6))';
+                card.style.boxShadow = '0 10px 30px rgba(217,119,6,0.3)';
                 card.style.cursor = 'pointer';
                 card.onclick = () => openExamViewFromSchedule('finals');
             } else if (isMidtermWk) {
@@ -4708,7 +4750,7 @@
             container.innerHTML = `
                 <div style="text-align:center; padding:60px 20px; max-width:500px; margin:0 auto;">
                     <div style="font-size:3.5rem; margin-bottom:20px; opacity:0.4;">🏁</div>
-                    <div style="font-family:'Orbitron',sans-serif; font-size:1rem; letter-spacing:3px; color:#cc2200; opacity:0.5; text-transform:uppercase; margin-bottom:14px;">Finals Schedule</div>
+                    <div style="font-family:'Orbitron',sans-serif; font-size:1rem; letter-spacing:3px; color:#d97706; opacity:0.5; text-transform:uppercase; margin-bottom:14px;">Finals Schedule</div>
                     <div style="color:#666; font-size:0.95rem; line-height:1.7;">Not published yet.<br>Check back here once finals details are announced.</div>
                 </div>`;
             return;
@@ -4717,7 +4759,7 @@
         renderExamList(
             container,
             sortExamData(window.FINAL_DATA),
-            '#cc2200',
+            '#d97706',
             finalHiddenSet,
             saveFinalHidden,
             openFinalModal,
@@ -4758,7 +4800,7 @@
     }
 
     function openFinalHiddenPanel() {
-        buildHiddenPanel('final-hidden-panel-slot', 'final-hidden-panel', finalHiddenSet, window.FINAL_DATA, '#cc2200', saveFinalHidden, '204,34,0');
+        buildHiddenPanel('final-hidden-panel-slot', 'final-hidden-panel', finalHiddenSet, window.FINAL_DATA, '#d97706', saveFinalHidden, '204,34,0');
     }
 
     function openModal(wIndex, tIndex) {
@@ -4946,7 +4988,7 @@
         fields.forEach(f => {
             if (f.val && f.val.trim() !== '') {
                 hasContent = true;
-                container.innerHTML += `<div class="modal-field"><div class="modal-label" style="color:#cc2200;">${f.label}</div><div class="modal-value" style="border-left-color:#cc2200;">${f.val}</div></div>`;
+                container.innerHTML += `<div class="modal-field"><div class="modal-label" style="color:#d97706;">${f.label}</div><div class="modal-value" style="border-left-color:#d97706;">${f.val}</div></div>`;
             }
         });
 
@@ -6163,25 +6205,32 @@
 
         if(badge) {
             if(upcoming.length > 0) {
-                const closestMs = upcoming[0].compareTs - now;
-                const d = Math.floor(closestMs / (1000 * 60 * 60 * 24));
-                const h = Math.floor((closestMs / (1000 * 60 * 60)) % 24);
-                
+                const first = upcoming[0];
                 let badgeText = '';
-                if(d > 0) badgeText = d + 'd';
-                else if (h > 0) badgeText = h + 'h';
-                else badgeText = '<1h';
+                let badgeBg = 'rgba(0, 229, 255, 0.2)';
+                let badgeColor = '#00E5FF';
+
+                if (first.isOngoing) {
+                    badgeText = '⬤';
+                    badgeBg = 'rgba(52, 199, 89, 0.2)';
+                    badgeColor = '#34c759';
+                } else {
+                    const closestMs = first.compareTs - now;
+                    const d = Math.floor(closestMs / (1000 * 60 * 60 * 24));
+                    const h = Math.floor((closestMs / (1000 * 60 * 60)) % 24);
+                    if(d > 0) badgeText = d + 'd';
+                    else if (h > 0) badgeText = h + 'h';
+                    else badgeText = '<1h';
+                    if (d <= 1) {
+                        badgeBg = 'rgba(255, 59, 48, 0.2)';
+                        badgeColor = '#ff3b30';
+                    }
+                }
 
                 badge.textContent = badgeText;
                 badge.style.display = 'inline-block';
-                
-                if (d <= 1) {
-                     badge.style.background = 'rgba(255, 59, 48, 0.2)';
-                     badge.style.color = '#ff3b30';
-                } else {
-                     badge.style.background = 'rgba(0, 229, 255, 0.2)';
-                     badge.style.color = '#00E5FF';
-                }
+                badge.style.background = badgeBg;
+                badge.style.color = badgeColor;
             } else { 
                 badge.style.display = 'none'; 
             }
@@ -7012,7 +7061,7 @@
         if (active === 'midterm') {
             const isFinals = (typeof examViewMode !== 'undefined') && examViewMode === 'finals';
             const exams = (isFinals ? (window.FINAL_DATA || []) : (window.MIDTERM_DATA || []));
-            const accentColor = isFinals ? '#cc2200' : '#007aff';
+            const accentColor = isFinals ? '#d97706' : '#007aff';
             const titleText  = isFinals ? 'FINAL EXAMS' : 'MIDTERM EXAMS';
 
             const shell = document.createElement('div');
@@ -7506,98 +7555,6 @@
         else label = Math.floor(days / 30) + ' month' + (Math.floor(days/30) > 1 ? 's' : '') + ' ago';
         return `<div class="week-updated-ago">Updated ${label}</div>`;
     }
-
-    // --- Visitor Counter (countapi + resilient fallback, 6hr cooldown) ---
-    (function() {
-        var COOLDOWN_MS = 6 * 60 * 60 * 1000;
-        var BASELINE_COUNT = 3800;
-        var BASELINE_DATE_TS = new Date('2026-04-06T00:00:00').getTime();
-        var EST_DAILY_GROWTH = 110;
-        var NAMESPACE = 'free-bobuxs-team';
-        var KEY = 'page-views';
-        var lastHit = parseInt(localStorage.getItem('visit_ts') || '0', 10);
-        var cachedCount = parseInt(localStorage.getItem('visit_count_cache') || '0', 10);
-        if (isNaN(lastHit)) lastHit = 0;
-        if (isNaN(cachedCount)) cachedCount = 0;
-        var shouldCount = Date.now() - lastHit > COOLDOWN_MS;
-        var nowTs = Date.now();
-        var daysSinceBaseline = Math.max(0, Math.floor((nowTs - BASELINE_DATE_TS) / (24 * 60 * 60 * 1000)));
-        var estimatedNow = BASELINE_COUNT + (daysSinceBaseline * EST_DAILY_GROWTH);
-        var url = shouldCount
-            ? ('https://api.countapi.xyz/hit/' + NAMESPACE + '/' + KEY)
-            : ('https://api.countapi.xyz/get/' + NAMESPACE + '/' + KEY);
-
-        function setDisplayedCount(value) {
-            var el = document.getElementById('visit-count');
-            if (!el) return;
-            el.textContent = Number(value || 0).toLocaleString();
-            maybeShowVisitCelebration(Number(value || 0));
-        }
-
-        function setFallbackCount() {
-            var fallback = Math.max(cachedCount || 0, estimatedNow);
-            if (shouldCount) fallback = Math.max(fallback, (cachedCount || estimatedNow) + 1);
-            localStorage.setItem('visit_count_cache', String(fallback));
-            if (shouldCount) localStorage.setItem('visit_ts', String(Date.now()));
-            setDisplayedCount(fallback);
-        }
-
-        fetch(url)
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                var apiValue = (data && typeof data.value === 'number') ? data.value : NaN;
-                if (!isNaN(apiValue)) {
-                    var finalCount = Math.max(apiValue, cachedCount || 0, estimatedNow);
-                    if (shouldCount) {
-                        finalCount = Math.max(finalCount, (cachedCount || estimatedNow) + 1);
-                        localStorage.setItem('visit_ts', String(Date.now()));
-                    }
-                    localStorage.setItem('visit_count_cache', String(finalCount));
-                    setDisplayedCount(finalCount);
-                } else {
-                    setFallbackCount();
-                }
-            })
-            .catch(function() {
-                setFallbackCount();
-            });
-
-        function maybeShowVisitCelebration(count) {
-            var seenKey = 'last_celebrated_count';
-            var lastCelebrated = parseInt(localStorage.getItem(seenKey) || '0', 10);
-            if (isNaN(lastCelebrated)) lastCelebrated = 0;
-            if (!(count > 0 && count % 1000 === 0 && count !== lastCelebrated)) return;
-            showVisitCelebrationCard(count);
-            localStorage.setItem(seenKey, String(count));
-        }
-
-        function showVisitCelebrationCard(count) {
-            var old = document.getElementById('visit-celebration-card');
-            if (old) old.remove();
-            var card = document.createElement('div');
-            card.id = 'visit-celebration-card';
-            card.className = 'visit-celebration-card';
-            card.innerHTML = '<div class="visit-celebration-head"><div class="visit-celebration-title">🎉 Milestone Visitor</div>' +
-                '<button class="visit-celebration-close" type="button" aria-label="Close celebration">✕</button></div>' +
-                '<div class="visit-celebration-text">Congrats! You are visitor #' + count.toLocaleString() +
-                '. Thanks for supporting the site.</div>';
-            document.body.appendChild(card);
-            requestAnimationFrame(function() { card.classList.add('show'); });
-            var closeBtn = card.querySelector('.visit-celebration-close');
-            var hideTimer = null;
-            function closeCard() {
-                if (hideTimer) {
-                    clearTimeout(hideTimer);
-                    hideTimer = null;
-                }
-                card.classList.remove('show');
-                setTimeout(function() { if (card.parentNode) card.remove(); }, 350);
-            }
-            if (closeBtn) closeBtn.addEventListener('click', closeCard);
-            hideTimer = setTimeout(closeCard, 60000);
-        }
-
-    })();
 
     // --- Timetable ---
     const TT_SUBJECT_COLORS = {
@@ -9502,7 +9459,7 @@
         const exams = isFinals ? (window.FINAL_DATA || []) : (window.MIDTERM_DATA || []);
         const hiddenSet = isFinals ? (typeof finalHiddenSet !== 'undefined' ? finalHiddenSet : new Set())
                                    : (typeof midtermHiddenSet !== 'undefined' ? midtermHiddenSet : new Set());
-        const accentColor = isFinals ? '#cc2200' : '#007aff';
+        const accentColor = isFinals ? '#d97706' : '#007aff';
         const accentRgb   = isFinals ? '204,34,0' : '0,122,255';
         const fileName    = isFinals ? 'final-exams.png' : 'midterm-exams.png';
         const shell = document.createElement('div');
