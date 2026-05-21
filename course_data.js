@@ -225,34 +225,6 @@ window.COURSE_DATA = [
                         "desc": "Lab work",
                         "isNew": false
                     },
-                    "Quiz": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Answers": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 1": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGDRE6bS-RZ_A9at2zb7mtZ-&si=LtGfTsGkf3ZRLbTc",
-                        "desc": "Some videos to explain topics discussed in lecture  ",
-                        "isNew": true
-                    },
-                    "Alt 2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
                     "Topic Related Questions ": {
                         "vis": false,
                         "lock": false,
@@ -3054,34 +3026,6 @@ window.COURSE_DATA = [
                         "isRecent": true,
                         "recentDate": "20/2/2026 9:47 PM"
                     },
-                    "Quiz": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Answers": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 1": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 2": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PL1DUmTEdeA6JlommmGP5wicYLxX5PVCQt&si=9KjLItjr3_CYE5ux",
-                        "desc": "Mohamed El Desouki playlist",
-                        "isNew": true
-                    },
                     "Topic Related Questions ": {
                         "vis": false,
                         "lock": false,
@@ -3170,13 +3114,6 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
-                    },
-                    "Lec codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
                     },
                     "Lecture codes": {
                         "vis": false,
@@ -3369,13 +3306,6 @@ window.COURSE_DATA = [
                         "isRecent": false,
                         "recentDate": ""
                     },
-                    "Lec codes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/13kUel2UJmevf-hRQRbKYVRbv4VE6pbH5?usp=drive_link",
-                        "desc": "Static Array Lecture code",
-                        "isNew": true,
-                        "isRecent": true
-                    },
                     "Lecture codes": {
                         "vis": true,
                         "link": "https://drive.google.com/drive/folders/13kUel2UJmevf-hRQRbKYVRbv4VE6pbH5?usp=drive_link",
@@ -3556,13 +3486,6 @@ window.COURSE_DATA = [
                         "isRecent": false,
                         "recentDate": ""
                     },
-                    "Lec codes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1QpskXicqhuJrMGR49-3hFsrF1Mg6A-dJ?usp=drive_link",
-                        "desc": "Dynamic lists Lecture codes",
-                        "isNew": true,
-                        "isRecent": true
-                    },
                     "Lecture codes": {
                         "vis": true,
                         "link": "https://drive.google.com/drive/folders/1QpskXicqhuJrMGR49-3hFsrF1Mg6A-dJ?usp=drive_link",
@@ -3737,13 +3660,6 @@ window.COURSE_DATA = [
                         "isRecent": false,
                         "recentDate": ""
                     },
-                    "Lec codes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1RFj6PKotoUziGClpRAXY6GvHyanJLZQw?usp=drive_link",
-                        "desc": "LinkedLists Source Codes",
-                        "isNew": true,
-                        "isRecent": true
-                    },
                     "Lecture codes": {
                         "vis": true,
                         "link": "https://drive.google.com/drive/folders/1RFj6PKotoUziGClpRAXY6GvHyanJLZQw?usp=drive_link",
@@ -3917,13 +3833,6 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
-                    },
-                    "Lec codes": {
-                        "vis": false,
-                        "link": "https://drive.google.com/drive/folders/1dnQCxVBGR2z25b88fOutmIgle0G05YEA?usp=drive_link",
-                        "desc": "Linked Stack",
-                        "isNew": false,
-                        "isRecent": false
                     },
                     "Lecture codes": {
                         "vis": true,
@@ -6273,34 +6182,6 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "Lab work",
                         "isNew": false
-                    },
-                    "Quiz": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Answers": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 1": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://www.youtube.com/watch?v=yLc0Yp5QZlU&list=PL37D52B7714788190",
-                        "desc": "Mohamed El Desouki playlist",
-                        "isNew": true
-                    },
-                    "Alt 2": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLoRh0POuk1Rw-BZU-DPI6cA_c5W9_2uF_&si=fYrJs3y1qqigBxaY",
-                        "desc": "Another alternative (more practical)",
-                        "isNew": true
                     },
                     "Topic Related Questions ": {
                         "vis": false,
@@ -9269,34 +9150,6 @@ window.COURSE_DATA = [
                         "desc": "Lab work",
                         "isNew": false
                     },
-                    "Quiz": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Answers": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 1": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/O0azZZpqEa8?si=EhdoBndPZ2bEa553",
-                        "desc": "Zero-one",
-                        "isNew": true
-                    },
-                    "Alt 2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
                     "Topic Related Questions ": {
                         "vis": false,
                         "lock": false,
@@ -11875,34 +11728,6 @@ window.COURSE_DATA = [
                         "link": "#",
                         "desc": "Lab work",
                         "isNew": false
-                    },
-                    "Quiz": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Answers": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 1": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PL6KMWPQP_DM-7tMNjUa7X2zGrc8jipPeI&si=U_QvJXTgVlrNxfRc",
-                        "desc": "Ghassan Shobaki playlist",
-                        "isNew": true
-                    },
-                    "Alt 2": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLpfYfulQlEPyavmKP24AhTtdzD2OZ-qgk&si=FdZwQOM-oM633I-7",
-                        "desc": "Ahmed Salah ElDin playlist",
-                        "isNew": true
                     },
                     "Topic Related Questions ": {
                         "vis": false,
@@ -14926,34 +14751,6 @@ window.COURSE_DATA = [
                         "desc": "Lab work",
                         "isNew": false
                     },
-                    "Quiz": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Answers": {
-                        "vis": false,
-                        "lock": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 1": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
                     "Topic Related Questions ": {
                         "vis": false,
                         "lock": false,
@@ -17314,20 +17111,6 @@ window.COURSE_DATA = [
                         "isNew": false,
                         "isRecent": false
                     },
-                    "Alt 1": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
                     "Voice Recording": {
                         "vis": false,
                         "lock": false,
@@ -17399,20 +17182,6 @@ window.COURSE_DATA = [
                         "isNew": false
                     },
                     "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Linear Algebra": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Python": {
                         "vis": false,
                         "lock": false,
                         "link": "#",
@@ -17523,20 +17292,6 @@ window.COURSE_DATA = [
                         "lock": false,
                         "link": "https://youtu.be/SbyQe6_LBwc?si=thyuctSEQXgqx5Iq",
                         "desc": "An intro to the course, alongside the first lecture.",
-                        "isNew": false
-                    },
-                    "Alt 1": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alt 2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
                         "isNew": false
                     },
                     "Voice Recording": {
@@ -25689,12 +25444,6 @@ window.UPDATES_DATA = [
         "title": "Mobile Swipe Navigation",
         "desc": "Navigating on your phone is now much faster. You can simply swipe left or right on your screen to seamlessly jump back and forth between weeks!",
         "date": "2026-03-29"
-    },
-    {
-        "icon": "✅",
-        "title": "Personal To-Do List",
-        "desc": "Save specific resources or bulk-add whole weeks using the new [+] button. Your To-Do tab cleanly groups items by subject, tracks how long they've been pending, and automatically bumps upcoming quizzes to the top of your priority list.",
-        "date": "2026-04-04"
     },
     {
         "icon": "👁️",
