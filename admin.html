@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="logo.png">
     <style>
         :root { --bg: #0a0012; --panel: #1a0d2e; --accent: #e91e8c; --text: #fff; --hover: rgba(233,30,140,0.1); }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); display: flex; height: 100vh; margin: 0; overflow: hidden; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); display: flex; height: 100vh; margin: 0; overflow: hidden; box-sizing: border-box; padding-top: 44px; }
         
         .sidebar { width: 300px; background: #130822; border-right: 1px solid #333; display: flex; flex-direction: column; }
         .middle { width: 350px; background: var(--panel); border-right: 1px solid #333; display: flex; flex-direction: column; }
@@ -22,9 +22,22 @@
         
         .btn { border: none; padding: 6px 12px; cursor: pointer; border-radius: 4px; font-weight: bold; color: white; transition: 0.2s; }
         .btn:hover { opacity: 0.9; }
-        .btn-add { background: #4a90e2; width: 100%; padding: 12px; margin-top: auto; border-radius: 0; }
+        .btn-add { background: #4a90e2; padding: 7px 14px; margin-top: auto; border-radius: 6px; font-size: 0.82rem; width: auto; align-self: center; margin: 8px auto; display: block; }
         .btn-del { background: #e91e8c; font-size: 0.8rem; padding: 2px 6px; margin-left: auto; border-radius: 4px; }
-        .btn-save { background: #00c853; padding: 15px 40px; font-size: 1.2rem; position: fixed; bottom: 30px; right: 30px; box-shadow: 0 0 20px rgba(0,200,83,0.4); z-index: 1000; border-radius: 50px; }
+        .btn-save {
+            background: rgba(0,200,83,0.15);
+            border: 1px solid #00c853;
+            color: #00c853;
+            padding: 6px 16px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            letter-spacing: 0.5px;
+        }
+        .btn-save:hover { background: rgba(0,200,83,0.28); box-shadow: 0 0 12px rgba(0,200,83,0.3); }
+        .admin-topbar { position: fixed; top: 0; left: 0; right: 0; height: 44px; display: flex; align-items: center; justify-content: flex-end; padding: 0 12px; background: rgba(19,8,34,0.97); border-bottom: 1px solid #333; z-index: 1200; gap: 8px; }
         .btn-config { width: 100%; background: #333; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: #ccc; cursor: pointer; }
         .btn-recents { width: 100%; background: #4a90e2; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: white; cursor: pointer; }
         .btn-schedule { width: 100%; background: #ff9500; padding: 15px; text-align: left; font-weight: bold; border-bottom: 1px solid #444; color: black; cursor: pointer; }
@@ -78,18 +91,21 @@
 </head>
 <body>
 
+<div class="admin-topbar">
+    <span id="save-status" style="font-size:0.75rem; color:#666;"></span>
+    <button class="btn btn-save" onclick="saveData()">💾 Save & Download</button>
+</div>
+
 <div id="editor-pane">
 
 <div class="sidebar">
     <div onclick="toggleSubjectsTab()" class="btn-config" id="btn-subjects-tab" style="background:#e91e8c; color:white;">📋 SUBJECTS</div>
     <div onclick="toggleSchedule()" class="btn-schedule">📅 MANAGE SCHEDULE</div>
-    <div onclick="toggleScheduleDeadlines()" class="btn-deadlines">⏳ MANAGE DEADLINES</div>
     <div onclick="toggleUsefulLinks()" class="btn-expire" style="background:#b519d6;">🔗 MANAGE USEFUL LINKS</div>
     <div onclick="toggleOthersGroup()" class="btn-config" id="btn-others" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;">📁 OTHERS <span id="others-arrow" style="font-size:0.8rem;">▸</span></div>
     <div id="others-group" style="display:none;">
         <div onclick="toggleConfig()" class="btn-config" style="padding-left:30px; font-size:0.85rem;">⚙️ CONFIG</div>
-        <div onclick="toggleRecents()" class="btn-recents" style="padding-left:30px; font-size:0.85rem;">📜 MANAGE HISTORY</div>
-        <div onclick="toggleMidterms()" class="btn-midterms" style="padding-left:30px; font-size:0.85rem;">📝 MANAGE MIDTERMS</div>
+        <div onclick="toggleMidterms()" class="btn-midterms" style="padding-left:30px; font-size:0.85rem;">📝 MANAGE MIDTERMS / FINALS</div>
         <div onclick="toggleStaffDirectory()" class="btn-expire" style="background:#34c759; color:black; padding-left:30px; font-size:0.85rem;">👥 MANAGE STAFF CONTACTS</div>
         <div onclick="toggleTimetableManager()" class="btn-expire" style="background:#ff375f; color:white; padding-left:30px; font-size:0.85rem;">🗓️ MANAGE TIMETABLE</div>
         <div onclick="toggleUpdatesManager()" class="btn-expire" style="background:#af52de; color:white; padding-left:30px; font-size:0.85rem;">🚀 MANAGE UPDATES</div>
@@ -99,7 +115,7 @@
     <div id="subjects-panel" style="display:flex; flex-direction:column; flex:1; overflow:hidden;">
         <div class="panel-header">SUBJECTS</div>
         <div id="subject-list" class="list-container"></div>
-        <button class="btn btn-add" onclick="addSubject()">+ Add Subject</button>
+        <button class="btn btn-add" style="width:calc(100% - 16px); border-radius:6px; margin:6px 8px;" onclick="addSubject()">＋ Add Subject</button>
     </div>
 </div>
 
@@ -113,8 +129,6 @@
 </div>
 
 </div>
-
-<button class="btn btn-save" onclick="saveData()">💾 SAVE & DOWNLOAD</button>
 
 <script src="course_data.js"></script>
 <script>
@@ -460,12 +474,7 @@
         let bulkToolbar = '';
 
         if (subViewMode === 'weeks' || subViewMode === 'events') {
-            bulkToolbar = `
-                <div class="bulk-toolbar">
-                    <button class="btn-bulk" onclick="bulkResGlobal('vis', true)">Show All Res</button>
-                    <button class="btn-bulk" onclick="bulkResGlobal('vis', false)">Hide All Res</button>
-                </div>
-            `;
+            bulkToolbar = '';
         }
 
         mid.innerHTML = `
@@ -502,11 +511,11 @@
                 el.addEventListener('dragstart', (e) => handleDragStart(e, i, 'week'));
                 el.addEventListener('dragover', handleDragOver);
                 el.addEventListener('drop', (e) => handleDrop(e, i, 'week'));
-                el.innerHTML = `<span class="drag-handle">☰</span><div style="flex:1">${wk.title} ${wk.isNew ? '★' : ''}</div><button class="btn-move" onclick="moveItem(event, 'week', ${i}, -1)">▲</button><button class="btn-move" onclick="moveItem(event, 'week', ${i}, 1)">▼</button><button class="btn btn-del" onclick="delMiddleItem(event, 'week', ${i})">✕</button>`;
+                el.innerHTML = `<span class="drag-handle">☰</span><div style="flex:1">${wk.title}</div><button class="btn-move" onclick="moveItem(event, 'week', ${i}, -1)">▲</button><button class="btn-move" onclick="moveItem(event, 'week', ${i}, 1)">▼</button><button class="btn btn-del" onclick="delMiddleItem(event, 'week', ${i})">✕</button>`;
                 el.onclick = (e) => { if(e.target.tagName !== 'BUTTON') { wIdx = i; renderMiddleColumn(); renderEditor(); } };
                 listContainer.appendChild(el);
             });
-            btnContainer.innerHTML = `<button class="btn btn-add" onclick="addMiddleItem('week')">+ Add Week</button>`;
+            btnContainer.innerHTML = `<button class="btn btn-add" style="width:calc(100% - 16px); border-radius:6px; margin:6px 8px;" onclick="addMiddleItem('week')">＋ Add Week</button>`;
         } 
         else if (subViewMode === 'events') {
             sub.events.forEach((ev, i) => {
@@ -516,11 +525,11 @@
                 el.addEventListener('dragstart', (e) => handleDragStart(e, i, 'event'));
                 el.addEventListener('dragover', handleDragOver);
                 el.addEventListener('drop', (e) => handleDrop(e, i, 'event'));
-                el.innerHTML = `<span class="drag-handle">☰</span><div style="flex:1">${ev.title} ${ev.isNew ? '★' : ''}</div><button class="btn-move" onclick="moveItem(event, 'event', ${i}, -1)">▲</button><button class="btn-move" onclick="moveItem(event, 'event', ${i}, 1)">▼</button><button class="btn btn-del" onclick="delMiddleItem(event, 'event', ${i})">✕</button>`;
+                el.innerHTML = `<span class="drag-handle">☰</span><div style="flex:1">${ev.title}</div><button class="btn-move" onclick="moveItem(event, 'event', ${i}, -1)">▲</button><button class="btn-move" onclick="moveItem(event, 'event', ${i}, 1)">▼</button><button class="btn btn-del" onclick="delMiddleItem(event, 'event', ${i})">✕</button>`;
                 el.onclick = (e) => { if(e.target.tagName !== 'BUTTON') { eIdx = i; renderMiddleColumn(); renderEditor(); } };
                 listContainer.appendChild(el);
             });
-            btnContainer.innerHTML = `<button class="btn btn-add" onclick="addMiddleItem('event')">+ Add Event Material</button>`;
+            btnContainer.innerHTML = `<button class="btn btn-add" style="width:calc(100% - 16px); border-radius:6px; margin:6px 8px;" onclick="addMiddleItem('event')">＋ Add Event Material</button>`;
         }
         else if (subViewMode === 'playlists') {
             let lastGroup = null;
@@ -629,12 +638,11 @@
                     
                     <div class="checkbox-row" style="background:#150a25; padding:10px; border-radius:8px;">
                         <label class="checkbox-label"><input type="checkbox" ${item.locked ? 'checked' : ''} onchange="updateData('${subViewMode}', 'locked', this.checked)"> Locked</label>
-                        <label class="checkbox-label"><input type="checkbox" ${item.isNew ? 'checked' : ''} onchange="updateData('${subViewMode}', 'isNew', this.checked); renderMiddleColumn()"> New!</label>
                         <div style="display:flex; align-items:center; gap:5px; background:#2a1b3d; padding:2px 8px; border-radius:4px; border:1px solid #444;">
                             <label class="checkbox-label"><input type="checkbox" ${item.isRecent ? 'checked' : ''} onchange="updateData('${subViewMode}', 'isRecent', this.checked)"> <span style="color:#4a90e2">History</span></label>
-                            <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${item.recentDate || ''}" oninput="updateData('${subViewMode}', 'recentDate', this.value); autoMarkNewContainer()">
+                            <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${item.recentDate || ''}" oninput="updateData('${subViewMode}', 'recentDate', this.value)">
                             <button class="btn-time" onclick="setNowContainer()">🕒</button>
-                            <button class="btn-time" style="background:#3d1a1a; color:#ff6b6b; border-color:#ff6b6b44;" onclick="clearHistoryContainer()" title="Clear history & New badge">✕</button>
+                            <button class="btn-time" style="background:#3d1a1a; color:#ff6b6b; border-color:#ff6b6b44;" onclick="clearHistoryContainer()" title="Clear history">✕</button>
                         </div>
                     </div>
 
@@ -778,13 +786,11 @@
                         <strong>${key}</strong>
                         <div class="checkbox-row" style="margin:0; gap:10px;">
                             <label class="checkbox-label"><input type="checkbox" ${val.vis ? 'checked' : ''} onchange="updateRes('${key}', 'vis', this.checked)"> Show</label>
-                            <label class="checkbox-label"><input type="checkbox" ${val.isNew ? 'checked' : ''} onchange="updateRes('${key}', 'isNew', this.checked)"> New</label>
-                            
                             <div style="display:flex; align-items:center; gap:5px; background:#2a1b3d; padding:2px 8px; border-radius:4px; border:1px solid #444;">
                                 <label class="checkbox-label"><input type="checkbox" ${val.isRecent ? 'checked' : ''} onchange="toggleRecentRes('${key}', this.checked)"> History</label>
-                                <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${val.recentDate || ''}" oninput="updateRes('${key}', 'recentDate', this.value); autoMarkNewRes('${key}')">
+                                <input type="text" style="width:140px; margin:0; font-size:0.8rem;" placeholder="Date..." value="${val.recentDate || ''}" oninput="updateRes('${key}', 'recentDate', this.value)">
                                 <button class="btn-time" onclick="setNowRes('${key}')">🕒</button>
-                                <button class="btn-time" style="background:#3d1a1a; color:#ff6b6b; border-color:#ff6b6b44;" onclick="clearHistoryRes('${key}')" title="Clear history & New badge">✕</button>
+                                <button class="btn-time" style="background:#3d1a1a; color:#ff6b6b; border-color:#ff6b6b44;" onclick="clearHistoryRes('${key}')" title="Clear history">✕</button>
                             </div>
                         </div>
                     </div>
@@ -835,8 +841,8 @@
     }
     function toggleRecentRes(key, checked) { updateRes(key, 'isRecent', checked); if(checked) { updateRes(key, 'vis', true); autoMarkNewRes(key); renderEditor(); } }
     
-    function setNowContainer() { updateData(subViewMode, 'recentDate', getNowStr()); updateData(subViewMode, 'isRecent', true); updateData(subViewMode, 'isNew', true); renderEditor(); renderMiddleColumn(); }
-    function setNowRes(key) { updateRes(key, 'recentDate', getNowStr()); toggleRecentRes(key, true); updateRes(key, 'isNew', true); renderEditor(); }
+    function setNowContainer() { updateData(subViewMode, 'recentDate', getNowStr()); updateData(subViewMode, 'isRecent', true); renderEditor(); renderMiddleColumn(); }
+    function setNowRes(key) { updateRes(key, 'recentDate', getNowStr()); toggleRecentRes(key, true); renderEditor(); }
 
     function clearHistoryContainer() {
         updateData(subViewMode, 'recentDate', '');
@@ -1289,9 +1295,9 @@
                         <input type="checkbox" ${wk.isMidterm ? 'checked' : ''} onchange="window.SCHEDULE_DATA[schWIdx].isMidterm=this.checked; if(this.checked) window.SCHEDULE_DATA[schWIdx].isFinals=false; renderScheduleWeeks();">
                         <span style="color:#007aff; font-weight:bold;">📝 Midterm Week (Blue)</span>
                     </label>
-                    <label class="checkbox-label" style="background:rgba(204,34,0,0.15); border:1px solid #cc2200; padding:10px; margin:0; border-radius:8px;">
+                    <label class="checkbox-label" style="background:rgba(217,119,6,0.15); border:1px solid #d97706; padding:10px; margin:0; border-radius:8px;">
                         <input type="checkbox" ${wk.isFinals ? 'checked' : ''} onchange="window.SCHEDULE_DATA[schWIdx].isFinals=this.checked; if(this.checked) window.SCHEDULE_DATA[schWIdx].isMidterm=false; renderScheduleWeeks();">
-                        <span style="color:#cc2200; font-weight:bold;">🏁 Finals Week (Red)</span>
+                        <span style="color:#d97706; font-weight:bold;">🏁 Finals Week (Amber)</span>
                     </label>
                 </div>
 
@@ -1558,8 +1564,8 @@
         const container = document.getElementById('editor-area');
         const isFinals = adminExamView === 'finals';
         const activeArr = isFinals ? window.FINAL_DATA : window.MIDTERM_DATA;
-        const accentColor = isFinals ? '#ff453a' : '#007aff';
-        const accentBg   = isFinals ? 'rgba(255,69,58,0.1)' : 'rgba(0,122,255,0.1)';
+        const accentColor = isFinals ? '#d97706' : '#007aff';
+        const accentBg   = isFinals ? 'rgba(217,119,6,0.1)' : 'rgba(0,122,255,0.1)';
         const label      = isFinals ? 'Finals' : 'Midterms';
         const icon       = isFinals ? '🏁' : '📝';
 
@@ -1569,7 +1575,7 @@
                 <button onclick="adminExamView='midterms'; renderMidtermsManager();" style="flex:1; padding:12px; border-radius:10px; font-weight:bold; font-size:0.9rem; cursor:pointer; border:2px solid ${adminExamView==='midterms' ? '#007aff' : '#333'}; background:${adminExamView==='midterms' ? 'rgba(0,122,255,0.15)' : 'transparent'}; color:${adminExamView==='midterms' ? '#007aff' : '#666'}; transition:all 0.2s;">
                     📝 Midterms <span style="font-size:0.75rem; opacity:0.7;">(${window.MIDTERM_DATA.length})</span>
                 </button>
-                <button onclick="adminExamView='finals'; renderMidtermsManager();" style="flex:1; padding:12px; border-radius:10px; font-weight:bold; font-size:0.9rem; cursor:pointer; border:2px solid ${adminExamView==='finals' ? '#ff453a' : '#333'}; background:${adminExamView==='finals' ? 'rgba(255,69,58,0.15)' : 'transparent'}; color:${adminExamView==='finals' ? '#ff453a' : '#666'}; transition:all 0.2s;">
+                <button onclick="adminExamView='finals'; renderMidtermsManager();" style="flex:1; padding:12px; border-radius:10px; font-weight:bold; font-size:0.9rem; cursor:pointer; border:2px solid ${adminExamView==='finals' ? '#d97706' : '#333'}; background:${adminExamView==='finals' ? 'rgba(217,119,6,0.15)' : 'transparent'}; color:${adminExamView==='finals' ? '#d97706' : '#666'}; transition:all 0.2s;">
                     🏁 Finals <span style="font-size:0.75rem; opacity:0.7;">(${window.FINAL_DATA.length})</span>
                 </button>
             </div>`;
@@ -1656,7 +1662,7 @@
                         <label>📍 Location</label>
                         <input type="text" placeholder="e.g. Hall C (150), Hall D (36)" value="${escAttr(m.where || '')}" oninput="${dataRef}[${i}].where = this.value;">
                         <input type="text" placeholder="Location URL (Optional)" value="${escAttr(m.whereLink || '')}" style="font-size:0.8rem; margin-top:-5px; background:rgba(0,0,0,0.5);" oninput="${dataRef}[${i}].whereLink = this.value;">
-                        <input type="text" placeholder="Link label (e.g. Check your seat here)" value="${escAttr(m.whereNote || '')}" style="font-size:0.75rem; background:rgba(${isFinals?'255,69,58':'74,144,226'},0.1); border-color:rgba(${isFinals?'255,69,58':'74,144,226'},0.3); color:${accentColor};" oninput="${dataRef}[${i}].whereNote = this.value;">
+                        <input type="text" placeholder="Link label (e.g. Check your seat here)" value="${escAttr(m.whereNote || '')}" style="font-size:0.75rem; background:rgba(${isFinals?'217,119,6':'74,144,226'},0.1); border-color:rgba(${isFinals?'217,119,6':'74,144,226'},0.3); color:${accentColor};" oninput="${dataRef}[${i}].whereNote = this.value;">
                     </div>
                     <div>
                         ${isFinals ? '' : `<label>📚 Coverage</label><input type="text" placeholder="e.g. Weeks 1–4" value="${escAttr(m.coverage || '')}" oninput="${dataRef}[${i}].coverage = this.value;">`}
@@ -2714,6 +2720,12 @@
         _origSave();
         takeSnapshot();
         isDirty = false;
+        const st = document.getElementById('save-status');
+        if (st) {
+            st.textContent = '✓ Saved';
+            st.style.color = '#00c853';
+            setTimeout(() => { st.textContent = ''; }, 2500);
+        }
     };
 
     // Ctrl+S to save
