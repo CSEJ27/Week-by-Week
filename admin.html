@@ -8,7 +8,82 @@
         :root { --bg: #0a0012; --panel: #1a0d2e; --accent: #e91e8c; --text: #fff; --hover: rgba(233,30,140,0.1); }
         body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); display: flex; height: 100vh; margin: 0; overflow: hidden; box-sizing: border-box; padding-top: 44px; }
         
-        .sidebar { width: 300px; background: #130822; border-right: 1px solid #333; display: flex; flex-direction: column; }
+        .sidebar {
+            position: fixed;
+            top: 44px;
+            left: 0;
+            width: 240px;
+            height: calc(100vh - 44px);
+            background: #130822;
+            border-right: 1px solid #2a1a3e;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1100;
+            transform: translateX(-100%);
+            transition: transform 0.22s ease;
+            box-shadow: 4px 0 24px rgba(0,0,0,0.5);
+        }
+        .sidebar.open { transform: translateX(0); }
+        #sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 44px 0 0 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 1099;
+        }
+        #sidebar-backdrop.open { display: block; }
+        .btn-hamburger {
+            background: none;
+            border: none;
+            color: #ccc;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            margin-right: auto;
+            transition: color 0.15s;
+        }
+        .btn-hamburger:hover { color: #e91e8c; }
+        .sidebar-nav {
+            flex-shrink: 0;
+            overflow-y: auto;
+            padding: 6px 0 8px;
+        }
+        .sidebar-nav::-webkit-scrollbar { width: 4px; }
+        .sidebar-nav::-webkit-scrollbar-track { background: transparent; }
+        .sidebar-nav::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: background 0.15s, border-color 0.15s;
+            user-select: none;
+            color: #ccc;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.05); }
+        .nav-btn.active { background: rgba(233,30,140,0.12); border-left-color: #e91e8c; color: white; }
+        .nav-section-label {
+            font-size: 0.62rem;
+            letter-spacing: 1.5px;
+            color: #444;
+            padding: 8px 12px 3px;
+            text-transform: uppercase;
+        }
+        .nav-btn-sub {
+            padding-left: 28px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .others-chevron { margin-left: auto; font-size: 0.65rem; color: #555; transition: transform 0.2s; }
+        .others-chevron.open { transform: rotate(90deg); }
         .middle { width: 350px; background: var(--panel); border-right: 1px solid #333; display: flex; flex-direction: column; }
         .main { flex: 1; padding: 20px; overflow-y: auto; background: var(--bg); display: flex; flex-direction: column; }
         
@@ -92,30 +167,45 @@
 <body>
 
 <div class="admin-topbar">
-    <span id="save-status" style="font-size:0.75rem; color:#666;"></span>
+    <button class="btn-hamburger" onclick="toggleSidebar()" title="Toggle navigation">☰</button>
+    <span id="save-status" style="font-size:0.75rem; color:#666; margin-left:8px;"></span>
     <button class="btn btn-save" onclick="saveData()">💾 Save & Download</button>
 </div>
 
+<div id="sidebar-backdrop" onclick="closeSidebar()"></div>
+
 <div id="editor-pane">
 
+<!-- Subjects panel — visible only when editing subjects, sits left of weeks column -->
+<div id="subjects-panel" style="display:none; flex-direction:column; width:180px; min-width:180px; background:#130822; border-right:1px solid #2a1a3e; overflow:hidden;">
+    <div class="panel-header" style="font-size:0.72rem; padding:7px 10px; flex-shrink:0; background:#1a0830;">SUBJECTS</div>
+    <div id="subject-list" class="list-container" style="flex:1; overflow-y:auto;"></div>
+    <button class="btn btn-add" style="width:calc(100% - 12px); border-radius:6px; margin:5px 6px; flex-shrink:0; font-size:0.78rem; padding:6px 10px;" onclick="addSubject()">＋ Add Subject</button>
+</div>
+
 <div class="sidebar">
-    <div onclick="toggleSubjectsTab()" class="btn-config" id="btn-subjects-tab" style="background:#e91e8c; color:white;">📋 SUBJECTS</div>
-    <div onclick="toggleSchedule()" class="btn-schedule">📅 MANAGE SCHEDULE</div>
-    <div onclick="toggleUsefulLinks()" class="btn-expire" style="background:#b519d6;">🔗 MANAGE USEFUL LINKS</div>
-    <div onclick="toggleOthersGroup()" class="btn-config" id="btn-others" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;">📁 OTHERS <span id="others-arrow" style="font-size:0.8rem;">▸</span></div>
-    <div id="others-group" style="display:none;">
-        <div onclick="toggleConfig()" class="btn-config" style="padding-left:30px; font-size:0.85rem;">⚙️ CONFIG</div>
-        <div onclick="toggleMidterms()" class="btn-midterms" style="padding-left:30px; font-size:0.85rem;">📝 MANAGE MIDTERMS / FINALS</div>
-        <div onclick="toggleStaffDirectory()" class="btn-expire" style="background:#34c759; color:black; padding-left:30px; font-size:0.85rem;">👥 MANAGE STAFF CONTACTS</div>
-        <div onclick="toggleTimetableManager()" class="btn-expire" style="background:#ff375f; color:white; padding-left:30px; font-size:0.85rem;">🗓️ MANAGE TIMETABLE</div>
-        <div onclick="toggleUpdatesManager()" class="btn-expire" style="background:#af52de; color:white; padding-left:30px; font-size:0.85rem;">📣 MANAGE ANNOUNCEMENTS</div>
+
+    <!-- Navigation only -->
+    <div class="sidebar-nav" id="sidebar-nav">
+
+        <div class="nav-section-label">Content</div>
+        <div class="nav-btn" id="nav-subjects" onclick="toggleSubjectsTab()">📋 Subjects</div>
+        <div class="nav-btn" id="nav-schedule" onclick="toggleSchedule()">📅 Semester Map</div>
+        <div class="nav-btn" id="nav-useful" onclick="toggleUsefulLinks()">🔗 Useful Links</div>
+
+        <div class="nav-section-label" style="margin-top:4px;">Academic</div>
+        <div class="nav-btn" id="nav-midterms" onclick="toggleMidterms()">📝 Midterms / Finals</div>
+        <div class="nav-btn" id="nav-staff" onclick="toggleStaffDirectory()">👥 Staff Contacts</div>
+        <div class="nav-btn" id="nav-timetable" onclick="toggleTimetableManager()">🗓️ Timetable</div>
+
+        <div class="nav-section-label" style="margin-top:4px;">Publishing</div>
+        <div class="nav-btn" id="nav-announcements" onclick="toggleUpdatesManager()">📣 Announcements</div>
+
+        <div class="nav-section-label" style="margin-top:4px;">System</div>
+        <div class="nav-btn" id="nav-config" onclick="toggleConfig()">⚙️ Config</div>
+
     </div>
-    
-    <div id="subjects-panel" style="display:flex; flex-direction:column; flex:1; overflow:hidden;">
-        <div class="panel-header">SUBJECTS</div>
-        <div id="subject-list" class="list-container"></div>
-        <button class="btn btn-add" style="width:calc(100% - 16px); border-radius:6px; margin:6px 8px;" onclick="addSubject()">＋ Add Subject</button>
-    </div>
+
 </div>
 
 <div class="middle" id="middle-col">
@@ -402,7 +492,7 @@
         });
 
         renderSubjects();
-        renderEditor();
+        exitView(); // default to subjects view so panel is visible on load
     }
 
     // Help box builder — call this at the top of any render function
@@ -429,13 +519,26 @@
         else if (v === 'config') renderConfigEditor();
     }
 
-    function toggleConfig() { setView('config'); renderConfigEditor(); }
-    function toggleRecents() { setView('recents'); renderRecentsManager(); }
-    function toggleSchedule() { setView('schedule'); schedulePanelMode = 'weeks'; renderScheduleWeeks(); renderScheduleEditor(); }
-    function toggleScheduleDeadlines() { setView('schedule'); schedulePanelMode = 'deadlines'; renderScheduleWeeks(); renderDeadlineEditor(); }
-    function toggleMidterms() { setView('midterms'); renderMidtermsManager(); }
-    function toggleUsefulLinks() { setView('usefullinks'); renderUsefulLinksManager(); }
-    function toggleSubjectsTab() { exitView(); }
+    function toggleSidebar() {
+        const sb = document.querySelector('.sidebar');
+        const bd = document.getElementById('sidebar-backdrop');
+        const isOpen = sb.classList.contains('open');
+        if (isOpen) { sb.classList.remove('open'); bd.classList.remove('open'); }
+        else { sb.classList.add('open'); bd.classList.add('open'); }
+    }
+
+    function closeSidebar() {
+        document.querySelector('.sidebar').classList.remove('open');
+        document.getElementById('sidebar-backdrop').classList.remove('open');
+    }
+
+    function toggleConfig() { setView('config'); renderConfigEditor(); closeSidebar(); }
+    function toggleRecents() { setView('recents'); renderRecentsManager(); closeSidebar(); }
+    function toggleSchedule() { setView('schedule'); schedulePanelMode = 'weeks'; renderScheduleWeeks(); renderScheduleEditor(); closeSidebar(); }
+    function toggleScheduleDeadlines() { setView('schedule'); schedulePanelMode = 'deadlines'; renderScheduleWeeks(); renderDeadlineEditor(); closeSidebar(); }
+    function toggleMidterms() { setView('midterms'); renderMidtermsManager(); closeSidebar(); }
+    function toggleUsefulLinks() { setView('usefullinks'); renderUsefulLinksManager(); closeSidebar(); }
+    function toggleSubjectsTab() { exitView(); closeSidebar(); }
     function exitView() { setView('editor'); renderSubjects(); renderMiddleColumn(); renderEditor(); }
 
     function setView(mode) {
@@ -443,22 +546,29 @@
         document.body.dataset.view = mode;
         const mid = document.getElementById('middle-col');
         const subjectsPanel = document.getElementById('subjects-panel');
-        const subjectsBtn = document.getElementById('btn-subjects-tab');
-        
-        // Show/hide subjects panel
-        if (mode === 'editor') {
-            subjectsPanel.style.display = 'flex';
-            subjectsBtn.style.background = '#e91e8c';
-            subjectsBtn.style.color = 'white';
-        } else {
-            subjectsPanel.style.display = 'none';
-            subjectsBtn.style.background = '#333';
-            subjectsBtn.style.color = '#ccc';
+
+        // Show subjects panel only when editing subject content
+        subjectsPanel.style.display = mode === 'editor' ? 'flex' : 'none';
+
+        // Highlight active nav item
+        const navMap = {
+            editor: 'nav-subjects',
+            schedule: 'nav-schedule',
+            usefullinks: 'nav-useful',
+            midterms: 'nav-midterms',
+            staff: 'nav-staff',
+            timetable: 'nav-timetable',
+            updates: 'nav-announcements',
+            config: 'nav-config',
+        };
+        document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+        const activeId = navMap[mode];
+        if (activeId) {
+            const activeEl = document.getElementById(activeId);
+            if (activeEl) activeEl.classList.add('active');
         }
-        
-        if(mode === 'editor' || mode === 'schedule') {
-            mid.style.display = 'flex';
-        } else if(mode === 'usefullinks' || mode === 'timetable') {
+
+        if (mode === 'editor' || mode === 'schedule' || mode === 'usefullinks' || mode === 'timetable') {
             mid.style.display = 'flex';
         } else {
             mid.style.display = 'none';
@@ -2081,7 +2191,7 @@
     // --- STAFF CONTACTS MANAGER ---
     let staffAdminSubject = null;
 
-    function toggleStaffDirectory() { setView('staff'); renderStaffManager(); }
+    function toggleStaffDirectory() { setView('staff'); renderStaffManager(); closeSidebar(); }
 
     function renderStaffManager() {
         const mid = document.getElementById('middle-col');
@@ -2238,14 +2348,7 @@
         'Quantum Computing':'#5e5ce6','Robotics Engineering':'#ffcc00','Software Testing':'#64d2ff'
     };
 
-    function toggleOthersGroup() {
-        const group = document.getElementById('others-group');
-        const arrow = document.getElementById('others-arrow');
-        if (group.style.display === 'none') { group.style.display = 'block'; arrow.textContent = '▾'; }
-        else { group.style.display = 'none'; arrow.textContent = '▸'; }
-    }
-
-    function toggleTimetableManager() { setView('timetable'); renderTimetableManager(); }
+    function toggleTimetableManager() { setView('timetable'); renderTimetableManager(); closeSidebar(); }
 
     function renderTimetableManager() {
         const mid = document.getElementById('middle-col');
@@ -2393,7 +2496,7 @@
         return '';
     }
 
-    function toggleUpdatesManager() { setView('updates'); renderAnnouncementsManager(); }
+    function toggleUpdatesManager() { setView('updates'); renderAnnouncementsManager(); closeSidebar(); }
 
     function renderAnnouncementsManager() {
         const mid = document.getElementById('middle-col');
@@ -2713,30 +2816,55 @@
     });
 
     // Override saveData to clear dirty flag
-    // Save validation — check for visible resources missing history
+    // Save validation — only warn about weeks/resources touched in this session
     function runSaveValidation() {
         const warnings = [];
         const DAY_MS = 24 * 60 * 60 * 1000;
-        (window.COURSE_DATA || []).forEach(sub => {
+
+        // Parse the load-time snapshot to know what existed before
+        let snap;
+        try { snap = JSON.parse(dataSnapshot); } catch(e) { return warnings; }
+        const snapSubjects = snap.c || [];
+
+        (window.COURSE_DATA || []).forEach((sub, subIdx) => {
+            const snapSub = snapSubjects[subIdx];
             ['weeks', 'events'].forEach(section => {
-                (sub[section] || []).forEach(container => {
+                (sub[section] || []).forEach((container, cIdx) => {
+                    const snapContainer = snapSub && snapSub[section] && snapSub[section][cIdx];
                     const resources = container.resources || {};
+
+                    // Was this week/event added this session?
+                    const isNewContainer = !snapContainer;
+                    // Did any resource in it change this session?
+                    const changedKeys = Object.keys(resources).filter(key => {
+                        const r = resources[key];
+                        if (!r.vis || !r.link || r.link === '#') return false;
+                        const snapRes = snapContainer && snapContainer.resources && snapContainer.resources[key];
+                        // New resource, or link changed to a real URL
+                        return !snapRes || (snapRes.link !== r.link);
+                    });
+
+                    if (!isNewContainer && changedKeys.length === 0) return; // nothing changed here
+
                     const hasVisibleRes = Object.values(resources).some(r => r.vis && r.link && r.link !== '#');
                     if (!hasVisibleRes) return;
-                    // Warn if container has visible resources but no recentDate
+
+                    // Warn if no history date on a modified/new container
                     if (!container.recentDate) {
-                        warnings.push(`[${sub.code}] "${container.title}" has visible resources but no History date set.`);
+                        warnings.push(`[${sub.code}] "${container.title}" — visible resources added but no History date set.`);
                         return;
                     }
-                    // Warn if any visible resource has no recentDate but container date is more than 1 day old
+
+                    // Warn if a newly-added visible resource has no history while the container date is old
                     const containerTs = new Date(container.recentDate).getTime();
-                    if (isNaN(containerTs)) return;
-                    Object.entries(resources).forEach(([key, r]) => {
-                        if (!r.vis || !r.link || r.link === '#') return;
-                        if (!r.recentDate && (Date.now() - containerTs) > DAY_MS) {
-                            warnings.push(`[${sub.code}] "${container.title}" → resource "${key}" is visible but has no History date (added more than 1 day after the week's date).`);
-                        }
-                    });
+                    if (!isNaN(containerTs)) {
+                        changedKeys.forEach(key => {
+                            const r = resources[key];
+                            if (!r.recentDate && (Date.now() - containerTs) > DAY_MS) {
+                                warnings.push(`[${sub.code}] "${container.title}" → "${key}" was just added but has no History date (week date is more than 1 day old).`);
+                            }
+                        });
+                    }
                 });
             });
         });
