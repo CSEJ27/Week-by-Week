@@ -108,8 +108,7 @@
         <div onclick="toggleMidterms()" class="btn-midterms" style="padding-left:30px; font-size:0.85rem;">📝 MANAGE MIDTERMS / FINALS</div>
         <div onclick="toggleStaffDirectory()" class="btn-expire" style="background:#34c759; color:black; padding-left:30px; font-size:0.85rem;">👥 MANAGE STAFF CONTACTS</div>
         <div onclick="toggleTimetableManager()" class="btn-expire" style="background:#ff375f; color:white; padding-left:30px; font-size:0.85rem;">🗓️ MANAGE TIMETABLE</div>
-        <div onclick="toggleUpdatesManager()" class="btn-expire" style="background:#af52de; color:white; padding-left:30px; font-size:0.85rem;">🚀 MANAGE UPDATES</div>
-        <div onclick="toggleNewsManager()" class="btn-expire" style="background:#e91e8c; color:white; padding-left:30px; font-size:0.85rem;">📬 MANAGE NEWS</div>
+        <div onclick="toggleUpdatesManager()" class="btn-expire" style="background:#af52de; color:white; padding-left:30px; font-size:0.85rem;">📣 MANAGE ANNOUNCEMENTS</div>
     </div>
     
     <div id="subjects-panel" style="display:flex; flex-direction:column; flex:1; overflow:hidden;">
@@ -242,7 +241,7 @@
         if (!window.NEWS_DATA || !window.NEWS_DATA[idx]) return;
         window.NEWS_DATA[idx].publishedAt = getNowLocalDateTimeString();
         markDirty();
-        renderNewsManager();
+        renderAnnouncementsManager();
     }
 
     function inferScheduleTaskType(task) {
@@ -406,6 +405,30 @@
         renderEditor();
     }
 
+    // Help box builder — call this at the top of any render function
+    function makeHelpBox(id, text) {
+        const stored = localStorage.getItem('help_dismissed_' + id);
+        if (stored === '1') {
+            return `<div style="text-align:right; margin-bottom:8px;"><button onclick="localStorage.removeItem('help_dismissed_${id}'); renderCurrentView();" style="background:none;border:none;color:#444;font-size:0.72rem;cursor:pointer;">ℹ Show help</button></div>`;
+        }
+        return `<div style="background:rgba(74,144,226,0.08); border:1px solid rgba(74,144,226,0.25); border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.82rem; color:#9aa2b3; line-height:1.55; display:flex; gap:10px; align-items:flex-start;">
+            <span style="font-size:1.1rem; flex-shrink:0;">ℹ</span>
+            <span style="flex:1;">${text}</span>
+            <button onclick="localStorage.setItem('help_dismissed_${id}','1'); this.closest('div').remove();" style="background:none;border:none;color:#555;font-size:1rem;cursor:pointer;flex-shrink:0;padding:0 2px;" title="Dismiss">✕</button>
+        </div>`;
+    }
+
+    function renderCurrentView() {
+        const v = document.body.dataset.view || '';
+        if (v === 'schedule') { renderScheduleWeeks(); renderScheduleEditor(); }
+        else if (v === 'midterms') renderMidtermsManager();
+        else if (v === 'usefullinks') renderUsefulLinksManager();
+        else if (v === 'staff') renderStaffManager();
+        else if (v === 'timetable') renderTimetableManager();
+        else if (v === 'updates') renderAnnouncementsManager();
+        else if (v === 'config') renderConfigEditor();
+    }
+
     function toggleConfig() { setView('config'); renderConfigEditor(); }
     function toggleRecents() { setView('recents'); renderRecentsManager(); }
     function toggleSchedule() { setView('schedule'); schedulePanelMode = 'weeks'; renderScheduleWeeks(); renderScheduleEditor(); }
@@ -417,6 +440,7 @@
 
     function setView(mode) {
         viewMode = mode;
+        document.body.dataset.view = mode;
         const mid = document.getElementById('middle-col');
         const subjectsPanel = document.getElementById('subjects-panel');
         const subjectsBtn = document.getElementById('btn-subjects-tab');
@@ -1263,7 +1287,7 @@
         let html = `
             <div class="form-section" style="border-color:#ff9500;">
                 <h3 style="color:#ff9500;">${(wk.weekName && wk.weekName.trim()) ? wk.weekName.trim().toUpperCase() : 'WEEK ' + wk.week} — Settings</h3>
-
+                ${makeHelpBox('schedule', 'Schedule weeks appear on the Semester Map page. Each week can hold multiple deliverables (assignments, quizzes, labs, exams). Deadlines from schedule weeks also feed the Deadlines page and the navbar counter. Mark a week as Midterm or Finals to change its color on the map. Drag weeks in the left panel to reorder.')}
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px;">
                     <div>
                         <label>Week Number:</label>
@@ -1532,6 +1556,7 @@
     // --- MIDTERMS / FINALS EDITOR ---
     let midtermDragSrc = null;
     let adminExamView = 'midterms'; // 'midterms' | 'finals'
+    let adminAnnounceTab = 'news'; // 'news' | 'updates'
 
     function addMidterm() {
         const arr = adminExamView === 'finals' ? window.FINAL_DATA : window.MIDTERM_DATA;
@@ -1596,6 +1621,7 @@
                         ${!isFinals ? `<button class="btn" style="background:${accentColor}; padding:8px 18px;" onclick="addMidterm()">+ Add ${label} Exam</button>` : ''}
                     </div>
                 </div>
+                ${makeHelpBox('exams', 'Each entry is one subject\'s exam slot. Set the subject code, date, time, location, and coverage. On the site, midterms (blue) and finals (amber) appear on the Midterms / Finals page, ordered by date. The home page subject ordering switches to exam-time order when exams are within 3 days (midterms) or 5 days (finals) away.')}
                 ${tabHtml}
                 <div id="midterm-list-admin"></div>
                 ${isFinals ? `<div style="display:flex; justify-content:center; margin-top:18px;"><button class="btn" style="background:${accentColor}; padding:10px 22px;" onclick="addMidterm()">+ Add ${label} Exam</button></div>` : ''}
@@ -2109,6 +2135,7 @@
         let html = `
             <div class="form-section" style="border-color:${color};">
                 <h3 style="color:${color};">👥 ${title}</h3>
+                ${makeHelpBox('staff', 'Staff members appear in the Directory page on the site. Each person has a name, role, photo, email, Teams link, and can be assigned to one or more subjects. Use the left panel to filter by subject. Students can filter by subject or role on the site.')}
                 <p style="color:#888; font-size:0.85rem; margin-bottom:15px;">${filtered.length} staff member${filtered.length !== 1 ? 's' : ''}${staffAdminSubject ? ' in this subject' : ' total'}.</p>
                 <div id="staff-list-admin"></div>
                 <button class="btn btn-add" style="background:${color}; color:${color==='#ffcc00'?'black':'white'}; border-radius:4px; margin-top:15px;" onclick="addStaffMember()">+ Add Staff Member</button>
@@ -2296,7 +2323,8 @@
         filtered.sort((a, b) => a.slot - b.slot);
 
         let html = `<div class="form-section" style="border-color:${color};">
-            <h3 style="color:${color};">🗓️ ${title} <span style="font-size:0.8rem; color:#888; font-weight:normal;">— Section ${ttAdminSection}</span></h3>`;
+            <h3 style="color:${color};">🗓️ ${title} <span style="font-size:0.8rem; color:#888; font-weight:normal;">— Section ${ttAdminSection}</span></h3>
+            ${makeHelpBox('timetable', 'The timetable appears on the Timetable page and powers the Screenshot Studio. Each entry is one class slot: choose subject, type (lecture/tutorial/lab), day, and time slot. Sections (e.g. A, B) let different student groups see different schedules. The Screenshot Studio lets students export a custom timetable image.')}`;
 
         if (filtered.length === 0) {
             html += '<div style="text-align:center; color:#666; margin:20px 0; font-style:italic;">No entries yet.</div>';
@@ -2365,76 +2393,124 @@
         return '';
     }
 
-    function toggleUpdatesManager() { setView('updates'); renderUpdatesManager(); }
+    function toggleUpdatesManager() { setView('updates'); renderAnnouncementsManager(); }
 
-    function renderUpdatesManager() {
+    function renderAnnouncementsManager() {
         const mid = document.getElementById('middle-col');
         mid.style.display = 'none';
-
         if(typeof window.UPDATES_DATA === 'undefined') window.UPDATES_DATA = [];
+        if(typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
 
         const container = document.getElementById('editor-area');
-        let html = `
-            <div class="form-section" style="border-color:#af52de;">
-                <h3 style="color:#af52de;">🚀 Manage Updates / Changelog</h3>
-                <p style="color:#888; font-size:0.85rem; margin-bottom:15px;">Add, edit, or remove update entries shown on the Updates page.</p>
-                <div id="updates-list-admin"></div>
-                <button class="btn btn-add" style="background:#af52de; color:white; border-radius:4px; margin-top:15px;" onclick="addUpdateEntry()">+ Add Update</button>
-            </div>
-        `;
-        container.innerHTML = html;
+        const isNews = adminAnnounceTab === 'news';
+        const newsCount = (window.NEWS_DATA || []).length;
+        const updatesCount = (window.UPDATES_DATA || []).length;
 
-        const list = document.getElementById('updates-list-admin');
-        window.UPDATES_DATA.forEach((item, i) => {
-            const el = document.createElement('div');
-            el.className = 'res-item';
-            el.style.flexDirection = 'column';
-            el.style.borderLeft = '4px solid #af52de';
-            el.innerHTML = `
-                <div style="display:flex; justify-content:space-between; width:100%; align-items:center; margin-bottom:10px;">
-                    <strong style="color:white;">${item.icon || '🚀'} ${item.title || 'Update'}</strong>
-                    <button class="btn btn-del" onclick="delUpdateEntry(${i})">✕ Remove</button>
-                </div>
-                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
-                    <div style="position:relative; flex:0 0 60px;">
-                        <label>Icon</label>
-                        <input type="text" value="${item.icon || ''}" style="width:100%; text-align:center; cursor:pointer; padding:8px 4px;" onfocus="showEmojiPicker(this)" oninput="window.UPDATES_DATA[${i}].icon=this.value; markDirty();">
-                        <div class="emoji-picker-dropdown" style="display:none;"></div>
-                    </div>
-                    <div style="flex:1;min-width:160px;">
-                        <label>Title</label>
-                        <input type="text" value="${item.title || ''}" oninput="window.UPDATES_DATA[${i}].title=this.value; markDirty();">
-                    </div>
-                    <div style="flex:0 0 190px;">
-                        <label>Date</label>
-                        <input type="date" value="${normalizeDateInputValue(item.date)}" style="padding:8px 10px; color-scheme:dark;" oninput="window.UPDATES_DATA[${i}].date=this.value || ''; markDirty();">
-                    </div>
-                </div>
-                <div style="width:100%; margin-bottom:10px;">
-                    <label>Description</label>
-                    <textarea rows="2" oninput="window.UPDATES_DATA[${i}].desc=this.value; markDirty();">${item.desc || ''}</textarea>
-                </div>
-            `;
-            list.appendChild(el);
-        });
+        const tabHtml = `
+            <div style="display:flex; gap:10px; margin-bottom:20px;">
+                <button onclick="adminAnnounceTab='news'; renderAnnouncementsManager();" style="flex:1; padding:11px; border-radius:10px; font-weight:bold; font-size:0.9rem; cursor:pointer; border:2px solid ${adminAnnounceTab==='news' ? '#e91e8c' : '#333'}; background:${adminAnnounceTab==='news' ? 'rgba(233,30,140,0.15)' : 'transparent'}; color:${adminAnnounceTab==='news' ? '#e91e8c' : '#666'}; transition:all 0.2s;">
+                    📢 Announcements <span style="font-size:0.75rem; opacity:0.7;">(${newsCount})</span>
+                </button>
+                <button onclick="adminAnnounceTab='updates'; renderAnnouncementsManager();" style="flex:1; padding:11px; border-radius:10px; font-weight:bold; font-size:0.9rem; cursor:pointer; border:2px solid ${adminAnnounceTab==='updates' ? '#af52de' : '#333'}; background:${adminAnnounceTab==='updates' ? 'rgba(175,82,222,0.15)' : 'transparent'}; color:${adminAnnounceTab==='updates' ? '#af52de' : '#666'}; transition:all 0.2s;">
+                    🚀 Updates / Changelog <span style="font-size:0.75rem; opacity:0.7;">(${updatesCount})</span>
+                </button>
+            </div>`;
 
-        if(window.UPDATES_DATA.length === 0) {
-            list.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px; font-style:italic;">No updates added yet.</div>';
+        container.innerHTML = `
+            <div class="form-section" style="border-color:${isNews ? '#e91e8c' : '#af52de'};">
+                <h3 style="color:${isNews ? '#e91e8c' : '#af52de'};">📣 Manage Announcements</h3>
+                ${makeHelpBox('announcements', 'News announcements appear in the 🔔 news panel on the site with an unread badge counter. Students see the title, body, and optional link. Updates/Changelog appear on the dedicated Updates page and show version history. Use the tabs to switch between the two.')}
+                ${tabHtml}
+                <div id="announce-content"></div>
+            </div>`;
+
+        const content = document.getElementById('announce-content');
+
+        if (isNews) {
+            const actionRow = document.createElement('div');
+            actionRow.style.cssText = 'display:flex; gap:8px; margin-bottom:15px; flex-wrap:wrap;';
+            actionRow.innerHTML = `
+                <button class="btn btn-add" style="background:#e91e8c; color:white; border-radius:4px;" onclick="addNewsEntry()">＋ Add Announcement</button>
+                <button class="btn" style="background:rgba(255,59,48,0.15); border:1px solid rgba(255,59,48,0.4); color:#ff3b30; padding:6px 14px; border-radius:6px; font-size:0.8rem; cursor:pointer;" onclick="cleanUpOldNews()" title="Remove all announcements published more than 7 days ago">🗑 Clean Up Old (&gt;7 days)</button>`;
+            content.appendChild(actionRow);
+
+            if(window.NEWS_DATA.length === 0) {
+                const empty = document.createElement('div');
+                empty.style.cssText = 'text-align:center; color:#666; margin:20px 0; font-style:italic;';
+                empty.textContent = 'No announcements yet.';
+                content.appendChild(empty);
+            }
+            const NEWS_EMOJIS = ['📢','📣','✅','❌','⚠️','🎓','📝','🚫','🔔','⏰','📅','🗒️','💯','🎉','🔴','🟡','🟢','📊','🏫','💬','📌','❗','🛑','✏️','📋','🔖'];
+            window.NEWS_DATA.forEach((item, i) => {
+                const el = document.createElement('div');
+                el.className = 'res-item';
+                el.style.cssText = 'flex-direction:column; border-left:4px solid #e91e8c; margin-bottom:18px;';
+                const subOptions = (window.COURSE_DATA || []).map(s => `<option value="${s.code}" ${item.sub === s.code ? 'selected' : ''}>${s.code}</option>`).join('');
+                const emojiOpts = NEWS_EMOJIS.map(em => `<button title="${em}" onclick="window.NEWS_DATA[${i}].emoji='${em}';markDirty();renderAnnouncementsManager();" style="background:none;border:none;cursor:pointer;font-size:1.2rem;padding:3px 5px;border-radius:5px;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='none'">${em}</button>`).join('');
+                const publishedHint = getNewsPcDeltaLabel(item.publishedAt);
+                el.innerHTML = `
+                    <div style="display:flex;justify-content:space-between;width:100%;align-items:center;margin-bottom:12px;">
+                        <strong style="color:#e91e8c;">${item.emoji||'📢'} ${item.title||'Announcement'}</strong>
+                        <button class="btn btn-del" onclick="window.NEWS_DATA.splice(${i},1);markDirty();renderAnnouncementsManager();">✕ Remove</button>
+                    </div>
+                    <div style="background:#0a0012;border-radius:6px;padding:6px;margin-bottom:10px;display:flex;flex-wrap:wrap;">${emojiOpts}</div>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+                        <div style="flex:1;min-width:180px;"><label>Title</label><input type="text" value="${escAttr(item.title||'')}" oninput="window.NEWS_DATA[${i}].title=this.value;markDirty();"></div>
+                        <div style="flex:0 0 160px;"><label>Subject (opt.)</label><select onchange="window.NEWS_DATA[${i}].sub=this.value;markDirty();"><option value="">— All —</option>${subOptions}</select></div>
+                    </div>
+                    <div style="margin-bottom:8px;"><label>Body / Note</label><textarea rows="2" oninput="window.NEWS_DATA[${i}].body=this.value;markDirty();">${escHtml(item.body||'')}</textarea></div>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
+                        <div style="flex:1;min-width:160px;"><label>Link URL (opt.)</label><input type="text" placeholder="https://..." value="${escAttr(item.link||'')}" oninput="window.NEWS_DATA[${i}].link=this.value;markDirty();"></div>
+                        <div style="flex:1;min-width:140px;"><label>Link Note (opt.)</label><input type="text" placeholder="Open Form / Join Meeting" value="${escAttr(item.linkNote||'')}" oninput="window.NEWS_DATA[${i}].linkNote=this.value;markDirty();"></div>
+                    </div>
+                    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+                        <div style="display:flex;align-items:center;gap:5px;background:#2a1b3d;padding:4px 8px;border-radius:4px;border:1px solid #444;">
+                            <label style="margin:0;font-size:0.8rem;color:#aaa;">Published At</label>
+                            <input type="datetime-local" value="${getPublishedAtInputValue(item.publishedAt)}" style="background:transparent;border:none;color:white;font-size:0.8rem;cursor:pointer;" oninput="setNewsPublishedAtFromInput(${i},this.value);markDirty();">
+                            <button class="btn-time" onclick="setNewsNowPublished(${i});renderAnnouncementsManager();">🕒</button>
+                        </div>
+                        <span style="font-size:0.72rem;color:#666;">${publishedHint}</span>
+                    </div>`;
+                content.appendChild(el);
+            });
+        } else {
+            // Updates tab
+            const addBtn = document.createElement('div');
+            addBtn.style.marginBottom = '15px';
+            addBtn.innerHTML = `<button class="btn btn-add" style="background:#af52de; color:white; border-radius:4px;" onclick="addUpdateEntry()">＋ Add Update</button>`;
+            content.appendChild(addBtn);
+
+            if(window.UPDATES_DATA.length === 0) {
+                const empty = document.createElement('div');
+                empty.style.cssText = 'text-align:center; color:#666; margin:20px 0; font-style:italic;';
+                empty.textContent = 'No updates added yet.';
+                content.appendChild(empty);
+            }
+            window.UPDATES_DATA.forEach((item, i) => {
+                const el = document.createElement('div');
+                el.className = 'res-item';
+                el.style.cssText = 'flex-direction:column; border-left:4px solid #af52de;';
+                el.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; width:100%; align-items:center; margin-bottom:10px;">
+                        <strong style="color:white;">${item.icon||'🚀'} ${item.title||'Update'}</strong>
+                        <button class="btn btn-del" onclick="if(confirm('Remove this update?')){window.UPDATES_DATA.splice(${i},1);markDirty();renderAnnouncementsManager();}">✕ Remove</button>
+                    </div>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px;">
+                        <div style="position:relative; flex:0 0 60px;"><label>Icon</label><input type="text" value="${item.icon||''}" style="width:100%;text-align:center;cursor:pointer;padding:8px 4px;" onfocus="showEmojiPicker(this)" oninput="window.UPDATES_DATA[${i}].icon=this.value;markDirty();"><div class="emoji-picker-dropdown" style="display:none;"></div></div>
+                        <div style="flex:1;min-width:160px;"><label>Title</label><input type="text" value="${escAttr(item.title||'')}" oninput="window.UPDATES_DATA[${i}].title=this.value;markDirty();"></div>
+                        <div style="flex:0 0 190px;"><label>Date</label><input type="date" value="${normalizeDateInputValue(item.date)}" style="padding:8px 10px;color-scheme:dark;" oninput="window.UPDATES_DATA[${i}].date=this.value||'';markDirty();"></div>
+                    </div>
+                    <div><label>Description</label><textarea rows="2" oninput="window.UPDATES_DATA[${i}].desc=this.value;markDirty();">${escHtml(item.desc||'')}</textarea></div>`;
+                content.appendChild(el);
+            });
         }
     }
 
     function addUpdateEntry() {
         window.UPDATES_DATA.push({ icon: '🚀', title: 'New Update', desc: '', date: new Date().toISOString().slice(0,10) });
         markDirty();
-        renderUpdatesManager();
+        renderAnnouncementsManager();
     }
-
-    function delUpdateEntry(i) {
-        if(confirm('Remove this update?')) { window.UPDATES_DATA.splice(i, 1); markDirty(); renderUpdatesManager(); }
-    }
-
-    // --- NEWS MANAGER ---
-    function toggleNewsManager() { setView('news'); renderNewsManager(); }
 
     function cleanUpOldNews() {
         const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
@@ -2446,124 +2522,21 @@
         });
         const removed = before - window.NEWS_DATA.length;
         markDirty();
-        renderNewsManager();
+        renderAnnouncementsManager();
         if (removed > 0) alert(`Removed ${removed} old announcement${removed > 1 ? 's' : ''} (published more than 7 days ago).`);
         else alert('Nothing to remove — all announcements are within the last 7 days.');
     }
 
-    function renderNewsManager() {
-        const mid = document.getElementById('middle-col');
-        mid.style.display = 'none';
-        if(typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
-        const container = document.getElementById('editor-area');
-        container.innerHTML = `
-            <div class="form-section" style="border-color:#e91e8c;">
-                <h3 style="color:#e91e8c;">📢 Manage News & Announcements</h3>
-                <p style="color:#888; font-size:0.85rem; margin-bottom:15px;">Add announcements, grade releases, cancelled lectures, form deadlines, etc. Appears automatically on the main site's news panel with unread counter.</p>
-                <div style="display:flex; gap:8px; margin-bottom:15px; flex-wrap:wrap;">
-                    <button class="btn btn-add" style="background:#e91e8c; color:white; border-radius:4px;" onclick="addNewsEntry()">＋ Add Announcement</button>
-                    <button class="btn" style="background:rgba(255,59,48,0.15); border:1px solid rgba(255,59,48,0.4); color:#ff3b30; padding:6px 14px; border-radius:6px; font-size:0.8rem; cursor:pointer;" onclick="cleanUpOldNews()" title="Remove all announcements published more than 7 days ago">🗑 Clean Up Old (&gt;7 days)</button>
-                </div>
-                <div id="news-list-admin"></div>
-            </div>
-        `;
-        const list = document.getElementById('news-list-admin');
-        if(window.NEWS_DATA.length === 0) {
-            list.innerHTML = '<div style="text-align:center; color:#666; margin-top:20px; font-style:italic;">No announcements yet.</div>';
-        }
-        const NEWS_EMOJIS = ['📢','📣','✅','❌','⚠️','🎓','📝','🚫','🔔','⏰','📅','🗒️','💯','🎉','🔴','🟡','🟢','📊','🏫','💬','📌','❗','🛑','✏️','📋','🔖'];
-        window.NEWS_DATA.forEach((item, i) => {
-            const el = document.createElement('div');
-            el.className = 'res-item';
-            el.style.cssText = 'flex-direction:column; border-left:4px solid #e91e8c; margin-bottom:18px;';
-            const subOptions = (window.COURSE_DATA || []).map(s => `<option value="${s.code}" ${item.sub === s.code ? 'selected' : ''}>${s.code}</option>`).join('');
-            const emojiOpts = NEWS_EMOJIS.map(em => `<button title="${em}" onclick="window.NEWS_DATA[${i}].emoji='${em}';markDirty();renderNewsManager();" style="background:none;border:none;cursor:pointer;font-size:1.2rem;padding:3px 5px;border-radius:5px;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='none'">${em}</button>`).join('');
-            const publishedHint = getNewsPcDeltaLabel(item.publishedAt);
-            el.innerHTML = `
-                <div style="display:flex;justify-content:space-between;width:100%;align-items:center;margin-bottom:12px;">
-                    <strong style="color:white;font-size:1rem;">${escHtml(item.emoji||'📢')} ${escHtml(item.title||'Announcement')}</strong>
-                    <button class="btn btn-del" onclick="delNewsEntry(${i})">✕ Remove</button>
-                </div>
-                <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
-                    <div style="position:relative;flex:0 0 80px;">
-                        <label>Emoji</label>
-                        <input type="text" value="${escAttr(item.emoji||'📢')}" style="width:100%;text-align:center;font-size:1.4rem;padding:4px;" onfocus="showEmojiPicker(this)" oninput="window.NEWS_DATA[${i}].emoji=this.value;markDirty();">
-                        <div class="emoji-picker-dropdown" style="display:none;"></div>
-                    </div>
-                    <div style="flex:1;min-width:160px;">
-                        <label>Title</label>
-                        <input type="text" value="${escAttr(item.title||'')}" placeholder="e.g. DS Lecture Cancelled" oninput="window.NEWS_DATA[${i}].title=this.value;markDirty();">
-                    </div>
-                    <div style="flex:0 0 190px;">
-                        <label>Published At <button class="btn" style="padding:2px 7px; font-size:0.68rem; margin-left:6px; border:1px solid rgba(255,255,255,0.25); background:transparent; color:#8aa2bd;" onclick="syncNewsPublishedAtNow(${i})" type="button">Use PC Time</button></label>
-                        <input type="datetime-local" value="${escAttr(getPublishedAtInputValue(item.publishedAt))}" style="padding:8px 10px;color-scheme:dark;width:100%;" oninput="setNewsPublishedAtFromInput(${i}, this.value)">
-                        <div style="font-size:0.7rem; color:#8aa2bd; margin-top:3px;">${escHtml(publishedHint)}</div>
-                    </div>
-                    <div style="flex:0 0 130px;">
-                        <label>Subject (opt.)</label>
-                        <select oninput="window.NEWS_DATA[${i}].sub=this.value;markDirty();">
-                            <option value="">-- All --</option>
-                            ${subOptions}
-                        </select>
-                    </div>
-                </div>
-                <div style="width:100%;margin-bottom:10px;">
-                    <label>Body / Note</label>
-                    <textarea rows="2" placeholder="Details, links, or extra context..." oninput="window.NEWS_DATA[${i}].body=this.value;markDirty();">${escHtml(item.body||'')}</textarea>
-                </div>
-                <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
-                    <div style="flex:1;min-width:220px;">
-                        <label>Link URL (opt.)</label>
-                        <input type="url" value="${escAttr(item.linkUrl||'')}" placeholder="https://example.com/form" oninput="window.NEWS_DATA[${i}].linkUrl=this.value;markDirty();">
-                    </div>
-                    <div style="flex:1;min-width:180px;">
-                        <label>Link Note (opt.)</label>
-                        <input type="text" value="${escAttr(item.linkNote||'')}" placeholder="Open Form / Join Meeting" oninput="window.NEWS_DATA[${i}].linkNote=this.value;markDirty();">
-                    </div>
-                </div>
-                <div style="display:flex;flex-direction:column;gap:0;">
-                    <div style="background:rgba(255,255,255,0.05);padding:15px;border-radius:8px;margin-bottom:15px;display:flex;flex-direction:column;width:100%;box-sizing:border-box;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
-                                <input type="checkbox" ${item.hasEvent?'checked':''} onchange="window.NEWS_DATA[${i}].hasEvent=this.checked;markDirty();renderNewsManager();">
-                                <span style="color:#00E5FF;font-weight:700;">🗓️ Is a scheduled event?</span>
-                            </label>
-                            <button class="btn" style="border:1px solid #00E5FF; color:#00E5FF; background:transparent; padding:3px 8px; font-size:0.75rem; border-radius:4px;" onclick="autoDetectDateTime(${i}, 'event')">✨ Auto</button>
-                        </div>
-                        ${item.hasEvent ? `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:15px;width:100%;">
-                            <div style="flex:1;min-width:130px;"><label>Event Date</label><input type="date" value="${escAttr(item.eventDate||'')}" style="padding:8px 10px;color-scheme:dark;width:100%;" oninput="window.NEWS_DATA[${i}].eventDate=this.value;markDirty();"></div>
-                            <div style="flex:1;min-width:130px;"><label>Event Time</label><input type="time" value="${escAttr(item.eventTime||'')}" style="padding:8px 10px;color-scheme:dark;width:100%;" oninput="window.NEWS_DATA[${i}].eventTime=this.value;markDirty();"></div>
-                        </div>` : ''}
-                    </div>
-                    <div style="background:rgba(255,255,255,0.05);padding:15px;border-radius:8px;margin-bottom:15px;display:flex;flex-direction:column;width:100%;box-sizing:border-box;">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-                            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
-                                <input type="checkbox" ${item.hasDeadline?'checked':''} onchange="window.NEWS_DATA[${i}].hasDeadline=this.checked;markDirty();renderNewsManager();">
-                                <span style="color:#ff9500;font-weight:700;">⏰ Has Deadline</span>
-                            </label>
-                            <button class="btn" style="border:1px solid #ff9500; color:#ff9500; background:transparent; padding:3px 8px; font-size:0.75rem; border-radius:4px;" onclick="autoDetectDateTime(${i}, 'deadline')">✨ Auto</button>
-                        </div>
-                        ${item.hasDeadline ? `<div style="display:flex;flex-wrap:wrap;align-items:center;gap:15px;width:100%;">
-                            <div style="flex:1;min-width:130px;"><label>Deadline Date</label><input type="date" value="${escAttr(item.deadlineDate||'')}" style="padding:8px 10px;color-scheme:dark;width:100%;" oninput="window.NEWS_DATA[${i}].deadlineDate=this.value;markDirty();"></div>
-                            <div style="flex:1;min-width:130px;"><label>Deadline Time (e.g. 11:59 PM)</label><input type="text" value="${escAttr(item.deadlineTime||'')}" placeholder="11:59 PM" oninput="window.NEWS_DATA[${i}].deadlineTime=this.value;markDirty();"></div>
-                        </div>` : ''}
-                    </div>
-                </div>
-                <div><label style="color:#666;font-size:0.78rem;">Quick Emojis:</label><div style="display:flex;flex-wrap:wrap;gap:2px;margin-top:4px;">${emojiOpts}</div></div>
-            `;
-            list.appendChild(el);
-        });
-    }
 
     function addNewsEntry() {
         if(typeof window.NEWS_DATA === 'undefined') window.NEWS_DATA = [];
-        window.NEWS_DATA.unshift({ emoji:'📢', title:'New Announcement', body:'', publishedAt: getNowLocalDateTimeString(), sub:'', linkUrl:'', linkNote:'', hasEvent:false, eventDate:'', eventTime:'', hasDeadline:false, deadlineDate:'', deadlineTime:'' });
+        window.NEWS_DATA.unshift({ emoji:'📢', title:'New Announcement', body:'', publishedAt: getNowLocalDateTimeString(), sub:'', link:'', linkNote:'', hasDeadline:false, deadlineDate:'', deadlineTime:'' });
         markDirty();
-        renderNewsManager();
+        renderAnnouncementsManager();
     }
 
     function delNewsEntry(i) {
-        if(confirm('Remove this announcement?')) { window.NEWS_DATA.splice(i,1); markDirty(); renderNewsManager(); }
+        if(confirm('Remove this announcement?')) { window.NEWS_DATA.splice(i,1); markDirty(); renderAnnouncementsManager(); }
     }
 
     function autoDetectDateTime(idx, type) {
@@ -2651,7 +2624,7 @@
             item.hasDeadline = true;
         }
         markDirty();
-        renderNewsManager();
+        renderAnnouncementsManager();
     }
 
     // --- EMOJI PICKER ---
@@ -2740,8 +2713,47 @@
     });
 
     // Override saveData to clear dirty flag
+    // Save validation — check for visible resources missing history
+    function runSaveValidation() {
+        const warnings = [];
+        const DAY_MS = 24 * 60 * 60 * 1000;
+        (window.COURSE_DATA || []).forEach(sub => {
+            ['weeks', 'events'].forEach(section => {
+                (sub[section] || []).forEach(container => {
+                    const resources = container.resources || {};
+                    const hasVisibleRes = Object.values(resources).some(r => r.vis && r.link && r.link !== '#');
+                    if (!hasVisibleRes) return;
+                    // Warn if container has visible resources but no recentDate
+                    if (!container.recentDate) {
+                        warnings.push(`[${sub.code}] "${container.title}" has visible resources but no History date set.`);
+                        return;
+                    }
+                    // Warn if any visible resource has no recentDate but container date is more than 1 day old
+                    const containerTs = new Date(container.recentDate).getTime();
+                    if (isNaN(containerTs)) return;
+                    Object.entries(resources).forEach(([key, r]) => {
+                        if (!r.vis || !r.link || r.link === '#') return;
+                        if (!r.recentDate && (Date.now() - containerTs) > DAY_MS) {
+                            warnings.push(`[${sub.code}] "${container.title}" → resource "${key}" is visible but has no History date (added more than 1 day after the week's date).`);
+                        }
+                    });
+                });
+            });
+        });
+        return warnings;
+    }
+
     const _origSave = window.saveData;
     window.saveData = function() {
+        // Run validation first — non-blocking, just warn
+        const warnings = runSaveValidation();
+        if (warnings.length > 0) {
+            const msg = `⚠️ Save Warning (${warnings.length} issue${warnings.length > 1 ? 's' : ''}):\n\n` +
+                warnings.slice(0, 8).join('\n') +
+                (warnings.length > 8 ? `\n…and ${warnings.length - 8} more.` : '') +
+                '\n\nSave anyway? (You can fix these after.)';
+            if (!confirm(msg)) return; // user chose to go back and fix
+        }
         _origSave();
         takeSnapshot();
         isDirty = false;
