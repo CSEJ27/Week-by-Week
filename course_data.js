@@ -1596,7 +1596,7 @@ window.COURSE_DATA = [
                 "resources": {
                     "Lecture": {
                         "vis": true,
-                        "link": "https://youtu.be/k0KjgXTAYeg?si=fHz42UM1KE1qBrAd",
+                        "link": "https://youtu.be/-vxKt2Sv9L0",
                         "desc": "Chapter 5, an introduction.",
                         "isNew": false,
                         "isRecent": false
@@ -1766,7 +1766,7 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "link": "https://youtu.be/kH4UlLiVGkc?si=TdIe3J9RF_N3ByIn",
-                        "desc": "Chapter 5, continued.",
+                        "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -1934,8 +1934,8 @@ window.COURSE_DATA = [
                 "resources": {
                     "Lecture": {
                         "vis": true,
-                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVkaj-GhORNFGVxoOsRH3NHl&si=dVm92xNKFNiV4VMa",
-                        "desc": "Chapter 5, continued.",
+                        "link": "https://youtu.be/l03Iyjf3j_w",
+                        "desc": "",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -2095,7 +2095,8 @@ window.COURSE_DATA = [
                     }
                 },
                 "isRecent": true,
-                "isNew": true
+                "isNew": true,
+                "recentDate": "24/5/2026 11:01 PM"
             },
             {
                 "title": "WEEK 13",
@@ -2263,7 +2264,8 @@ window.COURSE_DATA = [
                     }
                 },
                 "isNew": true,
-                "isRecent": true
+                "isRecent": true,
+                "recentDate": "24/5/2026 11:01 PM"
             }
         ],
         "driveLink": "https://drive.google.com/drive/folders/13EVTnrmkFV2XtWVyerUkdcD8s-vkZ34C?usp=drive_link",
