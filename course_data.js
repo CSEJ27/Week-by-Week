@@ -1254,7 +1254,7 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/folders/140HAYtdZ6ud91lD0LZ8hEbb_SZTVeR-B?usp=drive_link",
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np",
                         "desc": "Chapter 4 parts 1-4 ",
                         "isNew": true,
                         "isRecent": true,
@@ -1430,8 +1430,8 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/folders/140HAYtdZ6ud91lD0LZ8hEbb_SZTVeR-B?usp=drive_link",
-                        "desc": "Chapter 4 Part 5 onwards.",
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np",
+                        "desc": "Chapter 4 starting from part 5 till the last part.",
                         "isNew": false,
                         "isRecent": false,
                         "recentDate": ""
@@ -1941,7 +1941,7 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/folders/14790KdlRjfILPb8Qi-yptpo38hjl_QP4?usp=drive_link",
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np",
                         "desc": "Chapter 5, Parts 9 through 12.",
                         "isNew": false,
                         "isRecent": false
@@ -2110,7 +2110,7 @@ window.COURSE_DATA = [
                     },
                     "Alternative": {
                         "vis": true,
-                        "link": "https://drive.google.com/drive/folders/119JVzRMBEdoKYmJFsfwq9ASLNvYBNzyK?usp=drive_link",
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVmZvuJvyqcb7oBc1I2Ur_Np",
                         "desc": "Ch6",
                         "isNew": false,
                         "isRecent": false
