@@ -19421,7 +19421,7 @@ window.COURSE_DATA = [
                     },
                     "Slides": {
                         "vis": true,
-                        "link": "#",
+                        "link": "https://drive.google.com/drive/u/0/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
                         "desc": "lec11 Ann Slides [14: END], lec12 dtrees till slide 29.",
                         "isNew": false,
                         "isRecent": false
