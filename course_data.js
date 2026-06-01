@@ -152,6 +152,2423 @@ window.CONFIG = {
 
 window.COURSE_DATA = [
     {
+        "code": "AI",
+        "name": "Artificial Intelligence",
+        "credits": "3 Credits",
+        "semester": "Spring 2026",
+        "weeks": [
+            {
+                "title": "WEEK 1",
+                "locked": false,
+                "isNew": false,
+                "resources": {
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Explanation guide",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Solving guide",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Audio explanation",
+                        "isNew": false
+                    },
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/_tDTJtfDs6E?si=hVQEPbNkUz0XgN2C",
+                        "desc": "An introduction to Artificial Intelligence and Intelligent Agents. ",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
+                        "desc": "[0 :40]",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Additional materials",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Lab work",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "13/2/2026 5:48 AM",
+                "showBadge": true,
+                "badgeText": "Quiz 1 from here!"
+            },
+            {
+                "title": "WEEK 2",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://www.youtube.com/watch?v=sVwhiBxOhxM&list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY&index=2",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
+                        "desc": "[41: END]",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=o66OCM_Zi9V6j9QP",
+                        "desc": "Section 1 [Fall 2023]",
+                        "isNew": true,
+                        "recentDate": "14/3/2026 7:47 PM",
+                        "isRecent": true
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1-a4ET-cUGED-jan_5OkSF1f6hFX3IpWO/view?usp=drive_link",
+                        "desc": "[Fall 2023]* Slides",
+                        "isNew": true,
+                        "recentDate": "14/3/2026 7:47 PM",
+                        "isRecent": true
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "20/2/2026 10:23 PM"
+            },
+            {
+                "title": "WEEK 3",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/D2RrKLocYWg?si=WOfwBPpIz7JK0OPb",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
+                        "desc": "[1 : 11]",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "1/3/2026 6:03 AM"
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://www.youtube.com/watch?v=AR9fijGqgtE&feature=youtu.be",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
+                        "desc": "[12 : 41]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/3J67GgNrVks",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 7:49 PM"
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1FJEwM4brlL2faU5qtZb-s6epbQOqP9Hc/view?usp=drive_link",
+                        "desc": "[Fall 2025]* Slides.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "8/3/2026 7:57 PM"
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/mjDtb5dQ2uI",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
+                        "desc": "[42 : 88]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/3J67GgNrVks",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1E2QpzIpVJYmeVVI27_ZyhQpYoX5R70x4/view?usp=drive_link",
+                        "desc": "[Fall 2025]* Slides.",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "\n",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "recentDate": "14/3/2026 1:44 AM",
+                "isRecent": true,
+                "isNew": false
+            },
+            {
+                "title": "WEEK 6",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/DU4k9AnpI_Q",
+                        "desc": "Note that quiz 1 is only till State Space Ch.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "desc": "2- State Space [93 : END]\n3- Games [1 : 25]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/28R16twGbec?si=8JPL82w2ltiCVuAg",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "22/3/2026 8:19 AM"
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "recentDate": "22/3/2026 12:44 AM",
+                "isRecent": true,
+                "isNew": false,
+                "badgeText": "Quiz 1 till here!",
+                "showBadge": true
+            },
+            {
+                "title": "WEEK 7",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY",
+                        "desc": "We got two lectures this week.\nCheck out lectures 7&8.\nNote that midterm only till Lecture 7 till 1:21:40 and Quiz 2 is the rest of lecture 7 alongside lecture 8.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
+                        "desc": "Lec7: Games [25 : END] + Constraint Satisfaction [1:9]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=oNU846j_2Ehqba_b",
+                        "desc": "Games are covered in the following:\nSection 6 [1:36:52 : END]\nSection 7 [START : 46:15]\n\nConstraints are covered in the following,\nSection 7 [46:15: END]\nSection 8.\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/4/2026 10:04 PM"
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1FO12KC-Y2YL8uKMb8cw5EbkXGKfBxjxF/view?usp=sharing Slides sections   games",
+                        "desc": "Note that this is only about Games chapter.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "26/3/2026 12:32 AM"
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtu.be/oWJTJt-zwqc?si=N-NitFkk6PpGfQRx",
+                        "desc": "An alternative to Lecture 8 since the recording is pretty much broken.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/4/2026 9:29 PM"
+                    },
+                    "Another Alt.": {
+                        "vis": true,
+                        "link": "https://youtu.be/qK46ET1xk2A?si=fDvSO7bUnqLlhiLI",
+                        "desc": "From 51 till end. CS50 is great for concept grasping but make sure to check the lecture/tutorial for the exact material we have",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:28 AM"
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "locked": false,
+                "showBadge": true,
+                "badgeText": "Midterm till here and Quiz 2 from here!",
+                "badgeColor": "#193800",
+                "recentDate": "24/3/2026 11:43 PM",
+                "isRecent": true,
+                "isNew": false
+            },
+            {
+                "title": "WEEK 9",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/ppDm-zeG9bE?si=Pv0Mdd_aWrLV3g1x",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1A6uLUUAMAn_4pAIDxpNLEbXIurZOlc6L/view?usp=drive_link",
+                        "desc": "Genetic Algorithms.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=zg-Pb0euVEI",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "13/4/2026 10:53 PM"
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "10/4/2026 9:31 PM",
+                "showBadge": true,
+                "badgeText": "Quiz 2 till here!"
+            },
+            {
+                "title": "WEEK 10",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/Q1HQkZM7kB4?si=4bG0tMUHrb4tZyRk",
+                        "desc": "Knowledge Representation",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1zB9hTshZKNBKW2r-qfC7v1WauNXJK9tI/view",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/-GBHc0QGUxU?si=6NkZK1AS9Yczth1G",
+                        "desc": "The content of the section differs a bit from that of the lecture, so it's preferred to actually study the lecture content and consider this as more of a \"compliment\" than a total replacement for the lecture.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "30/4/2026 2:40 AM"
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1FXUXAXeo9WOXgw8IFaky_sb-dZbRXItW/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "30/4/2026 2:40 AM"
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "20/4/2026 7:02 AM"
+            },
+            {
+                "title": "WEEK 11",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/e6yUL0dl0Vs",
+                        "desc": "Fuzzy logic and Fuzzy Systems.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/17L8xUiaOmfs17edVnaa1o4SiTGiqS5x-/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/zh819Sy9qqU?si=TTPGtegzQxb81zus",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1zaIcmD_9ZWWsKaMeX4Y1G0LQbtogSQBm/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "28/4/2026 3:29 PM"
+            }
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1Qa5n273x25nYmBfi_UzulawXih-GpRsp?usp=drive_link",
+        "events": [
+            {
+                "title": "Quiz 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/1/folders/1L9vGRSOLCRae598Dju8qLvOvwNdUrkxG",
+                        "desc": "Quiz 1 content notes.\nPlease note that lecture 6 includes games but this topic is not included in the quiz.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1KODgXRqihWRDeYqFizxeZz9nfXm-qxSB?usp=drive_link",
+                        "desc": "Quiz 1 content related MCQs. ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "24/3/2026 11:36 PM"
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "recentDate": "24/3/2026 5:38 AM",
+                "isRecent": true,
+                "isNew": true
+            },
+            {
+                "title": "Midterm",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/15eiZTzxSxfnal-AXAx2Qi9Zn5aniTlem?usp=drive_link",
+                        "desc": "Midterm Notes ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/13pHlq24rOxc-2DKnuvqPJd6lLgcuq1hk?usp=drive_link",
+                        "desc": "Midterm Questions",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "26/3/2026 1:10 AM",
+                "isNew": true
+            }
+        ],
+        "playlists": [
+            {
+                "title": "Dr. Manal Morad – Spring 2026",
+                "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY&si=jYT8otAyT_bWaGQ8",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Fall 2025",
+                "link": "https://youtube.com/playlist?list=PLJGF4x_DC9qwtb5AGZTi6t2l6g622QH3p&si=zC1s07iJtCU9Gc_b",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Fall 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMI6kGLyDb-JTIAdXIZWAiCy&si=6btvXDpdiVCs5vM_",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMK_ZRwcrtGHesNwHSg2KnFZ&si=Ot2UzMn1NizZEVik",
+                "icon": "🎓",
+                "note": "Only 1 lecture available.",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=TfAXmy4x-a5rIPk0",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjeNkuKsHHLXoCxlF6SmhUpYO&si=6HpC0BLMcuygB37K",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Manal Morad – Spring 2022",
+                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8kZBMLu4dwz705o5eIL_0AK&si=vPdFfuRQect18gZD",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Manal Morad",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mahmoud Osama – Fall 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKdEi9KjCSNnWiK02eeMs6U&si=9jAfgMlV-6HtXf91",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Mahmoud Osama",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mahmoud Osama – Spring 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMIJ-qGZNL26XYYb_NY4gV59&si=94eUHfnItcXvzjZv",
+                "icon": "👥",
+                "note": "Only 1 tutorial available.",
+                "group": "Eng. Mahmoud Osama",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mahmoud Osama – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=oBOnovHMVlXMDD56",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Mahmoud Osama",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Mostafa – Spring 2023",
+                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjePDMxx5ye9M8V0YTGAcDiY4&si=p3fATb5hOUDof35y",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Ahmed Mostafa",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Mostafa – Spring 2022",
+                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8lNExFw_UTxPlDPKtEk0Xg0&si=-xuFlRhA7N46CPBI",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Ahmed Mostafa",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ahmed Fathy – AI Extras",
+                "link": "https://youtube.com/playlist?list=PLgHD1d9DOFEptumXzRjUog4QHOMbUIpp8&si=t5klWmQIiIcGHBv4",
+                "icon": "📘",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – AI Playlist 1",
+                "link": "https://youtube.com/playlist?list=PLBiOoMs77rROb6Irpp2dt81F9v1KLxFOW&si=Q6qx4iyEC6W3Bb0v",
+                "icon": "📘",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – AI Playlist 2",
+                "link": "https://youtube.com/playlist?list=PLBiOoMs77rRPGaVLvVPwcwRceDDTvDubz&si=c8_HG9UUvnhJjV40",
+                "icon": "📘",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Fuzzy Logic – Machine Intelligence Lecture 17",
+                "link": "https://youtu.be/TReelsVxWxg?si=OozCLWbD4m9G5mWY",
+                "icon": "🎓",
+                "note": "Fuzzy Logic & Fuzzy Inference.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Fuzzy",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "GAs I – Machine Intelligence Lecture 18",
+                "link": "https://youtu.be/3-NiZPbkr7A?si=v0Q1PzBZK3CpuyZc",
+                "icon": "🎓",
+                "note": "Evolutionary Algorithms.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Genetic Algorithms",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "GAs II – Machine Intelligence Lecture 19",
+                "link": "https://youtu.be/inME9rm-IPs?si=cRkzZXVJKyVcfzgK",
+                "icon": "🎓",
+                "note": "Opposition-Based Learning, GAs, DE.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Genetic Algorithms",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "GA (Arabic Explanation)",
+                "link": "https://youtu.be/AQ9rxieL2nQ?si=yxZd-MxEinePXntD",
+                "icon": "🎓",
+                "note": "Genetic Algorithm explained in Arabic.",
+                "group": "Machine Intelligence Topics",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Genetic Algorithms",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "Lutfi Al Sharif – AI Resources",
+                "link": "https://www.youtube.com/@LutfiAlSharif/search?query=artificial",
+                "icon": "🌟",
+                "note": "Very very useful!",
+                "badges": [
+                    {
+                        "text": "Recommended",
+                        "color": "#34c759"
+                    },
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            }
+        ],
+        "color": "#b388ff",
+        "subCode": "CSE471s"
+    },
+    {
         "code": "CN",
         "name": "Computer Networks",
         "credits": "3 Credits",
@@ -6112,6 +8529,5805 @@ window.COURSE_DATA = [
         "subCode": "CSE333s"
     },
     {
+        "code": "CA",
+        "name": "Computer Architecture",
+        "credits": "3 Credits",
+        "semester": "Spring 2026",
+        "weeks": [
+            {
+                "title": "WEEK 1",
+                "locked": false,
+                "isNew": false,
+                "resources": {
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Explanation guide",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Solving guide",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Audio explanation",
+                        "isNew": false
+                    },
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/rUUTBRqwT6c?si=_3Ubw_x6s6Xwn8bb",
+                        "desc": "Introduction to Buses and I/O techniques.",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
+                        "desc": "An equivalent recorded section from Fall 24 from START till 17:00.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:50 PM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1jaqLkf17_GuxUP5jWizeeGgzgQ4LvJy6/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5?usp=drive_link",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "Lab work",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCRyq3r_Xe2WHOL3q3UyD2s&si=jEjz0KkkhsrRP1l9",
+                        "desc": "Either watch the first video from START to 32.\nFirst 30 minutes from the second video.",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1YBS5PV4NxEADu31KUQvSxzGgcnv0yUJW/view?usp=drive_link",
+                        "desc": "Applications on lecture.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "15/2/2026 11:50 PM"
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "13/2/2026 5:48 AM",
+                "badgeText": "Quiz 1 starts from here!",
+                "showBadge": true
+            },
+            {
+                "title": "WEEK 2",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=yT7WUBwyDyntpNbv",
+                        "desc": "From minute 30 onwards in lecture 2, alongside the first 15 minutes of lecture 3.",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVl9v_LIYfGunnpz2vJ-55Sj&si=B8V-PVIQDxr_RtNL",
+                        "desc": "Watch the whole playlist\nVid No. 3 only first 5 minutes is about 82C59A",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 10:37 PM"
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1eKAKGa9ITP29ubzTXQpTwsUpk-kXp3is/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
+                        "desc": "An equivalent recorded section from Fall 24, from 17:00 till minute 39.",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1FA9yB8Dd0oZrMyvQlzTqUGc14c6Sj3Gw/view?usp=drive_link",
+                        "desc": "Fall 2025 slides, should be largely identical.",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/2/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5",
+                        "desc": "",
+                        "isNew": false,
+                        "recentDate": "",
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "20/2/2026 10:23 PM",
+                "isNew": false
+            },
+            {
+                "title": "WEEK 3",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/Cd5-x9MhH6U?si=xnaA3nEVprvCqmUh",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/h9p2tGg0FkQ",
+                        "desc": "An alternative prepared by Lobna Ahmed.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "17/3/2026 11:20 PM"
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/folders/1iewrSuGrp7FDn7Lq6PjNfgxPDJJ8Tq4E?usp=drive_link",
+                        "desc": "Slides [17: 29] in Buses.",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "https://engasuedu-my.sharepoint.com/:v:/g/personal/2300360_eng_asu_edu_eg/IQCcCb17T3nkSoBfvqoIVfquAU625Ezi94TaHJtEIe9ifjE?e=MGqBwj",
+                        "desc": "Lec 3 full explanation.",
+                        "isNew": false,
+                        "recentDate": "14/3/2026 6:57 PM",
+                        "isRecent": true
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
+                        "desc": "Sheet solution [from 1:27:00 till the END].\nNote that this sheet is covering first 3 weeks, and that there is 2 questions that's missing.",
+                        "isNew": true,
+                        "recentDate": "14/3/2026 10:48 PM",
+                        "isRecent": true
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1Iz3s2k4X7Olyk2lU_MgDQfd3U6OrJwUo/view?usp=drive_link",
+                        "desc": "From the 8255A to the end.",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/2/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "recentDate": "1/3/2026 5:51 AM",
+                "isRecent": true
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://www.youtube.com/watch?v=8OkRBS9lxeE",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGDH0IynW3pjmnQ0mw403cyU&si=UbN2e_mJLLQjqYaU",
+                        "desc": "An alternative to the lecture content, includes a video on the Synchronous & Asynchronous part (prepared by Lobna Ahmed).",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "17/3/2026 11:25 PM"
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/1/folders/1iewrSuGrp7FDn7Lq6PjNfgxPDJJ8Tq4E",
+                        "desc": "Slides [29: 45] in Buses.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "https://engasuedu-my.sharepoint.com/:v:/g/personal/2300360_eng_asu_edu_eg/IQB67Fzr0k-SRpBeRxSJPkA2AX9x3mZ_fyDhmuCX4xXWUiM?e=pleUG7&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
+                        "desc": "Synchronous & asynchronous part.\nCombine the Guide explanation with the section as an alternative.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 1:43 AM"
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/iGZ8hqYam_Q",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "14/3/2026 1:41 AM"
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1Nw9E4UCVnJoB3BY-qnHpqk3Vz1gTToOO/view",
+                        "desc": "Equivalent section slides from Fall 2025.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/2/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "isNew": false,
+                "recentDate": "8/3/2026 7:49 PM",
+                "showBadge": true,
+                "badgeText": "Quiz 1 till here!"
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/dNJMoCWUGFA",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtu.be/hMYfqej0Awk?si=QKVw-pAZm1uwxgzC",
+                        "desc": "An alternative prepared by Lobna Ahmed.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "21/3/2026 7:38 PM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1zthHi-MSItJXjNTKZM2RbseCTbg5YPxp/view?usp=drive_link",
+                        "desc": "Slides from 1 to 10 and then slide 17.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=f0O_9Nk5SvI",
+                        "desc": "From start till 35:00\nNote that the following slides content was not explained in the section and they are missing: 4,8,9,10",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "recentDate": "15/3/2026 2:50 AM",
+                "isRecent": true,
+                "isNew": false,
+                "badgeText": "Midterm till here!",
+                "showBadge": true,
+                "badgeColor": "#193800"
+            },
+            {
+                "title": "WEEK 6",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/apjPP5jkHcQ?si=1_F0pH4hNn3scYOK",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlMIKiYKSLn0MB3-IZM46vX&si=QQHQMiSIVtwQz51y",
+                        "desc": "All of video 1 (Lobna's guide) and video 2 from 31:30 Till End\n",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:27 AM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1FvKs54cXwAk52I83S4QbfP53mpBqXitG/view?usp=sharing",
+                        "desc": "Slides 43 & [49: 57]",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "recentDate": "21/3/2026 7:43 PM",
+                "isRecent": true,
+                "badgeText": "Quiz 2 starts from here!",
+                "showBadge": true
+            },
+            {
+                "title": "WEEK 7",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "locked": true,
+                "badgeColor": "#e92525",
+                "badgeText": "No lecture was taken!"
+            },
+            {
+                "title": "WEEK 9",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=XGle0bikRLNqYP0Y",
+                        "desc": "CA L.5 P.2 [(11:52): END], alongside CA L.6 [(START): (51:22)].",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "10/4/2026 9:19 PM"
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://youtu.be/DzzdfkoWwEU?si=-SGk4K3slQP7QxE2 From Start Till 35  #CA W9 alt",
+                        "desc": "From Start Till 35",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "20/4/2026 4:27 AM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1_xGt7vAbLV1gLdk-wASijr1_xEpZDLDT/view?usp=drive_link",
+                        "desc": "Slides 15 through 25.",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "10/4/2026 9:21 PM"
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "10/4/2026 9:22 PM"
+            },
+            {
+                "title": "WEEK 10",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/Y9SejUPxIiY",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=DzzdfkoWwEU",
+                        "desc": "from 35:00 ->1:08:15 ",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "29/4/2026 11:49 PM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1_xGt7vAbLV1gLdk-wASijr1_xEpZDLDT/view",
+                        "desc": "From 25 till end",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/13MPeLPrDx1BkZyK3bj6CBuQL8iKzixy8/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "20/4/2026 6:57 AM"
+            },
+            {
+                "title": "WEEK 11",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1X_kSFEbWBKtOYb6hyygS9HcB9xpijWe5/view?usp=drive_link",
+                        "desc": "An introduction to GPUs.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": true,
+                        "link": " https://youtu.be/Da7kqrcDUwQ?si=hulBqY2-qvoyfwki",
+                        "desc": "The guide is our only alternative at the meantime.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "28/4/2026 2:51 PM",
+                "badgeText": "Quiz 2 till here!",
+                "showBadge": true
+            },
+            {
+                "title": "WEEK 12",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/v3k-vu3IdZ4",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
+                        "desc": "The first four videos cover the Verilog content.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "25/5/2026 12:28 AM"
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1hFed9GwMe0m-RtkuABx0vm9a_2OY2Xsh/view?usp=drive_link",
+                        "desc": "Verilog_p1 till slide 54.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "6/5/2026 4:27 PM"
+            },
+            {
+                "title": "WEEK 13",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/watch?v=_Cnw7150dZ0",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
+                        "desc": "The first four videos cover the Verilog content",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1hFed9GwMe0m-RtkuABx0vm9a_2OY2Xsh/view?usp=drive_link",
+                        "desc": "Verilog_p1 slides 54 through 83.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "25/5/2026 12:23 AM"
+            },
+            {
+                "title": "WEEK 14",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/8x3vzkTn4FM?si=4q2yltNGw6hMP6NT",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
+                        "desc": "The first four videos cover the Verilog content",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1hFed9GwMe0m-RtkuABx0vm9a_2OY2Xsh/view?usp=drive_link",
+                        "desc": "Verilog_p1 slides 83 till end.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "25/5/2026 12:24 AM"
+            }
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1wkMAWai1tW55j42gsDKRh0-PPUCOKdFk?usp=drive_link",
+        "events": [
+            {
+                "title": "Quiz 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1zAiSs22UyUcWoQO0D9fnnJJ83_VC72E8/view?usp=drive_link",
+                        "desc": "Quiz 1 content notes, everything the doctor had said is there.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1XaqtAK__J4ooAVJgVlzNmB3n9Ph5axQX?usp=drive_link",
+                        "desc": "Quiz 1 questions answers.",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "recentDate": "17/3/2026 7:26 PM",
+                "isRecent": true,
+                "isNew": true
+            },
+            {
+                "title": "Midterm",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1Rvjf6ZV-Cqc5cZ8cOCPfSN4jOvBKojV5?usp=drive_link",
+                        "desc": "Midterm Notes",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/15TjqsqfvYkAeL4JxktGMafMfXckM3dfQ?usp=drive_link",
+                        "desc": "Midterm Questions",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "26/3/2026 1:07 AM",
+                "isNew": true
+            }
+        ],
+        "playlists": [
+            {
+                "title": "Spring 2026",
+                "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlgvQg5Y6FTKBw_8OqmGLlb&si=ba-G4K-0bScdEcRa",
+                "icon": "▶️",
+                "note": "It's not complete as we didn't take all sections and lectures online.",
+                "group": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    },
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Verilog – Eng. Mohammed Tarek Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHogTabE4GNsxDH8MRSC4R2&si=hJYKVl5klzjy81BD",
+                "icon": "💻",
+                "note": "",
+                "group": "Verilog",
+                "badges": [
+                    {
+                        "text": "Verilog",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "Digital Circuit Design Using Verilog",
+                "link": "https://youtube.com/playlist?list=PL-iIOnHwN7NXw01eBDR7wI8KzGK4mu8Sr&si=B1CDFPcCfwAuhZ0l",
+                "icon": "💻",
+                "note": "",
+                "group": "Verilog",
+                "badges": [
+                    {
+                        "text": "Verilog",
+                        "color": "#af52de"
+                    }
+                ]
+            },
+            {
+                "title": "HDLBits – Verilog Practice Problems",
+                "link": "https://hdlbits.01xz.net/wiki/Main_Page",
+                "icon": "📝",
+                "note": "Great for Verilog practice.",
+                "group": "Verilog",
+                "badges": [
+                    {
+                        "text": "Verilog",
+                        "color": "#af52de"
+                    },
+                    {
+                        "text": "Practice",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Zero One – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gTRWpOTq_udNfUTxi0Oxo&si=8mmByNNzziyFhQP1",
+                "icon": "▶️",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2025",
+                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=dPoyg1nkoN8Nz574",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKBpnlmt1-6G2TLMst-JjHB&si=rcsyOf609B62RWCE",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaFSGXYZ7V-GoKjNZWsSVjOR&si=D1f6SpdFHmarFUrC",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Ashraf Salem – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4finp5v0TepvBOnijZtyqwN&si=EXeRN8hheesGcl9h",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Ashraf Salem",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Tamer Mostafa – Spring 2020",
+                "link": "https://youtube.com/playlist?list=PLbxswoh1SoPko-ilIS-PualpJABpg5ai4&si=naLqtIolKw-t5dgM",
+                "icon": "🎓",
+                "note": "",
+                "group": "",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Abdulkareem Abotaleb – Fall 2024",
+                "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVl7OkAR36UqUv_51qDN2VvD",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Ibraheem Hassan – Fall 2024",
+                "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Tasneem Adel Awad – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMIdZ2B7n18Ll68aduvlmIK4&si=rbrl4Mjcu6VAKHDP",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Tasneem Adel Awad",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Tasneem Adel Awad – Fall 2022",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGGom1QQmduon_kBoXXfAIr&si=HSP3pzqbCGm00ady",
+                "icon": "👥",
+                "note": "",
+                "group": "Eng. Tasneem Adel Awad",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Norhan Mohamed – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4deJPyZuLtKuKQiJE95Cfsc&si=rpr0foEkRKOG04hz",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Tasneem Adel Awad – Fall 2020",
+                "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa-KPDSbYl7aCUomy_enteCj&si=XBMNRhJMsbMevkRC",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ],
+                "group": "Eng. Tasneem Adel Awad"
+            },
+            {
+                "title": "Eng. Ahmed Fathy – Fall 2018",
+                "link": "https://youtube.com/playlist?list=PLQkyODvJ8ywt5yn-JFuELcComMBWL83lG&si=5q3JvnWyMBNDjksj",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "ElhosseiniAcademy – Computer Architecture",
+                "link": "https://www.youtube.com/playlist?list=PL-cKUB-e2KiswAkwZLJYlTzI69FpSJa50",
+                "icon": "📘",
+                "note": "",
+                "group": "",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "ModelSim (Intel FPGA)",
+                "link": "https://www.intel.com/content/www/us/en/software-kit/750368/modelsim-intel-fpgas-standard-edition-software-version-18-1.html",
+                "icon": "🔧",
+                "note": "Simulation tool for Verilog.",
+                "group": "Tools",
+                "badges": [
+                    {
+                        "text": "Tool",
+                        "color": "#ff9500"
+                    }
+                ]
+            },
+            {
+                "title": "EDA Playground (Online)",
+                "link": "https://edaplayground.com/",
+                "icon": "🔧",
+                "note": "Online Verilog simulator.",
+                "group": "Tools",
+                "badges": [
+                    {
+                        "text": "Tool",
+                        "color": "#ff9500"
+                    }
+                ]
+            }
+        ],
+        "subCode": "CSE313s"
+    },
+    {
+        "code": "ML",
+        "name": "Machine Learning",
+        "credits": "2 Credits",
+        "semester": "Spring 2026",
+        "weeks": [
+            {
+                "title": "WEEK 0 - PREREQUISITES ",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_&si=8AeTXdqIeE0N4Gri",
+                        "desc": "Linear Algebra. A foundational core of ML that can't be skipped.\nSince we've learned most of this, skip the examples and use AI to quickly summarize each video.",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCYQmuXrRpFu_hr8Ujul-ek&si=1sFxIU2Ck2U6FVZX",
+                        "desc": "Python + Important libraries! Python (alongside the listed libraries) will be used extensively throughout the course.",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "badgeText": "Optional for lectures, required later.",
+                "showBadge": true,
+                "isRecent": true,
+                "recentDate": "13/2/2026 3:45 PM",
+                "badgeColor": "#0a9900",
+                "isNew": false
+            },
+            {
+                "title": "WEEK 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/SbyQe6_LBwc?si=thyuctSEQXgqx5Iq",
+                        "desc": "An intro to the course, alongside the first lecture.",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf?usp=drive_link",
+                        "desc": "ML Intro + Data.",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/NgmJYxxLWUY?si=GS_myuk0MCZDKX0c",
+                        "desc": "Do note that its incomplete*",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcZUQ6jqmtPt5F4DHUOfeL6J&si=NRPZorKzOlc1AEBe",
+                        "desc": "An alternative playlist we made for the week's content ",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "13/2/2026 3:45 PM",
+                "isNew": false,
+                "badgeText": "",
+                "showBadge": false
+            },
+            {
+                "title": "WEEK 2",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/sStNIQzdEMw?si=ARvExv12yyICMurI",
+                        "desc": "Simple Linear Regression",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcaEFx-CiUXJTDYFAmZGn8rd&si=4ALbgy0jK4XehBbW",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": true,
+                        "recentDate": "1/3/2026 6:07 AM"
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1SkbT83CAko8Z2_O3i5MR6PUwubxlpj5t/view?usp=drive_link",
+                        "desc": "Simple Linear Regression",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/Li2vhCv26GA?si=6i2X0O74nTVWnED9",
+                        "desc": "An equivalent tutorial from Fall 2023.",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1KlUQDirrCA0zvYhvNNCbq-0OGPbQFiWp/view",
+                        "desc": "",
+                        "isNew": true,
+                        "recentDate": "8/3/2026 7:59 PM",
+                        "isRecent": true
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "20/2/2026 10:23 PM",
+                "badgeText": "Quiz 1 starts from here!",
+                "showBadge": true
+            },
+            {
+                "title": "WEEK 3",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcbvij2XKQiOaspxrTVrd12n&si=bQcNUg0Bpt31Y3jk",
+                        "desc": "An alternative to the lecture content.",
+                        "isNew": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Voice Recording": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1yE28HUHVORu6fdJJxBsSPHUjk8bKwW1X/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1y2qav5epOTxi6iAtCaSrgjSkj5eFTa37/view?usp=drive_link",
+                        "desc": "Multiple Linear Regression",
+                        "isNew": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://youtu.be/EawCifBwpJU?si=DDfQ3ytuPJOEgOGD",
+                        "desc": "An equivalent tutorial from Fall 2023.",
+                        "isNew": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1KlUQDirrCA0zvYhvNNCbq-0OGPbQFiWp/view",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "8/3/2026 7:59 PM"
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "1/3/2026 6:24 AM",
+                "badgeText": "Quiz 1 till here!",
+                "showBadge": true
+            },
+            {
+                "title": "WEEK 4",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://www.youtube.com/playlist?list=PLwLqgQFjvxcYgJOC_zAlasVbKGDtK5UTI",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1z-eG0yiHrMtg8ucfELEHnJmlVxH2r0Ow/view",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/file/d/1plwDVU9ZwYIAqa0Gn_6Hs4e36d58YU5t/view",
+                        "desc": "Model Order Selection.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://www.youtube.com/watch?v=w_FuFkc7QP0",
+                        "desc": "An equivalent tutorial from Fall 23.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "8/3/2026 8:00 PM",
+                "isNew": false
+            },
+            {
+                "title": "WEEK 5",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/8gjnl4se7sI",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PLwLqgQFjvxcZck-i9_kg3KdvWnPuqIRdU",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "16/3/2026 7:14 PM"
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1W5pa0nsur0v5H7Hb_3d9cVXC0_T8nwlI/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "18/3/2026 2:37 AM"
+                    },
+                    "Section": {
+                        "vis": true,
+                        "link": "https://youtu.be/tt27m50eHuQ?si=l1iTbiOSWvvUuKmF",
+                        "desc": "",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "18/3/2026 2:37 AM"
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "recentDate": "15/3/2026 2:46 AM",
+                "isRecent": true,
+                "isNew": false
+            },
+            {
+                "title": "WEEK 6",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/1EUwBK03NH4?si=rP1gtklRD2xacgwc",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1RQsQ914UylXDycr-uVC3TL_4lIQT815a/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false,
+                "isRecent": true,
+                "recentDate": "21/3/2026 11:43 PM",
+                "badgeText": "Midterm till here and Quiz 2 starts from here!",
+                "showBadge": true,
+                "badgeColor": "#193800"
+            },
+            {
+                "title": "WEEK 9",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/AIJ4IRkFvyU?si=KvUBYMFVgqDVJXbT",
+                        "desc": "Bayesian Classifiers & Naive Bayes.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1XJxxyrcakb6HRSPLfGxZTXJpSrqCDdQE/view?usp=drive_link",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "10/4/2026 9:35 PM",
+                "showBadge": true,
+                "badgeText": "Quiz 2 till here!"
+            },
+            {
+                "title": "WEEK 10",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/e78mEwMgev8?si=_y7t1i5QRYgkPT6a",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1RdWTEqtJeIBtKT3gOiPEHD-uQMc6aUOK/view?usp=drive_link",
+                        "desc": "Till slide 35",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "20/4/2026 7:06 AM",
+                "showBadge": true,
+                "badgeText": "Quiz 3 starts from here!"
+            },
+            {
+                "title": "WEEK 11",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/8JuNRg8cQrY",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/1/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
+                        "desc": "Slides lec08_logreg from 35 till end\nSlides lec9,10_SVM from start til 25",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "20/4/2026 7:39 PM"
+            },
+            {
+                "title": "WEEK 12",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVk61ECLiheNVJZ7YKCDQnJH",
+                        "desc": "Video 1 (Old Lecture): watch from 44:00 until the end. \nNote: covers the missing 30 minutes.\nVideos 2 & 3 (New lecture): Watch these in their entirety.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/0/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
+                        "desc": "lec9,10_SVM Slides [25: END], lec11 Ann till slide 14.",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "6/5/2026 4:56 PM"
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "29/4/2026 11:39 PM"
+            },
+            {
+                "title": "WEEK 13",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/fRZtIOBhF9A",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/0/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
+                        "desc": "lec11 Ann Slides [14: END], lec12 dtrees till slide 29.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isNew": true,
+                "isRecent": true,
+                "recentDate": "6/5/2026 4:46 PM"
+            },
+            {
+                "title": "WEEK 14",
+                "resources": {
+                    "Lecture": {
+                        "vis": true,
+                        "link": "https://youtu.be/qXSFY-iLJ_g?si=YhyueWBDYC8ByT1b",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/u/2/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
+                        "desc": "lec12 dtrees\nlec13 clustering",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "25/5/2026 12:10 AM"
+            }
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link",
+        "color": "#be136e",
+        "events": [
+            {
+                "title": "Quiz 1",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/u/1/folders/1Svo7TKGg8HNUX125u1OIC65oeJdIFbPH",
+                        "desc": "Capsule notes regarding quiz 1 topics.",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": true,
+                        "lock": false,
+                        "link": "https://drive.google.com/drive/folders/1vq5FxQWoq0aaDfcYYi8UAmH1lRDmfmFA?usp=drive_link",
+                        "desc": "Quiz 1 combined questions. ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "lock": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Notes": {
+                        "vis": true,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isNew": false
+            },
+            {
+                "title": "Midterm",
+                "resources": {
+                    "Lecture": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Alternative": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Voice Recording": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Notes": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1bo9Yq_JA8JxMWbe6LmlnpBBzs4fPcCHG?usp=drive_link",
+                        "desc": "Midterm Notes ",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Topic Related Questions ": {
+                        "vis": true,
+                        "link": "https://drive.google.com/drive/folders/1c2qHMkCEsMY6Lkv_eYZTlxffcHyMInCU?usp=drive_link",
+                        "desc": "Midterm Questions",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Pre-Requisite": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Notes": {
+                        "vis": false,
+                        "link": "",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Another Alt.2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Explanation)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Guide (Solving)": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Section Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Sheet Answer": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lab Slides": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Formative Assignment": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false
+                    },
+                    "Lecture codes": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Lecture codes 2": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    },
+                    "Another Alt.3": {
+                        "vis": false,
+                        "link": "#",
+                        "desc": "",
+                        "isNew": false,
+                        "isRecent": false,
+                        "recentDate": ""
+                    }
+                },
+                "isRecent": true,
+                "recentDate": "26/3/2026 1:12 AM",
+                "isNew": true
+            }
+        ],
+        "playlists": [
+            {
+                "title": "Dr. Hazem Abbas & Dr. Nesma Rezk – Spring 2026",
+                "link": "https://youtube.com/playlist?list=PL67BE5BOCmVkdIcNbT_aTTFs_uHNMnAQC&si=MH-l7mcncxKVOR9B",
+                "icon": "🎓",
+                "note": "It's not complete as we didn't take all lectures online.",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Python Prerequisites – Bro Code",
+                "link": "https://youtube.com/playlist?list=PLZPZq0r_RZOO_wKfxdnAb9BgnffGtIHjR&si=Ge812TTb7n08SHPe",
+                "icon": "☝️",
+                "note": "Watch all 4 videos before starting the course.",
+                "group": "Prerequisites",
+                "badges": [
+                    {
+                        "text": "Prerequisites",
+                        "color": "#8e8e93"
+                    }
+                ]
+            },
+            {
+                "title": "Scikit-Learn Full Crash Course",
+                "link": "https://youtu.be/SIEaLBXr0rk",
+                "icon": "☝️",
+                "note": "Helpful prerequisite for understanding ML libraries.",
+                "group": "Prerequisites",
+                "badges": [
+                    {
+                        "text": "Prerequisites",
+                        "color": "#8e8e93"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2024",
+                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMJEck8pODNV_WYe0Zv6FHv5&si=77sQ-VEG5nNBw4jU",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaH56g0O5I90h79eh0dxM3Pi&si=FLRuh9UB7Jix59nB",
+                "icon": "🎓",
+                "note": "Only 1 lecture available.",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4dwkwM5Od5RK7Gv4_X1J_-H&si=yxJQx_IxjqaGbOAT",
+                "icon": "🎓",
+                "note": "",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Lectures",
+                        "color": "#007aff"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. Mohamed Yasser – Spring 2026",
+                "link": "https://www.youtube.com/playlist?list=PLhJlxlYCdv3R219Q29U2kM4Dn-mo2ROtE",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Eng. – Fall 2023",
+                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHZuR2ucXP12a95w4GhOgJr&si=sEp_UJ2E8QTq1hsB",
+                "icon": "👥",
+                "note": "",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Dr. Hazem Abbas – Fall 2021",
+                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4eZjYA1eDuOZsVsBtTXcL9U&si=svzw-AOMIhpjbqza",
+                "icon": "👥",
+                "note": "",
+                "group": "Dr. Hazem Abbas",
+                "badges": [
+                    {
+                        "text": "Tutorials",
+                        "color": "#34c759"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Fathi – ML",
+                "link": "https://www.youtube.com/playlist?list=PLQkyODvJ8ywv_L3yBwhBPNOiZAR4LyCLZ",
+                "icon": "📘",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Ahmed Yousry – ML",
+                "link": "https://www.youtube.com/playlist?list=PLPBnj6azlABbaGuOzR40nvlzPWAKMv_qA",
+                "icon": "📘",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – Solving Exam Questions",
+                "link": "https://www.youtube.com/playlist?list=PLBiOoMs77rRO2_BqXLVVWW25i-rceCp9y",
+                "icon": "📝",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    },
+                    {
+                        "text": "Practice",
+                        "color": "#e91e8c"
+                    }
+                ]
+            },
+            {
+                "title": "Mohamed Hussien – ML As a Field",
+                "link": "https://www.youtube.com/playlist?list=PLBiOoMs77rRN9TrvU-cxsBU47ypGIaRfk",
+                "icon": "📘",
+                "note": "",
+                "group": "Mohamed Hussien",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Andrew Ng – Machine Learning",
+                "link": "https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI",
+                "icon": "🌟",
+                "note": "World-renowned ML course by Andrew Ng.",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "Recommended",
+                        "color": "#34c759"
+                    },
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Elgouhary AI – ML",
+                "link": "https://www.youtube.com/playlist?list=PLtsZ69x5q-X9j44MdSX-NGuOhGXOY0aqH",
+                "icon": "📘",
+                "note": "",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            },
+            {
+                "title": "Matrix Calculus for ML – MIT OCW",
+                "link": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/download/",
+                "icon": "📄",
+                "note": "Extra math resource for deeper understanding.",
+                "group": "External",
+                "badges": [
+                    {
+                        "text": "External",
+                        "color": "#5856d6"
+                    }
+                ]
+            }
+        ],
+        "subCode": "CSE374s"
+    },
+    {
         "code": "DB",
         "name": "Database Systems",
         "credits": "3 Credits",
@@ -9075,2921 +17291,6 @@ window.COURSE_DATA = [
         ],
         "color": "#34c759",
         "subCode": "CSE334s"
-    },
-    {
-        "code": "CA",
-        "name": "Computer Architecture",
-        "credits": "3 Credits",
-        "semester": "Spring 2026",
-        "weeks": [
-            {
-                "title": "WEEK 1",
-                "locked": false,
-                "isNew": false,
-                "resources": {
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Explanation guide",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Solving guide",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Audio explanation",
-                        "isNew": false
-                    },
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/rUUTBRqwT6c?si=_3Ubw_x6s6Xwn8bb",
-                        "desc": "Introduction to Buses and I/O techniques.",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
-                        "desc": "An equivalent recorded section from Fall 24 from START till 17:00.",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "15/2/2026 11:50 PM"
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1jaqLkf17_GuxUP5jWizeeGgzgQ4LvJy6/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5?usp=drive_link",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Lab work",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCRyq3r_Xe2WHOL3q3UyD2s&si=jEjz0KkkhsrRP1l9",
-                        "desc": "Either watch the first video from START to 32.\nFirst 30 minutes from the second video.",
-                        "isNew": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1YBS5PV4NxEADu31KUQvSxzGgcnv0yUJW/view?usp=drive_link",
-                        "desc": "Applications on lecture.",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "15/2/2026 11:50 PM"
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "13/2/2026 5:48 AM",
-                "badgeText": "Quiz 1 starts from here!",
-                "showBadge": true
-            },
-            {
-                "title": "WEEK 2",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=yT7WUBwyDyntpNbv",
-                        "desc": "From minute 30 onwards in lecture 2, alongside the first 15 minutes of lecture 3.",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVl9v_LIYfGunnpz2vJ-55Sj&si=B8V-PVIQDxr_RtNL",
-                        "desc": "Watch the whole playlist\nVid No. 3 only first 5 minutes is about 82C59A",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "14/3/2026 10:37 PM"
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1eKAKGa9ITP29ubzTXQpTwsUpk-kXp3is/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
-                        "desc": "An equivalent recorded section from Fall 24, from 17:00 till minute 39.",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1FA9yB8Dd0oZrMyvQlzTqUGc14c6Sj3Gw/view?usp=drive_link",
-                        "desc": "Fall 2025 slides, should be largely identical.",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/u/2/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5",
-                        "desc": "",
-                        "isNew": false,
-                        "recentDate": "",
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "20/2/2026 10:23 PM",
-                "isNew": false
-            },
-            {
-                "title": "WEEK 3",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/Cd5-x9MhH6U?si=xnaA3nEVprvCqmUh",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/h9p2tGg0FkQ",
-                        "desc": "An alternative prepared by Lobna Ahmed.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "17/3/2026 11:20 PM"
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1iewrSuGrp7FDn7Lq6PjNfgxPDJJ8Tq4E?usp=drive_link",
-                        "desc": "Slides [17: 29] in Buses.",
-                        "isNew": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "https://engasuedu-my.sharepoint.com/:v:/g/personal/2300360_eng_asu_edu_eg/IQCcCb17T3nkSoBfvqoIVfquAU625Ezi94TaHJtEIe9ifjE?e=MGqBwj",
-                        "desc": "Lec 3 full explanation.",
-                        "isNew": false,
-                        "recentDate": "14/3/2026 6:57 PM",
-                        "isRecent": true
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/op9Rn5fp_NU?si=AnDsOl6dCvZZXhC1",
-                        "desc": "Sheet solution [from 1:27:00 till the END].\nNote that this sheet is covering first 3 weeks, and that there is 2 questions that's missing.",
-                        "isNew": true,
-                        "recentDate": "14/3/2026 10:48 PM",
-                        "isRecent": true
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1Iz3s2k4X7Olyk2lU_MgDQfd3U6OrJwUo/view?usp=drive_link",
-                        "desc": "From the 8255A to the end.",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/u/2/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "recentDate": "1/3/2026 5:51 AM",
-                "isRecent": true
-            },
-            {
-                "title": "WEEK 4",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://www.youtube.com/watch?v=8OkRBS9lxeE",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGDH0IynW3pjmnQ0mw403cyU&si=UbN2e_mJLLQjqYaU",
-                        "desc": "An alternative to the lecture content, includes a video on the Synchronous & Asynchronous part (prepared by Lobna Ahmed).",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "17/3/2026 11:25 PM"
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/u/1/folders/1iewrSuGrp7FDn7Lq6PjNfgxPDJJ8Tq4E",
-                        "desc": "Slides [29: 45] in Buses.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "https://engasuedu-my.sharepoint.com/:v:/g/personal/2300360_eng_asu_edu_eg/IQB67Fzr0k-SRpBeRxSJPkA2AX9x3mZ_fyDhmuCX4xXWUiM?e=pleUG7&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
-                        "desc": "Synchronous & asynchronous part.\nCombine the Guide explanation with the section as an alternative.",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "14/3/2026 1:43 AM"
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/iGZ8hqYam_Q",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "14/3/2026 1:41 AM"
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1Nw9E4UCVnJoB3BY-qnHpqk3Vz1gTToOO/view",
-                        "desc": "Equivalent section slides from Fall 2025.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/u/2/folders/1Txt4I4I2hI1UdBSvJiR7MPSBdccjzDU5",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "isNew": false,
-                "recentDate": "8/3/2026 7:49 PM",
-                "showBadge": true,
-                "badgeText": "Quiz 1 till here!"
-            },
-            {
-                "title": "WEEK 5",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/dNJMoCWUGFA",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://youtu.be/hMYfqej0Awk?si=QKVw-pAZm1uwxgzC",
-                        "desc": "An alternative prepared by Lobna Ahmed.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "21/3/2026 7:38 PM"
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1zthHi-MSItJXjNTKZM2RbseCTbg5YPxp/view?usp=drive_link",
-                        "desc": "Slides from 1 to 10 and then slide 17.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/watch?v=f0O_9Nk5SvI",
-                        "desc": "From start till 35:00\nNote that the following slides content was not explained in the section and they are missing: 4,8,9,10",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "recentDate": "15/3/2026 2:50 AM",
-                "isRecent": true,
-                "isNew": false,
-                "badgeText": "Midterm till here!",
-                "showBadge": true,
-                "badgeColor": "#193800"
-            },
-            {
-                "title": "WEEK 6",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/apjPP5jkHcQ?si=1_F0pH4hNn3scYOK",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlMIKiYKSLn0MB3-IZM46vX&si=QQHQMiSIVtwQz51y",
-                        "desc": "All of video 1 (Lobna's guide) and video 2 from 31:30 Till End\n",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "20/4/2026 4:27 AM"
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1FvKs54cXwAk52I83S4QbfP53mpBqXitG/view?usp=sharing",
-                        "desc": "Slides 43 & [49: 57]",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "recentDate": "21/3/2026 7:43 PM",
-                "isRecent": true,
-                "badgeText": "Quiz 2 starts from here!",
-                "showBadge": true
-            },
-            {
-                "title": "WEEK 7",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "locked": true,
-                "badgeColor": "#e92525",
-                "badgeText": "No lecture was taken!"
-            },
-            {
-                "title": "WEEK 9",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=XGle0bikRLNqYP0Y",
-                        "desc": "CA L.5 P.2 [(11:52): END], alongside CA L.6 [(START): (51:22)].",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "10/4/2026 9:19 PM"
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://youtu.be/DzzdfkoWwEU?si=-SGk4K3slQP7QxE2 From Start Till 35  #CA W9 alt",
-                        "desc": "From Start Till 35",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "20/4/2026 4:27 AM"
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1_xGt7vAbLV1gLdk-wASijr1_xEpZDLDT/view?usp=drive_link",
-                        "desc": "Slides 15 through 25.",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "10/4/2026 9:21 PM"
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "10/4/2026 9:22 PM"
-            },
-            {
-                "title": "WEEK 10",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/Y9SejUPxIiY",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/watch?v=DzzdfkoWwEU",
-                        "desc": "from 35:00 ->1:08:15 ",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "29/4/2026 11:49 PM"
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1_xGt7vAbLV1gLdk-wASijr1_xEpZDLDT/view",
-                        "desc": "From 25 till end",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/13MPeLPrDx1BkZyK3bj6CBuQL8iKzixy8/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "20/4/2026 6:57 AM"
-            },
-            {
-                "title": "WEEK 11",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1X_kSFEbWBKtOYb6hyygS9HcB9xpijWe5/view?usp=drive_link",
-                        "desc": "An introduction to GPUs.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": true,
-                        "link": " https://youtu.be/Da7kqrcDUwQ?si=hulBqY2-qvoyfwki",
-                        "desc": "The guide is our only alternative at the meantime.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "28/4/2026 2:51 PM",
-                "badgeText": "Quiz 2 till here!",
-                "showBadge": true
-            },
-            {
-                "title": "WEEK 12",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/v3k-vu3IdZ4",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
-                        "desc": "The first four videos cover the Verilog content.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "25/5/2026 12:28 AM"
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1hFed9GwMe0m-RtkuABx0vm9a_2OY2Xsh/view?usp=drive_link",
-                        "desc": "Verilog_p1 till slide 54.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "6/5/2026 4:27 PM"
-            },
-            {
-                "title": "WEEK 13",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/watch?v=_Cnw7150dZ0",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
-                        "desc": "The first four videos cover the Verilog content",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1hFed9GwMe0m-RtkuABx0vm9a_2OY2Xsh/view?usp=drive_link",
-                        "desc": "Verilog_p1 slides 54 through 83.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "25/5/2026 12:23 AM"
-            },
-            {
-                "title": "WEEK 14",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/8x3vzkTn4FM?si=4q2yltNGw6hMP6NT",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
-                        "desc": "The first four videos cover the Verilog content",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1hFed9GwMe0m-RtkuABx0vm9a_2OY2Xsh/view?usp=drive_link",
-                        "desc": "Verilog_p1 slides 83 till end.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "25/5/2026 12:24 AM"
-            }
-        ],
-        "driveLink": "https://drive.google.com/drive/folders/1wkMAWai1tW55j42gsDKRh0-PPUCOKdFk?usp=drive_link",
-        "events": [
-            {
-                "title": "Quiz 1",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1zAiSs22UyUcWoQO0D9fnnJJ83_VC72E8/view?usp=drive_link",
-                        "desc": "Quiz 1 content notes, everything the doctor had said is there.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1XaqtAK__J4ooAVJgVlzNmB3n9Ph5axQX?usp=drive_link",
-                        "desc": "Quiz 1 questions answers.",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "recentDate": "17/3/2026 7:26 PM",
-                "isRecent": true,
-                "isNew": true
-            },
-            {
-                "title": "Midterm",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1Rvjf6ZV-Cqc5cZ8cOCPfSN4jOvBKojV5?usp=drive_link",
-                        "desc": "Midterm Notes",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/15TjqsqfvYkAeL4JxktGMafMfXckM3dfQ?usp=drive_link",
-                        "desc": "Midterm Questions",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "26/3/2026 1:07 AM",
-                "isNew": true
-            }
-        ],
-        "playlists": [
-            {
-                "title": "Spring 2026",
-                "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlgvQg5Y6FTKBw_8OqmGLlb&si=ba-G4K-0bScdEcRa",
-                "icon": "▶️",
-                "note": "It's not complete as we didn't take all sections and lectures online.",
-                "group": "",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    },
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Verilog – Eng. Mohammed Tarek Fall 2022",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHogTabE4GNsxDH8MRSC4R2&si=hJYKVl5klzjy81BD",
-                "icon": "💻",
-                "note": "",
-                "group": "Verilog",
-                "badges": [
-                    {
-                        "text": "Verilog",
-                        "color": "#af52de"
-                    }
-                ]
-            },
-            {
-                "title": "Digital Circuit Design Using Verilog",
-                "link": "https://youtube.com/playlist?list=PL-iIOnHwN7NXw01eBDR7wI8KzGK4mu8Sr&si=B1CDFPcCfwAuhZ0l",
-                "icon": "💻",
-                "note": "",
-                "group": "Verilog",
-                "badges": [
-                    {
-                        "text": "Verilog",
-                        "color": "#af52de"
-                    }
-                ]
-            },
-            {
-                "title": "HDLBits – Verilog Practice Problems",
-                "link": "https://hdlbits.01xz.net/wiki/Main_Page",
-                "icon": "📝",
-                "note": "Great for Verilog practice.",
-                "group": "Verilog",
-                "badges": [
-                    {
-                        "text": "Verilog",
-                        "color": "#af52de"
-                    },
-                    {
-                        "text": "Practice",
-                        "color": "#e91e8c"
-                    }
-                ]
-            },
-            {
-                "title": "Zero One – Fall 2023",
-                "link": "https://youtube.com/playlist?list=PLcwCIYKT3kR1gTRWpOTq_udNfUTxi0Oxo&si=8mmByNNzziyFhQP1",
-                "icon": "▶️",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Ashraf Salem – Fall 2025",
-                "link": "https://youtube.com/playlist?list=PLdUZbyW_EOzr0Nht-nJuyzy6XITujaUzT&si=dPoyg1nkoN8Nz574",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Ashraf Salem",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Ashraf Salem – Fall 2023",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKBpnlmt1-6G2TLMst-JjHB&si=rcsyOf609B62RWCE",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Ashraf Salem",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Ashraf Salem – Fall 2022",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaFSGXYZ7V-GoKjNZWsSVjOR&si=D1f6SpdFHmarFUrC",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Ashraf Salem",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Ashraf Salem – Fall 2021",
-                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4finp5v0TepvBOnijZtyqwN&si=EXeRN8hheesGcl9h",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Ashraf Salem",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Tamer Mostafa – Spring 2020",
-                "link": "https://youtube.com/playlist?list=PLbxswoh1SoPko-ilIS-PualpJABpg5ai4&si=naLqtIolKw-t5dgM",
-                "icon": "🎓",
-                "note": "",
-                "group": "",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Abdulkareem Abotaleb – Fall 2024",
-                "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVl7OkAR36UqUv_51qDN2VvD",
-                "icon": "👥",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Ibraheem Hassan – Fall 2024",
-                "link": "https://www.youtube.com/playlist?list=PLnMlr9f3OmBB1XKtzz8Ky7FR6h5M9on1f",
-                "icon": "👥",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Tasneem Adel Awad – Fall 2023",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMIdZ2B7n18Ll68aduvlmIK4&si=rbrl4Mjcu6VAKHDP",
-                "icon": "👥",
-                "note": "",
-                "group": "Eng. Tasneem Adel Awad",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Tasneem Adel Awad – Fall 2022",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaGGom1QQmduon_kBoXXfAIr&si=HSP3pzqbCGm00ady",
-                "icon": "👥",
-                "note": "",
-                "group": "Eng. Tasneem Adel Awad",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Norhan Mohamed – Fall 2021",
-                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4deJPyZuLtKuKQiJE95Cfsc&si=rpr0foEkRKOG04hz",
-                "icon": "👥",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Tasneem Adel Awad – Fall 2020",
-                "link": "https://youtube.com/playlist?list=PLSAVCAIEVqa-KPDSbYl7aCUomy_enteCj&si=XBMNRhJMsbMevkRC",
-                "icon": "👥",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ],
-                "group": "Eng. Tasneem Adel Awad"
-            },
-            {
-                "title": "Eng. Ahmed Fathy – Fall 2018",
-                "link": "https://youtube.com/playlist?list=PLQkyODvJ8ywt5yn-JFuELcComMBWL83lG&si=5q3JvnWyMBNDjksj",
-                "icon": "👥",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "ElhosseiniAcademy – Computer Architecture",
-                "link": "https://www.youtube.com/playlist?list=PL-cKUB-e2KiswAkwZLJYlTzI69FpSJa50",
-                "icon": "📘",
-                "note": "",
-                "group": "",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "ModelSim (Intel FPGA)",
-                "link": "https://www.intel.com/content/www/us/en/software-kit/750368/modelsim-intel-fpgas-standard-edition-software-version-18-1.html",
-                "icon": "🔧",
-                "note": "Simulation tool for Verilog.",
-                "group": "Tools",
-                "badges": [
-                    {
-                        "text": "Tool",
-                        "color": "#ff9500"
-                    }
-                ]
-            },
-            {
-                "title": "EDA Playground (Online)",
-                "link": "https://edaplayground.com/",
-                "icon": "🔧",
-                "note": "Online Verilog simulator.",
-                "group": "Tools",
-                "badges": [
-                    {
-                        "text": "Tool",
-                        "color": "#ff9500"
-                    }
-                ]
-            }
-        ],
-        "subCode": "CSE313s"
     },
     {
         "code": "OS",
@@ -15015,5307 +20316,6 @@ window.COURSE_DATA = [
         ],
         "color": "#ffd600",
         "subCode": "CSE335s"
-    },
-    {
-        "code": "AI",
-        "name": "Artificial Intelligence",
-        "credits": "3 Credits",
-        "semester": "Spring 2026",
-        "weeks": [
-            {
-                "title": "WEEK 1",
-                "locked": false,
-                "isNew": false,
-                "resources": {
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Explanation guide",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Solving guide",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Audio explanation",
-                        "isNew": false
-                    },
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/_tDTJtfDs6E?si=hVQEPbNkUz0XgN2C",
-                        "desc": "An introduction to Artificial Intelligence and Intelligent Agents. ",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
-                        "desc": "[0 :40]",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Additional materials",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "Lab work",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "13/2/2026 5:48 AM",
-                "showBadge": true,
-                "badgeText": "Quiz 1 from here!"
-            },
-            {
-                "title": "WEEK 2",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://www.youtube.com/watch?v=sVwhiBxOhxM&list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY&index=2",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/16-hg_lhvdfoXVoV_zhMcjW649iy1WNcH/view?usp=drive_link",
-                        "desc": "[41: END]",
-                        "isNew": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=o66OCM_Zi9V6j9QP",
-                        "desc": "Section 1 [Fall 2023]",
-                        "isNew": true,
-                        "recentDate": "14/3/2026 7:47 PM",
-                        "isRecent": true
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1-a4ET-cUGED-jan_5OkSF1f6hFX3IpWO/view?usp=drive_link",
-                        "desc": "[Fall 2023]* Slides",
-                        "isNew": true,
-                        "recentDate": "14/3/2026 7:47 PM",
-                        "isRecent": true
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "isRecent": true,
-                "recentDate": "20/2/2026 10:23 PM"
-            },
-            {
-                "title": "WEEK 3",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/D2RrKLocYWg?si=WOfwBPpIz7JK0OPb",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
-                        "desc": "[1 : 11]",
-                        "isNew": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "isRecent": true,
-                "recentDate": "1/3/2026 6:03 AM"
-            },
-            {
-                "title": "WEEK 4",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://www.youtube.com/watch?v=AR9fijGqgtE&feature=youtu.be",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
-                        "desc": "[12 : 41]",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/3J67GgNrVks",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "14/3/2026 7:49 PM"
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1FJEwM4brlL2faU5qtZb-s6epbQOqP9Hc/view?usp=drive_link",
-                        "desc": "[Fall 2025]* Slides.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "isRecent": true,
-                "recentDate": "8/3/2026 7:57 PM"
-            },
-            {
-                "title": "WEEK 5",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/mjDtb5dQ2uI",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1dGY98Eejqpoo-1Yb4LpmWonABJ9nXbuB/view?usp=drive_link",
-                        "desc": "[42 : 88]",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://youtu.be/3J67GgNrVks",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1E2QpzIpVJYmeVVI27_ZyhQpYoX5R70x4/view?usp=drive_link",
-                        "desc": "[Fall 2025]* Slides.",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "\n",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "recentDate": "14/3/2026 1:44 AM",
-                "isRecent": true,
-                "isNew": false
-            },
-            {
-                "title": "WEEK 6",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/DU4k9AnpI_Q",
-                        "desc": "Note that quiz 1 is only till State Space Ch.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
-                        "desc": "2- State Space [93 : END]\n3- Games [1 : 25]",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://youtu.be/28R16twGbec?si=8JPL82w2ltiCVuAg",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "22/3/2026 8:19 AM"
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "recentDate": "22/3/2026 12:44 AM",
-                "isRecent": true,
-                "isNew": false,
-                "badgeText": "Quiz 1 till here!",
-                "showBadge": true
-            },
-            {
-                "title": "WEEK 7",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY",
-                        "desc": "We got two lectures this week.\nCheck out lectures 7&8.\nNote that midterm only till Lecture 7 till 1:21:40 and Quiz 2 is the rest of lecture 7 alongside lecture 8.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
-                        "desc": "Lec7: Games [25 : END] + Constraint Satisfaction [1:9]",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=oNU846j_2Ehqba_b",
-                        "desc": "Games are covered in the following:\nSection 6 [1:36:52 : END]\nSection 7 [START : 46:15]\n\nConstraints are covered in the following,\nSection 7 [46:15: END]\nSection 8.\n",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "10/4/2026 10:04 PM"
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1FO12KC-Y2YL8uKMb8cw5EbkXGKfBxjxF/view?usp=sharing Slides sections   games",
-                        "desc": "Note that this is only about Games chapter.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "26/3/2026 12:32 AM"
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://youtu.be/oWJTJt-zwqc?si=N-NitFkk6PpGfQRx",
-                        "desc": "An alternative to Lecture 8 since the recording is pretty much broken.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "10/4/2026 9:29 PM"
-                    },
-                    "Another Alt.": {
-                        "vis": true,
-                        "link": "https://youtu.be/qK46ET1xk2A?si=fDvSO7bUnqLlhiLI",
-                        "desc": "From 51 till end. CS50 is great for concept grasping but make sure to check the lecture/tutorial for the exact material we have",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "20/4/2026 4:28 AM"
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "locked": false,
-                "showBadge": true,
-                "badgeText": "Midterm till here and Quiz 2 from here!",
-                "badgeColor": "#193800",
-                "recentDate": "24/3/2026 11:43 PM",
-                "isRecent": true,
-                "isNew": false
-            },
-            {
-                "title": "WEEK 9",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/ppDm-zeG9bE?si=Pv0Mdd_aWrLV3g1x",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1A6uLUUAMAn_4pAIDxpNLEbXIurZOlc6L/view?usp=drive_link",
-                        "desc": "Genetic Algorithms.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/watch?v=zg-Pb0euVEI",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "13/4/2026 10:53 PM"
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "10/4/2026 9:31 PM",
-                "showBadge": true,
-                "badgeText": "Quiz 2 till here!"
-            },
-            {
-                "title": "WEEK 10",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/Q1HQkZM7kB4?si=4bG0tMUHrb4tZyRk",
-                        "desc": "Knowledge Representation",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1zB9hTshZKNBKW2r-qfC7v1WauNXJK9tI/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://youtu.be/-GBHc0QGUxU?si=6NkZK1AS9Yczth1G",
-                        "desc": "The content of the section differs a bit from that of the lecture, so it's preferred to actually study the lecture content and consider this as more of a \"compliment\" than a total replacement for the lecture.",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "30/4/2026 2:40 AM"
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1FXUXAXeo9WOXgw8IFaky_sb-dZbRXItW/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "30/4/2026 2:40 AM"
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "20/4/2026 7:02 AM"
-            },
-            {
-                "title": "WEEK 11",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/e6yUL0dl0Vs",
-                        "desc": "Fuzzy logic and Fuzzy Systems.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1rxUQ9Ww8gc_bZUHEaksGyaUK-Qai_uNS/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://youtu.be/zh819Sy9qqU?si=TTPGtegzQxb81zus",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1zaIcmD_9ZWWsKaMeX4Y1G0LQbtogSQBm/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "28/4/2026 3:29 PM"
-            }
-        ],
-        "driveLink": "https://drive.google.com/drive/folders/1Qa5n273x25nYmBfi_UzulawXih-GpRsp?usp=drive_link",
-        "events": [
-            {
-                "title": "Quiz 1",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/u/1/folders/1L9vGRSOLCRae598Dju8qLvOvwNdUrkxG",
-                        "desc": "Quiz 1 content notes.\nPlease note that lecture 6 includes games but this topic is not included in the quiz.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1KODgXRqihWRDeYqFizxeZz9nfXm-qxSB?usp=drive_link",
-                        "desc": "Quiz 1 content related MCQs. ",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "24/3/2026 11:36 PM"
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "recentDate": "24/3/2026 5:38 AM",
-                "isRecent": true,
-                "isNew": true
-            },
-            {
-                "title": "Midterm",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/15eiZTzxSxfnal-AXAx2Qi9Zn5aniTlem?usp=drive_link",
-                        "desc": "Midterm Notes ",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/13pHlq24rOxc-2DKnuvqPJd6lLgcuq1hk?usp=drive_link",
-                        "desc": "Midterm Questions",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "26/3/2026 1:10 AM",
-                "isNew": true
-            }
-        ],
-        "playlists": [
-            {
-                "title": "Dr. Manal Morad – Spring 2026",
-                "link": "https://youtube.com/playlist?list=PL67BE5BOCmVlrwXGWAhtbVswHdqkgN1wY&si=jYT8otAyT_bWaGQ8",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Manal Morad",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Manal Morad – Fall 2025",
-                "link": "https://youtube.com/playlist?list=PLJGF4x_DC9qwtb5AGZTi6t2l6g622QH3p&si=zC1s07iJtCU9Gc_b",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Manal Morad",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Manal Morad – Fall 2024",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMI6kGLyDb-JTIAdXIZWAiCy&si=6btvXDpdiVCs5vM_",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Manal Morad",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Manal Morad – Spring 2024",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMK_ZRwcrtGHesNwHSg2KnFZ&si=Ot2UzMn1NizZEVik",
-                "icon": "🎓",
-                "note": "Only 1 lecture available.",
-                "group": "Dr. Manal Morad",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Manal Morad – Fall 2023",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=TfAXmy4x-a5rIPk0",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Manal Morad",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Manal Morad – Spring 2023",
-                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjeNkuKsHHLXoCxlF6SmhUpYO&si=6HpC0BLMcuygB37K",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Manal Morad",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Manal Morad – Spring 2022",
-                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8kZBMLu4dwz705o5eIL_0AK&si=vPdFfuRQect18gZD",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Manal Morad",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Mahmoud Osama – Fall 2024",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMKdEi9KjCSNnWiK02eeMs6U&si=9jAfgMlV-6HtXf91",
-                "icon": "👥",
-                "note": "",
-                "group": "Eng. Mahmoud Osama",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Mahmoud Osama – Spring 2024",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMIJ-qGZNL26XYYb_NY4gV59&si=94eUHfnItcXvzjZv",
-                "icon": "👥",
-                "note": "Only 1 tutorial available.",
-                "group": "Eng. Mahmoud Osama",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Mahmoud Osama – Fall 2023",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaEWc5QYRRWE2OA3KKAWY4qN&si=oBOnovHMVlXMDD56",
-                "icon": "👥",
-                "note": "",
-                "group": "Eng. Mahmoud Osama",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Ahmed Mostafa – Spring 2023",
-                "link": "https://youtube.com/playlist?list=PLQV8O8EJjjePDMxx5ye9M8V0YTGAcDiY4&si=p3fATb5hOUDof35y",
-                "icon": "👥",
-                "note": "",
-                "group": "Eng. Ahmed Mostafa",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Ahmed Mostafa – Spring 2022",
-                "link": "https://youtube.com/playlist?list=PLRKOH_2Qkp8lNExFw_UTxPlDPKtEk0Xg0&si=-xuFlRhA7N46CPBI",
-                "icon": "👥",
-                "note": "",
-                "group": "Eng. Ahmed Mostafa",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Ahmed Fathy – AI Extras",
-                "link": "https://youtube.com/playlist?list=PLgHD1d9DOFEptumXzRjUog4QHOMbUIpp8&si=t5klWmQIiIcGHBv4",
-                "icon": "📘",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Mohamed Hussien – AI Playlist 1",
-                "link": "https://youtube.com/playlist?list=PLBiOoMs77rROb6Irpp2dt81F9v1KLxFOW&si=Q6qx4iyEC6W3Bb0v",
-                "icon": "📘",
-                "note": "",
-                "group": "Mohamed Hussien",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Mohamed Hussien – AI Playlist 2",
-                "link": "https://youtube.com/playlist?list=PLBiOoMs77rRPGaVLvVPwcwRceDDTvDubz&si=c8_HG9UUvnhJjV40",
-                "icon": "📘",
-                "note": "",
-                "group": "Mohamed Hussien",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Fuzzy Logic – Machine Intelligence Lecture 17",
-                "link": "https://youtu.be/TReelsVxWxg?si=OozCLWbD4m9G5mWY",
-                "icon": "🎓",
-                "note": "Fuzzy Logic & Fuzzy Inference.",
-                "group": "Machine Intelligence Topics",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    },
-                    {
-                        "text": "Fuzzy",
-                        "color": "#ff9500"
-                    }
-                ]
-            },
-            {
-                "title": "GAs I – Machine Intelligence Lecture 18",
-                "link": "https://youtu.be/3-NiZPbkr7A?si=v0Q1PzBZK3CpuyZc",
-                "icon": "🎓",
-                "note": "Evolutionary Algorithms.",
-                "group": "Machine Intelligence Topics",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    },
-                    {
-                        "text": "Genetic Algorithms",
-                        "color": "#ff9500"
-                    }
-                ]
-            },
-            {
-                "title": "GAs II – Machine Intelligence Lecture 19",
-                "link": "https://youtu.be/inME9rm-IPs?si=cRkzZXVJKyVcfzgK",
-                "icon": "🎓",
-                "note": "Opposition-Based Learning, GAs, DE.",
-                "group": "Machine Intelligence Topics",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    },
-                    {
-                        "text": "Genetic Algorithms",
-                        "color": "#ff9500"
-                    }
-                ]
-            },
-            {
-                "title": "GA (Arabic Explanation)",
-                "link": "https://youtu.be/AQ9rxieL2nQ?si=yxZd-MxEinePXntD",
-                "icon": "🎓",
-                "note": "Genetic Algorithm explained in Arabic.",
-                "group": "Machine Intelligence Topics",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    },
-                    {
-                        "text": "Genetic Algorithms",
-                        "color": "#ff9500"
-                    }
-                ]
-            },
-            {
-                "title": "Lutfi Al Sharif – AI Resources",
-                "link": "https://www.youtube.com/@LutfiAlSharif/search?query=artificial",
-                "icon": "🌟",
-                "note": "Very very useful!",
-                "badges": [
-                    {
-                        "text": "Recommended",
-                        "color": "#34c759"
-                    },
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            }
-        ],
-        "color": "#b388ff",
-        "subCode": "CSE471s"
-    },
-    {
-        "code": "ML",
-        "name": "Machine Learning",
-        "credits": "2 Credits",
-        "semester": "Spring 2026",
-        "weeks": [
-            {
-                "title": "WEEK 0 - PREREQUISITES ",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLxIvc-MGOs6iQXFnjF_STbhGdrZBphrv_&si=8AeTXdqIeE0N4Gri",
-                        "desc": "Linear Algebra. A foundational core of ML that can't be skipped.\nSince we've learned most of this, skip the examples and use AI to quickly summarize each video.",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwTK_kzdGnGCYQmuXrRpFu_hr8Ujul-ek&si=1sFxIU2Ck2U6FVZX",
-                        "desc": "Python + Important libraries! Python (alongside the listed libraries) will be used extensively throughout the course.",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "badgeText": "Optional for lectures, required later.",
-                "showBadge": true,
-                "isRecent": true,
-                "recentDate": "13/2/2026 3:45 PM",
-                "badgeColor": "#0a9900",
-                "isNew": false
-            },
-            {
-                "title": "WEEK 1",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/SbyQe6_LBwc?si=thyuctSEQXgqx5Iq",
-                        "desc": "An intro to the course, alongside the first lecture.",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf?usp=drive_link",
-                        "desc": "ML Intro + Data.",
-                        "isNew": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/NgmJYxxLWUY?si=GS_myuk0MCZDKX0c",
-                        "desc": "Do note that its incomplete*",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcZUQ6jqmtPt5F4DHUOfeL6J&si=NRPZorKzOlc1AEBe",
-                        "desc": "An alternative playlist we made for the week's content ",
-                        "isNew": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "13/2/2026 3:45 PM",
-                "isNew": false,
-                "badgeText": "",
-                "showBadge": false
-            },
-            {
-                "title": "WEEK 2",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/sStNIQzdEMw?si=ARvExv12yyICMurI",
-                        "desc": "Simple Linear Regression",
-                        "isNew": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcaEFx-CiUXJTDYFAmZGn8rd&si=4ALbgy0jK4XehBbW",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": true,
-                        "recentDate": "1/3/2026 6:07 AM"
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1SkbT83CAko8Z2_O3i5MR6PUwubxlpj5t/view?usp=drive_link",
-                        "desc": "Simple Linear Regression",
-                        "isNew": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/Li2vhCv26GA?si=6i2X0O74nTVWnED9",
-                        "desc": "An equivalent tutorial from Fall 2023.",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1KlUQDirrCA0zvYhvNNCbq-0OGPbQFiWp/view",
-                        "desc": "",
-                        "isNew": true,
-                        "recentDate": "8/3/2026 7:59 PM",
-                        "isRecent": true
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "isRecent": true,
-                "recentDate": "20/2/2026 10:23 PM",
-                "badgeText": "Quiz 1 starts from here!",
-                "showBadge": true
-            },
-            {
-                "title": "WEEK 3",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtube.com/playlist?list=PLwLqgQFjvxcbvij2XKQiOaspxrTVrd12n&si=bQcNUg0Bpt31Y3jk",
-                        "desc": "An alternative to the lecture content.",
-                        "isNew": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Voice Recording": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1yE28HUHVORu6fdJJxBsSPHUjk8bKwW1X/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1y2qav5epOTxi6iAtCaSrgjSkj5eFTa37/view?usp=drive_link",
-                        "desc": "Multiple Linear Regression",
-                        "isNew": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://youtu.be/EawCifBwpJU?si=DDfQ3ytuPJOEgOGD",
-                        "desc": "An equivalent tutorial from Fall 2023.",
-                        "isNew": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1KlUQDirrCA0zvYhvNNCbq-0OGPbQFiWp/view",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "8/3/2026 7:59 PM"
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "isRecent": true,
-                "recentDate": "1/3/2026 6:24 AM",
-                "badgeText": "Quiz 1 till here!",
-                "showBadge": true
-            },
-            {
-                "title": "WEEK 4",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://www.youtube.com/playlist?list=PLwLqgQFjvxcYgJOC_zAlasVbKGDtK5UTI",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1z-eG0yiHrMtg8ucfELEHnJmlVxH2r0Ow/view",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/file/d/1plwDVU9ZwYIAqa0Gn_6Hs4e36d58YU5t/view",
-                        "desc": "Model Order Selection.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://www.youtube.com/watch?v=w_FuFkc7QP0",
-                        "desc": "An equivalent tutorial from Fall 23.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "8/3/2026 8:00 PM",
-                "isNew": false
-            },
-            {
-                "title": "WEEK 5",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/8gjnl4se7sI",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PLwLqgQFjvxcZck-i9_kg3KdvWnPuqIRdU",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "16/3/2026 7:14 PM"
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1W5pa0nsur0v5H7Hb_3d9cVXC0_T8nwlI/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "18/3/2026 2:37 AM"
-                    },
-                    "Section": {
-                        "vis": true,
-                        "link": "https://youtu.be/tt27m50eHuQ?si=l1iTbiOSWvvUuKmF",
-                        "desc": "",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "18/3/2026 2:37 AM"
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "recentDate": "15/3/2026 2:46 AM",
-                "isRecent": true,
-                "isNew": false
-            },
-            {
-                "title": "WEEK 6",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/1EUwBK03NH4?si=rP1gtklRD2xacgwc",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1RQsQ914UylXDycr-uVC3TL_4lIQT815a/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false,
-                "isRecent": true,
-                "recentDate": "21/3/2026 11:43 PM",
-                "badgeText": "Midterm till here and Quiz 2 starts from here!",
-                "showBadge": true,
-                "badgeColor": "#193800"
-            },
-            {
-                "title": "WEEK 9",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/AIJ4IRkFvyU?si=KvUBYMFVgqDVJXbT",
-                        "desc": "Bayesian Classifiers & Naive Bayes.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1XJxxyrcakb6HRSPLfGxZTXJpSrqCDdQE/view?usp=drive_link",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "10/4/2026 9:35 PM",
-                "showBadge": true,
-                "badgeText": "Quiz 2 till here!"
-            },
-            {
-                "title": "WEEK 10",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/e78mEwMgev8?si=_y7t1i5QRYgkPT6a",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/file/d/1RdWTEqtJeIBtKT3gOiPEHD-uQMc6aUOK/view?usp=drive_link",
-                        "desc": "Till slide 35",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "20/4/2026 7:06 AM",
-                "showBadge": true,
-                "badgeText": "Quiz 3 starts from here!"
-            },
-            {
-                "title": "WEEK 11",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/8JuNRg8cQrY",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/u/1/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
-                        "desc": "Slides lec08_logreg from 35 till end\nSlides lec9,10_SVM from start til 25",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "20/4/2026 7:39 PM"
-            },
-            {
-                "title": "WEEK 12",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://www.youtube.com/playlist?list=PL67BE5BOCmVk61ECLiheNVJZ7YKCDQnJH",
-                        "desc": "Video 1 (Old Lecture): watch from 44:00 until the end. \nNote: covers the missing 30 minutes.\nVideos 2 & 3 (New lecture): Watch these in their entirety.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/u/0/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
-                        "desc": "lec9,10_SVM Slides [25: END], lec11 Ann till slide 14.",
-                        "isNew": true,
-                        "isRecent": true,
-                        "recentDate": "6/5/2026 4:56 PM"
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "29/4/2026 11:39 PM"
-            },
-            {
-                "title": "WEEK 13",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/fRZtIOBhF9A",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/u/0/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
-                        "desc": "lec11 Ann Slides [14: END], lec12 dtrees till slide 29.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isNew": true,
-                "isRecent": true,
-                "recentDate": "6/5/2026 4:46 PM"
-            },
-            {
-                "title": "WEEK 14",
-                "resources": {
-                    "Lecture": {
-                        "vis": true,
-                        "link": "https://youtu.be/qXSFY-iLJ_g?si=YhyueWBDYC8ByT1b",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/u/2/folders/1_N7nTn_OmYVwrm6zF6hi2K_qB79PMyEf",
-                        "desc": "lec12 dtrees\nlec13 clustering",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "25/5/2026 12:10 AM"
-            }
-        ],
-        "driveLink": "https://drive.google.com/drive/folders/1xGoG0TWV1arlN7YqzkU3-mzVuP633V-E?usp=drive_link",
-        "color": "#be136e",
-        "events": [
-            {
-                "title": "Quiz 1",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/u/1/folders/1Svo7TKGg8HNUX125u1OIC65oeJdIFbPH",
-                        "desc": "Capsule notes regarding quiz 1 topics.",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": true,
-                        "lock": false,
-                        "link": "https://drive.google.com/drive/folders/1vq5FxQWoq0aaDfcYYi8UAmH1lRDmfmFA?usp=drive_link",
-                        "desc": "Quiz 1 combined questions. ",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "lock": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Notes": {
-                        "vis": true,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isNew": false
-            },
-            {
-                "title": "Midterm",
-                "resources": {
-                    "Lecture": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Voice Recording": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Notes": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1bo9Yq_JA8JxMWbe6LmlnpBBzs4fPcCHG?usp=drive_link",
-                        "desc": "Midterm Notes ",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Topic Related Questions ": {
-                        "vis": true,
-                        "link": "https://drive.google.com/drive/folders/1c2qHMkCEsMY6Lkv_eYZTlxffcHyMInCU?usp=drive_link",
-                        "desc": "Midterm Questions",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Pre-Requisite": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Notes": {
-                        "vis": false,
-                        "link": "",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Another Alt.2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Explanation)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Guide (Solving)": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Section Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Sheet Answer": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lab Slides": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Formative Assignment": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
-                    },
-                    "Lecture codes": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Lecture codes 2": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    },
-                    "Another Alt.3": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false,
-                        "recentDate": ""
-                    }
-                },
-                "isRecent": true,
-                "recentDate": "26/3/2026 1:12 AM",
-                "isNew": true
-            }
-        ],
-        "playlists": [
-            {
-                "title": "Dr. Hazem Abbas & Dr. Nesma Rezk – Spring 2026",
-                "link": "https://youtube.com/playlist?list=PL67BE5BOCmVkdIcNbT_aTTFs_uHNMnAQC&si=MH-l7mcncxKVOR9B",
-                "icon": "🎓",
-                "note": "It's not complete as we didn't take all lectures online.",
-                "group": "Dr. Hazem Abbas",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Python Prerequisites – Bro Code",
-                "link": "https://youtube.com/playlist?list=PLZPZq0r_RZOO_wKfxdnAb9BgnffGtIHjR&si=Ge812TTb7n08SHPe",
-                "icon": "☝️",
-                "note": "Watch all 4 videos before starting the course.",
-                "group": "Prerequisites",
-                "badges": [
-                    {
-                        "text": "Prerequisites",
-                        "color": "#8e8e93"
-                    }
-                ]
-            },
-            {
-                "title": "Scikit-Learn Full Crash Course",
-                "link": "https://youtu.be/SIEaLBXr0rk",
-                "icon": "☝️",
-                "note": "Helpful prerequisite for understanding ML libraries.",
-                "group": "Prerequisites",
-                "badges": [
-                    {
-                        "text": "Prerequisites",
-                        "color": "#8e8e93"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Hazem Abbas – Fall 2024",
-                "link": "https://youtube.com/playlist?list=PL_VBK8LOHXMJEck8pODNV_WYe0Zv6FHv5&si=77sQ-VEG5nNBw4jU",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Hazem Abbas",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Hazem Abbas – Fall 2023",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaH56g0O5I90h79eh0dxM3Pi&si=FLRuh9UB7Jix59nB",
-                "icon": "🎓",
-                "note": "Only 1 lecture available.",
-                "group": "Dr. Hazem Abbas",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Hazem Abbas – Fall 2021",
-                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4dwkwM5Od5RK7Gv4_X1J_-H&si=yxJQx_IxjqaGbOAT",
-                "icon": "🎓",
-                "note": "",
-                "group": "Dr. Hazem Abbas",
-                "badges": [
-                    {
-                        "text": "Lectures",
-                        "color": "#007aff"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. Mohamed Yasser – Spring 2026",
-                "link": "https://www.youtube.com/playlist?list=PLhJlxlYCdv3R219Q29U2kM4Dn-mo2ROtE",
-                "icon": "👥",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Eng. – Fall 2023",
-                "link": "https://youtube.com/playlist?list=PLaL_BACw3AaHZuR2ucXP12a95w4GhOgJr&si=sEp_UJ2E8QTq1hsB",
-                "icon": "👥",
-                "note": "",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Dr. Hazem Abbas – Fall 2021",
-                "link": "https://youtube.com/playlist?list=PLxwbQuwnqw4eZjYA1eDuOZsVsBtTXcL9U&si=svzw-AOMIhpjbqza",
-                "icon": "👥",
-                "note": "",
-                "group": "Dr. Hazem Abbas",
-                "badges": [
-                    {
-                        "text": "Tutorials",
-                        "color": "#34c759"
-                    }
-                ]
-            },
-            {
-                "title": "Ahmed Fathi – ML",
-                "link": "https://www.youtube.com/playlist?list=PLQkyODvJ8ywv_L3yBwhBPNOiZAR4LyCLZ",
-                "icon": "📘",
-                "note": "",
-                "group": "External",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Ahmed Yousry – ML",
-                "link": "https://www.youtube.com/playlist?list=PLPBnj6azlABbaGuOzR40nvlzPWAKMv_qA",
-                "icon": "📘",
-                "note": "",
-                "group": "External",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Mohamed Hussien – Solving Exam Questions",
-                "link": "https://www.youtube.com/playlist?list=PLBiOoMs77rRO2_BqXLVVWW25i-rceCp9y",
-                "icon": "📝",
-                "note": "",
-                "group": "Mohamed Hussien",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    },
-                    {
-                        "text": "Practice",
-                        "color": "#e91e8c"
-                    }
-                ]
-            },
-            {
-                "title": "Mohamed Hussien – ML As a Field",
-                "link": "https://www.youtube.com/playlist?list=PLBiOoMs77rRN9TrvU-cxsBU47ypGIaRfk",
-                "icon": "📘",
-                "note": "",
-                "group": "Mohamed Hussien",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Andrew Ng – Machine Learning",
-                "link": "https://www.youtube.com/playlist?list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI",
-                "icon": "🌟",
-                "note": "World-renowned ML course by Andrew Ng.",
-                "group": "External",
-                "badges": [
-                    {
-                        "text": "Recommended",
-                        "color": "#34c759"
-                    },
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Elgouhary AI – ML",
-                "link": "https://www.youtube.com/playlist?list=PLtsZ69x5q-X9j44MdSX-NGuOhGXOY0aqH",
-                "icon": "📘",
-                "note": "",
-                "group": "External",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            },
-            {
-                "title": "Matrix Calculus for ML – MIT OCW",
-                "link": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/download/",
-                "icon": "📄",
-                "note": "Extra math resource for deeper understanding.",
-                "group": "External",
-                "badges": [
-                    {
-                        "text": "External",
-                        "color": "#5856d6"
-                    }
-                ]
-            }
-        ],
-        "subCode": "CSE374s"
     },
     {
         "code": "SW",
