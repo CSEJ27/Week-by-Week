@@ -1979,8 +1979,8 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section Slides": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1NovvBoMQzje8zWxPvjsiPNdgqFhiOHRx/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
@@ -2147,8 +2147,8 @@ window.COURSE_DATA = [
                         "isRecent": false
                     },
                     "Section Slides": {
-                        "vis": false,
-                        "link": "#",
+                        "vis": true,
+                        "link": "https://drive.google.com/file/d/1NovvBoMQzje8zWxPvjsiPNdgqFhiOHRx/view?usp=drive_link",
                         "desc": "",
                         "isNew": false,
                         "isRecent": false
