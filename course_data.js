@@ -1967,7 +1967,7 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/file/d/1vpah2A1tKw47iLFNWldqUq07l9L4LOV3/view?usp=drive_link",
-                        "desc": "Neural Networks [START:32]",
+                        "desc": "Neural Networks [START:36]",
                         "isNew": false,
                         "isRecent": false
                     },
@@ -2135,7 +2135,7 @@ window.COURSE_DATA = [
                     "Slides": {
                         "vis": true,
                         "link": "https://drive.google.com/drive/u/5/folders/15GH29k34BkDgdKsWZS7ttoCo21rKSiTG",
-                        "desc": "Neural Networks [32:END]\nNatural Language Processing [START : END]",
+                        "desc": "Neural Networks [37:END]\nNatural Language Processing [START : END]",
                         "isNew": false,
                         "isRecent": false
                     },
