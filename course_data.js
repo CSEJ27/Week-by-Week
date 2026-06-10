@@ -1778,16 +1778,17 @@ window.COURSE_DATA = [
                     "Lecture": {
                         "vis": true,
                         "link": "https://youtu.be/gwSjMiYd1Y8",
-                        "desc": "From start till 2:14:08",
+                        "desc": "Watch the whole lecture as it covers AVL, 2-3-4, Red Black ",
                         "isNew": false,
                         "isRecent": false
                     },
                     "Alternative": {
-                        "vis": false,
-                        "link": "#",
-                        "desc": "",
-                        "isNew": false,
-                        "isRecent": false
+                        "vis": true,
+                        "link": "https://youtu.be/Sfc2BreEmBM",
+                        "desc": "Only covers AVL but i recommend watching AVL from here and then watch the lecture provided in this week but start it from 1:42:52 till the end, you'll save time and understand it better",
+                        "isNew": true,
+                        "isRecent": true,
+                        "recentDate": "10/6/2026 10:18 PM"
                     },
                     "Another Alt.": {
                         "vis": false,
