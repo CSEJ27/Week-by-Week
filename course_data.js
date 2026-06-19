@@ -24420,29 +24420,29 @@ window.COURSE_DATA = [
 
 window.SUBJECT_DETAILS_DATA = {
     "CN": {
-        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes (2): 20\nLab Reports: UNKOWN\nAssignments: UNKOWN\nProject: UNKOWN",
+        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes (2): 20 (first one 14, second one is 6)\nLab Reports: 5 (Approximately)\nAssignments: 2 (Approximately)\nProject: 3 (Approximately) ",
         "examTypes": "Final: Written\nMidterm: MCQ\nQuizzes: MCQ",
         "generalNotes": "Dr. Hossam cares about attendance very much, so make sure you attend or you'll face a very harsh fate 💀, attend and make sure you type what he LITERALLY said, don't think stating the answer from your perspective or your understanding will be enough, you need to say exactly what he said."
     },
     "DSA": {
-        "gradeDistribution": "Final: 50\nMidterm: 20\nPractical Exams (2): 10\nQuiz (1): 5\nMajor assessment: UNKOWN\nAssignments (2): 5\nProject: 10",
+        "gradeDistribution": "Final: 50\nMidterm: 20\nPractical Exams (2): 10\nQuiz (1): 5\nAssignments (2): 5\nProject: 10\nBonuses: Lab Bonus (5) + Project Bonus (2) + Midterm Bonus (3)",
         "examTypes": "Final: Written\nMidterm: Written\nQuizzes: Written",
-        "generalNotes": "Dr. Youssra tends to get some questions idea from dr. Ashraf's exams so make sure you go thgouh them.\nPractical Exams are just like the midterm questions."
+        "generalNotes": "Dr. Youssra tends to get some questions ideas from dr. Ashraf's exams so make sure you go though them.\nPractical Exams are just like the midterm questions so make sure to solve the old ones as they get repeated.\nFinal focuses more on algorithm execution not code writing like midterm (so don't waste too much time focusing on how to write code like the midterm)"
     },
     "DB": {
-        "gradeDistribution": "Final: 50\nMidterm: 20\nPractical: 10\nQuizzes (2): 20",
+        "gradeDistribution": "Final: 50\nMidterm: 20\nAssignments: 10\nProject: 10\nQuizzes (2): 5\nLab Handson: 5",
         "examTypes": "Final: Written\nMidterm: Written\nQuizzes: Written",
-        "generalNotes": ""
+        "generalNotes": "Understand concepts very well as the exam questions doesn't get repeated that much. "
     },
     "CA": {
-        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes: UNKOWN\nAssignments: UNKOWN\nProject: UNKOWN",
-        "examTypes": "Final: MCQ\nMidterm: MCQ\nQuizzes: MCQ",
-        "generalNotes": ""
+        "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes (2): 10\nAssignments: 20",
+        "examTypes": "Final: MCQ\nMidterm: MCQ\nQuizzes: MCQ (Online on LMS)",
+        "generalNotes": "Make sure you solve old exams as most of the exams gets repeated."
     },
     "OS": {
-        "gradeDistribution": "Final: 50\nMidterm: 20\nProject: UKNOWN\nProgramming Assignment: UKNOWN\nQuizzes (2): UKNOWN",
+        "gradeDistribution": "Final: 50\nMidterm: 20\nProject: 10\nProgramming Assignment: 10\nQuizzes (2): 10",
         "examTypes": "Final: Written\nMidterm: Written\nQuizzes: MCQ",
-        "generalNotes": "Dr. Sahar cares so much about attendance, so try to attend as much as you can, it's online anyway, if the attendance is good, she will heavily repeat the exam (not a single new question), if the attendance is not good, she will create maybe one or two questions (or more)."
+        "generalNotes": "Dr. Sahar cares so much about attendance, so try to attend as much as you can, it's online anyway, if the attendance is good, she will heavily repeat the exam (not a single new question), if the attendance is not good, she will create maybe one or two questions (or more).\nExams get repeated so much but focus on the newer ones as she tends to throw in at least 2 new questions each year (specifically starting from spring 2024 or 25)"
     },
     "AI": {
         "gradeDistribution": "Final: 50\nMidterm: 20\nQuizzes: 15\nProject: 15",
@@ -24451,8 +24451,8 @@ window.SUBJECT_DETAILS_DATA = {
     },
     "ML": {
         "gradeDistribution": "Final: 50\nMidterm: 50\nQuizzes (3): 10\nWritten Assignment: 5\nPeer review activity: 5\nProject: 10",
-        "examTypes": "Final: Written\nMidterm: Written \nQuizzes: MCQ",
-        "generalNotes": "Dr. Nesma makes easy exams so don't piss her off and you'll be fine with."
+        "examTypes": "Final: Written\nMidterm: Written \nQuizzes: MCQ (Online on SEB in collage)",
+        "generalNotes": "Dr. Nesma makes easy exams so don't piss her off and you'll be fine.\nFinals questions are straight forward, just know how to use the formulas (even the binary basic ones note the matrices versions) and you'll be okay."
     },
     "SW": {
         "gradeDistribution": "",
@@ -26048,7 +26048,7 @@ window.SCHEDULE_DATA = [
                 "sub": "AI",
                 "name": "Project Submission",
                 "icon": "✔️",
-                "when": "Tuesday (28/5) at 11:59 PM",
+                "when": "Friday (5/6) at 11:59 PM",
                 "where": "",
                 "coverage": "",
                 "note": "",
@@ -26061,9 +26061,9 @@ window.SCHEDULE_DATA = [
                 "coverageLink": "https://drive.google.com/file/d/1kPmxLrjlVlNtS2k0CK0hxxagJXwpC-GG/view?usp=drive_link",
                 "coverageNote": "Check the details of the project here!",
                 "submitText": "LMS",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "28/05/2026 11:59 PM",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=198032",
+                "submitNote": "Submit here!",
+                "deadlineDate": "05/06/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
             },
@@ -26071,7 +26071,7 @@ window.SCHEDULE_DATA = [
                 "sub": "CA",
                 "name": "Assignment 3",
                 "icon": "📝",
-                "when": "Monday (15/6) at 11:59 PM",
+                "when": "Monday (10/6) at 11:59 PM",
                 "where": "",
                 "coverage": "",
                 "note": "",
@@ -26083,33 +26083,10 @@ window.SCHEDULE_DATA = [
                 "whereNote": "",
                 "coverageLink": "https://drive.google.com/file/d/1Ur96Xss-DSR4axmREB0LO3s93uj58yDB/view?usp=drive_link",
                 "coverageNote": "Check the details here!",
-                "submitText": "",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "15/06/2026 11:59 PM",
-                "deadlineEndDate": "",
-                "isCompleted": false
-            },
-            {
-                "sub": "CA",
-                "name": "Assignment 4",
-                "icon": "📝",
-                "when": "Monday (15/6) at 11:59 PM",
-                "where": "",
-                "coverage": "",
-                "note": "",
-                "noteLink": "",
-                "noteNote": "",
-                "whenLink": "",
-                "whereLink": "",
-                "whenNote": "",
-                "whereNote": "",
-                "coverageLink": "https://drive.google.com/file/d/1oJi35E8fih_gAd0DuKI1sJ5PoD15yqam/view?usp=drive_link",
-                "coverageNote": "Check the details here!",
-                "submitText": "",
-                "submitLink": "",
-                "submitNote": "",
-                "deadlineDate": "15/06/2026 11:59 PM",
+                "submitText": "LMS",
+                "submitLink": "https://lms.eng.asu.edu.eg/mod/assign/view.php?id=200580",
+                "submitNote": "Submit here!",
+                "deadlineDate": "10/06/2026 11:59 PM",
                 "deadlineEndDate": "",
                 "isCompleted": false
             },
